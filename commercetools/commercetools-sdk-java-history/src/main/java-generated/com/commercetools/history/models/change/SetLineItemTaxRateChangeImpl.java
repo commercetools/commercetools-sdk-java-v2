@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Set LineItemTaxRate update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetLineItemTaxRateAction" rel="nofollow">Set LineItemTaxRate</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetLineItemTaxRateChangeImpl implements SetLineItemTaxRateChange, ModelBase {
@@ -36,6 +37,8 @@ public class SetLineItemTaxRateChangeImpl implements SetLineItemTaxRateChange, M
 
     private com.commercetools.history.models.common.TaxMode taxMode;
 
+    private String lineItemId;
+
     /**
      * create instance with all properties
      */
@@ -45,13 +48,15 @@ public class SetLineItemTaxRateChangeImpl implements SetLineItemTaxRateChange, M
             @JsonProperty("nextValue") final com.commercetools.history.models.common.TaxRate nextValue,
             @JsonProperty("lineItem") final com.commercetools.history.models.common.LocalizedString lineItem,
             @JsonProperty("variant") final String variant,
-            @JsonProperty("taxMode") final com.commercetools.history.models.common.TaxMode taxMode) {
+            @JsonProperty("taxMode") final com.commercetools.history.models.common.TaxMode taxMode,
+            @JsonProperty("lineItemId") final String lineItemId) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.lineItem = lineItem;
         this.variant = variant;
         this.taxMode = taxMode;
+        this.lineItemId = lineItemId;
         this.type = SET_LINE_ITEM_TAX_RATE_CHANGE;
     }
 
@@ -95,7 +100,7 @@ public class SetLineItemTaxRateChangeImpl implements SetLineItemTaxRateChange, M
     }
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getLineItem() {
@@ -103,7 +108,8 @@ public class SetLineItemTaxRateChangeImpl implements SetLineItemTaxRateChange, M
     }
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
      */
 
     public String getVariant() {
@@ -116,6 +122,14 @@ public class SetLineItemTaxRateChangeImpl implements SetLineItemTaxRateChange, M
 
     public com.commercetools.history.models.common.TaxMode getTaxMode() {
         return this.taxMode;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
+     */
+
+    public String getLineItemId() {
+        return this.lineItemId;
     }
 
     public void setChange(final String change) {
@@ -142,6 +156,10 @@ public class SetLineItemTaxRateChangeImpl implements SetLineItemTaxRateChange, M
         this.taxMode = taxMode;
     }
 
+    public void setLineItemId(final String lineItemId) {
+        this.lineItemId = lineItemId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -159,6 +177,7 @@ public class SetLineItemTaxRateChangeImpl implements SetLineItemTaxRateChange, M
                 .append(lineItem, that.lineItem)
                 .append(variant, that.variant)
                 .append(taxMode, that.taxMode)
+                .append(lineItemId, that.lineItemId)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
@@ -166,6 +185,7 @@ public class SetLineItemTaxRateChangeImpl implements SetLineItemTaxRateChange, M
                 .append(lineItem, that.lineItem)
                 .append(variant, that.variant)
                 .append(taxMode, that.taxMode)
+                .append(lineItemId, that.lineItemId)
                 .isEquals();
     }
 
@@ -178,6 +198,7 @@ public class SetLineItemTaxRateChangeImpl implements SetLineItemTaxRateChange, M
                 .append(lineItem)
                 .append(variant)
                 .append(taxMode)
+                .append(lineItemId)
                 .toHashCode();
     }
 
@@ -190,6 +211,7 @@ public class SetLineItemTaxRateChangeImpl implements SetLineItemTaxRateChange, M
                 .append("lineItem", lineItem)
                 .append("variant", variant)
                 .append("taxMode", taxMode)
+                .append("lineItemId", lineItemId)
                 .build();
     }
 

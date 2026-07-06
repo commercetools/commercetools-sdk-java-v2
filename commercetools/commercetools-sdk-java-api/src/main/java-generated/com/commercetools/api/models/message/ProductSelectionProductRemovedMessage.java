@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.product.ProductReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Remove Product update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionRemoveProductAction" rel="nofollow">Remove Product</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface ProductSelectionProductRemovedMessage extends Message {
     String PRODUCT_SELECTION_PRODUCT_REMOVED = "ProductSelectionProductRemoved";
 
     /**
-     *  <p>Product that was removed from the Product Selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that was removed from the Product Selection.</p>
      * @return product
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface ProductSelectionProductRemovedMessage extends Message {
     public ProductReference getProduct();
 
     /**
-     *  <p>Product that was removed from the Product Selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that was removed from the Product Selection.</p>
      * @param product value to be set
      */
 
@@ -153,8 +153,8 @@ public interface ProductSelectionProductRemovedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionProductRemovedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionProductRemovedMessage>() {
+    public static tools.jackson.core.type.TypeReference<ProductSelectionProductRemovedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSelectionProductRemovedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSelectionProductRemovedMessage>";

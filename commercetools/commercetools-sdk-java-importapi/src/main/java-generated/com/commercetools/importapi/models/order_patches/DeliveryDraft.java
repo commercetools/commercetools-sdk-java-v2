@@ -11,12 +11,12 @@ import javax.annotation.Nullable;
 import com.commercetools.importapi.models.common.Address;
 import com.commercetools.importapi.models.orders.DeliveryItem;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * DeliveryDraft
@@ -37,7 +37,7 @@ import jakarta.validation.constraints.NotNull;
 public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDraft> {
 
     /**
-     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @return items
      */
     @NotNull
@@ -63,7 +63,7 @@ public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDra
     public List<DeliveryParcelDraft> getParcels();
 
     /**
-     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param items values to be set
      */
 
@@ -71,7 +71,7 @@ public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDra
     public void setItems(final DeliveryItem... items);
 
     /**
-     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param items values to be set
      */
 
@@ -178,8 +178,8 @@ public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDra
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DeliveryDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DeliveryDraft>() {
+    public static tools.jackson.core.type.TypeReference<DeliveryDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DeliveryDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<DeliveryDraft>";

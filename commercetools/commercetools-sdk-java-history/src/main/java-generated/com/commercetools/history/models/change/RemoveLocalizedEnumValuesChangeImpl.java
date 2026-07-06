@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Remove EnumValues from AttributeDefinition update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTypeRemoveEnumValuesAction" rel="nofollow">Remove EnumValues from AttributeDefinition</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveLocalizedEnumValuesChangeImpl implements RemoveLocalizedEnumValuesChange, ModelBase {
@@ -26,7 +27,7 @@ public class RemoveLocalizedEnumValuesChangeImpl implements RemoveLocalizedEnumV
 
     private String change;
 
-    private com.commercetools.history.models.change_value.LocalizedEnumValue previousValue;
+    private com.commercetools.history.models.common.AttributeLocalizedEnumValue previousValue;
 
     private String attributeName;
 
@@ -35,7 +36,7 @@ public class RemoveLocalizedEnumValuesChangeImpl implements RemoveLocalizedEnumV
      */
     @JsonCreator
     RemoveLocalizedEnumValuesChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("previousValue") final com.commercetools.history.models.change_value.LocalizedEnumValue previousValue,
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.AttributeLocalizedEnumValue previousValue,
             @JsonProperty("attributeName") final String attributeName) {
         this.change = change;
         this.previousValue = previousValue;
@@ -70,12 +71,12 @@ public class RemoveLocalizedEnumValuesChangeImpl implements RemoveLocalizedEnumV
      *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.change_value.LocalizedEnumValue getPreviousValue() {
+    public com.commercetools.history.models.common.AttributeLocalizedEnumValue getPreviousValue() {
         return this.previousValue;
     }
 
     /**
-     *  <p>Name of the updated AttributeDefinition.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      */
 
     public String getAttributeName() {
@@ -86,7 +87,8 @@ public class RemoveLocalizedEnumValuesChangeImpl implements RemoveLocalizedEnumV
         this.change = change;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.change_value.LocalizedEnumValue previousValue) {
+    public void setPreviousValue(
+            final com.commercetools.history.models.common.AttributeLocalizedEnumValue previousValue) {
         this.previousValue = previousValue;
     }
 

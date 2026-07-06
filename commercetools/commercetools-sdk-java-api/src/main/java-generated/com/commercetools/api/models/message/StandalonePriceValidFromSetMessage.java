@@ -9,12 +9,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Valid From update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidFromAction" rel="nofollow">Set Valid From</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -43,7 +44,7 @@ public interface StandalonePriceValidFromSetMessage extends Message {
     String STANDALONE_PRICE_VALID_FROM_SET = "StandalonePriceValidFromSet";
 
     /**
-     *  <p>Value of StandalonePrice <code>validFrom</code> after the Set Valid From update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validFrom</code> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidFromAction" rel="nofollow">Set Valid From</a> update action.</p>
      * @return validFrom
      */
 
@@ -51,7 +52,7 @@ public interface StandalonePriceValidFromSetMessage extends Message {
     public ZonedDateTime getValidFrom();
 
     /**
-     *  <p>Value of StandalonePrice <code>validFrom</code> before the Set Valid From update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validFrom</code> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidFromAction" rel="nofollow">Set Valid From</a> update action.</p>
      * @return previousValidFrom
      */
 
@@ -59,14 +60,14 @@ public interface StandalonePriceValidFromSetMessage extends Message {
     public ZonedDateTime getPreviousValidFrom();
 
     /**
-     *  <p>Value of StandalonePrice <code>validFrom</code> after the Set Valid From update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validFrom</code> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidFromAction" rel="nofollow">Set Valid From</a> update action.</p>
      * @param validFrom value to be set
      */
 
     public void setValidFrom(final ZonedDateTime validFrom);
 
     /**
-     *  <p>Value of StandalonePrice <code>validFrom</code> before the Set Valid From update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validFrom</code> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidFromAction" rel="nofollow">Set Valid From</a> update action.</p>
      * @param previousValidFrom value to be set
      */
 
@@ -164,8 +165,8 @@ public interface StandalonePriceValidFromSetMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceValidFromSetMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceValidFromSetMessage>() {
+    public static tools.jackson.core.type.TypeReference<StandalonePriceValidFromSetMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StandalonePriceValidFromSetMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<StandalonePriceValidFromSetMessage>";

@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Set Name update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetNameAction" rel="nofollow">Set Name</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ public interface ApprovalRuleNameSetMessagePayload extends MessagePayload {
     String APPROVAL_RULE_NAME_SET = "ApprovalRuleNameSet";
 
     /**
-     *  <p>Name of the ApprovalRule after the Set Name update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @return name
      */
     @NotNull
@@ -47,7 +47,7 @@ public interface ApprovalRuleNameSetMessagePayload extends MessagePayload {
     public String getName();
 
     /**
-     *  <p>Name of the ApprovalRule before the Set Name update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @return oldName
      */
     @NotNull
@@ -55,14 +55,14 @@ public interface ApprovalRuleNameSetMessagePayload extends MessagePayload {
     public String getOldName();
 
     /**
-     *  <p>Name of the ApprovalRule after the Set Name update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @param name value to be set
      */
 
     public void setName(final String name);
 
     /**
-     *  <p>Name of the ApprovalRule before the Set Name update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @param oldName value to be set
      */
 
@@ -138,8 +138,8 @@ public interface ApprovalRuleNameSetMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ApprovalRuleNameSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ApprovalRuleNameSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<ApprovalRuleNameSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ApprovalRuleNameSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<ApprovalRuleNameSetMessagePayload>";

@@ -9,12 +9,12 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ApprovalRuleDraft
@@ -62,7 +62,7 @@ public interface ApprovalRuleDraft extends io.vrap.rmf.base.client.Draft<Approva
     public String getDescription();
 
     /**
-     *  <p>Indicates whether the Approval Rule should be matched against Orders or not.</p>
+     *  <p>Indicates whether the Approval Rule should be matched against <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> or not.</p>
      * @return status
      */
     @NotNull
@@ -70,7 +70,7 @@ public interface ApprovalRuleDraft extends io.vrap.rmf.base.client.Draft<Approva
     public ApprovalRuleStatus getStatus();
 
     /**
-     *  <p>The predicate describing the Orders the Approval Rule should match against.</p>
+     *  <p>The <span>predicate</span> describing the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> the Approval Rule should match against.</p>
      * @return predicate
      */
     @NotNull
@@ -87,7 +87,7 @@ public interface ApprovalRuleDraft extends io.vrap.rmf.base.client.Draft<Approva
     public ApproverHierarchyDraft getApprovers();
 
     /**
-     *  <p>The Associate Roles customers must hold for their Order to require approval.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Roles</a> customers must hold for their Order to require approval.</p>
      * @return requesters
      */
     @NotNull
@@ -117,14 +117,14 @@ public interface ApprovalRuleDraft extends io.vrap.rmf.base.client.Draft<Approva
     public void setDescription(final String description);
 
     /**
-     *  <p>Indicates whether the Approval Rule should be matched against Orders or not.</p>
+     *  <p>Indicates whether the Approval Rule should be matched against <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> or not.</p>
      * @param status value to be set
      */
 
     public void setStatus(final ApprovalRuleStatus status);
 
     /**
-     *  <p>The predicate describing the Orders the Approval Rule should match against.</p>
+     *  <p>The <span>predicate</span> describing the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> the Approval Rule should match against.</p>
      * @param predicate value to be set
      */
 
@@ -138,7 +138,7 @@ public interface ApprovalRuleDraft extends io.vrap.rmf.base.client.Draft<Approva
     public void setApprovers(final ApproverHierarchyDraft approvers);
 
     /**
-     *  <p>The Associate Roles customers must hold for their Order to require approval.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Roles</a> customers must hold for their Order to require approval.</p>
      * @param requesters values to be set
      */
 
@@ -146,7 +146,7 @@ public interface ApprovalRuleDraft extends io.vrap.rmf.base.client.Draft<Approva
     public void setRequesters(final RuleRequesterDraft... requesters);
 
     /**
-     *  <p>The Associate Roles customers must hold for their Order to require approval.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Roles</a> customers must hold for their Order to require approval.</p>
      * @param requesters values to be set
      */
 
@@ -236,8 +236,8 @@ public interface ApprovalRuleDraft extends io.vrap.rmf.base.client.Draft<Approva
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ApprovalRuleDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ApprovalRuleDraft>() {
+    public static tools.jackson.core.type.TypeReference<ApprovalRuleDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ApprovalRuleDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ApprovalRuleDraft>";

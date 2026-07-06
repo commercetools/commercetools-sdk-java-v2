@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Represents the data used to import an InventoryEntry. Once imported, this data is persisted as a InventoryEntry in the Project.</p>
+ *  <p>Represents the data used to import an InventoryEntry. Once imported, this data is persisted as a <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> in the Project.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryImportImpl implements InventoryImport, ModelBase {
@@ -32,6 +33,8 @@ public class InventoryImportImpl implements InventoryImport, ModelBase {
 
     private java.time.ZonedDateTime expectedDelivery;
 
+    private Integer reservationExpirationInMinutes;
+
     private com.commercetools.importapi.models.common.ChannelKeyReference supplyChannel;
 
     private com.commercetools.importapi.models.customfields.Custom custom;
@@ -44,6 +47,7 @@ public class InventoryImportImpl implements InventoryImport, ModelBase {
             @JsonProperty("quantityOnStock") final Long quantityOnStock,
             @JsonProperty("restockableInDays") final Long restockableInDays,
             @JsonProperty("expectedDelivery") final java.time.ZonedDateTime expectedDelivery,
+            @JsonProperty("reservationExpirationInMinutes") final Integer reservationExpirationInMinutes,
             @JsonProperty("supplyChannel") final com.commercetools.importapi.models.common.ChannelKeyReference supplyChannel,
             @JsonProperty("custom") final com.commercetools.importapi.models.customfields.Custom custom) {
         this.key = key;
@@ -51,6 +55,7 @@ public class InventoryImportImpl implements InventoryImport, ModelBase {
         this.quantityOnStock = quantityOnStock;
         this.restockableInDays = restockableInDays;
         this.expectedDelivery = expectedDelivery;
+        this.reservationExpirationInMinutes = reservationExpirationInMinutes;
         this.supplyChannel = supplyChannel;
         this.custom = custom;
     }
@@ -62,7 +67,7 @@ public class InventoryImportImpl implements InventoryImport, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier. If an InventoryEntry with this <code>key</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If an <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      */
 
     public String getKey() {
@@ -102,7 +107,15 @@ public class InventoryImportImpl implements InventoryImport, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>InventoryEntry.supplyChannel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
+     *  <p>Maps to <code>InventoryEntry.reservationExpirationInMinutes</code></p>
+     */
+
+    public Integer getReservationExpirationInMinutes() {
+        return this.reservationExpirationInMinutes;
+    }
+
+    /**
+     *  <p>Maps to <code>InventoryEntry.supplyChannel</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      */
 
     public com.commercetools.importapi.models.common.ChannelKeyReference getSupplyChannel() {
@@ -137,6 +150,10 @@ public class InventoryImportImpl implements InventoryImport, ModelBase {
         this.expectedDelivery = expectedDelivery;
     }
 
+    public void setReservationExpirationInMinutes(final Integer reservationExpirationInMinutes) {
+        this.reservationExpirationInMinutes = reservationExpirationInMinutes;
+    }
+
     public void setSupplyChannel(final com.commercetools.importapi.models.common.ChannelKeyReference supplyChannel) {
         this.supplyChannel = supplyChannel;
     }
@@ -160,6 +177,7 @@ public class InventoryImportImpl implements InventoryImport, ModelBase {
                 .append(quantityOnStock, that.quantityOnStock)
                 .append(restockableInDays, that.restockableInDays)
                 .append(expectedDelivery, that.expectedDelivery)
+                .append(reservationExpirationInMinutes, that.reservationExpirationInMinutes)
                 .append(supplyChannel, that.supplyChannel)
                 .append(custom, that.custom)
                 .append(key, that.key)
@@ -167,6 +185,7 @@ public class InventoryImportImpl implements InventoryImport, ModelBase {
                 .append(quantityOnStock, that.quantityOnStock)
                 .append(restockableInDays, that.restockableInDays)
                 .append(expectedDelivery, that.expectedDelivery)
+                .append(reservationExpirationInMinutes, that.reservationExpirationInMinutes)
                 .append(supplyChannel, that.supplyChannel)
                 .append(custom, that.custom)
                 .isEquals();
@@ -179,6 +198,7 @@ public class InventoryImportImpl implements InventoryImport, ModelBase {
                 .append(quantityOnStock)
                 .append(restockableInDays)
                 .append(expectedDelivery)
+                .append(reservationExpirationInMinutes)
                 .append(supplyChannel)
                 .append(custom)
                 .toHashCode();
@@ -191,6 +211,7 @@ public class InventoryImportImpl implements InventoryImport, ModelBase {
                 .append("quantityOnStock", quantityOnStock)
                 .append("restockableInDays", restockableInDays)
                 .append("expectedDelivery", expectedDelivery)
+                .append("reservationExpirationInMinutes", reservationExpirationInMinutes)
                 .append("supplyChannel", supplyChannel)
                 .append("custom", custom)
                 .build();

@@ -193,7 +193,7 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -204,7 +204,7 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -266,7 +266,7 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
     }
 
     /**
-     *  <p>The <code>rating</code> of the Review before the Set Rating update action.</p>
+     *  <p>The <code>rating</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewSetRatingAction" rel="nofollow">Set Rating</a> update action.</p>
      * @param oldRating value to be set
      * @return Builder
      */
@@ -277,7 +277,7 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
     }
 
     /**
-     *  <p>The <code>rating</code> of the Review after the Set Rating update action.</p>
+     *  <p>The <code>rating</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewSetRatingAction" rel="nofollow">Set Rating</a> update action.</p>
      * @param newRating value to be set
      * @return Builder
      */
@@ -288,7 +288,7 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
     }
 
     /**
-     *  <p>Whether the Review was taken into account in the ratings statistics of the target.</p>
+     *  <p>Whether the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> was taken into account in the ratings statistics of the target.</p>
      * @param includedInStatistics value to be set
      * @return Builder
      */
@@ -299,7 +299,7 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
     }
 
     /**
-     *  <p>Reference to the resource that the Review belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource that the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> belongs to.</p>
      * @param target value to be set
      * @return Builder
      */
@@ -310,7 +310,7 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
     }
 
     /**
-     *  <p>Reference to the resource that the Review belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource that the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> belongs to.</p>
      * @param builder function to build the target value
      * @return Builder
      */
@@ -387,7 +387,7 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -415,7 +415,7 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
     }
 
     /**
-     *  <p>The <code>rating</code> of the Review before the Set Rating update action.</p>
+     *  <p>The <code>rating</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewSetRatingAction" rel="nofollow">Set Rating</a> update action.</p>
      * @return oldRating
      */
 
@@ -425,7 +425,7 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
     }
 
     /**
-     *  <p>The <code>rating</code> of the Review after the Set Rating update action.</p>
+     *  <p>The <code>rating</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewSetRatingAction" rel="nofollow">Set Rating</a> update action.</p>
      * @return newRating
      */
 
@@ -435,7 +435,7 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
     }
 
     /**
-     *  <p>Whether the Review was taken into account in the ratings statistics of the target.</p>
+     *  <p>Whether the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> was taken into account in the ratings statistics of the target.</p>
      * @return includedInStatistics
      */
 
@@ -444,7 +444,7 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
     }
 
     /**
-     *  <p>Reference to the resource that the Review belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource that the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> belongs to.</p>
      * @return target
      */
 

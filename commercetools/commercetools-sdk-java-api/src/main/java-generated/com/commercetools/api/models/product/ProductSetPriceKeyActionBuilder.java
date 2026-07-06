@@ -32,7 +32,7 @@ public class ProductSetPriceKeyActionBuilder implements Builder<ProductSetPriceK
     private String key;
 
     /**
-     *  <p>The <code>id</code> of the Price to set the key.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> to set the key.</p>
      * @param priceId value to be set
      * @return Builder
      */
@@ -43,7 +43,7 @@ public class ProductSetPriceKeyActionBuilder implements Builder<ProductSetPriceK
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
+     *  <p>If <code>true</code>, only the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Price</a> is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class ProductSetPriceKeyActionBuilder implements Builder<ProductSetPriceK
     }
 
     /**
-     *  <p>The <code>id</code> of the Price to set the key.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> to set the key.</p>
      * @return priceId
      */
 
@@ -74,7 +74,7 @@ public class ProductSetPriceKeyActionBuilder implements Builder<ProductSetPriceK
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
+     *  <p>If <code>true</code>, only the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Price</a> is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      * @return staged
      */
 

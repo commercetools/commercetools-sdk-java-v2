@@ -25,7 +25,7 @@ public class PaymentMethodDeletedMessagePayloadBuilder implements Builder<Paymen
     private com.commercetools.api.models.payment_method.PaymentMethod paymentMethod;
 
     /**
-     *  <p>The PaymentMethod that was deleted.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethod" rel="nofollow">PaymentMethod</a> that was deleted.</p>
      * @param builder function to build the paymentMethod value
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class PaymentMethodDeletedMessagePayloadBuilder implements Builder<Paymen
     }
 
     /**
-     *  <p>The PaymentMethod that was deleted.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethod" rel="nofollow">PaymentMethod</a> that was deleted.</p>
      * @param builder function to build the paymentMethod value
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class PaymentMethodDeletedMessagePayloadBuilder implements Builder<Paymen
     }
 
     /**
-     *  <p>The PaymentMethod that was deleted.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethod" rel="nofollow">PaymentMethod</a> that was deleted.</p>
      * @param paymentMethod value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class PaymentMethodDeletedMessagePayloadBuilder implements Builder<Paymen
     }
 
     /**
-     *  <p>The PaymentMethod that was deleted.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethod" rel="nofollow">PaymentMethod</a> that was deleted.</p>
      * @return paymentMethod
      */
 

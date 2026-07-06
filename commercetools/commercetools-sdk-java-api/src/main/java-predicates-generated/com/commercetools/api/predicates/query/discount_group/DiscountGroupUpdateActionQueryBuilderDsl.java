@@ -27,6 +27,13 @@ public class DiscountGroupUpdateActionQueryBuilderDsl {
             DiscountGroupUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<DiscountGroupUpdateActionQueryBuilderDsl> asSetIsActive(
+            Function<com.commercetools.api.predicates.query.discount_group.DiscountGroupSetIsActiveActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.discount_group.DiscountGroupSetIsActiveActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.discount_group.DiscountGroupSetIsActiveActionQueryBuilderDsl.of()),
+            DiscountGroupUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<DiscountGroupUpdateActionQueryBuilderDsl> asSetKey(
             Function<com.commercetools.api.predicates.query.discount_group.DiscountGroupSetKeyActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.discount_group.DiscountGroupSetKeyActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

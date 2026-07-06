@@ -187,7 +187,7 @@ public class ProductRemovedFromCategoryMessageBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -199,7 +199,7 @@ public class ProductRemovedFromCategoryMessageBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -261,7 +261,7 @@ public class ProductRemovedFromCategoryMessageBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Category the Product was removed from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> was removed from.</p>
      * @param builder function to build the category value
      * @return Builder
      */
@@ -273,7 +273,7 @@ public class ProductRemovedFromCategoryMessageBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Category the Product was removed from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> was removed from.</p>
      * @param builder function to build the category value
      * @return Builder
      */
@@ -285,7 +285,7 @@ public class ProductRemovedFromCategoryMessageBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Category the Product was removed from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> was removed from.</p>
      * @param category value to be set
      * @return Builder
      */
@@ -297,7 +297,7 @@ public class ProductRemovedFromCategoryMessageBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -373,7 +373,7 @@ public class ProductRemovedFromCategoryMessageBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -401,7 +401,7 @@ public class ProductRemovedFromCategoryMessageBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Category the Product was removed from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> was removed from.</p>
      * @return category
      */
 
@@ -410,7 +410,7 @@ public class ProductRemovedFromCategoryMessageBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @return staged
      */
 

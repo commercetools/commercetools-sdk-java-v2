@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Only present if <code>expand</code> is set to <code>true</code>.</p>
@@ -43,7 +43,7 @@ public interface CustomFieldExpandedValue {
     public String getName();
 
     /**
-     *  <p>CustomFieldValue based on the FieldType.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a>.</p>
      * @return value
      */
     @NotNull
@@ -67,7 +67,7 @@ public interface CustomFieldExpandedValue {
     public void setName(final String name);
 
     /**
-     *  <p>CustomFieldValue based on the FieldType.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a>.</p>
      * @param value value to be set
      */
 
@@ -151,8 +151,8 @@ public interface CustomFieldExpandedValue {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomFieldExpandedValue> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomFieldExpandedValue>() {
+    public static tools.jackson.core.type.TypeReference<CustomFieldExpandedValue> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomFieldExpandedValue>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomFieldExpandedValue>";

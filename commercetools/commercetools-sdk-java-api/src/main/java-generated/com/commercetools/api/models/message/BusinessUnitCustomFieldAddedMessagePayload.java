@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after adding a Custom Field to a Business Unit using the Set CustomField update action. If a Custom Field already exists with the same name, a BusinessUnitCustomFieldChanged Message is generated instead.</p>
+ *  <p>Generated after adding a Custom Field to a Business Unit using the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetCustomFieldAction" rel="nofollow">Set CustomField</a> update action. If a Custom Field already exists with the same name, a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitCustomFieldChangedMessage" rel="nofollow">BusinessUnitCustomFieldChanged</a> Message is generated instead.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -46,7 +46,7 @@ public interface BusinessUnitCustomFieldAddedMessagePayload extends MessagePaylo
     public String getName();
 
     /**
-     *  <p>The added CustomFieldValue based on the FieldType.</p>
+     *  <p>The added <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a>.</p>
      * @return value
      */
     @NotNull
@@ -61,7 +61,7 @@ public interface BusinessUnitCustomFieldAddedMessagePayload extends MessagePaylo
     public void setName(final String name);
 
     /**
-     *  <p>The added CustomFieldValue based on the FieldType.</p>
+     *  <p>The added <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a>.</p>
      * @param value value to be set
      */
 
@@ -140,8 +140,8 @@ public interface BusinessUnitCustomFieldAddedMessagePayload extends MessagePaylo
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitCustomFieldAddedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitCustomFieldAddedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitCustomFieldAddedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitCustomFieldAddedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitCustomFieldAddedMessagePayload>";

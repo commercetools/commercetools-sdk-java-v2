@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Set Predicate update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetPredicateAction" rel="nofollow">Set Predicate</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ public interface ApprovalRulePredicateSetMessagePayload extends MessagePayload {
     String APPROVAL_RULE_PREDICATE_SET = "ApprovalRulePredicateSet";
 
     /**
-     *  <p>Name of the ApprovalRule after the Set Predicate update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetPredicateAction" rel="nofollow">Set Predicate</a> update action.</p>
      * @return predicate
      */
     @NotNull
@@ -47,7 +47,7 @@ public interface ApprovalRulePredicateSetMessagePayload extends MessagePayload {
     public String getPredicate();
 
     /**
-     *  <p>Name of the ApprovalRule before the Set Predicate update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetPredicateAction" rel="nofollow">Set Predicate</a> update action.</p>
      * @return oldPredicate
      */
     @NotNull
@@ -55,14 +55,14 @@ public interface ApprovalRulePredicateSetMessagePayload extends MessagePayload {
     public String getOldPredicate();
 
     /**
-     *  <p>Name of the ApprovalRule after the Set Predicate update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetPredicateAction" rel="nofollow">Set Predicate</a> update action.</p>
      * @param predicate value to be set
      */
 
     public void setPredicate(final String predicate);
 
     /**
-     *  <p>Name of the ApprovalRule before the Set Predicate update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetPredicateAction" rel="nofollow">Set Predicate</a> update action.</p>
      * @param oldPredicate value to be set
      */
 
@@ -140,8 +140,8 @@ public interface ApprovalRulePredicateSetMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ApprovalRulePredicateSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ApprovalRulePredicateSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<ApprovalRulePredicateSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ApprovalRulePredicateSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<ApprovalRulePredicateSetMessagePayload>";

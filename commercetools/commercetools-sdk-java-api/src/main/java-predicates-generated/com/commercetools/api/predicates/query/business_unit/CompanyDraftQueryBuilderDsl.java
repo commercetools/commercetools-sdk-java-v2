@@ -138,4 +138,19 @@ public class CompanyDraftQueryBuilderDsl {
             CompanyDraftQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<CompanyDraftQueryBuilderDsl> customerGroupAssignments(
+            Function<com.commercetools.api.predicates.query.customer.CustomerGroupAssignmentDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.customer.CustomerGroupAssignmentDraftQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("customerGroupAssignments"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.customer.CustomerGroupAssignmentDraftQueryBuilderDsl.of())),
+            CompanyDraftQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<CompanyDraftQueryBuilderDsl> customerGroupAssignments() {
+        return new CollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("customerGroupAssignments")),
+            p -> new CombinationQueryPredicate<>(p, CompanyDraftQueryBuilderDsl::of));
+    }
+
 }

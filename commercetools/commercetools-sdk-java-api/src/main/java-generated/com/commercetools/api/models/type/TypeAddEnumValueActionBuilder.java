@@ -28,7 +28,7 @@ public class TypeAddEnumValueActionBuilder implements Builder<TypeAddEnumValueAc
     private com.commercetools.api.models.type.CustomFieldEnumValue value;
 
     /**
-     *  <p><code>name</code> of the Field Definition to update.</p>
+     *  <p><code>name</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">Field Definition</a> to update.</p>
      * @param fieldName value to be set
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class TypeAddEnumValueActionBuilder implements Builder<TypeAddEnumValueAc
     }
 
     /**
-     *  <p><code>name</code> of the Field Definition to update.</p>
+     *  <p><code>name</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">Field Definition</a> to update.</p>
      * @return fieldName
      */
 

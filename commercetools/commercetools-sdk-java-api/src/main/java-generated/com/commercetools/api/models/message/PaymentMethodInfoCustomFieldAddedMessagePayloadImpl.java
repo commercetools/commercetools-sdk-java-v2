@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after adding a Custom Field to a PaymentMethodInfo using the Set MethodInfo CustomField update action on Payments and the Set MethodInfo CustomField update action on My Payments. If a Custom Field already exists with the same name, a PaymentMethodInfoCustomFieldChanged Message is generated instead.</p>
+ *  <p>Generated after adding a Custom Field to a PaymentMethodInfo using the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoCustomFieldAction" rel="nofollow">Set MethodInfo CustomField</a> update action on Payments and the <a href="https://docs.commercetools.com/apis/ctp:api:type:MyPaymentSetMethodInfoCustomFieldAction" rel="nofollow">Set MethodInfo CustomField</a> update action on My Payments. If a Custom Field already exists with the same name, a <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoCustomFieldChangedMessage" rel="nofollow">PaymentMethodInfoCustomFieldChanged</a> Message is generated instead.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentMethodInfoCustomFieldAddedMessagePayloadImpl
@@ -64,7 +65,7 @@ public class PaymentMethodInfoCustomFieldAddedMessagePayloadImpl
     }
 
     /**
-     *  <p>The added CustomFieldValue based on the FieldType.</p>
+     *  <p>The added <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a>.</p>
      */
 
     public java.lang.Object getValue() {

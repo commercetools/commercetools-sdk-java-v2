@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>To protect your Azure Function, set its <code>authLevel</code> to <code>function</code> and provide the function's key to be used inside the <code>x-functions-key</code> header. For more information, see the Azure Functions documentation.</p>
+ *  <p>To protect your Azure Function, set its <code>authLevel</code> to <code>function</code> and provide the function's key to be used inside the <code>x-functions-key</code> header. For more information, see the <span>Azure Functions documentation</span>.</p>
  *  <p>To protect the secret key from being exposed, remove the code parameter and secret key from the URL. For example, use <code>https://foo.azurewebsites.net/api/bar</code> instead of <code>https://foo.azurewebsites.net/api/bar?code=secret</code>.</p>
  *
  * <hr>
@@ -120,8 +120,8 @@ public interface AzureFunctionsAuthentication extends HttpDestinationAuthenticat
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AzureFunctionsAuthentication> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AzureFunctionsAuthentication>() {
+    public static tools.jackson.core.type.TypeReference<AzureFunctionsAuthentication> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AzureFunctionsAuthentication>() {
             @Override
             public String toString() {
                 return "TypeReference<AzureFunctionsAuthentication>";

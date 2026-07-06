@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>A field with an enum value.</p>
@@ -38,7 +38,7 @@ public interface EnumField extends CustomField {
     String ENUM = "Enum";
 
     /**
-     *  <p>The key of the enum value. Must be a <code>key</code> of one of the CustomFieldEnumValues defined in the CustomFieldEnumType.</p>
+     *  <p>The key of the enum value. Must be a <code>key</code> of one of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldEnumValue" rel="nofollow">CustomFieldEnumValues</a> defined in the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldEnumType" rel="nofollow">CustomFieldEnumType</a>.</p>
      * @return value
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface EnumField extends CustomField {
     public String getValue();
 
     /**
-     *  <p>The key of the enum value. Must be a <code>key</code> of one of the CustomFieldEnumValues defined in the CustomFieldEnumType.</p>
+     *  <p>The key of the enum value. Must be a <code>key</code> of one of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldEnumValue" rel="nofollow">CustomFieldEnumValues</a> defined in the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldEnumType" rel="nofollow">CustomFieldEnumType</a>.</p>
      * @param value value to be set
      */
 
@@ -119,8 +119,8 @@ public interface EnumField extends CustomField {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<EnumField> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<EnumField>() {
+    public static tools.jackson.core.type.TypeReference<EnumField> typeReference() {
+        return new tools.jackson.core.type.TypeReference<EnumField>() {
             @Override
             public String toString() {
                 return "TypeReference<EnumField>";

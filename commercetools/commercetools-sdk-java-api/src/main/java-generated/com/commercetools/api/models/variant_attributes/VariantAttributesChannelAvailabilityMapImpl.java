@@ -1,0 +1,87 @@
+
+package com.commercetools.api.models.variant_attributes;
+
+import java.time.*;
+import java.util.*;
+
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.vrap.rmf.base.client.ModelBase;
+import io.vrap.rmf.base.client.utils.Generated;
+
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
+
+/**
+ *  <p>JSON object where the keys are supply <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> <code>id</code>, and the values are <a href="https://docs.commercetools.com/apis/ctp:api:type:VariantAttributesChannelAvailability" rel="nofollow">VariantAttributesChannelAvailability</a>.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+public class VariantAttributesChannelAvailabilityMapImpl implements VariantAttributesChannelAvailabilityMap, ModelBase {
+
+    private Map<String, com.commercetools.api.models.variant_attributes.VariantAttributesChannelAvailability> values;
+
+    /**
+     * create instance with all properties
+     */
+    @JsonCreator
+    VariantAttributesChannelAvailabilityMapImpl(
+            @JsonAnySetter @JsonProperty("values") final Map<String, com.commercetools.api.models.variant_attributes.VariantAttributesChannelAvailability> values) {
+        this.values = values;
+    }
+
+    /**
+     * create empty instance
+     */
+    public VariantAttributesChannelAvailabilityMapImpl() {
+    }
+
+    /**
+     *  <p>The availability for a specific supply <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
+     */
+
+    public Map<String, com.commercetools.api.models.variant_attributes.VariantAttributesChannelAvailability> values() {
+        return values;
+    }
+
+    public void setValue(String key,
+            com.commercetools.api.models.variant_attributes.VariantAttributesChannelAvailability value) {
+        if (values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        VariantAttributesChannelAvailabilityMapImpl that = (VariantAttributesChannelAvailabilityMapImpl) o;
+
+        return new EqualsBuilder().append(values, that.values).append(values, that.values).isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(values).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("values", values).build();
+    }
+
+    @Override
+    public VariantAttributesChannelAvailabilityMap copyDeep() {
+        return VariantAttributesChannelAvailabilityMap.deepCopy(this);
+    }
+}

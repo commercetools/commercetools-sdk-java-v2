@@ -19,6 +19,18 @@ public class ExtensionUpdateActionBuilder {
         return com.commercetools.api.models.extension.ExtensionChangeTriggersActionBuilder.of();
     }
 
+    public com.commercetools.api.models.extension.ExtensionSetAdditionalContextActionBuilder setAdditionalContextBuilder() {
+        return com.commercetools.api.models.extension.ExtensionSetAdditionalContextActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.extension.ExtensionSetDependenciesActionBuilder setDependenciesBuilder() {
+        return com.commercetools.api.models.extension.ExtensionSetDependenciesActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.extension.ExtensionSetExpansionPathsActionBuilder setExpansionPathsBuilder() {
+        return com.commercetools.api.models.extension.ExtensionSetExpansionPathsActionBuilder.of();
+    }
+
     public com.commercetools.api.models.extension.ExtensionSetKeyActionBuilder setKeyBuilder() {
         return com.commercetools.api.models.extension.ExtensionSetKeyActionBuilder.of();
     }

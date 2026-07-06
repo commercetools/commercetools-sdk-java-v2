@@ -11,11 +11,11 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.common.AddressDraft;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * DeliveryDraft
@@ -35,7 +35,7 @@ public interface DeliveryDraft extends com.commercetools.api.models.Customizable
         io.vrap.rmf.base.client.Draft<DeliveryDraft> {
 
     /**
-     *  <p>User-defined unique identifier of the Delivery.</p>
+     *  <p>User-defined identifier of the Delivery. Must be unique among Deliveries in the Order.</p>
      * @return key
      */
 
@@ -43,7 +43,7 @@ public interface DeliveryDraft extends com.commercetools.api.models.Customizable
     public String getKey();
 
     /**
-     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @return items
      */
     @Valid
@@ -75,14 +75,14 @@ public interface DeliveryDraft extends com.commercetools.api.models.Customizable
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>User-defined unique identifier of the Delivery.</p>
+     *  <p>User-defined identifier of the Delivery. Must be unique among Deliveries in the Order.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param items values to be set
      */
 
@@ -90,7 +90,7 @@ public interface DeliveryDraft extends com.commercetools.api.models.Customizable
     public void setItems(final DeliveryItem... items);
 
     /**
-     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param items values to be set
      */
 
@@ -208,8 +208,8 @@ public interface DeliveryDraft extends com.commercetools.api.models.Customizable
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DeliveryDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DeliveryDraft>() {
+    public static tools.jackson.core.type.TypeReference<DeliveryDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DeliveryDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<DeliveryDraft>";

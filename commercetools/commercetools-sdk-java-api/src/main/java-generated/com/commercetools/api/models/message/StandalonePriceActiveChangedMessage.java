@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Change Active update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceChangeActiveAction" rel="nofollow">Change Active</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -46,7 +46,7 @@ public interface StandalonePriceActiveChangedMessage extends Message {
     String STANDALONE_PRICE_ACTIVE_CHANGED = "StandalonePriceActiveChanged";
 
     /**
-     *  <p>Value of the <code>active</code> field of the StandalonePrice after the Change Active update action.</p>
+     *  <p>Value of the <code>active</code> field of the StandalonePrice after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceChangeActiveAction" rel="nofollow">Change Active</a> update action.</p>
      * @return active
      */
     @NotNull
@@ -54,7 +54,7 @@ public interface StandalonePriceActiveChangedMessage extends Message {
     public Boolean getActive();
 
     /**
-     *  <p>Value of the <code>active</code> field of the StandalonePrice before the Change Active update action.</p>
+     *  <p>Value of the <code>active</code> field of the StandalonePrice before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceChangeActiveAction" rel="nofollow">Change Active</a> update action.</p>
      * @return oldActive
      */
     @NotNull
@@ -62,14 +62,14 @@ public interface StandalonePriceActiveChangedMessage extends Message {
     public Boolean getOldActive();
 
     /**
-     *  <p>Value of the <code>active</code> field of the StandalonePrice after the Change Active update action.</p>
+     *  <p>Value of the <code>active</code> field of the StandalonePrice after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceChangeActiveAction" rel="nofollow">Change Active</a> update action.</p>
      * @param active value to be set
      */
 
     public void setActive(final Boolean active);
 
     /**
-     *  <p>Value of the <code>active</code> field of the StandalonePrice before the Change Active update action.</p>
+     *  <p>Value of the <code>active</code> field of the StandalonePrice before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceChangeActiveAction" rel="nofollow">Change Active</a> update action.</p>
      * @param oldActive value to be set
      */
 
@@ -168,8 +168,8 @@ public interface StandalonePriceActiveChangedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceActiveChangedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceActiveChangedMessage>() {
+    public static tools.jackson.core.type.TypeReference<StandalonePriceActiveChangedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StandalonePriceActiveChangedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<StandalonePriceActiveChangedMessage>";

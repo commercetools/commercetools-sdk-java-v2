@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Can only be used in a CartDiscountDraft with no <code>target</code> specified. Hence, this type can not be used in the Change Value update action.</p>
+ *  <p>Can only be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountDraft" rel="nofollow">CartDiscountDraft</a> with no <code>target</code> specified. Hence, this type can not be used in the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountChangeValueAction" rel="nofollow">Change Value</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountValueGiftLineItemDraftImpl implements CartDiscountValueGiftLineItemDraft, ModelBase {
@@ -73,7 +74,7 @@ public class CartDiscountValueGiftLineItemDraftImpl implements CartDiscountValue
     }
 
     /**
-     *  <p>ProductVariant of the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> of the Product.</p>
      */
 
     public Long getVariantId() {

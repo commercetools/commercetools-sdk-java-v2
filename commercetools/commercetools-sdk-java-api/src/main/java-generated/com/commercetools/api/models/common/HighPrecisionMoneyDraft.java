@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Draft object to store money as a fraction of the smallest indivisible unit for a specific currency.</p>
@@ -50,6 +50,7 @@ public interface HighPrecisionMoneyDraft
 
     /**
      *  <p>Amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</p>
+     *  <p><code>preciseAmount</code> is represented as 64-bit integers. If this limit is exceeded, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MoneyOverflowError" rel="nofollow">MoneyOverflow</a> error will be returned.</p>
      * @return preciseAmount
      */
     @NotNull
@@ -59,6 +60,7 @@ public interface HighPrecisionMoneyDraft
     /**
      *  <p>Amount in the smallest indivisible unit of a currency. This field is optional for high precision. If provided, it is checked for validity. Example:</p>
      *  <p>A Price of 1.015 USD can be rounded either to 1.01 USD or 1.02 USD. If it lies outside of this range, an error message stating that centAmount must be rounded correctly will be returned.</p>
+     *  <p><code>centAmount</code> is represented as 64-bit integers. If this limit is exceeded, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MoneyOverflowError" rel="nofollow">MoneyOverflow</a> error will be returned.</p>
      *  <p>If <code>centAmount</code> is not provided, the API calculates the value automatically using the default rounding mode half even.</p>
      * @return centAmount
      */
@@ -75,6 +77,7 @@ public interface HighPrecisionMoneyDraft
 
     /**
      *  <p>Amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</p>
+     *  <p><code>preciseAmount</code> is represented as 64-bit integers. If this limit is exceeded, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MoneyOverflowError" rel="nofollow">MoneyOverflow</a> error will be returned.</p>
      * @param preciseAmount value to be set
      */
 
@@ -83,6 +86,7 @@ public interface HighPrecisionMoneyDraft
     /**
      *  <p>Amount in the smallest indivisible unit of a currency. This field is optional for high precision. If provided, it is checked for validity. Example:</p>
      *  <p>A Price of 1.015 USD can be rounded either to 1.01 USD or 1.02 USD. If it lies outside of this range, an error message stating that centAmount must be rounded correctly will be returned.</p>
+     *  <p><code>centAmount</code> is represented as 64-bit integers. If this limit is exceeded, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MoneyOverflowError" rel="nofollow">MoneyOverflow</a> error will be returned.</p>
      *  <p>If <code>centAmount</code> is not provided, the API calculates the value automatically using the default rounding mode half even.</p>
      * @param centAmount value to be set
      */
@@ -180,8 +184,8 @@ public interface HighPrecisionMoneyDraft
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<HighPrecisionMoneyDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<HighPrecisionMoneyDraft>() {
+    public static tools.jackson.core.type.TypeReference<HighPrecisionMoneyDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<HighPrecisionMoneyDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<HighPrecisionMoneyDraft>";

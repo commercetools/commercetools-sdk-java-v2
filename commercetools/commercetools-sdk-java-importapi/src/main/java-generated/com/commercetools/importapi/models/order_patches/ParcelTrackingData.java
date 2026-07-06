@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.importapi.models.orders.TrackingData;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ParcelTrackingData
@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ParcelTrackingData {
 
     /**
-     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @return parcelId
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface ParcelTrackingData {
     public TrackingData getTrackingData();
 
     /**
-     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param parcelId value to be set
      */
 
@@ -133,8 +133,8 @@ public interface ParcelTrackingData {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ParcelTrackingData> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ParcelTrackingData>() {
+    public static tools.jackson.core.type.TypeReference<ParcelTrackingData> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ParcelTrackingData>() {
             @Override
             public String toString() {
                 return "TypeReference<ParcelTrackingData>";

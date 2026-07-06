@@ -28,7 +28,7 @@ public class ShippingMethodRemoveShippingRateActionBuilder implements Builder<Sh
     private com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate;
 
     /**
-     *  <p>Zone from which the ShippingRate should be removed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> from which the ShippingRate should be removed.</p>
      * @param builder function to build the zone value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class ShippingMethodRemoveShippingRateActionBuilder implements Builder<Sh
     }
 
     /**
-     *  <p>Zone from which the ShippingRate should be removed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> from which the ShippingRate should be removed.</p>
      * @param builder function to build the zone value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class ShippingMethodRemoveShippingRateActionBuilder implements Builder<Sh
     }
 
     /**
-     *  <p>Zone from which the ShippingRate should be removed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> from which the ShippingRate should be removed.</p>
      * @param zone value to be set
      * @return Builder
      */
@@ -101,7 +101,7 @@ public class ShippingMethodRemoveShippingRateActionBuilder implements Builder<Sh
     }
 
     /**
-     *  <p>Zone from which the ShippingRate should be removed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> from which the ShippingRate should be removed.</p>
      * @return zone
      */
 

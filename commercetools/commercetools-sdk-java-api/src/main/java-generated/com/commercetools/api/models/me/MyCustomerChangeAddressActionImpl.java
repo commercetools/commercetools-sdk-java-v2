@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Changing an address of the Customer produces the CustomerAddressChanged Message.</p>
+ *  <p>Changing an address of the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddressChangedMessage" rel="nofollow">CustomerAddressChanged</a> Message.</p>
  *  <p>Either <code>addressId</code> or <code>addressKey</code> is required.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -60,7 +61,7 @@ public class MyCustomerChangeAddressActionImpl implements MyCustomerChangeAddres
     }
 
     /**
-     *  <p><code>id</code> of the Address to change.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to change.</p>
      */
 
     public String getAddressId() {
@@ -68,7 +69,7 @@ public class MyCustomerChangeAddressActionImpl implements MyCustomerChangeAddres
     }
 
     /**
-     *  <p><code>key</code> of the Address to change.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to change.</p>
      */
 
     public String getAddressKey() {

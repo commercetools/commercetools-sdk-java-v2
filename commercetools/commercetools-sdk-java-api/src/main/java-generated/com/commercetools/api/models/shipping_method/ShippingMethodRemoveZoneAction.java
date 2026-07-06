@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.zone.ZoneResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShippingMethodRemoveZoneAction
@@ -41,6 +41,7 @@ public interface ShippingMethodRemoveZoneAction extends ShippingMethodUpdateActi
 
     /**
      *  <p>Value to remove from <code>zoneRates</code>.</p>
+     *  <p>Removes the entire <a href="https://docs.commercetools.com/apis/ctp:api:type:ZoneRate" rel="nofollow">ZoneRate</a> entry for the specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> from the <code>zoneRates</code> array. This action deletes both the Zone reference and all <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRates</a> associated with that Zone.</p>
      * @return zone
      */
     @NotNull
@@ -50,6 +51,7 @@ public interface ShippingMethodRemoveZoneAction extends ShippingMethodUpdateActi
 
     /**
      *  <p>Value to remove from <code>zoneRates</code>.</p>
+     *  <p>Removes the entire <a href="https://docs.commercetools.com/apis/ctp:api:type:ZoneRate" rel="nofollow">ZoneRate</a> entry for the specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> from the <code>zoneRates</code> array. This action deletes both the Zone reference and all <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRates</a> associated with that Zone.</p>
      * @param zone value to be set
      */
 
@@ -122,8 +124,8 @@ public interface ShippingMethodRemoveZoneAction extends ShippingMethodUpdateActi
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodRemoveZoneAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodRemoveZoneAction>() {
+    public static tools.jackson.core.type.TypeReference<ShippingMethodRemoveZoneAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShippingMethodRemoveZoneAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ShippingMethodRemoveZoneAction>";

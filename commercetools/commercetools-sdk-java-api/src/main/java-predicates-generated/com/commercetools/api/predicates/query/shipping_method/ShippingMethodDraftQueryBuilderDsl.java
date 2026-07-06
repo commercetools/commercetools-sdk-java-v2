@@ -100,4 +100,19 @@ public class ShippingMethodDraftQueryBuilderDsl {
             ShippingMethodDraftQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ShippingMethodDraftQueryBuilderDsl> stores(
+            Function<com.commercetools.api.predicates.query.store.StoreResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.store.StoreResourceIdentifierQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("stores"))
+                    .inner(fn.apply(
+                        com.commercetools.api.predicates.query.store.StoreResourceIdentifierQueryBuilderDsl.of())),
+            ShippingMethodDraftQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<ShippingMethodDraftQueryBuilderDsl> stores() {
+        return new CollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("stores")),
+            p -> new CombinationQueryPredicate<>(p, ShippingMethodDraftQueryBuilderDsl::of));
+    }
+
 }

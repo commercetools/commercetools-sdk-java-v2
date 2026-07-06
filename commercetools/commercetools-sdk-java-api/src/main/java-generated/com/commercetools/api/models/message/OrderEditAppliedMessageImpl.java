@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after successfully applying an OrderEdit.</p>
+ *  <p>Generated after successfully <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/edits/{id}/apply:POST" rel="nofollow">applying an OrderEdit</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditAppliedMessageImpl implements OrderEditAppliedMessage, ModelBase {
@@ -142,7 +143,7 @@ public class OrderEditAppliedMessageImpl implements OrderEditAppliedMessage, Mod
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -158,7 +159,7 @@ public class OrderEditAppliedMessageImpl implements OrderEditAppliedMessage, Mod
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -174,7 +175,7 @@ public class OrderEditAppliedMessageImpl implements OrderEditAppliedMessage, Mod
     }
 
     /**
-     *  <p>OrderEdit that was applied.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a> that was applied.</p>
      */
 
     public com.commercetools.api.models.order_edit.OrderEdit getEdit() {
@@ -182,7 +183,7 @@ public class OrderEditAppliedMessageImpl implements OrderEditAppliedMessage, Mod
     }
 
     /**
-     *  <p>Information about a successfully applied OrderEdit.</p>
+     *  <p>Information about a successfully applied <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a>.</p>
      */
 
     public com.commercetools.api.models.order_edit.OrderEditApplied getResult() {

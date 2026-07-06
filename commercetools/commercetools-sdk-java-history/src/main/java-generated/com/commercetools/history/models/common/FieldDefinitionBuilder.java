@@ -4,6 +4,8 @@ package com.commercetools.history.models.common;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,7 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .type(typeBuilder -> typeBuilder)
  *             .name("{name}")
  *             .label(labelBuilder -> labelBuilder)
- *             .inputHint(TextInputHint.SINGLE_LINE)
+ *             .required(true)
  *             .build()
  * </code></pre>
  * </div>
@@ -31,10 +33,13 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
 
     private com.commercetools.history.models.common.LocalizedString label;
 
-    private com.commercetools.history.models.common.TextInputHint inputHint;
+    private Boolean required;
+
+    @Nullable
+    private com.commercetools.history.models.common.TypeTextInputHint inputHint;
 
     /**
-     * set the value to the type using the builder function
+     *  <p>Data type of the Custom Field to define.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -46,7 +51,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
     }
 
     /**
-     * set the value to the type using the builder function
+     *  <p>Data type of the Custom Field to define.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -58,7 +63,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
     }
 
     /**
-     * set the value to the type
+     *  <p>Data type of the Custom Field to define.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -69,7 +74,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
     }
 
     /**
-     *  <p>The name of the field. The name must be between two and 36 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). The name must be unique for a given resource type ID. In case there is a field with the same name in another type it has to have the same FieldType also.</p>
+     *  <p>Name of the Custom Field to define. Must be unique for a given <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceTypeId" rel="nofollow">ResourceTypeId</a>. In case there is a FieldDefinition with the same <code>name</code> in another <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>, both FieldDefinitions must have the same <code>type</code>.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -80,7 +85,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
     }
 
     /**
-     * set the value to the label using the builder function
+     *  <p>A human-readable label for the field.</p>
      * @param builder function to build the label value
      * @return Builder
      */
@@ -92,7 +97,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
     }
 
     /**
-     * set the value to the label using the builder function
+     *  <p>A human-readable label for the field.</p>
      * @param builder function to build the label value
      * @return Builder
      */
@@ -104,7 +109,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
     }
 
     /**
-     * set the value to the label
+     *  <p>A human-readable label for the field.</p>
      * @param label value to be set
      * @return Builder
      */
@@ -115,18 +120,30 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
     }
 
     /**
-     * set the value to the inputHint
+     *  <p>Defines whether the field is required to have a value.</p>
+     * @param required value to be set
+     * @return Builder
+     */
+
+    public FieldDefinitionBuilder required(final Boolean required) {
+        this.required = required;
+        return this;
+    }
+
+    /**
+     *  <p>Defines the visual representation of the field in user interfaces like the Merchant Center. It is only relevant for string-based <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldTypes</a> like <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldStringType" rel="nofollow">CustomFieldStringType</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedStringType" rel="nofollow">CustomFieldLocalizedStringType</a>.</p>
      * @param inputHint value to be set
      * @return Builder
      */
 
-    public FieldDefinitionBuilder inputHint(final com.commercetools.history.models.common.TextInputHint inputHint) {
+    public FieldDefinitionBuilder inputHint(
+            @Nullable final com.commercetools.history.models.common.TypeTextInputHint inputHint) {
         this.inputHint = inputHint;
         return this;
     }
 
     /**
-     * value of type}
+     *  <p>Data type of the Custom Field to define.</p>
      * @return type
      */
 
@@ -135,7 +152,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
     }
 
     /**
-     *  <p>The name of the field. The name must be between two and 36 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). The name must be unique for a given resource type ID. In case there is a field with the same name in another type it has to have the same FieldType also.</p>
+     *  <p>Name of the Custom Field to define. Must be unique for a given <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceTypeId" rel="nofollow">ResourceTypeId</a>. In case there is a FieldDefinition with the same <code>name</code> in another <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>, both FieldDefinitions must have the same <code>type</code>.</p>
      * @return name
      */
 
@@ -144,7 +161,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
     }
 
     /**
-     * value of label}
+     *  <p>A human-readable label for the field.</p>
      * @return label
      */
 
@@ -153,11 +170,21 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
     }
 
     /**
-     * value of inputHint}
+     *  <p>Defines whether the field is required to have a value.</p>
+     * @return required
+     */
+
+    public Boolean getRequired() {
+        return this.required;
+    }
+
+    /**
+     *  <p>Defines the visual representation of the field in user interfaces like the Merchant Center. It is only relevant for string-based <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldTypes</a> like <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldStringType" rel="nofollow">CustomFieldStringType</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedStringType" rel="nofollow">CustomFieldLocalizedStringType</a>.</p>
      * @return inputHint
      */
 
-    public com.commercetools.history.models.common.TextInputHint getInputHint() {
+    @Nullable
+    public com.commercetools.history.models.common.TypeTextInputHint getInputHint() {
         return this.inputHint;
     }
 
@@ -169,8 +196,8 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
         Objects.requireNonNull(type, FieldDefinition.class + ": type is missing");
         Objects.requireNonNull(name, FieldDefinition.class + ": name is missing");
         Objects.requireNonNull(label, FieldDefinition.class + ": label is missing");
-        Objects.requireNonNull(inputHint, FieldDefinition.class + ": inputHint is missing");
-        return new FieldDefinitionImpl(type, name, label, inputHint);
+        Objects.requireNonNull(required, FieldDefinition.class + ": required is missing");
+        return new FieldDefinitionImpl(type, name, label, required, inputHint);
     }
 
     /**
@@ -178,7 +205,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
      * @return FieldDefinition
      */
     public FieldDefinition buildUnchecked() {
-        return new FieldDefinitionImpl(type, name, label, inputHint);
+        return new FieldDefinitionImpl(type, name, label, required, inputHint);
     }
 
     /**
@@ -199,6 +226,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
         builder.type = template.getType();
         builder.name = template.getName();
         builder.label = template.getLabel();
+        builder.required = template.getRequired();
         builder.inputHint = template.getInputHint();
         return builder;
     }

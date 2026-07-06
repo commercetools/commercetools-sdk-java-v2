@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.customer.CustomerResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Removing an Associate from a Business Unit generates a BusinessUnitAssociateRemoved Message.</p>
+ *  <p>Removing an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> from a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAssociateRemovedMessage" rel="nofollow">BusinessUnitAssociateRemoved</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface BusinessUnitRemoveAssociateAction extends BusinessUnitUpdateAct
     String REMOVE_ASSOCIATE = "removeAssociate";
 
     /**
-     *  <p>Associate to remove.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> to remove.</p>
      * @return customer
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface BusinessUnitRemoveAssociateAction extends BusinessUnitUpdateAct
     public CustomerResourceIdentifier getCustomer();
 
     /**
-     *  <p>Associate to remove.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> to remove.</p>
      * @param customer value to be set
      */
 
@@ -124,8 +124,8 @@ public interface BusinessUnitRemoveAssociateAction extends BusinessUnitUpdateAct
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitRemoveAssociateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitRemoveAssociateAction>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitRemoveAssociateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitRemoveAssociateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitRemoveAssociateAction>";

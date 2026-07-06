@@ -30,7 +30,7 @@ public class TaxCategoryReferenceBuilder implements Builder<TaxCategoryReference
     private com.commercetools.api.models.tax_category.TaxCategory obj;
 
     /**
-     *  <p>Unique identifier of the referenced TaxCategory.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class TaxCategoryReferenceBuilder implements Builder<TaxCategoryReference
     }
 
     /**
-     *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with Reference Expansion for TaxCategories.</p>
+     *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with <span>Reference Expansion</span> for TaxCategories.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class TaxCategoryReferenceBuilder implements Builder<TaxCategoryReference
     }
 
     /**
-     *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with Reference Expansion for TaxCategories.</p>
+     *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with <span>Reference Expansion</span> for TaxCategories.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class TaxCategoryReferenceBuilder implements Builder<TaxCategoryReference
     }
 
     /**
-     *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with Reference Expansion for TaxCategories.</p>
+     *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with <span>Reference Expansion</span> for TaxCategories.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class TaxCategoryReferenceBuilder implements Builder<TaxCategoryReference
     }
 
     /**
-     *  <p>Unique identifier of the referenced TaxCategory.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a>.</p>
      * @return id
      */
 
@@ -85,7 +85,7 @@ public class TaxCategoryReferenceBuilder implements Builder<TaxCategoryReference
     }
 
     /**
-     *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with Reference Expansion for TaxCategories.</p>
+     *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with <span>Reference Expansion</span> for TaxCategories.</p>
      * @return obj
      */
 

@@ -40,7 +40,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
     }
 
     /**
-     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
+     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an <a href="https://docs.commercetools.com/apis/ctp:api:type:EnumValuesMustMatchError" rel="nofollow">EnumValuesMustMatch</a> error is returned.</p>
      * @param values value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
     }
 
     /**
-     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
+     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an <a href="https://docs.commercetools.com/apis/ctp:api:type:EnumValuesMustMatchError" rel="nofollow">EnumValuesMustMatch</a> error is returned.</p>
      * @param values value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
     }
 
     /**
-     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
+     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an <a href="https://docs.commercetools.com/apis/ctp:api:type:EnumValuesMustMatchError" rel="nofollow">EnumValuesMustMatch</a> error is returned.</p>
      * @param values value to be set
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
     }
 
     /**
-     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
+     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an <a href="https://docs.commercetools.com/apis/ctp:api:type:EnumValuesMustMatchError" rel="nofollow">EnumValuesMustMatch</a> error is returned.</p>
      * @param builder function to build the values value
      * @return Builder
      */
@@ -95,7 +95,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
     }
 
     /**
-     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
+     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an <a href="https://docs.commercetools.com/apis/ctp:api:type:EnumValuesMustMatchError" rel="nofollow">EnumValuesMustMatch</a> error is returned.</p>
      * @param builder function to build the values value
      * @return Builder
      */
@@ -109,7 +109,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
     }
 
     /**
-     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
+     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an <a href="https://docs.commercetools.com/apis/ctp:api:type:EnumValuesMustMatchError" rel="nofollow">EnumValuesMustMatch</a> error is returned.</p>
      * @param builder function to build the values value
      * @return Builder
      */
@@ -121,7 +121,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
     }
 
     /**
-     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
+     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an <a href="https://docs.commercetools.com/apis/ctp:api:type:EnumValuesMustMatchError" rel="nofollow">EnumValuesMustMatch</a> error is returned.</p>
      * @param builder function to build the values value
      * @return Builder
      */
@@ -141,7 +141,7 @@ public class ProductTypeChangeLocalizedEnumValueOrderActionBuilder
     }
 
     /**
-     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
+     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an <a href="https://docs.commercetools.com/apis/ctp:api:type:EnumValuesMustMatchError" rel="nofollow">EnumValuesMustMatch</a> error is returned.</p>
      * @return values
      */
 

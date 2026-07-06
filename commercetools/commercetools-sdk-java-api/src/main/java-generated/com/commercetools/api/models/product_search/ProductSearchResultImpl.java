@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductSearchResult
@@ -26,6 +27,7 @@ public class ProductSearchResultImpl implements ProductSearchResult, ModelBase {
 
     private com.commercetools.api.models.product_search.ProductSearchMatchingVariants matchingVariants;
 
+    @Deprecated
     private com.commercetools.api.models.product.ProductProjection productProjection;
 
     /**
@@ -47,7 +49,7 @@ public class ProductSearchResultImpl implements ProductSearchResult, ModelBase {
     }
 
     /**
-     *  <p><code>id</code> of the Product that matches the search query.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that matches the search query.</p>
      */
 
     public String getId() {
@@ -55,7 +57,7 @@ public class ProductSearchResultImpl implements ProductSearchResult, ModelBase {
     }
 
     /**
-     *  <p>Information about which Product Variants match the search query. Only present if <code>markMatchingVariants</code> is set to <code>true</code> in the ProductSearchRequest.</p>
+     *  <p>Information about which Product Variants match the search query. Only present if <code>markMatchingVariants</code> is set to <code>true</code> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchRequest" rel="nofollow">ProductSearchRequest</a>.</p>
      */
 
     public com.commercetools.api.models.product_search.ProductSearchMatchingVariants getMatchingVariants() {
@@ -63,9 +65,9 @@ public class ProductSearchResultImpl implements ProductSearchResult, ModelBase {
     }
 
     /**
-     *  <p>Projected data of the Product with <code>id</code>. Only present if data integration with Product Projection parameters is requested.</p>
+     *  <p>Projected data of the Product with <code>id</code>. Only present if deprecated data integration <span>with Product Projection parameters</span> is requested.</p>
      */
-
+    @Deprecated
     public com.commercetools.api.models.product.ProductProjection getProductProjection() {
         return this.productProjection;
     }
@@ -79,6 +81,7 @@ public class ProductSearchResultImpl implements ProductSearchResult, ModelBase {
         this.matchingVariants = matchingVariants;
     }
 
+    @Deprecated
     public void setProductProjection(final com.commercetools.api.models.product.ProductProjection productProjection) {
         this.productProjection = productProjection;
     }

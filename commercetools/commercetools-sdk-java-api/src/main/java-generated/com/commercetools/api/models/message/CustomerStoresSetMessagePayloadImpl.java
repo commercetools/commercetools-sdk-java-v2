@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Stores update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerStoresSetMessagePayloadImpl implements CustomerStoresSetMessagePayload, ModelBase {
@@ -56,7 +57,7 @@ public class CustomerStoresSetMessagePayloadImpl implements CustomerStoresSetMes
     }
 
     /**
-     *  <p>The Stores the Customer is associated with after the Set Stores update action.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> is associated with after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      */
 
     public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {
@@ -64,7 +65,7 @@ public class CustomerStoresSetMessagePayloadImpl implements CustomerStoresSetMes
     }
 
     /**
-     *  <p>The Stores the Customer was associated with before the Set Stores update action.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> was associated with before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetStoresAction" rel="nofollow">Set Stores</a> update action.</p>
      */
 
     public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getOldStores() {

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * SetShippingInfoTaxedPriceChange
@@ -26,17 +27,17 @@ public class SetShippingInfoTaxedPriceChangeImpl implements SetShippingInfoTaxed
 
     private String change;
 
-    private com.commercetools.history.models.common.TaxedPrice previousValue;
+    private com.commercetools.history.models.common.TaxedItemPrice previousValue;
 
-    private com.commercetools.history.models.common.TaxedPrice nextValue;
+    private com.commercetools.history.models.common.TaxedItemPrice nextValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetShippingInfoTaxedPriceChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.TaxedPrice previousValue,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.TaxedPrice nextValue) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.TaxedItemPrice previousValue,
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.TaxedItemPrice nextValue) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
@@ -70,7 +71,7 @@ public class SetShippingInfoTaxedPriceChangeImpl implements SetShippingInfoTaxed
      *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.common.TaxedPrice getPreviousValue() {
+    public com.commercetools.history.models.common.TaxedItemPrice getPreviousValue() {
         return this.previousValue;
     }
 
@@ -78,7 +79,7 @@ public class SetShippingInfoTaxedPriceChangeImpl implements SetShippingInfoTaxed
      *  <p>Value after the change.</p>
      */
 
-    public com.commercetools.history.models.common.TaxedPrice getNextValue() {
+    public com.commercetools.history.models.common.TaxedItemPrice getNextValue() {
         return this.nextValue;
     }
 
@@ -86,11 +87,11 @@ public class SetShippingInfoTaxedPriceChangeImpl implements SetShippingInfoTaxed
         this.change = change;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.TaxedPrice previousValue) {
+    public void setPreviousValue(final com.commercetools.history.models.common.TaxedItemPrice previousValue) {
         this.previousValue = previousValue;
     }
 
-    public void setNextValue(final com.commercetools.history.models.common.TaxedPrice nextValue) {
+    public void setNextValue(final com.commercetools.history.models.common.TaxedItemPrice nextValue) {
         this.nextValue = nextValue;
     }
 

@@ -9,12 +9,14 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.cart.ProductPublishScope;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Publishes product data from the Product's staged projection to its current projection. Produces the ProductPublished Message.</p>
+ *  <p>Copies the product data from the Product's staged representation to its current representation and sets the <code>published</code> flag on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> to <code>true</code>. This makes the current representation retrievable in <span>Product Projection</span> endpoints and indexes it for <span>Product Search</span>.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishedMessage" rel="nofollow">ProductPublished</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -117,8 +119,8 @@ public interface ProductPublishAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductPublishAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductPublishAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductPublishAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductPublishAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductPublishAction>";

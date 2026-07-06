@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>This update action produces the StoreDistributionChannelsChanged Message.</p>
+ *  <p>This update action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreDistributionChannelsChangedMessage" rel="nofollow">StoreDistributionChannelsChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface StoreRemoveDistributionChannelAction extends StoreUpdateAction 
     String REMOVE_DISTRIBUTION_CHANNEL = "removeDistributionChannel";
 
     /**
-     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @return distributionChannel
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface StoreRemoveDistributionChannelAction extends StoreUpdateAction 
     public ChannelResourceIdentifier getDistributionChannel();
 
     /**
-     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param distributionChannel value to be set
      */
 
@@ -125,8 +125,8 @@ public interface StoreRemoveDistributionChannelAction extends StoreUpdateAction 
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StoreRemoveDistributionChannelAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StoreRemoveDistributionChannelAction>() {
+    public static tools.jackson.core.type.TypeReference<StoreRemoveDistributionChannelAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StoreRemoveDistributionChannelAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StoreRemoveDistributionChannelAction>";

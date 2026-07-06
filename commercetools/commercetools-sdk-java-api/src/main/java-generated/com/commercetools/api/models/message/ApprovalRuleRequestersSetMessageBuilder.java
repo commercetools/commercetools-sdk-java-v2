@@ -187,7 +187,7 @@ public class ApprovalRuleRequestersSetMessageBuilder implements Builder<Approval
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -199,7 +199,7 @@ public class ApprovalRuleRequestersSetMessageBuilder implements Builder<Approval
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -261,7 +261,7 @@ public class ApprovalRuleRequestersSetMessageBuilder implements Builder<Approval
     }
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param requesters value to be set
      * @return Builder
      */
@@ -273,7 +273,7 @@ public class ApprovalRuleRequestersSetMessageBuilder implements Builder<Approval
     }
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param requesters value to be set
      * @return Builder
      */
@@ -285,7 +285,7 @@ public class ApprovalRuleRequestersSetMessageBuilder implements Builder<Approval
     }
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param requesters value to be set
      * @return Builder
      */
@@ -300,7 +300,7 @@ public class ApprovalRuleRequestersSetMessageBuilder implements Builder<Approval
     }
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param builder function to build the requesters value
      * @return Builder
      */
@@ -316,7 +316,7 @@ public class ApprovalRuleRequestersSetMessageBuilder implements Builder<Approval
     }
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param builder function to build the requesters value
      * @return Builder
      */
@@ -330,7 +330,7 @@ public class ApprovalRuleRequestersSetMessageBuilder implements Builder<Approval
     }
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param builder function to build the requesters value
      * @return Builder
      */
@@ -341,7 +341,7 @@ public class ApprovalRuleRequestersSetMessageBuilder implements Builder<Approval
     }
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param builder function to build the requesters value
      * @return Builder
      */
@@ -352,7 +352,7 @@ public class ApprovalRuleRequestersSetMessageBuilder implements Builder<Approval
     }
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param oldRequesters value to be set
      * @return Builder
      */
@@ -364,7 +364,7 @@ public class ApprovalRuleRequestersSetMessageBuilder implements Builder<Approval
     }
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param oldRequesters value to be set
      * @return Builder
      */
@@ -376,7 +376,7 @@ public class ApprovalRuleRequestersSetMessageBuilder implements Builder<Approval
     }
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param oldRequesters value to be set
      * @return Builder
      */
@@ -391,7 +391,7 @@ public class ApprovalRuleRequestersSetMessageBuilder implements Builder<Approval
     }
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param builder function to build the oldRequesters value
      * @return Builder
      */
@@ -407,7 +407,7 @@ public class ApprovalRuleRequestersSetMessageBuilder implements Builder<Approval
     }
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param builder function to build the oldRequesters value
      * @return Builder
      */
@@ -421,7 +421,7 @@ public class ApprovalRuleRequestersSetMessageBuilder implements Builder<Approval
     }
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param builder function to build the oldRequesters value
      * @return Builder
      */
@@ -432,7 +432,7 @@ public class ApprovalRuleRequestersSetMessageBuilder implements Builder<Approval
     }
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param builder function to build the oldRequesters value
      * @return Builder
      */
@@ -508,7 +508,7 @@ public class ApprovalRuleRequestersSetMessageBuilder implements Builder<Approval
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -536,7 +536,7 @@ public class ApprovalRuleRequestersSetMessageBuilder implements Builder<Approval
     }
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @return requesters
      */
 
@@ -545,7 +545,7 @@ public class ApprovalRuleRequestersSetMessageBuilder implements Builder<Approval
     }
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @return oldRequesters
      */
 

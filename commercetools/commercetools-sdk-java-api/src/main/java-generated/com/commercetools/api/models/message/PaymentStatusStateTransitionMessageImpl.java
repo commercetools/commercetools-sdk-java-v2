@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Transition State update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentStatusStateTransitionMessageImpl implements PaymentStatusStateTransitionMessage, ModelBase {
@@ -143,7 +144,7 @@ public class PaymentStatusStateTransitionMessageImpl implements PaymentStatusSta
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -159,7 +160,7 @@ public class PaymentStatusStateTransitionMessageImpl implements PaymentStatusSta
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -175,7 +176,7 @@ public class PaymentStatusStateTransitionMessageImpl implements PaymentStatusSta
     }
 
     /**
-     *  <p>State of the Payment after the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {
@@ -183,7 +184,7 @@ public class PaymentStatusStateTransitionMessageImpl implements PaymentStatusSta
     }
 
     /**
-     *  <p>Whether State transition validations were turned off during the Change Transaction State update action.</p>
+     *  <p>Whether <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition validations were turned off during the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentChangeTransactionStateAction" rel="nofollow">Change Transaction State</a> update action.</p>
      */
 
     public Boolean getForce() {

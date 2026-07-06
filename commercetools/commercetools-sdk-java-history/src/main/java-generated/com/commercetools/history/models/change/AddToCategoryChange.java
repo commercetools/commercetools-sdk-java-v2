@@ -10,15 +10,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.Reference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Change triggered by the Add to Category update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductAddToCategoryAction" rel="nofollow">Add to Category</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .category(categoryBuilder -> categoryBuilder)
+ *             .catalogData("{catalogData}")
  *             .build()
  * </code></pre>
  * </div>
@@ -87,6 +88,18 @@ public interface AddToCategoryChange extends Change {
     public Reference getCategory();
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+    @NotNull
+    @JsonProperty("catalogData")
+    public String getCatalogData();
+
+    /**
      * set change
      * @param change value to be set
      */
@@ -131,6 +144,17 @@ public interface AddToCategoryChange extends Change {
     public void setCategory(final Reference category);
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     */
+
+    public void setCatalogData(final String catalogData);
+
+    /**
      * factory method
      * @return instance of AddToCategoryChange
      */
@@ -149,6 +173,7 @@ public interface AddToCategoryChange extends Change {
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
         instance.setCategory(template.getCategory());
+        instance.setCatalogData(template.getCatalogData());
         return instance;
     }
 
@@ -177,6 +202,7 @@ public interface AddToCategoryChange extends Change {
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setCategory(com.commercetools.history.models.common.Reference.deepCopy(template.getCategory()));
+        instance.setCatalogData(template.getCatalogData());
         return instance;
     }
 
@@ -211,8 +237,8 @@ public interface AddToCategoryChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AddToCategoryChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AddToCategoryChange>() {
+    public static tools.jackson.core.type.TypeReference<AddToCategoryChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AddToCategoryChange>() {
             @Override
             public String toString() {
                 return "TypeReference<AddToCategoryChange>";

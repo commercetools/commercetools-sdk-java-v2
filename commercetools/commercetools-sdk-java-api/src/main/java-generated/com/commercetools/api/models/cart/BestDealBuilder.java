@@ -24,7 +24,7 @@ public class BestDealBuilder implements Builder<BestDeal> {
     private String chosenDiscountType;
 
     /**
-     *  <p>Discount type that offers the best deal; the value can be <code>product-discount</code> or <code>cart-discount</code>.</p>
+     *  <p>Discount type that offers the best deal; the value can be <code>ProductDiscount</code> or <code>CartDiscount</code>.</p>
      * @param chosenDiscountType value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class BestDealBuilder implements Builder<BestDeal> {
     }
 
     /**
-     *  <p>Discount type that offers the best deal; the value can be <code>product-discount</code> or <code>cart-discount</code>.</p>
+     *  <p>Discount type that offers the best deal; the value can be <code>ProductDiscount</code> or <code>CartDiscount</code>.</p>
      * @return chosenDiscountType
      */
 

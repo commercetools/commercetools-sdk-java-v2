@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Recurring Orders are automatically assigned the Store and/or Business Unit from the associated Cart.</p>
@@ -63,7 +64,7 @@ public class RecurringOrderDraftImpl implements RecurringOrderDraft, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the RecurringOrder.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a>.</p>
      */
 
     public String getKey() {
@@ -71,7 +72,7 @@ public class RecurringOrderDraftImpl implements RecurringOrderDraft, ModelBase {
     }
 
     /**
-     *  <p>ResourceIdentifier to the Cart from which the RecurringOrder is created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Cart from which the RecurringOrder is created.</p>
      */
 
     public com.commercetools.api.models.cart.CartResourceIdentifier getCart() {
@@ -79,7 +80,7 @@ public class RecurringOrderDraftImpl implements RecurringOrderDraft, ModelBase {
     }
 
     /**
-     *  <p>Current version of the referenced Cart.</p>
+     *  <p>Current version of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
      */
 
     public Long getCartVersion() {
@@ -87,7 +88,7 @@ public class RecurringOrderDraftImpl implements RecurringOrderDraft, ModelBase {
     }
 
     /**
-     *  <p>Date and time (UTC) when the RecurringOrder will start.</p>
+     *  <p>Date and time (UTC) when the RecurringOrder will start. When specified, the date and time must be in the future. If not specified, the recurring order will start immediately.</p>
      */
 
     public java.time.ZonedDateTime getStartsAt() {

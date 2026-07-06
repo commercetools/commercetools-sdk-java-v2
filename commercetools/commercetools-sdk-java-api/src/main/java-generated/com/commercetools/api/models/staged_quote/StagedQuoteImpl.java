@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * StagedQuote
@@ -170,7 +171,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
     }
 
     /**
-     *  <p>The Buyer who requested the Quote.</p>
+     *  <p>The <span>Buyer</span> who requested the Quote.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
@@ -186,7 +187,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
     }
 
     /**
-     *  <p>Cart containing the offered items. May contain either DirectDiscounts or CartDiscounts.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> containing the offered items. May contain either <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">DirectDiscounts</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a>.</p>
      */
 
     public com.commercetools.api.models.cart.CartReference getQuotationCart() {
@@ -202,7 +203,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
     }
 
     /**
-     *  <p>Message from the Seller included in the offer.</p>
+     *  <p>Message from the <span>Seller</span> included in the offer.</p>
      */
 
     public String getSellerComment() {
@@ -218,7 +219,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
     }
 
     /**
-     *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Staged Quote. This reference can point to a State in a custom workflow.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {
@@ -226,7 +227,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
     }
 
     /**
-     *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
+     *  <p>The purchase order number is typically set by the <span>Buyer</span> on a <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> to track the purchase order during the <span>quote and order flow</span>.</p>
      */
 
     public String getPurchaseOrderNumber() {
@@ -234,7 +235,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
     }
 
     /**
-     *  <p>The BusinessUnit for the Staged Quote. Only available for B2B-enabled Projects.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> for the Staged Quote. Only available for <span>B2B</span>-enabled Projects.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
@@ -242,7 +243,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
     }
 
     /**
-     *  <p>The Store to which the Buyer belongs.</p>
+     *  <p>The Store to which the <span>Buyer</span> belongs.</p>
      */
 
     public com.commercetools.api.models.store.StoreKeyReference getStore() {

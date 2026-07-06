@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.shopping_list.ShoppingListLineItem;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Add ShoppingListLineItem update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListAddLineItemAction" rel="nofollow">Add ShoppingListLineItem</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface ShoppingListLineItemAddedMessage extends ShoppingListMessage {
     String SHOPPING_LIST_LINE_ITEM_ADDED = "ShoppingListLineItemAdded";
 
     /**
-     *  <p>Line Item that was added to the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">Line Item</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @return lineItem
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface ShoppingListLineItemAddedMessage extends ShoppingListMessage {
     public ShoppingListLineItem getLineItem();
 
     /**
-     *  <p>Line Item that was added to the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">Line Item</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @param lineItem value to be set
      */
 
@@ -152,8 +152,8 @@ public interface ShoppingListLineItemAddedMessage extends ShoppingListMessage {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListLineItemAddedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListLineItemAddedMessage>() {
+    public static tools.jackson.core.type.TypeReference<ShoppingListLineItemAddedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShoppingListLineItemAddedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<ShoppingListLineItemAddedMessage>";

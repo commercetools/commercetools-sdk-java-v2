@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.standalone_price.StagedStandalonePrice;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Apply Staged Changes update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceApplyStagedChangesAction" rel="nofollow">Apply Staged Changes</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface StandalonePriceStagedChangesAppliedMessagePayload extends Messa
     String STANDALONE_PRICE_STAGED_CHANGES_APPLIED = "StandalonePriceStagedChangesApplied";
 
     /**
-     *  <p>Applied changes of the StandalonePrice after the Apply Staged Changes update action.</p>
+     *  <p>Applied changes of the <span>StandalonePrice</span> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceApplyStagedChangesAction" rel="nofollow">Apply Staged Changes</a> update action.</p>
      * @return stagedChanges
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface StandalonePriceStagedChangesAppliedMessagePayload extends Messa
     public StagedStandalonePrice getStagedChanges();
 
     /**
-     *  <p>Applied changes of the StandalonePrice after the Apply Staged Changes update action.</p>
+     *  <p>Applied changes of the <span>StandalonePrice</span> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceApplyStagedChangesAction" rel="nofollow">Apply Staged Changes</a> update action.</p>
      * @param stagedChanges value to be set
      */
 
@@ -127,8 +127,8 @@ public interface StandalonePriceStagedChangesAppliedMessagePayload extends Messa
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceStagedChangesAppliedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceStagedChangesAppliedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<StandalonePriceStagedChangesAppliedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StandalonePriceStagedChangesAppliedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<StandalonePriceStagedChangesAppliedMessagePayload>";

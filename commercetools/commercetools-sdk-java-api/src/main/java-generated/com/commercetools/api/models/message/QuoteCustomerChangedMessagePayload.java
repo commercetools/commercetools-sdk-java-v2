@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.customer.CustomerReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Change Customer update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteChangeCustomerAction" rel="nofollow">Change Customer</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface QuoteCustomerChangedMessagePayload extends MessagePayload {
     String QUOTE_CUSTOMER_CHANGED = "QuoteCustomerChanged";
 
     /**
-     *  <p>The Buyer who now owns the Quote.</p>
+     *  <p>The <span>Buyer</span> who now owns the Quote.</p>
      * @return customer
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface QuoteCustomerChangedMessagePayload extends MessagePayload {
     public CustomerReference getCustomer();
 
     /**
-     *  <p>The previous Buyer.</p>
+     *  <p>The previous <span>Buyer</span>.</p>
      * @return previousCustomer
      */
     @NotNull
@@ -59,14 +59,14 @@ public interface QuoteCustomerChangedMessagePayload extends MessagePayload {
     public CustomerReference getPreviousCustomer();
 
     /**
-     *  <p>The Buyer who now owns the Quote.</p>
+     *  <p>The <span>Buyer</span> who now owns the Quote.</p>
      * @param customer value to be set
      */
 
     public void setCustomer(final CustomerReference customer);
 
     /**
-     *  <p>The previous Buyer.</p>
+     *  <p>The previous <span>Buyer</span>.</p>
      * @param previousCustomer value to be set
      */
 
@@ -143,8 +143,8 @@ public interface QuoteCustomerChangedMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<QuoteCustomerChangedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<QuoteCustomerChangedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<QuoteCustomerChangedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<QuoteCustomerChangedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<QuoteCustomerChangedMessagePayload>";

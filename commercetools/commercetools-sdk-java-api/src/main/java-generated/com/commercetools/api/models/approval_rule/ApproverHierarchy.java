@@ -9,15 +9,15 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Describes the order in which Associates can approve the matched Order.</p>
+ *  <p>Describes the order in which <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associates</a> can approve the matched <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -128,8 +128,8 @@ public interface ApproverHierarchy {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ApproverHierarchy> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ApproverHierarchy>() {
+    public static tools.jackson.core.type.TypeReference<ApproverHierarchy> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ApproverHierarchy>() {
             @Override
             public String toString() {
                 return "TypeReference<ApproverHierarchy>";

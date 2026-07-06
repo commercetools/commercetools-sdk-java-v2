@@ -7,7 +7,6 @@ import java.util.*;
 import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -17,8 +16,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Reference to an AttributeGroup.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeGroup" rel="nofollow">AttributeGroup</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeGroupReferenceImpl implements AttributeGroupReference, ModelBase {
@@ -48,7 +49,7 @@ public class AttributeGroupReferenceImpl implements AttributeGroupReference, Mod
     }
 
     /**
-     *  <p>Type of referenced resource.</p>
+     *
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
@@ -56,7 +57,7 @@ public class AttributeGroupReferenceImpl implements AttributeGroupReference, Mod
     }
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced AttributeGroup.</p>
+     *  <p>Platform-generated unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeGroup" rel="nofollow">AttributeGroup</a>.</p>
      */
 
     public String getId() {
@@ -64,7 +65,7 @@ public class AttributeGroupReferenceImpl implements AttributeGroupReference, Mod
     }
 
     /**
-     *  <p>Contains the representation of the expanded AttributeGroup. Only present in responses to requests with Reference Expansion for AttributeGroup.</p>
+     *  <p>Contains the representation of the expanded AttributeGroup. Only present in responses to requests with <span>Reference Expansion</span> for AttributeGroup.</p>
      */
 
     public com.commercetools.api.models.attribute_group.AttributeGroup getObj() {

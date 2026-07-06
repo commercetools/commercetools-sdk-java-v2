@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,18 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li>Set Description on Cart Discounts.</li>
- *   <li>Set Description on Categories.</li>
- *   <li>Set Description on Discount Codes.</li>
- *   <li>Set Description on Products.</li>
- *   <li>Set Description on Product Discounts.</li>
- *   <li>Set Description on Shopping Lists.</li>
- *   <li>Set Description on States.</li>
- *   <li>Set Description on Types.</li>
- *  </ul>
+ * SetLocalizedDescriptionChange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetLocalizedDescriptionChangeImpl implements SetLocalizedDescriptionChange, ModelBase {
@@ -40,16 +31,20 @@ public class SetLocalizedDescriptionChangeImpl implements SetLocalizedDescriptio
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
+    private String catalogData;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetLocalizedDescriptionChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.LocalizedString previousValue,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.LocalizedString nextValue) {
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.LocalizedString nextValue,
+            @JsonProperty("catalogData") final String catalogData) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
+        this.catalogData = catalogData;
         this.type = SET_LOCALIZED_DESCRIPTION_CHANGE;
     }
 
@@ -92,6 +87,19 @@ public class SetLocalizedDescriptionChangeImpl implements SetLocalizedDescriptio
         return this.nextValue;
     }
 
+    /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     *  <p>This field is only present if the change is related to the Product entity.</p>
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
@@ -102,6 +110,10 @@ public class SetLocalizedDescriptionChangeImpl implements SetLocalizedDescriptio
 
     public void setNextValue(final com.commercetools.history.models.common.LocalizedString nextValue) {
         this.nextValue = nextValue;
+    }
+
+    public void setCatalogData(final String catalogData) {
+        this.catalogData = catalogData;
     }
 
     @Override
@@ -118,10 +130,12 @@ public class SetLocalizedDescriptionChangeImpl implements SetLocalizedDescriptio
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(catalogData, that.catalogData)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(catalogData, that.catalogData)
                 .isEquals();
     }
 
@@ -131,6 +145,7 @@ public class SetLocalizedDescriptionChangeImpl implements SetLocalizedDescriptio
                 .append(change)
                 .append(previousValue)
                 .append(nextValue)
+                .append(catalogData)
                 .toHashCode();
     }
 
@@ -140,6 +155,7 @@ public class SetLocalizedDescriptionChangeImpl implements SetLocalizedDescriptio
                 .append("change", change)
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
+                .append("catalogData", catalogData)
                 .build();
     }
 

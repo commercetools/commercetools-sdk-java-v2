@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Price Custom Type update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetProductPriceCustomTypeAction" rel="nofollow">Set Price Custom Type</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPriceCustomFieldsSetMessageImpl implements ProductPriceCustomFieldsSetMessage, ModelBase {
@@ -154,7 +155,7 @@ public class ProductPriceCustomFieldsSetMessageImpl implements ProductPriceCusto
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -170,7 +171,7 @@ public class ProductPriceCustomFieldsSetMessageImpl implements ProductPriceCusto
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -186,7 +187,7 @@ public class ProductPriceCustomFieldsSetMessageImpl implements ProductPriceCusto
     }
 
     /**
-     *  <p>Unique identifier of the Price on which the Custom Type was set.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> on which the Custom Type was set.</p>
      */
 
     public String getPriceId() {
@@ -194,7 +195,7 @@ public class ProductPriceCustomFieldsSetMessageImpl implements ProductPriceCusto
     }
 
     /**
-     *  <p>Unique identifier of the ProductVariant to which the Price belongs.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to which the Price belongs.</p>
      */
 
     public Long getVariantId() {
@@ -202,7 +203,7 @@ public class ProductPriceCustomFieldsSetMessageImpl implements ProductPriceCusto
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      */
 
     public Boolean getStaged() {
@@ -218,7 +219,7 @@ public class ProductPriceCustomFieldsSetMessageImpl implements ProductPriceCusto
     }
 
     /**
-     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the previous <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a>. Absent if there was no previous Custom Type present.</p>
      */
 
     public String getOldTypeId() {

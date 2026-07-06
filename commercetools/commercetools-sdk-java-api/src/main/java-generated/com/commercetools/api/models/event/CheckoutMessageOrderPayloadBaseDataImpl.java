@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>The <code>data</code> payload of all related order event messages.</p>
@@ -51,7 +52,7 @@ public class CheckoutMessageOrderPayloadBaseDataImpl implements CheckoutMessageO
     }
 
     /**
-     *  <p><code>key</code> of the Project where the order would belong to.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> where the order would belong to.</p>
      */
 
     public String getProjectKey() {
@@ -59,7 +60,7 @@ public class CheckoutMessageOrderPayloadBaseDataImpl implements CheckoutMessageO
     }
 
     /**
-     *  <p>The Cart on which the change or action was performed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.cart.CartReference getCart() {
@@ -67,7 +68,7 @@ public class CheckoutMessageOrderPayloadBaseDataImpl implements CheckoutMessageO
     }
 
     /**
-     *  <p>The Payments on which the change or action was performed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payments</a> on which the change or action was performed.</p>
      */
 
     public java.util.List<com.commercetools.api.models.payment.PaymentReference> getPayments() {

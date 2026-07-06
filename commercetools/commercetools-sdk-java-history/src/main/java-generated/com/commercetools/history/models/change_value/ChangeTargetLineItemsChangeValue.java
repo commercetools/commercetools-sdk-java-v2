@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ChangeTargetLineItemsChangeValue
@@ -46,7 +46,7 @@ public interface ChangeTargetLineItemsChangeValue extends ChangeTargetChangeValu
     public String getType();
 
     /**
-     *  <p>Valid LineItem target predicate.</p>
+     *  <p>Valid <span>LineItem target predicate</span>.</p>
      * @return predicate
      */
     @NotNull
@@ -54,7 +54,7 @@ public interface ChangeTargetLineItemsChangeValue extends ChangeTargetChangeValu
     public String getPredicate();
 
     /**
-     *  <p>Valid LineItem target predicate.</p>
+     *  <p>Valid <span>LineItem target predicate</span>.</p>
      * @param predicate value to be set
      */
 
@@ -127,8 +127,8 @@ public interface ChangeTargetLineItemsChangeValue extends ChangeTargetChangeValu
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChangeTargetLineItemsChangeValue> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChangeTargetLineItemsChangeValue>() {
+    public static tools.jackson.core.type.TypeReference<ChangeTargetLineItemsChangeValue> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChangeTargetLineItemsChangeValue>() {
             @Override
             public String toString() {
                 return "TypeReference<ChangeTargetLineItemsChangeValue>";

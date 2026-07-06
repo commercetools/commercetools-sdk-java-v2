@@ -35,6 +35,7 @@ public class CentPrecisionMoneyBuilder implements Builder<CentPrecisionMoney> {
      *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
      *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
      *  </ul>
+     *  <p><code>centAmount</code> is represented as 64-bit integers. If this limit is exceeded, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MoneyOverflowError" rel="nofollow">MoneyOverflow</a> error will be returned.</p>
      * @param centAmount value to be set
      * @return Builder
      */
@@ -45,7 +46,7 @@ public class CentPrecisionMoneyBuilder implements Builder<CentPrecisionMoney> {
     }
 
     /**
-     *  <p>Currency code compliant to ISO 4217.</p>
+     *  <p>A currency code compliant with <span>ISO 4217</span> or a <a href="https://docs.commercetools.com/apis/ctp:api:type:NonStandardCurrency" rel="nofollow">non-standard currency</a>.</p>
      * @param currencyCode value to be set
      * @return Builder
      */
@@ -72,6 +73,7 @@ public class CentPrecisionMoneyBuilder implements Builder<CentPrecisionMoney> {
      *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
      *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
      *  </ul>
+     *  <p><code>centAmount</code> is represented as 64-bit integers. If this limit is exceeded, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MoneyOverflowError" rel="nofollow">MoneyOverflow</a> error will be returned.</p>
      * @return centAmount
      */
 
@@ -80,7 +82,7 @@ public class CentPrecisionMoneyBuilder implements Builder<CentPrecisionMoney> {
     }
 
     /**
-     *  <p>Currency code compliant to ISO 4217.</p>
+     *  <p>A currency code compliant with <span>ISO 4217</span> or a <a href="https://docs.commercetools.com/apis/ctp:api:type:NonStandardCurrency" rel="nofollow">non-standard currency</a>.</p>
      * @return currencyCode
      */
 

@@ -30,7 +30,7 @@ public class ProductTailoringReferenceBuilder implements Builder<ProductTailorin
     private com.commercetools.api.models.product_tailoring.ProductTailoring obj;
 
     /**
-     *  <p>Unique identifier of the referenced ProductTailoring.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class ProductTailoringReferenceBuilder implements Builder<ProductTailorin
     }
 
     /**
-     *  <p>Contains the representation of the expanded ProductTailoring. Only present in responses to requests with Reference Expansion for ProductTailoring.</p>
+     *  <p>Contains the representation of the expanded ProductTailoring. Only present in responses to requests with <span>Reference Expansion</span> for ProductTailoring.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ProductTailoringReferenceBuilder implements Builder<ProductTailorin
     }
 
     /**
-     *  <p>Contains the representation of the expanded ProductTailoring. Only present in responses to requests with Reference Expansion for ProductTailoring.</p>
+     *  <p>Contains the representation of the expanded ProductTailoring. Only present in responses to requests with <span>Reference Expansion</span> for ProductTailoring.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class ProductTailoringReferenceBuilder implements Builder<ProductTailorin
     }
 
     /**
-     *  <p>Contains the representation of the expanded ProductTailoring. Only present in responses to requests with Reference Expansion for ProductTailoring.</p>
+     *  <p>Contains the representation of the expanded ProductTailoring. Only present in responses to requests with <span>Reference Expansion</span> for ProductTailoring.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class ProductTailoringReferenceBuilder implements Builder<ProductTailorin
     }
 
     /**
-     *  <p>Unique identifier of the referenced ProductTailoring.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a>.</p>
      * @return id
      */
 
@@ -86,7 +86,7 @@ public class ProductTailoringReferenceBuilder implements Builder<ProductTailorin
     }
 
     /**
-     *  <p>Contains the representation of the expanded ProductTailoring. Only present in responses to requests with Reference Expansion for ProductTailoring.</p>
+     *  <p>Contains the representation of the expanded ProductTailoring. Only present in responses to requests with <span>Reference Expansion</span> for ProductTailoring.</p>
      * @return obj
      */
 

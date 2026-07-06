@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Setting the Order Predicate for an Approval Rule generates an ApprovalRulePredicateSet Message.</p>
+ *  <p>Setting the <span>Order Predicate</span> for an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">Approval Rule</a> generates an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRulePredicateSetMessage" rel="nofollow">ApprovalRulePredicateSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface ApprovalRuleSetPredicateAction extends ApprovalRuleUpdateAction
     String SET_PREDICATE = "setPredicate";
 
     /**
-     *  <p>A valid Order Predicate to set for the Approval Rule.</p>
+     *  <p>A valid <span>Order Predicate</span> to set for the Approval Rule.</p>
      * @return predicate
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface ApprovalRuleSetPredicateAction extends ApprovalRuleUpdateAction
     public String getPredicate();
 
     /**
-     *  <p>A valid Order Predicate to set for the Approval Rule.</p>
+     *  <p>A valid <span>Order Predicate</span> to set for the Approval Rule.</p>
      * @param predicate value to be set
      */
 
@@ -119,8 +119,8 @@ public interface ApprovalRuleSetPredicateAction extends ApprovalRuleUpdateAction
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ApprovalRuleSetPredicateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ApprovalRuleSetPredicateAction>() {
+    public static tools.jackson.core.type.TypeReference<ApprovalRuleSetPredicateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ApprovalRuleSetPredicateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ApprovalRuleSetPredicateAction>";

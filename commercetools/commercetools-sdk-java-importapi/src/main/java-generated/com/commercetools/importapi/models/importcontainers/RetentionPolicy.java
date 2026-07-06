@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>The retention policy of the ImportContainer. If not set, the ImportContainer does not expire.</p>
+ *  <p>Defines how long an <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainer</a> is kept before it is automatically deleted. When you set <code>retentionPolicy</code> on an <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainerDraft" rel="nofollow">ImportContainerDraft</a>, the <code>timeToLive</code> value controls expiry. When you omit <code>retentionPolicy</code> on create, the Import API applies a <strong>default time to live of 72 hours</strong> (see <code>expiresAt</code> on <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainer</a>).</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern
@@ -82,8 +82,8 @@ public interface RetentionPolicy {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<RetentionPolicy> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<RetentionPolicy>() {
+    public static tools.jackson.core.type.TypeReference<RetentionPolicy> typeReference() {
+        return new tools.jackson.core.type.TypeReference<RetentionPolicy>() {
             @Override
             public String toString() {
                 return "TypeReference<RetentionPolicy>";

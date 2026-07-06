@@ -48,10 +48,16 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     private java.time.ZonedDateTime expectedDelivery;
 
     @Nullable
+    private Integer reservationExpirationInMinutes;
+
+    @Nullable
+    private com.commercetools.api.models.inventory.InventoryEntryStockLevels stockLevels;
+
+    @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> <code>sku</code> of the InventoryEntry.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -63,7 +69,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
 
     /**
      *  <p>User-defined unique identifier for the InventoryEntry.</p>
-     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing InventoryEntries with the Import API and the Merchant Center.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing InventoryEntries with the <span>Import API</span> and the <span>Merchant Center</span>.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -74,7 +80,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     *  <p>Channel that supplies this InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> that supplies this InventoryEntry.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
@@ -87,7 +93,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     *  <p>Channel that supplies this InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> that supplies this InventoryEntry.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
@@ -99,7 +105,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     *  <p>Channel that supplies this InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> that supplies this InventoryEntry.</p>
      * @param supplyChannel value to be set
      * @return Builder
      */
@@ -111,7 +117,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     *  <p>Overall amount of stock.</p>
+     *  <p>Overall amount of stock. See <span>Inventory checks and consistency</span> for consistency information.</p>
      * @param quantityOnStock value to be set
      * @return Builder
      */
@@ -122,7 +128,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     *  <p>Minimum quantity that can be added to a Cart. See Quantity limits.</p>
+     *  <p>Minimum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
      * @param minCartQuantity value to be set
      * @return Builder
      */
@@ -133,7 +139,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     *  <p>Maximum quantity that can be added to a Cart. See Quantity limits.</p>
+     *  <p>Maximum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
      * @param maxCartQuantity value to be set
      * @return Builder
      */
@@ -166,7 +172,60 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     *  <p>Custom Fields of the InventoryEntry.</p>
+     *  <p>Expiration time of <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">ReserveOnCart</a> reservations associated with this InventoryEntry.</p>
+     *  <ul>
+     *   <li>A Reservation is <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">ReserveOnCart</a> if it was created for a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> that is using the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">ReserveOnCart</a> inventory mode.</li>
+     *   <li>If this field is empty, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>-level reservation expiration time applies.</li>
+     *  </ul>
+     * @param reservationExpirationInMinutes value to be set
+     * @return Builder
+     */
+
+    public InventoryEntryDraftBuilder reservationExpirationInMinutes(
+            @Nullable final Integer reservationExpirationInMinutes) {
+        this.reservationExpirationInMinutes = reservationExpirationInMinutes;
+        return this;
+    }
+
+    /**
+     *  <p>Configuration of stock levels for the InventoryEntry. Corresponding <span>Messages</span> are triggered when the <code>quantityOnStock</code> reaches the configured levels.</p>
+     * @param builder function to build the stockLevels value
+     * @return Builder
+     */
+
+    public InventoryEntryDraftBuilder stockLevels(
+            Function<com.commercetools.api.models.inventory.InventoryEntryStockLevelsBuilder, com.commercetools.api.models.inventory.InventoryEntryStockLevelsBuilder> builder) {
+        this.stockLevels = builder.apply(com.commercetools.api.models.inventory.InventoryEntryStockLevelsBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Configuration of stock levels for the InventoryEntry. Corresponding <span>Messages</span> are triggered when the <code>quantityOnStock</code> reaches the configured levels.</p>
+     * @param builder function to build the stockLevels value
+     * @return Builder
+     */
+
+    public InventoryEntryDraftBuilder withStockLevels(
+            Function<com.commercetools.api.models.inventory.InventoryEntryStockLevelsBuilder, com.commercetools.api.models.inventory.InventoryEntryStockLevels> builder) {
+        this.stockLevels = builder.apply(com.commercetools.api.models.inventory.InventoryEntryStockLevelsBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Configuration of stock levels for the InventoryEntry. Corresponding <span>Messages</span> are triggered when the <code>quantityOnStock</code> reaches the configured levels.</p>
+     * @param stockLevels value to be set
+     * @return Builder
+     */
+
+    public InventoryEntryDraftBuilder stockLevels(
+            @Nullable final com.commercetools.api.models.inventory.InventoryEntryStockLevels stockLevels) {
+        this.stockLevels = stockLevels;
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the InventoryEntry.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -178,7 +237,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     *  <p>Custom Fields of the InventoryEntry.</p>
+     *  <p>Custom Fields for the InventoryEntry.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -190,7 +249,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     *  <p>Custom Fields of the InventoryEntry.</p>
+     *  <p>Custom Fields for the InventoryEntry.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -202,7 +261,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> <code>sku</code> of the InventoryEntry.</p>
      * @return sku
      */
 
@@ -212,7 +271,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
 
     /**
      *  <p>User-defined unique identifier for the InventoryEntry.</p>
-     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing InventoryEntries with the Import API and the Merchant Center.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing InventoryEntries with the <span>Import API</span> and the <span>Merchant Center</span>.</p>
      * @return key
      */
 
@@ -222,7 +281,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     *  <p>Channel that supplies this InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> that supplies this InventoryEntry.</p>
      * @return supplyChannel
      */
 
@@ -232,7 +291,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     *  <p>Overall amount of stock.</p>
+     *  <p>Overall amount of stock. See <span>Inventory checks and consistency</span> for consistency information.</p>
      * @return quantityOnStock
      */
 
@@ -241,7 +300,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     *  <p>Minimum quantity that can be added to a Cart. See Quantity limits.</p>
+     *  <p>Minimum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
      * @return minCartQuantity
      */
 
@@ -251,7 +310,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     *  <p>Maximum quantity that can be added to a Cart. See Quantity limits.</p>
+     *  <p>Maximum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
      * @return maxCartQuantity
      */
 
@@ -281,7 +340,31 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     }
 
     /**
-     *  <p>Custom Fields of the InventoryEntry.</p>
+     *  <p>Expiration time of <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">ReserveOnCart</a> reservations associated with this InventoryEntry.</p>
+     *  <ul>
+     *   <li>A Reservation is <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">ReserveOnCart</a> if it was created for a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> that is using the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">ReserveOnCart</a> inventory mode.</li>
+     *   <li>If this field is empty, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>-level reservation expiration time applies.</li>
+     *  </ul>
+     * @return reservationExpirationInMinutes
+     */
+
+    @Nullable
+    public Integer getReservationExpirationInMinutes() {
+        return this.reservationExpirationInMinutes;
+    }
+
+    /**
+     *  <p>Configuration of stock levels for the InventoryEntry. Corresponding <span>Messages</span> are triggered when the <code>quantityOnStock</code> reaches the configured levels.</p>
+     * @return stockLevels
+     */
+
+    @Nullable
+    public com.commercetools.api.models.inventory.InventoryEntryStockLevels getStockLevels() {
+        return this.stockLevels;
+    }
+
+    /**
+     *  <p>Custom Fields for the InventoryEntry.</p>
      * @return custom
      */
 
@@ -298,7 +381,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
         Objects.requireNonNull(sku, InventoryEntryDraft.class + ": sku is missing");
         Objects.requireNonNull(quantityOnStock, InventoryEntryDraft.class + ": quantityOnStock is missing");
         return new InventoryEntryDraftImpl(sku, key, supplyChannel, quantityOnStock, minCartQuantity, maxCartQuantity,
-            restockableInDays, expectedDelivery, custom);
+            restockableInDays, expectedDelivery, reservationExpirationInMinutes, stockLevels, custom);
     }
 
     /**
@@ -307,7 +390,7 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
      */
     public InventoryEntryDraft buildUnchecked() {
         return new InventoryEntryDraftImpl(sku, key, supplyChannel, quantityOnStock, minCartQuantity, maxCartQuantity,
-            restockableInDays, expectedDelivery, custom);
+            restockableInDays, expectedDelivery, reservationExpirationInMinutes, stockLevels, custom);
     }
 
     /**
@@ -333,6 +416,8 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
         builder.maxCartQuantity = template.getMaxCartQuantity();
         builder.restockableInDays = template.getRestockableInDays();
         builder.expectedDelivery = template.getExpectedDelivery();
+        builder.reservationExpirationInMinutes = template.getReservationExpirationInMinutes();
+        builder.stockLevels = template.getStockLevels();
         builder.custom = template.getCustom();
         return builder;
     }

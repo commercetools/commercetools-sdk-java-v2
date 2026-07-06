@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>SKU cannot be changed or removed if it is associated with an InventoryEntry. If the SKU to set or unset is part of a ProductSelectionAssignment it will be automatically added or removed from the respective ProductVariantSelection.</p>
+ *  <p>SKU cannot be changed or removed if it is associated with an <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>. If the SKU to set or unset is part of a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionAssignment" rel="nofollow">ProductSelectionAssignment</a> it will be automatically added or removed from the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantSelection" rel="nofollow">ProductVariantSelection</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetSkuActionImpl implements ProductSetSkuAction, ModelBase {
@@ -66,7 +67,7 @@ public class ProductSetSkuActionImpl implements ProductSetSkuAction, ModelBase {
     }
 
     /**
-     *  <p>Value to set. Must be unique. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Must be unique across all ProductVariants in a Project. If empty, any existing value will be removed.</p>
      */
 
     public String getSku() {

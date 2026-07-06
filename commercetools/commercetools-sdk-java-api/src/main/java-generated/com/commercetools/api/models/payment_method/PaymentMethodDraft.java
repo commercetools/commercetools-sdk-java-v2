@@ -12,11 +12,11 @@ import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.customer.CustomerResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * PaymentMethodDraft
@@ -52,7 +52,7 @@ public interface PaymentMethodDraft extends io.vrap.rmf.base.client.Draft<Paymen
 
     /**
      *  <p>Reference to a Customer the PaymentMethod should belong to.</p>
-     *  <p>If <code>businessUnit</code> is set, the Customer must be an Associate of the Business Unit.</p>
+     *  <p>If <code>businessUnit</code> is set, the Customer must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> of the Business Unit.</p>
      * @return customer
      */
     @Valid
@@ -61,7 +61,7 @@ public interface PaymentMethodDraft extends io.vrap.rmf.base.client.Draft<Paymen
 
     /**
      *  <p>Reference to a BusinessUnit the PaymentMethod should belong to.</p>
-     *  <p>Only available for B2B-enabled Projects.</p>
+     *  <p>Only available for <span>B2B</span>-enabled Projects.</p>
      * @return businessUnit
      */
     @Valid
@@ -141,7 +141,7 @@ public interface PaymentMethodDraft extends io.vrap.rmf.base.client.Draft<Paymen
 
     /**
      *  <p>Reference to a Customer the PaymentMethod should belong to.</p>
-     *  <p>If <code>businessUnit</code> is set, the Customer must be an Associate of the Business Unit.</p>
+     *  <p>If <code>businessUnit</code> is set, the Customer must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> of the Business Unit.</p>
      * @param customer value to be set
      */
 
@@ -149,7 +149,7 @@ public interface PaymentMethodDraft extends io.vrap.rmf.base.client.Draft<Paymen
 
     /**
      *  <p>Reference to a BusinessUnit the PaymentMethod should belong to.</p>
-     *  <p>Only available for B2B-enabled Projects.</p>
+     *  <p>Only available for <span>B2B</span>-enabled Projects.</p>
      * @param businessUnit value to be set
      */
 
@@ -294,8 +294,8 @@ public interface PaymentMethodDraft extends io.vrap.rmf.base.client.Draft<Paymen
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentMethodDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentMethodDraft>() {
+    public static tools.jackson.core.type.TypeReference<PaymentMethodDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentMethodDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentMethodDraft>";

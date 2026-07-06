@@ -9,35 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li>Set Custom Type on Cart Discounts.</li>
- *   <li>Set Custom Type on Categories.</li>
- *   <li>Set Custom Type on Channels.</li>
- *   <li>Set Custom Type on Customers.</li>
- *   <li>Set Custom Type on Customer Groups.</li>
- *   <li>Set Custom Type on Discount Codes.</li>
- *   <li>Set Custom Type on Inventories.</li>
- *   <li>Set Custom Type on Orders.</li>
- *   <li>Set Custom Type on Order Edits.</li>
- *   <li>Set Custom Type on Staged Orders.</li>
- *   <li>Set Custom Type on Payments.</li>
- *   <li>Set Custom Type on Product Selections.</li>
- *   <li>Set Custom Type on Quotes.</li>
- *   <li>Set Custom Type on Staged Quotes.</li>
- *   <li>Set Custom Type on Quote Requests.</li>
- *   <li>Set Custom Type on Reviews.</li>
- *   <li>Set Custom Type on Shopping Lists.</li>
- *   <li>Set Custom Type on Stores.</li>
- *  </ul>
+ * SetCustomTypeChange
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -188,8 +168,8 @@ public interface SetCustomTypeChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetCustomTypeChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetCustomTypeChange>() {
+    public static tools.jackson.core.type.TypeReference<SetCustomTypeChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetCustomTypeChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetCustomTypeChange>";

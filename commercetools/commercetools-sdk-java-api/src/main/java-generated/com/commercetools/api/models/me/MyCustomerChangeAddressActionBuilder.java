@@ -33,7 +33,7 @@ public class MyCustomerChangeAddressActionBuilder implements Builder<MyCustomerC
     private com.commercetools.api.models.common.BaseAddress address;
 
     /**
-     *  <p><code>id</code> of the Address to change.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to change.</p>
      * @param addressId value to be set
      * @return Builder
      */
@@ -44,7 +44,7 @@ public class MyCustomerChangeAddressActionBuilder implements Builder<MyCustomerC
     }
 
     /**
-     *  <p><code>key</code> of the Address to change.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to change.</p>
      * @param addressKey value to be set
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class MyCustomerChangeAddressActionBuilder implements Builder<MyCustomerC
     }
 
     /**
-     *  <p><code>id</code> of the Address to change.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to change.</p>
      * @return addressId
      */
 
@@ -100,7 +100,7 @@ public class MyCustomerChangeAddressActionBuilder implements Builder<MyCustomerC
     }
 
     /**
-     *  <p><code>key</code> of the Address to change.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to change.</p>
      * @return addressKey
      */
 

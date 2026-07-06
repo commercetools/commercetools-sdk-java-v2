@@ -8,12 +8,12 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CartDiscountChangeTargetAction
@@ -40,6 +40,7 @@ public interface CartDiscountChangeTargetAction extends CartDiscountUpdateAction
 
     /**
      *  <p>New value to set.</p>
+     *  <p>For a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValueRelative" rel="nofollow">CartDiscountValueRelative</a>, if <code>applicationMode</code> is set, the target must be <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a>. If <code>applicationMode</code> is <code>ProportionateDistribution</code> or <code>EvenDistribution</code>, the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> <code>triggerPattern</code> must be non-empty. If either conditions are not met, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return target
      */
     @NotNull
@@ -49,6 +50,7 @@ public interface CartDiscountChangeTargetAction extends CartDiscountUpdateAction
 
     /**
      *  <p>New value to set.</p>
+     *  <p>For a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValueRelative" rel="nofollow">CartDiscountValueRelative</a>, if <code>applicationMode</code> is set, the target must be <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a>. If <code>applicationMode</code> is <code>ProportionateDistribution</code> or <code>EvenDistribution</code>, the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> <code>triggerPattern</code> must be non-empty. If either conditions are not met, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param target value to be set
      */
 
@@ -122,8 +124,8 @@ public interface CartDiscountChangeTargetAction extends CartDiscountUpdateAction
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountChangeTargetAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountChangeTargetAction>() {
+    public static tools.jackson.core.type.TypeReference<CartDiscountChangeTargetAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartDiscountChangeTargetAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartDiscountChangeTargetAction>";

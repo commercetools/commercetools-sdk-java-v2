@@ -9,11 +9,11 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>User-provided identifiers present on the resource for which the Message is created. The value of the identifier stored in the Message corresponds to the one that was set on the resource at the version shown in <code>resourceVersion</code>.</p>
@@ -48,7 +48,7 @@ public interface UserProvidedIdentifiers {
     public String getExternalId();
 
     /**
-     *  <p>User-provided unique identifier of an Order.</p>
+     *  <p>User-provided unique identifier of an <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @return orderNumber
      */
 
@@ -56,7 +56,7 @@ public interface UserProvidedIdentifiers {
     public String getOrderNumber();
 
     /**
-     *  <p>User-provided unique identifier of a Customer.</p>
+     *  <p>User-provided unique identifier of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>.</p>
      * @return customerNumber
      */
 
@@ -64,7 +64,7 @@ public interface UserProvidedIdentifiers {
     public String getCustomerNumber();
 
     /**
-     *  <p>Unique SKU of a Product Variant.</p>
+     *  <p>Unique SKU of a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a>.</p>
      * @return sku
      */
 
@@ -72,7 +72,7 @@ public interface UserProvidedIdentifiers {
     public String getSku();
 
     /**
-     *  <p>Unique identifier usually used in deep-link URLs for a Product. The value corresponds to the slug in the <code>current</code> Product Projection.</p>
+     *  <p>Unique identifier usually used in deep-link URLs for a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. The value corresponds to the slug in the <code>current</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @return slug
      */
     @Valid
@@ -80,7 +80,7 @@ public interface UserProvidedIdentifiers {
     public LocalizedString getSlug();
 
     /**
-     *  <p>Unique identifier of a Custom Object.</p>
+     *  <p>Unique identifier of a <span>Custom Object</span>.</p>
      * @return containerAndKey
      */
     @Valid
@@ -102,35 +102,35 @@ public interface UserProvidedIdentifiers {
     public void setExternalId(final String externalId);
 
     /**
-     *  <p>User-provided unique identifier of an Order.</p>
+     *  <p>User-provided unique identifier of an <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param orderNumber value to be set
      */
 
     public void setOrderNumber(final String orderNumber);
 
     /**
-     *  <p>User-provided unique identifier of a Customer.</p>
+     *  <p>User-provided unique identifier of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>.</p>
      * @param customerNumber value to be set
      */
 
     public void setCustomerNumber(final String customerNumber);
 
     /**
-     *  <p>Unique SKU of a Product Variant.</p>
+     *  <p>Unique SKU of a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a>.</p>
      * @param sku value to be set
      */
 
     public void setSku(final String sku);
 
     /**
-     *  <p>Unique identifier usually used in deep-link URLs for a Product. The value corresponds to the slug in the <code>current</code> Product Projection.</p>
+     *  <p>Unique identifier usually used in deep-link URLs for a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. The value corresponds to the slug in the <code>current</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @param slug value to be set
      */
 
     public void setSlug(final LocalizedString slug);
 
     /**
-     *  <p>Unique identifier of a Custom Object.</p>
+     *  <p>Unique identifier of a <span>Custom Object</span>.</p>
      * @param containerAndKey value to be set
      */
 
@@ -216,8 +216,8 @@ public interface UserProvidedIdentifiers {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<UserProvidedIdentifiers> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<UserProvidedIdentifiers>() {
+    public static tools.jackson.core.type.TypeReference<UserProvidedIdentifiers> typeReference() {
+        return new tools.jackson.core.type.TypeReference<UserProvidedIdentifiers>() {
             @Override
             public String toString() {
                 return "TypeReference<UserProvidedIdentifiers>";

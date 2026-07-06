@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Add EnumValue to FieldDefinition update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:TypeAddEnumValueAction" rel="nofollow">Add EnumValue to FieldDefinition</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddEnumValueChangeImpl implements AddEnumValueChange, ModelBase {
@@ -26,20 +27,24 @@ public class AddEnumValueChangeImpl implements AddEnumValueChange, ModelBase {
 
     private String change;
 
-    private com.commercetools.history.models.change_value.EnumValue nextValue;
+    private com.commercetools.history.models.common.CustomFieldEnumValue nextValue;
 
     private String fieldName;
+
+    private String attributeName;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     AddEnumValueChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("nextValue") final com.commercetools.history.models.change_value.EnumValue nextValue,
-            @JsonProperty("fieldName") final String fieldName) {
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.CustomFieldEnumValue nextValue,
+            @JsonProperty("fieldName") final String fieldName,
+            @JsonProperty("attributeName") final String attributeName) {
         this.change = change;
         this.nextValue = nextValue;
         this.fieldName = fieldName;
+        this.attributeName = attributeName;
         this.type = ADD_ENUM_VALUE_CHANGE;
     }
 
@@ -70,28 +75,40 @@ public class AddEnumValueChangeImpl implements AddEnumValueChange, ModelBase {
      *  <p>Value after the change.</p>
      */
 
-    public com.commercetools.history.models.change_value.EnumValue getNextValue() {
+    public com.commercetools.history.models.common.CustomFieldEnumValue getNextValue() {
         return this.nextValue;
     }
 
     /**
-     *  <p>Name of the updated FieldDefinition.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>.</p>
      */
 
     public String getFieldName() {
         return this.fieldName;
     }
 
+    /**
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
+     */
+
+    public String getAttributeName() {
+        return this.attributeName;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setNextValue(final com.commercetools.history.models.change_value.EnumValue nextValue) {
+    public void setNextValue(final com.commercetools.history.models.common.CustomFieldEnumValue nextValue) {
         this.nextValue = nextValue;
     }
 
     public void setFieldName(final String fieldName) {
         this.fieldName = fieldName;
+    }
+
+    public void setAttributeName(final String attributeName) {
+        this.attributeName = attributeName;
     }
 
     @Override
@@ -108,16 +125,23 @@ public class AddEnumValueChangeImpl implements AddEnumValueChange, ModelBase {
                 .append(change, that.change)
                 .append(nextValue, that.nextValue)
                 .append(fieldName, that.fieldName)
+                .append(attributeName, that.attributeName)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(nextValue, that.nextValue)
                 .append(fieldName, that.fieldName)
+                .append(attributeName, that.attributeName)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(change).append(nextValue).append(fieldName).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(change)
+                .append(nextValue)
+                .append(fieldName)
+                .append(attributeName)
+                .toHashCode();
     }
 
     @Override
@@ -126,6 +150,7 @@ public class AddEnumValueChangeImpl implements AddEnumValueChange, ModelBase {
                 .append("change", change)
                 .append("nextValue", nextValue)
                 .append("fieldName", fieldName)
+                .append("attributeName", attributeName)
                 .build();
     }
 

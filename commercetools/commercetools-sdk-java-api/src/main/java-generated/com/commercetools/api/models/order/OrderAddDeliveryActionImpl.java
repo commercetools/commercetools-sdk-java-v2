@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,9 +15,12 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>A Delivery can only be added to an Order if its <code>shippingInfo</code> (for <code>shippingMode</code> = <code>Single</code>), or its <code>shipping</code> (for <code>shippingMode</code> = <code>Multiple</code>) exists.</p>
- *  <p>Produces the Delivery Added Message.</p>
+ *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> can only be added to an <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> if its <code>shippingInfo</code> (for <code>shippingMode</code> = <code>Single</code>), or its <code>shipping</code> (for <code>shippingMode</code> = <code>Multiple</code>) exists.</p>
+ *  <p>Multiple Deliveries can be added to the same Order to represent split or partial shipments. However, the API doesn't validate that the cumulative quantities of Line Items or Custom Line Items across all Deliveries match or stay within the originally ordered quantities. For more information, see <span>Multiple Deliveries</span> on the Shipping and Delivery overview page.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:DeliveryAddedMessage" rel="nofollow">Delivery Added</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, ModelBase {
@@ -72,7 +74,7 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
     }
 
     /**
-     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      */
 
     public String getDeliveryKey() {
@@ -80,7 +82,7 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
     }
 
     /**
-     *  <p><code>key</code> of the ShippingMethod, required for <code>Multiple</code> ShippingMode.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a>, required for <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      */
 
     public String getShippingKey() {
@@ -105,7 +107,7 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
 
     /**
      *  <p>Parcels of the Delivery.</p>
-     *  <p>If provided, this update action produces the Parcel Added To Delivery Message.</p>
+     *  <p>If provided, this update action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelAddedToDeliveryMessage" rel="nofollow">Parcel Added To Delivery</a> Message.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.ParcelDraft> getParcels() {

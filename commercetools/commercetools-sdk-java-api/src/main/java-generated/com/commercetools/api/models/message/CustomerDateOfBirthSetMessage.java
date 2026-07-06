@@ -9,12 +9,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Date of Birth update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetDateOfBirthAction" rel="nofollow">Set Date of Birth</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -43,7 +44,7 @@ public interface CustomerDateOfBirthSetMessage extends Message {
     String CUSTOMER_DATE_OF_BIRTH_SET = "CustomerDateOfBirthSet";
 
     /**
-     *  <p>The <code>dateOfBirth</code> that was set during the Set Date of Birth update action.</p>
+     *  <p>The <code>dateOfBirth</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetDateOfBirthAction" rel="nofollow">Set Date of Birth</a> update action.</p>
      * @return dateOfBirth
      */
 
@@ -51,7 +52,7 @@ public interface CustomerDateOfBirthSetMessage extends Message {
     public LocalDate getDateOfBirth();
 
     /**
-     *  <p>The <code>dateOfBirth</code> that was set during the Set Date of Birth update action.</p>
+     *  <p>The <code>dateOfBirth</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetDateOfBirthAction" rel="nofollow">Set Date of Birth</a> update action.</p>
      * @param dateOfBirth value to be set
      */
 
@@ -146,8 +147,8 @@ public interface CustomerDateOfBirthSetMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerDateOfBirthSetMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerDateOfBirthSetMessage>() {
+    public static tools.jackson.core.type.TypeReference<CustomerDateOfBirthSetMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerDateOfBirthSetMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerDateOfBirthSetMessage>";

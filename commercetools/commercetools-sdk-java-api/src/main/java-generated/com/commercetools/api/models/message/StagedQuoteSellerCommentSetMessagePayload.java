@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Set Seller Comment update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteSetSellerCommentAction" rel="nofollow">Set Seller Comment</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface StagedQuoteSellerCommentSetMessagePayload extends MessagePayloa
     String STAGED_QUOTE_SELLER_COMMENT_SET = "StagedQuoteSellerCommentSet";
 
     /**
-     *  <p><code>sellerComment</code> on the StagedQuote after a successful Set Seller Comment update action.</p>
+     *  <p><code>sellerComment</code> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a> after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteSetSellerCommentAction" rel="nofollow">Set Seller Comment</a> update action.</p>
      * @return sellerComment
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface StagedQuoteSellerCommentSetMessagePayload extends MessagePayloa
     public String getSellerComment();
 
     /**
-     *  <p><code>sellerComment</code> on the StagedQuote after a successful Set Seller Comment update action.</p>
+     *  <p><code>sellerComment</code> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a> after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteSetSellerCommentAction" rel="nofollow">Set Seller Comment</a> update action.</p>
      * @param sellerComment value to be set
      */
 
@@ -123,8 +123,8 @@ public interface StagedQuoteSellerCommentSetMessagePayload extends MessagePayloa
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedQuoteSellerCommentSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedQuoteSellerCommentSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<StagedQuoteSellerCommentSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedQuoteSellerCommentSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedQuoteSellerCommentSetMessagePayload>";

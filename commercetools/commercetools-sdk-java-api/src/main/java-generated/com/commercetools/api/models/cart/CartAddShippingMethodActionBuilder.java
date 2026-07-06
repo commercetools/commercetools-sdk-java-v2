@@ -45,7 +45,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *  <p>User-defined identifier for the Shipping that must be unique across the Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined identifier for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Shipping" rel="nofollow">Shipping</a> that must be unique across the Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingKey value to be set
      * @return Builder
      */
@@ -56,7 +56,13 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     }
 
     /**
-     *  <p>ResourceIdentifier to a ShippingMethod to add to the Cart with <code>Multiple</code> ShippingMode. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     *  <p>ResourceIdentifier to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> to add to the Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned in one of the following cases:</p>
+     *  <ol>
+     *   <li>If the referenced Shipping Method has a predicate that does not match the Cart.</li>
+     *   <li>If the referenced Shipping Method is not active.</li>
+     *   <li>If the referenced Shipping Method is associated with a Store that is different from the Cart's Store.</li>
+     *   <li>If the referenced Shipping Method is associated with a Store and the Cart is not associated with any Store.</li>
+     *  </ol>
      * @param builder function to build the shippingMethod value
      * @return Builder
      */
@@ -70,7 +76,13 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     }
 
     /**
-     *  <p>ResourceIdentifier to a ShippingMethod to add to the Cart with <code>Multiple</code> ShippingMode. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     *  <p>ResourceIdentifier to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> to add to the Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned in one of the following cases:</p>
+     *  <ol>
+     *   <li>If the referenced Shipping Method has a predicate that does not match the Cart.</li>
+     *   <li>If the referenced Shipping Method is not active.</li>
+     *   <li>If the referenced Shipping Method is associated with a Store that is different from the Cart's Store.</li>
+     *   <li>If the referenced Shipping Method is associated with a Store and the Cart is not associated with any Store.</li>
+     *  </ol>
      * @param builder function to build the shippingMethod value
      * @return Builder
      */
@@ -83,7 +95,13 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     }
 
     /**
-     *  <p>ResourceIdentifier to a ShippingMethod to add to the Cart with <code>Multiple</code> ShippingMode. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     *  <p>ResourceIdentifier to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> to add to the Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned in one of the following cases:</p>
+     *  <ol>
+     *   <li>If the referenced Shipping Method has a predicate that does not match the Cart.</li>
+     *   <li>If the referenced Shipping Method is not active.</li>
+     *   <li>If the referenced Shipping Method is associated with a Store that is different from the Cart's Store.</li>
+     *   <li>If the referenced Shipping Method is associated with a Store and the Cart is not associated with any Store.</li>
+     *  </ol>
      * @param shippingMethod value to be set
      * @return Builder
      */
@@ -131,10 +149,10 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     }
 
     /**
-     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <p>Input used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>:</p>
      *  <ul>
-     *   <li>If <code>CartClassification</code>, it must be ClassificationShippingRateInputDraft.</li>
-     *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
+     *   <li>If <code>CartClassification</code>, it must be <a href="https://docs.commercetools.com/apis/ctp:api:type:ClassificationShippingRateInputDraft" rel="nofollow">ClassificationShippingRateInputDraft</a>.</li>
+     *   <li>If <code>CartScore</code>, it must be <a href="https://docs.commercetools.com/apis/ctp:api:type:ScoreShippingRateInputDraft" rel="nofollow">ScoreShippingRateInputDraft</a>.</li>
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
      * @param shippingRateInput value to be set
@@ -148,10 +166,10 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     }
 
     /**
-     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <p>Input used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>:</p>
      *  <ul>
-     *   <li>If <code>CartClassification</code>, it must be ClassificationShippingRateInputDraft.</li>
-     *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
+     *   <li>If <code>CartClassification</code>, it must be <a href="https://docs.commercetools.com/apis/ctp:api:type:ClassificationShippingRateInputDraft" rel="nofollow">ClassificationShippingRateInputDraft</a>.</li>
+     *   <li>If <code>CartScore</code>, it must be <a href="https://docs.commercetools.com/apis/ctp:api:type:ScoreShippingRateInputDraft" rel="nofollow">ScoreShippingRateInputDraft</a>.</li>
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
      * @param builder function to build the shippingRateInput value
@@ -166,7 +184,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     }
 
     /**
-     *  <p>Tax Rate used to tax a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>Tax Rate used to tax a shipping expense if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -179,7 +197,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     }
 
     /**
-     *  <p>Tax Rate used to tax a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>Tax Rate used to tax a shipping expense if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -191,7 +209,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     }
 
     /**
-     *  <p>Tax Rate used to tax a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>Tax Rate used to tax a shipping expense if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param externalTaxRate value to be set
      * @return Builder
      */
@@ -328,7 +346,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     }
 
     /**
-     *  <p>User-defined identifier for the Shipping that must be unique across the Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined identifier for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Shipping" rel="nofollow">Shipping</a> that must be unique across the Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shippingKey
      */
 
@@ -337,7 +355,13 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     }
 
     /**
-     *  <p>ResourceIdentifier to a ShippingMethod to add to the Cart with <code>Multiple</code> ShippingMode. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     *  <p>ResourceIdentifier to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> to add to the Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned in one of the following cases:</p>
+     *  <ol>
+     *   <li>If the referenced Shipping Method has a predicate that does not match the Cart.</li>
+     *   <li>If the referenced Shipping Method is not active.</li>
+     *   <li>If the referenced Shipping Method is associated with a Store that is different from the Cart's Store.</li>
+     *   <li>If the referenced Shipping Method is associated with a Store and the Cart is not associated with any Store.</li>
+     *  </ol>
      * @return shippingMethod
      */
 
@@ -355,10 +379,10 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     }
 
     /**
-     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <p>Input used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>:</p>
      *  <ul>
-     *   <li>If <code>CartClassification</code>, it must be ClassificationShippingRateInputDraft.</li>
-     *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
+     *   <li>If <code>CartClassification</code>, it must be <a href="https://docs.commercetools.com/apis/ctp:api:type:ClassificationShippingRateInputDraft" rel="nofollow">ClassificationShippingRateInputDraft</a>.</li>
+     *   <li>If <code>CartScore</code>, it must be <a href="https://docs.commercetools.com/apis/ctp:api:type:ScoreShippingRateInputDraft" rel="nofollow">ScoreShippingRateInputDraft</a>.</li>
      *   <li>If <code>CartValue</code>, it cannot be set.</li>
      *  </ul>
      * @return shippingRateInput
@@ -370,7 +394,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     }
 
     /**
-     *  <p>Tax Rate used to tax a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>Tax Rate used to tax a shipping expense if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @return externalTaxRate
      */
 

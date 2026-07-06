@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProjectChangeCustomerSearchStatusAction
@@ -38,7 +38,7 @@ public interface ProjectChangeCustomerSearchStatusAction extends ProjectUpdateAc
     String CHANGE_CUSTOMER_SEARCH_STATUS = "changeCustomerSearchStatus";
 
     /**
-     *  <p>Activates or deactivates the Customer Search feature. Activation will trigger building a search index for the Customers in the Project.</p>
+     *  <p>Activates or deactivates the <span>Customer Search</span> feature. Activation will trigger building a search index for the Customers in the Project.</p>
      * @return status
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface ProjectChangeCustomerSearchStatusAction extends ProjectUpdateAc
     public CustomerSearchStatus getStatus();
 
     /**
-     *  <p>Activates or deactivates the Customer Search feature. Activation will trigger building a search index for the Customers in the Project.</p>
+     *  <p>Activates or deactivates the <span>Customer Search</span> feature. Activation will trigger building a search index for the Customers in the Project.</p>
      * @param status value to be set
      */
 
@@ -122,8 +122,8 @@ public interface ProjectChangeCustomerSearchStatusAction extends ProjectUpdateAc
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeCustomerSearchStatusAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeCustomerSearchStatusAction>() {
+    public static tools.jackson.core.type.TypeReference<ProjectChangeCustomerSearchStatusAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProjectChangeCustomerSearchStatusAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProjectChangeCustomerSearchStatusAction>";

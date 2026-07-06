@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>A single ProductTailoring representation contains the <em>current</em> and the <em>staged</em> representation of its product information tailored per Store.</p>
@@ -162,7 +163,7 @@ public class ProductTailoringImpl implements ProductTailoring, ModelBase {
     }
 
     /**
-     *  <p>If <code>true</code>, the tailored information contained in the <code>current</code> ProductTailoringData is provided when retrieving the ProductProjection in Store. For information not part of the ProductTailoringData, the original information contained in the ProductData is provided. If <code>false</code>, only the original information contained in the ProductData is provided.</p>
+     *  <p>If <code>true</code>, the tailored information contained in the <code>current</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringData" rel="nofollow">ProductTailoringData</a> is provided when <span>retrieving the ProductProjection in Store</span>. For information not part of the ProductTailoringData, the original information contained in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductData" rel="nofollow">ProductData</a> is provided. If <code>false</code>, only the original information contained in the ProductData is provided.</p>
      */
 
     public Boolean getPublished() {
@@ -170,7 +171,7 @@ public class ProductTailoringImpl implements ProductTailoring, ModelBase {
     }
 
     /**
-     *  <p>Current (published) data of the ProductTailoring.</p>
+     *  <p>Current data of the ProductTailoring returned in the <span>Product Projection</span> response when the ProductTailoring is published.</p>
      */
 
     public com.commercetools.api.models.product_tailoring.ProductTailoringData getCurrent() {
@@ -178,7 +179,7 @@ public class ProductTailoringImpl implements ProductTailoring, ModelBase {
     }
 
     /**
-     *  <p>Staged (unpublished) data of the ProductTailoring.</p>
+     *  <p>Staged data of the ProductTailoring. This data is not returned in the Product Projection response by default.</p>
      */
 
     public com.commercetools.api.models.product_tailoring.ProductTailoringData getStaged() {

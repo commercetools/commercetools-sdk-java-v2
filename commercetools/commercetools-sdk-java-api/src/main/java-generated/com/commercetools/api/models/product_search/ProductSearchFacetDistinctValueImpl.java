@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductSearchFacetDistinctValue
@@ -77,7 +78,7 @@ public class ProductSearchFacetDistinctValueImpl implements ProductSearchFacetDi
     }
 
     /**
-     *  <p>Name of the distinct facet to appear in the ProductSearchFacetResultBucket.</p>
+     *  <p>Name of the distinct facet to appear in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchFacetResultBucket" rel="nofollow">ProductSearchFacetResultBucket</a>.</p>
      */
 
     public String getName() {
@@ -109,7 +110,7 @@ public class ProductSearchFacetDistinctValueImpl implements ProductSearchFacetDi
     }
 
     /**
-     *  <p>The searchable Product field to facet on.</p>
+     *  <p>The <span>searchable Product field</span> to facet on.</p>
      */
 
     public String getField() {
@@ -141,7 +142,7 @@ public class ProductSearchFacetDistinctValueImpl implements ProductSearchFacetDi
     }
 
     /**
-     *  <p>String value specifying linguistic and regional preferences using the IETF language tag format, as described in BCP 47. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
+     *  <p>String value specifying linguistic and regional preferences using the <span>IETF language tag format</span>, as described in <span>BCP 47</span>. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
      */
 
     public String getLanguage() {

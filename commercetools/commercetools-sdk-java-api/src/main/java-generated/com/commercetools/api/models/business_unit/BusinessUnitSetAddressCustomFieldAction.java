@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Adding a Custom Field to an Address of a Business Unit generates the BusinessUnitAddressCustomFieldAdded Message, removing one generates the BusinessUnitAddressCustomFieldRemoved Message, and updating an existing one generates the BusinessUnitAddressCustomFieldChanged Message.</p>
+ *  <p>Adding a Custom Field to an Address of a Business Unit generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAddressCustomFieldAddedMessage" rel="nofollow">BusinessUnitAddressCustomFieldAdded</a> Message, removing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAddressCustomFieldRemovedMessage" rel="nofollow">BusinessUnitAddressCustomFieldRemoved</a> Message, and updating an existing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAddressCustomFieldChangedMessage" rel="nofollow">BusinessUnitAddressCustomFieldChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface BusinessUnitSetAddressCustomFieldAction extends BusinessUnitUpd
     public String getAddressId();
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @return name
      */
     @NotNull
@@ -55,7 +55,7 @@ public interface BusinessUnitSetAddressCustomFieldAction extends BusinessUnitUpd
     public String getName();
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @return value
      */
 
@@ -70,14 +70,14 @@ public interface BusinessUnitSetAddressCustomFieldAction extends BusinessUnitUpd
     public void setAddressId(final String addressId);
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @param name value to be set
      */
 
     public void setName(final String name);
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @param value value to be set
      */
 
@@ -161,8 +161,8 @@ public interface BusinessUnitSetAddressCustomFieldAction extends BusinessUnitUpd
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitSetAddressCustomFieldAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitSetAddressCustomFieldAction>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitSetAddressCustomFieldAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitSetAddressCustomFieldAction>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitSetAddressCustomFieldAction>";

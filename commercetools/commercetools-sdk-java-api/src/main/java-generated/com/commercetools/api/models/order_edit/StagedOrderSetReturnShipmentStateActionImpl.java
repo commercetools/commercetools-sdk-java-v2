@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,9 +15,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>To set a <code>ReturnShipmentState</code>, the Order <code>returnInfo</code> must have at least one ReturnItem.</p>
- *  <p>Produces the Order Return Shipment State Changed Message.</p>
+ *  <p>To set a <code>ReturnShipmentState</code>, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> <code>returnInfo</code> must have at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a>.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderReturnShipmentStateChangedMessage" rel="nofollow">Order Return Shipment State Changed</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetReturnShipmentStateActionImpl implements StagedOrderSetReturnShipmentStateAction, ModelBase {
@@ -60,7 +61,7 @@ public class StagedOrderSetReturnShipmentStateActionImpl implements StagedOrderS
     }
 
     /**
-     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      */
 
     public String getReturnItemId() {
@@ -68,7 +69,7 @@ public class StagedOrderSetReturnShipmentStateActionImpl implements StagedOrderS
     }
 
     /**
-     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      */
 
     public String getReturnItemKey() {
@@ -76,7 +77,8 @@ public class StagedOrderSetReturnShipmentStateActionImpl implements StagedOrderS
     }
 
     /**
-     *  <p>New shipment state of the ReturnItem.</p>
+     *  <p>New shipment state of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a>.</p>
+     *  <p>This update action can only transition Return Items from the <code>Returned</code> state to <code>BackInStock</code> or <code>Unusable</code>. The initial <code>Advised</code> and <code>Returned</code> states can only be set at creation time on <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItemDraft" rel="nofollow">ReturnItemDraft</a>.</p>
      */
 
     public com.commercetools.api.models.order.ReturnShipmentState getShipmentState() {

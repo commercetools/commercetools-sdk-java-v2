@@ -9,14 +9,14 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Sets the recurrence information on the LineItem. If the Cart is already associated with a Recurring Order, this action will fail.</p>
+ *  <p>Sets the recurrence information on the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>. If the Cart is already associated with a Recurring Order, this action will fail.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface CartSetLineItemRecurrenceInfoAction extends CartUpdateAction {
     String SET_LINE_ITEM_RECURRENCE_INFO = "setLineItemRecurrenceInfo";
 
     /**
-     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
 
@@ -46,7 +46,7 @@ public interface CartSetLineItemRecurrenceInfoAction extends CartUpdateAction {
     public String getLineItemId();
 
     /**
-     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemKey
      */
 
@@ -62,14 +62,14 @@ public interface CartSetLineItemRecurrenceInfoAction extends CartUpdateAction {
     public LineItemRecurrenceInfoDraft getRecurrenceInfo();
 
     /**
-     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
 
     /**
-     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemKey value to be set
      */
 
@@ -156,8 +156,8 @@ public interface CartSetLineItemRecurrenceInfoAction extends CartUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartSetLineItemRecurrenceInfoAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartSetLineItemRecurrenceInfoAction>() {
+    public static tools.jackson.core.type.TypeReference<CartSetLineItemRecurrenceInfoAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartSetLineItemRecurrenceInfoAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartSetLineItemRecurrenceInfoAction>";

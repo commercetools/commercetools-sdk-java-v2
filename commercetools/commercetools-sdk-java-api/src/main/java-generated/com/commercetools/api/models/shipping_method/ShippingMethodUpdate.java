@@ -9,12 +9,12 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShippingMethodUpdate
@@ -44,7 +44,7 @@ public interface ShippingMethodUpdate extends
     public Long getVersion();
 
     /**
-     *  <p>Update actions to be performed on the ShippingMethod.</p>
+     *  <p>Update actions to be performed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a>.</p>
      * @return actions
      */
     @NotNull
@@ -60,7 +60,7 @@ public interface ShippingMethodUpdate extends
     public void setVersion(final Long version);
 
     /**
-     *  <p>Update actions to be performed on the ShippingMethod.</p>
+     *  <p>Update actions to be performed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a>.</p>
      * @param actions values to be set
      */
 
@@ -68,7 +68,7 @@ public interface ShippingMethodUpdate extends
     public void setActions(final ShippingMethodUpdateAction... actions);
 
     /**
-     *  <p>Update actions to be performed on the ShippingMethod.</p>
+     *  <p>Update actions to be performed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a>.</p>
      * @param actions values to be set
      */
 
@@ -147,8 +147,8 @@ public interface ShippingMethodUpdate extends
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodUpdate> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodUpdate>() {
+    public static tools.jackson.core.type.TypeReference<ShippingMethodUpdate> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShippingMethodUpdate>() {
             @Override
             public String toString() {
                 return "TypeReference<ShippingMethodUpdate>";

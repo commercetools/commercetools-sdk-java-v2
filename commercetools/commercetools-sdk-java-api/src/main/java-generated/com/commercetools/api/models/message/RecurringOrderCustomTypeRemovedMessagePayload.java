@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Custom Type with empty parameters.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetCustomTypeAction" rel="nofollow">Set Custom Type</a> with empty parameters.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +36,7 @@ public interface RecurringOrderCustomTypeRemovedMessagePayload extends MessagePa
     String RECURRING_ORDER_CUSTOM_TYPE_REMOVED = "RecurringOrderCustomTypeRemoved";
 
     /**
-     *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a> that was removed. Absent if there was no previous Custom Type present.</p>
      * @return previousTypeId
      */
 
@@ -43,7 +44,7 @@ public interface RecurringOrderCustomTypeRemovedMessagePayload extends MessagePa
     public String getPreviousTypeId();
 
     /**
-     *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a> that was removed. Absent if there was no previous Custom Type present.</p>
      * @param previousTypeId value to be set
      */
 
@@ -120,8 +121,8 @@ public interface RecurringOrderCustomTypeRemovedMessagePayload extends MessagePa
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<RecurringOrderCustomTypeRemovedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<RecurringOrderCustomTypeRemovedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<RecurringOrderCustomTypeRemovedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<RecurringOrderCustomTypeRemovedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<RecurringOrderCustomTypeRemovedMessagePayload>";

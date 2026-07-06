@@ -66,7 +66,7 @@ public class SearchExactValueBuilder implements Builder<SearchExactValue> {
     }
 
     /**
-     *  <p>Possible values for the <code>fieldType</code> property on simple expressions indicating the data type of the <code>field</code>.</p>
+     *  <p>Possible values for the <code>fieldType</code> property on <span>simple expressions</span> indicating the data type of the <code>field</code>.</p>
      * @param fieldType value to be set
      * @return Builder
      */
@@ -125,7 +125,7 @@ public class SearchExactValueBuilder implements Builder<SearchExactValue> {
     }
 
     /**
-     *  <p>String value specifying linguistic and regional preferences using the IETF language tag format, as described in BCP 47. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
+     *  <p>String value specifying linguistic and regional preferences using the <span>IETF language tag format</span>, as described in <span>BCP 47</span>. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
      * @param language value to be set
      * @return Builder
      */
@@ -166,7 +166,7 @@ public class SearchExactValueBuilder implements Builder<SearchExactValue> {
     }
 
     /**
-     *  <p>Possible values for the <code>fieldType</code> property on simple expressions indicating the data type of the <code>field</code>.</p>
+     *  <p>Possible values for the <code>fieldType</code> property on <span>simple expressions</span> indicating the data type of the <code>field</code>.</p>
      * @return fieldType
      */
 
@@ -196,7 +196,7 @@ public class SearchExactValueBuilder implements Builder<SearchExactValue> {
     }
 
     /**
-     *  <p>String value specifying linguistic and regional preferences using the IETF language tag format, as described in BCP 47. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
+     *  <p>String value specifying linguistic and regional preferences using the <span>IETF language tag format</span>, as described in <span>BCP 47</span>. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
      * @return language
      */
 

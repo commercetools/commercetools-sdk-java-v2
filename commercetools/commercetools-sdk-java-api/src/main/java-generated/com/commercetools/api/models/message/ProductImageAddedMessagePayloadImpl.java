@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Add External Image update action or after the successful upload of an image.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductAddExternalImageAction" rel="nofollow">Add External Image</a> update action or after the successful <span>upload of an image</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductImageAddedMessagePayloadImpl implements ProductImageAddedMessagePayload, ModelBase {
@@ -59,7 +60,7 @@ public class ProductImageAddedMessagePayloadImpl implements ProductImageAddedMes
     }
 
     /**
-     *  <p>Unique identifier of the Product Variant to which the Image was added.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> to which the <a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> was added.</p>
      */
 
     public Long getVariantId() {
@@ -67,7 +68,7 @@ public class ProductImageAddedMessagePayloadImpl implements ProductImageAddedMes
     }
 
     /**
-     *  <p>Image that was added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
      */
 
     public com.commercetools.api.models.common.Image getImage() {
@@ -75,7 +76,7 @@ public class ProductImageAddedMessagePayloadImpl implements ProductImageAddedMes
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      */
 
     public Boolean getStaged() {

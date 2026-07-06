@@ -8,15 +8,15 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Messages will be delivered even if the Messages Query HTTP API is not enabled.</p>
- *  <p>For MessageSubscriptions, the format of the payload is MessageDeliveryPayload.</p>
+ *  <p>Messages will be delivered even if the Messages Query HTTP API <span>is not enabled</span>.</p>
+ *  <p>For MessageSubscriptions, the format of the payload is <a href="https://docs.commercetools.com/apis/ctp:api:type:MessageDeliveryPayload" rel="nofollow">MessageDeliveryPayload</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -139,8 +139,8 @@ public interface MessageSubscription {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MessageSubscription> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MessageSubscription>() {
+    public static tools.jackson.core.type.TypeReference<MessageSubscription> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MessageSubscription>() {
             @Override
             public String toString() {
                 return "TypeReference<MessageSubscription>";

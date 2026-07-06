@@ -25,7 +25,7 @@ public class StandalonePriceCreatedMessagePayloadBuilder implements Builder<Stan
     private com.commercetools.api.models.standalone_price.StandalonePrice standalonePrice;
 
     /**
-     *  <p>Standalone Price that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Price</a> that was created.</p>
      * @param builder function to build the standalonePrice value
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class StandalonePriceCreatedMessagePayloadBuilder implements Builder<Stan
     }
 
     /**
-     *  <p>Standalone Price that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Price</a> that was created.</p>
      * @param builder function to build the standalonePrice value
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class StandalonePriceCreatedMessagePayloadBuilder implements Builder<Stan
     }
 
     /**
-     *  <p>Standalone Price that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Price</a> that was created.</p>
      * @param standalonePrice value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class StandalonePriceCreatedMessagePayloadBuilder implements Builder<Stan
     }
 
     /**
-     *  <p>Standalone Price that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Price</a> that was created.</p>
      * @return standalonePrice
      */
 

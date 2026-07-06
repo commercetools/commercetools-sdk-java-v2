@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * MyQuoteRequestDraft
@@ -46,7 +47,7 @@ public class MyQuoteRequestDraftImpl implements MyQuoteRequestDraft, ModelBase {
     }
 
     /**
-     *  <p><code>id</code> of the Cart from which the Quote Request is created. Carts with Discount Codes and Carts with <code>Multiple</code> ShippingMode are not supported. The Cart must have a <code>shippingAddress</code> defined, otherwise an InvalidOperation error is returned when creating a Quote Request.</p>
+     *  <p><code>id</code> of the Cart from which the Quote Request is created. Carts with <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">Discount Codes</a> and Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a> are not supported. The Cart must have a <code>shippingAddress</code> defined, otherwise an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned when <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/quote-requests:POST" rel="nofollow">creating a Quote Request</a>.</p>
      */
 
     public String getCartId() {

@@ -179,6 +179,18 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.BusinessUnitCustomTypeSetMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentAddedMessageBuilder businessUnitCustomerGroupAssignmentAddedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentRemovedMessageBuilder businessUnitCustomerGroupAssignmentRemovedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentsSetMessageBuilder businessUnitCustomerGroupAssignmentsSetBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentsSetMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.BusinessUnitDefaultBillingAddressSetMessageBuilder businessUnitDefaultBillingAddressSetBuilder() {
         return com.commercetools.api.models.message.BusinessUnitDefaultBillingAddressSetMessageBuilder.of();
     }
@@ -255,6 +267,26 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.CartDiscountStoresSetMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.CartFrozenMessageBuilder cartFrozenBuilder() {
+        return com.commercetools.api.models.message.CartFrozenMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CartLockedMessageBuilder cartLockedBuilder() {
+        return com.commercetools.api.models.message.CartLockedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CartPurchaseOrderNumberSetMessageBuilder cartPurchaseOrderNumberSetBuilder() {
+        return com.commercetools.api.models.message.CartPurchaseOrderNumberSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CartUnfrozenMessageBuilder cartUnfrozenBuilder() {
+        return com.commercetools.api.models.message.CartUnfrozenMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CartUnlockedMessageBuilder cartUnlockedBuilder() {
+        return com.commercetools.api.models.message.CartUnlockedMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.CategoryCreatedMessageBuilder categoryCreatedBuilder() {
         return com.commercetools.api.models.message.CategoryCreatedMessageBuilder.of();
     }
@@ -297,6 +329,14 @@ public class MessageBuilder {
 
     public com.commercetools.api.models.message.CustomerAddressRemovedMessageBuilder customerAddressRemovedBuilder() {
         return com.commercetools.api.models.message.CustomerAddressRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerBillingAddressAddedMessageBuilder customerBillingAddressAddedBuilder() {
+        return com.commercetools.api.models.message.CustomerBillingAddressAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerBillingAddressRemovedMessageBuilder customerBillingAddressRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerBillingAddressRemovedMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.CustomerCompanyNameSetMessageBuilder customerCompanyNameSetBuilder() {
@@ -355,6 +395,10 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.CustomerEmailVerifiedMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.CustomerExternalIdSetMessageBuilder customerExternalIdSetBuilder() {
+        return com.commercetools.api.models.message.CustomerExternalIdSetMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.CustomerFirstNameSetMessageBuilder customerFirstNameSetBuilder() {
         return com.commercetools.api.models.message.CustomerFirstNameSetMessageBuilder.of();
     }
@@ -405,6 +449,14 @@ public class MessageBuilder {
 
     public com.commercetools.api.models.message.CustomerPasswordUpdatedMessageBuilder customerPasswordUpdatedBuilder() {
         return com.commercetools.api.models.message.CustomerPasswordUpdatedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerShippingAddressAddedMessageBuilder customerShippingAddressAddedBuilder() {
+        return com.commercetools.api.models.message.CustomerShippingAddressAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerShippingAddressRemovedMessageBuilder customerShippingAddressRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerShippingAddressRemovedMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.CustomerStoresSetMessageBuilder customerStoresSetBuilder() {
@@ -471,6 +523,10 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.DiscountGroupDeletedMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.DiscountGroupIsActiveSetMessageBuilder discountGroupIsActiveSetBuilder() {
+        return com.commercetools.api.models.message.DiscountGroupIsActiveSetMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.DiscountGroupKeySetMessageBuilder discountGroupKeySetBuilder() {
         return com.commercetools.api.models.message.DiscountGroupKeySetMessageBuilder.of();
     }
@@ -487,8 +543,24 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.InventoryEntryDeletedMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.InventoryEntryOutOfStockMessageBuilder inventoryEntryOutOfStockBuilder() {
+        return com.commercetools.api.models.message.InventoryEntryOutOfStockMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.InventoryEntryQuantitySetMessageBuilder inventoryEntryQuantitySetBuilder() {
         return com.commercetools.api.models.message.InventoryEntryQuantitySetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.InventoryEntryReorderPointMessageBuilder inventoryEntryReorderPointBuilder() {
+        return com.commercetools.api.models.message.InventoryEntryReorderPointMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.InventoryEntryReservationExpirationInMinutesSetMessageBuilder inventoryEntryReservationExpirationInMinutesSetBuilder() {
+        return com.commercetools.api.models.message.InventoryEntryReservationExpirationInMinutesSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.InventoryEntrySafetyStockMessageBuilder inventoryEntrySafetyStockBuilder() {
+        return com.commercetools.api.models.message.InventoryEntrySafetyStockMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.LineItemStateTransitionMessageBuilder lineItemStateTransitionBuilder() {
@@ -601,6 +673,10 @@ public class MessageBuilder {
 
     public com.commercetools.api.models.message.OrderPaymentAddedMessageBuilder orderPaymentAddedBuilder() {
         return com.commercetools.api.models.message.OrderPaymentAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.OrderPaymentRemovedMessageBuilder orderPaymentRemovedBuilder() {
+        return com.commercetools.api.models.message.OrderPaymentRemovedMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.OrderPaymentStateChangedMessageBuilder orderPaymentStateChangedBuilder() {
@@ -781,6 +857,10 @@ public class MessageBuilder {
 
     public com.commercetools.api.models.message.PaymentTransactionAddedMessageBuilder paymentTransactionAddedBuilder() {
         return com.commercetools.api.models.message.PaymentTransactionAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.PaymentTransactionInterfaceIdSetMessageBuilder paymentTransactionInterfaceIdSetBuilder() {
+        return com.commercetools.api.models.message.PaymentTransactionInterfaceIdSetMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.PaymentTransactionStateChangedMessageBuilder paymentTransactionStateChangedBuilder() {
@@ -1035,6 +1115,10 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.RecurringOrderExpiresAtSetMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.RecurringOrderFailedMessageBuilder recurringOrderFailedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderFailedMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.RecurringOrderKeySetMessageBuilder recurringOrderKeySetBuilder() {
         return com.commercetools.api.models.message.RecurringOrderKeySetMessageBuilder.of();
     }
@@ -1197,6 +1281,42 @@ public class MessageBuilder {
 
     public com.commercetools.api.models.message.StoreSupplyChannelsChangedMessageBuilder storeSupplyChannelsChangedBuilder() {
         return com.commercetools.api.models.message.StoreSupplyChannelsChangedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.VariantCreatedMessageBuilder variantCreatedBuilder() {
+        return com.commercetools.api.models.message.VariantCreatedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.VariantDeletedMessageBuilder variantDeletedBuilder() {
+        return com.commercetools.api.models.message.VariantDeletedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.VariantImageAddedMessageBuilder variantImageAddedBuilder() {
+        return com.commercetools.api.models.message.VariantImageAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.VariantImagesSetMessageBuilder variantImagesSetBuilder() {
+        return com.commercetools.api.models.message.VariantImagesSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.VariantKeySetMessageBuilder variantKeySetBuilder() {
+        return com.commercetools.api.models.message.VariantKeySetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.VariantPublishedMessageBuilder variantPublishedBuilder() {
+        return com.commercetools.api.models.message.VariantPublishedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.VariantSkuSetMessageBuilder variantSkuSetBuilder() {
+        return com.commercetools.api.models.message.VariantSkuSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.VariantStagedChangesRemovedMessageBuilder variantStagedChangesRemovedBuilder() {
+        return com.commercetools.api.models.message.VariantStagedChangesRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.VariantUnpublishedMessageBuilder variantUnpublishedBuilder() {
+        return com.commercetools.api.models.message.VariantUnpublishedMessageBuilder.of();
     }
 
     /**

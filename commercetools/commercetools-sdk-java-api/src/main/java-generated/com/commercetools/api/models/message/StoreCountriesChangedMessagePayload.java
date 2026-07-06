@@ -10,14 +10,14 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.store_country.StoreCountry;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Add Country, Remove Country, or Set Countries update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreAddCountryAction" rel="nofollow">Add Country</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreRemoveCountryAction" rel="nofollow">Remove Country</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetCountriesAction" rel="nofollow">Set Countries</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ public interface StoreCountriesChangedMessagePayload extends MessagePayload {
     String STORE_COUNTRIES_CHANGED = "StoreCountriesChanged";
 
     /**
-     *  <p>Countries added to the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @return addedCountries
      */
     @Valid
@@ -47,7 +47,7 @@ public interface StoreCountriesChangedMessagePayload extends MessagePayload {
     public List<StoreCountry> getAddedCountries();
 
     /**
-     *  <p>Countries removed from the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @return removedCountries
      */
     @Valid
@@ -55,7 +55,7 @@ public interface StoreCountriesChangedMessagePayload extends MessagePayload {
     public List<StoreCountry> getRemovedCountries();
 
     /**
-     *  <p>Countries added to the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param addedCountries values to be set
      */
 
@@ -63,14 +63,14 @@ public interface StoreCountriesChangedMessagePayload extends MessagePayload {
     public void setAddedCountries(final StoreCountry... addedCountries);
 
     /**
-     *  <p>Countries added to the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param addedCountries values to be set
      */
 
     public void setAddedCountries(final List<StoreCountry> addedCountries);
 
     /**
-     *  <p>Countries removed from the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param removedCountries values to be set
      */
 
@@ -78,7 +78,7 @@ public interface StoreCountriesChangedMessagePayload extends MessagePayload {
     public void setRemovedCountries(final StoreCountry... removedCountries);
 
     /**
-     *  <p>Countries removed from the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param removedCountries values to be set
      */
 
@@ -163,8 +163,8 @@ public interface StoreCountriesChangedMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StoreCountriesChangedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StoreCountriesChangedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<StoreCountriesChangedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StoreCountriesChangedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<StoreCountriesChangedMessagePayload>";

@@ -8,14 +8,15 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Removes an AttributeDefinition and also deletes all corresponding Attributes on all Products with this ProductType. The removal of the Attributes is eventually consistent.</p>
+ *  <p>Removes an AttributeDefinition and also deletes all corresponding Attributes on all <span>Products</span> with this ProductType. The removal of the Attributes is <span>eventually consistent</span>.</p>
+ *  <p>Do not remove an AttributeDefinition and add a new AttributeDefinition with the same <code>name</code> in the same update request. Because the removal is eventually consistent, wait until it is complete before sending another update request for the ProductType.</p>
  *  <p>The <code>CombinationUnique</code> constraint is not checked when an Attribute is removed, and uniqueness violations may occur when you remove an Attribute with a <code>CombinationUnique</code> constraint.</p>
  *
  * <hr>
@@ -124,8 +125,8 @@ public interface ProductTypeRemoveAttributeDefinitionAction extends ProductTypeU
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeRemoveAttributeDefinitionAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeRemoveAttributeDefinitionAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductTypeRemoveAttributeDefinitionAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductTypeRemoveAttributeDefinitionAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductTypeRemoveAttributeDefinitionAction>";

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * FacetRange
@@ -106,7 +107,7 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     *  <p>Number of ProductVariants for which the values in a field fall into the specified range.</p>
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a> for which the values in a field fall into the specified range.</p>
      */
 
     public Long getCount() {
@@ -114,8 +115,8 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     *  <p>Number of Products for which the values in a field fall into the specified range.</p>
-     *  <p>Present only if the <code>counting products</code> extension is enabled.</p>
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Products</a> for which the values in a field fall into the specified range.</p>
+     *  <p>Present only if the <code>counting products</code> <span>extension</span> is enabled.</p>
      */
 
     public Long getProductCount() {

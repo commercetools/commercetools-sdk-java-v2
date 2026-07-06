@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.business_unit.BusinessUnitKeyReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated when a Business Unit <code>topLevelUnit</code> is modified due to a hierarchy change after a successful Set Unit Type or Change Parent Unit update action.</p>
+ *  <p>Generated when a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> <code>topLevelUnit</code> is modified due to a hierarchy change after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface BusinessUnitTopLevelUnitSetMessagePayload extends MessagePayloa
     String BUSINESS_UNIT_TOP_LEVEL_UNIT_SET = "BusinessUnitTopLevelUnitSet";
 
     /**
-     *  <p>Top-level unit of the Business Unit after the Set Unit Type or Change Parent Unit update action.</p>
+     *  <p>Top-level unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      * @return topLevelUnit
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface BusinessUnitTopLevelUnitSetMessagePayload extends MessagePayloa
     public BusinessUnitKeyReference getTopLevelUnit();
 
     /**
-     *  <p>Top-level unit of the Business Unit before the Set Unit Type or Change Parent Unit update action.</p>
+     *  <p>Top-level unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      * @return oldTopLevelUnit
      */
     @NotNull
@@ -59,14 +59,14 @@ public interface BusinessUnitTopLevelUnitSetMessagePayload extends MessagePayloa
     public BusinessUnitKeyReference getOldTopLevelUnit();
 
     /**
-     *  <p>Top-level unit of the Business Unit after the Set Unit Type or Change Parent Unit update action.</p>
+     *  <p>Top-level unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      * @param topLevelUnit value to be set
      */
 
     public void setTopLevelUnit(final BusinessUnitKeyReference topLevelUnit);
 
     /**
-     *  <p>Top-level unit of the Business Unit before the Set Unit Type or Change Parent Unit update action.</p>
+     *  <p>Top-level unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      * @param oldTopLevelUnit value to be set
      */
 
@@ -147,8 +147,8 @@ public interface BusinessUnitTopLevelUnitSetMessagePayload extends MessagePayloa
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitTopLevelUnitSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitTopLevelUnitSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitTopLevelUnitSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitTopLevelUnitSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitTopLevelUnitSetMessagePayload>";

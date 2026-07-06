@@ -29,7 +29,7 @@ public class OrderPaymentStateChangedMessagePayloadBuilder implements Builder<Or
     private com.commercetools.api.models.order.PaymentState oldPaymentState;
 
     /**
-     *  <p>PaymentState after the Change Payment State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentState" rel="nofollow">PaymentState</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangePaymentStateAction" rel="nofollow">Change Payment State</a> update action.</p>
      * @param paymentState value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class OrderPaymentStateChangedMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *  <p>PaymentState before the Change Payment State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentState" rel="nofollow">PaymentState</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangePaymentStateAction" rel="nofollow">Change Payment State</a> update action.</p>
      * @param oldPaymentState value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class OrderPaymentStateChangedMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *  <p>PaymentState after the Change Payment State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentState" rel="nofollow">PaymentState</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangePaymentStateAction" rel="nofollow">Change Payment State</a> update action.</p>
      * @return paymentState
      */
 
@@ -62,7 +62,7 @@ public class OrderPaymentStateChangedMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *  <p>PaymentState before the Change Payment State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentState" rel="nofollow">PaymentState</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangePaymentStateAction" rel="nofollow">Change Payment State</a> update action.</p>
      * @return oldPaymentState
      */
 

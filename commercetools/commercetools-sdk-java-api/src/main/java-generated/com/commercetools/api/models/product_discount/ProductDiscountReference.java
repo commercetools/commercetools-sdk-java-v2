@@ -8,16 +8,17 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Reference to a ProductDiscount.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +42,15 @@ public interface ProductDiscountReference extends Reference, com.commercetools.a
     String PRODUCT_DISCOUNT = "product-discount";
 
     /**
-     *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
+
+    /**
+     *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with <span>Reference Expansion</span> for ProductDiscounts.</p>
      * @return obj
      */
     @Valid
@@ -49,7 +58,7 @@ public interface ProductDiscountReference extends Reference, com.commercetools.a
     public ProductDiscount getObj();
 
     /**
-     *  <p>Unique identifier of the referenced ProductDiscount.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a>.</p>
      * @return id
      */
     @NotNull
@@ -57,14 +66,14 @@ public interface ProductDiscountReference extends Reference, com.commercetools.a
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>
+     *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with <span>Reference Expansion</span> for ProductDiscounts.</p>
      * @param obj value to be set
      */
 
     public void setObj(final ProductDiscount obj);
 
     /**
-     *  <p>Unique identifier of the referenced ProductDiscount.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a>.</p>
      * @param id value to be set
      */
 
@@ -139,8 +148,8 @@ public interface ProductDiscountReference extends Reference, com.commercetools.a
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountReference> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountReference>() {
+    public static tools.jackson.core.type.TypeReference<ProductDiscountReference> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductDiscountReference>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductDiscountReference>";

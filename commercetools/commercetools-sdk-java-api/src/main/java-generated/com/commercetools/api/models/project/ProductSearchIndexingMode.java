@@ -17,10 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductSearchIndexingMode extends JsonEnum {
 
     /**
-    <p>For Product Projection Search.</p> */
+    <p>For <span>Product Projection Search</span>.</p> */
     ProductSearchIndexingMode PRODUCT_PROJECTIONS_SEARCH = ProductSearchIndexingModeEnum.PRODUCT_PROJECTIONS_SEARCH;
     /**
-    <p>For Product Search.</p> */
+    <p>For <span>Product Search</span>.</p> */
     ProductSearchIndexingMode PRODUCTS_SEARCH = ProductSearchIndexingModeEnum.PRODUCTS_SEARCH;
 
     /**

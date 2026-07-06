@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Image;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Add External Image update action or after the successful upload of an image.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductAddExternalImageAction" rel="nofollow">Add External Image</a> update action or after the successful <span>upload of an image</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -42,7 +42,7 @@ public interface ProductImageAddedMessagePayload extends MessagePayload {
     String PRODUCT_IMAGE_ADDED = "ProductImageAdded";
 
     /**
-     *  <p>Unique identifier of the Product Variant to which the Image was added.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> to which the <a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> was added.</p>
      * @return variantId
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface ProductImageAddedMessagePayload extends MessagePayload {
     public Long getVariantId();
 
     /**
-     *  <p>Image that was added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
      * @return image
      */
     @NotNull
@@ -59,7 +59,7 @@ public interface ProductImageAddedMessagePayload extends MessagePayload {
     public Image getImage();
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @return staged
      */
     @NotNull
@@ -67,21 +67,21 @@ public interface ProductImageAddedMessagePayload extends MessagePayload {
     public Boolean getStaged();
 
     /**
-     *  <p>Unique identifier of the Product Variant to which the Image was added.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> to which the <a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> was added.</p>
      * @param variantId value to be set
      */
 
     public void setVariantId(final Long variantId);
 
     /**
-     *  <p>Image that was added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
      * @param image value to be set
      */
 
     public void setImage(final Image image);
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @param staged value to be set
      */
 
@@ -158,8 +158,8 @@ public interface ProductImageAddedMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductImageAddedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductImageAddedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<ProductImageAddedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductImageAddedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductImageAddedMessagePayload>";

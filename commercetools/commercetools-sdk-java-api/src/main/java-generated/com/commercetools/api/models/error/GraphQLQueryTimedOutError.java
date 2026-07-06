@@ -8,15 +8,15 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when the query times out.</p>
- *  <p>If a query constantly times out, please check if it follows the performance best practices.</p>
+ *  <p>If a query constantly times out, please check if it follows the <span>performance best practices</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -112,8 +112,8 @@ public interface GraphQLQueryTimedOutError extends GraphQLErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLQueryTimedOutError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLQueryTimedOutError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLQueryTimedOutError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLQueryTimedOutError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLQueryTimedOutError>";

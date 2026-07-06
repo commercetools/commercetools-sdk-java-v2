@@ -22,7 +22,11 @@ public class ChangeGroupsChangeTest {
                 new Object[] { "previousValue",
                         ChangeGroupsChange.builder().previousValue(Collections.singletonList("previousValue")) },
                 new Object[] { "nextValue",
-                        ChangeGroupsChange.builder().nextValue(Collections.singletonList("nextValue")) } };
+                        ChangeGroupsChange.builder().nextValue(Collections.singletonList("nextValue")) },
+                new Object[] { "addedItems",
+                        ChangeGroupsChange.builder().addedItems(Collections.singletonList("addedItems")) },
+                new Object[] { "removedItems",
+                        ChangeGroupsChange.builder().removedItems(Collections.singletonList("removedItems")) } };
     }
 
     @Test
@@ -44,5 +48,19 @@ public class ChangeGroupsChangeTest {
         ChangeGroupsChange value = ChangeGroupsChange.of();
         value.setNextValue(Collections.singletonList("nextValue"));
         Assertions.assertThat(value.getNextValue()).isEqualTo(Collections.singletonList("nextValue"));
+    }
+
+    @Test
+    public void addedItems() {
+        ChangeGroupsChange value = ChangeGroupsChange.of();
+        value.setAddedItems(Collections.singletonList("addedItems"));
+        Assertions.assertThat(value.getAddedItems()).isEqualTo(Collections.singletonList("addedItems"));
+    }
+
+    @Test
+    public void removedItems() {
+        ChangeGroupsChange value = ChangeGroupsChange.of();
+        value.setRemovedItems(Collections.singletonList("removedItems"));
+        Assertions.assertThat(value.getRemovedItems()).isEqualTo(Collections.singletonList("removedItems"));
     }
 }

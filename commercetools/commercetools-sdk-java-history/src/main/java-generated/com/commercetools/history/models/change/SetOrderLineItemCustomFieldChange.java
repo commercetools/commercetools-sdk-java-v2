@@ -9,18 +9,18 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set LineItem CustomField on Orders.</li>
- *   <li>Set LineItem CustomField on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetLineItemCustomFieldAction" rel="nofollow">Set LineItem CustomField</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetLineItemCustomFieldAction" rel="nofollow">Set LineItem CustomField</a> on Staged Orders.</li>
  *  </ul>
  *
  * <hr>
@@ -33,6 +33,7 @@ import jakarta.validation.constraints.NotNull;
  *             .name("{name}")
  *             .lineItem(lineItemBuilder -> lineItemBuilder)
  *             .variant("{variant}")
+ *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -80,7 +81,7 @@ public interface SetOrderLineItemCustomFieldChange extends Change {
     public Object getNextValue();
 
     /**
-     *  <p><code>id</code> of the referenced Type.</p>
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @return customTypeId
      */
     @NotNull
@@ -88,7 +89,7 @@ public interface SetOrderLineItemCustomFieldChange extends Change {
     public String getCustomTypeId();
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @return name
      */
     @NotNull
@@ -96,7 +97,7 @@ public interface SetOrderLineItemCustomFieldChange extends Change {
     public String getName();
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      * @return lineItem
      */
     @NotNull
@@ -105,12 +106,21 @@ public interface SetOrderLineItemCustomFieldChange extends Change {
     public LocalizedString getLineItem();
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
      * @return variant
      */
     @NotNull
     @JsonProperty("variant")
     public String getVariant();
+
+    /**
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
+     * @return lineItemId
+     */
+    @NotNull
+    @JsonProperty("lineItemId")
+    public String getLineItemId();
 
     /**
      * set change
@@ -134,32 +144,40 @@ public interface SetOrderLineItemCustomFieldChange extends Change {
     public void setNextValue(final Object nextValue);
 
     /**
-     *  <p><code>id</code> of the referenced Type.</p>
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param customTypeId value to be set
      */
 
     public void setCustomTypeId(final String customTypeId);
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @param name value to be set
      */
 
     public void setName(final String name);
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      * @param lineItem value to be set
      */
 
     public void setLineItem(final LocalizedString lineItem);
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
      * @param variant value to be set
      */
 
     public void setVariant(final String variant);
+
+    /**
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
+     * @param lineItemId value to be set
+     */
+
+    public void setLineItemId(final String lineItemId);
 
     /**
      * factory method
@@ -183,6 +201,7 @@ public interface SetOrderLineItemCustomFieldChange extends Change {
         instance.setName(template.getName());
         instance.setLineItem(template.getLineItem());
         instance.setVariant(template.getVariant());
+        instance.setLineItemId(template.getLineItemId());
         return instance;
     }
 
@@ -207,6 +226,7 @@ public interface SetOrderLineItemCustomFieldChange extends Change {
         instance.setName(template.getName());
         instance.setLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLineItem()));
         instance.setVariant(template.getVariant());
+        instance.setLineItemId(template.getLineItemId());
         return instance;
     }
 
@@ -241,8 +261,8 @@ public interface SetOrderLineItemCustomFieldChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetOrderLineItemCustomFieldChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetOrderLineItemCustomFieldChange>() {
+    public static tools.jackson.core.type.TypeReference<SetOrderLineItemCustomFieldChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetOrderLineItemCustomFieldChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetOrderLineItemCustomFieldChange>";

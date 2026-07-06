@@ -7,14 +7,14 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
-import com.commercetools.history.models.common.Money;
+import com.commercetools.history.models.common.ShippingRate;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * SetShippingRateChange
@@ -64,7 +64,7 @@ public interface SetShippingRateChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("previousValue")
-    public Money getPreviousValue();
+    public ShippingRate getPreviousValue();
 
     /**
      *  <p>Value after the change.</p>
@@ -73,7 +73,7 @@ public interface SetShippingRateChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("nextValue")
-    public Money getNextValue();
+    public ShippingRate getNextValue();
 
     /**
      * set change
@@ -87,14 +87,14 @@ public interface SetShippingRateChange extends Change {
      * @param previousValue value to be set
      */
 
-    public void setPreviousValue(final Money previousValue);
+    public void setPreviousValue(final ShippingRate previousValue);
 
     /**
      *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
-    public void setNextValue(final Money nextValue);
+    public void setNextValue(final ShippingRate nextValue);
 
     /**
      * factory method
@@ -131,8 +131,9 @@ public interface SetShippingRateChange extends Change {
         }
         SetShippingRateChangeImpl instance = new SetShippingRateChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPreviousValue(com.commercetools.history.models.common.Money.deepCopy(template.getPreviousValue()));
-        instance.setNextValue(com.commercetools.history.models.common.Money.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.ShippingRate.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.ShippingRate.deepCopy(template.getNextValue()));
         return instance;
     }
 
@@ -167,8 +168,8 @@ public interface SetShippingRateChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetShippingRateChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetShippingRateChange>() {
+    public static tools.jackson.core.type.TypeReference<SetShippingRateChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetShippingRateChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetShippingRateChange>";

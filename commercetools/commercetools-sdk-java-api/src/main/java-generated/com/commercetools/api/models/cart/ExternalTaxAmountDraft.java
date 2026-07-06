@@ -9,19 +9,19 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Money;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
+ *  <p>Cannot be used in <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemDraft" rel="nofollow">LineItemDraft</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItemDraft" rel="nofollow">CustomLineItemDraft</a>.</p>
  *  <p>Can only be set by these update actions:</p>
  *  <ul>
- *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
- *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetLineItemTaxAmountAction" rel="nofollow">Set LineItem TaxAmount</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetCustomLineItemTaxAmountAction" rel="nofollow">Set CustomLineItem TaxAmount</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetShippingMethodTaxAmountAction" rel="nofollow">Set ShippingMethod TaxAmount</a> on Carts</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetLineItemTaxAmountAction" rel="nofollow">Set LineItem TaxAmount</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomLineItemTaxAmountAction" rel="nofollow">Set CustomLineItem TaxAmount</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingMethodTaxAmountAction" rel="nofollow">Set ShippingMethod TaxAmount</a> on Order Edits</li>
  *  </ul>
  *
  * <hr>
@@ -140,8 +140,8 @@ public interface ExternalTaxAmountDraft extends io.vrap.rmf.base.client.Draft<Ex
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ExternalTaxAmountDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ExternalTaxAmountDraft>() {
+    public static tools.jackson.core.type.TypeReference<ExternalTaxAmountDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ExternalTaxAmountDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ExternalTaxAmountDraft>";

@@ -9,16 +9,16 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.BaseAddress;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Setting the shipping address also sets the TaxRate of Line Items and calculates the TaxedPrice.</p>
- *  <p>If a matching price cannot be found for the given shipping address during Line Item price selection, a MissingTaxRateForCountry error is returned.</p>
- *  <p>If you want to allow shipping to states inside a country that are not explicitly covered by a TaxRate, set the <code>countryTaxRateFallbackEnabled</code> field to <code>true</code> in the CartsConfiguration by using the Change CountryTaxRateFallbackEnabled update action.</p>
+ *  <p>Setting the shipping address also sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRate</a> of Line Items and calculates the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedPrice" rel="nofollow">TaxedPrice</a>.</p>
+ *  <p>If a matching price cannot be found for the given shipping address during <span>Line Item price selection</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a> error is returned.</p>
+ *  <p>If you want to allow shipping to states inside a country that are not explicitly covered by a TaxRate, set the <code>countryTaxRateFallbackEnabled</code> field to <code>true</code> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">CartsConfiguration</a> by using the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectChangeCountryTaxRateFallbackEnabledAction" rel="nofollow">Change CountryTaxRateFallbackEnabled</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -121,8 +121,8 @@ public interface CartSetShippingAddressAction extends CartUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartSetShippingAddressAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartSetShippingAddressAction>() {
+    public static tools.jackson.core.type.TypeReference<CartSetShippingAddressAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartSetShippingAddressAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartSetShippingAddressAction>";

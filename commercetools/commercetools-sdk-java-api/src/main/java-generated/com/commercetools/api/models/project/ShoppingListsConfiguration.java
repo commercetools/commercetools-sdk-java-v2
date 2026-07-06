@@ -8,9 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShoppingListsConfiguration
@@ -20,6 +22,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ShoppingListsConfiguration shoppingListsConfiguration = ShoppingListsConfiguration.builder()
+ *             .deleteDaysAfterLastModification(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -29,15 +32,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ShoppingListsConfiguration {
 
     /**
-     *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the ShoppingListDraft. This field may not be present on Projects created before January 2020.</p>
+     *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListDraft" rel="nofollow">ShoppingListDraft</a>.</p>
      * @return deleteDaysAfterLastModification
      */
-
+    @NotNull
     @JsonProperty("deleteDaysAfterLastModification")
     public Long getDeleteDaysAfterLastModification();
 
     /**
-     *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the ShoppingListDraft. This field may not be present on Projects created before January 2020.</p>
+     *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListDraft" rel="nofollow">ShoppingListDraft</a>.</p>
      * @param deleteDaysAfterLastModification value to be set
      */
 
@@ -110,8 +113,8 @@ public interface ShoppingListsConfiguration {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListsConfiguration> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListsConfiguration>() {
+    public static tools.jackson.core.type.TypeReference<ShoppingListsConfiguration> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShoppingListsConfiguration>() {
             @Override
             public String toString() {
                 return "TypeReference<ShoppingListsConfiguration>";

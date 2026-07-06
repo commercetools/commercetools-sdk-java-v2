@@ -10,19 +10,19 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Returned when a Cart Discount cannot be created or assigned to a Store as the limit for active Cart Discounts in a Store has been reached for one or more Stores in the request.</p>
+ *  <p>Returned when a Cart Discount cannot be created or assigned to a Store as the <span>limit</span> for active Cart Discounts in a Store has been reached for one or more Stores in the request.</p>
  *  <p>The error is returned as a failed response to:</p>
  *  <ul>
- *   <li>Create CartDiscount and Create CartDiscount in Store requests</li>
- *   <li>Add Store and Set Store update actions</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/cart-discounts:POST" rel="nofollow">Create CartDiscount</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/cart-discounts:POST" rel="nofollow">Create CartDiscount in Store</a> requests</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountAddStoreAction" rel="nofollow">Add Store</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountSetStoresAction" rel="nofollow">Set Store</a> update actions</li>
  *  </ul>
  *
  * <hr>
@@ -170,8 +170,8 @@ public interface StoreCartDiscountsLimitReachedError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StoreCartDiscountsLimitReachedError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StoreCartDiscountsLimitReachedError>() {
+    public static tools.jackson.core.type.TypeReference<StoreCartDiscountsLimitReachedError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StoreCartDiscountsLimitReachedError>() {
             @Override
             public String toString() {
                 return "TypeReference<StoreCartDiscountsLimitReachedError>";

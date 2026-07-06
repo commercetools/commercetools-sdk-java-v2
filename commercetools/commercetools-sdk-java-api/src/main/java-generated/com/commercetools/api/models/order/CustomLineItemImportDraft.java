@@ -16,12 +16,12 @@ import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
 import com.commercetools.api.models.tax_category.TaxRate;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Custom Line Items contain generic user-defined items that are not linked to Products.</p>
@@ -55,7 +55,7 @@ public interface CustomLineItemImportDraft
     public LocalizedString getName();
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined identifier of the Custom Line Item. Must be unique among Custom Line Items in the Order.</p>
      * @return key
      */
 
@@ -71,7 +71,7 @@ public interface CustomLineItemImportDraft
     public String getSlug();
 
     /**
-     *  <p>The number of items in the Custom Line Item. Can be a negative value.</p>
+     *  <p>Quantity of items in the Custom Line Item. Can be a negative value.</p>
      * @return quantity
      */
     @NotNull
@@ -80,7 +80,7 @@ public interface CustomLineItemImportDraft
 
     /**
      *  <p>The cost of individual items in the Custom Line Item. The amount can be negative.</p>
-     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @return money
      */
     @NotNull
@@ -106,7 +106,7 @@ public interface CustomLineItemImportDraft
 
     /**
      *  <ul>
-     *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget, MultiBuyCustomLineItemsTarget, or CartDiscountPatternTarget are applied to the Custom Line Item.</li>
+     *   <li>If <code>Standard</code>, Cart Discounts with a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemsTarget</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:MultiBuyCustomLineItemsTarget" rel="nofollow">MultiBuyCustomLineItemsTarget</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> are applied to the Custom Line Item.</li>
      *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
      *  </ul>
      * @return priceMode
@@ -132,7 +132,7 @@ public interface CustomLineItemImportDraft
     public List<ItemState> getState();
 
     /**
-     *  <p>Custom Fields of the CustomLineItem.</p>
+     *  <p>Custom Fields for the CustomLineItem.</p>
      * @return custom
      */
     @Valid
@@ -147,7 +147,7 @@ public interface CustomLineItemImportDraft
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined identifier of the Custom Line Item. Must be unique among Custom Line Items in the Order.</p>
      * @param key value to be set
      */
 
@@ -161,7 +161,7 @@ public interface CustomLineItemImportDraft
     public void setSlug(final String slug);
 
     /**
-     *  <p>The number of items in the Custom Line Item. Can be a negative value.</p>
+     *  <p>Quantity of items in the Custom Line Item. Can be a negative value.</p>
      * @param quantity value to be set
      */
 
@@ -169,7 +169,7 @@ public interface CustomLineItemImportDraft
 
     /**
      *  <p>The cost of individual items in the Custom Line Item. The amount can be negative.</p>
-     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param money value to be set
      */
 
@@ -191,7 +191,7 @@ public interface CustomLineItemImportDraft
 
     /**
      *  <ul>
-     *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget, MultiBuyCustomLineItemsTarget, or CartDiscountPatternTarget are applied to the Custom Line Item.</li>
+     *   <li>If <code>Standard</code>, Cart Discounts with a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemsTarget</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:MultiBuyCustomLineItemsTarget" rel="nofollow">MultiBuyCustomLineItemsTarget</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> are applied to the Custom Line Item.</li>
      *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
      *  </ul>
      * @param priceMode value to be set
@@ -222,7 +222,7 @@ public interface CustomLineItemImportDraft
     public void setState(final List<ItemState> state);
 
     /**
-     *  <p>Custom Fields of the CustomLineItem.</p>
+     *  <p>Custom Fields for the CustomLineItem.</p>
      * @param custom value to be set
      */
 
@@ -321,8 +321,8 @@ public interface CustomLineItemImportDraft
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomLineItemImportDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomLineItemImportDraft>() {
+    public static tools.jackson.core.type.TypeReference<CustomLineItemImportDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomLineItemImportDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomLineItemImportDraft>";

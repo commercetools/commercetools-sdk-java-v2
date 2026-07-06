@@ -187,7 +187,7 @@ public class DiscountGroupSortOrderSetMessageBuilder implements Builder<Discount
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -199,7 +199,7 @@ public class DiscountGroupSortOrderSetMessageBuilder implements Builder<Discount
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -261,7 +261,7 @@ public class DiscountGroupSortOrderSetMessageBuilder implements Builder<Discount
     }
 
     /**
-     *  <p><code>sortOrder</code> value of the DiscountGroup after the Set SortOrder update action.</p>
+     *  <p><code>sortOrder</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroup" rel="nofollow">DiscountGroup</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroupSetSortOrderAction" rel="nofollow">Set SortOrder</a> update action.</p>
      * @param sortOrder value to be set
      * @return Builder
      */
@@ -272,7 +272,7 @@ public class DiscountGroupSortOrderSetMessageBuilder implements Builder<Discount
     }
 
     /**
-     *  <p><code>sortOrder</code> value of the DiscountGroup before the Set SortOrder update action.</p>
+     *  <p><code>sortOrder</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroup" rel="nofollow">DiscountGroup</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroupSetSortOrderAction" rel="nofollow">Set SortOrder</a> update action.</p>
      * @param oldSortOrder value to be set
      * @return Builder
      */
@@ -348,7 +348,7 @@ public class DiscountGroupSortOrderSetMessageBuilder implements Builder<Discount
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -376,7 +376,7 @@ public class DiscountGroupSortOrderSetMessageBuilder implements Builder<Discount
     }
 
     /**
-     *  <p><code>sortOrder</code> value of the DiscountGroup after the Set SortOrder update action.</p>
+     *  <p><code>sortOrder</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroup" rel="nofollow">DiscountGroup</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroupSetSortOrderAction" rel="nofollow">Set SortOrder</a> update action.</p>
      * @return sortOrder
      */
 
@@ -386,7 +386,7 @@ public class DiscountGroupSortOrderSetMessageBuilder implements Builder<Discount
     }
 
     /**
-     *  <p><code>sortOrder</code> value of the DiscountGroup before the Set SortOrder update action.</p>
+     *  <p><code>sortOrder</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroup" rel="nofollow">DiscountGroup</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroupSetSortOrderAction" rel="nofollow">Set SortOrder</a> update action.</p>
      * @return oldSortOrder
      */
 

@@ -28,7 +28,7 @@ public class DiscountedTotalPricePortionBuilder implements Builder<DiscountedTot
     private com.commercetools.api.models.common.TypedMoney discountedAmount;
 
     /**
-     *  <p>A CartDiscountReference or DirectDiscountReference to the discount applied on the Cart <code>totalPrice</code>.</p>
+     *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountReference" rel="nofollow">CartDiscountReference</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscountReference" rel="nofollow">DirectDiscountReference</a> to the discount applied on the Cart <code>totalPrice</code>.</p>
      * @param discount value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class DiscountedTotalPricePortionBuilder implements Builder<DiscountedTot
     }
 
     /**
-     *  <p>A CartDiscountReference or DirectDiscountReference to the discount applied on the Cart <code>totalPrice</code>.</p>
+     *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountReference" rel="nofollow">CartDiscountReference</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscountReference" rel="nofollow">DirectDiscountReference</a> to the discount applied on the Cart <code>totalPrice</code>.</p>
      * @param builder function to build the discount value
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class DiscountedTotalPricePortionBuilder implements Builder<DiscountedTot
     }
 
     /**
-     *  <p>A CartDiscountReference or DirectDiscountReference to the discount applied on the Cart <code>totalPrice</code>.</p>
+     *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountReference" rel="nofollow">CartDiscountReference</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscountReference" rel="nofollow">DirectDiscountReference</a> to the discount applied on the Cart <code>totalPrice</code>.</p>
      * @return discount
      */
 

@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Discount is applied to CustomLineItems matching the <code>predicate</code>.</p>
+ *  <p>Discount is applied to <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a> matching the <code>predicate</code>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface CartDiscountCustomLineItemsTarget extends CartDiscountTarget {
     String CUSTOM_LINE_ITEMS = "customLineItems";
 
     /**
-     *  <p>Valid CustomLineItem target predicate.</p>
+     *  <p>Valid <span>CustomLineItem target predicate</span>.</p>
      * @return predicate
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface CartDiscountCustomLineItemsTarget extends CartDiscountTarget {
     public String getPredicate();
 
     /**
-     *  <p>Valid CustomLineItem target predicate.</p>
+     *  <p>Valid <span>CustomLineItem target predicate</span>.</p>
      * @param predicate value to be set
      */
 
@@ -120,8 +120,8 @@ public interface CartDiscountCustomLineItemsTarget extends CartDiscountTarget {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountCustomLineItemsTarget> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountCustomLineItemsTarget>() {
+    public static tools.jackson.core.type.TypeReference<CartDiscountCustomLineItemsTarget> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartDiscountCustomLineItemsTarget>() {
             @Override
             public String toString() {
                 return "TypeReference<CartDiscountCustomLineItemsTarget>";

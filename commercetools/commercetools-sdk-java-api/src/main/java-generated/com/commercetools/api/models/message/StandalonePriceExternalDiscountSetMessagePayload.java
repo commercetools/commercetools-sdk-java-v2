@@ -9,14 +9,14 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.DiscountedPrice;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Set Discounted Price update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetDiscountedPriceAction" rel="nofollow">Set Discounted Price</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface StandalonePriceExternalDiscountSetMessagePayload extends Messag
     String STANDALONE_PRICE_EXTERNAL_DISCOUNT_SET = "StandalonePriceExternalDiscountSet";
 
     /**
-     *  <p>The <code>discounted</code> value of the StandalonePrice after the Set Discounted Price update action.</p>
+     *  <p>The <code>discounted</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetDiscountedPriceAction" rel="nofollow">Set Discounted Price</a> update action.</p>
      * @return discounted
      */
     @Valid
@@ -46,7 +46,7 @@ public interface StandalonePriceExternalDiscountSetMessagePayload extends Messag
     public DiscountedPrice getDiscounted();
 
     /**
-     *  <p>The <code>discounted</code> value of the StandalonePrice after the Set Discounted Price update action.</p>
+     *  <p>The <code>discounted</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetDiscountedPriceAction" rel="nofollow">Set Discounted Price</a> update action.</p>
      * @param discounted value to be set
      */
 
@@ -123,8 +123,8 @@ public interface StandalonePriceExternalDiscountSetMessagePayload extends Messag
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceExternalDiscountSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceExternalDiscountSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<StandalonePriceExternalDiscountSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StandalonePriceExternalDiscountSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<StandalonePriceExternalDiscountSetMessagePayload>";

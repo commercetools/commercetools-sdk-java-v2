@@ -66,7 +66,7 @@ public class OrderCustomTypeSetMessagePayloadBuilder implements Builder<OrderCus
     }
 
     /**
-     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the previous <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a>. Absent if there was no previous Custom Type present.</p>
      * @param previousTypeId value to be set
      * @return Builder
      */
@@ -86,7 +86,7 @@ public class OrderCustomTypeSetMessagePayloadBuilder implements Builder<OrderCus
     }
 
     /**
-     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the previous <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a>. Absent if there was no previous Custom Type present.</p>
      * @return previousTypeId
      */
 

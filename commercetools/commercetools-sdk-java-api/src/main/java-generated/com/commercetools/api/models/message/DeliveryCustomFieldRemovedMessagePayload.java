@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated when a Custom Field has been removed from the Delivery using the Set CustomField update action.</p>
+ *  <p>Generated when a Custom Field has been removed from the Delivery using the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetDeliveryCustomFieldAction" rel="nofollow">Set CustomField</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface DeliveryCustomFieldRemovedMessagePayload extends OrderMessagePa
     public String getName();
 
     /**
-     *  <p>Unique identifier of the Delivery.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @return deliveryId
      */
     @NotNull
@@ -62,7 +62,7 @@ public interface DeliveryCustomFieldRemovedMessagePayload extends OrderMessagePa
     public void setName(final String name);
 
     /**
-     *  <p>Unique identifier of the Delivery.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param deliveryId value to be set
      */
 
@@ -140,8 +140,8 @@ public interface DeliveryCustomFieldRemovedMessagePayload extends OrderMessagePa
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DeliveryCustomFieldRemovedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DeliveryCustomFieldRemovedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<DeliveryCustomFieldRemovedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DeliveryCustomFieldRemovedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<DeliveryCustomFieldRemovedMessagePayload>";

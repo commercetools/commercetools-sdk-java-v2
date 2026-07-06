@@ -33,7 +33,7 @@ public class ProductSetDiscountedPriceActionBuilder implements Builder<ProductSe
     private com.commercetools.api.models.common.DiscountedPriceDraft discounted;
 
     /**
-     *  <p>The <code>id</code> of the Price to set the Discount.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> to set the Discount.</p>
      * @param priceId value to be set
      * @return Builder
      */
@@ -55,7 +55,7 @@ public class ProductSetDiscountedPriceActionBuilder implements Builder<ProductSe
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. The referenced ProductDiscount must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. The referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p>
      * @param builder function to build the discounted value
      * @return Builder
      */
@@ -67,7 +67,7 @@ public class ProductSetDiscountedPriceActionBuilder implements Builder<ProductSe
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. The referenced ProductDiscount must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. The referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p>
      * @param builder function to build the discounted value
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class ProductSetDiscountedPriceActionBuilder implements Builder<ProductSe
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. The referenced ProductDiscount must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. The referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p>
      * @param discounted value to be set
      * @return Builder
      */
@@ -91,7 +91,7 @@ public class ProductSetDiscountedPriceActionBuilder implements Builder<ProductSe
     }
 
     /**
-     *  <p>The <code>id</code> of the Price to set the Discount.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> to set the Discount.</p>
      * @return priceId
      */
 
@@ -110,7 +110,7 @@ public class ProductSetDiscountedPriceActionBuilder implements Builder<ProductSe
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. The referenced ProductDiscount must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. The referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p>
      * @return discounted
      */
 

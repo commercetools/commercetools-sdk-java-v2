@@ -39,7 +39,7 @@ public class ProductsInStorePagedQueryResponseBuilder implements Builder<Product
     private java.util.List<com.commercetools.api.models.product_selection.ProductSelectionAssignment> results;
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @param limit value to be set
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class ProductsInStorePagedQueryResponseBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @param offset value to be set
      * @return Builder
      */
@@ -72,7 +72,7 @@ public class ProductsInStorePagedQueryResponseBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Total number of results matching the query. Present only when the <code>withTotal</code> query parameter is set to <code>true</code>. This number is an estimation that is not strongly consistent. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     *  <p>Total number of results matching the query. Present only when the <code>withTotal</code> query parameter is set to <code>true</code>. This number is an estimation that is not <span>strongly consistent</span>. When the results are filtered with a <span>Query Predicate</span>, <code>total</code> is subject to a <span>limit</span>.</p>
      * @param total value to be set
      * @return Builder
      */
@@ -178,7 +178,7 @@ public class ProductsInStorePagedQueryResponseBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @return limit
      */
 
@@ -187,7 +187,7 @@ public class ProductsInStorePagedQueryResponseBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @return offset
      */
 
@@ -205,7 +205,7 @@ public class ProductsInStorePagedQueryResponseBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Total number of results matching the query. Present only when the <code>withTotal</code> query parameter is set to <code>true</code>. This number is an estimation that is not strongly consistent. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     *  <p>Total number of results matching the query. Present only when the <code>withTotal</code> query parameter is set to <code>true</code>. This number is an estimation that is not <span>strongly consistent</span>. When the results are filtered with a <span>Query Predicate</span>, <code>total</code> is subject to a <span>limit</span>.</p>
      * @return total
      */
 

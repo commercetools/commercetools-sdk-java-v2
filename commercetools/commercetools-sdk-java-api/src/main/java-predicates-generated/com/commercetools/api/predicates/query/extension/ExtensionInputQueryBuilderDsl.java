@@ -28,4 +28,13 @@ public class ExtensionInputQueryBuilderDsl {
             ExtensionInputQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ExtensionInputQueryBuilderDsl> oldResource(
+            Function<com.commercetools.api.predicates.query.common.ReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.ReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("oldResource"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.common.ReferenceQueryBuilderDsl.of())),
+            ExtensionInputQueryBuilderDsl::of);
+    }
+
 }

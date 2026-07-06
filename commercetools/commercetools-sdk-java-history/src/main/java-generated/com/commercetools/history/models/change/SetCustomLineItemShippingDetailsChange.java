@@ -8,19 +8,20 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.ItemShippingDetails;
+import com.commercetools.history.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set CustomLineItem ShippingDetails on Orders.</li>
- *   <li>Set CustomLineItem ShippingDetails on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomLineItemShippingDetailsAction" rel="nofollow">Set CustomLineItem ShippingDetails</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomLineItemShippingDetailsAction" rel="nofollow">Set CustomLineItem ShippingDetails</a> on Staged Orders.</li>
  *  </ul>
  *
  * <hr>
@@ -32,6 +33,7 @@ import jakarta.validation.constraints.NotNull;
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .customLineItemId("{customLineItemId}")
+ *             .customLineItem(customLineItemBuilder -> customLineItemBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -81,12 +83,21 @@ public interface SetCustomLineItemShippingDetailsChange extends Change {
     public ItemShippingDetails getNextValue();
 
     /**
-     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @return customLineItemId
      */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
+
+    /**
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
+     * @return customLineItem
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("customLineItem")
+    public LocalizedString getCustomLineItem();
 
     /**
      * set change
@@ -110,11 +121,18 @@ public interface SetCustomLineItemShippingDetailsChange extends Change {
     public void setNextValue(final ItemShippingDetails nextValue);
 
     /**
-     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @param customLineItemId value to be set
      */
 
     public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
+     * @param customLineItem value to be set
+     */
+
+    public void setCustomLineItem(final LocalizedString customLineItem);
 
     /**
      * factory method
@@ -135,6 +153,7 @@ public interface SetCustomLineItemShippingDetailsChange extends Change {
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItem(template.getCustomLineItem());
         return instance;
     }
 
@@ -158,6 +177,8 @@ public interface SetCustomLineItemShippingDetailsChange extends Change {
         instance.setNextValue(
             com.commercetools.history.models.common.ItemShippingDetails.deepCopy(template.getNextValue()));
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItem(
+            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getCustomLineItem()));
         return instance;
     }
 
@@ -194,8 +215,8 @@ public interface SetCustomLineItemShippingDetailsChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetCustomLineItemShippingDetailsChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetCustomLineItemShippingDetailsChange>() {
+    public static tools.jackson.core.type.TypeReference<SetCustomLineItemShippingDetailsChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetCustomLineItemShippingDetailsChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetCustomLineItemShippingDetailsChange>";

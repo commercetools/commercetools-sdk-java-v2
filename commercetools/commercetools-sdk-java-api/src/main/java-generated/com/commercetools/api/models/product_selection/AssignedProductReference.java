@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.product.ProductReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * AssignedProductReference
@@ -44,7 +44,7 @@ public interface AssignedProductReference {
 
     /**
      *  <p>The Variants of the Product that are included from the Product Selection.</p>
-     *  <p>This field may exist only in Product Selections with <code>Individual</code> ProductSelectionMode. In absence of this field, all Variants are deemed to be included.</p>
+     *  <p>This field may exist only in Product Selections with <code>Individual</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. In absence of this field, all Variants are deemed to be included.</p>
      * @return variantSelection
      */
     @Valid
@@ -53,7 +53,7 @@ public interface AssignedProductReference {
 
     /**
      *  <p>The Variants of the Product that are excluded from the Product Selection.</p>
-     *  <p>This field may exist only in Product Selections with <code>IndividualExclusion</code> ProductSelectionMode. In absence of this field, all Variants are deemed to be excluded.</p>
+     *  <p>This field may exist only in Product Selections with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. In absence of this field, all Variants are deemed to be excluded.</p>
      * @return variantExclusion
      */
     @Valid
@@ -69,7 +69,7 @@ public interface AssignedProductReference {
 
     /**
      *  <p>The Variants of the Product that are included from the Product Selection.</p>
-     *  <p>This field may exist only in Product Selections with <code>Individual</code> ProductSelectionMode. In absence of this field, all Variants are deemed to be included.</p>
+     *  <p>This field may exist only in Product Selections with <code>Individual</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. In absence of this field, all Variants are deemed to be included.</p>
      * @param variantSelection value to be set
      */
 
@@ -77,7 +77,7 @@ public interface AssignedProductReference {
 
     /**
      *  <p>The Variants of the Product that are excluded from the Product Selection.</p>
-     *  <p>This field may exist only in Product Selections with <code>IndividualExclusion</code> ProductSelectionMode. In absence of this field, all Variants are deemed to be excluded.</p>
+     *  <p>This field may exist only in Product Selections with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. In absence of this field, all Variants are deemed to be excluded.</p>
      * @param variantExclusion value to be set
      */
 
@@ -156,8 +156,8 @@ public interface AssignedProductReference {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AssignedProductReference> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AssignedProductReference>() {
+    public static tools.jackson.core.type.TypeReference<AssignedProductReference> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AssignedProductReference>() {
             @Override
             public String toString() {
                 return "TypeReference<AssignedProductReference>";

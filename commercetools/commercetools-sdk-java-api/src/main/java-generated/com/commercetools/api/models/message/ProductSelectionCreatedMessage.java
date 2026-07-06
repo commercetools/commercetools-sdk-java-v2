@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.product_selection.ProductSelection;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Create Product Selection request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/product-selections:POST" rel="nofollow">Create Product Selection</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface ProductSelectionCreatedMessage extends Message {
     String PRODUCT_SELECTION_CREATED = "ProductSelectionCreated";
 
     /**
-     *  <p>Product Selection that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a> that was created.</p>
      * @return productSelection
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface ProductSelectionCreatedMessage extends Message {
     public ProductSelection getProductSelection();
 
     /**
-     *  <p>Product Selection that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">Product Selection</a> that was created.</p>
      * @param productSelection value to be set
      */
 
@@ -152,8 +152,8 @@ public interface ProductSelectionCreatedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionCreatedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionCreatedMessage>() {
+    public static tools.jackson.core.type.TypeReference<ProductSelectionCreatedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSelectionCreatedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSelectionCreatedMessage>";

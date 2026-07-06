@@ -24,7 +24,7 @@ public class LocalizedStringBuilder implements Builder<LocalizedString> {
     private Map<String, String> values = new HashMap<>();
 
     /**
-     * assign pattern properties to the builder
+     *  <p>String used for the specified language.</p>
      * @param values properties to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class LocalizedStringBuilder implements Builder<LocalizedString> {
     }
 
     /**
-     * assign a pattern property to the builder
+     *  <p>String used for the specified language.</p>
      * @param key property name
      * @param value property value
      * @return Builder
@@ -50,7 +50,7 @@ public class LocalizedStringBuilder implements Builder<LocalizedString> {
     }
 
     /**
-     * values of pattern properties
+     *  <p>String used for the specified language.</p>
      * @return pattern properties
      */
 

@@ -8,12 +8,12 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * DiscountedLineItemPriceForQuantity
@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface DiscountedLineItemPriceForQuantity {
 
     /**
-     *  <p>Number of Line Items or Custom Line Items in the Cart.</p>
+     *  <p>Quantity of Line Items or Custom Line Items in the Cart.</p>
      * @return quantity
      */
     @NotNull
@@ -43,6 +43,7 @@ public interface DiscountedLineItemPriceForQuantity {
 
     /**
      *  <p>Discounted price of the Line Item or Custom Line Item.</p>
+     *  <p>When multiple <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> apply to the same Line Item, the discounts are applied sequentially in the order determined by their <code>sortOrder</code> values (higher values are applied first). The <a href="https://docs.commercetools.com/apis/ctp:api:type:RoundingMode" rel="nofollow">price rounding mode</a> specified by the Cart's <code>priceRoundingMode</code> field is applied after each individual discount is calculated, not after all discounts have been applied cumulatively. This means that rounding occurs at each step of the discount calculation process.</p>
      * @return discountedPrice
      */
     @NotNull
@@ -51,7 +52,7 @@ public interface DiscountedLineItemPriceForQuantity {
     public DiscountedLineItemPrice getDiscountedPrice();
 
     /**
-     *  <p>Number of Line Items or Custom Line Items in the Cart.</p>
+     *  <p>Quantity of Line Items or Custom Line Items in the Cart.</p>
      * @param quantity value to be set
      */
 
@@ -59,6 +60,7 @@ public interface DiscountedLineItemPriceForQuantity {
 
     /**
      *  <p>Discounted price of the Line Item or Custom Line Item.</p>
+     *  <p>When multiple <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> apply to the same Line Item, the discounts are applied sequentially in the order determined by their <code>sortOrder</code> values (higher values are applied first). The <a href="https://docs.commercetools.com/apis/ctp:api:type:RoundingMode" rel="nofollow">price rounding mode</a> specified by the Cart's <code>priceRoundingMode</code> field is applied after each individual discount is calculated, not after all discounts have been applied cumulatively. This means that rounding occurs at each step of the discount calculation process.</p>
      * @param discountedPrice value to be set
      */
 
@@ -135,8 +137,8 @@ public interface DiscountedLineItemPriceForQuantity {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DiscountedLineItemPriceForQuantity> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DiscountedLineItemPriceForQuantity>() {
+    public static tools.jackson.core.type.TypeReference<DiscountedLineItemPriceForQuantity> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DiscountedLineItemPriceForQuantity>() {
             @Override
             public String toString() {
                 return "TypeReference<DiscountedLineItemPriceForQuantity>";

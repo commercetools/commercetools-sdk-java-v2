@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Sets all PriceTiers for a StandalonePrice in one action, produces the Standalone Price Tiers Set Message.</p>
+ *  <p>Sets all <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">PriceTiers</a> for a <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> in one action, produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceTiersSetMessage" rel="nofollow">Standalone Price Tiers Set</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceSetPriceTiersActionImpl implements StandalonePriceSetPriceTiersAction, ModelBase {
@@ -52,7 +53,7 @@ public class StandalonePriceSetPriceTiersActionImpl implements StandalonePriceSe
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an InvalidField error is returned.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.PriceTierDraft> getTiers() {

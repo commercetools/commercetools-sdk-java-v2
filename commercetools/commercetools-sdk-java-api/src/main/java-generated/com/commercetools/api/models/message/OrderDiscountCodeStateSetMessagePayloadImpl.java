@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after the DiscountCodeState changes due to a recalculation.</p>
+ *  <p>Generated after the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeState" rel="nofollow">DiscountCodeState</a> changes due to a <span>recalculation</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderDiscountCodeStateSetMessagePayloadImpl implements OrderDiscountCodeStateSetMessagePayload, ModelBase {
@@ -60,7 +61,7 @@ public class OrderDiscountCodeStateSetMessagePayloadImpl implements OrderDiscoun
     }
 
     /**
-     *  <p>DiscountCode that changed due to the recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> that changed due to the recalculation.</p>
      */
 
     public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode() {
@@ -68,7 +69,7 @@ public class OrderDiscountCodeStateSetMessagePayloadImpl implements OrderDiscoun
     }
 
     /**
-     *  <p>DiscountCodeState after the recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeState" rel="nofollow">DiscountCodeState</a> after the recalculation.</p>
      */
 
     public com.commercetools.api.models.cart.DiscountCodeState getState() {
@@ -76,7 +77,7 @@ public class OrderDiscountCodeStateSetMessagePayloadImpl implements OrderDiscoun
     }
 
     /**
-     *  <p>DiscountCodeState before the recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeState" rel="nofollow">DiscountCodeState</a> before the recalculation.</p>
      */
 
     public com.commercetools.api.models.cart.DiscountCodeState getOldState() {

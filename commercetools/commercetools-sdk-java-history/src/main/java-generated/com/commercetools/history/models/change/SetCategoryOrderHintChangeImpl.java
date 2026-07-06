@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Set Category Order Hint update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetCategoryOrderHintAction" rel="nofollow">Set Category Order Hint</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCategoryOrderHintChangeImpl implements SetCategoryOrderHintChange, ModelBase {
@@ -91,9 +92,10 @@ public class SetCategoryOrderHintChangeImpl implements SetCategoryOrderHintChang
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
-     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
-     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *  </ul>
      */
 
@@ -102,7 +104,7 @@ public class SetCategoryOrderHintChangeImpl implements SetCategoryOrderHintChang
     }
 
     /**
-     *  <p><code>id</code> of the updated Category.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a>.</p>
      */
 
     public String getCategoryId() {

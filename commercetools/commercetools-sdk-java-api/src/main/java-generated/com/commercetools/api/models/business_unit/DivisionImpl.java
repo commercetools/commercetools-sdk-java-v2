@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Business Unit type to model divisions that are part of the Company or a higher-order Division. Contains specific fields and values that differentiate a Division from the generic BusinessUnit.</p>
+ *  <p>Business Unit type to model divisions that are part of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Company" rel="nofollow">Company</a> or a higher-order Division. Contains specific fields and values that differentiate a Division from the generic <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DivisionImpl implements Division, ModelBase {
@@ -51,6 +52,8 @@ public class DivisionImpl implements Division, ModelBase {
     private String contactEmail;
 
     private com.commercetools.api.models.type.CustomFields custom;
+
+    private java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments;
 
     private java.util.List<com.commercetools.api.models.common.Address> addresses;
 
@@ -90,6 +93,7 @@ public class DivisionImpl implements Division, ModelBase {
             @JsonProperty("storeMode") final com.commercetools.api.models.business_unit.BusinessUnitStoreMode storeMode,
             @JsonProperty("name") final String name, @JsonProperty("contactEmail") final String contactEmail,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
+            @JsonProperty("customerGroupAssignments") final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments,
             @JsonProperty("addresses") final java.util.List<com.commercetools.api.models.common.Address> addresses,
             @JsonProperty("shippingAddressIds") final java.util.List<String> shippingAddressIds,
             @JsonProperty("defaultShippingAddressId") final String defaultShippingAddressId,
@@ -115,6 +119,7 @@ public class DivisionImpl implements Division, ModelBase {
         this.name = name;
         this.contactEmail = contactEmail;
         this.custom = custom;
+        this.customerGroupAssignments = customerGroupAssignments;
         this.addresses = addresses;
         this.shippingAddressIds = shippingAddressIds;
         this.defaultShippingAddressId = defaultShippingAddressId;
@@ -193,7 +198,7 @@ public class DivisionImpl implements Division, ModelBase {
     }
 
     /**
-     *  <p>Indicates whether the Business Unit can be edited and used in Orders.</p>
+     *  <p>Indicates whether the Business Unit can be edited and used in <span>Orders</span>.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitStatus getStatus() {
@@ -201,9 +206,9 @@ public class DivisionImpl implements Division, ModelBase {
     }
 
     /**
-     *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
-     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Recurring Orders, Quotes, Quote Requests, or Shopping Lists must belong to one of the Business Unit's Stores.</p>
-     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Recurring Orders, Quotes, Quote Requests, or Shopping Lists must not belong to any Store.</p>
+     *  <p>References to <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must not belong to any Store.</p>
      */
 
     public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {
@@ -211,7 +216,7 @@ public class DivisionImpl implements Division, ModelBase {
     }
 
     /**
-     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is <span>eventually consistent</span> and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getInheritedStores() {
@@ -251,11 +256,20 @@ public class DivisionImpl implements Division, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields for the Business Unit.</p>
+     *  <p>Custom Fields of the Business Unit.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
+    }
+
+    /**
+     *  <p>Customer Groups assigned to the Business Unit.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> getCustomerGroupAssignments() {
+        return this.customerGroupAssignments;
     }
 
     /**
@@ -307,7 +321,7 @@ public class DivisionImpl implements Division, ModelBase {
     }
 
     /**
-     *  <p>Associates that are part of the Business Unit in specific roles.</p>
+     *  <p>Associates that are part of the Business Unit in specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">roles</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.business_unit.Associate> getAssociates() {
@@ -315,7 +329,7 @@ public class DivisionImpl implements Division, ModelBase {
     }
 
     /**
-     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is <span>eventually consistent</span> and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.business_unit.InheritedAssociate> getInheritedAssociates() {
@@ -409,6 +423,16 @@ public class DivisionImpl implements Division, ModelBase {
 
     public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
+    }
+
+    public void setCustomerGroupAssignments(
+            final com.commercetools.api.models.customer.CustomerGroupAssignment... customerGroupAssignments) {
+        this.customerGroupAssignments = new ArrayList<>(Arrays.asList(customerGroupAssignments));
+    }
+
+    public void setCustomerGroupAssignments(
+            final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments) {
+        this.customerGroupAssignments = customerGroupAssignments;
     }
 
     public void setAddresses(final com.commercetools.api.models.common.Address... addresses) {
@@ -505,6 +529,7 @@ public class DivisionImpl implements Division, ModelBase {
                 .append(name, that.name)
                 .append(contactEmail, that.contactEmail)
                 .append(custom, that.custom)
+                .append(customerGroupAssignments, that.customerGroupAssignments)
                 .append(addresses, that.addresses)
                 .append(shippingAddressIds, that.shippingAddressIds)
                 .append(defaultShippingAddressId, that.defaultShippingAddressId)
@@ -531,6 +556,7 @@ public class DivisionImpl implements Division, ModelBase {
                 .append(name, that.name)
                 .append(contactEmail, that.contactEmail)
                 .append(custom, that.custom)
+                .append(customerGroupAssignments, that.customerGroupAssignments)
                 .append(addresses, that.addresses)
                 .append(shippingAddressIds, that.shippingAddressIds)
                 .append(defaultShippingAddressId, that.defaultShippingAddressId)
@@ -562,6 +588,7 @@ public class DivisionImpl implements Division, ModelBase {
                 .append(name)
                 .append(contactEmail)
                 .append(custom)
+                .append(customerGroupAssignments)
                 .append(addresses)
                 .append(shippingAddressIds)
                 .append(defaultShippingAddressId)
@@ -593,6 +620,7 @@ public class DivisionImpl implements Division, ModelBase {
                 .append("name", name)
                 .append("contactEmail", contactEmail)
                 .append("custom", custom)
+                .append("customerGroupAssignments", customerGroupAssignments)
                 .append("addresses", addresses)
                 .append("shippingAddressIds", shippingAddressIds)
                 .append("defaultShippingAddressId", defaultShippingAddressId)

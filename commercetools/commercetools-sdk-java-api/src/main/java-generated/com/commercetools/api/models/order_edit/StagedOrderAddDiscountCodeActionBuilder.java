@@ -24,7 +24,7 @@ public class StagedOrderAddDiscountCodeActionBuilder implements Builder<StagedOr
     private String code;
 
     /**
-     *  <p><code>code</code> of a DiscountCode.</p>
+     *  <p><code>code</code> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a>.</p>
      * @param code value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class StagedOrderAddDiscountCodeActionBuilder implements Builder<StagedOr
     }
 
     /**
-     *  <p><code>code</code> of a DiscountCode.</p>
+     *  <p><code>code</code> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a>.</p>
      * @return code
      */
 

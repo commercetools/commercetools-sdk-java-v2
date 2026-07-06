@@ -28,7 +28,7 @@ public class OrderSetBusinessUnitActionBuilder implements Builder<OrderSetBusine
 
     /**
      *  <p>New Business Unit to assign to the Order. If empty, any existing value is removed.</p>
-     *  <p>If the referenced Business Unit does not exist, a ReferencedResourceNotFound error is returned.</p>
+     *  <p>If the referenced Business Unit does not exist, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ReferencedResourceNotFoundError" rel="nofollow">ReferencedResourceNotFound</a> error is returned.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -43,7 +43,7 @@ public class OrderSetBusinessUnitActionBuilder implements Builder<OrderSetBusine
 
     /**
      *  <p>New Business Unit to assign to the Order. If empty, any existing value is removed.</p>
-     *  <p>If the referenced Business Unit does not exist, a ReferencedResourceNotFound error is returned.</p>
+     *  <p>If the referenced Business Unit does not exist, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ReferencedResourceNotFoundError" rel="nofollow">ReferencedResourceNotFound</a> error is returned.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -57,7 +57,7 @@ public class OrderSetBusinessUnitActionBuilder implements Builder<OrderSetBusine
 
     /**
      *  <p>New Business Unit to assign to the Order. If empty, any existing value is removed.</p>
-     *  <p>If the referenced Business Unit does not exist, a ReferencedResourceNotFound error is returned.</p>
+     *  <p>If the referenced Business Unit does not exist, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ReferencedResourceNotFoundError" rel="nofollow">ReferencedResourceNotFound</a> error is returned.</p>
      * @param businessUnit value to be set
      * @return Builder
      */
@@ -70,7 +70,7 @@ public class OrderSetBusinessUnitActionBuilder implements Builder<OrderSetBusine
 
     /**
      *  <p>New Business Unit to assign to the Order. If empty, any existing value is removed.</p>
-     *  <p>If the referenced Business Unit does not exist, a ReferencedResourceNotFound error is returned.</p>
+     *  <p>If the referenced Business Unit does not exist, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ReferencedResourceNotFoundError" rel="nofollow">ReferencedResourceNotFound</a> error is returned.</p>
      * @return businessUnit
      */
 

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Represents the data used to import an Embedded Price . Once imported, this data is persisted as a Price in a Product Variant.</p>
+ *  <p>Represents the data used to import an <span>Embedded Price</span> . Once imported, this data is persisted as a <span>Price</span> in a Product Variant.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PriceImportImpl implements PriceImport, ModelBase {
@@ -87,7 +88,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier for the Embedded Price. If a Price with this <code>key</code> exists on the specified <code>productVariant</code>, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier for the Embedded Price. If a <span>Price</span> with this <code>key</code> exists on the specified <code>productVariant</code>, it is updated with the imported data.</p>
      */
 
     public String getKey() {
@@ -127,7 +128,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>Price.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
+     *  <p>Maps to <code>Price.customerGroup</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      */
 
     public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
@@ -135,7 +136,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>Price.channel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
+     *  <p>Maps to <code>Price.channel</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      */
 
     public com.commercetools.importapi.models.common.ChannelKeyReference getChannel() {
@@ -152,7 +153,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
 
     /**
      *  <ul>
-     *   <li>Set to <code>false</code> to update both the current and staged projections of the Product with the new Price data.</li>
+     *   <li>Set to <code>false</code> to update both the <span>current and staged projections</span> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> with the new Price data.</li>
      *   <li>Leave empty or set to <code>true</code> to only update the staged projection.</li>
      *  </ul>
      */
@@ -178,7 +179,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-     *  <p>The ProductVariant which contains this Embedded Price. If the referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductVariant is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> which contains this Embedded Price. If the referenced ProductVariant does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ProductVariant is created.</p>
      */
 
     public com.commercetools.importapi.models.common.ProductVariantKeyReference getProductVariant() {
@@ -186,7 +187,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-     *  <p>The Product which contains the <code>productVariant</code>. If the referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Product is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> which contains the <code>productVariant</code>. If the referenced Product does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Product is created.</p>
      */
 
     public com.commercetools.importapi.models.common.ProductKeyReference getProduct() {

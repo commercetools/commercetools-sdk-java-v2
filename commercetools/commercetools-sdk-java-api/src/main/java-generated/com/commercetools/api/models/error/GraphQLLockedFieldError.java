@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Returned when two Customers are simultaneously created or updated with the same email address.</p>
+ *  <p>Returned when two <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customers</a> are simultaneously created or updated with the same email address.</p>
  *  <p>To confirm if the operation was successful, repeat the request.</p>
  *
  * <hr>
@@ -130,8 +130,8 @@ public interface GraphQLLockedFieldError extends GraphQLErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLLockedFieldError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLLockedFieldError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLLockedFieldError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLLockedFieldError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLLockedFieldError>";

@@ -31,7 +31,7 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
     private java.util.List<com.commercetools.api.models.channel.ChannelReference> removedSupplyChannels;
 
     /**
-     *  <p>Inventory supply Channels that have been added to the Store.</p>
+     *  <p>Inventory supply Channels that have been added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param addedSupplyChannels value to be set
      * @return Builder
      */
@@ -43,7 +43,7 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Inventory supply Channels that have been added to the Store.</p>
+     *  <p>Inventory supply Channels that have been added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param addedSupplyChannels value to be set
      * @return Builder
      */
@@ -55,7 +55,7 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Inventory supply Channels that have been added to the Store.</p>
+     *  <p>Inventory supply Channels that have been added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param addedSupplyChannels value to be set
      * @return Builder
      */
@@ -70,7 +70,7 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Inventory supply Channels that have been added to the Store.</p>
+     *  <p>Inventory supply Channels that have been added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the addedSupplyChannels value
      * @return Builder
      */
@@ -86,7 +86,7 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Inventory supply Channels that have been added to the Store.</p>
+     *  <p>Inventory supply Channels that have been added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the addedSupplyChannels value
      * @return Builder
      */
@@ -100,7 +100,7 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Inventory supply Channels that have been added to the Store.</p>
+     *  <p>Inventory supply Channels that have been added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the addedSupplyChannels value
      * @return Builder
      */
@@ -112,7 +112,7 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Inventory supply Channels that have been added to the Store.</p>
+     *  <p>Inventory supply Channels that have been added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the addedSupplyChannels value
      * @return Builder
      */
@@ -123,7 +123,7 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Inventory supply Channels that have been removed from the Store.</p>
+     *  <p>Inventory supply Channels that have been removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param removedSupplyChannels value to be set
      * @return Builder
      */
@@ -135,7 +135,7 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Inventory supply Channels that have been removed from the Store.</p>
+     *  <p>Inventory supply Channels that have been removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param removedSupplyChannels value to be set
      * @return Builder
      */
@@ -147,7 +147,7 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Inventory supply Channels that have been removed from the Store.</p>
+     *  <p>Inventory supply Channels that have been removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param removedSupplyChannels value to be set
      * @return Builder
      */
@@ -162,7 +162,7 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Inventory supply Channels that have been removed from the Store.</p>
+     *  <p>Inventory supply Channels that have been removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the removedSupplyChannels value
      * @return Builder
      */
@@ -178,7 +178,7 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Inventory supply Channels that have been removed from the Store.</p>
+     *  <p>Inventory supply Channels that have been removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the removedSupplyChannels value
      * @return Builder
      */
@@ -192,7 +192,7 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Inventory supply Channels that have been removed from the Store.</p>
+     *  <p>Inventory supply Channels that have been removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the removedSupplyChannels value
      * @return Builder
      */
@@ -204,7 +204,7 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Inventory supply Channels that have been removed from the Store.</p>
+     *  <p>Inventory supply Channels that have been removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the removedSupplyChannels value
      * @return Builder
      */
@@ -215,7 +215,7 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Inventory supply Channels that have been added to the Store.</p>
+     *  <p>Inventory supply Channels that have been added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @return addedSupplyChannels
      */
 
@@ -225,7 +225,7 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Inventory supply Channels that have been removed from the Store.</p>
+     *  <p>Inventory supply Channels that have been removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @return removedSupplyChannels
      */
 

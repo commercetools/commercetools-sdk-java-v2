@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,11 +15,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set CustomLineItem Custom Type on Orders.</li>
- *   <li>Set CustomLineItem Custom Type on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomLineItemCustomFieldAction" rel="nofollow">Set CustomLineItem Custom Type</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomLineItemCustomFieldAction" rel="nofollow">Set CustomLineItem Custom Type</a> on Staged Orders.</li>
  *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -40,6 +41,8 @@ public class SetCustomLineItemCustomFieldChangeImpl implements SetCustomLineItem
 
     private String customLineItemId;
 
+    private String customTypeId;
+
     /**
      * create instance with all properties
      */
@@ -48,13 +51,15 @@ public class SetCustomLineItemCustomFieldChangeImpl implements SetCustomLineItem
             @JsonProperty("previousValue") final java.lang.Object previousValue,
             @JsonProperty("nextValue") final java.lang.Object nextValue, @JsonProperty("name") final String name,
             @JsonProperty("customLineItem") final com.commercetools.history.models.common.LocalizedString customLineItem,
-            @JsonProperty("customLineItemId") final String customLineItemId) {
+            @JsonProperty("customLineItemId") final String customLineItemId,
+            @JsonProperty("customTypeId") final String customTypeId) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.name = name;
         this.customLineItem = customLineItem;
         this.customLineItemId = customLineItemId;
+        this.customTypeId = customTypeId;
         this.type = SET_CUSTOM_LINE_ITEM_CUSTOM_FIELD_CHANGE;
     }
 
@@ -98,7 +103,7 @@ public class SetCustomLineItemCustomFieldChangeImpl implements SetCustomLineItem
     }
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      */
 
     public String getName() {
@@ -106,7 +111,7 @@ public class SetCustomLineItemCustomFieldChangeImpl implements SetCustomLineItem
     }
 
     /**
-     *  <p>Name of the updated CustomLineItem.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getCustomLineItem() {
@@ -114,11 +119,19 @@ public class SetCustomLineItemCustomFieldChangeImpl implements SetCustomLineItem
     }
 
     /**
-     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      */
 
     public String getCustomLineItemId() {
         return this.customLineItemId;
+    }
+
+    /**
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
+     */
+
+    public String getCustomTypeId() {
+        return this.customTypeId;
     }
 
     public void setChange(final String change) {
@@ -145,6 +158,10 @@ public class SetCustomLineItemCustomFieldChangeImpl implements SetCustomLineItem
         this.customLineItemId = customLineItemId;
     }
 
+    public void setCustomTypeId(final String customTypeId) {
+        this.customTypeId = customTypeId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -162,6 +179,7 @@ public class SetCustomLineItemCustomFieldChangeImpl implements SetCustomLineItem
                 .append(name, that.name)
                 .append(customLineItem, that.customLineItem)
                 .append(customLineItemId, that.customLineItemId)
+                .append(customTypeId, that.customTypeId)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
@@ -169,6 +187,7 @@ public class SetCustomLineItemCustomFieldChangeImpl implements SetCustomLineItem
                 .append(name, that.name)
                 .append(customLineItem, that.customLineItem)
                 .append(customLineItemId, that.customLineItemId)
+                .append(customTypeId, that.customTypeId)
                 .isEquals();
     }
 
@@ -181,6 +200,7 @@ public class SetCustomLineItemCustomFieldChangeImpl implements SetCustomLineItem
                 .append(name)
                 .append(customLineItem)
                 .append(customLineItemId)
+                .append(customTypeId)
                 .toHashCode();
     }
 
@@ -193,6 +213,7 @@ public class SetCustomLineItemCustomFieldChangeImpl implements SetCustomLineItem
                 .append("name", name)
                 .append("customLineItem", customLineItem)
                 .append("customLineItemId", customLineItemId)
+                .append("customTypeId", customTypeId)
                 .build();
     }
 

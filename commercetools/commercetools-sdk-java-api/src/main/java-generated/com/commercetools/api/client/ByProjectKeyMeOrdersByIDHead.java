@@ -7,26 +7,26 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
  *  <p>Checks if an Order exists with the provided <code>id</code> for the authenticated Customer or anonymous user. Returns a <code>200</code> status if successful.</p>
- *  <p>A Not Found error is returned in the following scenarios:</p>
+ *  <p>A <span>Not Found</span> error is returned in the following scenarios:</p>
  *  <ul>
  *   <li>If no Order exists for the provided <code>id</code>.</li>
- *   <li>If the Order exists but does not have either a <code>customerId</code> that matches the customer:{id} scope, or an <code>anonymousId</code> that matches the anonymous_id:{id} scope.</li>
+ *   <li>If the Order exists but does not have either a <code>customerId</code> that matches the <span>customer:{id}</span> scope, or an <code>anonymousId</code> that matches the <span>anonymous_id:{id}</span> scope.</li>
  *  </ul>
  *
  * <hr>
  * <div class=code-example>
  * <pre><code class='java'>{@code
- *   CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> result = apiRoot
+ *   CompletableFuture<ApiHttpResponse<tools.jackson.databind.JsonNode>> result = apiRoot
  *            .withProjectKey("{projectKey}")
  *            .me()
  *            .orders()
@@ -38,13 +38,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyMeOrdersByIDHead
-        extends TypeApiMethod<ByProjectKeyMeOrdersByIDHead, com.fasterxml.jackson.databind.JsonNode>
+        extends TypeApiMethod<ByProjectKeyMeOrdersByIDHead, tools.jackson.databind.JsonNode>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeOrdersByIDHead>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyMeOrdersByIDHead> {
 
     @Override
-    public TypeReference<com.fasterxml.jackson.databind.JsonNode> resultType() {
-        return new TypeReference<com.fasterxml.jackson.databind.JsonNode>() {
+    public TypeReference<tools.jackson.databind.JsonNode> resultType() {
+        return new TypeReference<tools.jackson.databind.JsonNode>() {
         };
     }
 
@@ -75,15 +75,14 @@ public class ByProjectKeyMeOrdersByIDHead
     }
 
     @Override
-    public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(final ApiHttpClient client,
+    public ApiHttpResponse<tools.jackson.databind.JsonNode> executeBlocking(final ApiHttpClient client,
             final Duration timeout) {
-        return executeBlocking(client, timeout, com.fasterxml.jackson.databind.JsonNode.class);
+        return executeBlocking(client, timeout, tools.jackson.databind.JsonNode.class);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> execute(
-            final ApiHttpClient client) {
-        return execute(client, com.fasterxml.jackson.databind.JsonNode.class);
+    public CompletableFuture<ApiHttpResponse<tools.jackson.databind.JsonNode>> execute(final ApiHttpClient client) {
+        return execute(client, tools.jackson.databind.JsonNode.class);
     }
 
     public String getProjectKey() {

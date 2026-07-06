@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * DiscountGroupDraft
@@ -30,6 +31,8 @@ public class DiscountGroupDraftImpl implements DiscountGroupDraft, ModelBase {
 
     private String sortOrder;
 
+    private Boolean isActive;
+
     /**
      * create instance with all properties
      */
@@ -37,11 +40,12 @@ public class DiscountGroupDraftImpl implements DiscountGroupDraft, ModelBase {
     DiscountGroupDraftImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("key") final String key,
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,
-            @JsonProperty("sortOrder") final String sortOrder) {
+            @JsonProperty("sortOrder") final String sortOrder, @JsonProperty("isActive") final Boolean isActive) {
         this.name = name;
         this.key = key;
         this.description = description;
         this.sortOrder = sortOrder;
+        this.isActive = isActive;
     }
 
     /**
@@ -83,6 +87,14 @@ public class DiscountGroupDraftImpl implements DiscountGroupDraft, ModelBase {
         return this.sortOrder;
     }
 
+    /**
+     *  <p>A DiscountGroup must be active for its CartDiscounts to be considered during discount application.</p>
+     */
+
+    public Boolean getIsActive() {
+        return this.isActive;
+    }
+
     public void setName(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
     }
@@ -99,6 +111,10 @@ public class DiscountGroupDraftImpl implements DiscountGroupDraft, ModelBase {
         this.sortOrder = sortOrder;
     }
 
+    public void setIsActive(final Boolean isActive) {
+        this.isActive = isActive;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -113,16 +129,23 @@ public class DiscountGroupDraftImpl implements DiscountGroupDraft, ModelBase {
                 .append(key, that.key)
                 .append(description, that.description)
                 .append(sortOrder, that.sortOrder)
+                .append(isActive, that.isActive)
                 .append(name, that.name)
                 .append(key, that.key)
                 .append(description, that.description)
                 .append(sortOrder, that.sortOrder)
+                .append(isActive, that.isActive)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(name).append(key).append(description).append(sortOrder).toHashCode();
+        return new HashCodeBuilder(17, 37).append(name)
+                .append(key)
+                .append(description)
+                .append(sortOrder)
+                .append(isActive)
+                .toHashCode();
     }
 
     @Override
@@ -131,6 +154,7 @@ public class DiscountGroupDraftImpl implements DiscountGroupDraft, ModelBase {
                 .append("key", key)
                 .append("description", description)
                 .append("sortOrder", sortOrder)
+                .append("isActive", isActive)
                 .build();
     }
 

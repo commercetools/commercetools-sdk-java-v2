@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after an approval in the Approval Flow.</p>
+ *  <p>Generated after an <span>approval in the Approval Flow</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ApprovalFlowApprovedMessagePayloadImpl implements ApprovalFlowApprovedMessagePayload, ModelBase {
@@ -56,7 +57,7 @@ public class ApprovalFlowApprovedMessagePayloadImpl implements ApprovalFlowAppro
     }
 
     /**
-     *  <p>Reference to the Customer who approved the Approval Flow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who approved the <span>Approval Flow</span>.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getAssociate() {
@@ -64,7 +65,7 @@ public class ApprovalFlowApprovedMessagePayloadImpl implements ApprovalFlowAppro
     }
 
     /**
-     *  <p>Reference to the Order that received the approval.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that received the approval.</p>
      */
 
     public com.commercetools.api.models.order.OrderReference getOrder() {

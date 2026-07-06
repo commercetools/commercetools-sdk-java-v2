@@ -187,7 +187,7 @@ public class ProductSlugChangedMessageBuilder implements Builder<ProductSlugChan
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -198,7 +198,7 @@ public class ProductSlugChangedMessageBuilder implements Builder<ProductSlugChan
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -260,7 +260,7 @@ public class ProductSlugChangedMessageBuilder implements Builder<ProductSlugChan
     }
 
     /**
-     *  <p>The slug of the Product after the Change Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangeSlugAction" rel="nofollow">Change Slug</a> update action.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -272,7 +272,7 @@ public class ProductSlugChangedMessageBuilder implements Builder<ProductSlugChan
     }
 
     /**
-     *  <p>The slug of the Product after the Change Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangeSlugAction" rel="nofollow">Change Slug</a> update action.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -284,7 +284,7 @@ public class ProductSlugChangedMessageBuilder implements Builder<ProductSlugChan
     }
 
     /**
-     *  <p>The slug of the Product after the Change Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangeSlugAction" rel="nofollow">Change Slug</a> update action.</p>
      * @param slug value to be set
      * @return Builder
      */
@@ -295,7 +295,7 @@ public class ProductSlugChangedMessageBuilder implements Builder<ProductSlugChan
     }
 
     /**
-     *  <p>The slug of the Product before the Change Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangeSlugAction" rel="nofollow">Change Slug</a> update action.</p>
      * @param builder function to build the oldSlug value
      * @return Builder
      */
@@ -307,7 +307,7 @@ public class ProductSlugChangedMessageBuilder implements Builder<ProductSlugChan
     }
 
     /**
-     *  <p>The slug of the Product before the Change Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangeSlugAction" rel="nofollow">Change Slug</a> update action.</p>
      * @param builder function to build the oldSlug value
      * @return Builder
      */
@@ -319,7 +319,7 @@ public class ProductSlugChangedMessageBuilder implements Builder<ProductSlugChan
     }
 
     /**
-     *  <p>The slug of the Product before the Change Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangeSlugAction" rel="nofollow">Change Slug</a> update action.</p>
      * @param oldSlug value to be set
      * @return Builder
      */
@@ -396,7 +396,7 @@ public class ProductSlugChangedMessageBuilder implements Builder<ProductSlugChan
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -424,7 +424,7 @@ public class ProductSlugChangedMessageBuilder implements Builder<ProductSlugChan
     }
 
     /**
-     *  <p>The slug of the Product after the Change Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangeSlugAction" rel="nofollow">Change Slug</a> update action.</p>
      * @return slug
      */
 
@@ -433,7 +433,7 @@ public class ProductSlugChangedMessageBuilder implements Builder<ProductSlugChan
     }
 
     /**
-     *  <p>The slug of the Product before the Change Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangeSlugAction" rel="nofollow">Change Slug</a> update action.</p>
      * @return oldSlug
      */
 

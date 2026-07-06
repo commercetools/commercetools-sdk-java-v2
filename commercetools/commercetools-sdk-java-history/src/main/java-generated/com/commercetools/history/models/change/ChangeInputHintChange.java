@@ -7,20 +7,16 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
-import com.commercetools.history.models.common.TextInputHint;
+import com.commercetools.history.models.common.TypeTextInputHint;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li>Change AttributeDefinition InputHint on Product Types.</li>
- *   <li>Change InputHint on Types.</li>
- *  </ul>
+ * ChangeInputHintChange
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,8 +24,8 @@ import jakarta.validation.constraints.NotNull;
  * <pre><code class='java'>
  *     ChangeInputHintChange changeInputHintChange = ChangeInputHintChange.builder()
  *             .change("{change}")
- *             .previousValue(TextInputHint.SINGLE_LINE)
- *             .nextValue(TextInputHint.SINGLE_LINE)
+ *             .previousValue(TypeTextInputHint.SINGLE_LINE)
+ *             .nextValue(TypeTextInputHint.SINGLE_LINE)
  *             .fieldName("{fieldName}")
  *             .attributeName("{attributeName}")
  *             .build()
@@ -68,7 +64,7 @@ public interface ChangeInputHintChange extends Change {
      */
     @NotNull
     @JsonProperty("previousValue")
-    public TextInputHint getPreviousValue();
+    public TypeTextInputHint getPreviousValue();
 
     /**
      *  <p>Value after the change.</p>
@@ -76,10 +72,10 @@ public interface ChangeInputHintChange extends Change {
      */
     @NotNull
     @JsonProperty("nextValue")
-    public TextInputHint getNextValue();
+    public TypeTextInputHint getNextValue();
 
     /**
-     *  <p>Name of the updated FieldDefinition; only present on changes to Types.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>; only present on changes to Types.</p>
      * @return fieldName
      */
     @NotNull
@@ -87,7 +83,7 @@ public interface ChangeInputHintChange extends Change {
     public String getFieldName();
 
     /**
-     *  <p>Name of the updated AttributeDefinition; only present on changes to Product Types.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>; only present on changes to Product Types.</p>
      * @return attributeName
      */
     @NotNull
@@ -106,24 +102,24 @@ public interface ChangeInputHintChange extends Change {
      * @param previousValue value to be set
      */
 
-    public void setPreviousValue(final TextInputHint previousValue);
+    public void setPreviousValue(final TypeTextInputHint previousValue);
 
     /**
      *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
-    public void setNextValue(final TextInputHint nextValue);
+    public void setNextValue(final TypeTextInputHint nextValue);
 
     /**
-     *  <p>Name of the updated FieldDefinition; only present on changes to Types.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>; only present on changes to Types.</p>
      * @param fieldName value to be set
      */
 
     public void setFieldName(final String fieldName);
 
     /**
-     *  <p>Name of the updated AttributeDefinition; only present on changes to Product Types.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>; only present on changes to Product Types.</p>
      * @param attributeName value to be set
      */
 
@@ -204,8 +200,8 @@ public interface ChangeInputHintChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChangeInputHintChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChangeInputHintChange>() {
+    public static tools.jackson.core.type.TypeReference<ChangeInputHintChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChangeInputHintChange>() {
             @Override
             public String toString() {
                 return "TypeReference<ChangeInputHintChange>";

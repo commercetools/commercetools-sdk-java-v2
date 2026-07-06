@@ -7,7 +7,6 @@ import java.util.*;
 import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -17,8 +16,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Reference to a State.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StateReferenceImpl implements StateReference, ModelBase {
@@ -48,7 +49,7 @@ public class StateReferenceImpl implements StateReference, ModelBase {
     }
 
     /**
-     *  <p>Type of referenced resource.</p>
+     *
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
@@ -56,7 +57,7 @@ public class StateReferenceImpl implements StateReference, ModelBase {
     }
 
     /**
-     *  <p>Unique identifier of the referenced State.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      */
 
     public String getId() {
@@ -64,7 +65,7 @@ public class StateReferenceImpl implements StateReference, ModelBase {
     }
 
     /**
-     *  <p>Contains the representation of the expanded State. Only present in responses to requests with Reference Expansion for States.</p>
+     *  <p>Contains the representation of the expanded State. Only present in responses to requests with <span>Reference Expansion</span> for States.</p>
      */
 
     public com.commercetools.api.models.state.State getObj() {

@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShippingMethodUpdateAction
@@ -71,6 +71,14 @@ public interface ShippingMethodUpdateAction
     }
 
     /**
+     * builder for addStore subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.shipping_method.ShippingMethodAddStoreActionBuilder addStoreBuilder() {
+        return com.commercetools.api.models.shipping_method.ShippingMethodAddStoreActionBuilder.of();
+    }
+
+    /**
      * builder for addZone subtype
      * @return builder
      */
@@ -116,6 +124,14 @@ public interface ShippingMethodUpdateAction
      */
     public static com.commercetools.api.models.shipping_method.ShippingMethodRemoveShippingRateActionBuilder removeShippingRateBuilder() {
         return com.commercetools.api.models.shipping_method.ShippingMethodRemoveShippingRateActionBuilder.of();
+    }
+
+    /**
+     * builder for removeStore subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.shipping_method.ShippingMethodRemoveStoreActionBuilder removeStoreBuilder() {
+        return com.commercetools.api.models.shipping_method.ShippingMethodRemoveStoreActionBuilder.of();
     }
 
     /**
@@ -183,6 +199,14 @@ public interface ShippingMethodUpdateAction
     }
 
     /**
+     * builder for setStores subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.shipping_method.ShippingMethodSetStoresActionBuilder setStoresBuilder() {
+        return com.commercetools.api.models.shipping_method.ShippingMethodSetStoresActionBuilder.of();
+    }
+
+    /**
      * accessor map function
      * @param <T> mapped type
      * @param helper function to map the object
@@ -196,8 +220,8 @@ public interface ShippingMethodUpdateAction
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodUpdateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodUpdateAction>() {
+    public static tools.jackson.core.type.TypeReference<ShippingMethodUpdateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShippingMethodUpdateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ShippingMethodUpdateAction>";

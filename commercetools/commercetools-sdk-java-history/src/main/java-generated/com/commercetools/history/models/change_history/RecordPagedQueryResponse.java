@@ -9,15 +9,15 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>PagedQueryResult with <code>results</code> containing an array of Record.</p>
+ *  <p><span>PagedQueryResult</span> with <code>results</code> containing an array of <a href="https://docs.commercetools.com/apis/ctp:history:type:Record" rel="nofollow">Record</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ import jakarta.validation.constraints.NotNull;
 public interface RecordPagedQueryResponse {
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @return limit
      */
     @NotNull
@@ -54,7 +54,7 @@ public interface RecordPagedQueryResponse {
     public Integer getCount();
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation and not strongly consistent.</p>
+     *  <p>Total number of results matching the query. This number is an estimation and not <span>strongly consistent</span>.</p>
      * @return total
      */
     @NotNull
@@ -62,7 +62,7 @@ public interface RecordPagedQueryResponse {
     public Integer getTotal();
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @return offset
      */
     @NotNull
@@ -79,7 +79,7 @@ public interface RecordPagedQueryResponse {
     public List<Record> getResults();
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @param limit value to be set
      */
 
@@ -93,14 +93,14 @@ public interface RecordPagedQueryResponse {
     public void setCount(final Integer count);
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation and not strongly consistent.</p>
+     *  <p>Total number of results matching the query. This number is an estimation and not <span>strongly consistent</span>.</p>
      * @param total value to be set
      */
 
     public void setTotal(final Integer total);
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @param offset value to be set
      */
 
@@ -200,8 +200,8 @@ public interface RecordPagedQueryResponse {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<RecordPagedQueryResponse> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<RecordPagedQueryResponse>() {
+    public static tools.jackson.core.type.TypeReference<RecordPagedQueryResponse> typeReference() {
+        return new tools.jackson.core.type.TypeReference<RecordPagedQueryResponse>() {
             @Override
             public String toString() {
                 return "TypeReference<RecordPagedQueryResponse>";

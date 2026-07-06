@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This type represents an attribute whose value is an enum. The attribute value refers to the key of the enum value.</p>
@@ -46,8 +47,8 @@ public class EnumAttributeImpl implements EnumAttribute, ModelBase {
     }
 
     /**
-     *  <p>Required if used for ProductVariantImport. Must not be set if used for ProductVariantPatch.</p>
-     *  <p>Must match <code>name</code> of an AttributeDefinition of the Product Type.</p>
+     *  <p>Required if used for <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantImport" rel="nofollow">ProductVariantImport</a>. Must not be set if used for <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantPatch" rel="nofollow">ProductVariantPatch</a>.</p>
+     *  <p>Must match <code>name</code> of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> of the Product Type.</p>
      */
 
     public String getName() {
@@ -55,7 +56,7 @@ public class EnumAttributeImpl implements EnumAttribute, ModelBase {
     }
 
     /**
-     *  <p>Must match <code>type</code> of an AttributeDefinition of the Product Type. The type is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     *  <p>Must match <code>type</code> of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> of the Product Type. The type is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
      */
 
     public String getType() {
@@ -63,7 +64,7 @@ public class EnumAttributeImpl implements EnumAttribute, ModelBase {
     }
 
     /**
-     *  <p>The key of the enum value. Must match the key of an AttributePlainEnumValue in the Product Type.</p>
+     *  <p>The key of the enum value. Must match the key of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributePlainEnumValue" rel="nofollow">AttributePlainEnumValue</a> in the Product Type.</p>
      */
 
     public String getValue() {

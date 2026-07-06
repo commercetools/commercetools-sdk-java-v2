@@ -9,14 +9,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Set Expires At update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetExpiresAtAction" rel="nofollow">Set Expires At</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface RecurringOrderExpiresAtSetMessagePayload extends MessagePayload
     String RECURRING_ORDER_EXPIRES_AT_SET = "RecurringOrderExpiresAtSet";
 
     /**
-     *  <p>Expiration date and time of the Recurring Order after the Set Expires At update action.</p>
+     *  <p>Expiration date and time of the Recurring Order after the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetExpiresAtAction" rel="nofollow">Set Expires At</a> update action.</p>
      * @return newExpiresAt
      */
     @NotNull
@@ -48,7 +48,7 @@ public interface RecurringOrderExpiresAtSetMessagePayload extends MessagePayload
     public ZonedDateTime getNewExpiresAt();
 
     /**
-     *  <p>Expiration date and time of the Recurring Order before the Set Expires At update action.</p>
+     *  <p>Expiration date and time of the Recurring Order before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetExpiresAtAction" rel="nofollow">Set Expires At</a> update action.</p>
      * @return oldExpiresAt
      */
     @NotNull
@@ -56,14 +56,14 @@ public interface RecurringOrderExpiresAtSetMessagePayload extends MessagePayload
     public ZonedDateTime getOldExpiresAt();
 
     /**
-     *  <p>Expiration date and time of the Recurring Order after the Set Expires At update action.</p>
+     *  <p>Expiration date and time of the Recurring Order after the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetExpiresAtAction" rel="nofollow">Set Expires At</a> update action.</p>
      * @param newExpiresAt value to be set
      */
 
     public void setNewExpiresAt(final ZonedDateTime newExpiresAt);
 
     /**
-     *  <p>Expiration date and time of the Recurring Order before the Set Expires At update action.</p>
+     *  <p>Expiration date and time of the Recurring Order before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetExpiresAtAction" rel="nofollow">Set Expires At</a> update action.</p>
      * @param oldExpiresAt value to be set
      */
 
@@ -141,8 +141,8 @@ public interface RecurringOrderExpiresAtSetMessagePayload extends MessagePayload
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<RecurringOrderExpiresAtSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<RecurringOrderExpiresAtSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<RecurringOrderExpiresAtSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<RecurringOrderExpiresAtSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<RecurringOrderExpiresAtSetMessagePayload>";

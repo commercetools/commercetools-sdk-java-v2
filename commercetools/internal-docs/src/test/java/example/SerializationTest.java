@@ -22,17 +22,18 @@ import com.commercetools.api.models.product.ProductVariant;
 import com.commercetools.api.models.subscription.DeliveryPayload;
 import com.commercetools.api.models.subscription.MessageDeliveryPayload;
 import com.commercetools.api.models.subscription.ResourceCreatedDeliveryPayload;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.vrap.rmf.base.client.ResponseSerializer;
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.junit.jupiter.api.Test;
 
+import tools.jackson.core.JacksonException;
+import tools.jackson.databind.ObjectMapper;
+
 public class SerializationTest {
     @Test
-    public void dateAsString() throws JsonProcessingException {
+    public void dateAsString() throws JacksonException {
         ApiModuleOptions options = ApiModuleOptions.of()
                 .withDateAttributeAsString(true)
                 .withDateCustomFieldAsString(true);
@@ -77,7 +78,7 @@ public class SerializationTest {
     }
 
     @Test
-    public void jsonNodes() throws JsonProcessingException {
+    public void jsonNodes() throws JacksonException {
         ApiModuleOptions options = ApiModuleOptions.of().withCustomFieldAsJsonNode(true).withAttributeAsJsonNode(true);
         ObjectMapper mapper = JsonUtils.createObjectMapper(options);
 
@@ -88,7 +89,7 @@ public class SerializationTest {
     }
 
     @Test
-    public void attributesNumberAsDouble() throws JsonProcessingException {
+    public void attributesNumberAsDouble() throws JacksonException {
         ApiModuleOptions options = ApiModuleOptions.of().withAttributeNumberAsDouble(true);
         ObjectMapper mapper = JsonUtils.createObjectMapper(options);
 

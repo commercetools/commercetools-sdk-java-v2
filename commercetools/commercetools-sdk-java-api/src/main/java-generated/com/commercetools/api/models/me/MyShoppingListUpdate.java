@@ -9,12 +9,12 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * MyShoppingListUpdate
@@ -36,7 +36,7 @@ public interface MyShoppingListUpdate extends
         com.commercetools.api.models.ResourceUpdate<MyShoppingListUpdate, MyShoppingListUpdateAction, MyShoppingListUpdateBuilder> {
 
     /**
-     *  <p>Expected version of the ShoppingList on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the ShoppingList on which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      * @return version
      */
     @NotNull
@@ -53,7 +53,7 @@ public interface MyShoppingListUpdate extends
     public List<MyShoppingListUpdateAction> getActions();
 
     /**
-     *  <p>Expected version of the ShoppingList on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the ShoppingList on which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      * @param version value to be set
      */
 
@@ -147,8 +147,8 @@ public interface MyShoppingListUpdate extends
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyShoppingListUpdate> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyShoppingListUpdate>() {
+    public static tools.jackson.core.type.TypeReference<MyShoppingListUpdate> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyShoppingListUpdate>() {
             @Override
             public String toString() {
                 return "TypeReference<MyShoppingListUpdate>";

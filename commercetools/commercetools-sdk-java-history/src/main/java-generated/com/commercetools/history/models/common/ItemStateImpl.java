@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,22 +15,24 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
  * ItemState
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ItemStateImpl implements ItemState, ModelBase {
 
-    private Integer quantity;
+    private Long quantity;
 
-    private com.commercetools.history.models.common.Reference state;
+    private com.commercetools.history.models.common.StateReference state;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    ItemStateImpl(@JsonProperty("quantity") final Integer quantity,
-            @JsonProperty("state") final com.commercetools.history.models.common.Reference state) {
+    ItemStateImpl(@JsonProperty("quantity") final Long quantity,
+            @JsonProperty("state") final com.commercetools.history.models.common.StateReference state) {
         this.quantity = quantity;
         this.state = state;
     }
@@ -43,26 +44,26 @@ public class ItemStateImpl implements ItemState, ModelBase {
     }
 
     /**
-     *
+     *  <p>Quantity of Line Items or Custom Line Items in this State.</p>
      */
 
-    public Integer getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 
     /**
-     *
+     *  <p>State of the Line Items or Custom Line Items in a custom workflow.</p>
      */
 
-    public com.commercetools.history.models.common.Reference getState() {
+    public com.commercetools.history.models.common.StateReference getState() {
         return this.state;
     }
 
-    public void setQuantity(final Integer quantity) {
+    public void setQuantity(final Long quantity) {
         this.quantity = quantity;
     }
 
-    public void setState(final com.commercetools.history.models.common.Reference state) {
+    public void setState(final com.commercetools.history.models.common.StateReference state) {
         this.state = state;
     }
 

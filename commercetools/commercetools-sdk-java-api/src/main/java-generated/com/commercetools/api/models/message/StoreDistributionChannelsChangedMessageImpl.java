@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Add Distribution Channel, Remove Distribution Channel, or Set Distribution Channels update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreAddDistributionChannelAction" rel="nofollow">Add Distribution Channel</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreRemoveDistributionChannelAction" rel="nofollow">Remove Distribution Channel</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetDistributionChannelsAction" rel="nofollow">Set Distribution Channels</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreDistributionChannelsChangedMessageImpl implements StoreDistributionChannelsChangedMessage, ModelBase {
@@ -143,7 +144,7 @@ public class StoreDistributionChannelsChangedMessageImpl implements StoreDistrib
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -159,7 +160,7 @@ public class StoreDistributionChannelsChangedMessageImpl implements StoreDistrib
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -175,7 +176,7 @@ public class StoreDistributionChannelsChangedMessageImpl implements StoreDistrib
     }
 
     /**
-     *  <p>Product distribution Channels that have been added to the Store.</p>
+     *  <p>Product distribution Channels that have been added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getAddedDistributionChannels() {
@@ -183,7 +184,7 @@ public class StoreDistributionChannelsChangedMessageImpl implements StoreDistrib
     }
 
     /**
-     *  <p>Product distribution Channels that have been removed from the Store.</p>
+     *  <p>Product distribution Channels that have been removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getRemovedDistributionChannels() {

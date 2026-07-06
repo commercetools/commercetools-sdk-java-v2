@@ -235,7 +235,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
     }
 
     /**
-     *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p>
+     *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the <a href="https://docs.commercetools.com/apis/ctp:api:type:GeoJsonPoint" rel="nofollow">Point</a> type is supported.</p>
      * @param geoLocation value to be set
      * @return Builder
      */
@@ -246,7 +246,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
     }
 
     /**
-     *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p>
+     *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the <a href="https://docs.commercetools.com/apis/ctp:api:type:GeoJsonPoint" rel="nofollow">Point</a> type is supported.</p>
      * @param builder function to build the geoLocation value
      * @return Builder
      */
@@ -317,7 +317,7 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
     }
 
     /**
-     *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p>
+     *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the <a href="https://docs.commercetools.com/apis/ctp:api:type:GeoJsonPoint" rel="nofollow">Point</a> type is supported.</p>
      * @return geoLocation
      */
 

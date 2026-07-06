@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,28 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li>Set Custom Type on Cart Discounts.</li>
- *   <li>Set Custom Type on Categories.</li>
- *   <li>Set Custom Type on Channels.</li>
- *   <li>Set Custom Type on Customers.</li>
- *   <li>Set Custom Type on Customer Groups.</li>
- *   <li>Set Custom Type on Discount Codes.</li>
- *   <li>Set Custom Type on Inventories.</li>
- *   <li>Set Custom Type on Orders.</li>
- *   <li>Set Custom Type on Order Edits.</li>
- *   <li>Set Custom Type on Staged Orders.</li>
- *   <li>Set Custom Type on Payments.</li>
- *   <li>Set Custom Type on Product Selections.</li>
- *   <li>Set Custom Type on Quotes.</li>
- *   <li>Set Custom Type on Staged Quotes.</li>
- *   <li>Set Custom Type on Quote Requests.</li>
- *   <li>Set Custom Type on Reviews.</li>
- *   <li>Set Custom Type on Shopping Lists.</li>
- *   <li>Set Custom Type on Stores.</li>
- *  </ul>
+ * SetCustomTypeChange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCustomTypeChangeImpl implements SetCustomTypeChange, ModelBase {

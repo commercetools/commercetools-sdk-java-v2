@@ -13,12 +13,12 @@ import com.commercetools.importapi.models.common.TaxCategoryKeyReference;
 import com.commercetools.importapi.models.common.TypedMoney;
 import com.commercetools.importapi.models.prices.TaxRate;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Maps to an Order's <code>shippingInfo</code> property. This field is usually populated by the Cart associated with the Order, but when importing Orders you must provide a draft representation as a part of the OrderImport.</p>
@@ -74,7 +74,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     public TaxRate getTaxRate();
 
     /**
-     *  <p>Maps to <code>shippingInfo.taxCategory</code>. If the referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
+     *  <p>Maps to <code>shippingInfo.taxCategory</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
      * @return taxCategory
      */
     @Valid
@@ -82,7 +82,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     public TaxCategoryKeyReference getTaxCategory();
 
     /**
-     *  <p>Maps to <code>shippingInfo.shippingMethod</code>. If the referenced ShippingMethod does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ShippingMethod is created.</p>
+     *  <p>Maps to <code>shippingInfo.shippingMethod</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ShippingMethod is created.</p>
      * @return shippingMethod
      */
     @Valid
@@ -142,14 +142,14 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     public void setTaxRate(final TaxRate taxRate);
 
     /**
-     *  <p>Maps to <code>shippingInfo.taxCategory</code>. If the referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
+     *  <p>Maps to <code>shippingInfo.taxCategory</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
      * @param taxCategory value to be set
      */
 
     public void setTaxCategory(final TaxCategoryKeyReference taxCategory);
 
     /**
-     *  <p>Maps to <code>shippingInfo.shippingMethod</code>. If the referenced ShippingMethod does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ShippingMethod is created.</p>
+     *  <p>Maps to <code>shippingInfo.shippingMethod</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ShippingMethod is created.</p>
      * @param shippingMethod value to be set
      */
 
@@ -275,8 +275,8 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShippingInfoImportDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShippingInfoImportDraft>() {
+    public static tools.jackson.core.type.TypeReference<ShippingInfoImportDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShippingInfoImportDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ShippingInfoImportDraft>";

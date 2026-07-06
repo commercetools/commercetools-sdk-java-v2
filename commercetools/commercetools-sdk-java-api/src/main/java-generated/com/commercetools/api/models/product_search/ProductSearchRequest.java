@@ -11,11 +11,11 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.search.SearchQuery;
 import com.commercetools.api.models.search.SearchSorting;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductSearchRequest
@@ -34,7 +34,7 @@ import jakarta.validation.Valid;
 public interface ProductSearchRequest {
 
     /**
-     *  <p>The search query against searchable Product fields.</p>
+     *  <p>The search query against <span>searchable Product fields</span>.</p>
      * @return query
      */
     @Valid
@@ -42,7 +42,7 @@ public interface ProductSearchRequest {
     public SearchQuery getQuery();
 
     /**
-     *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance score in descending order.</p>
+     *  <p>Controls how results to your query are <span>sorted</span>. If not provided, the results are sorted by relevance score in descending order.</p>
      * @return sort
      */
     @Valid
@@ -50,7 +50,7 @@ public interface ProductSearchRequest {
     public List<SearchSorting> getSort();
 
     /**
-     *  <p>The maximum number of search results to be returned in one page.</p>
+     *  <p>The maximum number of search results to be returned in one <span>page</span>.</p>
      * @return limit
      */
 
@@ -58,7 +58,7 @@ public interface ProductSearchRequest {
     public Integer getLimit();
 
     /**
-     *  <p>The number of search results to be skipped in the response for pagination.</p>
+     *  <p>The number of search results to be skipped in the response for <span>pagination</span>.</p>
      * @return offset
      */
 
@@ -66,7 +66,7 @@ public interface ProductSearchRequest {
     public Integer getOffset();
 
     /**
-     *  <p>If <code>query</code> specifies an expression for a Product Variant field, set this to <code>true</code> to get additional information for each returned Product about which Product Variants match the search query. For details, see matching variants.</p>
+     *  <p>If <code>query</code> specifies an expression for a Product Variant field, set this to <code>true</code> to get additional information for each returned Product about which Product Variants match the search query. For details, see <span>matching variants</span>.</p>
      * @return markMatchingVariants
      */
 
@@ -74,15 +74,16 @@ public interface ProductSearchRequest {
     public Boolean getMarkMatchingVariants();
 
     /**
-     *  <p>Controls data integration with Product Projection parameters. If not set, the result does not include the Product Projection.</p>
+     *  <p>Controls deprecated data integration <span>with Product Projection parameters</span>. If not set, the result does not include the Product Projection.</p>
      * @return productProjectionParameters
      */
     @Valid
+    @Deprecated
     @JsonProperty("productProjectionParameters")
     public ProductSearchProjectionParams getProductProjectionParameters();
 
     /**
-     *  <p>Set this field to request facets.</p>
+     *  <p>Set this field to request <span>facets</span>.</p>
      * @return facets
      */
     @Valid
@@ -98,14 +99,14 @@ public interface ProductSearchRequest {
     public SearchQuery getPostFilter();
 
     /**
-     *  <p>The search query against searchable Product fields.</p>
+     *  <p>The search query against <span>searchable Product fields</span>.</p>
      * @param query value to be set
      */
 
     public void setQuery(final SearchQuery query);
 
     /**
-     *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance score in descending order.</p>
+     *  <p>Controls how results to your query are <span>sorted</span>. If not provided, the results are sorted by relevance score in descending order.</p>
      * @param sort values to be set
      */
 
@@ -113,42 +114,42 @@ public interface ProductSearchRequest {
     public void setSort(final SearchSorting... sort);
 
     /**
-     *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance score in descending order.</p>
+     *  <p>Controls how results to your query are <span>sorted</span>. If not provided, the results are sorted by relevance score in descending order.</p>
      * @param sort values to be set
      */
 
     public void setSort(final List<SearchSorting> sort);
 
     /**
-     *  <p>The maximum number of search results to be returned in one page.</p>
+     *  <p>The maximum number of search results to be returned in one <span>page</span>.</p>
      * @param limit value to be set
      */
 
     public void setLimit(final Integer limit);
 
     /**
-     *  <p>The number of search results to be skipped in the response for pagination.</p>
+     *  <p>The number of search results to be skipped in the response for <span>pagination</span>.</p>
      * @param offset value to be set
      */
 
     public void setOffset(final Integer offset);
 
     /**
-     *  <p>If <code>query</code> specifies an expression for a Product Variant field, set this to <code>true</code> to get additional information for each returned Product about which Product Variants match the search query. For details, see matching variants.</p>
+     *  <p>If <code>query</code> specifies an expression for a Product Variant field, set this to <code>true</code> to get additional information for each returned Product about which Product Variants match the search query. For details, see <span>matching variants</span>.</p>
      * @param markMatchingVariants value to be set
      */
 
     public void setMarkMatchingVariants(final Boolean markMatchingVariants);
 
     /**
-     *  <p>Controls data integration with Product Projection parameters. If not set, the result does not include the Product Projection.</p>
+     *  <p>Controls deprecated data integration <span>with Product Projection parameters</span>. If not set, the result does not include the Product Projection.</p>
      * @param productProjectionParameters value to be set
      */
-
+    @Deprecated
     public void setProductProjectionParameters(final ProductSearchProjectionParams productProjectionParameters);
 
     /**
-     *  <p>Set this field to request facets.</p>
+     *  <p>Set this field to request <span>facets</span>.</p>
      * @param facets values to be set
      */
 
@@ -156,7 +157,7 @@ public interface ProductSearchRequest {
     public void setFacets(final ProductSearchFacetExpression... facets);
 
     /**
-     *  <p>Set this field to request facets.</p>
+     *  <p>Set this field to request <span>facets</span>.</p>
      * @param facets values to be set
      */
 
@@ -260,8 +261,8 @@ public interface ProductSearchRequest {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSearchRequest> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSearchRequest>() {
+    public static tools.jackson.core.type.TypeReference<ProductSearchRequest> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSearchRequest>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSearchRequest>";

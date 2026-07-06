@@ -9,15 +9,15 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Sets the requesters for an Approval Rule generates an ApprovalRuleRequestersSet Message.</p>
+ *  <p>Sets the requesters for an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">Approval Rule</a> generates an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleRequestersSetMessage" rel="nofollow">ApprovalRuleRequestersSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -134,8 +134,8 @@ public interface ApprovalRuleSetRequestersAction extends ApprovalRuleUpdateActio
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ApprovalRuleSetRequestersAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ApprovalRuleSetRequestersAction>() {
+    public static tools.jackson.core.type.TypeReference<ApprovalRuleSetRequestersAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ApprovalRuleSetRequestersAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ApprovalRuleSetRequestersAction>";

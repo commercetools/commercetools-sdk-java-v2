@@ -36,7 +36,7 @@ public class CountOnLineItemUnitsBuilder implements Builder<CountOnLineItemUnits
     private Integer excludeCount;
 
     /**
-     *  <p>Valid LineItem predicate that determines the units participating in the Discount.</p>
+     *  <p>Valid <span>LineItem predicate</span> that determines the units participating in the Discount.</p>
      * @param predicate value to be set
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class CountOnLineItemUnitsBuilder implements Builder<CountOnLineItemUnits
     }
 
     /**
-     *  <p>Valid LineItem predicate that determines the units participating in the Discount.</p>
+     *  <p>Valid <span>LineItem predicate</span> that determines the units participating in the Discount.</p>
      * @return predicate
      */
 

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,12 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li>Set Asset Custom Type on Categories.</li>
- *   <li>Set Asset Custom Type on Products.</li>
- *  </ul>
+ * SetAssetCustomTypeChange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetAssetCustomTypeChangeImpl implements SetAssetCustomTypeChange, ModelBase {
@@ -36,6 +33,10 @@ public class SetAssetCustomTypeChangeImpl implements SetAssetCustomTypeChange, M
 
     private com.commercetools.history.models.change_value.AssetChangeValue asset;
 
+    private String catalogData;
+
+    private String variant;
+
     /**
      * create instance with all properties
      */
@@ -43,11 +44,14 @@ public class SetAssetCustomTypeChangeImpl implements SetAssetCustomTypeChange, M
     SetAssetCustomTypeChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.CustomFields previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.CustomFields nextValue,
-            @JsonProperty("asset") final com.commercetools.history.models.change_value.AssetChangeValue asset) {
+            @JsonProperty("asset") final com.commercetools.history.models.change_value.AssetChangeValue asset,
+            @JsonProperty("catalogData") final String catalogData, @JsonProperty("variant") final String variant) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.asset = asset;
+        this.catalogData = catalogData;
+        this.variant = variant;
         this.type = SET_ASSET_CUSTOM_TYPE_CHANGE;
     }
 
@@ -98,6 +102,27 @@ public class SetAssetCustomTypeChangeImpl implements SetAssetCustomTypeChange, M
         return this.asset;
     }
 
+    /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
@@ -112,6 +137,14 @@ public class SetAssetCustomTypeChangeImpl implements SetAssetCustomTypeChange, M
 
     public void setAsset(final com.commercetools.history.models.change_value.AssetChangeValue asset) {
         this.asset = asset;
+    }
+
+    public void setCatalogData(final String catalogData) {
+        this.catalogData = catalogData;
+    }
+
+    public void setVariant(final String variant) {
+        this.variant = variant;
     }
 
     @Override
@@ -129,11 +162,15 @@ public class SetAssetCustomTypeChangeImpl implements SetAssetCustomTypeChange, M
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(asset, that.asset)
+                .append(catalogData, that.catalogData)
+                .append(variant, that.variant)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(asset, that.asset)
+                .append(catalogData, that.catalogData)
+                .append(variant, that.variant)
                 .isEquals();
     }
 
@@ -144,6 +181,8 @@ public class SetAssetCustomTypeChangeImpl implements SetAssetCustomTypeChange, M
                 .append(previousValue)
                 .append(nextValue)
                 .append(asset)
+                .append(catalogData)
+                .append(variant)
                 .toHashCode();
     }
 
@@ -154,6 +193,8 @@ public class SetAssetCustomTypeChangeImpl implements SetAssetCustomTypeChange, M
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
                 .append("asset", asset)
+                .append("catalogData", catalogData)
+                .append("variant", variant)
                 .build();
     }
 

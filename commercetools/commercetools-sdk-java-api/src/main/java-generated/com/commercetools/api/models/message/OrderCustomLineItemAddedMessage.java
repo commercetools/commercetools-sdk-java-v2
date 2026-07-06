@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.cart.CustomLineItem;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Add CustomLineItem update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderAddCustomLineItemAction" rel="nofollow">Add CustomLineItem</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface OrderCustomLineItemAddedMessage extends OrderMessage {
     String ORDER_CUSTOM_LINE_ITEM_ADDED = "OrderCustomLineItemAdded";
 
     /**
-     *  <p>Custom Line Item that was added to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @return customLineItem
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface OrderCustomLineItemAddedMessage extends OrderMessage {
     public CustomLineItem getCustomLineItem();
 
     /**
-     *  <p>Custom Line Item that was added to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param customLineItem value to be set
      */
 
@@ -152,8 +152,8 @@ public interface OrderCustomLineItemAddedMessage extends OrderMessage {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderCustomLineItemAddedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderCustomLineItemAddedMessage>() {
+    public static tools.jackson.core.type.TypeReference<OrderCustomLineItemAddedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderCustomLineItemAddedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderCustomLineItemAddedMessage>";

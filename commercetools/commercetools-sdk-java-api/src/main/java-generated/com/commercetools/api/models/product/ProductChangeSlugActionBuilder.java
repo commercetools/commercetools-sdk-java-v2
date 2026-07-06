@@ -30,7 +30,7 @@ public class ProductChangeSlugActionBuilder implements Builder<ProductChangeSlug
     private Boolean staged;
 
     /**
-     *  <p>Value to set. Must not be empty. A Product can have the same slug for different Locales, but it must be unique across the Project. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
+     *  <p>Value to set. Must not be empty. A Product can have the same slug for different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>, but it must be unique across the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class ProductChangeSlugActionBuilder implements Builder<ProductChangeSlug
     }
 
     /**
-     *  <p>Value to set. Must not be empty. A Product can have the same slug for different Locales, but it must be unique across the Project. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
+     *  <p>Value to set. Must not be empty. A Product can have the same slug for different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>, but it must be unique across the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class ProductChangeSlugActionBuilder implements Builder<ProductChangeSlug
     }
 
     /**
-     *  <p>Value to set. Must not be empty. A Product can have the same slug for different Locales, but it must be unique across the Project. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
+     *  <p>Value to set. Must not be empty. A Product can have the same slug for different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>, but it must be unique across the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      * @param slug value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class ProductChangeSlugActionBuilder implements Builder<ProductChangeSlug
     }
 
     /**
-     *  <p>Value to set. Must not be empty. A Product can have the same slug for different Locales, but it must be unique across the Project. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
+     *  <p>Value to set. Must not be empty. A Product can have the same slug for different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>, but it must be unique across the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      * @return slug
      */
 

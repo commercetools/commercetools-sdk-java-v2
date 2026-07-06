@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Set Address Custom Field update action.</p>
+ * SetAddressCustomFieldChange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetAddressCustomFieldChangeImpl implements SetAddressCustomFieldChange, ModelBase {
@@ -78,7 +79,7 @@ public class SetAddressCustomFieldChangeImpl implements SetAddressCustomFieldCha
     }
 
     /**
-     *  <p>Address which was extended.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> which was extended.</p>
      */
 
     public com.commercetools.history.models.common.Address getAddress() {
@@ -86,7 +87,7 @@ public class SetAddressCustomFieldChangeImpl implements SetAddressCustomFieldCha
     }
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Field</a>.</p>
      */
 
     public String getName() {
@@ -94,7 +95,7 @@ public class SetAddressCustomFieldChangeImpl implements SetAddressCustomFieldCha
     }
 
     /**
-     *  <p><code>id</code> of the referenced Type.</p>
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      */
 
     public String getCustomTypeId() {

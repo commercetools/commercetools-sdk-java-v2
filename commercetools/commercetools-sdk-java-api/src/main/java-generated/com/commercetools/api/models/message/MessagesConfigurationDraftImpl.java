@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Defines the configuration for the Messages Query feature for the Project.</p>
+ *  <p>Defines the configuration for the <span>Messages Query</span> feature for the Project.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MessagesConfigurationDraftImpl implements MessagesConfigurationDraft, ModelBase {
@@ -43,7 +44,7 @@ public class MessagesConfigurationDraftImpl implements MessagesConfigurationDraf
     }
 
     /**
-     *  <p>Setting to <code>true</code> activates the Messages Query feature.</p>
+     *  <p>Setting to <code>true</code> activates the <span>Messages Query</span> feature.</p>
      */
 
     public Boolean getEnabled() {
@@ -51,7 +52,7 @@ public class MessagesConfigurationDraftImpl implements MessagesConfigurationDraf
     }
 
     /**
-     *  <p>Specifies the number of days each Message should be available via the Messages Query API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API.</p>
+     *  <p>Specifies the number of days each Message should be available via the <span>Messages Query</span> API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API.</p>
      */
 
     public Integer getDeleteDaysAfterCreation() {

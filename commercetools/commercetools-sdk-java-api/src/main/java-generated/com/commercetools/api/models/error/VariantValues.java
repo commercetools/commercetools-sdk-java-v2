@@ -11,12 +11,12 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.common.PriceDraft;
 import com.commercetools.api.models.product.Attribute;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * VariantValues
@@ -37,7 +37,7 @@ import jakarta.validation.constraints.NotNull;
 public interface VariantValues {
 
     /**
-     *  <p>SKU of the ProductVariant.</p>
+     *  <p>SKU of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return sku
      */
 
@@ -45,7 +45,7 @@ public interface VariantValues {
     public String getSku();
 
     /**
-     *  <p>Embedded Prices of the ProductVariant.</p>
+     *  <p>Embedded Prices of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return prices
      */
     @NotNull
@@ -54,7 +54,7 @@ public interface VariantValues {
     public List<PriceDraft> getPrices();
 
     /**
-     *  <p>Attributes of the ProductVariant.</p>
+     *  <p>Attributes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return attributes
      */
     @NotNull
@@ -63,14 +63,14 @@ public interface VariantValues {
     public List<Attribute> getAttributes();
 
     /**
-     *  <p>SKU of the ProductVariant.</p>
+     *  <p>SKU of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param sku value to be set
      */
 
     public void setSku(final String sku);
 
     /**
-     *  <p>Embedded Prices of the ProductVariant.</p>
+     *  <p>Embedded Prices of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param prices values to be set
      */
 
@@ -78,14 +78,14 @@ public interface VariantValues {
     public void setPrices(final PriceDraft... prices);
 
     /**
-     *  <p>Embedded Prices of the ProductVariant.</p>
+     *  <p>Embedded Prices of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param prices values to be set
      */
 
     public void setPrices(final List<PriceDraft> prices);
 
     /**
-     *  <p>Attributes of the ProductVariant.</p>
+     *  <p>Attributes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param attributes values to be set
      */
 
@@ -93,7 +93,7 @@ public interface VariantValues {
     public void setAttributes(final Attribute... attributes);
 
     /**
-     *  <p>Attributes of the ProductVariant.</p>
+     *  <p>Attributes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param attributes values to be set
      */
 
@@ -178,8 +178,8 @@ public interface VariantValues {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<VariantValues> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<VariantValues>() {
+    public static tools.jackson.core.type.TypeReference<VariantValues> typeReference() {
+        return new tools.jackson.core.type.TypeReference<VariantValues>() {
             @Override
             public String toString() {
                 return "TypeReference<VariantValues>";

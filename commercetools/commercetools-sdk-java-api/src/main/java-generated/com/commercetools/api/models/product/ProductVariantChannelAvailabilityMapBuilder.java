@@ -24,7 +24,7 @@ public class ProductVariantChannelAvailabilityMapBuilder implements Builder<Prod
     private Map<String, com.commercetools.api.models.product.ProductVariantChannelAvailability> values = new HashMap<>();
 
     /**
-     *  <p>JSON object where the keys are supply Channel <code>id</code>, and the values are ProductVariantChannelAvailability.</p>
+     *  <p>JSON object where the keys are supply <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> <code>id</code>, and the values are <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantChannelAvailability" rel="nofollow">ProductVariantChannelAvailability</a>.</p>
      * @param values properties to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class ProductVariantChannelAvailabilityMapBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>JSON object where the keys are supply Channel <code>id</code>, and the values are ProductVariantChannelAvailability.</p>
+     *  <p>JSON object where the keys are supply <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> <code>id</code>, and the values are <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantChannelAvailability" rel="nofollow">ProductVariantChannelAvailability</a>.</p>
      * @param key property name
      * @param value property value
      * @return Builder
@@ -52,7 +52,7 @@ public class ProductVariantChannelAvailabilityMapBuilder implements Builder<Prod
     }
 
     /**
-     *  <p>JSON object where the keys are supply Channel <code>id</code>, and the values are ProductVariantChannelAvailability.</p>
+     *  <p>JSON object where the keys are supply <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> <code>id</code>, and the values are <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantChannelAvailability" rel="nofollow">ProductVariantChannelAvailability</a>.</p>
      * @return pattern properties
      */
 

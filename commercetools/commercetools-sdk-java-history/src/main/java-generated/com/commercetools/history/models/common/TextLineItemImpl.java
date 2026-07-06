@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,13 +15,15 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- * TextLineItem
+ *  <p>TextLineItems are Line Items that use text values instead of references to Products.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TextLineItemImpl implements TextLineItem, ModelBase {
 
-    private String addedAt;
+    private java.time.ZonedDateTime addedAt;
 
     private com.commercetools.history.models.common.CustomFields custom;
 
@@ -30,24 +31,27 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
 
     private String id;
 
+    private String key;
+
     private com.commercetools.history.models.common.LocalizedString name;
 
-    private Integer quantity;
+    private Long quantity;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    TextLineItemImpl(@JsonProperty("addedAt") final String addedAt,
+    TextLineItemImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
             @JsonProperty("custom") final com.commercetools.history.models.common.CustomFields custom,
             @JsonProperty("description") final com.commercetools.history.models.common.LocalizedString description,
-            @JsonProperty("id") final String id,
+            @JsonProperty("id") final String id, @JsonProperty("key") final String key,
             @JsonProperty("name") final com.commercetools.history.models.common.LocalizedString name,
-            @JsonProperty("quantity") final Integer quantity) {
+            @JsonProperty("quantity") final Long quantity) {
         this.addedAt = addedAt;
         this.custom = custom;
         this.description = description;
         this.id = id;
+        this.key = key;
         this.name = name;
         this.quantity = quantity;
     }
@@ -59,15 +63,15 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the TextLineItem was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      */
 
-    public String getAddedAt() {
+    public java.time.ZonedDateTime getAddedAt() {
         return this.addedAt;
     }
 
     /**
-     *
+     *  <p>Custom Fields of the TextLineItem.</p>
      */
 
     public com.commercetools.history.models.common.CustomFields getCustom() {
@@ -75,7 +79,7 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
     }
 
     /**
-     *
+     *  <p>Description of the TextLineItem.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getDescription() {
@@ -83,7 +87,7 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
     }
 
     /**
-     *
+     *  <p>Unique identifier of the TextLineItem.</p>
      */
 
     public String getId() {
@@ -91,7 +95,15 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined identifier of the TextLineItem. It is unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
+     */
+
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
+     *  <p>Name of the TextLineItem.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getName() {
@@ -99,14 +111,14 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
     }
 
     /**
-     *
+     *  <p>Number of entries in the TextLineItem.</p>
      */
 
-    public Integer getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 
-    public void setAddedAt(final String addedAt) {
+    public void setAddedAt(final java.time.ZonedDateTime addedAt) {
         this.addedAt = addedAt;
     }
 
@@ -122,11 +134,15 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
         this.id = id;
     }
 
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
     public void setName(final com.commercetools.history.models.common.LocalizedString name) {
         this.name = name;
     }
 
-    public void setQuantity(final Integer quantity) {
+    public void setQuantity(final Long quantity) {
         this.quantity = quantity;
     }
 
@@ -144,12 +160,14 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
                 .append(custom, that.custom)
                 .append(description, that.description)
                 .append(id, that.id)
+                .append(key, that.key)
                 .append(name, that.name)
                 .append(quantity, that.quantity)
                 .append(addedAt, that.addedAt)
                 .append(custom, that.custom)
                 .append(description, that.description)
                 .append(id, that.id)
+                .append(key, that.key)
                 .append(name, that.name)
                 .append(quantity, that.quantity)
                 .isEquals();
@@ -161,6 +179,7 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
                 .append(custom)
                 .append(description)
                 .append(id)
+                .append(key)
                 .append(name)
                 .append(quantity)
                 .toHashCode();
@@ -172,6 +191,7 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
                 .append("custom", custom)
                 .append("description", description)
                 .append("id", id)
+                .append("key", key)
                 .append("name", name)
                 .append("quantity", quantity)
                 .build();

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Create Store request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/stores:POST" rel="nofollow">Create Store</a> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayload, ModelBase {
@@ -75,7 +76,7 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
     }
 
     /**
-     *  <p>The <code>name</code> of the Store that was created.</p>
+     *  <p>The <code>name</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -83,7 +84,7 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
     }
 
     /**
-     *  <p>Languages of the Store that was created. Languages are represented as IETF language tags.</p>
+     *  <p>Languages of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created. Languages are represented as <span>IETF language tags</span>.</p>
      */
 
     public java.util.List<String> getLanguages() {
@@ -91,7 +92,7 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
     }
 
     /**
-     *  <p>Countries of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      */
 
     public java.util.List<com.commercetools.api.models.store_country.StoreCountry> getCountries() {
@@ -99,7 +100,7 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
     }
 
     /**
-     *  <p>Distribution Channels of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Distribution Channels</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getDistributionChannels() {
@@ -107,7 +108,7 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
     }
 
     /**
-     *  <p>Supply Channels of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Supply Channels</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getSupplyChannels() {
@@ -115,7 +116,7 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
     }
 
     /**
-     *  <p>ProductSelectionSettings of the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      */
 
     public java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> getProductSelections() {
@@ -123,7 +124,7 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
     }
 
     /**
-     *  <p>Custom Fields on the Store that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {

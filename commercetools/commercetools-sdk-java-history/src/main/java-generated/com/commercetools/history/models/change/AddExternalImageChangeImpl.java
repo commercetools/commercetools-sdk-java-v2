@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Add External Image update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductAddExternalImageAction" rel="nofollow">Add External Image</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddExternalImageChangeImpl implements AddExternalImageChange, ModelBase {
@@ -32,6 +33,8 @@ public class AddExternalImageChangeImpl implements AddExternalImageChange, Model
 
     private String catalogData;
 
+    private String variant;
+
     /**
      * create instance with all properties
      */
@@ -39,11 +42,12 @@ public class AddExternalImageChangeImpl implements AddExternalImageChange, Model
     AddExternalImageChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.Image> previousValue,
             @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.Image> nextValue,
-            @JsonProperty("catalogData") final String catalogData) {
+            @JsonProperty("catalogData") final String catalogData, @JsonProperty("variant") final String variant) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.catalogData = catalogData;
+        this.variant = variant;
         this.type = ADD_EXTERNAL_IMAGE_CHANGE;
     }
 
@@ -87,14 +91,24 @@ public class AddExternalImageChangeImpl implements AddExternalImageChange, Model
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
-     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
-     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *  </ul>
      */
 
     public String getCatalogData() {
         return this.catalogData;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     */
+
+    public String getVariant() {
+        return this.variant;
     }
 
     public void setChange(final String change) {
@@ -121,6 +135,10 @@ public class AddExternalImageChangeImpl implements AddExternalImageChange, Model
         this.catalogData = catalogData;
     }
 
+    public void setVariant(final String variant) {
+        this.variant = variant;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -136,11 +154,13 @@ public class AddExternalImageChangeImpl implements AddExternalImageChange, Model
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(catalogData, that.catalogData)
+                .append(variant, that.variant)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(catalogData, that.catalogData)
+                .append(variant, that.variant)
                 .isEquals();
     }
 
@@ -151,6 +171,7 @@ public class AddExternalImageChangeImpl implements AddExternalImageChange, Model
                 .append(previousValue)
                 .append(nextValue)
                 .append(catalogData)
+                .append(variant)
                 .toHashCode();
     }
 
@@ -161,6 +182,7 @@ public class AddExternalImageChangeImpl implements AddExternalImageChange, Model
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
                 .append("catalogData", catalogData)
+                .append("variant", variant)
                 .build();
     }
 

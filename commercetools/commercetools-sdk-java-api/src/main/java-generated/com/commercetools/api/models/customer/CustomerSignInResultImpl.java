@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * CustomerSignInResult
@@ -43,7 +44,7 @@ public class CustomerSignInResultImpl implements CustomerSignInResult, ModelBase
     }
 
     /**
-     *  <p>Customer signed up or signed in after authentication.</p>
+     *  <p>Customer <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers:POST" rel="nofollow">signed up</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/login:POST" rel="nofollow">signed in</a> after authentication.</p>
      */
 
     public com.commercetools.api.models.customer.Customer getCustomer() {
@@ -51,7 +52,9 @@ public class CustomerSignInResultImpl implements CustomerSignInResult, ModelBase
     }
 
     /**
-     *  <p>Cart associated with the Customer. If empty, the Customer does not have a Cart assigned.</p>
+     *  <p>Cart associated with the Customer.</p>
+     *  <p>The Cart is recalculated to remove invalid Line Items and apply the latest prices, taxes, and discounts. During these updates, the following errors can be returned: <a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a>.</p>
+     *  <p>For more information, see <span>Cart updates</span>.</p>
      */
 
     public com.commercetools.api.models.cart.Cart getCart() {

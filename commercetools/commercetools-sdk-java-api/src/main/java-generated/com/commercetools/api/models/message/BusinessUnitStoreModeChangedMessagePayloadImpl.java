@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Store Mode update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitStoreModeChangedMessagePayloadImpl
@@ -65,7 +66,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadImpl
     }
 
     /**
-     *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      */
 
     public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {
@@ -73,7 +74,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadImpl
     }
 
     /**
-     *  <p>BusinessUnitStoreMode of the Business Unit after the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitStoreMode" rel="nofollow">BusinessUnitStoreMode</a> of the Business Unit after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitStoreMode getStoreMode() {
@@ -81,7 +82,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadImpl
     }
 
     /**
-     *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      */
 
     public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getOldStores() {
@@ -89,7 +90,7 @@ public class BusinessUnitStoreModeChangedMessagePayloadImpl
     }
 
     /**
-     *  <p>BusinessUnitStoreMode of the Business Unit before the Set Store Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitStoreMode" rel="nofollow">BusinessUnitStoreMode</a> of the Business Unit before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetStoreModeAction" rel="nofollow">Set Store Mode</a> update action.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitStoreMode getOldStoreMode() {

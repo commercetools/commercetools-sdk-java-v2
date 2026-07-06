@@ -41,8 +41,10 @@ public class StandalonePriceImportTest {
                 new Object[] { "discounted",
                         StandalonePriceImport.builder()
                                 .discounted(new com.commercetools.importapi.models.common.DiscountedPriceImpl()) },
-                new Object[] { "custom", StandalonePriceImport.builder()
-                        .custom(new com.commercetools.importapi.models.customfields.CustomImpl()) } };
+                new Object[] { "custom",
+                        StandalonePriceImport.builder()
+                                .custom(new com.commercetools.importapi.models.customfields.CustomImpl()) },
+                new Object[] { "active", StandalonePriceImport.builder().active(true) } };
     }
 
     @Test
@@ -126,5 +128,12 @@ public class StandalonePriceImportTest {
         value.setCustom(new com.commercetools.importapi.models.customfields.CustomImpl());
         Assertions.assertThat(value.getCustom())
                 .isEqualTo(new com.commercetools.importapi.models.customfields.CustomImpl());
+    }
+
+    @Test
+    public void active() {
+        StandalonePriceImport value = StandalonePriceImport.of();
+        value.setActive(true);
+        Assertions.assertThat(value.getActive()).isEqualTo(true);
     }
 }

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * DiscountedPriceDraft
@@ -43,7 +44,7 @@ public class DiscountedPriceDraftImpl implements DiscountedPriceDraft, ModelBase
     }
 
     /**
-     *  <p>Sets the money value for the discounted price. To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
+     *  <p>Sets the money value for the discounted price. To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      */
 
     public com.commercetools.api.models.common.Money getValue() {
@@ -51,7 +52,7 @@ public class DiscountedPriceDraftImpl implements DiscountedPriceDraft, ModelBase
     }
 
     /**
-     *  <p>Relates the referenced ProductDiscount to the discounted price.</p>
+     *  <p>Relates the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> to the discounted price.</p>
      */
 
     public com.commercetools.api.models.product_discount.ProductDiscountReference getDiscount() {

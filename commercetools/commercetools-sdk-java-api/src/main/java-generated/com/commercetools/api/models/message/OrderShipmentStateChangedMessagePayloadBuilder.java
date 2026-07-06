@@ -30,7 +30,7 @@ public class OrderShipmentStateChangedMessagePayloadBuilder
     private com.commercetools.api.models.order.ShipmentState oldShipmentState;
 
     /**
-     *  <p>ShipmentState after the Change Shipment State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShipmentState" rel="nofollow">ShipmentState</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangeShipmentStateAction" rel="nofollow">Change Shipment State</a> update action.</p>
      * @param shipmentState value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class OrderShipmentStateChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>ShipmentState before the Change Shipment State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShipmentState" rel="nofollow">ShipmentState</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangeShipmentStateAction" rel="nofollow">Change Shipment State</a> update action.</p>
      * @param oldShipmentState value to be set
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class OrderShipmentStateChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>ShipmentState after the Change Shipment State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShipmentState" rel="nofollow">ShipmentState</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangeShipmentStateAction" rel="nofollow">Change Shipment State</a> update action.</p>
      * @return shipmentState
      */
 
@@ -63,7 +63,7 @@ public class OrderShipmentStateChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>ShipmentState before the Change Shipment State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShipmentState" rel="nofollow">ShipmentState</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangeShipmentStateAction" rel="nofollow">Change Shipment State</a> update action.</p>
      * @return oldShipmentState
      */
 

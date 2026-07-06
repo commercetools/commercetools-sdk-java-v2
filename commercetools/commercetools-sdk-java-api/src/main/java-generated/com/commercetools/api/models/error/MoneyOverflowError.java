@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Returned when a Money operation overflows the 64-bit integer range. See Money usage for more information.</p>
+ *  <p>Returned when a money operation overflows the 64-bit integer range.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -129,8 +129,8 @@ public interface MoneyOverflowError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MoneyOverflowError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MoneyOverflowError>() {
+    public static tools.jackson.core.type.TypeReference<MoneyOverflowError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MoneyOverflowError>() {
             @Override
             public String toString() {
                 return "TypeReference<MoneyOverflowError>";

@@ -1,11 +1,9 @@
 
 package com.commercetools.api.json;
 
-import java.io.IOException;
-
-import com.fasterxml.jackson.core.JsonGenerator;
-import com.fasterxml.jackson.databind.SerializerProvider;
-import com.fasterxml.jackson.databind.ser.std.StdScalarSerializer;
+import tools.jackson.core.JsonGenerator;
+import tools.jackson.databind.SerializationContext;
+import tools.jackson.databind.ser.std.StdScalarSerializer;
 
 public class DoubleSerializer extends StdScalarSerializer<Double> {
 
@@ -15,7 +13,7 @@ public class DoubleSerializer extends StdScalarSerializer<Double> {
         super(Double.class);
     }
 
-    public void serialize(Double value, JsonGenerator gen, SerializerProvider arg2) throws IOException {
+    public void serialize(Double value, JsonGenerator gen, SerializationContext arg2) {
         if (value.intValue() == value)
             gen.writeNumber(value.intValue());
         else

@@ -17,7 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AttributeLevelEnum extends JsonEnum {
 
     /**
-    <p>Attribute is defined at Product level (<strong>not supported</strong> by Product Projection Search).</p> */
+    <p>Attribute is defined at Product level (<strong>not supported</strong> by <span>Product Projection Search</span>).</p> */
     AttributeLevelEnum PRODUCT = AttributeLevelEnumEnum.PRODUCT;
     /**
     <p>Attributes are defined at the Product Variant level.</p> */

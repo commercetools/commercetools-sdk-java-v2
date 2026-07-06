@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Delete RecurringOrder request.</p>
+ *  <p>Generated after a successful <span>Delete RecurringOrder</span> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RecurringOrderDeletedMessagePayloadImpl implements RecurringOrderDeletedMessagePayload, ModelBase {
@@ -52,7 +53,7 @@ public class RecurringOrderDeletedMessagePayloadImpl implements RecurringOrderDe
     }
 
     /**
-     *  <p>RecurringOrder that was deleted.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> that was deleted.</p>
      */
 
     public com.commercetools.api.models.recurring_order.RecurringOrder getRecurringOrder() {

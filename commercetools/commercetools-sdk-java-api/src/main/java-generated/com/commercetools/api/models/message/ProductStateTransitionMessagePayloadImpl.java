@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Transition State update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductStateTransitionMessagePayloadImpl implements ProductStateTransitionMessagePayload, ModelBase {
@@ -56,7 +57,7 @@ public class ProductStateTransitionMessagePayloadImpl implements ProductStateTra
     }
 
     /**
-     *  <p>Product State after the Transition State update action.</p>
+     *  <p>Product <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {
@@ -64,7 +65,7 @@ public class ProductStateTransitionMessagePayloadImpl implements ProductStateTra
     }
 
     /**
-     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     *  <p>Whether <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition validations were turned off during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      */
 
     public Boolean getForce() {

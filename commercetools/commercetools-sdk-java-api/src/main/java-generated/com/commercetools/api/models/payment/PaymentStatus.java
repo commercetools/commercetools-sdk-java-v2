@@ -9,11 +9,11 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.state.StateReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * PaymentStatus
@@ -48,7 +48,7 @@ public interface PaymentStatus {
     public String getInterfaceText();
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      * @return state
      */
     @Valid
@@ -70,7 +70,7 @@ public interface PaymentStatus {
     public void setInterfaceText(final String interfaceText);
 
     /**
-     *  <p>Reference to a State.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      * @param state value to be set
      */
 
@@ -147,8 +147,8 @@ public interface PaymentStatus {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentStatus> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentStatus>() {
+    public static tools.jackson.core.type.TypeReference<PaymentStatus> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentStatus>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentStatus>";

@@ -32,7 +32,7 @@ public class PaymentSetTransactionCustomFieldActionBuilder implements Builder<Pa
     private java.lang.Object value;
 
     /**
-     *  <p>Unique identifier of the Transaction.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a>.</p>
      * @param transactionId value to be set
      * @return Builder
      */
@@ -43,7 +43,7 @@ public class PaymentSetTransactionCustomFieldActionBuilder implements Builder<Pa
     }
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class PaymentSetTransactionCustomFieldActionBuilder implements Builder<Pa
     }
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class PaymentSetTransactionCustomFieldActionBuilder implements Builder<Pa
     }
 
     /**
-     *  <p>Unique identifier of the Transaction.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a>.</p>
      * @return transactionId
      */
 
@@ -74,7 +74,7 @@ public class PaymentSetTransactionCustomFieldActionBuilder implements Builder<Pa
     }
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @return name
      */
 
@@ -83,7 +83,7 @@ public class PaymentSetTransactionCustomFieldActionBuilder implements Builder<Pa
     }
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @return value
      */
 

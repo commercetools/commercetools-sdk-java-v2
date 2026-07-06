@@ -19,14 +19,17 @@ public class PaymentInfoTest {
 
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { "payments", PaymentInfo.builder()
-                .payments(Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl())) } };
+                .payments(
+                    Collections.singletonList(new com.commercetools.history.models.common.PaymentReferenceImpl())) } };
     }
 
     @Test
     public void payments() {
         PaymentInfo value = PaymentInfo.of();
-        value.setPayments(Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl()));
+        value.setPayments(
+            Collections.singletonList(new com.commercetools.history.models.common.PaymentReferenceImpl()));
         Assertions.assertThat(value.getPayments())
-                .isEqualTo(Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl()));
+                .isEqualTo(
+                    Collections.singletonList(new com.commercetools.history.models.common.PaymentReferenceImpl()));
     }
 }

@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.review.Review;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Create Review request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/reviews:POST" rel="nofollow">Create Review</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface ReviewCreatedMessage extends Message {
     String REVIEW_CREATED = "ReviewCreated";
 
     /**
-     *  <p>Review that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> that was created.</p>
      * @return review
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface ReviewCreatedMessage extends Message {
     public Review getReview();
 
     /**
-     *  <p>Review that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> that was created.</p>
      * @param review value to be set
      */
 
@@ -151,8 +151,8 @@ public interface ReviewCreatedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ReviewCreatedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ReviewCreatedMessage>() {
+    public static tools.jackson.core.type.TypeReference<ReviewCreatedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ReviewCreatedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<ReviewCreatedMessage>";

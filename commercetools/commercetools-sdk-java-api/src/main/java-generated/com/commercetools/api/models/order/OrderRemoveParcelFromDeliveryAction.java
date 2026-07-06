@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Produces the ParcelRemovedFromDelivery Message.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelRemovedFromDeliveryMessage" rel="nofollow">ParcelRemovedFromDelivery</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +36,7 @@ public interface OrderRemoveParcelFromDeliveryAction extends OrderUpdateAction {
     String REMOVE_PARCEL_FROM_DELIVERY = "removeParcelFromDelivery";
 
     /**
-     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @return parcelId
      */
@@ -44,7 +45,7 @@ public interface OrderRemoveParcelFromDeliveryAction extends OrderUpdateAction {
     public String getParcelId();
 
     /**
-     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @return parcelKey
      */
@@ -53,7 +54,7 @@ public interface OrderRemoveParcelFromDeliveryAction extends OrderUpdateAction {
     public String getParcelKey();
 
     /**
-     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @param parcelId value to be set
      */
@@ -61,7 +62,7 @@ public interface OrderRemoveParcelFromDeliveryAction extends OrderUpdateAction {
     public void setParcelId(final String parcelId);
 
     /**
-     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @param parcelKey value to be set
      */
@@ -139,8 +140,8 @@ public interface OrderRemoveParcelFromDeliveryAction extends OrderUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderRemoveParcelFromDeliveryAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderRemoveParcelFromDeliveryAction>() {
+    public static tools.jackson.core.type.TypeReference<OrderRemoveParcelFromDeliveryAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderRemoveParcelFromDeliveryAction>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderRemoveParcelFromDeliveryAction>";

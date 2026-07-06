@@ -27,8 +27,10 @@ public class MyTransactionDraftTest {
                 new Object[] { "amount",
                         MyTransactionDraft.builder().amount(new com.commercetools.api.models.common.MoneyImpl()) },
                 new Object[] { "interactionId", MyTransactionDraft.builder().interactionId("interactionId") },
-                new Object[] { "custom", MyTransactionDraft.builder()
-                        .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
+                new Object[] { "custom",
+                        MyTransactionDraft.builder()
+                                .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
+                new Object[] { "interfaceId", MyTransactionDraft.builder().interfaceId("interfaceId") } };
     }
 
     @Test
@@ -66,5 +68,12 @@ public class MyTransactionDraftTest {
         value.setCustom(new com.commercetools.api.models.type.CustomFieldsDraftImpl());
         Assertions.assertThat(value.getCustom())
                 .isEqualTo(new com.commercetools.api.models.type.CustomFieldsDraftImpl());
+    }
+
+    @Test
+    public void interfaceId() {
+        MyTransactionDraft value = MyTransactionDraft.of();
+        value.setInterfaceId("interfaceId");
+        Assertions.assertThat(value.getInterfaceId()).isEqualTo("interfaceId");
     }
 }

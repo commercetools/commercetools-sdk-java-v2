@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,21 +15,23 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- * SubRate
+ *  <p>It is used to calculate the <span>taxPortions</span> field in a Cart or Order.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SubRateImpl implements SubRate, ModelBase {
 
     private String name;
 
-    private Integer amount;
+    private Double amount;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    SubRateImpl(@JsonProperty("name") final String name, @JsonProperty("amount") final Integer amount) {
+    SubRateImpl(@JsonProperty("name") final String name, @JsonProperty("amount") final Double amount) {
         this.name = name;
         this.amount = amount;
     }
@@ -42,7 +43,7 @@ public class SubRateImpl implements SubRate, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the SubRate.</p>
      */
 
     public String getName() {
@@ -53,7 +54,7 @@ public class SubRateImpl implements SubRate, ModelBase {
      *
      */
 
-    public Integer getAmount() {
+    public Double getAmount() {
         return this.amount;
     }
 
@@ -61,7 +62,7 @@ public class SubRateImpl implements SubRate, ModelBase {
         this.name = name;
     }
 
-    public void setAmount(final Integer amount) {
+    public void setAmount(final Double amount) {
         this.amount = amount;
     }
 

@@ -11,76 +11,76 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Resource types supported by MessageSubscriptions:</p>
+ *  <p>Resource types supported by <a href="https://docs.commercetools.com/apis/ctp:api:type:MessageSubscription" rel="nofollow">MessageSubscriptions</a>:</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface MessageSubscriptionResourceTypeId extends JsonEnum {
 
     /**
-    <p>Messages related to ApprovalFlows. Only available for B2B-enabled Projects.</p> */
+    <p>Messages related to <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">ApprovalFlows</a>. Only available for <span>B2B</span>-enabled Projects.</p> */
     MessageSubscriptionResourceTypeId APPROVAL_FLOW = MessageSubscriptionResourceTypeIdEnum.APPROVAL_FLOW;
     /**
-    <p>Messages related to ApprovalRules. Only available for B2B-enabled Projects.</p> */
+    <p>Messages related to <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRules</a>. Only available for <span>B2B</span>-enabled Projects.</p> */
     MessageSubscriptionResourceTypeId APPROVAL_RULE = MessageSubscriptionResourceTypeIdEnum.APPROVAL_RULE;
     /**
-    <p>Messages related to AssociateRoles. Only available for B2B-enabled Projects.</p> */
+    <p>Messages related to <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRoles</a>. Only available for <span>B2B</span>-enabled Projects.</p> */
     MessageSubscriptionResourceTypeId ASSOCIATE_ROLE = MessageSubscriptionResourceTypeIdEnum.ASSOCIATE_ROLE;
     /**
-    <p>Messages related to BusinessUnits. Only available for B2B-enabled Projects.</p> */
+    <p>Messages related to <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnits</a>. Only available for <span>B2B</span>-enabled Projects.</p> */
     MessageSubscriptionResourceTypeId BUSINESS_UNIT = MessageSubscriptionResourceTypeIdEnum.BUSINESS_UNIT;
     /**
-    <p>Messages related to Categories.</p> */
+    <p>Messages related to <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a>.</p> */
     MessageSubscriptionResourceTypeId CATEGORY = MessageSubscriptionResourceTypeIdEnum.CATEGORY;
     /**
-    <p>Messages related to Customers.</p> */
+    <p>Messages related to <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customers</a>.</p> */
     MessageSubscriptionResourceTypeId CUSTOMER = MessageSubscriptionResourceTypeIdEnum.CUSTOMER;
     /**
-    <p>Messages related to CustomerTokens for email verification.</p> */
+    <p>Messages related to <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerToken" rel="nofollow">CustomerTokens</a> for email verification.</p> */
     MessageSubscriptionResourceTypeId CUSTOMER_EMAIL_TOKEN = MessageSubscriptionResourceTypeIdEnum.CUSTOMER_EMAIL_TOKEN;
     /**
-    <p>Messages related to CustomerGroups.</p> */
+    <p>Messages related to <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroups</a>.</p> */
     MessageSubscriptionResourceTypeId CUSTOMER_GROUP = MessageSubscriptionResourceTypeIdEnum.CUSTOMER_GROUP;
     /**
-    <p>Messages related to CustomerTokens for password reset.</p> */
+    <p>Messages related to <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerToken" rel="nofollow">CustomerTokens</a> for password reset.</p> */
     MessageSubscriptionResourceTypeId CUSTOMER_PASSWORD_TOKEN = MessageSubscriptionResourceTypeIdEnum.CUSTOMER_PASSWORD_TOKEN;
     /**
-    <p>Messages related to InventoryEntries.</p> */
+    <p>Messages related to <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntries</a>.</p> */
     MessageSubscriptionResourceTypeId INVENTORY_ENTRY = MessageSubscriptionResourceTypeIdEnum.INVENTORY_ENTRY;
     /**
-    <p>Messages related to Orders.</p> */
+    <p>Messages related to <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>.</p> */
     MessageSubscriptionResourceTypeId ORDER = MessageSubscriptionResourceTypeIdEnum.ORDER;
     /**
-    <p>Messages related to Payments.</p> */
+    <p>Messages related to <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payments</a>.</p> */
     MessageSubscriptionResourceTypeId PAYMENT = MessageSubscriptionResourceTypeIdEnum.PAYMENT;
     /**
-    <p>Messages related to Products.</p> */
+    <p>Messages related to <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Products</a>.</p> */
     MessageSubscriptionResourceTypeId PRODUCT = MessageSubscriptionResourceTypeIdEnum.PRODUCT;
     /**
-    <p>Messages related to ProductSelections.</p> */
+    <p>Messages related to <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">ProductSelections</a>.</p> */
     MessageSubscriptionResourceTypeId PRODUCT_SELECTION = MessageSubscriptionResourceTypeIdEnum.PRODUCT_SELECTION;
     /**
-    <p>Messages related to ProductTailoring.</p> */
+    <p>Messages related to <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a>.</p> */
     MessageSubscriptionResourceTypeId PRODUCT_TAILORING = MessageSubscriptionResourceTypeIdEnum.PRODUCT_TAILORING;
     /**
-    <p>Messages related to Quotes.</p> */
+    <p>Messages related to <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>.</p> */
     MessageSubscriptionResourceTypeId QUOTE = MessageSubscriptionResourceTypeIdEnum.QUOTE;
     /**
-    <p>Messages related to Quote Requests.</p> */
+    <p>Messages related to <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>.</p> */
     MessageSubscriptionResourceTypeId QUOTE_REQUEST = MessageSubscriptionResourceTypeIdEnum.QUOTE_REQUEST;
     /**
-    <p>Messages related to Reviews.</p> */
+    <p>Messages related to <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Reviews</a>.</p> */
     MessageSubscriptionResourceTypeId REVIEW = MessageSubscriptionResourceTypeIdEnum.REVIEW;
     /**
-    <p>Messages related to Shopping Lists.</p> */
+    <p>Messages related to <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a>.</p> */
     MessageSubscriptionResourceTypeId SHOPPING_LIST = MessageSubscriptionResourceTypeIdEnum.SHOPPING_LIST;
     /**
-    <p>Messages related to Staged Quotes.</p> */
+    <p>Messages related to <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">Staged Quotes</a>.</p> */
     MessageSubscriptionResourceTypeId STAGED_QUOTE = MessageSubscriptionResourceTypeIdEnum.STAGED_QUOTE;
     /**
-    <p>Messages related to StandalonePrices.</p> */
+    <p>Messages related to <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrices</a>.</p> */
     MessageSubscriptionResourceTypeId STANDALONE_PRICE = MessageSubscriptionResourceTypeIdEnum.STANDALONE_PRICE;
     /**
-    <p>Messages related to Stores.</p> */
+    <p>Messages related to <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a>.</p> */
     MessageSubscriptionResourceTypeId STORE = MessageSubscriptionResourceTypeIdEnum.STORE;
 
     /**

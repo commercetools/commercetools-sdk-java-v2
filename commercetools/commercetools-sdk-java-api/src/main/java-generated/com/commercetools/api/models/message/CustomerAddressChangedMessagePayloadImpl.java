@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Change Address update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeAddressAction" rel="nofollow">Change Address</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerAddressChangedMessagePayloadImpl implements CustomerAddressChangedMessagePayload, ModelBase {
@@ -26,13 +27,17 @@ public class CustomerAddressChangedMessagePayloadImpl implements CustomerAddress
 
     private com.commercetools.api.models.common.Address address;
 
+    private java.util.List<com.commercetools.api.models.common.AddressRole> addressRoles;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     CustomerAddressChangedMessagePayloadImpl(
-            @JsonProperty("address") final com.commercetools.api.models.common.Address address) {
+            @JsonProperty("address") final com.commercetools.api.models.common.Address address,
+            @JsonProperty("addressRoles") final java.util.List<com.commercetools.api.models.common.AddressRole> addressRoles) {
         this.address = address;
+        this.addressRoles = addressRoles;
         this.type = CUSTOMER_ADDRESS_CHANGED;
     }
 
@@ -52,15 +57,31 @@ public class CustomerAddressChangedMessagePayloadImpl implements CustomerAddress
     }
 
     /**
-     *  <p>Address that was set during the Change Address update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeAddressAction" rel="nofollow">Change Address</a> update action.</p>
      */
 
     public com.commercetools.api.models.common.Address getAddress() {
         return this.address;
     }
 
+    /**
+     *  <p>Indicates if the address was used for shipping or billing purposes.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.common.AddressRole> getAddressRoles() {
+        return this.addressRoles;
+    }
+
     public void setAddress(final com.commercetools.api.models.common.Address address) {
         this.address = address;
+    }
+
+    public void setAddressRoles(final com.commercetools.api.models.common.AddressRole... addressRoles) {
+        this.addressRoles = new ArrayList<>(Arrays.asList(addressRoles));
+    }
+
+    public void setAddressRoles(final java.util.List<com.commercetools.api.models.common.AddressRole> addressRoles) {
+        this.addressRoles = addressRoles;
     }
 
     @Override
@@ -75,20 +96,23 @@ public class CustomerAddressChangedMessagePayloadImpl implements CustomerAddress
 
         return new EqualsBuilder().append(type, that.type)
                 .append(address, that.address)
+                .append(addressRoles, that.addressRoles)
                 .append(type, that.type)
                 .append(address, that.address)
+                .append(addressRoles, that.addressRoles)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(address).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(address).append(addressRoles).toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
                 .append("address", address)
+                .append("addressRoles", addressRoles)
                 .build();
     }
 

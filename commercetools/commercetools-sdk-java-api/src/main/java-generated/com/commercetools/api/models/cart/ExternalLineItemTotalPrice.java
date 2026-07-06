@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Money;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ExternalLineItemTotalPrice
@@ -36,7 +36,7 @@ public interface ExternalLineItemTotalPrice {
 
     /**
      *  <p>Price of the Line Item.</p>
-     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @return price
      */
     @NotNull
@@ -55,7 +55,7 @@ public interface ExternalLineItemTotalPrice {
 
     /**
      *  <p>Price of the Line Item.</p>
-     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param price value to be set
      */
 
@@ -137,8 +137,8 @@ public interface ExternalLineItemTotalPrice {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ExternalLineItemTotalPrice> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ExternalLineItemTotalPrice>() {
+    public static tools.jackson.core.type.TypeReference<ExternalLineItemTotalPrice> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ExternalLineItemTotalPrice>() {
             @Override
             public String toString() {
                 return "TypeReference<ExternalLineItemTotalPrice>";

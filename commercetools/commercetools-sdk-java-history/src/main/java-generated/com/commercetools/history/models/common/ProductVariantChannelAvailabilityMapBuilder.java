@@ -13,7 +13,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ProductVariantChannelAvailabilityMap productVariantChannelAvailabilityMap = ProductVariantChannelAvailabilityMap.builder()
- *             .//(//Builder -> //Builder)
+ *             ./^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/(/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/Builder -> /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/Builder)
  *             .build()
  * </code></pre>
  * </div>
@@ -24,7 +24,7 @@ public class ProductVariantChannelAvailabilityMapBuilder implements Builder<Prod
     private Map<String, com.commercetools.history.models.common.ProductVariantChannelAvailability> values = new HashMap<>();
 
     /**
-     * assign pattern properties to the builder
+     *  <p>JSON object where the keys are supply <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> <code>id</code>, and the values are <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantChannelAvailability" rel="nofollow">ProductVariantChannelAvailability</a>.</p>
      * @param values properties to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class ProductVariantChannelAvailabilityMapBuilder implements Builder<Prod
     }
 
     /**
-     * assign a pattern property to the builder
+     *  <p>JSON object where the keys are supply <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> <code>id</code>, and the values are <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantChannelAvailability" rel="nofollow">ProductVariantChannelAvailability</a>.</p>
      * @param key property name
      * @param value property value
      * @return Builder
@@ -52,7 +52,7 @@ public class ProductVariantChannelAvailabilityMapBuilder implements Builder<Prod
     }
 
     /**
-     * values of pattern properties
+     *  <p>JSON object where the keys are supply <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> <code>id</code>, and the values are <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantChannelAvailability" rel="nofollow">ProductVariantChannelAvailability</a>.</p>
      * @return pattern properties
      */
 

@@ -25,7 +25,7 @@ public class CategoryCreatedMessagePayloadBuilder implements Builder<CategoryCre
     private com.commercetools.api.models.category.Category category;
 
     /**
-     *  <p>Category that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> that was created.</p>
      * @param builder function to build the category value
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class CategoryCreatedMessagePayloadBuilder implements Builder<CategoryCre
     }
 
     /**
-     *  <p>Category that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> that was created.</p>
      * @param builder function to build the category value
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class CategoryCreatedMessagePayloadBuilder implements Builder<CategoryCre
     }
 
     /**
-     *  <p>Category that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> that was created.</p>
      * @param category value to be set
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class CategoryCreatedMessagePayloadBuilder implements Builder<CategoryCre
     }
 
     /**
-     *  <p>Category that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> that was created.</p>
      * @return category
      */
 

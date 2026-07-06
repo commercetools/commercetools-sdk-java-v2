@@ -190,7 +190,7 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -201,7 +201,7 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -263,7 +263,7 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
-     *  <p>Unique identifier of the Product Variant that was added.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> that was added.</p>
      * @param builder function to build the variant value
      * @return Builder
      */
@@ -275,7 +275,7 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
-     *  <p>Unique identifier of the Product Variant that was added.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> that was added.</p>
      * @param builder function to build the variant value
      * @return Builder
      */
@@ -287,7 +287,7 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
-     *  <p>Unique identifier of the Product Variant that was added.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> that was added.</p>
      * @param variant value to be set
      * @return Builder
      */
@@ -299,7 +299,7 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
-     *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
+     *  <p>List of image URLs that were removed with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemoveVariantAction" rel="nofollow">Remove Product Variant</a> update action.</p>
      * @param removedImageUrls value to be set
      * @return Builder
      */
@@ -310,7 +310,7 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
-     *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
+     *  <p>List of image URLs that were removed with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemoveVariantAction" rel="nofollow">Remove Product Variant</a> update action.</p>
      * @param removedImageUrls value to be set
      * @return Builder
      */
@@ -321,7 +321,7 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
-     *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
+     *  <p>List of image URLs that were removed with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemoveVariantAction" rel="nofollow">Remove Product Variant</a> update action.</p>
      * @param removedImageUrls value to be set
      * @return Builder
      */
@@ -411,7 +411,7 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -439,7 +439,7 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
-     *  <p>Unique identifier of the Product Variant that was added.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> that was added.</p>
      * @return variant
      */
 
@@ -449,7 +449,7 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
-     *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
+     *  <p>List of image URLs that were removed with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemoveVariantAction" rel="nofollow">Remove Product Variant</a> update action.</p>
      * @return removedImageUrls
      */
 

@@ -7,7 +7,6 @@ import java.util.*;
 import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -17,8 +16,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Reference to a Payment.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentReferenceImpl implements PaymentReference, ModelBase {
@@ -48,7 +49,7 @@ public class PaymentReferenceImpl implements PaymentReference, ModelBase {
     }
 
     /**
-     *  <p>Type of referenced resource.</p>
+     *
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
@@ -56,7 +57,7 @@ public class PaymentReferenceImpl implements PaymentReference, ModelBase {
     }
 
     /**
-     *  <p>Unique identifier of the referenced Payment.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a>.</p>
      */
 
     public String getId() {
@@ -64,7 +65,7 @@ public class PaymentReferenceImpl implements PaymentReference, ModelBase {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Payment. Only present in responses to requests with Reference Expansion for Payments.</p>
+     *  <p>Contains the representation of the expanded Payment. Only present in responses to requests with <span>Reference Expansion</span> for Payments.</p>
      */
 
     public com.commercetools.api.models.payment.Payment getObj() {

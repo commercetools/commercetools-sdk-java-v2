@@ -60,7 +60,7 @@ public class GraphQLMissingTaxRateForCountryErrorBuilder implements Builder<Grap
     }
 
     /**
-     *  <p>Unique identifier of the TaxCategory.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a>.</p>
      * @param taxCategoryId value to be set
      * @return Builder
      */
@@ -102,7 +102,7 @@ public class GraphQLMissingTaxRateForCountryErrorBuilder implements Builder<Grap
     }
 
     /**
-     *  <p>Unique identifier of the TaxCategory.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a>.</p>
      * @return taxCategoryId
      */
 

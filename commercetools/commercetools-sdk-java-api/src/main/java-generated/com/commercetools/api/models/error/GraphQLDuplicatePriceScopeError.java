@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Price;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Returned when a Price scope conflicts with an existing one during an Update Product request.</p>
+ *  <p>Returned when a Price scope conflicts with an existing one during an <span>Update Product</span> request.</p>
  *  <p>Every Price of a Product Variant must have a distinct combination of currency, Customer Group, country, and Channel that constitute the scope of a Price.</p>
  *
  * <hr>
@@ -134,8 +134,8 @@ public interface GraphQLDuplicatePriceScopeError extends GraphQLErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLDuplicatePriceScopeError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLDuplicatePriceScopeError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLDuplicatePriceScopeError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLDuplicatePriceScopeError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLDuplicatePriceScopeError>";

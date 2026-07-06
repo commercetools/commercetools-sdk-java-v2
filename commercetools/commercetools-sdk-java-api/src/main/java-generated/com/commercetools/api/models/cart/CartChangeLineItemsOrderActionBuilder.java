@@ -24,7 +24,7 @@ public class CartChangeLineItemsOrderActionBuilder implements Builder<CartChange
     private java.util.List<String> lineItemOrder;
 
     /**
-     *  <p>All existing LineItem <code>id</code>s in the desired new order.</p>
+     *  <p>All existing <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>id</code>s in the desired new order.</p>
      * @param lineItemOrder value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class CartChangeLineItemsOrderActionBuilder implements Builder<CartChange
     }
 
     /**
-     *  <p>All existing LineItem <code>id</code>s in the desired new order.</p>
+     *  <p>All existing <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>id</code>s in the desired new order.</p>
      * @param lineItemOrder value to be set
      * @return Builder
      */
@@ -46,7 +46,7 @@ public class CartChangeLineItemsOrderActionBuilder implements Builder<CartChange
     }
 
     /**
-     *  <p>All existing LineItem <code>id</code>s in the desired new order.</p>
+     *  <p>All existing <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>id</code>s in the desired new order.</p>
      * @param lineItemOrder value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class CartChangeLineItemsOrderActionBuilder implements Builder<CartChange
     }
 
     /**
-     *  <p>All existing LineItem <code>id</code>s in the desired new order.</p>
+     *  <p>All existing <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>id</code>s in the desired new order.</p>
      * @return lineItemOrder
      */
 

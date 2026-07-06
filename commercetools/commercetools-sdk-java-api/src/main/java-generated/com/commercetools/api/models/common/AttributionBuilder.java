@@ -29,7 +29,7 @@ public class AttributionBuilder implements Builder<Attribution> {
     private com.commercetools.api.models.common.AttributionSource source;
 
     /**
-     *  <p><code>id</code> of the API Client that created or modified the resource.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> that created or modified the resource.</p>
      * @param clientId value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class AttributionBuilder implements Builder<Attribution> {
     }
 
     /**
-     *  <p><code>id</code> of the API Client that created or modified the resource.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> that created or modified the resource.</p>
      * @return clientId
      */
 

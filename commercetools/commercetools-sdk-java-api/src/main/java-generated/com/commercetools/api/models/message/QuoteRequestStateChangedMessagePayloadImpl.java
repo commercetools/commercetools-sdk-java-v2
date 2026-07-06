@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Change Quote Request State update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestChangeQuoteRequestStateAction" rel="nofollow">Change Quote Request State</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class QuoteRequestStateChangedMessagePayloadImpl implements QuoteRequestStateChangedMessagePayload, ModelBase {
@@ -56,7 +57,7 @@ public class QuoteRequestStateChangedMessagePayloadImpl implements QuoteRequestS
     }
 
     /**
-     *  <p>State of the Quote Request after the Change Quote Request State update action.</p>
+     *  <p>State of the Quote Request after the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestChangeQuoteRequestStateAction" rel="nofollow">Change Quote Request State</a> update action.</p>
      */
 
     public com.commercetools.api.models.quote_request.QuoteRequestState getQuoteRequestState() {
@@ -64,7 +65,7 @@ public class QuoteRequestStateChangedMessagePayloadImpl implements QuoteRequestS
     }
 
     /**
-     *  <p>State of the Quote Request before the Change Quote Request State update action.</p>
+     *  <p>State of the Quote Request before the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestChangeQuoteRequestStateAction" rel="nofollow">Change Quote Request State</a> update action.</p>
      */
 
     public com.commercetools.api.models.quote_request.QuoteRequestState getOldQuoteRequestState() {

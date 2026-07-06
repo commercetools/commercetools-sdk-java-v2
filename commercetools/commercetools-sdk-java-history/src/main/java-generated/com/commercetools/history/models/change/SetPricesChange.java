@@ -10,15 +10,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.Price;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Change triggered by the Set Prices update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetPricesAction" rel="nofollow">Set Prices</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -30,6 +30,8 @@ import jakarta.validation.constraints.NotNull;
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .catalogData("{catalogData}")
  *             .variant("{variant}")
+ *             .plusAddedItems(addedItemsBuilder -> addedItemsBuilder)
+ *             .plusRemovedItems(removedItemsBuilder -> removedItemsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -79,9 +81,10 @@ public interface SetPricesChange extends Change {
     public List<Price> getNextValue();
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
-     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
-     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *  </ul>
      * @return catalogData
      */
@@ -90,12 +93,31 @@ public interface SetPricesChange extends Change {
     public String getCatalogData();
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
      * @return variant
      */
     @NotNull
     @JsonProperty("variant")
     public String getVariant();
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @return addedItems
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("addedItems")
+    public List<Price> getAddedItems();
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @return removedItems
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("removedItems")
+    public List<Price> getRemovedItems();
 
     /**
      * set change
@@ -135,9 +157,10 @@ public interface SetPricesChange extends Change {
     public void setNextValue(final List<Price> nextValue);
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
-     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
-     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *  </ul>
      * @param catalogData value to be set
      */
@@ -145,11 +168,42 @@ public interface SetPricesChange extends Change {
     public void setCatalogData(final String catalogData);
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
      * @param variant value to be set
      */
 
     public void setVariant(final String variant);
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems values to be set
+     */
+
+    @JsonIgnore
+    public void setAddedItems(final Price... addedItems);
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems values to be set
+     */
+
+    public void setAddedItems(final List<Price> addedItems);
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems values to be set
+     */
+
+    @JsonIgnore
+    public void setRemovedItems(final Price... removedItems);
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems values to be set
+     */
+
+    public void setRemovedItems(final List<Price> removedItems);
 
     /**
      * factory method
@@ -171,6 +225,8 @@ public interface SetPricesChange extends Change {
         instance.setNextValue(template.getNextValue());
         instance.setCatalogData(template.getCatalogData());
         instance.setVariant(template.getVariant());
+        instance.setAddedItems(template.getAddedItems());
+        instance.setRemovedItems(template.getRemovedItems());
         return instance;
     }
 
@@ -200,6 +256,16 @@ public interface SetPricesChange extends Change {
                 .orElse(null));
         instance.setCatalogData(template.getCatalogData());
         instance.setVariant(template.getVariant());
+        instance.setAddedItems(Optional.ofNullable(template.getAddedItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.Price::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setRemovedItems(Optional.ofNullable(template.getRemovedItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.Price::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 
@@ -234,8 +300,8 @@ public interface SetPricesChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetPricesChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetPricesChange>() {
+    public static tools.jackson.core.type.TypeReference<SetPricesChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetPricesChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetPricesChange>";

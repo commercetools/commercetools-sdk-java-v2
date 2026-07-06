@@ -55,7 +55,7 @@ public class PaymentStatusDraftBuilder implements Builder<PaymentStatusDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -67,7 +67,7 @@ public class PaymentStatusDraftBuilder implements Builder<PaymentStatusDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class PaymentStatusDraftBuilder implements Builder<PaymentStatusDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -111,7 +111,7 @@ public class PaymentStatusDraftBuilder implements Builder<PaymentStatusDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      * @return state
      */
 

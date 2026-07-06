@@ -9,11 +9,11 @@ import javax.annotation.Nullable;
 
 import com.commercetools.importapi.models.common.ImportResourceType;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>An import request batches multiple import resources of the same import resource type for processing by an Import Container.</p>
@@ -22,7 +22,7 @@ import jakarta.validation.constraints.NotNull;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     ImportRequest importRequest = ImportRequest.categoryBuilder()
+ *     ImportRequest importRequest = ImportRequest.businessUnitBuilder()
  *             plusResources(resourcesBuilder -> resourcesBuilder)
  *             .build()
  * </code></pre>
@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ImportRequest {
 
     /**
-     *  <p>The resource types that can be imported.</p>
+     *  <p>The resource type that can be imported.</p>
      * @return type
      */
     @NotNull
@@ -59,6 +59,14 @@ public interface ImportRequest {
         }
         ImportRequestImpl instance = new ImportRequestImpl();
         return instance;
+    }
+
+    /**
+     * builder for businessUnit subtype
+     * @return builder
+     */
+    public static com.commercetools.importapi.models.importrequests.BusinessUnitImportRequestBuilder businessUnitBuilder() {
+        return com.commercetools.importapi.models.importrequests.BusinessUnitImportRequestBuilder.of();
     }
 
     /**
@@ -142,6 +150,14 @@ public interface ImportRequest {
     }
 
     /**
+     * builder for productTailoring subtype
+     * @return builder
+     */
+    public static com.commercetools.importapi.models.importrequests.ProductTailoringImportRequestBuilder productTailoringBuilder() {
+        return com.commercetools.importapi.models.importrequests.ProductTailoringImportRequestBuilder.of();
+    }
+
+    /**
      * builder for productType subtype
      * @return builder
      */
@@ -182,6 +198,14 @@ public interface ImportRequest {
     }
 
     /**
+     * builder for variant subtype
+     * @return builder
+     */
+    public static com.commercetools.importapi.models.importrequests.VariantImportRequestBuilder variantBuilder() {
+        return com.commercetools.importapi.models.importrequests.VariantImportRequestBuilder.of();
+    }
+
+    /**
      * accessor map function
      * @param <T> mapped type
      * @param helper function to map the object
@@ -195,8 +219,8 @@ public interface ImportRequest {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ImportRequest> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ImportRequest>() {
+    public static tools.jackson.core.type.TypeReference<ImportRequest> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ImportRequest>() {
             @Override
             public String toString() {
                 return "TypeReference<ImportRequest>";

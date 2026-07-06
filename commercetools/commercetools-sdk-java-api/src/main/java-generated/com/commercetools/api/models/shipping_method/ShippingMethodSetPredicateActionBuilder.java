@@ -26,7 +26,7 @@ public class ShippingMethodSetPredicateActionBuilder implements Builder<Shipping
     private String predicate;
 
     /**
-     *  <p>A valid Cart predicate. If <code>predicate</code> is absent or <code>null</code>, it is removed if it exists.</p>
+     *  <p>A valid <span>Cart predicate</span>. If <code>predicate</code> is absent or <code>null</code>, it is removed if it exists.</p>
      * @param predicate value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class ShippingMethodSetPredicateActionBuilder implements Builder<Shipping
     }
 
     /**
-     *  <p>A valid Cart predicate. If <code>predicate</code> is absent or <code>null</code>, it is removed if it exists.</p>
+     *  <p>A valid <span>Cart predicate</span>. If <code>predicate</code> is absent or <code>null</code>, it is removed if it exists.</p>
      * @return predicate
      */
 

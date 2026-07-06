@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Adds an address from the <code>addresses</code> array to <code>billingAddressIds</code>. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
@@ -35,7 +36,7 @@ public interface MyCustomerAddBillingAddressIdAction extends MyCustomerUpdateAct
     String ADD_BILLING_ADDRESS_ID = "addBillingAddressId";
 
     /**
-     *  <p><code>id</code> of the Address to become a billing address.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become a billing address.</p>
      * @return addressId
      */
 
@@ -43,7 +44,7 @@ public interface MyCustomerAddBillingAddressIdAction extends MyCustomerUpdateAct
     public String getAddressId();
 
     /**
-     *  <p><code>key</code> of the Address to become a billing address.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become a billing address.</p>
      * @return addressKey
      */
 
@@ -51,14 +52,14 @@ public interface MyCustomerAddBillingAddressIdAction extends MyCustomerUpdateAct
     public String getAddressKey();
 
     /**
-     *  <p><code>id</code> of the Address to become a billing address.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become a billing address.</p>
      * @param addressId value to be set
      */
 
     public void setAddressId(final String addressId);
 
     /**
-     *  <p><code>key</code> of the Address to become a billing address.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become a billing address.</p>
      * @param addressKey value to be set
      */
 
@@ -135,8 +136,8 @@ public interface MyCustomerAddBillingAddressIdAction extends MyCustomerUpdateAct
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerAddBillingAddressIdAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerAddBillingAddressIdAction>() {
+    public static tools.jackson.core.type.TypeReference<MyCustomerAddBillingAddressIdAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyCustomerAddBillingAddressIdAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyCustomerAddBillingAddressIdAction>";

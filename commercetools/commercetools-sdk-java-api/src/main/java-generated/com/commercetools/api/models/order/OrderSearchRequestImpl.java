@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * OrderSearchRequest
@@ -66,7 +67,7 @@ public class OrderSearchRequestImpl implements OrderSearchRequest, ModelBase {
     }
 
     /**
-     *  <p>The maximum number of search results to be returned on one page.</p>
+     *  <p>The maximum number of search results to be returned on one <span>page</span>.</p>
      */
 
     public Integer getLimit() {
@@ -74,7 +75,7 @@ public class OrderSearchRequestImpl implements OrderSearchRequest, ModelBase {
     }
 
     /**
-     *  <p>The number of search results to be skipped in the response for pagination.</p>
+     *  <p>The number of search results to be skipped in the response for <span>pagination</span>.</p>
      */
 
     public Integer getOffset() {

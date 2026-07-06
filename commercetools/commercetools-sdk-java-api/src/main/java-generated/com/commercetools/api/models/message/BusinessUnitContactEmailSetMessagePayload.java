@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Contact Email update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetContactEmailAction" rel="nofollow">Set Contact Email</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +36,7 @@ public interface BusinessUnitContactEmailSetMessagePayload extends MessagePayloa
     String BUSINESS_UNIT_CONTACT_EMAIL_SET = "BusinessUnitContactEmailSet";
 
     /**
-     *  <p>The contact email that was updated on the Business Unit.</p>
+     *  <p>The contact email that was updated on the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @return contactEmail
      */
 
@@ -43,7 +44,7 @@ public interface BusinessUnitContactEmailSetMessagePayload extends MessagePayloa
     public String getContactEmail();
 
     /**
-     *  <p>The contact email that was updated on the Business Unit.</p>
+     *  <p>The contact email that was updated on the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param contactEmail value to be set
      */
 
@@ -120,8 +121,8 @@ public interface BusinessUnitContactEmailSetMessagePayload extends MessagePayloa
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitContactEmailSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitContactEmailSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitContactEmailSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitContactEmailSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitContactEmailSetMessagePayload>";

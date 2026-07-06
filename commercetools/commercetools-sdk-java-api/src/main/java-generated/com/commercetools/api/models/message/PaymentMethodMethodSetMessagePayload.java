@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Method update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetMethodAction" rel="nofollow">Set Method</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +36,7 @@ public interface PaymentMethodMethodSetMessagePayload extends MessagePayload {
     String PAYMENT_METHOD_METHOD_SET = "PaymentMethodMethodSet";
 
     /**
-     *  <p>Payment Method after the Set Method update action.</p>
+     *  <p>Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetMethodAction" rel="nofollow">Set Method</a> update action.</p>
      * @return method
      */
 
@@ -43,7 +44,7 @@ public interface PaymentMethodMethodSetMessagePayload extends MessagePayload {
     public String getMethod();
 
     /**
-     *  <p>Payment Method before the Set Method update action.</p>
+     *  <p>Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetMethodAction" rel="nofollow">Set Method</a> update action.</p>
      * @return oldMethod
      */
 
@@ -51,14 +52,14 @@ public interface PaymentMethodMethodSetMessagePayload extends MessagePayload {
     public String getOldMethod();
 
     /**
-     *  <p>Payment Method after the Set Method update action.</p>
+     *  <p>Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetMethodAction" rel="nofollow">Set Method</a> update action.</p>
      * @param method value to be set
      */
 
     public void setMethod(final String method);
 
     /**
-     *  <p>Payment Method before the Set Method update action.</p>
+     *  <p>Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetMethodAction" rel="nofollow">Set Method</a> update action.</p>
      * @param oldMethod value to be set
      */
 
@@ -135,8 +136,8 @@ public interface PaymentMethodMethodSetMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentMethodMethodSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentMethodMethodSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<PaymentMethodMethodSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentMethodMethodSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentMethodMethodSetMessagePayload>";

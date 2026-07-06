@@ -8,24 +8,22 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- * Money
+ *  <p>Draft object to store money in cent amounts for a specific currency.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     Money money = Money.builder()
+ *             .centAmount(0.3)
  *             .currencyCode("{currencyCode}")
- *             .centAmount(1)
- *             .fractionDigits(1)
- *             .type(MoneyType.CENT_PRECISION)
  *             .build()
  * </code></pre>
  * </div>
@@ -35,7 +33,19 @@ import jakarta.validation.constraints.NotNull;
 public interface Money {
 
     /**
-     *  <p>Currency code compliant to ISO 4217.</p>
+     *  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
+     *  <ul>
+     *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
+     *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
+     *  </ul>
+     * @return centAmount
+     */
+    @NotNull
+    @JsonProperty("centAmount")
+    public Long getCentAmount();
+
+    /**
+     *  <p>Currency code compliant to <span>ISO 4217</span>.</p>
      * @return currencyCode
      */
     @NotNull
@@ -43,56 +53,22 @@ public interface Money {
     public String getCurrencyCode();
 
     /**
-     *
-     * @return centAmount
+     *  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
+     *  <ul>
+     *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
+     *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
+     *  </ul>
+     * @param centAmount value to be set
      */
-    @NotNull
-    @JsonProperty("centAmount")
-    public Integer getCentAmount();
+
+    public void setCentAmount(final Long centAmount);
 
     /**
-     *
-     * @return fractionDigits
-     */
-    @NotNull
-    @JsonProperty("fractionDigits")
-    public Integer getFractionDigits();
-
-    /**
-     *
-     * @return type
-     */
-    @NotNull
-    @JsonProperty("type")
-    public MoneyType getType();
-
-    /**
-     *  <p>Currency code compliant to ISO 4217.</p>
+     *  <p>Currency code compliant to <span>ISO 4217</span>.</p>
      * @param currencyCode value to be set
      */
 
     public void setCurrencyCode(final String currencyCode);
-
-    /**
-     * set centAmount
-     * @param centAmount value to be set
-     */
-
-    public void setCentAmount(final Integer centAmount);
-
-    /**
-     * set fractionDigits
-     * @param fractionDigits value to be set
-     */
-
-    public void setFractionDigits(final Integer fractionDigits);
-
-    /**
-     * set type
-     * @param type value to be set
-     */
-
-    public void setType(final MoneyType type);
 
     /**
      * factory method
@@ -109,10 +85,8 @@ public interface Money {
      */
     public static Money of(final Money template) {
         MoneyImpl instance = new MoneyImpl();
-        instance.setCurrencyCode(template.getCurrencyCode());
         instance.setCentAmount(template.getCentAmount());
-        instance.setFractionDigits(template.getFractionDigits());
-        instance.setType(template.getType());
+        instance.setCurrencyCode(template.getCurrencyCode());
         return instance;
     }
 
@@ -128,11 +102,13 @@ public interface Money {
         if (template == null) {
             return null;
         }
+
+        if (!(template instanceof MoneyImpl)) {
+            return template.copyDeep();
+        }
         MoneyImpl instance = new MoneyImpl();
-        instance.setCurrencyCode(template.getCurrencyCode());
         instance.setCentAmount(template.getCentAmount());
-        instance.setFractionDigits(template.getFractionDigits());
-        instance.setType(template.getType());
+        instance.setCurrencyCode(template.getCurrencyCode());
         return instance;
     }
 
@@ -167,8 +143,8 @@ public interface Money {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Money> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Money>() {
+    public static tools.jackson.core.type.TypeReference<Money> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Money>() {
             @Override
             public String toString() {
                 return "TypeReference<Money>";

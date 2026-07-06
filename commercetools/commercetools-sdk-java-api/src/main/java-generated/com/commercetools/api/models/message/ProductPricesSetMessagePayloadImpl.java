@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Prices update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetPricesAction" rel="nofollow">Set Prices</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPricesSetMessagePayloadImpl implements ProductPricesSetMessagePayload, ModelBase {
@@ -59,7 +60,7 @@ public class ProductPricesSetMessagePayloadImpl implements ProductPricesSetMessa
     }
 
     /**
-     *  <p>Unique identifier of the ProductVariant for which the Price was set.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which the Price was set.</p>
      */
 
     public Long getVariantId() {
@@ -67,7 +68,7 @@ public class ProductPricesSetMessagePayloadImpl implements ProductPricesSetMessa
     }
 
     /**
-     *  <p>The Embedded Prices that were set on the ProductVariant.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Price> getPrices() {
@@ -75,7 +76,7 @@ public class ProductPricesSetMessagePayloadImpl implements ProductPricesSetMessa
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      */
 
     public Boolean getStaged() {

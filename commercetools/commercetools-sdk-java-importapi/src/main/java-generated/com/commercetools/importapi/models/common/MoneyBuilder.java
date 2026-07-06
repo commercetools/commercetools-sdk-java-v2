@@ -58,7 +58,7 @@ public class MoneyBuilder implements Builder<Money> {
     }
 
     /**
-     *  <p>The currency code compliant to ISO 4217.</p>
+     *  <p>The currency code compliant to <span>ISO 4217</span>.</p>
      * @param currencyCode value to be set
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class MoneyBuilder implements Builder<Money> {
     }
 
     /**
-     *  <p>The currency code compliant to ISO 4217.</p>
+     *  <p>The currency code compliant to <span>ISO 4217</span>.</p>
      * @return currencyCode
      */
 

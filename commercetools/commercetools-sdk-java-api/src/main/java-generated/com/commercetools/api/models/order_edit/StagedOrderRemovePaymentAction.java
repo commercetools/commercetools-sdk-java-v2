@@ -10,15 +10,15 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.payment.PaymentResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- * StagedOrderRemovePaymentAction
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderPaymentRemovedMessage" rel="nofollow">Order Payment Removed</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface StagedOrderRemovePaymentAction extends StagedOrderUpdateAction 
     String REMOVE_PAYMENT = "removePayment";
 
     /**
-     *  <p>Payment to remove from the PaymentInfo.</p>
+     *  <p>Payment to remove from the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentInfo" rel="nofollow">PaymentInfo</a>.</p>
      * @return payment
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface StagedOrderRemovePaymentAction extends StagedOrderUpdateAction 
     public PaymentResourceIdentifier getPayment();
 
     /**
-     *  <p>Payment to remove from the PaymentInfo.</p>
+     *  <p>Payment to remove from the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentInfo" rel="nofollow">PaymentInfo</a>.</p>
      * @param payment value to be set
      */
 
@@ -124,8 +124,8 @@ public interface StagedOrderRemovePaymentAction extends StagedOrderUpdateAction 
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderRemovePaymentAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderRemovePaymentAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrderRemovePaymentAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrderRemovePaymentAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderRemovePaymentAction>";

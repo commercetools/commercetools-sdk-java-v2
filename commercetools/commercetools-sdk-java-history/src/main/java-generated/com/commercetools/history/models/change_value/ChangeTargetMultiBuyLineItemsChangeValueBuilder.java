@@ -37,7 +37,7 @@ public class ChangeTargetMultiBuyLineItemsChangeValueBuilder
     private com.commercetools.history.models.common.SelectionMode selectionMode;
 
     /**
-     *  <p>Valid LineItem target predicate.</p>
+     *  <p>Valid <span>LineItem target predicate</span>.</p>
      * @param predicate value to be set
      * @return Builder
      */
@@ -93,7 +93,7 @@ public class ChangeTargetMultiBuyLineItemsChangeValueBuilder
     }
 
     /**
-     *  <p>Valid LineItem target predicate.</p>
+     *  <p>Valid <span>LineItem target predicate</span>.</p>
      * @return predicate
      */
 

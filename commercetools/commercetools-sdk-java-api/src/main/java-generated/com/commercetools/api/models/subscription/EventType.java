@@ -11,55 +11,55 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Type of events supported by EventSubscriptions.</p>
+ *  <p>Type of events supported by <a href="https://docs.commercetools.com/apis/ctp:api:type:EventSubscription" rel="nofollow">EventSubscriptions</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface EventType extends JsonEnum {
 
     /**
-    <p>Indicates a Checkout Order Creation Failed Event.</p> */
+    <p>Indicates a <a href="https://docs.commercetools.com/apis/ctp:api:type:CheckoutOrderCreationFailedEvent" rel="nofollow">Checkout Order Creation Failed Event</a>.</p> */
     EventType CHECKOUT_ORDER_CREATION_FAILED = EventTypeEnum.CHECKOUT_ORDER_CREATION_FAILED;
     /**
-    <p>Indicates a Checkout Payment Authorization Cancelled Event.</p> */
+    <p>Indicates a <a href="https://docs.commercetools.com/apis/ctp:api:type:CheckoutPaymentAuthorizationCancelledEvent" rel="nofollow">Checkout Payment Authorization Cancelled Event</a>.</p> */
     EventType CHECKOUT_PAYMENT_AUTHORIZATION_CANCELLED = EventTypeEnum.CHECKOUT_PAYMENT_AUTHORIZATION_CANCELLED;
     /**
-    <p>Indicates a Checkout Payment Authorization Failed Event.</p> */
+    <p>Indicates a <a href="https://docs.commercetools.com/apis/ctp:api:type:CheckoutPaymentAuthorizationFailedEvent" rel="nofollow">Checkout Payment Authorization Failed Event</a>.</p> */
     EventType CHECKOUT_PAYMENT_AUTHORIZATION_FAILED = EventTypeEnum.CHECKOUT_PAYMENT_AUTHORIZATION_FAILED;
     /**
-    <p>Indicates a Checkout PaymentAuthorized Event.</p> */
+    <p>Indicates a <a href="https://docs.commercetools.com/apis/ctp:api:type:CheckoutPaymentAuthorizedEvent" rel="nofollow">Checkout PaymentAuthorized Event</a>.</p> */
     EventType CHECKOUT_PAYMENT_AUTHORIZED = EventTypeEnum.CHECKOUT_PAYMENT_AUTHORIZED;
     /**
-    <p>Indicates a Checkout Payment Cancel Authorization Failed Event.</p> */
+    <p>Indicates a <a href="https://docs.commercetools.com/apis/ctp:api:type:CheckoutPaymentCancelAuthorizationFailedEvent" rel="nofollow">Checkout Payment Cancel Authorization Failed Event</a>.</p> */
     EventType CHECKOUT_PAYMENT_CANCEL_AUTHORIZATION_FAILED = EventTypeEnum.CHECKOUT_PAYMENT_CANCEL_AUTHORIZATION_FAILED;
     /**
-    <p>Indicates a Checkout Payment Charged Event.</p> */
+    <p>Indicates a <a href="https://docs.commercetools.com/apis/ctp:api:type:CheckoutPaymentChargedEvent" rel="nofollow">Checkout Payment Charged Event</a>.</p> */
     EventType CHECKOUT_PAYMENT_CHARGED = EventTypeEnum.CHECKOUT_PAYMENT_CHARGED;
     /**
-    <p>Indicates a Checkout Payment Charge Failed Event.</p> */
+    <p>Indicates a <a href="https://docs.commercetools.com/apis/ctp:api:type:CheckoutPaymentChargeFailedEvent" rel="nofollow">Checkout Payment Charge Failed Event</a>.</p> */
     EventType CHECKOUT_PAYMENT_CHARGE_FAILED = EventTypeEnum.CHECKOUT_PAYMENT_CHARGE_FAILED;
     /**
-    <p>Indicates a Checkout Payment Refunded Event.</p> */
+    <p>Indicates a <a href="https://docs.commercetools.com/apis/ctp:api:type:CheckoutPaymentRefundedEvent" rel="nofollow">Checkout Payment Refunded Event</a>.</p> */
     EventType CHECKOUT_PAYMENT_REFUNDED = EventTypeEnum.CHECKOUT_PAYMENT_REFUNDED;
     /**
-    <p>Indicates a Checkout Payment Refund Failed Event.</p> */
+    <p>Indicates a <a href="https://docs.commercetools.com/apis/ctp:api:type:CheckoutPaymentRefundFailedEvent" rel="nofollow">Checkout Payment Refund Failed Event</a>.</p> */
     EventType CHECKOUT_PAYMENT_REFUND_FAILED = EventTypeEnum.CHECKOUT_PAYMENT_REFUND_FAILED;
     /**
-    <p>Indicates an Import Container Created Event.</p> */
+    <p>Indicates an <a href="https://docs.commercetools.com/apis/ctp:api:type:ImportContainerCreatedEvent" rel="nofollow">Import Container Created Event</a>.</p> */
     EventType IMPORT_CONTAINER_CREATED = EventTypeEnum.IMPORT_CONTAINER_CREATED;
     /**
-    <p>Indicates an Import Container Deleted Event.</p> */
+    <p>Indicates an <a href="https://docs.commercetools.com/apis/ctp:api:type:ImportContainerDeletedEvent" rel="nofollow">Import Container Deleted Event</a>.</p> */
     EventType IMPORT_CONTAINER_DELETED = EventTypeEnum.IMPORT_CONTAINER_DELETED;
     /**
-    <p>Indicates an Import Operation Rejected Event.</p> */
+    <p>Indicates an <a href="https://docs.commercetools.com/apis/ctp:api:type:ImportOperationRejectedEvent" rel="nofollow">Import Operation Rejected Event</a>.</p> */
     EventType IMPORT_OPERATION_REJECTED = EventTypeEnum.IMPORT_OPERATION_REJECTED;
     /**
-    <p>Indicates an Import Unresolved Event.</p> */
+    <p>Indicates an <a href="https://docs.commercetools.com/apis/ctp:api:type:ImportUnresolvedEvent" rel="nofollow">Import Unresolved Event</a>.</p> */
     EventType IMPORT_UNRESOLVED = EventTypeEnum.IMPORT_UNRESOLVED;
     /**
-    <p>Indicates an Import Validation Failed Event.</p> */
+    <p>Indicates an <a href="https://docs.commercetools.com/apis/ctp:api:type:ImportValidationFailedEvent" rel="nofollow">Import Validation Failed Event</a>.</p> */
     EventType IMPORT_VALIDATION_FAILED = EventTypeEnum.IMPORT_VALIDATION_FAILED;
     /**
-    <p>Indicates an Import Wait For Master Variant Event.</p> */
+    <p>Indicates an <a href="https://docs.commercetools.com/apis/ctp:api:type:ImportWaitForMasterVariantEvent" rel="nofollow">Import Wait For Master Variant Event</a>.</p> */
     EventType IMPORT_WAIT_FOR_MASTER_VARIANT = EventTypeEnum.IMPORT_WAIT_FOR_MASTER_VARIANT;
 
     /**

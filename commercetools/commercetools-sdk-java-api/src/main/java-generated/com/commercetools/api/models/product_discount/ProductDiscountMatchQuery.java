@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.QueryPrice;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductDiscountMatchQuery
@@ -53,7 +53,7 @@ public interface ProductDiscountMatchQuery {
     public Integer getVariantId();
 
     /**
-     *  <p>Controls which projected representation is applied for the query. Set to <code>true</code> for the <code>staged</code> Product Projection of the specified Product Variant, set to <code>false</code> for the <code>current</code> one.</p>
+     *  <p>Controls which <span>projected representation</span> is applied for the query. Set to <code>true</code> for the <code>staged</code> Product Projection of the specified Product Variant, set to <code>false</code> for the <code>current</code> one.</p>
      * @return staged
      */
     @NotNull
@@ -84,7 +84,7 @@ public interface ProductDiscountMatchQuery {
     public void setVariantId(final Integer variantId);
 
     /**
-     *  <p>Controls which projected representation is applied for the query. Set to <code>true</code> for the <code>staged</code> Product Projection of the specified Product Variant, set to <code>false</code> for the <code>current</code> one.</p>
+     *  <p>Controls which <span>projected representation</span> is applied for the query. Set to <code>true</code> for the <code>staged</code> Product Projection of the specified Product Variant, set to <code>false</code> for the <code>current</code> one.</p>
      * @param staged value to be set
      */
 
@@ -170,8 +170,8 @@ public interface ProductDiscountMatchQuery {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountMatchQuery> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountMatchQuery>() {
+    public static tools.jackson.core.type.TypeReference<ProductDiscountMatchQuery> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductDiscountMatchQuery>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductDiscountMatchQuery>";

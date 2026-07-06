@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Set Custom Type.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetCustomTypeAction" rel="nofollow">Set Custom Type</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -49,7 +49,7 @@ public interface RecurringOrderCustomTypeSetMessagePayload extends MessagePayloa
     public CustomFields getCustomFields();
 
     /**
-     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the previous <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a>. Absent if there was no previous Custom Type present.</p>
      * @return previousTypeId
      */
 
@@ -64,7 +64,7 @@ public interface RecurringOrderCustomTypeSetMessagePayload extends MessagePayloa
     public void setCustomFields(final CustomFields customFields);
 
     /**
-     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the previous <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a>. Absent if there was no previous Custom Type present.</p>
      * @param previousTypeId value to be set
      */
 
@@ -143,8 +143,8 @@ public interface RecurringOrderCustomTypeSetMessagePayload extends MessagePayloa
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<RecurringOrderCustomTypeSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<RecurringOrderCustomTypeSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<RecurringOrderCustomTypeSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<RecurringOrderCustomTypeSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<RecurringOrderCustomTypeSetMessagePayload>";

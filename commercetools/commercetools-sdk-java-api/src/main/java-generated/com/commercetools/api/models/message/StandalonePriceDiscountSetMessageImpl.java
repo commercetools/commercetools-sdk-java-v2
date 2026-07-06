@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a Product Discount is successfully applied to a StandalonePrice.</p>
+ *  <p>Generated after a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">Product Discount</a> is successfully applied to a StandalonePrice.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceDiscountSetMessageImpl implements StandalonePriceDiscountSetMessage, ModelBase {
@@ -139,7 +140,7 @@ public class StandalonePriceDiscountSetMessageImpl implements StandalonePriceDis
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -155,7 +156,7 @@ public class StandalonePriceDiscountSetMessageImpl implements StandalonePriceDis
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -171,7 +172,7 @@ public class StandalonePriceDiscountSetMessageImpl implements StandalonePriceDis
     }
 
     /**
-     *  <p>The new <code>discounted</code> value of the updated StandalonePrice.</p>
+     *  <p>The new <code>discounted</code> value of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      */
 
     public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {

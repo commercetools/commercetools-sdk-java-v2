@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.zone.ZoneResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShippingMethodAddZoneAction
@@ -41,6 +41,7 @@ public interface ShippingMethodAddZoneAction extends ShippingMethodUpdateAction 
 
     /**
      *  <p>Value to add to <code>zoneRates</code>.</p>
+     *  <p>Adds a new <a href="https://docs.commercetools.com/apis/ctp:api:type:ZoneRate" rel="nofollow">ZoneRate</a> entry to the <code>zoneRates</code> array with the specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> and an empty <code>shippingRates</code> array. After adding the Zone, you can add <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRates</a> for this Zone using the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethodAddShippingRateAction" rel="nofollow">Add ShippingRate</a> update action.</p>
      * @return zone
      */
     @NotNull
@@ -50,6 +51,7 @@ public interface ShippingMethodAddZoneAction extends ShippingMethodUpdateAction 
 
     /**
      *  <p>Value to add to <code>zoneRates</code>.</p>
+     *  <p>Adds a new <a href="https://docs.commercetools.com/apis/ctp:api:type:ZoneRate" rel="nofollow">ZoneRate</a> entry to the <code>zoneRates</code> array with the specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> and an empty <code>shippingRates</code> array. After adding the Zone, you can add <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRates</a> for this Zone using the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethodAddShippingRateAction" rel="nofollow">Add ShippingRate</a> update action.</p>
      * @param zone value to be set
      */
 
@@ -122,8 +124,8 @@ public interface ShippingMethodAddZoneAction extends ShippingMethodUpdateAction 
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodAddZoneAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodAddZoneAction>() {
+    public static tools.jackson.core.type.TypeReference<ShippingMethodAddZoneAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShippingMethodAddZoneAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ShippingMethodAddZoneAction>";

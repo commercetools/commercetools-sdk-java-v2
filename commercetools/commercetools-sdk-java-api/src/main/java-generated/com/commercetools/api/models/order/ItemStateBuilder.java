@@ -28,7 +28,7 @@ public class ItemStateBuilder implements Builder<ItemState> {
     private com.commercetools.api.models.state.StateReference state;
 
     /**
-     *  <p>Number of Line Items or Custom Line Items in this State.</p>
+     *  <p>Quantity of Line Items or Custom Line Items in this State.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class ItemStateBuilder implements Builder<ItemState> {
     }
 
     /**
-     *  <p>Number of Line Items or Custom Line Items in this State.</p>
+     *  <p>Quantity of Line Items or Custom Line Items in this State.</p>
      * @return quantity
      */
 

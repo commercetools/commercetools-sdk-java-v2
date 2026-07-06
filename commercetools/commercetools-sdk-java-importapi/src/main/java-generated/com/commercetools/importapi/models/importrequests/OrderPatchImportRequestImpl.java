@@ -7,7 +7,6 @@ import java.util.*;
 import com.commercetools.importapi.models.common.ImportResourceType;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -17,8 +16,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>The request body to import OrderPatches. The data to be imported are represented by OrderPatchImport.</p>
+ *  <p>The request body to <a href="https://docs.commercetools.com/apis/ctp:import:endpoint:/{projectKey}/order-patches/import-containers/{importContainerKey}:POST" rel="nofollow">import OrderPatches</a>. The data to be imported are represented by <a href="https://docs.commercetools.com/apis/ctp:import:type:OrderPatchImport" rel="nofollow">OrderPatchImport</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderPatchImportRequestImpl implements OrderPatchImportRequest, ModelBase {
@@ -45,7 +46,7 @@ public class OrderPatchImportRequestImpl implements OrderPatchImportRequest, Mod
     }
 
     /**
-     *  <p>The resource types that can be imported.</p>
+     *  <p>The resource type that can be imported.</p>
      */
 
     public com.commercetools.importapi.models.common.ImportResourceType getType() {

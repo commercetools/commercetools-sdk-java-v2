@@ -78,7 +78,7 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
     }
 
     /**
-     *  <p><code>id</code> of the Delivery from which the Parcel was removed.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> from which the Parcel was removed.</p>
      * @param deliveryId value to be set
      * @return Builder
      */
@@ -107,7 +107,7 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
     }
 
     /**
-     *  <p><code>id</code> of the Delivery from which the Parcel was removed.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> from which the Parcel was removed.</p>
      * @return deliveryId
      */
 

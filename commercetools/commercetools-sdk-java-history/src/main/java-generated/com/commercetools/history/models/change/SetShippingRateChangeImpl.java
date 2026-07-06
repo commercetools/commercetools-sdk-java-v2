@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * SetShippingRateChange
@@ -26,17 +27,17 @@ public class SetShippingRateChangeImpl implements SetShippingRateChange, ModelBa
 
     private String change;
 
-    private com.commercetools.history.models.common.Money previousValue;
+    private com.commercetools.history.models.common.ShippingRate previousValue;
 
-    private com.commercetools.history.models.common.Money nextValue;
+    private com.commercetools.history.models.common.ShippingRate nextValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetShippingRateChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.Money previousValue,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.Money nextValue) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.ShippingRate previousValue,
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.ShippingRate nextValue) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
@@ -70,7 +71,7 @@ public class SetShippingRateChangeImpl implements SetShippingRateChange, ModelBa
      *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.common.Money getPreviousValue() {
+    public com.commercetools.history.models.common.ShippingRate getPreviousValue() {
         return this.previousValue;
     }
 
@@ -78,7 +79,7 @@ public class SetShippingRateChangeImpl implements SetShippingRateChange, ModelBa
      *  <p>Value after the change.</p>
      */
 
-    public com.commercetools.history.models.common.Money getNextValue() {
+    public com.commercetools.history.models.common.ShippingRate getNextValue() {
         return this.nextValue;
     }
 
@@ -86,11 +87,11 @@ public class SetShippingRateChangeImpl implements SetShippingRateChange, ModelBa
         this.change = change;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.Money previousValue) {
+    public void setPreviousValue(final com.commercetools.history.models.common.ShippingRate previousValue) {
         this.previousValue = previousValue;
     }
 
-    public void setNextValue(final com.commercetools.history.models.common.Money nextValue) {
+    public void setNextValue(final com.commercetools.history.models.common.ShippingRate nextValue) {
         this.nextValue = nextValue;
     }
 

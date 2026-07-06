@@ -13,7 +13,6 @@ import java.util.stream.Collectors;
 
 import com.commercetools.history.models.change_history.PlatformInitiatedChange;
 import com.commercetools.history.models.change_history.Source;
-import com.fasterxml.jackson.core.type.TypeReference;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -21,9 +20,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>The <code>view_audit_log:{projectKey}</code> scope is required, and depending on the resource type queried, their respective scopes must be granted.</p>
- *  <p>If the request exceeds the rate limit, a TooManyRequests error is returned.</p>
+ *  <p>The <code>view_audit_log:{projectKey}</code> scope is required, and depending on the <a href="https://docs.commercetools.com/apis/ctp:history:type:ChangeHistoryResourceType" rel="nofollow">resource type</a> queried, their respective scopes must be granted.</p>
+ *  <p>If the request exceeds the rate limit, a <a href="https://docs.commercetools.com/apis/ctp:history:type:TooManyRequestsError" rel="nofollow">TooManyRequests</a> error is returned.</p>
  *
  * <hr>
  * <div class=code-example>

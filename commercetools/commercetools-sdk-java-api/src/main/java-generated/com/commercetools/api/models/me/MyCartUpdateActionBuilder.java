@@ -79,10 +79,6 @@ public class MyCartUpdateActionBuilder {
         return com.commercetools.api.models.me.MyCartSetCustomFieldActionBuilder.of();
     }
 
-    public com.commercetools.api.models.me.MyCartSetCustomLineItemRecurrenceInfoActionBuilder setCustomLineItemRecurrenceInfoBuilder() {
-        return com.commercetools.api.models.me.MyCartSetCustomLineItemRecurrenceInfoActionBuilder.of();
-    }
-
     public com.commercetools.api.models.me.MyCartSetCustomTypeActionBuilder setCustomTypeBuilder() {
         return com.commercetools.api.models.me.MyCartSetCustomTypeActionBuilder.of();
     }
@@ -105,10 +101,6 @@ public class MyCartUpdateActionBuilder {
 
     public com.commercetools.api.models.me.MyCartSetLineItemDistributionChannelActionBuilder setLineItemDistributionChannelBuilder() {
         return com.commercetools.api.models.me.MyCartSetLineItemDistributionChannelActionBuilder.of();
-    }
-
-    public com.commercetools.api.models.me.MyCartSetLineItemRecurrenceInfoActionBuilder setLineItemRecurrenceInfoBuilder() {
-        return com.commercetools.api.models.me.MyCartSetLineItemRecurrenceInfoActionBuilder.of();
     }
 
     public com.commercetools.api.models.me.MyCartSetLineItemShippingDetailsActionBuilder setLineItemShippingDetailsBuilder() {

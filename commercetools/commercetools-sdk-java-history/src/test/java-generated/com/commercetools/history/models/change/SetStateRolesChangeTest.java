@@ -24,6 +24,12 @@ public class SetStateRolesChangeTest {
                                 .findEnum("ReviewIncludedInStatistics"))) },
                 new Object[] { "nextValue", SetStateRolesChange.builder()
                         .nextValue(Collections.singletonList(com.commercetools.history.models.common.StateRoleEnum
+                                .findEnum("ReviewIncludedInStatistics"))) },
+                new Object[] { "addedItems", SetStateRolesChange.builder()
+                        .addedItems(Collections.singletonList(com.commercetools.history.models.common.StateRoleEnum
+                                .findEnum("ReviewIncludedInStatistics"))) },
+                new Object[] { "removedItems", SetStateRolesChange.builder()
+                        .removedItems(Collections.singletonList(com.commercetools.history.models.common.StateRoleEnum
                                 .findEnum("ReviewIncludedInStatistics"))) } };
     }
 
@@ -50,6 +56,26 @@ public class SetStateRolesChangeTest {
         value.setNextValue(Collections.singletonList(
             com.commercetools.history.models.common.StateRoleEnum.findEnum("ReviewIncludedInStatistics")));
         Assertions.assertThat(value.getNextValue())
+                .isEqualTo(Collections.singletonList(
+                    com.commercetools.history.models.common.StateRoleEnum.findEnum("ReviewIncludedInStatistics")));
+    }
+
+    @Test
+    public void addedItems() {
+        SetStateRolesChange value = SetStateRolesChange.of();
+        value.setAddedItems(Collections.singletonList(
+            com.commercetools.history.models.common.StateRoleEnum.findEnum("ReviewIncludedInStatistics")));
+        Assertions.assertThat(value.getAddedItems())
+                .isEqualTo(Collections.singletonList(
+                    com.commercetools.history.models.common.StateRoleEnum.findEnum("ReviewIncludedInStatistics")));
+    }
+
+    @Test
+    public void removedItems() {
+        SetStateRolesChange value = SetStateRolesChange.of();
+        value.setRemovedItems(Collections.singletonList(
+            com.commercetools.history.models.common.StateRoleEnum.findEnum("ReviewIncludedInStatistics")));
+        Assertions.assertThat(value.getRemovedItems())
                 .isEqualTo(Collections.singletonList(
                     com.commercetools.history.models.common.StateRoleEnum.findEnum("ReviewIncludedInStatistics")));
     }

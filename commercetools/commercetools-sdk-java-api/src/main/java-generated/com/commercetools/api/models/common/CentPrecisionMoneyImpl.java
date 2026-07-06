@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Object that stores money in cent amounts of a specific currency.</p>
@@ -56,6 +57,7 @@ public class CentPrecisionMoneyImpl implements CentPrecisionMoney, ModelBase {
      *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
      *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
      *  </ul>
+     *  <p><code>centAmount</code> is represented as 64-bit integers. If this limit is exceeded, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MoneyOverflowError" rel="nofollow">MoneyOverflow</a> error will be returned.</p>
      */
 
     public Long getCentAmount() {
@@ -63,7 +65,7 @@ public class CentPrecisionMoneyImpl implements CentPrecisionMoney, ModelBase {
     }
 
     /**
-     *  <p>Currency code compliant to ISO 4217.</p>
+     *  <p>A currency code compliant with <span>ISO 4217</span> or a <a href="https://docs.commercetools.com/apis/ctp:api:type:NonStandardCurrency" rel="nofollow">non-standard currency</a>.</p>
      */
 
     public String getCurrencyCode() {

@@ -72,7 +72,7 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
     }
 
     /**
-     *  <p>ResourceIdentifier to a given Channel.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a given <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -85,7 +85,7 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
     }
 
     /**
-     *  <p>ResourceIdentifier to a given Channel.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a given <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -97,7 +97,7 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
     }
 
     /**
-     *  <p>ResourceIdentifier to a given Channel.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a given <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @param channel value to be set
      * @return Builder
      */
@@ -110,7 +110,7 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
 
     /**
      *  <ul>
-     *   <li><code>ProductDistribution</code> for Product Distribution Channels allowed for the Store. Also required for Standalone Prices.</li>
+     *   <li><code>ProductDistribution</code> for Product Distribution Channels allowed for the Store. Also required for <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Prices</a>.</li>
      *   <li><code>InventorySupply</code> for Inventory Supply Channels allowed for the Store.</li>
      *  </ul>
      * @param missingRole value to be set
@@ -142,7 +142,7 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
     }
 
     /**
-     *  <p>ResourceIdentifier to a given Channel.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a given <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @return channel
      */
 
@@ -153,7 +153,7 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
 
     /**
      *  <ul>
-     *   <li><code>ProductDistribution</code> for Product Distribution Channels allowed for the Store. Also required for Standalone Prices.</li>
+     *   <li><code>ProductDistribution</code> for Product Distribution Channels allowed for the Store. Also required for <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Prices</a>.</li>
      *   <li><code>InventorySupply</code> for Inventory Supply Channels allowed for the Store.</li>
      *  </ul>
      * @return missingRole

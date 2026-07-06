@@ -10,14 +10,14 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.order.ReturnInfo;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Set ReturnInfo update action on Orders and Order Edits.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetReturnInfoAction" rel="nofollow">Set ReturnInfo</a> update action on <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">Order Edits</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -46,7 +46,7 @@ public interface ReturnInfoSetMessage extends OrderMessage {
     String RETURN_INFO_SET = "ReturnInfoSet";
 
     /**
-     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnInfo" rel="nofollow">ReturnInfo</a> that was set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">Order Edit</a>.</p>
      * @return returnInfo
      */
     @Valid
@@ -54,7 +54,7 @@ public interface ReturnInfoSetMessage extends OrderMessage {
     public List<ReturnInfo> getReturnInfo();
 
     /**
-     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnInfo" rel="nofollow">ReturnInfo</a> that was set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">Order Edit</a>.</p>
      * @param returnInfo values to be set
      */
 
@@ -62,7 +62,7 @@ public interface ReturnInfoSetMessage extends OrderMessage {
     public void setReturnInfo(final ReturnInfo... returnInfo);
 
     /**
-     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnInfo" rel="nofollow">ReturnInfo</a> that was set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">Order Edit</a>.</p>
      * @param returnInfo values to be set
      */
 
@@ -161,8 +161,8 @@ public interface ReturnInfoSetMessage extends OrderMessage {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ReturnInfoSetMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ReturnInfoSetMessage>() {
+    public static tools.jackson.core.type.TypeReference<ReturnInfoSetMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ReturnInfoSetMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<ReturnInfoSetMessage>";

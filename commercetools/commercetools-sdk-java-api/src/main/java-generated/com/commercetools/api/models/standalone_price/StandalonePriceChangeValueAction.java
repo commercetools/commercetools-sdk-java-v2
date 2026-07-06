@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Money;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Updating the value of a StandalonePrice produces the StandalonePriceValueChangedMessage.</p>
+ *  <p>Updating the value of a <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceValueChangedMessage" rel="nofollow">StandalonePriceValueChangedMessage</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface StandalonePriceChangeValueAction extends StandalonePriceUpdateA
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @return value
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface StandalonePriceChangeValueAction extends StandalonePriceUpdateA
     public Money getValue();
 
     /**
-     *  <p>If set to <code>true</code> the update action applies to the StagedStandalonePrice. If set to <code>false</code>, the update action applies to the current StandalonePrice.</p>
+     *  <p>If set to <code>true</code> the update action applies to the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedStandalonePrice" rel="nofollow">StagedStandalonePrice</a>. If set to <code>false</code>, the update action applies to the current <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @return staged
      */
 
@@ -59,14 +59,14 @@ public interface StandalonePriceChangeValueAction extends StandalonePriceUpdateA
 
     /**
      *  <p>New value to set. Must not be empty.</p>
-     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param value value to be set
      */
 
     public void setValue(final Money value);
 
     /**
-     *  <p>If set to <code>true</code> the update action applies to the StagedStandalonePrice. If set to <code>false</code>, the update action applies to the current StandalonePrice.</p>
+     *  <p>If set to <code>true</code> the update action applies to the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedStandalonePrice" rel="nofollow">StagedStandalonePrice</a>. If set to <code>false</code>, the update action applies to the current <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param staged value to be set
      */
 
@@ -141,8 +141,8 @@ public interface StandalonePriceChangeValueAction extends StandalonePriceUpdateA
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceChangeValueAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceChangeValueAction>() {
+    public static tools.jackson.core.type.TypeReference<StandalonePriceChangeValueAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StandalonePriceChangeValueAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StandalonePriceChangeValueAction>";

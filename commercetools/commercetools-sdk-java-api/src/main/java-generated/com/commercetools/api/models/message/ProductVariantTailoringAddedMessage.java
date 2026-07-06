@@ -11,15 +11,15 @@ import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.product_tailoring.ProductVariantTailoring;
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Add ProductVariant Tailoring update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringAddVariantAction" rel="nofollow">Add ProductVariant Tailoring</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -78,7 +78,7 @@ public interface ProductVariantTailoringAddedMessage extends Message {
     public ProductReference getProduct();
 
     /**
-     *  <p><code>id</code> of the ProductVariant added to the Tailoring.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> added to the Tailoring.</p>
      * @return variantId
      */
     @NotNull
@@ -86,7 +86,7 @@ public interface ProductVariantTailoringAddedMessage extends Message {
     public Long getVariantId();
 
     /**
-     *  <p>The ProductVariantTailoring that was added to the ProductTailoring.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">ProductVariantTailoring</a> that was added to the ProductTailoring.</p>
      * @return variant
      */
     @NotNull
@@ -116,14 +116,14 @@ public interface ProductVariantTailoringAddedMessage extends Message {
     public void setProduct(final ProductReference product);
 
     /**
-     *  <p><code>id</code> of the ProductVariant added to the Tailoring.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> added to the Tailoring.</p>
      * @param variantId value to be set
      */
 
     public void setVariantId(final Long variantId);
 
     /**
-     *  <p>The ProductVariantTailoring that was added to the ProductTailoring.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">ProductVariantTailoring</a> that was added to the ProductTailoring.</p>
      * @param variant value to be set
      */
 
@@ -229,8 +229,8 @@ public interface ProductVariantTailoringAddedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductVariantTailoringAddedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductVariantTailoringAddedMessage>() {
+    public static tools.jackson.core.type.TypeReference<ProductVariantTailoringAddedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductVariantTailoringAddedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductVariantTailoringAddedMessage>";

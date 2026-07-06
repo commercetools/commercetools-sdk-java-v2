@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * PaymentSetTransactionCustomTypeAction
@@ -41,7 +41,7 @@ public interface PaymentSetTransactionCustomTypeAction extends PaymentUpdateActi
     String SET_TRANSACTION_CUSTOM_TYPE = "setTransactionCustomType";
 
     /**
-     *  <p>Unique identifier of the Transaction. If the specified <code>transactionId</code> does not exist, the request will fail with an InvalidOperation error.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a>. If the specified <code>transactionId</code> does not exist, the request will fail with an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      * @return transactionId
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface PaymentSetTransactionCustomTypeAction extends PaymentUpdateActi
     public String getTransactionId();
 
     /**
-     *  <p>Defines the Type that extends the Transaction with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Transaction.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Transaction with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the Transaction.</p>
      * @return type
      */
     @Valid
@@ -57,7 +57,8 @@ public interface PaymentSetTransactionCustomTypeAction extends PaymentUpdateActi
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the Transaction.</p>
+     *  <p>Object containing the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the Transaction.</p>
+     *  <p>Required if at least one Custom Field is defined as required in the <code>fieldDefinitions</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @return fields
      */
     @Valid
@@ -65,21 +66,22 @@ public interface PaymentSetTransactionCustomTypeAction extends PaymentUpdateActi
     public FieldContainer getFields();
 
     /**
-     *  <p>Unique identifier of the Transaction. If the specified <code>transactionId</code> does not exist, the request will fail with an InvalidOperation error.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a>. If the specified <code>transactionId</code> does not exist, the request will fail with an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      * @param transactionId value to be set
      */
 
     public void setTransactionId(final String transactionId);
 
     /**
-     *  <p>Defines the Type that extends the Transaction with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Transaction.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the Transaction with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the Transaction.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Sets the Custom Fields fields for the Transaction.</p>
+     *  <p>Object containing the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the Transaction.</p>
+     *  <p>Required if at least one Custom Field is defined as required in the <code>fieldDefinitions</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param fields value to be set
      */
 
@@ -158,8 +160,8 @@ public interface PaymentSetTransactionCustomTypeAction extends PaymentUpdateActi
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentSetTransactionCustomTypeAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentSetTransactionCustomTypeAction>() {
+    public static tools.jackson.core.type.TypeReference<PaymentSetTransactionCustomTypeAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentSetTransactionCustomTypeAction>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentSetTransactionCustomTypeAction>";

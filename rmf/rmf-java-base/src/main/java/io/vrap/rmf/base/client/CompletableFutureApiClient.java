@@ -5,8 +5,8 @@ import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JavaType;
+import tools.jackson.core.type.TypeReference;
+import tools.jackson.databind.JavaType;
 
 public interface CompletableFutureApiClient extends AsyncApiClient<CompletableFuture<?>> {
 

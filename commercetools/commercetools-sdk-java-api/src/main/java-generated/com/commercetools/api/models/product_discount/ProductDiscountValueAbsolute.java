@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.CentPrecisionMoney;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Discounts the Product's Price by a fixed amount, defined by the <code>money</code> field.</p>
@@ -41,7 +41,7 @@ public interface ProductDiscountValueAbsolute extends ProductDiscountValue {
     String ABSOLUTE = "absolute";
 
     /**
-     *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     *  <p>Money values in different currencies. An absolute <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
      * @return money
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface ProductDiscountValueAbsolute extends ProductDiscountValue {
     public List<CentPrecisionMoney> getMoney();
 
     /**
-     *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     *  <p>Money values in different currencies. An absolute <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
      * @param money values to be set
      */
 
@@ -58,7 +58,7 @@ public interface ProductDiscountValueAbsolute extends ProductDiscountValue {
     public void setMoney(final CentPrecisionMoney... money);
 
     /**
-     *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     *  <p>Money values in different currencies. An absolute <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
      * @param money values to be set
      */
 
@@ -135,8 +135,8 @@ public interface ProductDiscountValueAbsolute extends ProductDiscountValue {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValueAbsolute> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValueAbsolute>() {
+    public static tools.jackson.core.type.TypeReference<ProductDiscountValueAbsolute> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductDiscountValueAbsolute>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductDiscountValueAbsolute>";

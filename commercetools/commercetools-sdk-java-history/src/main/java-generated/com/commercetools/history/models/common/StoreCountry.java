@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * StoreCountry
@@ -32,7 +32,7 @@ import jakarta.validation.constraints.NotNull;
 public interface StoreCountry {
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Two-digit country code as per <span>ISO 3166-1 alpha-2</span>.</p>
      * @return code
      */
     @NotNull
@@ -40,7 +40,7 @@ public interface StoreCountry {
     public String getCode();
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Two-digit country code as per <span>ISO 3166-1 alpha-2</span>.</p>
      * @param code value to be set
      */
 
@@ -113,8 +113,8 @@ public interface StoreCountry {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StoreCountry> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StoreCountry>() {
+    public static tools.jackson.core.type.TypeReference<StoreCountry> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StoreCountry>() {
             @Override
             public String toString() {
                 return "TypeReference<StoreCountry>";

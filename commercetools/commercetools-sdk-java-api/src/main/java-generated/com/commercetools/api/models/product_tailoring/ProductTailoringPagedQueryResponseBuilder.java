@@ -39,7 +39,7 @@ public class ProductTailoringPagedQueryResponseBuilder implements Builder<Produc
     private java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoring> results;
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @param limit value to be set
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class ProductTailoringPagedQueryResponseBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @param offset value to be set
      * @return Builder
      */
@@ -72,7 +72,7 @@ public class ProductTailoringPagedQueryResponseBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>Total number of results matching the query. Present only when the <code>withTotal</code> query parameter is set to <code>true</code>. This number is an estimation that is not strongly consistent. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     *  <p>Total number of results matching the query. Present only when the <code>withTotal</code> query parameter is set to <code>true</code>. This number is an estimation that is not <span>strongly consistent</span>. When the results are filtered with a <span>Query Predicate</span>, <code>total</code> is subject to a <span>limit</span>.</p>
      * @param total value to be set
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class ProductTailoringPagedQueryResponseBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>ProductTailoring list matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> list matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -95,7 +95,7 @@ public class ProductTailoringPagedQueryResponseBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>ProductTailoring list matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> list matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -107,7 +107,7 @@ public class ProductTailoringPagedQueryResponseBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>ProductTailoring list matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> list matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -122,7 +122,7 @@ public class ProductTailoringPagedQueryResponseBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>ProductTailoring list matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> list matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -138,7 +138,7 @@ public class ProductTailoringPagedQueryResponseBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>ProductTailoring list matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> list matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -152,7 +152,7 @@ public class ProductTailoringPagedQueryResponseBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>ProductTailoring list matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> list matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -163,7 +163,7 @@ public class ProductTailoringPagedQueryResponseBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>ProductTailoring list matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> list matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -174,7 +174,7 @@ public class ProductTailoringPagedQueryResponseBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @return limit
      */
 
@@ -183,7 +183,7 @@ public class ProductTailoringPagedQueryResponseBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @return offset
      */
 
@@ -201,7 +201,7 @@ public class ProductTailoringPagedQueryResponseBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>Total number of results matching the query. Present only when the <code>withTotal</code> query parameter is set to <code>true</code>. This number is an estimation that is not strongly consistent. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     *  <p>Total number of results matching the query. Present only when the <code>withTotal</code> query parameter is set to <code>true</code>. This number is an estimation that is not <span>strongly consistent</span>. When the results are filtered with a <span>Query Predicate</span>, <code>total</code> is subject to a <span>limit</span>.</p>
      * @return total
      */
 
@@ -211,7 +211,7 @@ public class ProductTailoringPagedQueryResponseBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>ProductTailoring list matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> list matching the query.</p>
      * @return results
      */
 

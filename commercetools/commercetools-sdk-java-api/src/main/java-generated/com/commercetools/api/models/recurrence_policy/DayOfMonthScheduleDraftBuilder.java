@@ -24,7 +24,7 @@ public class DayOfMonthScheduleDraftBuilder implements Builder<DayOfMonthSchedul
     private Integer day;
 
     /**
-     *  <p>The day of the month when the Recurring Order should be created. If the value is greater than the number of days in a given month, the order will be created on the last day of the month.</p>
+     *  <p>The day of the month when the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a> should be created. If the value is greater than the number of days in a given month, the order will be created on the last day of the month.</p>
      * @param day value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class DayOfMonthScheduleDraftBuilder implements Builder<DayOfMonthSchedul
     }
 
     /**
-     *  <p>The day of the month when the Recurring Order should be created. If the value is greater than the number of days in a given month, the order will be created on the last day of the month.</p>
+     *  <p>The day of the month when the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a> should be created. If the value is greater than the number of days in a given month, the order will be created on the last day of the month.</p>
      * @return day
      */
 

@@ -43,7 +43,7 @@ public class AssociateMissingPermissionErrorBuilder implements Builder<Associate
     /**
      *  <ul>
      *   <li>When an action is performed by an Associate: <code>"Associate '$idOfAssociate' has no rights to $action in business-unit '$idOrKeyOfBusinessUnit'. Needs '$requiredPermission'."</code></li>
-     *   <li>When an action is performed for another Associate, like viewing their Cart: <code>"Associate '$idOfAssociate' has no rights to $action for customer '$idOfCustomer' in business-unit '$idOrKeyOfBusinessUnit'. Needs '$requiredPermission'."</code></li>
+     *   <li>When an action is performed for another Associate, like <span>viewing their Cart</span>: <code>"Associate '$idOfAssociate' has no rights to $action for customer '$idOfCustomer' in business-unit '$idOrKeyOfBusinessUnit'. Needs '$requiredPermission'."</code></li>
      *   <li>When viewing an entity: <code>"Associate '$idOfAssociate' has no rights to $action in business-unit '$idOrKeyOfBusinessUnit'. Needs '$requiredViewMyPermission' or '$requiredViewOthersPermission'."</code></li>
      *  </ul>
      * @param message value to be set
@@ -82,7 +82,7 @@ public class AssociateMissingPermissionErrorBuilder implements Builder<Associate
     }
 
     /**
-     *  <p>ResourceIdentifier to the Associate that tried to perform the action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> that tried to perform the action.</p>
      * @param builder function to build the associate value
      * @return Builder
      */
@@ -95,7 +95,7 @@ public class AssociateMissingPermissionErrorBuilder implements Builder<Associate
     }
 
     /**
-     *  <p>ResourceIdentifier to the Associate that tried to perform the action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> that tried to perform the action.</p>
      * @param builder function to build the associate value
      * @return Builder
      */
@@ -107,7 +107,7 @@ public class AssociateMissingPermissionErrorBuilder implements Builder<Associate
     }
 
     /**
-     *  <p>ResourceIdentifier to the Associate that tried to perform the action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> that tried to perform the action.</p>
      * @param associate value to be set
      * @return Builder
      */
@@ -119,7 +119,7 @@ public class AssociateMissingPermissionErrorBuilder implements Builder<Associate
     }
 
     /**
-     *  <p>ResourceIdentifier to the BusinessUnit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -133,7 +133,7 @@ public class AssociateMissingPermissionErrorBuilder implements Builder<Associate
     }
 
     /**
-     *  <p>ResourceIdentifier to the BusinessUnit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -146,7 +146,7 @@ public class AssociateMissingPermissionErrorBuilder implements Builder<Associate
     }
 
     /**
-     *  <p>ResourceIdentifier to the BusinessUnit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>.</p>
      * @param businessUnit value to be set
      * @return Builder
      */
@@ -158,7 +158,7 @@ public class AssociateMissingPermissionErrorBuilder implements Builder<Associate
     }
 
     /**
-     *  <p>ResourceIdentifier of the Associate on whose behalf the action is performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerResourceIdentifier" rel="nofollow">ResourceIdentifier</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> on whose behalf the action is performed.</p>
      * @param builder function to build the associateOnBehalf value
      * @return Builder
      */
@@ -172,7 +172,7 @@ public class AssociateMissingPermissionErrorBuilder implements Builder<Associate
     }
 
     /**
-     *  <p>ResourceIdentifier of the Associate on whose behalf the action is performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerResourceIdentifier" rel="nofollow">ResourceIdentifier</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> on whose behalf the action is performed.</p>
      * @param builder function to build the associateOnBehalf value
      * @return Builder
      */
@@ -185,7 +185,7 @@ public class AssociateMissingPermissionErrorBuilder implements Builder<Associate
     }
 
     /**
-     *  <p>ResourceIdentifier of the Associate on whose behalf the action is performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerResourceIdentifier" rel="nofollow">ResourceIdentifier</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> on whose behalf the action is performed.</p>
      * @param associateOnBehalf value to be set
      * @return Builder
      */
@@ -197,7 +197,7 @@ public class AssociateMissingPermissionErrorBuilder implements Builder<Associate
     }
 
     /**
-     *  <p>The Permissions that the Associate performing the action lacks. At least one of these Permissions is needed.</p>
+     *  <p>The Permissions that the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> performing the action lacks. At least one of these Permissions is needed.</p>
      * @param permissions value to be set
      * @return Builder
      */
@@ -209,7 +209,7 @@ public class AssociateMissingPermissionErrorBuilder implements Builder<Associate
     }
 
     /**
-     *  <p>The Permissions that the Associate performing the action lacks. At least one of these Permissions is needed.</p>
+     *  <p>The Permissions that the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> performing the action lacks. At least one of these Permissions is needed.</p>
      * @param permissions value to be set
      * @return Builder
      */
@@ -221,7 +221,7 @@ public class AssociateMissingPermissionErrorBuilder implements Builder<Associate
     }
 
     /**
-     *  <p>The Permissions that the Associate performing the action lacks. At least one of these Permissions is needed.</p>
+     *  <p>The Permissions that the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> performing the action lacks. At least one of these Permissions is needed.</p>
      * @param permissions value to be set
      * @return Builder
      */
@@ -238,7 +238,7 @@ public class AssociateMissingPermissionErrorBuilder implements Builder<Associate
     /**
      *  <ul>
      *   <li>When an action is performed by an Associate: <code>"Associate '$idOfAssociate' has no rights to $action in business-unit '$idOrKeyOfBusinessUnit'. Needs '$requiredPermission'."</code></li>
-     *   <li>When an action is performed for another Associate, like viewing their Cart: <code>"Associate '$idOfAssociate' has no rights to $action for customer '$idOfCustomer' in business-unit '$idOrKeyOfBusinessUnit'. Needs '$requiredPermission'."</code></li>
+     *   <li>When an action is performed for another Associate, like <span>viewing their Cart</span>: <code>"Associate '$idOfAssociate' has no rights to $action for customer '$idOfCustomer' in business-unit '$idOrKeyOfBusinessUnit'. Needs '$requiredPermission'."</code></li>
      *   <li>When viewing an entity: <code>"Associate '$idOfAssociate' has no rights to $action in business-unit '$idOrKeyOfBusinessUnit'. Needs '$requiredViewMyPermission' or '$requiredViewOthersPermission'."</code></li>
      *  </ul>
      * @return message
@@ -258,7 +258,7 @@ public class AssociateMissingPermissionErrorBuilder implements Builder<Associate
     }
 
     /**
-     *  <p>ResourceIdentifier to the Associate that tried to perform the action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> that tried to perform the action.</p>
      * @return associate
      */
 
@@ -267,7 +267,7 @@ public class AssociateMissingPermissionErrorBuilder implements Builder<Associate
     }
 
     /**
-     *  <p>ResourceIdentifier to the BusinessUnit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>.</p>
      * @return businessUnit
      */
 
@@ -276,7 +276,7 @@ public class AssociateMissingPermissionErrorBuilder implements Builder<Associate
     }
 
     /**
-     *  <p>ResourceIdentifier of the Associate on whose behalf the action is performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerResourceIdentifier" rel="nofollow">ResourceIdentifier</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> on whose behalf the action is performed.</p>
      * @return associateOnBehalf
      */
 
@@ -286,7 +286,7 @@ public class AssociateMissingPermissionErrorBuilder implements Builder<Associate
     }
 
     /**
-     *  <p>The Permissions that the Associate performing the action lacks. At least one of these Permissions is needed.</p>
+     *  <p>The Permissions that the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> performing the action lacks. At least one of these Permissions is needed.</p>
      * @return permissions
      */
 

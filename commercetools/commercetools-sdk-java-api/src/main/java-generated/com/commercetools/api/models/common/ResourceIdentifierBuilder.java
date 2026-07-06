@@ -55,6 +55,10 @@ public class ResourceIdentifierBuilder implements ResourceIdentifierBuilderMixin
         return com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifierBuilder.of();
     }
 
+    public com.commercetools.api.models.extension.ExtensionResourceIdentifierBuilder extensionBuilder() {
+        return com.commercetools.api.models.extension.ExtensionResourceIdentifierBuilder.of();
+    }
+
     public com.commercetools.api.models.inventory.InventoryEntryResourceIdentifierBuilder inventoryEntryBuilder() {
         return com.commercetools.api.models.inventory.InventoryEntryResourceIdentifierBuilder.of();
     }
@@ -137,6 +141,10 @@ public class ResourceIdentifierBuilder implements ResourceIdentifierBuilderMixin
 
     public com.commercetools.api.models.type.TypeResourceIdentifierBuilder typeBuilder() {
         return com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of();
+    }
+
+    public com.commercetools.api.models.variant.VariantResourceIdentifierBuilder variantBuilder() {
+        return com.commercetools.api.models.variant.VariantResourceIdentifierBuilder.of();
     }
 
     public com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder zoneBuilder() {

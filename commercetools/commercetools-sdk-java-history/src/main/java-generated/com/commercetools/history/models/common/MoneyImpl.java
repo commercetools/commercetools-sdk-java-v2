@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,32 +15,26 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- * Money
+ *  <p>Draft object to store money in cent amounts for a specific currency.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MoneyImpl implements Money, ModelBase {
 
+    private Long centAmount;
+
     private String currencyCode;
-
-    private Integer centAmount;
-
-    private Integer fractionDigits;
-
-    private com.commercetools.history.models.common.MoneyType type;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    MoneyImpl(@JsonProperty("currencyCode") final String currencyCode,
-            @JsonProperty("centAmount") final Integer centAmount,
-            @JsonProperty("fractionDigits") final Integer fractionDigits,
-            @JsonProperty("type") final com.commercetools.history.models.common.MoneyType type) {
-        this.currencyCode = currencyCode;
+    MoneyImpl(@JsonProperty("centAmount") final Long centAmount,
+            @JsonProperty("currencyCode") final String currencyCode) {
         this.centAmount = centAmount;
-        this.fractionDigits = fractionDigits;
-        this.type = type;
+        this.currencyCode = currencyCode;
     }
 
     /**
@@ -51,51 +44,31 @@ public class MoneyImpl implements Money, ModelBase {
     }
 
     /**
-     *  <p>Currency code compliant to ISO 4217.</p>
+     *  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
+     *  <ul>
+     *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
+     *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
+     *  </ul>
+     */
+
+    public Long getCentAmount() {
+        return this.centAmount;
+    }
+
+    /**
+     *  <p>Currency code compliant to <span>ISO 4217</span>.</p>
      */
 
     public String getCurrencyCode() {
         return this.currencyCode;
     }
 
-    /**
-     *
-     */
-
-    public Integer getCentAmount() {
-        return this.centAmount;
-    }
-
-    /**
-     *
-     */
-
-    public Integer getFractionDigits() {
-        return this.fractionDigits;
-    }
-
-    /**
-     *
-     */
-
-    public com.commercetools.history.models.common.MoneyType getType() {
-        return this.type;
+    public void setCentAmount(final Long centAmount) {
+        this.centAmount = centAmount;
     }
 
     public void setCurrencyCode(final String currencyCode) {
         this.currencyCode = currencyCode;
-    }
-
-    public void setCentAmount(final Integer centAmount) {
-        this.centAmount = centAmount;
-    }
-
-    public void setFractionDigits(final Integer fractionDigits) {
-        this.fractionDigits = fractionDigits;
-    }
-
-    public void setType(final com.commercetools.history.models.common.MoneyType type) {
-        this.type = type;
     }
 
     @Override
@@ -108,32 +81,22 @@ public class MoneyImpl implements Money, ModelBase {
 
         MoneyImpl that = (MoneyImpl) o;
 
-        return new EqualsBuilder().append(currencyCode, that.currencyCode)
-                .append(centAmount, that.centAmount)
-                .append(fractionDigits, that.fractionDigits)
-                .append(type, that.type)
+        return new EqualsBuilder().append(centAmount, that.centAmount)
                 .append(currencyCode, that.currencyCode)
                 .append(centAmount, that.centAmount)
-                .append(fractionDigits, that.fractionDigits)
-                .append(type, that.type)
+                .append(currencyCode, that.currencyCode)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(currencyCode)
-                .append(centAmount)
-                .append(fractionDigits)
-                .append(type)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37).append(centAmount).append(currencyCode).toHashCode();
     }
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("currencyCode", currencyCode)
-                .append("centAmount", centAmount)
-                .append("fractionDigits", fractionDigits)
-                .append("type", type)
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("centAmount", centAmount)
+                .append("currencyCode", currencyCode)
                 .build();
     }
 

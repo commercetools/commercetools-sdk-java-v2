@@ -25,7 +25,7 @@ public class BusinessUnitStatusChangedMessagePayloadBuilder
     private com.commercetools.api.models.business_unit.BusinessUnitStatus active;
 
     /**
-     *  <p>Updated status of the Business Unit.</p>
+     *  <p>Updated status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param active value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class BusinessUnitStatusChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Updated status of the Business Unit.</p>
+     *  <p>Updated status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @return active
      */
 

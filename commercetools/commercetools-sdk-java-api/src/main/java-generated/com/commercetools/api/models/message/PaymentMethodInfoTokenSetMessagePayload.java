@@ -9,14 +9,14 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.payment_method.PaymentMethodToken;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Set MethodInfo Token update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoTokenAction" rel="nofollow">Set MethodInfo Token</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface PaymentMethodInfoTokenSetMessagePayload extends MessagePayload 
     String PAYMENT_METHOD_INFO_TOKEN_SET = "PaymentMethodInfoTokenSet";
 
     /**
-     *  <p>Token of the Payment Method after the Set MethodInfo Token update action.</p>
+     *  <p>Token of the Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoTokenAction" rel="nofollow">Set MethodInfo Token</a> update action.</p>
      * @return token
      */
     @Valid
@@ -46,7 +46,7 @@ public interface PaymentMethodInfoTokenSetMessagePayload extends MessagePayload 
     public PaymentMethodToken getToken();
 
     /**
-     *  <p>Token of the Payment Method before the Set MethodInfo Token update action.</p>
+     *  <p>Token of the Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoTokenAction" rel="nofollow">Set MethodInfo Token</a> update action.</p>
      * @return oldToken
      */
     @Valid
@@ -54,14 +54,14 @@ public interface PaymentMethodInfoTokenSetMessagePayload extends MessagePayload 
     public PaymentMethodToken getOldToken();
 
     /**
-     *  <p>Token of the Payment Method after the Set MethodInfo Token update action.</p>
+     *  <p>Token of the Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoTokenAction" rel="nofollow">Set MethodInfo Token</a> update action.</p>
      * @param token value to be set
      */
 
     public void setToken(final PaymentMethodToken token);
 
     /**
-     *  <p>Token of the Payment Method before the Set MethodInfo Token update action.</p>
+     *  <p>Token of the Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoTokenAction" rel="nofollow">Set MethodInfo Token</a> update action.</p>
      * @param oldToken value to be set
      */
 
@@ -140,8 +140,8 @@ public interface PaymentMethodInfoTokenSetMessagePayload extends MessagePayload 
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentMethodInfoTokenSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentMethodInfoTokenSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<PaymentMethodInfoTokenSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentMethodInfoTokenSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentMethodInfoTokenSetMessagePayload>";

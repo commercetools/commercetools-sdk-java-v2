@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Change Slug update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangeSlugAction" rel="nofollow">Change Slug</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface ProductSlugChangedMessage extends Message {
     String PRODUCT_SLUG_CHANGED = "ProductSlugChanged";
 
     /**
-     *  <p>The slug of the Product after the Change Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangeSlugAction" rel="nofollow">Change Slug</a> update action.</p>
      * @return slug
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface ProductSlugChangedMessage extends Message {
     public LocalizedString getSlug();
 
     /**
-     *  <p>The slug of the Product before the Change Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangeSlugAction" rel="nofollow">Change Slug</a> update action.</p>
      * @return oldSlug
      */
     @Valid
@@ -64,14 +64,14 @@ public interface ProductSlugChangedMessage extends Message {
     public LocalizedString getOldSlug();
 
     /**
-     *  <p>The slug of the Product after the Change Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangeSlugAction" rel="nofollow">Change Slug</a> update action.</p>
      * @param slug value to be set
      */
 
     public void setSlug(final LocalizedString slug);
 
     /**
-     *  <p>The slug of the Product before the Change Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangeSlugAction" rel="nofollow">Change Slug</a> update action.</p>
      * @param oldSlug value to be set
      */
 
@@ -168,8 +168,8 @@ public interface ProductSlugChangedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSlugChangedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSlugChangedMessage>() {
+    public static tools.jackson.core.type.TypeReference<ProductSlugChangedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSlugChangedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSlugChangedMessage>";

@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 import com.commercetools.history.models.common.LocalizedString;
 import com.commercetools.history.models.common.TaxedItemPrice;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * SetLineItemTaxedPriceChange
@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .lineItem(lineItemBuilder -> lineItemBuilder)
  *             .lineItemId("{lineItemId}")
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
@@ -79,7 +80,7 @@ public interface SetLineItemTaxedPriceChange extends Change {
     public TaxedItemPrice getNextValue();
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      * @return lineItem
      */
     @NotNull
@@ -88,12 +89,21 @@ public interface SetLineItemTaxedPriceChange extends Change {
     public LocalizedString getLineItem();
 
     /**
-     *  <p><code>id</code> of the updated LineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
      * @return lineItemId
      */
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+    @NotNull
+    @JsonProperty("variant")
+    public String getVariant();
 
     /**
      * set change
@@ -117,18 +127,26 @@ public interface SetLineItemTaxedPriceChange extends Change {
     public void setNextValue(final TaxedItemPrice nextValue);
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      * @param lineItem value to be set
      */
 
     public void setLineItem(final LocalizedString lineItem);
 
     /**
-     *  <p><code>id</code> of the updated LineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     */
+
+    public void setVariant(final String variant);
 
     /**
      * factory method
@@ -150,6 +168,7 @@ public interface SetLineItemTaxedPriceChange extends Change {
         instance.setNextValue(template.getNextValue());
         instance.setLineItem(template.getLineItem());
         instance.setLineItemId(template.getLineItemId());
+        instance.setVariant(template.getVariant());
         return instance;
     }
 
@@ -172,6 +191,7 @@ public interface SetLineItemTaxedPriceChange extends Change {
         instance.setNextValue(com.commercetools.history.models.common.TaxedItemPrice.deepCopy(template.getNextValue()));
         instance.setLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLineItem()));
         instance.setLineItemId(template.getLineItemId());
+        instance.setVariant(template.getVariant());
         return instance;
     }
 
@@ -206,8 +226,8 @@ public interface SetLineItemTaxedPriceChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetLineItemTaxedPriceChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetLineItemTaxedPriceChange>() {
+    public static tools.jackson.core.type.TypeReference<SetLineItemTaxedPriceChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetLineItemTaxedPriceChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetLineItemTaxedPriceChange>";

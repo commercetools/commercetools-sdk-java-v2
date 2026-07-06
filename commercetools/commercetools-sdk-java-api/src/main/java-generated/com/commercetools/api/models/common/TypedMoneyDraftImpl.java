@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,11 +15,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Base polymorphic money type containing common fields for Money and HighPrecisionMoneyDraft.</p>
+ *  <p>Base polymorphic money type containing common fields for <a href="https://docs.commercetools.com/apis/ctp:api:type:Money" rel="nofollow">Money</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
  *  <ul>
- *   <li>To set money in cent precision, use Money.</li>
- *   <li>To set money in high precision, use HighPrecisionMoneyDraft.</li>
+ *   <li>To set money in cent precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:Money" rel="nofollow">Money</a>.</li>
+ *   <li>To set money in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</li>
  *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -63,7 +64,7 @@ public class TypedMoneyDraftImpl implements TypedMoneyDraft, ModelBase {
     }
 
     /**
-     *  <p>Currency code compliant to ISO 4217.</p>
+     *  <p>A currency code compliant with <span>ISO 4217</span> or a <a href="https://docs.commercetools.com/apis/ctp:api:type:NonStandardCurrency" rel="nofollow">non-standard currency</a>.</p>
      */
 
     public String getCurrencyCode() {

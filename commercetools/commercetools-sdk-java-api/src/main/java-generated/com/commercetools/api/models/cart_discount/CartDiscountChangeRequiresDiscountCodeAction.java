@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CartDiscountChangeRequiresDiscountCodeAction
@@ -38,7 +38,7 @@ public interface CartDiscountChangeRequiresDiscountCodeAction extends CartDiscou
     String CHANGE_REQUIRES_DISCOUNT_CODE = "changeRequiresDiscountCode";
 
     /**
-     *  <p>New value to set. If set to <code>true</code>, the Discount can only be used in connection with a DiscountCode.</p>
+     *  <p>New value to set. If set to <code>true</code>, the Discount can only be used in connection with a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a>.</p>
      * @return requiresDiscountCode
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface CartDiscountChangeRequiresDiscountCodeAction extends CartDiscou
     public Boolean getRequiresDiscountCode();
 
     /**
-     *  <p>New value to set. If set to <code>true</code>, the Discount can only be used in connection with a DiscountCode.</p>
+     *  <p>New value to set. If set to <code>true</code>, the Discount can only be used in connection with a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a>.</p>
      * @param requiresDiscountCode value to be set
      */
 
@@ -123,8 +123,8 @@ public interface CartDiscountChangeRequiresDiscountCodeAction extends CartDiscou
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountChangeRequiresDiscountCodeAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountChangeRequiresDiscountCodeAction>() {
+    public static tools.jackson.core.type.TypeReference<CartDiscountChangeRequiresDiscountCodeAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartDiscountChangeRequiresDiscountCodeAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartDiscountChangeRequiresDiscountCodeAction>";

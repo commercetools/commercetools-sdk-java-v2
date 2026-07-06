@@ -28,7 +28,7 @@ public class ApprovalFlowApprovedMessagePayloadBuilder implements Builder<Approv
     private com.commercetools.api.models.order.OrderReference order;
 
     /**
-     *  <p>Reference to the Customer who approved the Approval Flow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who approved the <span>Approval Flow</span>.</p>
      * @param builder function to build the associate value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class ApprovalFlowApprovedMessagePayloadBuilder implements Builder<Approv
     }
 
     /**
-     *  <p>Reference to the Customer who approved the Approval Flow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who approved the <span>Approval Flow</span>.</p>
      * @param builder function to build the associate value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class ApprovalFlowApprovedMessagePayloadBuilder implements Builder<Approv
     }
 
     /**
-     *  <p>Reference to the Customer who approved the Approval Flow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who approved the <span>Approval Flow</span>.</p>
      * @param associate value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class ApprovalFlowApprovedMessagePayloadBuilder implements Builder<Approv
     }
 
     /**
-     *  <p>Reference to the Order that received the approval.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that received the approval.</p>
      * @param builder function to build the order value
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class ApprovalFlowApprovedMessagePayloadBuilder implements Builder<Approv
     }
 
     /**
-     *  <p>Reference to the Order that received the approval.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that received the approval.</p>
      * @param builder function to build the order value
      * @return Builder
      */
@@ -88,7 +88,7 @@ public class ApprovalFlowApprovedMessagePayloadBuilder implements Builder<Approv
     }
 
     /**
-     *  <p>Reference to the Order that received the approval.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that received the approval.</p>
      * @param order value to be set
      * @return Builder
      */
@@ -100,7 +100,7 @@ public class ApprovalFlowApprovedMessagePayloadBuilder implements Builder<Approv
     }
 
     /**
-     *  <p>Reference to the Customer who approved the Approval Flow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who approved the <span>Approval Flow</span>.</p>
      * @return associate
      */
 
@@ -109,7 +109,7 @@ public class ApprovalFlowApprovedMessagePayloadBuilder implements Builder<Approv
     }
 
     /**
-     *  <p>Reference to the Order that received the approval.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that received the approval.</p>
      * @return order
      */
 

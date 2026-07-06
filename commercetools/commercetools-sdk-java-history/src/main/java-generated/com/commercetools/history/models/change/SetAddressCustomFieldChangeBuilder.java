@@ -49,7 +49,7 @@ public class SetAddressCustomFieldChangeBuilder implements Builder<SetAddressCus
     }
 
     /**
-     *  <p>Address which was extended.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> which was extended.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class SetAddressCustomFieldChangeBuilder implements Builder<SetAddressCus
     }
 
     /**
-     *  <p>Address which was extended.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> which was extended.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -73,7 +73,7 @@ public class SetAddressCustomFieldChangeBuilder implements Builder<SetAddressCus
     }
 
     /**
-     *  <p>Address which was extended.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> which was extended.</p>
      * @param address value to be set
      * @return Builder
      */
@@ -84,7 +84,7 @@ public class SetAddressCustomFieldChangeBuilder implements Builder<SetAddressCus
     }
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Field</a>.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -95,7 +95,7 @@ public class SetAddressCustomFieldChangeBuilder implements Builder<SetAddressCus
     }
 
     /**
-     *  <p><code>id</code> of the referenced Type.</p>
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param customTypeId value to be set
      * @return Builder
      */
@@ -137,7 +137,7 @@ public class SetAddressCustomFieldChangeBuilder implements Builder<SetAddressCus
     }
 
     /**
-     *  <p>Address which was extended.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> which was extended.</p>
      * @return address
      */
 
@@ -146,7 +146,7 @@ public class SetAddressCustomFieldChangeBuilder implements Builder<SetAddressCus
     }
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Field</a>.</p>
      * @return name
      */
 
@@ -155,7 +155,7 @@ public class SetAddressCustomFieldChangeBuilder implements Builder<SetAddressCus
     }
 
     /**
-     *  <p><code>id</code> of the referenced Type.</p>
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @return customTypeId
      */
 

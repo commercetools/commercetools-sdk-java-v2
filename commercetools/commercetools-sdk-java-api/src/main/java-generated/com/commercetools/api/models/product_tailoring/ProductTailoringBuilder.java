@@ -262,7 +262,7 @@ public class ProductTailoringBuilder implements Builder<ProductTailoring> {
     }
 
     /**
-     *  <p>If <code>true</code>, the tailored information contained in the <code>current</code> ProductTailoringData is provided when retrieving the ProductProjection in Store. For information not part of the ProductTailoringData, the original information contained in the ProductData is provided. If <code>false</code>, only the original information contained in the ProductData is provided.</p>
+     *  <p>If <code>true</code>, the tailored information contained in the <code>current</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringData" rel="nofollow">ProductTailoringData</a> is provided when <span>retrieving the ProductProjection in Store</span>. For information not part of the ProductTailoringData, the original information contained in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductData" rel="nofollow">ProductData</a> is provided. If <code>false</code>, only the original information contained in the ProductData is provided.</p>
      * @param published value to be set
      * @return Builder
      */
@@ -273,7 +273,7 @@ public class ProductTailoringBuilder implements Builder<ProductTailoring> {
     }
 
     /**
-     *  <p>Current (published) data of the ProductTailoring.</p>
+     *  <p>Current data of the ProductTailoring returned in the <span>Product Projection</span> response when the ProductTailoring is published.</p>
      * @param builder function to build the current value
      * @return Builder
      */
@@ -286,7 +286,7 @@ public class ProductTailoringBuilder implements Builder<ProductTailoring> {
     }
 
     /**
-     *  <p>Current (published) data of the ProductTailoring.</p>
+     *  <p>Current data of the ProductTailoring returned in the <span>Product Projection</span> response when the ProductTailoring is published.</p>
      * @param builder function to build the current value
      * @return Builder
      */
@@ -298,7 +298,7 @@ public class ProductTailoringBuilder implements Builder<ProductTailoring> {
     }
 
     /**
-     *  <p>Current (published) data of the ProductTailoring.</p>
+     *  <p>Current data of the ProductTailoring returned in the <span>Product Projection</span> response when the ProductTailoring is published.</p>
      * @param current value to be set
      * @return Builder
      */
@@ -310,7 +310,7 @@ public class ProductTailoringBuilder implements Builder<ProductTailoring> {
     }
 
     /**
-     *  <p>Staged (unpublished) data of the ProductTailoring.</p>
+     *  <p>Staged data of the ProductTailoring. This data is not returned in the Product Projection response by default.</p>
      * @param builder function to build the staged value
      * @return Builder
      */
@@ -323,7 +323,7 @@ public class ProductTailoringBuilder implements Builder<ProductTailoring> {
     }
 
     /**
-     *  <p>Staged (unpublished) data of the ProductTailoring.</p>
+     *  <p>Staged data of the ProductTailoring. This data is not returned in the Product Projection response by default.</p>
      * @param builder function to build the staged value
      * @return Builder
      */
@@ -335,7 +335,7 @@ public class ProductTailoringBuilder implements Builder<ProductTailoring> {
     }
 
     /**
-     *  <p>Staged (unpublished) data of the ProductTailoring.</p>
+     *  <p>Staged data of the ProductTailoring. This data is not returned in the Product Projection response by default.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -509,7 +509,7 @@ public class ProductTailoringBuilder implements Builder<ProductTailoring> {
     }
 
     /**
-     *  <p>If <code>true</code>, the tailored information contained in the <code>current</code> ProductTailoringData is provided when retrieving the ProductProjection in Store. For information not part of the ProductTailoringData, the original information contained in the ProductData is provided. If <code>false</code>, only the original information contained in the ProductData is provided.</p>
+     *  <p>If <code>true</code>, the tailored information contained in the <code>current</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringData" rel="nofollow">ProductTailoringData</a> is provided when <span>retrieving the ProductProjection in Store</span>. For information not part of the ProductTailoringData, the original information contained in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductData" rel="nofollow">ProductData</a> is provided. If <code>false</code>, only the original information contained in the ProductData is provided.</p>
      * @return published
      */
 
@@ -518,7 +518,7 @@ public class ProductTailoringBuilder implements Builder<ProductTailoring> {
     }
 
     /**
-     *  <p>Current (published) data of the ProductTailoring.</p>
+     *  <p>Current data of the ProductTailoring returned in the <span>Product Projection</span> response when the ProductTailoring is published.</p>
      * @return current
      */
 
@@ -527,7 +527,7 @@ public class ProductTailoringBuilder implements Builder<ProductTailoring> {
     }
 
     /**
-     *  <p>Staged (unpublished) data of the ProductTailoring.</p>
+     *  <p>Staged data of the ProductTailoring. This data is not returned in the Product Projection response by default.</p>
      * @return staged
      */
 

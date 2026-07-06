@@ -9,12 +9,12 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Either <code>messages</code>, <code>changes</code>, or <code>events</code> must be set.</p>
@@ -76,7 +76,7 @@ public interface SubscriptionDraft
     public List<EventSubscription> getEvents();
 
     /**
-     *  <p>Format in which the payload is delivered. When not provided, the PlatformFormat is selected by default.</p>
+     *  <p>Format in which the payload is delivered. When not provided, the <a href="https://docs.commercetools.com/apis/ctp:api:type:PlatformFormat" rel="nofollow">PlatformFormat</a> is selected by default.</p>
      * @return format
      */
     @Valid
@@ -143,7 +143,7 @@ public interface SubscriptionDraft
     public void setEvents(final List<EventSubscription> events);
 
     /**
-     *  <p>Format in which the payload is delivered. When not provided, the PlatformFormat is selected by default.</p>
+     *  <p>Format in which the payload is delivered. When not provided, the <a href="https://docs.commercetools.com/apis/ctp:api:type:PlatformFormat" rel="nofollow">PlatformFormat</a> is selected by default.</p>
      * @param format value to be set
      */
 
@@ -239,8 +239,8 @@ public interface SubscriptionDraft
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SubscriptionDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SubscriptionDraft>() {
+    public static tools.jackson.core.type.TypeReference<SubscriptionDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SubscriptionDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<SubscriptionDraft>";

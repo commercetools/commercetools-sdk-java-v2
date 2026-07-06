@@ -26,7 +26,7 @@ public class ShoppingListLineItemAddedMessagePayloadBuilder
     private com.commercetools.api.models.shopping_list.ShoppingListLineItem lineItem;
 
     /**
-     *  <p>Line Item that was added to the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">Line Item</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class ShoppingListLineItemAddedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Line Item that was added to the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">Line Item</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class ShoppingListLineItemAddedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Line Item that was added to the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">Line Item</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @param lineItem value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class ShoppingListLineItemAddedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Line Item that was added to the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">Line Item</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @return lineItem
      */
 

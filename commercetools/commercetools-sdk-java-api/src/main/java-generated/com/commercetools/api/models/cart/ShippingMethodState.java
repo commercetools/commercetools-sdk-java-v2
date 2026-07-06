@@ -11,17 +11,17 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Determines whether the selected ShippingMethod is allowed for the Cart. For more information, see Predicates.</p>
+ *  <p>Determines whether the selected <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> is allowed for the Cart. For more information, see <span>Predicates</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ShippingMethodState extends JsonEnum {
 
     /**
-    <p>The ShippingMethod <code>predicate</code> does not match the Cart.</p>
-    <p>Ordering this Cart returns an ShippingMethodDoesNotMatchCart error.</p> */
+    <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> <code>predicate</code> does not match the Cart.</p>
+    <p>Ordering this Cart returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethodDoesNotMatchCartError" rel="nofollow">ShippingMethodDoesNotMatchCart</a> error.</p> */
     ShippingMethodState DOES_NOT_MATCH_CART = ShippingMethodStateEnum.DOES_NOT_MATCH_CART;
     /**
-    <p>Either the ShippingMethod <code>predicate</code> matches the Cart or there is no <code>predicate</code> defined.</p> */
+    <p>Either the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> <code>predicate</code> matches the Cart or there is no <code>predicate</code> defined.</p> */
     ShippingMethodState MATCHES_CART = ShippingMethodStateEnum.MATCHES_CART;
 
     /**

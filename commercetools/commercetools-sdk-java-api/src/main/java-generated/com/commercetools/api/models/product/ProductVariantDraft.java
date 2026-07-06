@@ -12,14 +12,14 @@ import com.commercetools.api.models.common.AssetDraft;
 import com.commercetools.api.models.common.Image;
 import com.commercetools.api.models.common.PriceDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Creates a Product Variant when included in the <code>masterVariant</code> and <code>variants</code> fields of the ProductDraft.</p>
+ * ProductVariantDraft
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,7 +36,7 @@ public interface ProductVariantDraft
         extends com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<ProductVariantDraft> {
 
     /**
-     *  <p>User-defined unique SKU of the Product Variant.</p>
+     *  <p>User-defined SKU of the Product Variant. Must be unique across all ProductVariants in a Project.</p>
      * @return sku
      */
 
@@ -44,7 +44,7 @@ public interface ProductVariantDraft
     public String getSku();
 
     /**
-     *  <p>User-defined unique identifier for the ProductVariant.</p>
+     *  <p>User-defined identifier for the ProductVariant. Must be unique among ProductVariants in the same Product.</p>
      * @return key
      */
 
@@ -60,7 +60,7 @@ public interface ProductVariantDraft
     public List<PriceDraft> getPrices();
 
     /**
-     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Variant Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @return attributes
      */
     @Valid
@@ -84,14 +84,14 @@ public interface ProductVariantDraft
     public List<AssetDraft> getAssets();
 
     /**
-     *  <p>User-defined unique SKU of the Product Variant.</p>
+     *  <p>User-defined SKU of the Product Variant. Must be unique across all ProductVariants in a Project.</p>
      * @param sku value to be set
      */
 
     public void setSku(final String sku);
 
     /**
-     *  <p>User-defined unique identifier for the ProductVariant.</p>
+     *  <p>User-defined identifier for the ProductVariant. Must be unique among ProductVariants in the same Product.</p>
      * @param key value to be set
      */
 
@@ -113,7 +113,7 @@ public interface ProductVariantDraft
     public void setPrices(final List<PriceDraft> prices);
 
     /**
-     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Variant Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @param attributes values to be set
      */
 
@@ -121,7 +121,7 @@ public interface ProductVariantDraft
     public void setAttributes(final Attribute... attributes);
 
     /**
-     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Variant Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @param attributes values to be set
      */
 
@@ -250,8 +250,8 @@ public interface ProductVariantDraft
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductVariantDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductVariantDraft>() {
+    public static tools.jackson.core.type.TypeReference<ProductVariantDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductVariantDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductVariantDraft>";

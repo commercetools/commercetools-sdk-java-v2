@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Set LineItemTotalPrice update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetLineItemTotalPriceAction" rel="nofollow">Set LineItemTotalPrice</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetLineItemTotalPriceChangeImpl implements SetLineItemTotalPriceChange, ModelBase {
@@ -32,6 +33,10 @@ public class SetLineItemTotalPriceChangeImpl implements SetLineItemTotalPriceCha
 
     private com.commercetools.history.models.common.LocalizedString lineItem;
 
+    private String lineItemId;
+
+    private String variant;
+
     /**
      * create instance with all properties
      */
@@ -39,11 +44,14 @@ public class SetLineItemTotalPriceChangeImpl implements SetLineItemTotalPriceCha
     SetLineItemTotalPriceChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.Money previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.Money nextValue,
-            @JsonProperty("lineItem") final com.commercetools.history.models.common.LocalizedString lineItem) {
+            @JsonProperty("lineItem") final com.commercetools.history.models.common.LocalizedString lineItem,
+            @JsonProperty("lineItemId") final String lineItemId, @JsonProperty("variant") final String variant) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.lineItem = lineItem;
+        this.lineItemId = lineItemId;
+        this.variant = variant;
         this.type = SET_LINE_ITEM_TOTAL_PRICE_CHANGE;
     }
 
@@ -87,11 +95,28 @@ public class SetLineItemTotalPriceChangeImpl implements SetLineItemTotalPriceCha
     }
 
     /**
-     *  <p>Name of the Product the updated Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the updated Line Item is based on.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getLineItem() {
         return this.lineItem;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
+     */
+
+    public String getLineItemId() {
+        return this.lineItemId;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     */
+
+    public String getVariant() {
+        return this.variant;
     }
 
     public void setChange(final String change) {
@@ -110,6 +135,14 @@ public class SetLineItemTotalPriceChangeImpl implements SetLineItemTotalPriceCha
         this.lineItem = lineItem;
     }
 
+    public void setLineItemId(final String lineItemId) {
+        this.lineItemId = lineItemId;
+    }
+
+    public void setVariant(final String variant) {
+        this.variant = variant;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -125,11 +158,15 @@ public class SetLineItemTotalPriceChangeImpl implements SetLineItemTotalPriceCha
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(lineItem, that.lineItem)
+                .append(lineItemId, that.lineItemId)
+                .append(variant, that.variant)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(lineItem, that.lineItem)
+                .append(lineItemId, that.lineItemId)
+                .append(variant, that.variant)
                 .isEquals();
     }
 
@@ -140,6 +177,8 @@ public class SetLineItemTotalPriceChangeImpl implements SetLineItemTotalPriceCha
                 .append(previousValue)
                 .append(nextValue)
                 .append(lineItem)
+                .append(lineItemId)
+                .append(variant)
                 .toHashCode();
     }
 
@@ -150,6 +189,8 @@ public class SetLineItemTotalPriceChangeImpl implements SetLineItemTotalPriceCha
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
                 .append("lineItem", lineItem)
+                .append("lineItemId", lineItemId)
+                .append("variant", variant)
                 .build();
     }
 

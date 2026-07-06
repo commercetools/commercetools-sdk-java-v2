@@ -23,7 +23,7 @@ public interface BusinessUnitIndexingStatus extends JsonEnum {
     <p>Indexing is in progress.</p> */
     BusinessUnitIndexingStatus INDEXING = BusinessUnitIndexingStatusEnum.INDEXING;
     /**
-    <p>Indexing is complete and the Search Business Units endpoint returns up-to-date results.</p> */
+    <p>Indexing is complete and the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/business-units/search:POST" rel="nofollow">Search Business Units</a> endpoint returns up-to-date results.</p> */
     BusinessUnitIndexingStatus READY = BusinessUnitIndexingStatusEnum.READY;
     /**
     <p>Indexing failed due to an internal error.</p> */

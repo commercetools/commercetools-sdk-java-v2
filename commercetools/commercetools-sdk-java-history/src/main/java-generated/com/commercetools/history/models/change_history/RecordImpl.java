@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,9 +15,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
  *  <p>Captures the differences between the previous and next version of a resource.</p>
- *  <p>The maximum number of Records that can be stored and their retention period are subject to a limit.</p>
+ *  <p>The maximum number of Records that can be stored and their retention period are subject to a <span>limit</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RecordImpl implements Record, ModelBase {
@@ -84,7 +85,7 @@ public class RecordImpl implements Record, ModelBase {
 
     /**
      *  <p>Version of the resource after the change.</p>
-     *  <p>For more information on how the version is incremented, see Optimistic Concurrency Control.</p>
+     *  <p>For more information on how the version is incremented, see <span>Optimistic Concurrency Control</span>.</p>
      */
 
     public Integer getVersion() {
@@ -100,7 +101,7 @@ public class RecordImpl implements Record, ModelBase {
     }
 
     /**
-     *  <p>Indicates the type of change. For creation, update, or deletion, the value is <code>"ResourceCreated"</code>, <code>"ResourceUpdated"</code>, or <code>"ResourceDeleted"</code> respectively.</p>
+     *  <p>Indicates the change type. For creation, update, or deletion, the value is <code>"ResourceCreated"</code>, <code>"ResourceUpdated"</code>, or <code>"ResourceDeleted"</code> respectively.</p>
      */
 
     public String getType() {
@@ -141,7 +142,7 @@ public class RecordImpl implements Record, ModelBase {
 
     /**
      *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>.</p>
-     *  <p>The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     *  <p>The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, <span>Optimistic Concurrency Control</span>).</p>
      */
 
     public java.util.List<com.commercetools.history.models.change.Change> getChanges() {
@@ -157,7 +158,7 @@ public class RecordImpl implements Record, ModelBase {
     }
 
     /**
-     *  <p>References to the Stores associated with the Change.</p>
+     *  <p>References to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> associated with the <a href="https://docs.commercetools.com/apis/ctp:history:type:Change" rel="nofollow">Change</a>.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.KeyReference> getStores() {
@@ -165,7 +166,7 @@ public class RecordImpl implements Record, ModelBase {
     }
 
     /**
-     *  <p>Reference to the Business Unit associated with the Change. Only available for B2B-enabled Projects.</p>
+     *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> associated with the <a href="https://docs.commercetools.com/apis/ctp:history:type:Change" rel="nofollow">Change</a>. Only available for <span>B2B</span>-enabled Projects.</p>
      */
 
     public com.commercetools.history.models.common.KeyReference getBusinessUnit() {

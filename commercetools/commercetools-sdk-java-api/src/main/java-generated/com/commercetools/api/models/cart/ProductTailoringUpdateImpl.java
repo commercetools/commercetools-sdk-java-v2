@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductTailoringUpdate
@@ -43,7 +44,7 @@ public class ProductTailoringUpdateImpl implements ProductTailoringUpdate, Model
     }
 
     /**
-     *  <p>Expected version of the ProductTailoring on which the changes apply. If the expected version does not match the actual version, a 409 Conflict is returned.</p>
+     *  <p>Expected version of the ProductTailoring on which the changes apply. If the expected version does not match the actual version, a <span>409 Conflict</span> is returned.</p>
      */
 
     public Long getVersion() {

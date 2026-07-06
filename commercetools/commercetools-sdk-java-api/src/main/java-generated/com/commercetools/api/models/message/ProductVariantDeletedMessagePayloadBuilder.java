@@ -33,7 +33,7 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
     private Boolean staged;
 
     /**
-     *  <p>Unique identifier of the Product Variant that was added.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> that was added.</p>
      * @param builder function to build the variant value
      * @return Builder
      */
@@ -45,7 +45,7 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>Unique identifier of the Product Variant that was added.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> that was added.</p>
      * @param builder function to build the variant value
      * @return Builder
      */
@@ -57,7 +57,7 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>Unique identifier of the Product Variant that was added.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> that was added.</p>
      * @param variant value to be set
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
+     *  <p>List of image URLs that were removed with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemoveVariantAction" rel="nofollow">Remove Product Variant</a> update action.</p>
      * @param removedImageUrls value to be set
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
+     *  <p>List of image URLs that were removed with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemoveVariantAction" rel="nofollow">Remove Product Variant</a> update action.</p>
      * @param removedImageUrls value to be set
      * @return Builder
      */
@@ -91,7 +91,7 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
+     *  <p>List of image URLs that were removed with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemoveVariantAction" rel="nofollow">Remove Product Variant</a> update action.</p>
      * @param removedImageUrls value to be set
      * @return Builder
      */
@@ -116,7 +116,7 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>Unique identifier of the Product Variant that was added.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> that was added.</p>
      * @return variant
      */
 
@@ -126,7 +126,7 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
+     *  <p>List of image URLs that were removed with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemoveVariantAction" rel="nofollow">Remove Product Variant</a> update action.</p>
      * @return removedImageUrls
      */
 

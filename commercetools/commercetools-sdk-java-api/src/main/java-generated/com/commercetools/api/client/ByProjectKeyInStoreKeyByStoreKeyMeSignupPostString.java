@@ -8,19 +8,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>If used with an optional access token for an anonymous session, all Orders and Carts that belong to the <code>anonymousId</code> are assigned to the newly created Customer.</p>
- *  <p>If omitted in the request body, the Customer <code>stores</code> field is set to the Store specified in the path parameter.</p>
- *  <p>A Cart returned in the CustomerSignInResult has any invalid Line Items removed and is updated with the latest prices, taxes, and discounts. During these updates, the following errors can be returned: MatchingPriceNotFound and MissingTaxRateForCountry.</p>
- *  <p>Creating a Customer produces the CustomerCreated Message.</p>
+ *  <p>If used with an optional <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">access token for an anonymous session</a>, all Orders and Carts that belong to the <code>anonymousId</code> are assigned to the newly created Customer.</p>
+ *  <p>If omitted in the request body, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> <code>stores</code> field is set to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> specified in the path parameter.</p>
+ *  <p>If the Customer has multiple active Carts, the anonymous Cart is <span>merged</span> into the most recently modified active Cart.</p>
+ *  <p>Creating a Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerCreatedMessage" rel="nofollow">CustomerCreated</a> Message.</p>
  *
  * <hr>
  * <div class=code-example>

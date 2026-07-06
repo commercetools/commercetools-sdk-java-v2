@@ -28,7 +28,7 @@ public class StandalonePriceExternalDiscountSetMessagePayloadBuilder
     private com.commercetools.api.models.common.DiscountedPrice discounted;
 
     /**
-     *  <p>The <code>discounted</code> value of the StandalonePrice after the Set Discounted Price update action.</p>
+     *  <p>The <code>discounted</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetDiscountedPriceAction" rel="nofollow">Set Discounted Price</a> update action.</p>
      * @param builder function to build the discounted value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class StandalonePriceExternalDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>The <code>discounted</code> value of the StandalonePrice after the Set Discounted Price update action.</p>
+     *  <p>The <code>discounted</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetDiscountedPriceAction" rel="nofollow">Set Discounted Price</a> update action.</p>
      * @param builder function to build the discounted value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class StandalonePriceExternalDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>The <code>discounted</code> value of the StandalonePrice after the Set Discounted Price update action.</p>
+     *  <p>The <code>discounted</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetDiscountedPriceAction" rel="nofollow">Set Discounted Price</a> update action.</p>
      * @param discounted value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class StandalonePriceExternalDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>The <code>discounted</code> value of the StandalonePrice after the Set Discounted Price update action.</p>
+     *  <p>The <code>discounted</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetDiscountedPriceAction" rel="nofollow">Set Discounted Price</a> update action.</p>
      * @return discounted
      */
 

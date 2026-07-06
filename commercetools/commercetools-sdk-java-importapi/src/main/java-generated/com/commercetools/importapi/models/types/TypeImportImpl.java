@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Represents the data used to import a Type. Once imported, this data is persisted as a Type in the Project.</p>
+ *  <p>Represents the data used to import a Type. Once imported, this data is persisted as a <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> in the Project.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TypeImportImpl implements TypeImport, ModelBase {
@@ -55,7 +56,7 @@ public class TypeImportImpl implements TypeImport, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier for the Type. If a Type with this <code>key</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier for the Type. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      */
 
     public String getKey() {

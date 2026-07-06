@@ -27,7 +27,7 @@ public class ParcelChangeValueBuilder implements Builder<ParcelChangeValue> {
     private String createdAt;
 
     /**
-     *  <p><code>id</code> of the Parcel.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class ParcelChangeValueBuilder implements Builder<ParcelChangeValue> {
     }
 
     /**
-     *  <p><code>id</code> of the Parcel.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @return id
      */
 

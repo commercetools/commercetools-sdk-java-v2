@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Schedule of a Recurring Order that occurs on a specific day of each month. This type is returned in the RecurrencePolicy for an active Recurring Order.</p>
+ *  <p>Schedule of a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a> that occurs on a specific day of each month. This type is returned in the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a> for an active <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface DayOfMonthSchedule extends RecurrencePolicySchedule {
     String DAY_OF_MONTH = "dayOfMonth";
 
     /**
-     *  <p>The day of the month when the Recurring Order is created. If the value is greater than the number of days in a given month, the order is created on the last day of the month.</p>
+     *  <p>The day of the month when the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a> is created. If the value is greater than the number of days in a given month, the order is created on the last day of the month.</p>
      * @return day
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface DayOfMonthSchedule extends RecurrencePolicySchedule {
     public Integer getDay();
 
     /**
-     *  <p>The day of the month when the Recurring Order is created. If the value is greater than the number of days in a given month, the order is created on the last day of the month.</p>
+     *  <p>The day of the month when the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a> is created. If the value is greater than the number of days in a given month, the order is created on the last day of the month.</p>
      * @param day value to be set
      */
 
@@ -119,8 +119,8 @@ public interface DayOfMonthSchedule extends RecurrencePolicySchedule {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DayOfMonthSchedule> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DayOfMonthSchedule>() {
+    public static tools.jackson.core.type.TypeReference<DayOfMonthSchedule> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DayOfMonthSchedule>() {
             @Override
             public String toString() {
                 return "TypeReference<DayOfMonthSchedule>";

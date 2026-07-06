@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * Review
@@ -199,7 +200,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelReference" rel="nofollow">ChannelReference</a>. A referenced resource can be embedded through <span>Reference Expansion</span>. The expanded reference is the value of an additional <code>obj</code> field then.</p>
      */
 
     public com.commercetools.api.models.common.Reference getTarget() {
@@ -207,7 +208,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     *  <p>Indicates if this Review is taken into account in the ratings statistics of the target. A Review is per default used in the statistics, unless the Review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>. If the role of a State is modified after the calculation of this field, the calculation is not updated.</p>
+     *  <p>Indicates if this Review is taken into account in the ratings statistics of the target. A Review is per default used in the statistics, unless the Review is in a state that does not have the <a href="https://docs.commercetools.com/apis/ctp:api:type:StateRoleEnum" rel="nofollow">role</a> <code>ReviewIncludedInStatistics</code>. If the role of a <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> is modified after the calculation of this field, the calculation is not updated.</p>
      */
 
     public Boolean getIncludedInStatistics() {
@@ -223,7 +224,7 @@ public class ReviewImpl implements Review, ModelBase {
     }
 
     /**
-     *  <p>State of the Review. Used for approval processes, see Review approval process for details.</p>
+     *  <p>State of the Review. Used for approval processes, see <span>Review approval process</span> for details.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {

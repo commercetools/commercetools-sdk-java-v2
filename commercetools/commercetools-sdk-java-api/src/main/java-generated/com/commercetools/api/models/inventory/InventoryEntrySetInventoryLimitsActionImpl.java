@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Sets the inventory limits for a specific InventoryEntry. This action allows you to define minimum and maximum quantities that can be added to a Cart. For more information, see Quantity limits.</p>
+ *  <p>Sets the inventory limits for a specific InventoryEntry. This action allows you to define minimum and maximum quantities that can be added to a Cart. For more information, see <span>Quantity limits</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntrySetInventoryLimitsActionImpl implements InventoryEntrySetInventoryLimitsAction, ModelBase {

@@ -12,12 +12,12 @@ import com.commercetools.api.models.cart.CartResourceIdentifier;
 import com.commercetools.api.models.state.StateResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Recurring Orders are automatically assigned the Store and/or Business Unit from the associated Cart.</p>
@@ -29,7 +29,6 @@ import jakarta.validation.constraints.NotNull;
  *     RecurringOrderDraft recurringOrderDraft = RecurringOrderDraft.builder()
  *             .cart(cartBuilder -> cartBuilder)
  *             .cartVersion(0.3)
- *             .startsAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .build()
  * </code></pre>
  * </div>
@@ -39,7 +38,7 @@ import jakarta.validation.constraints.NotNull;
 public interface RecurringOrderDraft extends io.vrap.rmf.base.client.Draft<RecurringOrderDraft> {
 
     /**
-     *  <p>User-defined unique identifier of the RecurringOrder.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a>.</p>
      * @return key
      */
 
@@ -47,7 +46,7 @@ public interface RecurringOrderDraft extends io.vrap.rmf.base.client.Draft<Recur
     public String getKey();
 
     /**
-     *  <p>ResourceIdentifier to the Cart from which the RecurringOrder is created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Cart from which the RecurringOrder is created.</p>
      * @return cart
      */
     @NotNull
@@ -56,7 +55,7 @@ public interface RecurringOrderDraft extends io.vrap.rmf.base.client.Draft<Recur
     public CartResourceIdentifier getCart();
 
     /**
-     *  <p>Current version of the referenced Cart.</p>
+     *  <p>Current version of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
      * @return cartVersion
      */
     @NotNull
@@ -64,10 +63,10 @@ public interface RecurringOrderDraft extends io.vrap.rmf.base.client.Draft<Recur
     public Long getCartVersion();
 
     /**
-     *  <p>Date and time (UTC) when the RecurringOrder will start.</p>
+     *  <p>Date and time (UTC) when the RecurringOrder will start. When specified, the date and time must be in the future. If not specified, the recurring order will start immediately.</p>
      * @return startsAt
      */
-    @NotNull
+
     @JsonProperty("startsAt")
     public ZonedDateTime getStartsAt();
 
@@ -96,28 +95,28 @@ public interface RecurringOrderDraft extends io.vrap.rmf.base.client.Draft<Recur
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>User-defined unique identifier of the RecurringOrder.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a>.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p>ResourceIdentifier to the Cart from which the RecurringOrder is created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Cart from which the RecurringOrder is created.</p>
      * @param cart value to be set
      */
 
     public void setCart(final CartResourceIdentifier cart);
 
     /**
-     *  <p>Current version of the referenced Cart.</p>
+     *  <p>Current version of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
      * @param cartVersion value to be set
      */
 
     public void setCartVersion(final Long cartVersion);
 
     /**
-     *  <p>Date and time (UTC) when the RecurringOrder will start.</p>
+     *  <p>Date and time (UTC) when the RecurringOrder will start. When specified, the date and time must be in the future. If not specified, the recurring order will start immediately.</p>
      * @param startsAt value to be set
      */
 
@@ -223,8 +222,8 @@ public interface RecurringOrderDraft extends io.vrap.rmf.base.client.Draft<Recur
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<RecurringOrderDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<RecurringOrderDraft>() {
+    public static tools.jackson.core.type.TypeReference<RecurringOrderDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<RecurringOrderDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<RecurringOrderDraft>";

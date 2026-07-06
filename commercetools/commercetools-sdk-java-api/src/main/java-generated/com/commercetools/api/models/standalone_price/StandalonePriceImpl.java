@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * StandalonePrice
@@ -169,7 +170,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     *  <p>SKU of the ProductVariant to which this Price is associated.</p>
+     *  <p>SKU of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to which this Price is associated.</p>
      */
 
     public String getSku() {
@@ -193,7 +194,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     *  <p>CustomerGroup for which this Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which this Price is valid.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
@@ -201,7 +202,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     *  <p>Product distribution Channel for which this Price is valid.</p>
+     *  <p>Product distribution <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which this Price is valid.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelReference getChannel() {
@@ -217,7 +218,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     *  <p>Date until the Price is valid. Standalone Prices that are no longer valid are not automatically deleted, but they can be deleted if necessary.</p>
+     *  <p>Date until the Price is valid. Standalone Prices that are no longer valid are not automatically deleted, but they can be <span>deleted</span> if necessary.</p>
      */
 
     public java.time.ZonedDateTime getValidUntil() {
@@ -234,7 +235,8 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     *  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the Line Item price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
+     *  <p>Set if a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> exists. If set, the API uses the <code>discounted</code> value for the <span>Line Item price selection</span>. When a <span>relative discount</span> is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the <span>half down rounding</span>.</p>
+     *  <p>If an <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueAbsolute" rel="nofollow">absolute discount</a> value exceeds the price of the Product Variant, the discounted price is a negative value.</p>
      */
 
     public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
@@ -242,7 +244,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields for the StandalonePrice.</p>
+     *  <p>Custom Fields of the StandalonePrice.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -258,7 +260,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     *  <p>If set to <code>true</code>, the StandalonePrice is considered during Product price selection. If set to <code>false</code>, the StandalonePrice is not considered during Product price selection and any associated Line Items in a Cart cannot be ordered.</p>
+     *  <p>If set to <code>true</code>, the StandalonePrice is considered during <span>Product price selection</span>. If set to <code>false</code>, the StandalonePrice is not considered during <span>Product price selection</span> and any associated Line Items in a Cart cannot be ordered.</p>
      */
 
     public Boolean getActive() {
@@ -266,7 +268,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     *  <p>RecurrencePolicy for which this Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a> for which this Price is valid.</p>
      */
 
     public com.commercetools.api.models.recurrence_policy.RecurrencePolicyReference getRecurrencePolicy() {

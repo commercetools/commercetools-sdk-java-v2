@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.payment.TransactionDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Adding a Transaction to a Payment generates the PaymentTransactionAdded Message. Once a Transaction is added to the Payment, it can no longer be updated or deleted using the My Payments API.</p>
+ *  <p>Adding a Transaction to a Payment generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentTransactionAddedMessage" rel="nofollow">PaymentTransactionAdded</a> Message. Once a Transaction is added to the Payment, it can no longer be updated or deleted using the My Payments API.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -123,8 +123,8 @@ public interface MyPaymentAddTransactionAction extends MyPaymentUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyPaymentAddTransactionAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyPaymentAddTransactionAction>() {
+    public static tools.jackson.core.type.TypeReference<MyPaymentAddTransactionAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyPaymentAddTransactionAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyPaymentAddTransactionAction>";

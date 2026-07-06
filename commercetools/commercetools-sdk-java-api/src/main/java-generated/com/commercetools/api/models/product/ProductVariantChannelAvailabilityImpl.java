@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductVariantChannelAvailability
@@ -54,7 +55,7 @@ public class ProductVariantChannelAvailabilityImpl implements ProductVariantChan
     }
 
     /**
-     *  <p>Indicates whether a Product Variant is in stock in a specified Channel.</p>
+     *  <p>Indicates whether a Product Variant is in stock in a specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      */
 
     public Boolean getIsOnStock() {
@@ -62,7 +63,7 @@ public class ProductVariantChannelAvailabilityImpl implements ProductVariantChan
     }
 
     /**
-     *  <p>Number of days to restock a Product Variant once it is out of stock in a specified Channel.</p>
+     *  <p>Number of days to restock a Product Variant once it is out of stock in a specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      */
 
     public Long getRestockableInDays() {
@@ -70,7 +71,7 @@ public class ProductVariantChannelAvailabilityImpl implements ProductVariantChan
     }
 
     /**
-     *  <p>Number of items of this Product Variant that are in stock in a specified Channel.</p>
+     *  <p>Number of items of this Product Variant that are in stock in a specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      */
 
     public Long getAvailableQuantity() {
@@ -78,7 +79,7 @@ public class ProductVariantChannelAvailabilityImpl implements ProductVariantChan
     }
 
     /**
-     *  <p>Unique identifier of the InventoryEntry.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
      */
 
     public String getId() {
@@ -86,7 +87,7 @@ public class ProductVariantChannelAvailabilityImpl implements ProductVariantChan
     }
 
     /**
-     *  <p>Current version of the InventoryEntry.</p>
+     *  <p>Current version of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
      */
 
     public Long getVersion() {

@@ -30,7 +30,7 @@ public class OrderCustomerGroupSetMessagePayloadBuilder implements Builder<Order
     private com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup;
 
     /**
-     *  <p>CustomerGroup on the Order after the Set Customer Group update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomerGroupAction" rel="nofollow">Set Customer Group</a> update action.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -44,7 +44,7 @@ public class OrderCustomerGroupSetMessagePayloadBuilder implements Builder<Order
     }
 
     /**
-     *  <p>CustomerGroup on the Order after the Set Customer Group update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomerGroupAction" rel="nofollow">Set Customer Group</a> update action.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -57,7 +57,7 @@ public class OrderCustomerGroupSetMessagePayloadBuilder implements Builder<Order
     }
 
     /**
-     *  <p>CustomerGroup on the Order after the Set Customer Group update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomerGroupAction" rel="nofollow">Set Customer Group</a> update action.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class OrderCustomerGroupSetMessagePayloadBuilder implements Builder<Order
     }
 
     /**
-     *  <p>CustomerGroup on the Order before the Set Customer Group update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomerGroupAction" rel="nofollow">Set Customer Group</a> update action.</p>
      * @param builder function to build the oldCustomerGroup value
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class OrderCustomerGroupSetMessagePayloadBuilder implements Builder<Order
     }
 
     /**
-     *  <p>CustomerGroup on the Order before the Set Customer Group update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomerGroupAction" rel="nofollow">Set Customer Group</a> update action.</p>
      * @param builder function to build the oldCustomerGroup value
      * @return Builder
      */
@@ -96,7 +96,7 @@ public class OrderCustomerGroupSetMessagePayloadBuilder implements Builder<Order
     }
 
     /**
-     *  <p>CustomerGroup on the Order before the Set Customer Group update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomerGroupAction" rel="nofollow">Set Customer Group</a> update action.</p>
      * @param oldCustomerGroup value to be set
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class OrderCustomerGroupSetMessagePayloadBuilder implements Builder<Order
     }
 
     /**
-     *  <p>CustomerGroup on the Order after the Set Customer Group update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomerGroupAction" rel="nofollow">Set Customer Group</a> update action.</p>
      * @return customerGroup
      */
 
@@ -118,7 +118,7 @@ public class OrderCustomerGroupSetMessagePayloadBuilder implements Builder<Order
     }
 
     /**
-     *  <p>CustomerGroup on the Order before the Set Customer Group update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomerGroupAction" rel="nofollow">Set Customer Group</a> update action.</p>
      * @return oldCustomerGroup
      */
 

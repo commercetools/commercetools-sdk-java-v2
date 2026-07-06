@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Changes the order of LocalizedEnumValues in a LocalizedEnumType FieldDefinition. This update action can be used to update a LocalizedEnumType FieldDefinition and a SetType of LocalizedEnumType FieldDefinitions.</p>
+ *  <p>Changes the order of <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumValue" rel="nofollow">LocalizedEnumValues</a> in a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumType" rel="nofollow">LocalizedEnumType</a> FieldDefinition. This update action can be used to update a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumType" rel="nofollow">LocalizedEnumType</a> FieldDefinition and a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldSetType" rel="nofollow">SetType</a> of <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumType" rel="nofollow">LocalizedEnumType</a> FieldDefinitions.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ public interface TypeChangeLocalizedEnumValueOrderAction extends TypeUpdateActio
     String CHANGE_LOCALIZED_ENUM_VALUE_ORDER = "changeLocalizedEnumValueOrder";
 
     /**
-     *  <p><code>name</code> of the Field Definition to update.</p>
+     *  <p><code>name</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">Field Definition</a> to update.</p>
      * @return fieldName
      */
     @NotNull
@@ -55,7 +55,7 @@ public interface TypeChangeLocalizedEnumValueOrderAction extends TypeUpdateActio
     public List<String> getKeys();
 
     /**
-     *  <p><code>name</code> of the Field Definition to update.</p>
+     *  <p><code>name</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">Field Definition</a> to update.</p>
      * @param fieldName value to be set
      */
 
@@ -148,8 +148,8 @@ public interface TypeChangeLocalizedEnumValueOrderAction extends TypeUpdateActio
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TypeChangeLocalizedEnumValueOrderAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TypeChangeLocalizedEnumValueOrderAction>() {
+    public static tools.jackson.core.type.TypeReference<TypeChangeLocalizedEnumValueOrderAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TypeChangeLocalizedEnumValueOrderAction>() {
             @Override
             public String toString() {
                 return "TypeReference<TypeChangeLocalizedEnumValueOrderAction>";

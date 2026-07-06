@@ -20,7 +20,8 @@ public class AddPriceChangeTest {
                 new Object[] { "nextValue",
                         AddPriceChange.builder().nextValue(new com.commercetools.history.models.common.PriceImpl()) },
                 new Object[] { "catalogData", AddPriceChange.builder().catalogData("catalogData") },
-                new Object[] { "priceId", AddPriceChange.builder().priceId("priceId") } };
+                new Object[] { "priceId", AddPriceChange.builder().priceId("priceId") },
+                new Object[] { "variant", AddPriceChange.builder().variant("variant") } };
     }
 
     @Test
@@ -49,5 +50,12 @@ public class AddPriceChangeTest {
         AddPriceChange value = AddPriceChange.of();
         value.setPriceId("priceId");
         Assertions.assertThat(value.getPriceId()).isEqualTo("priceId");
+    }
+
+    @Test
+    public void variant() {
+        AddPriceChange value = AddPriceChange.of();
+        value.setVariant("variant");
+        Assertions.assertThat(value.getVariant()).isEqualTo("variant");
     }
 }

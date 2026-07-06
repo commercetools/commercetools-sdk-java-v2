@@ -196,7 +196,7 @@ public class ProductVariantTailoringAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -208,7 +208,7 @@ public class ProductVariantTailoringAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -353,7 +353,7 @@ public class ProductVariantTailoringAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     *  <p><code>id</code> of the ProductVariant added to the Tailoring.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> added to the Tailoring.</p>
      * @param variantId value to be set
      * @return Builder
      */
@@ -364,7 +364,7 @@ public class ProductVariantTailoringAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>The ProductVariantTailoring that was added to the ProductTailoring.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">ProductVariantTailoring</a> that was added to the ProductTailoring.</p>
      * @param builder function to build the variant value
      * @return Builder
      */
@@ -377,7 +377,7 @@ public class ProductVariantTailoringAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>The ProductVariantTailoring that was added to the ProductTailoring.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">ProductVariantTailoring</a> that was added to the ProductTailoring.</p>
      * @param builder function to build the variant value
      * @return Builder
      */
@@ -390,7 +390,7 @@ public class ProductVariantTailoringAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>The ProductVariantTailoring that was added to the ProductTailoring.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">ProductVariantTailoring</a> that was added to the ProductTailoring.</p>
      * @param variant value to be set
      * @return Builder
      */
@@ -467,7 +467,7 @@ public class ProductVariantTailoringAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -523,7 +523,7 @@ public class ProductVariantTailoringAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     *  <p><code>id</code> of the ProductVariant added to the Tailoring.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> added to the Tailoring.</p>
      * @return variantId
      */
 
@@ -532,7 +532,7 @@ public class ProductVariantTailoringAddedMessageBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>The ProductVariantTailoring that was added to the ProductTailoring.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">ProductVariantTailoring</a> that was added to the ProductTailoring.</p>
      * @return variant
      */
 

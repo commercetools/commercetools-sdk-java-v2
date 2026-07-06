@@ -9,14 +9,14 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generates the ProductTailoringSlugSet Message.</p>
+ *  <p>Generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSlugSetMessage" rel="nofollow">ProductTailoringSlugSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -136,8 +136,8 @@ public interface ProductTailoringSetSlugAction extends ProductTailoringUpdateAct
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductTailoringSetSlugAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductTailoringSetSlugAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductTailoringSetSlugAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductTailoringSetSlugAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductTailoringSetSlugAction>";

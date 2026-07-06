@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.zone.ZoneResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ZoneRateDraft
@@ -36,7 +36,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ZoneRateDraft extends io.vrap.rmf.base.client.Draft<ZoneRateDraft> {
 
     /**
-     *  <p>Sets the Zone for which the shippng rates are valid.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> for which the shippng rates are valid.</p>
      * @return zone
      */
     @NotNull
@@ -45,7 +45,7 @@ public interface ZoneRateDraft extends io.vrap.rmf.base.client.Draft<ZoneRateDra
     public ZoneResourceIdentifier getZone();
 
     /**
-     *  <p>Shipping rates for the <code>currencies</code> configured in the Project. The array must not contain two ShippingRates with the same CurrencyCode.</p>
+     *  <p>Shipping rates for the <code>currencies</code> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. The array must not contain two ShippingRates with the same <a href="https://docs.commercetools.com/apis/ctp:api:type:CurrencyCode" rel="nofollow">CurrencyCode</a>.</p>
      * @return shippingRates
      */
     @NotNull
@@ -54,14 +54,14 @@ public interface ZoneRateDraft extends io.vrap.rmf.base.client.Draft<ZoneRateDra
     public List<ShippingRateDraft> getShippingRates();
 
     /**
-     *  <p>Sets the Zone for which the shippng rates are valid.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> for which the shippng rates are valid.</p>
      * @param zone value to be set
      */
 
     public void setZone(final ZoneResourceIdentifier zone);
 
     /**
-     *  <p>Shipping rates for the <code>currencies</code> configured in the Project. The array must not contain two ShippingRates with the same CurrencyCode.</p>
+     *  <p>Shipping rates for the <code>currencies</code> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. The array must not contain two ShippingRates with the same <a href="https://docs.commercetools.com/apis/ctp:api:type:CurrencyCode" rel="nofollow">CurrencyCode</a>.</p>
      * @param shippingRates values to be set
      */
 
@@ -69,7 +69,7 @@ public interface ZoneRateDraft extends io.vrap.rmf.base.client.Draft<ZoneRateDra
     public void setShippingRates(final ShippingRateDraft... shippingRates);
 
     /**
-     *  <p>Shipping rates for the <code>currencies</code> configured in the Project. The array must not contain two ShippingRates with the same CurrencyCode.</p>
+     *  <p>Shipping rates for the <code>currencies</code> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. The array must not contain two ShippingRates with the same <a href="https://docs.commercetools.com/apis/ctp:api:type:CurrencyCode" rel="nofollow">CurrencyCode</a>.</p>
      * @param shippingRates values to be set
      */
 
@@ -148,8 +148,8 @@ public interface ZoneRateDraft extends io.vrap.rmf.base.client.Draft<ZoneRateDra
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ZoneRateDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ZoneRateDraft>() {
+    public static tools.jackson.core.type.TypeReference<ZoneRateDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ZoneRateDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ZoneRateDraft>";

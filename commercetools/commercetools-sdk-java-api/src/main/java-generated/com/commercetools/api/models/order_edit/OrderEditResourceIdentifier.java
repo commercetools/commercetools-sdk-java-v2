@@ -7,14 +7,16 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.commercetools.api.models.common.ResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>ResourceIdentifier to an OrderEdit. Either <code>id</code> or <code>key</code> is required. If both are set, an InvalidJsonInput error is returned.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to an <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a>. Either <code>id</code> or <code>key</code> is required. If both are set, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidJsonInputError" rel="nofollow">InvalidJsonInput</a> error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,7 +39,15 @@ public interface OrderEditResourceIdentifier
     String ORDER_EDIT = "order-edit";
 
     /**
-     *  <p>Unique identifier of the referenced OrderEdit. Required if <code>key</code> is absent.</p>
+     *
+     * @return typeId
+     */
+
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
+
+    /**
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a>. Required if <code>key</code> is absent.</p>
      * @return id
      */
 
@@ -45,7 +55,7 @@ public interface OrderEditResourceIdentifier
     public String getId();
 
     /**
-     *  <p>User-defined unique identifier of the referenced OrderEdit. Required if <code>id</code> is absent.</p>
+     *  <p>User-defined unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a>. Required if <code>id</code> is absent.</p>
      * @return key
      */
 
@@ -53,14 +63,14 @@ public interface OrderEditResourceIdentifier
     public String getKey();
 
     /**
-     *  <p>Unique identifier of the referenced OrderEdit. Required if <code>key</code> is absent.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a>. Required if <code>key</code> is absent.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     *  <p>User-defined unique identifier of the referenced OrderEdit. Required if <code>id</code> is absent.</p>
+     *  <p>User-defined unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a>. Required if <code>id</code> is absent.</p>
      * @param key value to be set
      */
 
@@ -135,8 +145,8 @@ public interface OrderEditResourceIdentifier
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderEditResourceIdentifier> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderEditResourceIdentifier>() {
+    public static tools.jackson.core.type.TypeReference<OrderEditResourceIdentifier> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderEditResourceIdentifier>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderEditResourceIdentifier>";

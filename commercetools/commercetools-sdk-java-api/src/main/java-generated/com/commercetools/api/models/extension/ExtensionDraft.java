@@ -9,12 +9,12 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ExtensionDraft
@@ -62,13 +62,38 @@ public interface ExtensionDraft
     public List<ExtensionTrigger> getTriggers();
 
     /**
-     *  <p>Maximum time (in milliseconds) the Extension can respond within. If no timeout is provided, the default value is used for all types of Extensions, including <code>payment</code> Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
-     *  <p>This limit can be increased per Project after we review the performance impact. Please contact the Composable Commerce support team and provide the Region, Project key, and use case.</p>
+     *  <p>Maximum time (in milliseconds) the Extension can respond within. If no timeout is provided, the default value is used for all <a href="https://docs.commercetools.com/apis/ctp:api:type:ExtensionResourceTypeId" rel="nofollow">types of Extensions</a>. We recommend keeping the timeout as low as possible to avoid performance issues.</p>
+     *  <p>The limit of 10000 ms (10 seconds) can be increased per Project after we review the performance impact. Please contact the <span>commercetools support team</span> and provide the Region, Project key, and use case.</p>
      * @return timeoutInMs
      */
 
     @JsonProperty("timeoutInMs")
     public Integer getTimeoutInMs();
+
+    /**
+     *  <p>Extensions that must complete before this Extension is called, identified by <code>id</code> or <code>key</code>. Maximum 5 entries. If omitted, the Extension has no dependencies and may run concurrently with other independent Extensions.</p>
+     * @return dependencies
+     */
+    @Valid
+    @JsonProperty("dependencies")
+    public List<ExtensionResourceIdentifier> getDependencies();
+
+    /**
+     *  <p><span>Expansion paths</span> used for reference expansion of the payload.</p>
+     *  <p>Be aware of the <span>limits</span> of this feature and its <span>performance impact</span>.</p>
+     * @return expansionPaths
+     */
+
+    @JsonProperty("expansionPaths")
+    public List<String> getExpansionPaths();
+
+    /**
+     *  <p>Configures additional information included in the payload sent to the API Extension.</p>
+     * @return additionalContext
+     */
+    @Valid
+    @JsonProperty("additionalContext")
+    public ExtensionAdditionalContextDraft getAdditionalContext();
 
     /**
      *  <p>User-defined unique identifier for the Extension.</p>
@@ -100,12 +125,51 @@ public interface ExtensionDraft
     public void setTriggers(final List<ExtensionTrigger> triggers);
 
     /**
-     *  <p>Maximum time (in milliseconds) the Extension can respond within. If no timeout is provided, the default value is used for all types of Extensions, including <code>payment</code> Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
-     *  <p>This limit can be increased per Project after we review the performance impact. Please contact the Composable Commerce support team and provide the Region, Project key, and use case.</p>
+     *  <p>Maximum time (in milliseconds) the Extension can respond within. If no timeout is provided, the default value is used for all <a href="https://docs.commercetools.com/apis/ctp:api:type:ExtensionResourceTypeId" rel="nofollow">types of Extensions</a>. We recommend keeping the timeout as low as possible to avoid performance issues.</p>
+     *  <p>The limit of 10000 ms (10 seconds) can be increased per Project after we review the performance impact. Please contact the <span>commercetools support team</span> and provide the Region, Project key, and use case.</p>
      * @param timeoutInMs value to be set
      */
 
     public void setTimeoutInMs(final Integer timeoutInMs);
+
+    /**
+     *  <p>Extensions that must complete before this Extension is called, identified by <code>id</code> or <code>key</code>. Maximum 5 entries. If omitted, the Extension has no dependencies and may run concurrently with other independent Extensions.</p>
+     * @param dependencies values to be set
+     */
+
+    @JsonIgnore
+    public void setDependencies(final ExtensionResourceIdentifier... dependencies);
+
+    /**
+     *  <p>Extensions that must complete before this Extension is called, identified by <code>id</code> or <code>key</code>. Maximum 5 entries. If omitted, the Extension has no dependencies and may run concurrently with other independent Extensions.</p>
+     * @param dependencies values to be set
+     */
+
+    public void setDependencies(final List<ExtensionResourceIdentifier> dependencies);
+
+    /**
+     *  <p><span>Expansion paths</span> used for reference expansion of the payload.</p>
+     *  <p>Be aware of the <span>limits</span> of this feature and its <span>performance impact</span>.</p>
+     * @param expansionPaths values to be set
+     */
+
+    @JsonIgnore
+    public void setExpansionPaths(final String... expansionPaths);
+
+    /**
+     *  <p><span>Expansion paths</span> used for reference expansion of the payload.</p>
+     *  <p>Be aware of the <span>limits</span> of this feature and its <span>performance impact</span>.</p>
+     * @param expansionPaths values to be set
+     */
+
+    public void setExpansionPaths(final List<String> expansionPaths);
+
+    /**
+     *  <p>Configures additional information included in the payload sent to the API Extension.</p>
+     * @param additionalContext value to be set
+     */
+
+    public void setAdditionalContext(final ExtensionAdditionalContextDraft additionalContext);
 
     /**
      * factory method
@@ -126,6 +190,9 @@ public interface ExtensionDraft
         instance.setDestination(template.getDestination());
         instance.setTriggers(template.getTriggers());
         instance.setTimeoutInMs(template.getTimeoutInMs());
+        instance.setDependencies(template.getDependencies());
+        instance.setExpansionPaths(template.getExpansionPaths());
+        instance.setAdditionalContext(template.getAdditionalContext());
         return instance;
     }
 
@@ -151,6 +218,14 @@ public interface ExtensionDraft
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setTimeoutInMs(template.getTimeoutInMs());
+        instance.setDependencies(Optional.ofNullable(template.getDependencies())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.extension.ExtensionResourceIdentifier::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setExpansionPaths(Optional.ofNullable(template.getExpansionPaths()).map(ArrayList::new).orElse(null));
+        instance.setAdditionalContext(com.commercetools.api.models.extension.ExtensionAdditionalContextDraft
+                .deepCopy(template.getAdditionalContext()));
         return instance;
     }
 
@@ -185,8 +260,8 @@ public interface ExtensionDraft
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ExtensionDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ExtensionDraft>() {
+    public static tools.jackson.core.type.TypeReference<ExtensionDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ExtensionDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ExtensionDraft>";

@@ -7,7 +7,6 @@ import java.util.*;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -17,9 +16,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
  *  <p>Returned when a previous conflicting operation is still pending and needs to finish before the request can succeed.</p>
- *  <p>The client application should retry the request with exponential backoff up to a point where further delay is unacceptable. If the error persists, report it to the Composable Commerce support team.</p>
+ *  <p>The client application should retry the request with exponential backoff up to a point where further delay is unacceptable. If the error persists, report it to the <span>commercetools support team</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PendingOperationErrorImpl implements PendingOperationError, ModelBase {

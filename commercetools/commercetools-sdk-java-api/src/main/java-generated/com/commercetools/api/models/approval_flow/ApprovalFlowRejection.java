@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.business_unit.Associate;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ApprovalFlowRejection
@@ -36,7 +36,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ApprovalFlowRejection {
 
     /**
-     *  <p>Associate who rejected the Approval Flow.</p>
+     *  <p>Associate who rejected the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @return rejecter
      */
     @NotNull
@@ -45,7 +45,7 @@ public interface ApprovalFlowRejection {
     public Associate getRejecter();
 
     /**
-     *  <p>Date and time (UTC) the Approval Flow was rejected.</p>
+     *  <p>Date and time (UTC) the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> was rejected.</p>
      * @return rejectedAt
      */
     @NotNull
@@ -53,7 +53,7 @@ public interface ApprovalFlowRejection {
     public ZonedDateTime getRejectedAt();
 
     /**
-     *  <p>The reason for the rejection of the Approval Flow.</p>
+     *  <p>The reason for the rejection of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @return reason
      */
 
@@ -61,21 +61,21 @@ public interface ApprovalFlowRejection {
     public String getReason();
 
     /**
-     *  <p>Associate who rejected the Approval Flow.</p>
+     *  <p>Associate who rejected the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @param rejecter value to be set
      */
 
     public void setRejecter(final Associate rejecter);
 
     /**
-     *  <p>Date and time (UTC) the Approval Flow was rejected.</p>
+     *  <p>Date and time (UTC) the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> was rejected.</p>
      * @param rejectedAt value to be set
      */
 
     public void setRejectedAt(final ZonedDateTime rejectedAt);
 
     /**
-     *  <p>The reason for the rejection of the Approval Flow.</p>
+     *  <p>The reason for the rejection of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @param reason value to be set
      */
 
@@ -152,8 +152,8 @@ public interface ApprovalFlowRejection {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ApprovalFlowRejection> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ApprovalFlowRejection>() {
+    public static tools.jackson.core.type.TypeReference<ApprovalFlowRejection> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ApprovalFlowRejection>() {
             @Override
             public String toString() {
                 return "TypeReference<ApprovalFlowRejection>";

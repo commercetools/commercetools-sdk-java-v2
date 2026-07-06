@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,6 +15,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
  * ProductVariantChannelAvailability
  */
@@ -24,20 +25,27 @@ public class ProductVariantChannelAvailabilityImpl implements ProductVariantChan
 
     private Boolean isOnStock;
 
-    private Integer restockableInDays;
+    private Long restockableInDays;
 
-    private Integer availableQuantity;
+    private Long availableQuantity;
+
+    private String id;
+
+    private Long version;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     ProductVariantChannelAvailabilityImpl(@JsonProperty("isOnStock") final Boolean isOnStock,
-            @JsonProperty("restockableInDays") final Integer restockableInDays,
-            @JsonProperty("availableQuantity") final Integer availableQuantity) {
+            @JsonProperty("restockableInDays") final Long restockableInDays,
+            @JsonProperty("availableQuantity") final Long availableQuantity, @JsonProperty("id") final String id,
+            @JsonProperty("version") final Long version) {
         this.isOnStock = isOnStock;
         this.restockableInDays = restockableInDays;
         this.availableQuantity = availableQuantity;
+        this.id = id;
+        this.version = version;
     }
 
     /**
@@ -47,7 +55,7 @@ public class ProductVariantChannelAvailabilityImpl implements ProductVariantChan
     }
 
     /**
-     *
+     *  <p>Indicates whether a Product Variant is in stock in a specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      */
 
     public Boolean getIsOnStock() {
@@ -55,31 +63,55 @@ public class ProductVariantChannelAvailabilityImpl implements ProductVariantChan
     }
 
     /**
-     *
+     *  <p>Number of days to restock a Product Variant once it is out of stock in a specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      */
 
-    public Integer getRestockableInDays() {
+    public Long getRestockableInDays() {
         return this.restockableInDays;
     }
 
     /**
-     *
+     *  <p>Number of items of this Product Variant that are in stock in a specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      */
 
-    public Integer getAvailableQuantity() {
+    public Long getAvailableQuantity() {
         return this.availableQuantity;
+    }
+
+    /**
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
+     */
+
+    public String getId() {
+        return this.id;
+    }
+
+    /**
+     *  <p>Current version of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
+     */
+
+    public Long getVersion() {
+        return this.version;
     }
 
     public void setIsOnStock(final Boolean isOnStock) {
         this.isOnStock = isOnStock;
     }
 
-    public void setRestockableInDays(final Integer restockableInDays) {
+    public void setRestockableInDays(final Long restockableInDays) {
         this.restockableInDays = restockableInDays;
     }
 
-    public void setAvailableQuantity(final Integer availableQuantity) {
+    public void setAvailableQuantity(final Long availableQuantity) {
         this.availableQuantity = availableQuantity;
+    }
+
+    public void setId(final String id) {
+        this.id = id;
+    }
+
+    public void setVersion(final Long version) {
+        this.version = version;
     }
 
     @Override
@@ -95,9 +127,13 @@ public class ProductVariantChannelAvailabilityImpl implements ProductVariantChan
         return new EqualsBuilder().append(isOnStock, that.isOnStock)
                 .append(restockableInDays, that.restockableInDays)
                 .append(availableQuantity, that.availableQuantity)
+                .append(id, that.id)
+                .append(version, that.version)
                 .append(isOnStock, that.isOnStock)
                 .append(restockableInDays, that.restockableInDays)
                 .append(availableQuantity, that.availableQuantity)
+                .append(id, that.id)
+                .append(version, that.version)
                 .isEquals();
     }
 
@@ -106,6 +142,8 @@ public class ProductVariantChannelAvailabilityImpl implements ProductVariantChan
         return new HashCodeBuilder(17, 37).append(isOnStock)
                 .append(restockableInDays)
                 .append(availableQuantity)
+                .append(id)
+                .append(version)
                 .toHashCode();
     }
 
@@ -114,6 +152,8 @@ public class ProductVariantChannelAvailabilityImpl implements ProductVariantChan
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("isOnStock", isOnStock)
                 .append("restockableInDays", restockableInDays)
                 .append("availableQuantity", availableQuantity)
+                .append("id", id)
+                .append("version", version)
                 .build();
     }
 

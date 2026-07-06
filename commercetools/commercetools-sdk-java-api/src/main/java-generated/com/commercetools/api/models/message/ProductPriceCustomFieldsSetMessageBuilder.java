@@ -196,7 +196,7 @@ public class ProductPriceCustomFieldsSetMessageBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -208,7 +208,7 @@ public class ProductPriceCustomFieldsSetMessageBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -270,7 +270,7 @@ public class ProductPriceCustomFieldsSetMessageBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>Unique identifier of the Price on which the Custom Type was set.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> on which the Custom Type was set.</p>
      * @param priceId value to be set
      * @return Builder
      */
@@ -281,7 +281,7 @@ public class ProductPriceCustomFieldsSetMessageBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>Unique identifier of the ProductVariant to which the Price belongs.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to which the Price belongs.</p>
      * @param variantId value to be set
      * @return Builder
      */
@@ -292,7 +292,7 @@ public class ProductPriceCustomFieldsSetMessageBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -339,7 +339,7 @@ public class ProductPriceCustomFieldsSetMessageBuilder implements Builder<Produc
     }
 
     /**
-     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the previous <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a>. Absent if there was no previous Custom Type present.</p>
      * @param oldTypeId value to be set
      * @return Builder
      */
@@ -415,7 +415,7 @@ public class ProductPriceCustomFieldsSetMessageBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -443,7 +443,7 @@ public class ProductPriceCustomFieldsSetMessageBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>Unique identifier of the Price on which the Custom Type was set.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> on which the Custom Type was set.</p>
      * @return priceId
      */
 
@@ -452,7 +452,7 @@ public class ProductPriceCustomFieldsSetMessageBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>Unique identifier of the ProductVariant to which the Price belongs.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to which the Price belongs.</p>
      * @return variantId
      */
 
@@ -461,7 +461,7 @@ public class ProductPriceCustomFieldsSetMessageBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @return staged
      */
 
@@ -479,7 +479,7 @@ public class ProductPriceCustomFieldsSetMessageBuilder implements Builder<Produc
     }
 
     /**
-     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the previous <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a>. Absent if there was no previous Custom Type present.</p>
      * @return oldTypeId
      */
 

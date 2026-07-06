@@ -8,15 +8,15 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>This action generates a BusinessUnitParentChanged Message.</p>
+ *  <p>This action generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitParentChangedMessage" rel="nofollow">BusinessUnitParentChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,8 +39,8 @@ public interface BusinessUnitChangeParentUnitAction extends BusinessUnitUpdateAc
     String CHANGE_PARENT_UNIT = "changeParentUnit";
 
     /**
-     *  <p>New parent unit of the Business Unit. It must be associated with the same Stores, as the old parent unit.</p>
-     *  <p>The Business Unit <code>inheritedAssociates</code> and <code>inheritedStores</code> field values will be eventually consistent.</p>
+     *  <p>New parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. It must be associated with the same Stores, as the old parent unit.</p>
+     *  <p>The Business Unit <code>inheritedAssociates</code> and <code>inheritedStores</code> field values will be <span>eventually consistent</span>.</p>
      * @return parentUnit
      */
     @NotNull
@@ -49,8 +49,8 @@ public interface BusinessUnitChangeParentUnitAction extends BusinessUnitUpdateAc
     public BusinessUnitResourceIdentifier getParentUnit();
 
     /**
-     *  <p>New parent unit of the Business Unit. It must be associated with the same Stores, as the old parent unit.</p>
-     *  <p>The Business Unit <code>inheritedAssociates</code> and <code>inheritedStores</code> field values will be eventually consistent.</p>
+     *  <p>New parent unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. It must be associated with the same Stores, as the old parent unit.</p>
+     *  <p>The Business Unit <code>inheritedAssociates</code> and <code>inheritedStores</code> field values will be <span>eventually consistent</span>.</p>
      * @param parentUnit value to be set
      */
 
@@ -125,8 +125,8 @@ public interface BusinessUnitChangeParentUnitAction extends BusinessUnitUpdateAc
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitChangeParentUnitAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitChangeParentUnitAction>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitChangeParentUnitAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitChangeParentUnitAction>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitChangeParentUnitAction>";

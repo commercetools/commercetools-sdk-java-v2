@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Setting the Customer Group of the Customer produces the CustomerGroupSet Message.</p>
- *  <p>To reflect the new Customer Group, this update action can result in updates to the most recently modified active Cart. When this occurs, the following errors can be returned: MatchingPriceNotFound and MissingTaxRateForCountry.</p>
+ *  <p>Setting the Customer Group of the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroupSetMessage" rel="nofollow">CustomerGroupSet</a> Message.</p>
+ *  <p>To reflect the new Customer Group, this update action can result in <span>updates</span> to the most recently modified active Cart. When this occurs, the following errors can be returned: <a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -121,8 +121,8 @@ public interface CustomerSetCustomerGroupAction extends CustomerUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerSetCustomerGroupAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerSetCustomerGroupAction>() {
+    public static tools.jackson.core.type.TypeReference<CustomerSetCustomerGroupAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerSetCustomerGroupAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerSetCustomerGroupAction>";

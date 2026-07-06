@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.Address;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Change triggered by the Remove Billing Address ID update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerRemoveBillingAddressIdAction" rel="nofollow">Remove Billing Address ID</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -75,7 +75,7 @@ public interface RemoveBillingAddressIdChange extends Change {
     public List<String> getNextValue();
 
     /**
-     *  <p>Address removed from <code>billingAddressesIds</code>.</p>
+     *  <p>Address removed from <code>billingAddressIds</code>.</p>
      * @return address
      */
     @NotNull
@@ -121,7 +121,7 @@ public interface RemoveBillingAddressIdChange extends Change {
     public void setNextValue(final List<String> nextValue);
 
     /**
-     *  <p>Address removed from <code>billingAddressesIds</code>.</p>
+     *  <p>Address removed from <code>billingAddressIds</code>.</p>
      * @param address value to be set
      */
 
@@ -200,8 +200,8 @@ public interface RemoveBillingAddressIdChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<RemoveBillingAddressIdChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<RemoveBillingAddressIdChange>() {
+    public static tools.jackson.core.type.TypeReference<RemoveBillingAddressIdChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<RemoveBillingAddressIdChange>() {
             @Override
             public String toString() {
                 return "TypeReference<RemoveBillingAddressIdChange>";

@@ -29,7 +29,7 @@ public class PaymentMethodMethodSetMessagePayloadBuilder implements Builder<Paym
     private String oldMethod;
 
     /**
-     *  <p>Payment Method after the Set Method update action.</p>
+     *  <p>Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetMethodAction" rel="nofollow">Set Method</a> update action.</p>
      * @param method value to be set
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class PaymentMethodMethodSetMessagePayloadBuilder implements Builder<Paym
     }
 
     /**
-     *  <p>Payment Method before the Set Method update action.</p>
+     *  <p>Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetMethodAction" rel="nofollow">Set Method</a> update action.</p>
      * @param oldMethod value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class PaymentMethodMethodSetMessagePayloadBuilder implements Builder<Paym
     }
 
     /**
-     *  <p>Payment Method after the Set Method update action.</p>
+     *  <p>Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetMethodAction" rel="nofollow">Set Method</a> update action.</p>
      * @return method
      */
 
@@ -61,7 +61,7 @@ public class PaymentMethodMethodSetMessagePayloadBuilder implements Builder<Paym
     }
 
     /**
-     *  <p>Payment Method before the Set Method update action.</p>
+     *  <p>Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetMethodAction" rel="nofollow">Set Method</a> update action.</p>
      * @return oldMethod
      */
 

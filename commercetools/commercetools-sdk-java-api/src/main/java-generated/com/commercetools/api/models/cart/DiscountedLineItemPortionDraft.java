@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.common.TypedMoneyDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * DiscountedLineItemPortionDraft
@@ -36,7 +36,7 @@ import jakarta.validation.constraints.NotNull;
 public interface DiscountedLineItemPortionDraft extends io.vrap.rmf.base.client.Draft<DiscountedLineItemPortionDraft> {
 
     /**
-     *  <p>A CartDiscountReference or DirectDiscountReference for the discount applicable on the Line Item.</p>
+     *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountReference" rel="nofollow">CartDiscountReference</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscountReference" rel="nofollow">DirectDiscountReference</a> for the discount applicable on the Line Item.</p>
      * @return discount
      */
     @NotNull
@@ -54,7 +54,7 @@ public interface DiscountedLineItemPortionDraft extends io.vrap.rmf.base.client.
     public TypedMoneyDraft getDiscountedAmount();
 
     /**
-     *  <p>A CartDiscountReference or DirectDiscountReference for the discount applicable on the Line Item.</p>
+     *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountReference" rel="nofollow">CartDiscountReference</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscountReference" rel="nofollow">DirectDiscountReference</a> for the discount applicable on the Line Item.</p>
      * @param discount value to be set
      */
 
@@ -137,8 +137,8 @@ public interface DiscountedLineItemPortionDraft extends io.vrap.rmf.base.client.
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DiscountedLineItemPortionDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DiscountedLineItemPortionDraft>() {
+    public static tools.jackson.core.type.TypeReference<DiscountedLineItemPortionDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DiscountedLineItemPortionDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<DiscountedLineItemPortionDraft>";

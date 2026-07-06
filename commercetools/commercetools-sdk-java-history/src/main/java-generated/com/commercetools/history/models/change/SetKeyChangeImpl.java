@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,22 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li>Set Key on Cart Discounts.</li>
- *   <li>Set Key on Categories.</li>
- *   <li>Set Key on Customers.</li>
- *   <li>Set Key on Customer Groups.</li>
- *   <li>Set Key on Payments.</li>
- *   <li>Set Key on Products.</li>
- *   <li>Set Key on Product Discounts.</li>
- *   <li>Set Key on Product Selections.</li>
- *   <li>Set Key on Product Types.</li>
- *   <li>Set Key on Reviews.</li>
- *   <li>Set Key on Shopping Lists.</li>
- *   <li>Set Key on Zones.</li>
- *  </ul>
+ * SetKeyChange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetKeyChangeImpl implements SetKeyChange, ModelBase {

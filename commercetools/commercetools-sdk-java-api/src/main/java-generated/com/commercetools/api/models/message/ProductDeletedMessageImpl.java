@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Delete Product request.</p>
+ *  <p>Generated after a successful <span>Delete Product</span> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDeletedMessageImpl implements ProductDeletedMessage, ModelBase {
@@ -142,7 +143,7 @@ public class ProductDeletedMessageImpl implements ProductDeletedMessage, ModelBa
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -158,7 +159,7 @@ public class ProductDeletedMessageImpl implements ProductDeletedMessage, ModelBa
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -174,7 +175,7 @@ public class ProductDeletedMessageImpl implements ProductDeletedMessage, ModelBa
     }
 
     /**
-     *  <p>List of image URLs that were removed during the Delete Product request.</p>
+     *  <p>List of image URLs that were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Delete Product</a> request.</p>
      */
 
     public java.util.List<String> getRemovedImageUrls() {
@@ -182,7 +183,7 @@ public class ProductDeletedMessageImpl implements ProductDeletedMessage, ModelBa
     }
 
     /**
-     *  <p>Current Product Projection of the deleted Product.</p>
+     *  <p>Current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a> of the deleted <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      */
 
     public com.commercetools.api.models.product.ProductProjection getCurrentProjection() {

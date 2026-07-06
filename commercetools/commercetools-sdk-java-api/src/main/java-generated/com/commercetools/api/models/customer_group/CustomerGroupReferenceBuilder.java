@@ -30,7 +30,7 @@ public class CustomerGroupReferenceBuilder implements Builder<CustomerGroupRefer
     private com.commercetools.api.models.customer_group.CustomerGroup obj;
 
     /**
-     *  <p>Unique identifier of the referenced CustomerGroup.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class CustomerGroupReferenceBuilder implements Builder<CustomerGroupRefer
     }
 
     /**
-     *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>
+     *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with <span>Reference Expansion</span> for CustomerGroups.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class CustomerGroupReferenceBuilder implements Builder<CustomerGroupRefer
     }
 
     /**
-     *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>
+     *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with <span>Reference Expansion</span> for CustomerGroups.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class CustomerGroupReferenceBuilder implements Builder<CustomerGroupRefer
     }
 
     /**
-     *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>
+     *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with <span>Reference Expansion</span> for CustomerGroups.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class CustomerGroupReferenceBuilder implements Builder<CustomerGroupRefer
     }
 
     /**
-     *  <p>Unique identifier of the referenced CustomerGroup.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a>.</p>
      * @return id
      */
 
@@ -86,7 +86,7 @@ public class CustomerGroupReferenceBuilder implements Builder<CustomerGroupRefer
     }
 
     /**
-     *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>
+     *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with <span>Reference Expansion</span> for CustomerGroups.</p>
      * @return obj
      */
 

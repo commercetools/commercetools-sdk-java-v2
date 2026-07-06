@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Reset Customer's Password, Reset Customer's Password in a Store, Change Customer's Password, or Change Customer's Password in a Store request. This Message is also produced during equivalent requests to the My Customer Profile endpoint.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers/password/reset:POST" rel="nofollow">Reset Customer's Password</a>, <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/customers/password/reset:POST" rel="nofollow">Reset Customer's Password in a Store</a>, <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers/password:POST" rel="nofollow">Change Customer's Password</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/customers/password:POST" rel="nofollow">Change Customer's Password in a Store</a> request. This Message is also produced during equivalent requests to the <span>My Customer Profile</span> endpoint.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -45,7 +45,7 @@ public interface CustomerPasswordUpdatedMessage extends Message {
     String CUSTOMER_PASSWORD_UPDATED = "CustomerPasswordUpdated";
 
     /**
-     *  <p>Whether the Customer's password was updated during the Reset password or Change password flow.</p>
+     *  <p>Whether the Customer's password was updated during the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers/password/reset:POST" rel="nofollow">Reset password</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers/password:POST" rel="nofollow">Change password</a> flow.</p>
      * @return reset
      */
     @NotNull
@@ -53,7 +53,7 @@ public interface CustomerPasswordUpdatedMessage extends Message {
     public Boolean getReset();
 
     /**
-     *  <p>Whether the Customer's password was updated during the Reset password or Change password flow.</p>
+     *  <p>Whether the Customer's password was updated during the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers/password/reset:POST" rel="nofollow">Reset password</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers/password:POST" rel="nofollow">Change password</a> flow.</p>
      * @param reset value to be set
      */
 
@@ -148,8 +148,8 @@ public interface CustomerPasswordUpdatedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerPasswordUpdatedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerPasswordUpdatedMessage>() {
+    public static tools.jackson.core.type.TypeReference<CustomerPasswordUpdatedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerPasswordUpdatedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerPasswordUpdatedMessage>";

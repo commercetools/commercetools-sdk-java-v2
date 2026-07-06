@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Change Customer update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteChangeCustomerAction" rel="nofollow">Change Customer</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class QuoteCustomerChangedMessagePayloadImpl implements QuoteCustomerChangedMessagePayload, ModelBase {
@@ -56,7 +57,7 @@ public class QuoteCustomerChangedMessagePayloadImpl implements QuoteCustomerChan
     }
 
     /**
-     *  <p>The Buyer who now owns the Quote.</p>
+     *  <p>The <span>Buyer</span> who now owns the Quote.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
@@ -64,7 +65,7 @@ public class QuoteCustomerChangedMessagePayloadImpl implements QuoteCustomerChan
     }
 
     /**
-     *  <p>The previous Buyer.</p>
+     *  <p>The previous <span>Buyer</span>.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getPreviousCustomer() {

@@ -10,18 +10,18 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.ItemState;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Change the state of LineItem according to allowed transitions on Orders.</li>
- *   <li>Change the state of LineItem according to allowed transitions on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderTransitionLineItemStateAction" rel="nofollow">Change the state of LineItem according to allowed transitions</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderTransitionLineItemStateAction" rel="nofollow">Change the state of LineItem according to allowed transitions</a> on Staged Orders.</li>
  *  </ul>
  *
  * <hr>
@@ -83,7 +83,7 @@ public interface TransitionLineItemStateChange extends Change {
     public List<ItemState> getNextValue();
 
     /**
-     *  <p><code>id</code> of the updated LineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
      * @return lineItemId
      */
     @NotNull
@@ -91,7 +91,7 @@ public interface TransitionLineItemStateChange extends Change {
     public String getLineItemId();
 
     /**
-     *  <p><code>id</code> of the State involved in the transition.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> involved in the transition.</p>
      * @return stateId
      */
     @NotNull
@@ -136,14 +136,14 @@ public interface TransitionLineItemStateChange extends Change {
     public void setNextValue(final List<ItemState> nextValue);
 
     /**
-     *  <p><code>id</code> of the updated LineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
 
     /**
-     *  <p><code>id</code> of the State involved in the transition.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> involved in the transition.</p>
      * @param stateId value to be set
      */
 
@@ -232,8 +232,8 @@ public interface TransitionLineItemStateChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TransitionLineItemStateChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TransitionLineItemStateChange>() {
+    public static tools.jackson.core.type.TypeReference<TransitionLineItemStateChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TransitionLineItemStateChange>() {
             @Override
             public String toString() {
                 return "TypeReference<TransitionLineItemStateChange>";

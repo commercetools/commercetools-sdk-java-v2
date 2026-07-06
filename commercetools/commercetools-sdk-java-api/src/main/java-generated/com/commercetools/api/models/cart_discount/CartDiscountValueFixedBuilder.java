@@ -30,7 +30,7 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
     private com.commercetools.api.models.cart_discount.DiscountApplicationMode applicationMode;
 
     /**
-     *  <p>Money values in cent precision or high precision of different currencies.</p>
+     *  <p>Money values in <a href="https://docs.commercetools.com/apis/ctp:api:type:CentPrecisionMoney" rel="nofollow">cent precision</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoney" rel="nofollow">high precision</a> of different currencies.</p>
      * @param money value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
     }
 
     /**
-     *  <p>Money values in cent precision or high precision of different currencies.</p>
+     *  <p>Money values in <a href="https://docs.commercetools.com/apis/ctp:api:type:CentPrecisionMoney" rel="nofollow">cent precision</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoney" rel="nofollow">high precision</a> of different currencies.</p>
      * @param money value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
     }
 
     /**
-     *  <p>Money values in cent precision or high precision of different currencies.</p>
+     *  <p>Money values in <a href="https://docs.commercetools.com/apis/ctp:api:type:CentPrecisionMoney" rel="nofollow">cent precision</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoney" rel="nofollow">high precision</a> of different currencies.</p>
      * @param money value to be set
      * @return Builder
      */
@@ -67,7 +67,7 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
     }
 
     /**
-     *  <p>Money values in cent precision or high precision of different currencies.</p>
+     *  <p>Money values in <a href="https://docs.commercetools.com/apis/ctp:api:type:CentPrecisionMoney" rel="nofollow">cent precision</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoney" rel="nofollow">high precision</a> of different currencies.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
     }
 
     /**
-     *  <p>Money values in cent precision or high precision of different currencies.</p>
+     *  <p>Money values in <a href="https://docs.commercetools.com/apis/ctp:api:type:CentPrecisionMoney" rel="nofollow">cent precision</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoney" rel="nofollow">high precision</a> of different currencies.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -95,8 +95,8 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
     }
 
     /**
-     *  <p>Indicates how the discount is applied on CartDiscountLineItemTarget or CartDiscountCustomLineItemTarget.</p>
-     *  <p>For CartDiscountPatternTarget, the mode can also be <code>ProportionateDistribution</code> or <code>EvenDistribution</code>.</p>
+     *  <p>Indicates how the discount is applied on <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountLineItemsTarget" rel="nofollow">CartDiscountLineItemTarget</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemTarget</a>.</p>
+     *  <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a>, the mode can also be <code>ProportionateDistribution</code> or <code>EvenDistribution</code>.</p>
      * @param applicationMode value to be set
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
     }
 
     /**
-     *  <p>Money values in cent precision or high precision of different currencies.</p>
+     *  <p>Money values in <a href="https://docs.commercetools.com/apis/ctp:api:type:CentPrecisionMoney" rel="nofollow">cent precision</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoney" rel="nofollow">high precision</a> of different currencies.</p>
      * @return money
      */
 
@@ -117,8 +117,8 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
     }
 
     /**
-     *  <p>Indicates how the discount is applied on CartDiscountLineItemTarget or CartDiscountCustomLineItemTarget.</p>
-     *  <p>For CartDiscountPatternTarget, the mode can also be <code>ProportionateDistribution</code> or <code>EvenDistribution</code>.</p>
+     *  <p>Indicates how the discount is applied on <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountLineItemsTarget" rel="nofollow">CartDiscountLineItemTarget</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemTarget</a>.</p>
+     *  <p>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a>, the mode can also be <code>ProportionateDistribution</code> or <code>EvenDistribution</code>.</p>
      * @return applicationMode
      */
 

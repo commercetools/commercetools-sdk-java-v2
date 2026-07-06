@@ -13,12 +13,12 @@ import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * Extension
@@ -118,12 +118,38 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
     public List<ExtensionTrigger> getTriggers();
 
     /**
-     *  <p>Maximum time (in milliseconds) that the Extension can respond within. If no timeout is provided, the default value is used for all types of Extensions, including <code>payment</code> Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
+     *  <p>Maximum time (in milliseconds) that the Extension can respond within. If no timeout is provided, the default value is used for all <a href="https://docs.commercetools.com/apis/ctp:api:type:ExtensionResourceTypeId" rel="nofollow">types of Extensions</a>.</p>
+     *  <p>The limit of 10000 ms (10 seconds) can be increased per Project after we review the performance impact. Please contact the <span>commercetools support team</span> and provide the Region, Project key, and use case.</p>
      * @return timeoutInMs
      */
 
     @JsonProperty("timeoutInMs")
     public Integer getTimeoutInMs();
+
+    /**
+     *  <p>References to other Extensions that must complete before this Extension is called. The Extension receives the resource state after all transitive ancestors' update actions have been applied. Maximum 5 entries.</p>
+     * @return dependencies
+     */
+    @Valid
+    @JsonProperty("dependencies")
+    public List<ExtensionReference> getDependencies();
+
+    /**
+     *  <p><span>Expansion paths</span> used for reference expansion of the payload.</p>
+     *  <p>Be aware of the <span>limits</span> of this feature and its <span>performance impact</span>.</p>
+     * @return expansionPaths
+     */
+
+    @JsonProperty("expansionPaths")
+    public List<String> getExpansionPaths();
+
+    /**
+     *  <p>Configures additional information included in the payload sent to the API Extension.</p>
+     * @return additionalContext
+     */
+    @Valid
+    @JsonProperty("additionalContext")
+    public ExtensionAdditionalContext getAdditionalContext();
 
     /**
      *  <p>Unique identifier of the Extension.</p>
@@ -197,11 +223,51 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
     public void setTriggers(final List<ExtensionTrigger> triggers);
 
     /**
-     *  <p>Maximum time (in milliseconds) that the Extension can respond within. If no timeout is provided, the default value is used for all types of Extensions, including <code>payment</code> Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
+     *  <p>Maximum time (in milliseconds) that the Extension can respond within. If no timeout is provided, the default value is used for all <a href="https://docs.commercetools.com/apis/ctp:api:type:ExtensionResourceTypeId" rel="nofollow">types of Extensions</a>.</p>
+     *  <p>The limit of 10000 ms (10 seconds) can be increased per Project after we review the performance impact. Please contact the <span>commercetools support team</span> and provide the Region, Project key, and use case.</p>
      * @param timeoutInMs value to be set
      */
 
     public void setTimeoutInMs(final Integer timeoutInMs);
+
+    /**
+     *  <p>References to other Extensions that must complete before this Extension is called. The Extension receives the resource state after all transitive ancestors' update actions have been applied. Maximum 5 entries.</p>
+     * @param dependencies values to be set
+     */
+
+    @JsonIgnore
+    public void setDependencies(final ExtensionReference... dependencies);
+
+    /**
+     *  <p>References to other Extensions that must complete before this Extension is called. The Extension receives the resource state after all transitive ancestors' update actions have been applied. Maximum 5 entries.</p>
+     * @param dependencies values to be set
+     */
+
+    public void setDependencies(final List<ExtensionReference> dependencies);
+
+    /**
+     *  <p><span>Expansion paths</span> used for reference expansion of the payload.</p>
+     *  <p>Be aware of the <span>limits</span> of this feature and its <span>performance impact</span>.</p>
+     * @param expansionPaths values to be set
+     */
+
+    @JsonIgnore
+    public void setExpansionPaths(final String... expansionPaths);
+
+    /**
+     *  <p><span>Expansion paths</span> used for reference expansion of the payload.</p>
+     *  <p>Be aware of the <span>limits</span> of this feature and its <span>performance impact</span>.</p>
+     * @param expansionPaths values to be set
+     */
+
+    public void setExpansionPaths(final List<String> expansionPaths);
+
+    /**
+     *  <p>Configures additional information included in the payload sent to the API Extension.</p>
+     * @param additionalContext value to be set
+     */
+
+    public void setAdditionalContext(final ExtensionAdditionalContext additionalContext);
 
     /**
      * factory method
@@ -228,6 +294,9 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
         instance.setDestination(template.getDestination());
         instance.setTriggers(template.getTriggers());
         instance.setTimeoutInMs(template.getTimeoutInMs());
+        instance.setDependencies(template.getDependencies());
+        instance.setExpansionPaths(template.getExpansionPaths());
+        instance.setAdditionalContext(template.getAdditionalContext());
         return instance;
     }
 
@@ -260,6 +329,14 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setTimeoutInMs(template.getTimeoutInMs());
+        instance.setDependencies(Optional.ofNullable(template.getDependencies())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.extension.ExtensionReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setExpansionPaths(Optional.ofNullable(template.getExpansionPaths()).map(ArrayList::new).orElse(null));
+        instance.setAdditionalContext(com.commercetools.api.models.extension.ExtensionAdditionalContext
+                .deepCopy(template.getAdditionalContext()));
         return instance;
     }
 
@@ -294,8 +371,8 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Extension> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Extension>() {
+    public static tools.jackson.core.type.TypeReference<Extension> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Extension>() {
             @Override
             public String toString() {
                 return "TypeReference<Extension>";

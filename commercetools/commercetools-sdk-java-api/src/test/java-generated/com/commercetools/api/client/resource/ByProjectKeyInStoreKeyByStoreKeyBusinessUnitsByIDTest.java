@@ -105,6 +105,16 @@ public class ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsByIDTest {
                                 .businessUnits()
                                 .withId("test_ID")
                                 .delete()
+                                .withDataErasure(true)
+                                .createHttpRequest(),
+                        "delete",
+                        "test_projectKey/in-store/key=test_storeKey/business-units/test_ID?dataErasure=true", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .businessUnits()
+                                .withId("test_ID")
+                                .delete()
                                 .withVersion(2)
                                 .createHttpRequest(),
                         "delete", "test_projectKey/in-store/key=test_storeKey/business-units/test_ID?version=2", },
@@ -156,6 +166,12 @@ public class ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsByIDTest {
                         .businessUnits()
                         .withId("test_ID")
                         .post(com.commercetools.api.models.business_unit.BusinessUnitUpdate.of()), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .businessUnits()
+                        .withId("test_ID")
+                        .delete()
+                        .withDataErasure(true), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .businessUnits()

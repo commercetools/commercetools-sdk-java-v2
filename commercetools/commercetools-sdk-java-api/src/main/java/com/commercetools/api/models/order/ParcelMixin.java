@@ -2,6 +2,7 @@
 package com.commercetools.api.models.order;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.commercetools.api.models.type.CustomFields;
 
@@ -19,7 +20,7 @@ public interface ParcelMixin {
                 .measurements(this.getMeasurements())
                 .trackingData(this.getTrackingData())
                 .items(this.getItems())
-                .custom(this.getCustom().toDraft());
+                .custom(Optional.ofNullable(this.getCustom()).map(CustomFields::toDraft).orElse(null));
     }
 
     public default ParcelDraft toDraft() {

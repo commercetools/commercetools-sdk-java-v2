@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,11 +15,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set CustomLineItem ShippingDetails on Orders.</li>
- *   <li>Set CustomLineItem ShippingDetails on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomLineItemShippingDetailsAction" rel="nofollow">Set CustomLineItem ShippingDetails</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomLineItemShippingDetailsAction" rel="nofollow">Set CustomLineItem ShippingDetails</a> on Staged Orders.</li>
  *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -36,6 +37,8 @@ public class SetCustomLineItemShippingDetailsChangeImpl implements SetCustomLine
 
     private String customLineItemId;
 
+    private com.commercetools.history.models.common.LocalizedString customLineItem;
+
     /**
      * create instance with all properties
      */
@@ -43,11 +46,13 @@ public class SetCustomLineItemShippingDetailsChangeImpl implements SetCustomLine
     SetCustomLineItemShippingDetailsChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.ItemShippingDetails previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.ItemShippingDetails nextValue,
-            @JsonProperty("customLineItemId") final String customLineItemId) {
+            @JsonProperty("customLineItemId") final String customLineItemId,
+            @JsonProperty("customLineItem") final com.commercetools.history.models.common.LocalizedString customLineItem) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.customLineItemId = customLineItemId;
+        this.customLineItem = customLineItem;
         this.type = SET_CUSTOM_LINE_ITEM_SHIPPING_DETAILS_CHANGE;
     }
 
@@ -91,11 +96,19 @@ public class SetCustomLineItemShippingDetailsChangeImpl implements SetCustomLine
     }
 
     /**
-     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      */
 
     public String getCustomLineItemId() {
         return this.customLineItemId;
+    }
+
+    /**
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
+     */
+
+    public com.commercetools.history.models.common.LocalizedString getCustomLineItem() {
+        return this.customLineItem;
     }
 
     public void setChange(final String change) {
@@ -114,6 +127,10 @@ public class SetCustomLineItemShippingDetailsChangeImpl implements SetCustomLine
         this.customLineItemId = customLineItemId;
     }
 
+    public void setCustomLineItem(final com.commercetools.history.models.common.LocalizedString customLineItem) {
+        this.customLineItem = customLineItem;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -129,11 +146,13 @@ public class SetCustomLineItemShippingDetailsChangeImpl implements SetCustomLine
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(customLineItemId, that.customLineItemId)
+                .append(customLineItem, that.customLineItem)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(customLineItemId, that.customLineItemId)
+                .append(customLineItem, that.customLineItem)
                 .isEquals();
     }
 
@@ -144,6 +163,7 @@ public class SetCustomLineItemShippingDetailsChangeImpl implements SetCustomLine
                 .append(previousValue)
                 .append(nextValue)
                 .append(customLineItemId)
+                .append(customLineItem)
                 .toHashCode();
     }
 
@@ -154,6 +174,7 @@ public class SetCustomLineItemShippingDetailsChangeImpl implements SetCustomLine
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
                 .append("customLineItemId", customLineItemId)
+                .append("customLineItem", customLineItem)
                 .build();
     }
 

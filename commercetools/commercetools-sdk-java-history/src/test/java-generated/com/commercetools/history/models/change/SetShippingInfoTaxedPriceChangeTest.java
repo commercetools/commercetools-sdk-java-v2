@@ -19,9 +19,9 @@ public class SetShippingInfoTaxedPriceChangeTest {
         return new Object[][] { new Object[] { "change", SetShippingInfoTaxedPriceChange.builder().change("change") },
                 new Object[] { "previousValue",
                         SetShippingInfoTaxedPriceChange.builder()
-                                .previousValue(new com.commercetools.history.models.common.TaxedPriceImpl()) },
+                                .previousValue(new com.commercetools.history.models.common.TaxedItemPriceImpl()) },
                 new Object[] { "nextValue", SetShippingInfoTaxedPriceChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.TaxedPriceImpl()) } };
+                        .nextValue(new com.commercetools.history.models.common.TaxedItemPriceImpl()) } };
     }
 
     @Test
@@ -34,16 +34,16 @@ public class SetShippingInfoTaxedPriceChangeTest {
     @Test
     public void previousValue() {
         SetShippingInfoTaxedPriceChange value = SetShippingInfoTaxedPriceChange.of();
-        value.setPreviousValue(new com.commercetools.history.models.common.TaxedPriceImpl());
+        value.setPreviousValue(new com.commercetools.history.models.common.TaxedItemPriceImpl());
         Assertions.assertThat(value.getPreviousValue())
-                .isEqualTo(new com.commercetools.history.models.common.TaxedPriceImpl());
+                .isEqualTo(new com.commercetools.history.models.common.TaxedItemPriceImpl());
     }
 
     @Test
     public void nextValue() {
         SetShippingInfoTaxedPriceChange value = SetShippingInfoTaxedPriceChange.of();
-        value.setNextValue(new com.commercetools.history.models.common.TaxedPriceImpl());
+        value.setNextValue(new com.commercetools.history.models.common.TaxedItemPriceImpl());
         Assertions.assertThat(value.getNextValue())
-                .isEqualTo(new com.commercetools.history.models.common.TaxedPriceImpl());
+                .isEqualTo(new com.commercetools.history.models.common.TaxedItemPriceImpl());
     }
 }

@@ -9,12 +9,12 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * TermFacetResult
@@ -52,7 +52,7 @@ public interface TermFacetResult extends FacetResult {
     public TermFacetResultType getDataType();
 
     /**
-     *  <p>Number of ProductVariants that have no value for the specified term facet expression.</p>
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a> that have no value for the specified <span>term facet expression</span>.</p>
      * @return missing
      */
     @NotNull
@@ -60,7 +60,7 @@ public interface TermFacetResult extends FacetResult {
     public Long getMissing();
 
     /**
-     *  <p>Number of terms matching the term facet expression.</p>
+     *  <p>Number of terms matching the <span>term facet expression</span>.</p>
      *  <ul>
      *   <li>If the expression refers to Product fields like <code>categories.id</code> and <code>reviewRatingStatistics.count</code>, the value represents the number of Products.</li>
      *   <li>If the expression is defined for fields specific to Product Variants, for example, <code>variants.attributes.{name}</code>, the value represents the number of Product Variants matching the expression.</li>
@@ -72,7 +72,7 @@ public interface TermFacetResult extends FacetResult {
     public Long getTotal();
 
     /**
-     *  <p>Number of terms not represented in this object (such as the number of terms beyond the limit).</p>
+     *  <p>Number of terms not represented in this object (such as the number of terms beyond the <span>limit</span>).</p>
      * @return other
      */
     @NotNull
@@ -80,9 +80,9 @@ public interface TermFacetResult extends FacetResult {
     public Long getOther();
 
     /**
-     *  <p>Values for the field specified in term facet expression for which at least one ProductVariant could be found.</p>
+     *  <p>Values for the field specified in <span>term facet expression</span> for which at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> could be found.</p>
      *  <p>By default, facet terms are returned in a descending order of their <code>count</code>.</p>
-     *  <p>If the term facet expression specifies to count Products through the <code>counting products</code> extension, then facet terms are returned in a descending order of their <code>productCount</code>.</p>
+     *  <p>If the term facet expression specifies to count <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Products</a> through the <code>counting products</code> <span>extension</span>, then facet terms are returned in a descending order of their <code>productCount</code>.</p>
      * @return terms
      */
     @NotNull
@@ -98,14 +98,14 @@ public interface TermFacetResult extends FacetResult {
     public void setDataType(final TermFacetResultType dataType);
 
     /**
-     *  <p>Number of ProductVariants that have no value for the specified term facet expression.</p>
+     *  <p>Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariants</a> that have no value for the specified <span>term facet expression</span>.</p>
      * @param missing value to be set
      */
 
     public void setMissing(final Long missing);
 
     /**
-     *  <p>Number of terms matching the term facet expression.</p>
+     *  <p>Number of terms matching the <span>term facet expression</span>.</p>
      *  <ul>
      *   <li>If the expression refers to Product fields like <code>categories.id</code> and <code>reviewRatingStatistics.count</code>, the value represents the number of Products.</li>
      *   <li>If the expression is defined for fields specific to Product Variants, for example, <code>variants.attributes.{name}</code>, the value represents the number of Product Variants matching the expression.</li>
@@ -116,16 +116,16 @@ public interface TermFacetResult extends FacetResult {
     public void setTotal(final Long total);
 
     /**
-     *  <p>Number of terms not represented in this object (such as the number of terms beyond the limit).</p>
+     *  <p>Number of terms not represented in this object (such as the number of terms beyond the <span>limit</span>).</p>
      * @param other value to be set
      */
 
     public void setOther(final Long other);
 
     /**
-     *  <p>Values for the field specified in term facet expression for which at least one ProductVariant could be found.</p>
+     *  <p>Values for the field specified in <span>term facet expression</span> for which at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> could be found.</p>
      *  <p>By default, facet terms are returned in a descending order of their <code>count</code>.</p>
-     *  <p>If the term facet expression specifies to count Products through the <code>counting products</code> extension, then facet terms are returned in a descending order of their <code>productCount</code>.</p>
+     *  <p>If the term facet expression specifies to count <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Products</a> through the <code>counting products</code> <span>extension</span>, then facet terms are returned in a descending order of their <code>productCount</code>.</p>
      * @param terms values to be set
      */
 
@@ -133,9 +133,9 @@ public interface TermFacetResult extends FacetResult {
     public void setTerms(final FacetTerm... terms);
 
     /**
-     *  <p>Values for the field specified in term facet expression for which at least one ProductVariant could be found.</p>
+     *  <p>Values for the field specified in <span>term facet expression</span> for which at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> could be found.</p>
      *  <p>By default, facet terms are returned in a descending order of their <code>count</code>.</p>
-     *  <p>If the term facet expression specifies to count Products through the <code>counting products</code> extension, then facet terms are returned in a descending order of their <code>productCount</code>.</p>
+     *  <p>If the term facet expression specifies to count <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Products</a> through the <code>counting products</code> <span>extension</span>, then facet terms are returned in a descending order of their <code>productCount</code>.</p>
      * @param terms values to be set
      */
 
@@ -220,8 +220,8 @@ public interface TermFacetResult extends FacetResult {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TermFacetResult> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TermFacetResult>() {
+    public static tools.jackson.core.type.TypeReference<TermFacetResult> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TermFacetResult>() {
             @Override
             public String toString() {
                 return "TypeReference<TermFacetResult>";

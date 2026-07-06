@@ -17,11 +17,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomLineItemPriceMode extends JsonEnum {
 
     /**
-    <p>Allows application of Cart Discounts for the Custom Line Item.</p>
+    <p>Allows application of <span>Cart Discounts</span> for the Custom Line Item.</p>
     <p>This is the default mode for backwards compatibility.</p> */
     CustomLineItemPriceMode STANDARD = CustomLineItemPriceModeEnum.STANDARD;
     /**
-    <p>Deactivates application of Cart Discounts for the Custom Line Item despite a matching CartDiscountCustomLineItemsTarget, MultiBuyCustomLineItemsTarget, or CartDiscountPatternTarget.</p> */
+    <p>Deactivates application of Cart Discounts for the Custom Line Item despite a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemsTarget</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:MultiBuyCustomLineItemsTarget" rel="nofollow">MultiBuyCustomLineItemsTarget</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a>.</p> */
     CustomLineItemPriceMode EXTERNAL = CustomLineItemPriceModeEnum.EXTERNAL;
 
     /**

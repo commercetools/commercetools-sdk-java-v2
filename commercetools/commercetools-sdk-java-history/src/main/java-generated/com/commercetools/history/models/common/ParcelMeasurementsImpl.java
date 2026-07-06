@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ParcelMeasurements
@@ -51,7 +52,7 @@ public class ParcelMeasurementsImpl implements ParcelMeasurements, ModelBase {
     }
 
     /**
-     *
+     *  <p>Height of the Parcel.</p>
      */
 
     public Integer getHeightInMillimeter() {
@@ -59,7 +60,7 @@ public class ParcelMeasurementsImpl implements ParcelMeasurements, ModelBase {
     }
 
     /**
-     *
+     *  <p>Length of the Parcel.</p>
      */
 
     public Integer getLengthInMillimeter() {
@@ -67,7 +68,7 @@ public class ParcelMeasurementsImpl implements ParcelMeasurements, ModelBase {
     }
 
     /**
-     *
+     *  <p>Width of the Parcel.</p>
      */
 
     public Integer getWidthInMillimeter() {
@@ -75,7 +76,7 @@ public class ParcelMeasurementsImpl implements ParcelMeasurements, ModelBase {
     }
 
     /**
-     *
+     *  <p>Weight of the Parcel.</p>
      */
 
     public Integer getWeightInGram() {

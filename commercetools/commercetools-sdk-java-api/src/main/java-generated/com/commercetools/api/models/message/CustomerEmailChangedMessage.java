@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Change Email update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
  *             .email("{email}")
+ *             .oldEmail("{oldEmail}")
  *             .build()
  * </code></pre>
  * </div>
@@ -45,7 +46,7 @@ public interface CustomerEmailChangedMessage extends Message {
     String CUSTOMER_EMAIL_CHANGED = "CustomerEmailChanged";
 
     /**
-     *  <p>The <code>email</code> that was set during the Change Email update action.</p>
+     *  <p>The <code>email</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</p>
      * @return email
      */
     @NotNull
@@ -53,11 +54,26 @@ public interface CustomerEmailChangedMessage extends Message {
     public String getEmail();
 
     /**
-     *  <p>The <code>email</code> that was set during the Change Email update action.</p>
+     *  <p>The <code>email</code> that was set before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</p>
+     * @return oldEmail
+     */
+    @NotNull
+    @JsonProperty("oldEmail")
+    public String getOldEmail();
+
+    /**
+     *  <p>The <code>email</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</p>
      * @param email value to be set
      */
 
     public void setEmail(final String email);
+
+    /**
+     *  <p>The <code>email</code> that was set before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</p>
+     * @param oldEmail value to be set
+     */
+
+    public void setOldEmail(final String oldEmail);
 
     /**
      * factory method
@@ -85,6 +101,7 @@ public interface CustomerEmailChangedMessage extends Message {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setEmail(template.getEmail());
+        instance.setOldEmail(template.getOldEmail());
         return instance;
     }
 
@@ -114,6 +131,7 @@ public interface CustomerEmailChangedMessage extends Message {
         instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
                 .deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setEmail(template.getEmail());
+        instance.setOldEmail(template.getOldEmail());
         return instance;
     }
 
@@ -148,8 +166,8 @@ public interface CustomerEmailChangedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerEmailChangedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerEmailChangedMessage>() {
+    public static tools.jackson.core.type.TypeReference<CustomerEmailChangedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerEmailChangedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerEmailChangedMessage>";

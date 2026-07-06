@@ -30,7 +30,7 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
     private com.commercetools.api.models.product.SuggestTokenizer suggestTokenizer;
 
     /**
-     *  <p>Text to return in the SuggestionResult.</p>
+     *  <p>Text to return in the <a href="https://docs.commercetools.com/apis/ctp:api:type:SuggestionResult" rel="nofollow">SuggestionResult</a>.</p>
      * @param text value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
     }
 
     /**
-     *  <p>Text to return in the SuggestionResult.</p>
+     *  <p>Text to return in the <a href="https://docs.commercetools.com/apis/ctp:api:type:SuggestionResult" rel="nofollow">SuggestionResult</a>.</p>
      * @return text
      */
 

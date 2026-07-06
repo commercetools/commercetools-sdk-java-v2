@@ -25,7 +25,7 @@ public class StandalonePriceSetPriceTiersActionBuilder implements Builder<Standa
     private java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers;
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an InvalidField error is returned.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class StandalonePriceSetPriceTiersActionBuilder implements Builder<Standa
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an InvalidField error is returned.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class StandalonePriceSetPriceTiersActionBuilder implements Builder<Standa
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an InvalidField error is returned.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class StandalonePriceSetPriceTiersActionBuilder implements Builder<Standa
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an InvalidField error is returned.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class StandalonePriceSetPriceTiersActionBuilder implements Builder<Standa
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an InvalidField error is returned.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class StandalonePriceSetPriceTiersActionBuilder implements Builder<Standa
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an InvalidField error is returned.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -103,7 +103,7 @@ public class StandalonePriceSetPriceTiersActionBuilder implements Builder<Standa
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an InvalidField error is returned.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -114,7 +114,7 @@ public class StandalonePriceSetPriceTiersActionBuilder implements Builder<Standa
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an InvalidField error is returned.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      * @return tiers
      */
 

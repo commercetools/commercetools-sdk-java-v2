@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Indicates the source and method that indirectly created or modified the resource. This is present on resources created or updated after 1 April 2024.</p>
@@ -32,7 +32,7 @@ import jakarta.validation.constraints.NotNull;
 public interface Attribution {
 
     /**
-     *  <p><code>id</code> of the API Client that created or modified the resource.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> that created or modified the resource.</p>
      * @return clientId
      */
 
@@ -48,7 +48,7 @@ public interface Attribution {
     public AttributionSource getSource();
 
     /**
-     *  <p><code>id</code> of the API Client that created or modified the resource.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> that created or modified the resource.</p>
      * @param clientId value to be set
      */
 
@@ -130,8 +130,8 @@ public interface Attribution {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Attribution> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Attribution>() {
+    public static tools.jackson.core.type.TypeReference<Attribution> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Attribution>() {
             @Override
             public String toString() {
                 return "TypeReference<Attribution>";

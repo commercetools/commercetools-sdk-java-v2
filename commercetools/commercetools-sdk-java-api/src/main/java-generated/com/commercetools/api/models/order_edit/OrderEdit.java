@@ -16,12 +16,12 @@ import com.commercetools.api.models.order.OrderReference;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * OrderEdit
@@ -74,7 +74,7 @@ public interface OrderEdit extends BaseResource, OrderEditMixin, com.commercetoo
     public String getKey();
 
     /**
-     *  <p>Reference to the Order updated with this edit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Order updated with this edit.</p>
      * @return resource
      */
     @NotNull
@@ -170,7 +170,7 @@ public interface OrderEdit extends BaseResource, OrderEditMixin, com.commercetoo
     public void setKey(final String key);
 
     /**
-     *  <p>Reference to the Order updated with this edit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Order updated with this edit.</p>
      * @param resource value to be set
      */
 
@@ -338,8 +338,8 @@ public interface OrderEdit extends BaseResource, OrderEditMixin, com.commercetoo
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderEdit> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderEdit>() {
+    public static tools.jackson.core.type.TypeReference<OrderEdit> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderEdit>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderEdit>";

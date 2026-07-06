@@ -27,8 +27,10 @@ public class SetLineItemTaxRateChangeTest {
                         SetLineItemTaxRateChange.builder()
                                 .lineItem(new com.commercetools.history.models.common.LocalizedStringImpl()) },
                 new Object[] { "variant", SetLineItemTaxRateChange.builder().variant("variant") },
-                new Object[] { "taxMode", SetLineItemTaxRateChange.builder()
-                        .taxMode(com.commercetools.history.models.common.TaxMode.findEnum("Platform")) } };
+                new Object[] { "taxMode",
+                        SetLineItemTaxRateChange.builder()
+                                .taxMode(com.commercetools.history.models.common.TaxMode.findEnum("Platform")) },
+                new Object[] { "lineItemId", SetLineItemTaxRateChange.builder().lineItemId("lineItemId") } };
     }
 
     @Test
@@ -75,5 +77,12 @@ public class SetLineItemTaxRateChangeTest {
         value.setTaxMode(com.commercetools.history.models.common.TaxMode.findEnum("Platform"));
         Assertions.assertThat(value.getTaxMode())
                 .isEqualTo(com.commercetools.history.models.common.TaxMode.findEnum("Platform"));
+    }
+
+    @Test
+    public void lineItemId() {
+        SetLineItemTaxRateChange value = SetLineItemTaxRateChange.of();
+        value.setLineItemId("lineItemId");
+        Assertions.assertThat(value.getLineItemId()).isEqualTo("lineItemId");
     }
 }

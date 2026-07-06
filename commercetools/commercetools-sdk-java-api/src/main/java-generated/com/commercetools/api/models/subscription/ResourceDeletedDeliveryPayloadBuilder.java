@@ -42,7 +42,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
     private Boolean dataErasure;
 
     /**
-     *  <p><code>key</code> of the Project. Useful for processing notifications if the Destination receives them from multiple Projects.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Useful for processing notifications if the Destination receives them from multiple Projects.</p>
      * @param projectKey value to be set
      * @return Builder
      */
@@ -138,7 +138,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
     }
 
     /**
-     *  <p><code>true</code> if the <code>dataErasure</code> parameter on the <code>DELETE</code> request was set to <code>true</code>.</p>
+     *  <p><code>true</code> if the <code>dataErasure</code> <span>parameter</span> on the <code>DELETE</code> request was set to <code>true</code>.</p>
      * @param dataErasure value to be set
      * @return Builder
      */
@@ -149,7 +149,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
     }
 
     /**
-     *  <p><code>key</code> of the Project. Useful for processing notifications if the Destination receives them from multiple Projects.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Useful for processing notifications if the Destination receives them from multiple Projects.</p>
      * @return projectKey
      */
 
@@ -195,7 +195,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
     }
 
     /**
-     *  <p><code>true</code> if the <code>dataErasure</code> parameter on the <code>DELETE</code> request was set to <code>true</code>.</p>
+     *  <p><code>true</code> if the <code>dataErasure</code> <span>parameter</span> on the <code>DELETE</code> request was set to <code>true</code>.</p>
      * @return dataErasure
      */
 

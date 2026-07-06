@@ -9,12 +9,13 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Setting the country can lead to changes in the LineItem prices.</p>
+ *  <p>Setting the country can lead to changes in the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> prices.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,7 +38,7 @@ public interface StagedOrderSetCountryAction extends StagedOrderUpdateAction {
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
-     *  <p>If the Cart is bound to a <code>store</code>, the provided value must be included in the Store's <code>countries</code>. Otherwise a CountryNotConfiguredInStore error is returned.</p>
+     *  <p>If the Cart is bound to a <code>store</code>, the provided value must be included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>'s <code>countries</code>. Otherwise a <a href="https://docs.commercetools.com/apis/ctp:api:type:CountryNotConfiguredInStoreError" rel="nofollow">CountryNotConfiguredInStore</a> error is returned.</p>
      * @return country
      */
 
@@ -46,7 +47,7 @@ public interface StagedOrderSetCountryAction extends StagedOrderUpdateAction {
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
-     *  <p>If the Cart is bound to a <code>store</code>, the provided value must be included in the Store's <code>countries</code>. Otherwise a CountryNotConfiguredInStore error is returned.</p>
+     *  <p>If the Cart is bound to a <code>store</code>, the provided value must be included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>'s <code>countries</code>. Otherwise a <a href="https://docs.commercetools.com/apis/ctp:api:type:CountryNotConfiguredInStoreError" rel="nofollow">CountryNotConfiguredInStore</a> error is returned.</p>
      * @param country value to be set
      */
 
@@ -119,8 +120,8 @@ public interface StagedOrderSetCountryAction extends StagedOrderUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCountryAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCountryAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrderSetCountryAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrderSetCountryAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderSetCountryAction>";

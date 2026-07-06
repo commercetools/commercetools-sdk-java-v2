@@ -1637,10 +1637,6 @@ package com.commercetools.docs.meta;
  *   <td>{@link com.commercetools.api.models.product.ProductChangeSlugAction}</td>
  * </tr>
  * <tr>
- *   <td>{@link io.sphere.sdk.products.commands.updateactions.LegacySetSku}</td>
- *   <td>{@link com.commercetools.api.models.product.ProductLegacySetSkuAction}</td>
- * </tr>
- * <tr>
  *   <td>{@link io.sphere.sdk.products.commands.updateactions.MoveImageToPosition}</td>
  *   <td>{@link com.commercetools.api.models.product.ProductMoveImageToPositionAction}</td>
  * </tr>
@@ -2708,6 +2704,9 @@ package com.commercetools.docs.meta;
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.products.attributes.ProductAttributeConverter}</td>
+ * </tr>
+ * <tr>
+ *   <td>{@link io.sphere.sdk.products.commands.updateactions.LegacySetSku}</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.products.commands.updateactions.MetaAttributesUpdateActions}</td>

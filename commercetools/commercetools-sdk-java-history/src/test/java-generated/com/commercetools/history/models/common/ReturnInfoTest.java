@@ -1,6 +1,7 @@
 
 package com.commercetools.history.models.common;
 
+import java.time.ZonedDateTime;
 import java.util.Collections;
 
 import org.assertj.core.api.Assertions;
@@ -24,7 +25,8 @@ public class ReturnInfoTest {
                                 .items(Collections
                                         .singletonList(new com.commercetools.history.models.common.ReturnItemImpl())) },
                 new Object[] { "returnTrackingId", ReturnInfo.builder().returnTrackingId("returnTrackingId") },
-                new Object[] { "returnDate", ReturnInfo.builder().returnDate("returnDate") } };
+                new Object[] { "returnDate",
+                        ReturnInfo.builder().returnDate(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
     }
 
     @Test
@@ -45,7 +47,7 @@ public class ReturnInfoTest {
     @Test
     public void returnDate() {
         ReturnInfo value = ReturnInfo.of();
-        value.setReturnDate("returnDate");
-        Assertions.assertThat(value.getReturnDate()).isEqualTo("returnDate");
+        value.setReturnDate(ZonedDateTime.parse("2023-06-01T12:00Z"));
+        Assertions.assertThat(value.getReturnDate()).isEqualTo(ZonedDateTime.parse("2023-06-01T12:00Z"));
     }
 }

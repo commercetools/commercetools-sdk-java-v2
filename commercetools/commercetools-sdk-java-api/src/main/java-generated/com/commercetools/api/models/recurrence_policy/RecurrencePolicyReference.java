@@ -8,16 +8,17 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Reference to a RecurrencePolicy.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +41,15 @@ public interface RecurrencePolicyReference extends Reference {
     String RECURRENCE_POLICY = "recurrence-policy";
 
     /**
-     *  <p>Contains the representation of the expanded RecurrencePolicy. Only present in responses to requests with Reference Expansion for RecurrencePolicies.</p>
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
+
+    /**
+     *  <p>Contains the representation of the expanded RecurrencePolicy. Only present in responses to requests with <span>Reference Expansion</span> for RecurrencePolicies.</p>
      * @return obj
      */
     @Valid
@@ -48,7 +57,7 @@ public interface RecurrencePolicyReference extends Reference {
     public RecurrencePolicy getObj();
 
     /**
-     *  <p>Unique identifier of the referenced RecurrencePolicy.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a>.</p>
      * @return id
      */
     @NotNull
@@ -56,14 +65,14 @@ public interface RecurrencePolicyReference extends Reference {
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded RecurrencePolicy. Only present in responses to requests with Reference Expansion for RecurrencePolicies.</p>
+     *  <p>Contains the representation of the expanded RecurrencePolicy. Only present in responses to requests with <span>Reference Expansion</span> for RecurrencePolicies.</p>
      * @param obj value to be set
      */
 
     public void setObj(final RecurrencePolicy obj);
 
     /**
-     *  <p>Unique identifier of the referenced RecurrencePolicy.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a>.</p>
      * @param id value to be set
      */
 
@@ -138,8 +147,8 @@ public interface RecurrencePolicyReference extends Reference {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<RecurrencePolicyReference> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<RecurrencePolicyReference>() {
+    public static tools.jackson.core.type.TypeReference<RecurrencePolicyReference> typeReference() {
+        return new tools.jackson.core.type.TypeReference<RecurrencePolicyReference>() {
             @Override
             public String toString() {
                 return "TypeReference<RecurrencePolicyReference>";

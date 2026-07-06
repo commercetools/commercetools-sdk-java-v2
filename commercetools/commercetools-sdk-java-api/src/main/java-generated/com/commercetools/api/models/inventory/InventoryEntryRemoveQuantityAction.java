@@ -8,14 +8,15 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Updates <code>availableQuantity</code> based on the new <code>quantityOnStock</code> and amount of active reservations.</p>
+ *  <p>Removes a specific quantity from <code>quantityOnStock</code>. This changes the <code>availableQuantity</code>, based on the number of active reservations. You can update <code>quantityOnStock</code> to values below zero.</p>
+ *  <p>Carts with existing <code>ReserveOnCart</code> reservations will not be invalidated by this update action and can still be ordered.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -120,8 +121,8 @@ public interface InventoryEntryRemoveQuantityAction extends InventoryEntryUpdate
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntryRemoveQuantityAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntryRemoveQuantityAction>() {
+    public static tools.jackson.core.type.TypeReference<InventoryEntryRemoveQuantityAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<InventoryEntryRemoveQuantityAction>() {
             @Override
             public String toString() {
                 return "TypeReference<InventoryEntryRemoveQuantityAction>";

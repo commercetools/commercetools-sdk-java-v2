@@ -9,16 +9,17 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Adds a DiscountCode to the Cart to activate the related Cart Discounts. Adding a Discount Code is only possible if no DirectDiscount has been applied to the Order.</p>
- *  <p>The maximum number of Discount Codes in a Cart is restricted by a limit.</p>
- *  <p>Specific Error Code: MatchingPriceNotFound</p>
+ *  <p>Adds a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> to the Order to activate the related <span>Cart Discounts</span>. If the related Cart Discounts are inactive or invalid, or belong to a different Store than the Order, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeNonApplicableError" rel="nofollow">DiscountCodeNonApplicableError</a> is returned.</p>
+ *  <p>A Discount Code can be added only if no <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">DirectDiscount</a> has been applied to the Order.</p>
+ *  <p>The maximum number of Discount Codes in a Cart is restricted by a <span>limit</span>.</p>
+ *  <p>Specific Error Code: <a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a></p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +42,7 @@ public interface StagedOrderAddDiscountCodeAction extends StagedOrderUpdateActio
     String ADD_DISCOUNT_CODE = "addDiscountCode";
 
     /**
-     *  <p><code>code</code> of a DiscountCode.</p>
+     *  <p><code>code</code> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a>.</p>
      * @return code
      */
     @NotNull
@@ -49,7 +50,7 @@ public interface StagedOrderAddDiscountCodeAction extends StagedOrderUpdateActio
     public String getCode();
 
     /**
-     *  <p><code>code</code> of a DiscountCode.</p>
+     *  <p><code>code</code> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a>.</p>
      * @param code value to be set
      */
 
@@ -122,8 +123,8 @@ public interface StagedOrderAddDiscountCodeAction extends StagedOrderUpdateActio
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddDiscountCodeAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddDiscountCodeAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrderAddDiscountCodeAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrderAddDiscountCodeAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderAddDiscountCodeAction>";

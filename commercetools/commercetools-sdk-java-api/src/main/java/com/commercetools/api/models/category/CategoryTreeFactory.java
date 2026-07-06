@@ -64,11 +64,11 @@ public class CategoryTreeFactory {
                     .values()
                     .keySet()
                     .stream()
-                    .map(Locale::new)
+                    .map(Locale::forLanguageTag)
                     .collect(Collectors.toSet());
             localesForTheCategory.forEach(locale -> {
                 final LocalizedStringEntry stringsEntry = LocalizedStringEntry.of(locale,
-                    category.getSlug().values().get(locale));
+                    category.getSlug().get(locale));
                 categoriesByLocaleAndSlug.put(stringsEntry, category);
             });
         });

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * OrderEditDraft
@@ -66,7 +67,7 @@ public class OrderEditDraftImpl implements OrderEditDraft, ModelBase {
     }
 
     /**
-     *  <p>Reference to the Order updated with this edit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Order updated with this edit.</p>
      */
 
     public com.commercetools.api.models.order.OrderReference getResource() {
@@ -74,7 +75,7 @@ public class OrderEditDraftImpl implements OrderEditDraft, ModelBase {
     }
 
     /**
-     *  <p>Update actions to apply to the Order referenced in <code>resource</code>. Cannot be updated if the edit has been applied.</p>
+     *  <p>Update actions to apply to the Order referenced in <code>resource</code>. Cannot be updated if the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/edits/{id}/apply:POST" rel="nofollow">edit has been applied</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> getStagedActions() {
@@ -98,8 +99,8 @@ public class OrderEditDraftImpl implements OrderEditDraft, ModelBase {
     }
 
     /**
-     *  <p>Set to <code>true</code> if you want to preview the edited Order first without persisting it (dry run). A dry run allows checking for potential errors when trying to apply the <code>stagedActions</code>.</p>
-     *  <p>Order API Extensions, if any, are also called in dry runs.</p>
+     *  <p>Set to <code>true</code> if you want to <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEditPreviewSuccess" rel="nofollow">preview</a> the edited Order first without persisting it (dry run). A dry run allows checking for potential <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEditPreviewFailure" rel="nofollow">errors</a> when trying to apply the <code>stagedActions</code>.</p>
+     *  <p>Order <span>API Extensions</span>, if any, are also called in dry runs.</p>
      */
 
     public Boolean getDryRun() {

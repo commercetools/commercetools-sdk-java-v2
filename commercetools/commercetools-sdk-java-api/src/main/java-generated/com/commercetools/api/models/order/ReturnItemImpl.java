@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ReturnItem
@@ -81,7 +82,7 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Return Item.</p>
+     *  <p>User-defined identifier of the Return Item. Unique among Return Items in the Order.</p>
      */
 
     public String getKey() {
@@ -89,7 +90,7 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-     *  <p>Number of Line Items or Custom Line Items returned.</p>
+     *  <p>Quantity of Line Items or Custom Line Items returned.</p>
      */
 
     public Long getQuantity() {
@@ -123,8 +124,8 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     /**
      *  <p>Payment status of the Return Item:</p>
      *  <ul>
-     *   <li><code>NonRefundable</code>, for items in the <code>Advised</code> ReturnShipmentState</li>
-     *   <li><code>Initial</code>, for items in the <code>Returned</code> ReturnShipmentState</li>
+     *   <li><code>NonRefundable</code>, for items in the <code>Advised</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnShipmentState" rel="nofollow">ReturnShipmentState</a></li>
+     *   <li><code>Initial</code>, for items in the <code>Returned</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnShipmentState" rel="nofollow">ReturnShipmentState</a></li>
      *  </ul>
      */
 
@@ -149,7 +150,7 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-     *  <p>Date and time (UTC) the Return Item was intitially created.</p>
+     *  <p>Date and time (UTC) the Return Item was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {

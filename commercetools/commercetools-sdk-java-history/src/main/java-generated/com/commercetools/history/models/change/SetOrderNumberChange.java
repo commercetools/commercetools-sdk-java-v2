@@ -8,17 +8,17 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set Order Number on Orders.</li>
- *   <li>Set Order Number on Staged Order.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetOrderNumberAction" rel="nofollow">Set Order Number</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetOrderNumberAction" rel="nofollow">Set Order Number</a> on Staged Order.</li>
  *  </ul>
  *
  * <hr>
@@ -167,8 +167,8 @@ public interface SetOrderNumberChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetOrderNumberChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetOrderNumberChange>() {
+    public static tools.jackson.core.type.TypeReference<SetOrderNumberChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetOrderNumberChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetOrderNumberChange>";

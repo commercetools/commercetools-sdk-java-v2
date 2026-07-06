@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Draft object to store money as a fraction of the smallest indivisible unit for a specific currency.</p>
@@ -57,6 +58,7 @@ public class HighPrecisionMoneyDraftImpl implements HighPrecisionMoneyDraft, Mod
     /**
      *  <p>Amount in the smallest indivisible unit of a currency. This field is optional for high precision. If provided, it is checked for validity. Example:</p>
      *  <p>A Price of 1.015 USD can be rounded either to 1.01 USD or 1.02 USD. If it lies outside of this range, an error message stating that centAmount must be rounded correctly will be returned.</p>
+     *  <p><code>centAmount</code> is represented as 64-bit integers. If this limit is exceeded, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MoneyOverflowError" rel="nofollow">MoneyOverflow</a> error will be returned.</p>
      *  <p>If <code>centAmount</code> is not provided, the API calculates the value automatically using the default rounding mode half even.</p>
      */
 
@@ -65,7 +67,7 @@ public class HighPrecisionMoneyDraftImpl implements HighPrecisionMoneyDraft, Mod
     }
 
     /**
-     *  <p>Currency code compliant to ISO 4217.</p>
+     *  <p>A currency code compliant with <span>ISO 4217</span> or a <a href="https://docs.commercetools.com/apis/ctp:api:type:NonStandardCurrency" rel="nofollow">non-standard currency</a>.</p>
      */
 
     public String getCurrencyCode() {
@@ -90,6 +92,7 @@ public class HighPrecisionMoneyDraftImpl implements HighPrecisionMoneyDraft, Mod
 
     /**
      *  <p>Amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</p>
+     *  <p><code>preciseAmount</code> is represented as 64-bit integers. If this limit is exceeded, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MoneyOverflowError" rel="nofollow">MoneyOverflow</a> error will be returned.</p>
      */
 
     public Long getPreciseAmount() {

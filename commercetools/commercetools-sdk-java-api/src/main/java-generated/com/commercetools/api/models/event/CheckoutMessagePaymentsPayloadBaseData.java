@@ -11,12 +11,12 @@ import com.commercetools.api.models.cart.CartReference;
 import com.commercetools.api.models.order.OrderReference;
 import com.commercetools.api.models.payment.PaymentReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>The <code>data</code> payload of all payment related event messages.</p>
@@ -38,7 +38,7 @@ import jakarta.validation.constraints.NotNull;
 public interface CheckoutMessagePaymentsPayloadBaseData {
 
     /**
-     *  <p><code>key</code> of the Project where the payment was made.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> where the payment was made.</p>
      * @return projectKey
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface CheckoutMessagePaymentsPayloadBaseData {
     public String getProjectKey();
 
     /**
-     *  <p>The Payment on which the change or action was performed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> on which the change or action was performed.</p>
      * @return payment
      */
     @NotNull
@@ -55,7 +55,7 @@ public interface CheckoutMessagePaymentsPayloadBaseData {
     public PaymentReference getPayment();
 
     /**
-     *  <p><code>id</code> of the Transaction.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a>.</p>
      * @return transactionId
      */
     @NotNull
@@ -63,7 +63,7 @@ public interface CheckoutMessagePaymentsPayloadBaseData {
     public String getTransactionId();
 
     /**
-     *  <p>The Cart on which the change or action was performed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> on which the change or action was performed.</p>
      * @return cart
      */
     @Valid
@@ -71,7 +71,7 @@ public interface CheckoutMessagePaymentsPayloadBaseData {
     public CartReference getCart();
 
     /**
-     *  <p>The Order on which the change or action was performed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> on which the change or action was performed.</p>
      * @return order
      */
     @Valid
@@ -79,35 +79,35 @@ public interface CheckoutMessagePaymentsPayloadBaseData {
     public OrderReference getOrder();
 
     /**
-     *  <p><code>key</code> of the Project where the payment was made.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> where the payment was made.</p>
      * @param projectKey value to be set
      */
 
     public void setProjectKey(final String projectKey);
 
     /**
-     *  <p>The Payment on which the change or action was performed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> on which the change or action was performed.</p>
      * @param payment value to be set
      */
 
     public void setPayment(final PaymentReference payment);
 
     /**
-     *  <p><code>id</code> of the Transaction.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Transaction" rel="nofollow">Transaction</a>.</p>
      * @param transactionId value to be set
      */
 
     public void setTransactionId(final String transactionId);
 
     /**
-     *  <p>The Cart on which the change or action was performed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> on which the change or action was performed.</p>
      * @param cart value to be set
      */
 
     public void setCart(final CartReference cart);
 
     /**
-     *  <p>The Order on which the change or action was performed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> on which the change or action was performed.</p>
      * @param order value to be set
      */
 
@@ -191,8 +191,8 @@ public interface CheckoutMessagePaymentsPayloadBaseData {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CheckoutMessagePaymentsPayloadBaseData> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CheckoutMessagePaymentsPayloadBaseData>() {
+    public static tools.jackson.core.type.TypeReference<CheckoutMessagePaymentsPayloadBaseData> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CheckoutMessagePaymentsPayloadBaseData>() {
             @Override
             public String toString() {
                 return "TypeReference<CheckoutMessagePaymentsPayloadBaseData>";

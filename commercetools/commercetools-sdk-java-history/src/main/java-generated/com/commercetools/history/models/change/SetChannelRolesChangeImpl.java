@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Set Roles update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelSetRolesAction" rel="nofollow">Set Roles</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetChannelRolesChangeImpl implements SetChannelRolesChange, ModelBase {
@@ -30,16 +31,24 @@ public class SetChannelRolesChangeImpl implements SetChannelRolesChange, ModelBa
 
     private java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> nextValue;
 
+    private java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> addedItems;
+
+    private java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> removedItems;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetChannelRolesChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> previousValue,
-            @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> nextValue) {
+            @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> nextValue,
+            @JsonProperty("addedItems") final java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> addedItems,
+            @JsonProperty("removedItems") final java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> removedItems) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
+        this.addedItems = addedItems;
+        this.removedItems = removedItems;
         this.type = SET_CHANNEL_ROLES_CHANGE;
     }
 
@@ -82,6 +91,22 @@ public class SetChannelRolesChangeImpl implements SetChannelRolesChange, ModelBa
         return this.nextValue;
     }
 
+    /**
+     *  <p>Elements added to the array.</p>
+     */
+
+    public java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> getAddedItems() {
+        return this.addedItems;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     */
+
+    public java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> getRemovedItems() {
+        return this.removedItems;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
@@ -103,6 +128,24 @@ public class SetChannelRolesChangeImpl implements SetChannelRolesChange, ModelBa
         this.nextValue = nextValue;
     }
 
+    public void setAddedItems(final com.commercetools.history.models.common.ChannelRoleEnum... addedItems) {
+        this.addedItems = new ArrayList<>(Arrays.asList(addedItems));
+    }
+
+    public void setAddedItems(
+            final java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> addedItems) {
+        this.addedItems = addedItems;
+    }
+
+    public void setRemovedItems(final com.commercetools.history.models.common.ChannelRoleEnum... removedItems) {
+        this.removedItems = new ArrayList<>(Arrays.asList(removedItems));
+    }
+
+    public void setRemovedItems(
+            final java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> removedItems) {
+        this.removedItems = removedItems;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -117,10 +160,14 @@ public class SetChannelRolesChangeImpl implements SetChannelRolesChange, ModelBa
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(addedItems, that.addedItems)
+                .append(removedItems, that.removedItems)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(addedItems, that.addedItems)
+                .append(removedItems, that.removedItems)
                 .isEquals();
     }
 
@@ -130,6 +177,8 @@ public class SetChannelRolesChangeImpl implements SetChannelRolesChange, ModelBa
                 .append(change)
                 .append(previousValue)
                 .append(nextValue)
+                .append(addedItems)
+                .append(removedItems)
                 .toHashCode();
     }
 
@@ -139,6 +188,8 @@ public class SetChannelRolesChangeImpl implements SetChannelRolesChange, ModelBa
                 .append("change", change)
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
+                .append("addedItems", addedItems)
+                .append("removedItems", removedItems)
                 .build();
     }
 

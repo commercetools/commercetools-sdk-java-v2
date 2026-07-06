@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Returned when the Query Records request exceeds the rate limit.</p>
+ *  <p>Returned when the <span>Query Records</span> request exceeds the rate limit.</p>
  *  <p>Reduce the date range and resource types in your query to minimize the token usage, or retry the request after some time (indicated in the <code>Retry-After</code> header).</p>
  *
  * <hr>
@@ -112,8 +112,8 @@ public interface GraphQLTooManyRequestsError extends GraphQLErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLTooManyRequestsError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLTooManyRequestsError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLTooManyRequestsError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLTooManyRequestsError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLTooManyRequestsError>";

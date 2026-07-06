@@ -8,13 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
  *  <p>Number of days after the last modification before a Cart is deleted.</p>
- *  <p>If a ChangeSubscription exists for Carts, a ResourceDeletedDeliveryPayload is sent.</p>
+ *  <p>If a <a href="https://docs.commercetools.com/apis/ctp:api:type:ChangeSubscription" rel="nofollow">ChangeSubscription</a> exists for Carts, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceDeletedDeliveryPayload" rel="nofollow">ResourceDeletedDeliveryPayload</a> is sent.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,7 +37,7 @@ public interface MyCartSetDeleteDaysAfterLastModificationAction extends MyCartUp
     String SET_DELETE_DAYS_AFTER_LAST_MODIFICATION = "setDeleteDaysAfterLastModification";
 
     /**
-     *  <p>Value to set. If not provided, the default value for this field configured in Project settings is assigned.</p>
+     *  <p>Value to set. If not provided, the default value for this field configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a> is assigned.</p>
      * @return deleteDaysAfterLastModification
      */
 
@@ -44,7 +45,7 @@ public interface MyCartSetDeleteDaysAfterLastModificationAction extends MyCartUp
     public Integer getDeleteDaysAfterLastModification();
 
     /**
-     *  <p>Value to set. If not provided, the default value for this field configured in Project settings is assigned.</p>
+     *  <p>Value to set. If not provided, the default value for this field configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a> is assigned.</p>
      * @param deleteDaysAfterLastModification value to be set
      */
 
@@ -121,8 +122,8 @@ public interface MyCartSetDeleteDaysAfterLastModificationAction extends MyCartUp
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyCartSetDeleteDaysAfterLastModificationAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyCartSetDeleteDaysAfterLastModificationAction>() {
+    public static tools.jackson.core.type.TypeReference<MyCartSetDeleteDaysAfterLastModificationAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyCartSetDeleteDaysAfterLastModificationAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyCartSetDeleteDaysAfterLastModificationAction>";

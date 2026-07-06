@@ -8,18 +8,18 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when the provided password token of the Customer has expired.</p>
  *  <p>The error is returned as a failed response to:</p>
  *  <ul>
- *   <li>Get Customer by password token and Get Customer in Store by password token requests</li>
- *   <li>Reset password of Customer and Reset password of Customer in Store requests</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers/password-token={passwordToken}:GET" rel="nofollow">Get Customer by password token</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/customers/password-token={passwordToken}:GET" rel="nofollow">Get Customer in Store by password token</a> requests</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers/password/reset:POST" rel="nofollow">Reset password of Customer</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/customers/password/reset:POST" rel="nofollow">Reset password of Customer in Store</a> requests</li>
  *  </ul>
  *
  * <hr>
@@ -135,8 +135,8 @@ public interface ExpiredCustomerPasswordTokenError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ExpiredCustomerPasswordTokenError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ExpiredCustomerPasswordTokenError>() {
+    public static tools.jackson.core.type.TypeReference<ExpiredCustomerPasswordTokenError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ExpiredCustomerPasswordTokenError>() {
             @Override
             public String toString() {
                 return "TypeReference<ExpiredCustomerPasswordTokenError>";

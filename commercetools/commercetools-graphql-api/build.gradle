@@ -1,7 +1,8 @@
 import com.commercetools.sdk.plugins.GraphQLPlugin
 
 plugins {
-    id "com.netflix.dgs.codegen" version "8.1.0"
+    id "com.netflix.dgs.codegen" version "8.5.0"
+    id 'java'
 }
 
 apply plugin:'com.netflix.dgs.codegen'
@@ -13,6 +14,19 @@ java {
     }
 }
 
+tasks.register('integrationTestJar', Jar) {
+    archiveClassifier = 'test-utils'
+    from sourceSets.integrationTest.output
+}
+
+configurations {
+    integrationTestArtifacts
+}
+
+artifacts {
+    integrationTestArtifacts integrationTestJar
+}
+
 dependencies {
     api project(':commercetools:commercetools-sdk-java-api')
     testImplementation project(':commercetools:commercetools-http-client')
@@ -21,8 +35,8 @@ dependencies {
     api graphql.java
     api jackson_core.databind
     api jackson_core.core
-    api jackson_core.datatype
-    api 'com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core:8.1.0'
+    //api jackson_core.datatype
+    api 'com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core:8.5.0'
 
 }
 
@@ -41,11 +55,13 @@ generateJava {
             "Country": "String",
             "Locale": "String",
             "Long": "Long",
-            "Json": "com.fasterxml.jackson.databind.JsonNode",
+            "Json": "tools.jackson.databind.JsonNode",
+            "JsonPrimitive": "tools.jackson.databind.node.ValueNode",
             "KeyReferenceInput": "String",
             "Set": "Object",
             "Time": "String",
             "BigDecimal": "Double",
             "YearMonth": "String",
+            "SearchValueType": "Object"
     ]
 }

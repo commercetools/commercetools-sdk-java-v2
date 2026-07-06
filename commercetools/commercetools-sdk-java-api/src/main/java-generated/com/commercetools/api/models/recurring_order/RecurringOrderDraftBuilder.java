@@ -18,7 +18,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     RecurringOrderDraft recurringOrderDraft = RecurringOrderDraft.builder()
  *             .cart(cartBuilder -> cartBuilder)
  *             .cartVersion(0.3)
- *             .startsAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .build()
  * </code></pre>
  * </div>
@@ -33,6 +32,7 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
 
     private Long cartVersion;
 
+    @Nullable
     private java.time.ZonedDateTime startsAt;
 
     @Nullable
@@ -45,7 +45,7 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *  <p>User-defined unique identifier of the RecurringOrder.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a>.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
     }
 
     /**
-     *  <p>ResourceIdentifier to the Cart from which the RecurringOrder is created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Cart from which the RecurringOrder is created.</p>
      * @param builder function to build the cart value
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
     }
 
     /**
-     *  <p>ResourceIdentifier to the Cart from which the RecurringOrder is created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Cart from which the RecurringOrder is created.</p>
      * @param builder function to build the cart value
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
     }
 
     /**
-     *  <p>ResourceIdentifier to the Cart from which the RecurringOrder is created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Cart from which the RecurringOrder is created.</p>
      * @param cart value to be set
      * @return Builder
      */
@@ -91,7 +91,7 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
     }
 
     /**
-     *  <p>Current version of the referenced Cart.</p>
+     *  <p>Current version of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
      * @param cartVersion value to be set
      * @return Builder
      */
@@ -102,12 +102,12 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
     }
 
     /**
-     *  <p>Date and time (UTC) when the RecurringOrder will start.</p>
+     *  <p>Date and time (UTC) when the RecurringOrder will start. When specified, the date and time must be in the future. If not specified, the recurring order will start immediately.</p>
      * @param startsAt value to be set
      * @return Builder
      */
 
-    public RecurringOrderDraftBuilder startsAt(final java.time.ZonedDateTime startsAt) {
+    public RecurringOrderDraftBuilder startsAt(@Nullable final java.time.ZonedDateTime startsAt) {
         this.startsAt = startsAt;
         return this;
     }
@@ -196,7 +196,7 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
     }
 
     /**
-     *  <p>User-defined unique identifier of the RecurringOrder.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a>.</p>
      * @return key
      */
 
@@ -206,7 +206,7 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
     }
 
     /**
-     *  <p>ResourceIdentifier to the Cart from which the RecurringOrder is created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Cart from which the RecurringOrder is created.</p>
      * @return cart
      */
 
@@ -215,7 +215,7 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
     }
 
     /**
-     *  <p>Current version of the referenced Cart.</p>
+     *  <p>Current version of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
      * @return cartVersion
      */
 
@@ -224,10 +224,11 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
     }
 
     /**
-     *  <p>Date and time (UTC) when the RecurringOrder will start.</p>
+     *  <p>Date and time (UTC) when the RecurringOrder will start. When specified, the date and time must be in the future. If not specified, the recurring order will start immediately.</p>
      * @return startsAt
      */
 
+    @Nullable
     public java.time.ZonedDateTime getStartsAt() {
         return this.startsAt;
     }
@@ -269,7 +270,6 @@ public class RecurringOrderDraftBuilder implements Builder<RecurringOrderDraft> 
     public RecurringOrderDraft build() {
         Objects.requireNonNull(cart, RecurringOrderDraft.class + ": cart is missing");
         Objects.requireNonNull(cartVersion, RecurringOrderDraft.class + ": cartVersion is missing");
-        Objects.requireNonNull(startsAt, RecurringOrderDraft.class + ": startsAt is missing");
         return new RecurringOrderDraftImpl(key, cart, cartVersion, startsAt, expiresAt, state, custom);
     }
 

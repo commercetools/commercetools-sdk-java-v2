@@ -34,7 +34,7 @@ public class QuoteRequestStateTransitionMessagePayloadBuilder
     private Boolean force;
 
     /**
-     *  <p>State of the Quote after the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -46,7 +46,7 @@ public class QuoteRequestStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>State of the Quote after the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -58,7 +58,7 @@ public class QuoteRequestStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>State of the Quote after the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -70,7 +70,7 @@ public class QuoteRequestStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>State of the Quote before the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param builder function to build the oldState value
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class QuoteRequestStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>State of the Quote before the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param builder function to build the oldState value
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class QuoteRequestStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>State of the Quote before the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param oldState value to be set
      * @return Builder
      */
@@ -106,7 +106,7 @@ public class QuoteRequestStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     *  <p>Whether <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition validations were turned off during the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param force value to be set
      * @return Builder
      */
@@ -117,7 +117,7 @@ public class QuoteRequestStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>State of the Quote after the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @return state
      */
 
@@ -126,7 +126,7 @@ public class QuoteRequestStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>State of the Quote before the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @return oldState
      */
 
@@ -136,7 +136,7 @@ public class QuoteRequestStateTransitionMessagePayloadBuilder
     }
 
     /**
-     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     *  <p>Whether <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition validations were turned off during the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequestTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @return force
      */
 

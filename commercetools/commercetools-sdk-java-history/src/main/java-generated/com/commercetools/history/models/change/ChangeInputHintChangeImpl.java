@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,12 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li>Change AttributeDefinition InputHint on Product Types.</li>
- *   <li>Change InputHint on Types.</li>
- *  </ul>
+ * ChangeInputHintChange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeInputHintChangeImpl implements ChangeInputHintChange, ModelBase {
@@ -30,9 +27,9 @@ public class ChangeInputHintChangeImpl implements ChangeInputHintChange, ModelBa
 
     private String change;
 
-    private com.commercetools.history.models.common.TextInputHint previousValue;
+    private com.commercetools.history.models.common.TypeTextInputHint previousValue;
 
-    private com.commercetools.history.models.common.TextInputHint nextValue;
+    private com.commercetools.history.models.common.TypeTextInputHint nextValue;
 
     private String fieldName;
 
@@ -43,8 +40,8 @@ public class ChangeInputHintChangeImpl implements ChangeInputHintChange, ModelBa
      */
     @JsonCreator
     ChangeInputHintChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.TextInputHint previousValue,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.TextInputHint nextValue,
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.TypeTextInputHint previousValue,
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.TypeTextInputHint nextValue,
             @JsonProperty("fieldName") final String fieldName,
             @JsonProperty("attributeName") final String attributeName) {
         this.change = change;
@@ -82,7 +79,7 @@ public class ChangeInputHintChangeImpl implements ChangeInputHintChange, ModelBa
      *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.common.TextInputHint getPreviousValue() {
+    public com.commercetools.history.models.common.TypeTextInputHint getPreviousValue() {
         return this.previousValue;
     }
 
@@ -90,12 +87,12 @@ public class ChangeInputHintChangeImpl implements ChangeInputHintChange, ModelBa
      *  <p>Value after the change.</p>
      */
 
-    public com.commercetools.history.models.common.TextInputHint getNextValue() {
+    public com.commercetools.history.models.common.TypeTextInputHint getNextValue() {
         return this.nextValue;
     }
 
     /**
-     *  <p>Name of the updated FieldDefinition; only present on changes to Types.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>; only present on changes to Types.</p>
      */
 
     public String getFieldName() {
@@ -103,7 +100,7 @@ public class ChangeInputHintChangeImpl implements ChangeInputHintChange, ModelBa
     }
 
     /**
-     *  <p>Name of the updated AttributeDefinition; only present on changes to Product Types.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>; only present on changes to Product Types.</p>
      */
 
     public String getAttributeName() {
@@ -114,11 +111,11 @@ public class ChangeInputHintChangeImpl implements ChangeInputHintChange, ModelBa
         this.change = change;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.TextInputHint previousValue) {
+    public void setPreviousValue(final com.commercetools.history.models.common.TypeTextInputHint previousValue) {
         this.previousValue = previousValue;
     }
 
-    public void setNextValue(final com.commercetools.history.models.common.TextInputHint nextValue) {
+    public void setNextValue(final com.commercetools.history.models.common.TypeTextInputHint nextValue) {
         this.nextValue = nextValue;
     }
 

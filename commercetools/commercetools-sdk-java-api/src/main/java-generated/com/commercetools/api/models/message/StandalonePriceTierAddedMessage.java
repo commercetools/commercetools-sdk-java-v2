@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.PriceTier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Add Price Tier update action</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceAddPriceTierAction" rel="nofollow">Add Price Tier</a> update action</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface StandalonePriceTierAddedMessage extends Message {
     String STANDALONE_PRICE_TIER_ADDED = "StandalonePriceTierAdded";
 
     /**
-     *  <p>The Price Tier that has been added to the array field <code>tiers</code> for the StandalonePrice.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">Price Tier</a> that has been added to the array field <code>tiers</code> for the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @return tier
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface StandalonePriceTierAddedMessage extends Message {
     public PriceTier getTier();
 
     /**
-     *  <p>The Price Tier that has been added to the array field <code>tiers</code> for the StandalonePrice.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">Price Tier</a> that has been added to the array field <code>tiers</code> for the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param tier value to be set
      */
 
@@ -151,8 +151,8 @@ public interface StandalonePriceTierAddedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceTierAddedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceTierAddedMessage>() {
+    public static tools.jackson.core.type.TypeReference<StandalonePriceTierAddedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StandalonePriceTierAddedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<StandalonePriceTierAddedMessage>";

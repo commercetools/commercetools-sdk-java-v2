@@ -104,7 +104,7 @@ public class PaymentMethodDraftBuilder implements Builder<PaymentMethodDraft> {
 
     /**
      *  <p>Reference to a Customer the PaymentMethod should belong to.</p>
-     *  <p>If <code>businessUnit</code> is set, the Customer must be an Associate of the Business Unit.</p>
+     *  <p>If <code>businessUnit</code> is set, the Customer must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> of the Business Unit.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -118,7 +118,7 @@ public class PaymentMethodDraftBuilder implements Builder<PaymentMethodDraft> {
 
     /**
      *  <p>Reference to a Customer the PaymentMethod should belong to.</p>
-     *  <p>If <code>businessUnit</code> is set, the Customer must be an Associate of the Business Unit.</p>
+     *  <p>If <code>businessUnit</code> is set, the Customer must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> of the Business Unit.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -131,7 +131,7 @@ public class PaymentMethodDraftBuilder implements Builder<PaymentMethodDraft> {
 
     /**
      *  <p>Reference to a Customer the PaymentMethod should belong to.</p>
-     *  <p>If <code>businessUnit</code> is set, the Customer must be an Associate of the Business Unit.</p>
+     *  <p>If <code>businessUnit</code> is set, the Customer must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> of the Business Unit.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -144,7 +144,7 @@ public class PaymentMethodDraftBuilder implements Builder<PaymentMethodDraft> {
 
     /**
      *  <p>Reference to a BusinessUnit the PaymentMethod should belong to.</p>
-     *  <p>Only available for B2B-enabled Projects.</p>
+     *  <p>Only available for <span>B2B</span>-enabled Projects.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -159,7 +159,7 @@ public class PaymentMethodDraftBuilder implements Builder<PaymentMethodDraft> {
 
     /**
      *  <p>Reference to a BusinessUnit the PaymentMethod should belong to.</p>
-     *  <p>Only available for B2B-enabled Projects.</p>
+     *  <p>Only available for <span>B2B</span>-enabled Projects.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -173,7 +173,7 @@ public class PaymentMethodDraftBuilder implements Builder<PaymentMethodDraft> {
 
     /**
      *  <p>Reference to a BusinessUnit the PaymentMethod should belong to.</p>
-     *  <p>Only available for B2B-enabled Projects.</p>
+     *  <p>Only available for <span>B2B</span>-enabled Projects.</p>
      * @param businessUnit value to be set
      * @return Builder
      */
@@ -335,7 +335,7 @@ public class PaymentMethodDraftBuilder implements Builder<PaymentMethodDraft> {
 
     /**
      *  <p>Reference to a Customer the PaymentMethod should belong to.</p>
-     *  <p>If <code>businessUnit</code> is set, the Customer must be an Associate of the Business Unit.</p>
+     *  <p>If <code>businessUnit</code> is set, the Customer must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> of the Business Unit.</p>
      * @return customer
      */
 
@@ -346,7 +346,7 @@ public class PaymentMethodDraftBuilder implements Builder<PaymentMethodDraft> {
 
     /**
      *  <p>Reference to a BusinessUnit the PaymentMethod should belong to.</p>
-     *  <p>Only available for B2B-enabled Projects.</p>
+     *  <p>Only available for <span>B2B</span>-enabled Projects.</p>
      * @return businessUnit
      */
 

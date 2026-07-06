@@ -103,6 +103,9 @@ public class CartBuilder implements Builder<Cart> {
     private com.commercetools.api.models.cart.CartState cartState;
 
     @Nullable
+    private com.commercetools.api.models.cart.FreezeStrategy freezeStrategy;
+
+    @Nullable
     private com.commercetools.api.models.common.Address billingAddress;
 
     @Nullable
@@ -150,13 +153,22 @@ public class CartBuilder implements Builder<Cart> {
     private com.commercetools.api.models.cart.DiscountTypeCombination discountTypeCombination;
 
     @Nullable
+    private com.commercetools.api.models.cart.CartLock lock;
+
+    @Nullable
     private Integer deleteDaysAfterLastModification;
+
+    @Nullable
+    private String purchaseOrderNumber;
 
     @Nullable
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
 
     @Nullable
     private com.commercetools.api.models.common.CreatedBy createdBy;
+
+    @Nullable
+    private java.util.List<com.commercetools.api.models.warning.WarningObject> warnings;
 
     /**
      *  <p>Unique identifier of the Cart.</p>
@@ -214,7 +226,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p><code>id</code> of the Customer that the Cart belongs to.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that the Cart belongs to.</p>
      * @param customerId value to be set
      * @return Builder
      */
@@ -236,7 +248,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for Line Item price selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Customer Group of the Customer that the Cart belongs to. Used for <span>Line Item price selection</span>.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -250,7 +262,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for Line Item price selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Customer Group of the Customer that the Cart belongs to. Used for <span>Line Item price selection</span>.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -263,7 +275,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for Line Item price selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Customer Group of the Customer that the Cart belongs to. Used for <span>Line Item price selection</span>.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -275,7 +287,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Anonymous session associated with the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">Anonymous session</a> associated with the Cart.</p>
      * @param anonymousId value to be set
      * @return Builder
      */
@@ -286,7 +298,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Reference to a Business Unit the Cart belongs to. Only available for B2B-enabled Projects.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Business Unit the Cart belongs to. Only available for <span>B2B</span>-enabled Projects.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -300,7 +312,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Reference to a Business Unit the Cart belongs to. Only available for B2B-enabled Projects.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Business Unit the Cart belongs to. Only available for <span>B2B</span>-enabled Projects.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -313,7 +325,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Reference to a Business Unit the Cart belongs to. Only available for B2B-enabled Projects.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Business Unit the Cart belongs to. Only available for <span>B2B</span>-enabled Projects.</p>
      * @param businessUnit value to be set
      * @return Builder
      */
@@ -325,7 +337,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Reference to a Store the Cart belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Store the Cart belongs to.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -337,7 +349,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Reference to a Store the Cart belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Store the Cart belongs to.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -349,7 +361,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Reference to a Store the Cart belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Store the Cart belongs to.</p>
      * @param store value to be set
      * @return Builder
      */
@@ -360,7 +372,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Line Items added to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> added to the Cart.</p>
      * @param lineItems value to be set
      * @return Builder
      */
@@ -371,7 +383,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Line Items added to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> added to the Cart.</p>
      * @param lineItems value to be set
      * @return Builder
      */
@@ -382,7 +394,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Line Items added to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> added to the Cart.</p>
      * @param lineItems value to be set
      * @return Builder
      */
@@ -396,7 +408,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Line Items added to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> added to the Cart.</p>
      * @param builder function to build the lineItems value
      * @return Builder
      */
@@ -411,7 +423,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Line Items added to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> added to the Cart.</p>
      * @param builder function to build the lineItems value
      * @return Builder
      */
@@ -424,7 +436,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Line Items added to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> added to the Cart.</p>
      * @param builder function to build the lineItems value
      * @return Builder
      */
@@ -435,7 +447,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Line Items added to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> added to the Cart.</p>
      * @param builder function to build the lineItems value
      * @return Builder
      */
@@ -446,7 +458,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Custom Line Items added to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> added to the Cart.</p>
      * @param customLineItems value to be set
      * @return Builder
      */
@@ -457,7 +469,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Custom Line Items added to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> added to the Cart.</p>
      * @param customLineItems value to be set
      * @return Builder
      */
@@ -469,7 +481,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Custom Line Items added to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> added to the Cart.</p>
      * @param customLineItems value to be set
      * @return Builder
      */
@@ -483,7 +495,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Custom Line Items added to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> added to the Cart.</p>
      * @param builder function to build the customLineItems value
      * @return Builder
      */
@@ -498,7 +510,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Custom Line Items added to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> added to the Cart.</p>
      * @param builder function to build the customLineItems value
      * @return Builder
      */
@@ -511,7 +523,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Custom Line Items added to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> added to the Cart.</p>
      * @param builder function to build the customLineItems value
      * @return Builder
      */
@@ -522,7 +534,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Custom Line Items added to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> added to the Cart.</p>
      * @param builder function to build the customLineItems value
      * @return Builder
      */
@@ -533,7 +545,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Sum of all LineItem quantities, excluding CustomLineItems. Only present when the Cart has at least one LineItem.</p>
+     *  <p>Sum of all <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities, excluding <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>. Only present when the Cart has at least one LineItem.</p>
      * @param totalLineItemQuantity value to be set
      * @return Builder
      */
@@ -544,8 +556,8 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
-     *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     *  <p>Sum of the <code>totalPrice</code> field of all <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and if available, the <code>price</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a>. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
+     *  <p>Taxes are included if <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRate</a> <code>includedInPrice</code> is <code>true</code> for each price.</p>
      * @param builder function to build the totalPrice value
      * @return Builder
      */
@@ -557,8 +569,8 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
-     *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     *  <p>Sum of the <code>totalPrice</code> field of all <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and if available, the <code>price</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a>. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
+     *  <p>Taxes are included if <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRate</a> <code>includedInPrice</code> is <code>true</code> for each price.</p>
      * @param builder function to build the totalPrice value
      * @return Builder
      */
@@ -570,8 +582,8 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
-     *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     *  <p>Sum of the <code>totalPrice</code> field of all <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and if available, the <code>price</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a>. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
+     *  <p>Taxes are included if <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRate</a> <code>includedInPrice</code> is <code>true</code> for each price.</p>
      * @param totalPrice value to be set
      * @return Builder
      */
@@ -583,8 +595,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <ul>
-     *   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set. For Carts with <code>Multiple</code> ShippingMode, all Line Items and Custom Line Items must be fully distributed between the Shipping Methods (via <code>shippingDetails</code>), otherwise <code>taxedPrice</code> is not automatically set.</li>
-     *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set. For Carts with <code>Multiple</code> ShippingMode, all allocations must have their respective tax rates present in <code>perMethodTaxRate</code>, otherwise <code>taxedPrice</code> is not automatically set.</li>
+     *   <li>For a Cart with <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it is automatically set when a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetShippingAddressAction" rel="nofollow">shipping address is set</a>. For Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>, all Line Items and Custom Line Items must be fully distributed between the Shipping Methods (via <code>shippingDetails</code>), otherwise <code>taxedPrice</code> is not automatically set.</li>
+     *   <li>For a Cart with <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set. For Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>, all allocations must have their respective tax rates present in <code>perMethodTaxRate</code>, otherwise <code>taxedPrice</code> is not automatically set.</li>
      *  </ul>
      *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      * @param builder function to build the taxedPrice value
@@ -599,8 +611,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <ul>
-     *   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set. For Carts with <code>Multiple</code> ShippingMode, all Line Items and Custom Line Items must be fully distributed between the Shipping Methods (via <code>shippingDetails</code>), otherwise <code>taxedPrice</code> is not automatically set.</li>
-     *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set. For Carts with <code>Multiple</code> ShippingMode, all allocations must have their respective tax rates present in <code>perMethodTaxRate</code>, otherwise <code>taxedPrice</code> is not automatically set.</li>
+     *   <li>For a Cart with <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it is automatically set when a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetShippingAddressAction" rel="nofollow">shipping address is set</a>. For Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>, all Line Items and Custom Line Items must be fully distributed between the Shipping Methods (via <code>shippingDetails</code>), otherwise <code>taxedPrice</code> is not automatically set.</li>
+     *   <li>For a Cart with <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set. For Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>, all allocations must have their respective tax rates present in <code>perMethodTaxRate</code>, otherwise <code>taxedPrice</code> is not automatically set.</li>
      *  </ul>
      *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      * @param builder function to build the taxedPrice value
@@ -615,8 +627,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <ul>
-     *   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set. For Carts with <code>Multiple</code> ShippingMode, all Line Items and Custom Line Items must be fully distributed between the Shipping Methods (via <code>shippingDetails</code>), otherwise <code>taxedPrice</code> is not automatically set.</li>
-     *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set. For Carts with <code>Multiple</code> ShippingMode, all allocations must have their respective tax rates present in <code>perMethodTaxRate</code>, otherwise <code>taxedPrice</code> is not automatically set.</li>
+     *   <li>For a Cart with <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it is automatically set when a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetShippingAddressAction" rel="nofollow">shipping address is set</a>. For Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>, all Line Items and Custom Line Items must be fully distributed between the Shipping Methods (via <code>shippingDetails</code>), otherwise <code>taxedPrice</code> is not automatically set.</li>
+     *   <li>For a Cart with <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set. For Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>, all allocations must have their respective tax rates present in <code>perMethodTaxRate</code>, otherwise <code>taxedPrice</code> is not automatically set.</li>
      *  </ul>
      *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      * @param taxedPrice value to be set
@@ -629,7 +641,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
+     *  <p>Sum of the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> across all Shipping Methods.</p>
      *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      * @param builder function to build the taxedShippingPrice value
      * @return Builder
@@ -642,7 +654,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
+     *  <p>Sum of the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> across all Shipping Methods.</p>
      *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      * @param builder function to build the taxedShippingPrice value
      * @return Builder
@@ -655,7 +667,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
+     *  <p>Sum of the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> across all Shipping Methods.</p>
      *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      * @param taxedShippingPrice value to be set
      * @return Builder
@@ -716,7 +728,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Indicates how the total prices on LineItems and CustomLineItems are rounded when calculated. Configured in Project settings.</p>
+     *  <p>Indicates how the total prices on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a> are rounded when calculated. Configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a>.</p>
      * @param priceRoundingMode value to be set
      * @return Builder
      */
@@ -727,7 +739,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>. Configured in Project settings.</p>
+     *  <p>Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>. Configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a>.</p>
      * @param taxRoundingMode value to be set
      * @return Builder
      */
@@ -772,6 +784,17 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
+     *  <p>Determines freezing behavior when <code>cartState</code> is <code>Frozen</code>.</p>
+     * @param freezeStrategy value to be set
+     * @return Builder
+     */
+
+    public CartBuilder freezeStrategy(@Nullable final com.commercetools.api.models.cart.FreezeStrategy freezeStrategy) {
+        this.freezeStrategy = freezeStrategy;
+        return this;
+    }
+
+    /**
      *  <p>Billing address associated with the Cart.</p>
      * @param builder function to build the billingAddress value
      * @return Builder
@@ -807,7 +830,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     *  <p>Shipping address for a Cart with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Determines eligible <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> rates. For a Cart with <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it also determines Tax Rates of Line Items.</p>
      * @param builder function to build the shippingAddress value
      * @return Builder
      */
@@ -819,7 +842,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     *  <p>Shipping address for a Cart with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Determines eligible <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> rates. For a Cart with <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it also determines Tax Rates of Line Items.</p>
      * @param builder function to build the shippingAddress value
      * @return Builder
      */
@@ -831,7 +854,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     *  <p>Shipping address for a Cart with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Determines eligible <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> rates. For a Cart with <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it also determines Tax Rates of Line Items.</p>
      * @param shippingAddress value to be set
      * @return Builder
      */
@@ -853,7 +876,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Single</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingKey value to be set
      * @return Builder
      */
@@ -864,7 +887,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Shipping-related information of a Cart with <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
+     *  <p>Shipping-related information of a Cart with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set when a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetShippingMethodAction" rel="nofollow">Shipping Method is set</a>.</p>
      * @param builder function to build the shippingInfo value
      * @return Builder
      */
@@ -876,7 +899,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Shipping-related information of a Cart with <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
+     *  <p>Shipping-related information of a Cart with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set when a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetShippingMethodAction" rel="nofollow">Shipping Method is set</a>.</p>
      * @param builder function to build the shippingInfo value
      * @return Builder
      */
@@ -888,7 +911,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Shipping-related information of a Cart with <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
+     *  <p>Shipping-related information of a Cart with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set when a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetShippingMethodAction" rel="nofollow">Shipping Method is set</a>.</p>
      * @param shippingInfo value to be set
      * @return Builder
      */
@@ -899,10 +922,10 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <p>Input used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>:</p>
      *  <ul>
-     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
-     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
+     *   <li>If <code>CartClassification</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ClassificationShippingRateInput" rel="nofollow">ClassificationShippingRateInput</a>.</li>
+     *   <li>If <code>CartScore</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ScoreShippingRateInput" rel="nofollow">ScoreShippingRateInput</a>.</li>
      *   <li>If <code>CartValue</code>, it cannot be used.</li>
      *  </ul>
      * @param shippingRateInput value to be set
@@ -916,10 +939,10 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <p>Input used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>:</p>
      *  <ul>
-     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
-     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
+     *   <li>If <code>CartClassification</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ClassificationShippingRateInput" rel="nofollow">ClassificationShippingRateInput</a>.</li>
+     *   <li>If <code>CartScore</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ScoreShippingRateInput" rel="nofollow">ScoreShippingRateInput</a>.</li>
      *   <li>If <code>CartValue</code>, it cannot be used.</li>
      *  </ul>
      * @param builder function to build the shippingRateInput value
@@ -933,7 +956,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Custom Fields of the Shipping Method in a Cart with <code>Single</code> ShippingMode.</p>
+     *  <p>Custom Fields of the Shipping Method in a Cart with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param builder function to build the shippingCustomFields value
      * @return Builder
      */
@@ -945,7 +968,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Custom Fields of the Shipping Method in a Cart with <code>Single</code> ShippingMode.</p>
+     *  <p>Custom Fields of the Shipping Method in a Cart with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param builder function to build the shippingCustomFields value
      * @return Builder
      */
@@ -957,7 +980,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Custom Fields of the Shipping Method in a Cart with <code>Single</code> ShippingMode.</p>
+     *  <p>Custom Fields of the Shipping Method in a Cart with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingCustomFields value to be set
      * @return Builder
      */
@@ -969,7 +992,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     *  <p>Shipping-related information of a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Updated automatically each time a new <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>.</p>
      * @param shipping value to be set
      * @return Builder
      */
@@ -980,7 +1003,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     *  <p>Shipping-related information of a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Updated automatically each time a new <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>.</p>
      * @param shipping value to be set
      * @return Builder
      */
@@ -991,7 +1014,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     *  <p>Shipping-related information of a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Updated automatically each time a new <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>.</p>
      * @param shipping value to be set
      * @return Builder
      */
@@ -1005,7 +1028,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     *  <p>Shipping-related information of a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Updated automatically each time a new <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>.</p>
      * @param builder function to build the shipping value
      * @return Builder
      */
@@ -1020,7 +1043,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     *  <p>Shipping-related information of a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Updated automatically each time a new <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>.</p>
      * @param builder function to build the shipping value
      * @return Builder
      */
@@ -1033,7 +1056,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     *  <p>Shipping-related information of a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Updated automatically each time a new <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>.</p>
      * @param builder function to build the shipping value
      * @return Builder
      */
@@ -1044,7 +1067,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     *  <p>Shipping-related information of a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Updated automatically each time a new <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>.</p>
      * @param builder function to build the shipping value
      * @return Builder
      */
@@ -1055,8 +1078,8 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
-     *  <p>For Carts with <code>Single</code> ShippingMode: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Additional shipping addresses of the Cart as specified by <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> using the <code>shippingDetails</code> field.</p>
+     *  <p>For Carts with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @param itemShippingAddresses value to be set
      * @return Builder
      */
@@ -1068,8 +1091,8 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
-     *  <p>For Carts with <code>Single</code> ShippingMode: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Additional shipping addresses of the Cart as specified by <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> using the <code>shippingDetails</code> field.</p>
+     *  <p>For Carts with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @param itemShippingAddresses value to be set
      * @return Builder
      */
@@ -1081,8 +1104,8 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
-     *  <p>For Carts with <code>Single</code> ShippingMode: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Additional shipping addresses of the Cart as specified by <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> using the <code>shippingDetails</code> field.</p>
+     *  <p>For Carts with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @param itemShippingAddresses value to be set
      * @return Builder
      */
@@ -1097,8 +1120,8 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
-     *  <p>For Carts with <code>Single</code> ShippingMode: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Additional shipping addresses of the Cart as specified by <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> using the <code>shippingDetails</code> field.</p>
+     *  <p>For Carts with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @param builder function to build the itemShippingAddresses value
      * @return Builder
      */
@@ -1113,8 +1136,8 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
-     *  <p>For Carts with <code>Single</code> ShippingMode: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Additional shipping addresses of the Cart as specified by <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> using the <code>shippingDetails</code> field.</p>
+     *  <p>For Carts with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @param builder function to build the itemShippingAddresses value
      * @return Builder
      */
@@ -1127,8 +1150,8 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
-     *  <p>For Carts with <code>Single</code> ShippingMode: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Additional shipping addresses of the Cart as specified by <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> using the <code>shippingDetails</code> field.</p>
+     *  <p>For Carts with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @param builder function to build the itemShippingAddresses value
      * @return Builder
      */
@@ -1139,8 +1162,8 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
-     *  <p>For Carts with <code>Single</code> ShippingMode: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Additional shipping addresses of the Cart as specified by <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> using the <code>shippingDetails</code> field.</p>
+     *  <p>For Carts with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @param builder function to build the itemShippingAddresses value
      * @return Builder
      */
@@ -1325,7 +1348,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Cart.</p>
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemMode" rel="nofollow">LineItemMode</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRemoveLineItemAction" rel="nofollow">removed</a> from the Cart.</p>
      * @param refusedGifts value to be set
      * @return Builder
      */
@@ -1337,7 +1360,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Cart.</p>
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemMode" rel="nofollow">LineItemMode</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRemoveLineItemAction" rel="nofollow">removed</a> from the Cart.</p>
      * @param refusedGifts value to be set
      * @return Builder
      */
@@ -1349,7 +1372,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Cart.</p>
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemMode" rel="nofollow">LineItemMode</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRemoveLineItemAction" rel="nofollow">removed</a> from the Cart.</p>
      * @param refusedGifts value to be set
      * @return Builder
      */
@@ -1364,7 +1387,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Cart.</p>
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemMode" rel="nofollow">LineItemMode</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRemoveLineItemAction" rel="nofollow">removed</a> from the Cart.</p>
      * @param builder function to build the refusedGifts value
      * @return Builder
      */
@@ -1380,7 +1403,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Cart.</p>
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemMode" rel="nofollow">LineItemMode</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRemoveLineItemAction" rel="nofollow">removed</a> from the Cart.</p>
      * @param builder function to build the refusedGifts value
      * @return Builder
      */
@@ -1394,7 +1417,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Cart.</p>
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemMode" rel="nofollow">LineItemMode</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRemoveLineItemAction" rel="nofollow">removed</a> from the Cart.</p>
      * @param builder function to build the refusedGifts value
      * @return Builder
      */
@@ -1406,7 +1429,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Cart.</p>
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemMode" rel="nofollow">LineItemMode</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRemoveLineItemAction" rel="nofollow">removed</a> from the Cart.</p>
      * @param builder function to build the refusedGifts value
      * @return Builder
      */
@@ -1453,7 +1476,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Used for Line Item price selection.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
      * @param country value to be set
      * @return Builder
      */
@@ -1464,7 +1487,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Languages of the Cart. Can only contain languages supported by the Project.</p>
+     *  <p>Language of the Cart. Must be one of the languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param locale value to be set
      * @return Builder
      */
@@ -1547,13 +1570,60 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Number of days after the last modification before a Cart is deleted. Configured in Project settings.</p>
+     *  <p>Indicates whether the Cart has been <span>locked</span>, preventing edits.</p>
+     * @param builder function to build the lock value
+     * @return Builder
+     */
+
+    public CartBuilder lock(
+            Function<com.commercetools.api.models.cart.CartLockBuilder, com.commercetools.api.models.cart.CartLockBuilder> builder) {
+        this.lock = builder.apply(com.commercetools.api.models.cart.CartLockBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Indicates whether the Cart has been <span>locked</span>, preventing edits.</p>
+     * @param builder function to build the lock value
+     * @return Builder
+     */
+
+    public CartBuilder withLock(
+            Function<com.commercetools.api.models.cart.CartLockBuilder, com.commercetools.api.models.cart.CartLock> builder) {
+        this.lock = builder.apply(com.commercetools.api.models.cart.CartLockBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Indicates whether the Cart has been <span>locked</span>, preventing edits.</p>
+     * @param lock value to be set
+     * @return Builder
+     */
+
+    public CartBuilder lock(@Nullable final com.commercetools.api.models.cart.CartLock lock) {
+        this.lock = lock;
+        return this;
+    }
+
+    /**
+     *  <p>Number of days after the last modification before a Cart is deleted. Configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a>.</p>
      * @param deleteDaysAfterLastModification value to be set
      * @return Builder
      */
 
     public CartBuilder deleteDaysAfterLastModification(@Nullable final Integer deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined identifier of a purchase order.</p>
+     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> or Merchant to track the purchase order during the <span>quote and order flow</span>.</p>
+     * @param purchaseOrderNumber value to be set
+     * @return Builder
+     */
+
+    public CartBuilder purchaseOrderNumber(@Nullable final String purchaseOrderNumber) {
+        this.purchaseOrderNumber = purchaseOrderNumber;
         return this;
     }
 
@@ -1629,6 +1699,71 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
+     *  <p>Warnings about the processing of a request.</p>
+     * @param warnings value to be set
+     * @return Builder
+     */
+
+    public CartBuilder warnings(@Nullable final com.commercetools.api.models.warning.WarningObject... warnings) {
+        this.warnings = new ArrayList<>(Arrays.asList(warnings));
+        return this;
+    }
+
+    /**
+     *  <p>Warnings about the processing of a request.</p>
+     * @param warnings value to be set
+     * @return Builder
+     */
+
+    public CartBuilder warnings(
+            @Nullable final java.util.List<com.commercetools.api.models.warning.WarningObject> warnings) {
+        this.warnings = warnings;
+        return this;
+    }
+
+    /**
+     *  <p>Warnings about the processing of a request.</p>
+     * @param warnings value to be set
+     * @return Builder
+     */
+
+    public CartBuilder plusWarnings(@Nullable final com.commercetools.api.models.warning.WarningObject... warnings) {
+        if (this.warnings == null) {
+            this.warnings = new ArrayList<>();
+        }
+        this.warnings.addAll(Arrays.asList(warnings));
+        return this;
+    }
+
+    /**
+     *  <p>Warnings about the processing of a request.</p>
+     * @param builder function to build the warnings value
+     * @return Builder
+     */
+
+    public CartBuilder plusWarnings(
+            Function<com.commercetools.api.models.warning.WarningObjectBuilder, Builder<? extends com.commercetools.api.models.warning.WarningObject>> builder) {
+        if (this.warnings == null) {
+            this.warnings = new ArrayList<>();
+        }
+        this.warnings.add(builder.apply(com.commercetools.api.models.warning.WarningObjectBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Warnings about the processing of a request.</p>
+     * @param builder function to build the warnings value
+     * @return Builder
+     */
+
+    public CartBuilder withWarnings(
+            Function<com.commercetools.api.models.warning.WarningObjectBuilder, Builder<? extends com.commercetools.api.models.warning.WarningObject>> builder) {
+        this.warnings = new ArrayList<>();
+        this.warnings.add(builder.apply(com.commercetools.api.models.warning.WarningObjectBuilder.of()).build());
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the Cart.</p>
      * @return id
      */
@@ -1675,7 +1810,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p><code>id</code> of the Customer that the Cart belongs to.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that the Cart belongs to.</p>
      * @return customerId
      */
 
@@ -1695,7 +1830,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for Line Item price selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Customer Group of the Customer that the Cart belongs to. Used for <span>Line Item price selection</span>.</p>
      * @return customerGroup
      */
 
@@ -1705,7 +1840,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Anonymous session associated with the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">Anonymous session</a> associated with the Cart.</p>
      * @return anonymousId
      */
 
@@ -1715,7 +1850,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Reference to a Business Unit the Cart belongs to. Only available for B2B-enabled Projects.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Business Unit the Cart belongs to. Only available for <span>B2B</span>-enabled Projects.</p>
      * @return businessUnit
      */
 
@@ -1725,7 +1860,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Reference to a Store the Cart belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Store the Cart belongs to.</p>
      * @return store
      */
 
@@ -1735,7 +1870,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Line Items added to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> added to the Cart.</p>
      * @return lineItems
      */
 
@@ -1744,7 +1879,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Custom Line Items added to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> added to the Cart.</p>
      * @return customLineItems
      */
 
@@ -1753,7 +1888,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Sum of all LineItem quantities, excluding CustomLineItems. Only present when the Cart has at least one LineItem.</p>
+     *  <p>Sum of all <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities, excluding <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>. Only present when the Cart has at least one LineItem.</p>
      * @return totalLineItemQuantity
      */
 
@@ -1763,8 +1898,8 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
-     *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     *  <p>Sum of the <code>totalPrice</code> field of all <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and if available, the <code>price</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a>. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
+     *  <p>Taxes are included if <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRate</a> <code>includedInPrice</code> is <code>true</code> for each price.</p>
      * @return totalPrice
      */
 
@@ -1774,8 +1909,8 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <ul>
-     *   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set. For Carts with <code>Multiple</code> ShippingMode, all Line Items and Custom Line Items must be fully distributed between the Shipping Methods (via <code>shippingDetails</code>), otherwise <code>taxedPrice</code> is not automatically set.</li>
-     *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set. For Carts with <code>Multiple</code> ShippingMode, all allocations must have their respective tax rates present in <code>perMethodTaxRate</code>, otherwise <code>taxedPrice</code> is not automatically set.</li>
+     *   <li>For a Cart with <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it is automatically set when a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetShippingAddressAction" rel="nofollow">shipping address is set</a>. For Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>, all Line Items and Custom Line Items must be fully distributed between the Shipping Methods (via <code>shippingDetails</code>), otherwise <code>taxedPrice</code> is not automatically set.</li>
+     *   <li>For a Cart with <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set. For Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>, all allocations must have their respective tax rates present in <code>perMethodTaxRate</code>, otherwise <code>taxedPrice</code> is not automatically set.</li>
      *  </ul>
      *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      * @return taxedPrice
@@ -1787,7 +1922,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
+     *  <p>Sum of the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> across all Shipping Methods.</p>
      *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      * @return taxedShippingPrice
      */
@@ -1817,7 +1952,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Indicates how the total prices on LineItems and CustomLineItems are rounded when calculated. Configured in Project settings.</p>
+     *  <p>Indicates how the total prices on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a> are rounded when calculated. Configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a>.</p>
      * @return priceRoundingMode
      */
 
@@ -1826,7 +1961,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>. Configured in Project settings.</p>
+     *  <p>Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>. Configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a>.</p>
      * @return taxRoundingMode
      */
 
@@ -1862,6 +1997,16 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
+     *  <p>Determines freezing behavior when <code>cartState</code> is <code>Frozen</code>.</p>
+     * @return freezeStrategy
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart.FreezeStrategy getFreezeStrategy() {
+        return this.freezeStrategy;
+    }
+
+    /**
      *  <p>Billing address associated with the Cart.</p>
      * @return billingAddress
      */
@@ -1872,7 +2017,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     *  <p>Shipping address for a Cart with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Determines eligible <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> rates. For a Cart with <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it also determines Tax Rates of Line Items.</p>
      * @return shippingAddress
      */
 
@@ -1891,7 +2036,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Single</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shippingKey
      */
 
@@ -1901,7 +2046,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Shipping-related information of a Cart with <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
+     *  <p>Shipping-related information of a Cart with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set when a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetShippingMethodAction" rel="nofollow">Shipping Method is set</a>.</p>
      * @return shippingInfo
      */
 
@@ -1911,10 +2056,10 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <p>Input used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>:</p>
      *  <ul>
-     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
-     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
+     *   <li>If <code>CartClassification</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ClassificationShippingRateInput" rel="nofollow">ClassificationShippingRateInput</a>.</li>
+     *   <li>If <code>CartScore</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ScoreShippingRateInput" rel="nofollow">ScoreShippingRateInput</a>.</li>
      *   <li>If <code>CartValue</code>, it cannot be used.</li>
      *  </ul>
      * @return shippingRateInput
@@ -1926,7 +2071,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Custom Fields of the Shipping Method in a Cart with <code>Single</code> ShippingMode.</p>
+     *  <p>Custom Fields of the Shipping Method in a Cart with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shippingCustomFields
      */
 
@@ -1936,7 +2081,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     *  <p>Shipping-related information of a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Updated automatically each time a new <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>.</p>
      * @return shipping
      */
 
@@ -1945,8 +2090,8 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
-     *  <p>For Carts with <code>Single</code> ShippingMode: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Additional shipping addresses of the Cart as specified by <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> using the <code>shippingDetails</code> field.</p>
+     *  <p>For Carts with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @return itemShippingAddresses
      */
 
@@ -1973,7 +2118,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Cart.</p>
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemMode" rel="nofollow">LineItemMode</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRemoveLineItemAction" rel="nofollow">removed</a> from the Cart.</p>
      * @return refusedGifts
      */
 
@@ -1992,7 +2137,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Used for Line Item price selection.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
      * @return country
      */
 
@@ -2002,7 +2147,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Languages of the Cart. Can only contain languages supported by the Project.</p>
+     *  <p>Language of the Cart. Must be one of the languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @return locale
      */
 
@@ -2041,13 +2186,34 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Number of days after the last modification before a Cart is deleted. Configured in Project settings.</p>
+     *  <p>Indicates whether the Cart has been <span>locked</span>, preventing edits.</p>
+     * @return lock
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart.CartLock getLock() {
+        return this.lock;
+    }
+
+    /**
+     *  <p>Number of days after the last modification before a Cart is deleted. Configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a>.</p>
      * @return deleteDaysAfterLastModification
      */
 
     @Nullable
     public Integer getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
+    }
+
+    /**
+     *  <p>User-defined identifier of a purchase order.</p>
+     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> or Merchant to track the purchase order during the <span>quote and order flow</span>.</p>
+     * @return purchaseOrderNumber
+     */
+
+    @Nullable
+    public String getPurchaseOrderNumber() {
+        return this.purchaseOrderNumber;
     }
 
     /**
@@ -2068,6 +2234,16 @@ public class CartBuilder implements Builder<Cart> {
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
+    }
+
+    /**
+     *  <p>Warnings about the processing of a request.</p>
+     * @return warnings
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.warning.WarningObject> getWarnings() {
+        return this.warnings;
     }
 
     /**
@@ -2098,10 +2274,10 @@ public class CartBuilder implements Builder<Cart> {
         return new CartImpl(id, version, createdAt, lastModifiedAt, key, customerId, customerEmail, customerGroup,
             anonymousId, businessUnit, store, lineItems, customLineItems, totalLineItemQuantity, totalPrice, taxedPrice,
             taxedShippingPrice, discountOnTotalPrice, taxMode, priceRoundingMode, taxRoundingMode, taxCalculationMode,
-            inventoryMode, cartState, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo,
-            shippingRateInput, shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts,
-            refusedGifts, paymentInfo, country, locale, origin, custom, discountTypeCombination,
-            deleteDaysAfterLastModification, lastModifiedBy, createdBy);
+            inventoryMode, cartState, freezeStrategy, billingAddress, shippingAddress, shippingMode, shippingKey,
+            shippingInfo, shippingRateInput, shippingCustomFields, shipping, itemShippingAddresses, discountCodes,
+            directDiscounts, refusedGifts, paymentInfo, country, locale, origin, custom, discountTypeCombination, lock,
+            deleteDaysAfterLastModification, purchaseOrderNumber, lastModifiedBy, createdBy, warnings);
     }
 
     /**
@@ -2112,10 +2288,10 @@ public class CartBuilder implements Builder<Cart> {
         return new CartImpl(id, version, createdAt, lastModifiedAt, key, customerId, customerEmail, customerGroup,
             anonymousId, businessUnit, store, lineItems, customLineItems, totalLineItemQuantity, totalPrice, taxedPrice,
             taxedShippingPrice, discountOnTotalPrice, taxMode, priceRoundingMode, taxRoundingMode, taxCalculationMode,
-            inventoryMode, cartState, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo,
-            shippingRateInput, shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts,
-            refusedGifts, paymentInfo, country, locale, origin, custom, discountTypeCombination,
-            deleteDaysAfterLastModification, lastModifiedBy, createdBy);
+            inventoryMode, cartState, freezeStrategy, billingAddress, shippingAddress, shippingMode, shippingKey,
+            shippingInfo, shippingRateInput, shippingCustomFields, shipping, itemShippingAddresses, discountCodes,
+            directDiscounts, refusedGifts, paymentInfo, country, locale, origin, custom, discountTypeCombination, lock,
+            deleteDaysAfterLastModification, purchaseOrderNumber, lastModifiedBy, createdBy, warnings);
     }
 
     /**
@@ -2157,6 +2333,7 @@ public class CartBuilder implements Builder<Cart> {
         builder.taxCalculationMode = template.getTaxCalculationMode();
         builder.inventoryMode = template.getInventoryMode();
         builder.cartState = template.getCartState();
+        builder.freezeStrategy = template.getFreezeStrategy();
         builder.billingAddress = template.getBillingAddress();
         builder.shippingAddress = template.getShippingAddress();
         builder.shippingMode = template.getShippingMode();
@@ -2175,9 +2352,12 @@ public class CartBuilder implements Builder<Cart> {
         builder.origin = template.getOrigin();
         builder.custom = template.getCustom();
         builder.discountTypeCombination = template.getDiscountTypeCombination();
+        builder.lock = template.getLock();
         builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
+        builder.purchaseOrderNumber = template.getPurchaseOrderNumber();
         builder.lastModifiedBy = template.getLastModifiedBy();
         builder.createdBy = template.getCreatedBy();
+        builder.warnings = template.getWarnings();
         return builder;
     }
 

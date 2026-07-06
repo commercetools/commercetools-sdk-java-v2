@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.Address;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Change triggered by the Set Address Custom Field update action.</p>
+ * SetAddressCustomFieldChange
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -59,7 +59,7 @@ public interface SetAddressCustomFieldChange extends Change {
     public String getType();
 
     /**
-     *  <p>Address which was extended.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> which was extended.</p>
      * @return address
      */
     @NotNull
@@ -68,7 +68,7 @@ public interface SetAddressCustomFieldChange extends Change {
     public Address getAddress();
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Field</a>.</p>
      * @return name
      */
     @NotNull
@@ -76,7 +76,7 @@ public interface SetAddressCustomFieldChange extends Change {
     public String getName();
 
     /**
-     *  <p><code>id</code> of the referenced Type.</p>
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @return customTypeId
      */
     @NotNull
@@ -107,21 +107,21 @@ public interface SetAddressCustomFieldChange extends Change {
     public void setChange(final String change);
 
     /**
-     *  <p>Address which was extended.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> which was extended.</p>
      * @param address value to be set
      */
 
     public void setAddress(final Address address);
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Field</a>.</p>
      * @param name value to be set
      */
 
     public void setName(final String name);
 
     /**
-     *  <p><code>id</code> of the referenced Type.</p>
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param customTypeId value to be set
      */
 
@@ -218,8 +218,8 @@ public interface SetAddressCustomFieldChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetAddressCustomFieldChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetAddressCustomFieldChange>() {
+    public static tools.jackson.core.type.TypeReference<SetAddressCustomFieldChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetAddressCustomFieldChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetAddressCustomFieldChange>";

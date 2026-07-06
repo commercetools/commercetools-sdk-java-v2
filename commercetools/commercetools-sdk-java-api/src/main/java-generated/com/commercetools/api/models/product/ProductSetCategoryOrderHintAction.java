@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductSetCategoryOrderHintAction
@@ -38,7 +38,7 @@ public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
     String SET_CATEGORY_ORDER_HINT = "setCategoryOrderHint";
 
     /**
-     *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>. If this Category is not assigned to the Product, an InvalidOperation error is returned.</p>
+     *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>. If this Category is not assigned to the Product, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return categoryId
      */
     @NotNull
@@ -62,7 +62,7 @@ public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
     public Boolean getStaged();
 
     /**
-     *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>. If this Category is not assigned to the Product, an InvalidOperation error is returned.</p>
+     *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>. If this Category is not assigned to the Product, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param categoryId value to be set
      */
 
@@ -154,8 +154,8 @@ public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSetCategoryOrderHintAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSetCategoryOrderHintAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductSetCategoryOrderHintAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSetCategoryOrderHintAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSetCategoryOrderHintAction>";

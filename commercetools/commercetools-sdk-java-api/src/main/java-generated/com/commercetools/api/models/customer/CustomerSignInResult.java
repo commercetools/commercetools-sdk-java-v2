@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.cart.Cart;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CustomerSignInResult
@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface CustomerSignInResult {
 
     /**
-     *  <p>Customer signed up or signed in after authentication.</p>
+     *  <p>Customer <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers:POST" rel="nofollow">signed up</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/login:POST" rel="nofollow">signed in</a> after authentication.</p>
      * @return customer
      */
     @NotNull
@@ -43,7 +43,9 @@ public interface CustomerSignInResult {
     public Customer getCustomer();
 
     /**
-     *  <p>Cart associated with the Customer. If empty, the Customer does not have a Cart assigned.</p>
+     *  <p>Cart associated with the Customer.</p>
+     *  <p>The Cart is recalculated to remove invalid Line Items and apply the latest prices, taxes, and discounts. During these updates, the following errors can be returned: <a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a>.</p>
+     *  <p>For more information, see <span>Cart updates</span>.</p>
      * @return cart
      */
     @Valid
@@ -51,14 +53,16 @@ public interface CustomerSignInResult {
     public Cart getCart();
 
     /**
-     *  <p>Customer signed up or signed in after authentication.</p>
+     *  <p>Customer <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers:POST" rel="nofollow">signed up</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/login:POST" rel="nofollow">signed in</a> after authentication.</p>
      * @param customer value to be set
      */
 
     public void setCustomer(final Customer customer);
 
     /**
-     *  <p>Cart associated with the Customer. If empty, the Customer does not have a Cart assigned.</p>
+     *  <p>Cart associated with the Customer.</p>
+     *  <p>The Cart is recalculated to remove invalid Line Items and apply the latest prices, taxes, and discounts. During these updates, the following errors can be returned: <a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a>.</p>
+     *  <p>For more information, see <span>Cart updates</span>.</p>
      * @param cart value to be set
      */
 
@@ -133,8 +137,8 @@ public interface CustomerSignInResult {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerSignInResult> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerSignInResult>() {
+    public static tools.jackson.core.type.TypeReference<CustomerSignInResult> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerSignInResult>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerSignInResult>";

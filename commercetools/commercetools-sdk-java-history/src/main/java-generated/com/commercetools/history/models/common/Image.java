@@ -8,12 +8,12 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * Image
@@ -25,7 +25,6 @@ import jakarta.validation.constraints.NotNull;
  *     Image image = Image.builder()
  *             .url("{url}")
  *             .dimensions(dimensionsBuilder -> dimensionsBuilder)
- *             .label("{label}")
  *             .build()
  * </code></pre>
  * </div>
@@ -35,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface Image {
 
     /**
-     *
+     *  <p>URL of the image in its original size that must be unique within a single <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return url
      */
     @NotNull
@@ -43,7 +42,7 @@ public interface Image {
     public String getUrl();
 
     /**
-     *
+     *  <p>Dimensions of the original image.</p>
      * @return dimensions
      */
     @NotNull
@@ -52,29 +51,29 @@ public interface Image {
     public ImageDimensions getDimensions();
 
     /**
-     *
+     *  <p>Custom label for the image.</p>
      * @return label
      */
-    @NotNull
+
     @JsonProperty("label")
     public String getLabel();
 
     /**
-     * set url
+     *  <p>URL of the image in its original size that must be unique within a single <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param url value to be set
      */
 
     public void setUrl(final String url);
 
     /**
-     * set dimensions
+     *  <p>Dimensions of the original image.</p>
      * @param dimensions value to be set
      */
 
     public void setDimensions(final ImageDimensions dimensions);
 
     /**
-     * set label
+     *  <p>Custom label for the image.</p>
      * @param label value to be set
      */
 
@@ -152,8 +151,8 @@ public interface Image {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Image> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Image>() {
+    public static tools.jackson.core.type.TypeReference<Image> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Image>() {
             @Override
             public String toString() {
                 return "TypeReference<Image>";

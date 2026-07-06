@@ -10,15 +10,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.approval_rule.RuleRequester;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Set Requester update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -49,7 +49,7 @@ public interface ApprovalRuleRequestersSetMessage extends Message {
     String APPROVAL_RULE_REQUESTERS_SET = "ApprovalRuleRequestersSet";
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @return requesters
      */
     @NotNull
@@ -58,7 +58,7 @@ public interface ApprovalRuleRequestersSetMessage extends Message {
     public List<RuleRequester> getRequesters();
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @return oldRequesters
      */
     @NotNull
@@ -67,7 +67,7 @@ public interface ApprovalRuleRequestersSetMessage extends Message {
     public List<RuleRequester> getOldRequesters();
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param requesters values to be set
      */
 
@@ -75,14 +75,14 @@ public interface ApprovalRuleRequestersSetMessage extends Message {
     public void setRequesters(final RuleRequester... requesters);
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param requesters values to be set
      */
 
     public void setRequesters(final List<RuleRequester> requesters);
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param oldRequesters values to be set
      */
 
@@ -90,7 +90,7 @@ public interface ApprovalRuleRequestersSetMessage extends Message {
     public void setOldRequesters(final RuleRequester... oldRequesters);
 
     /**
-     *  <p>RuleRequester of the ApprovalRule after the Set Requester update action.</p>
+     *  <p>RuleRequester of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetRequestersAction" rel="nofollow">Set Requester</a> update action.</p>
      * @param oldRequesters values to be set
      */
 
@@ -195,8 +195,8 @@ public interface ApprovalRuleRequestersSetMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ApprovalRuleRequestersSetMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ApprovalRuleRequestersSetMessage>() {
+    public static tools.jackson.core.type.TypeReference<ApprovalRuleRequestersSetMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ApprovalRuleRequestersSetMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<ApprovalRuleRequestersSetMessage>";

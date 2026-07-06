@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Setting the Order Predicate for an Approval Rule generates an ApprovalRulePredicateSet Message.</p>
+ *  <p>Setting the <span>Order Predicate</span> for an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">Approval Rule</a> generates an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRulePredicateSetMessage" rel="nofollow">ApprovalRulePredicateSet</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ApprovalRuleSetPredicateActionImpl implements ApprovalRuleSetPredicateAction, ModelBase {
@@ -51,7 +52,7 @@ public class ApprovalRuleSetPredicateActionImpl implements ApprovalRuleSetPredic
     }
 
     /**
-     *  <p>A valid Order Predicate to set for the Approval Rule.</p>
+     *  <p>A valid <span>Order Predicate</span> to set for the Approval Rule.</p>
      */
 
     public String getPredicate() {

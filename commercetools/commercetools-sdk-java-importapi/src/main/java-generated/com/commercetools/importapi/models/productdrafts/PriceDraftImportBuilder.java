@@ -88,7 +88,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>Set this field if this Price is only valid for the referenced CustomerGroup. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a>. If the referenced CustomerGroup does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -102,7 +102,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>Set this field if this Price is only valid for the referenced CustomerGroup. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a>. If the referenced CustomerGroup does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -115,7 +115,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>Set this field if this Price is only valid for the referenced CustomerGroup. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a>. If the referenced CustomerGroup does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -127,7 +127,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>. If the referenced Channel does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -139,7 +139,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>. If the referenced Channel does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -151,7 +151,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>. If the referenced Channel does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @param channel value to be set
      * @return Builder
      */
@@ -375,7 +375,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>Set this field if this Price is only valid for the referenced CustomerGroup. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a>. If the referenced CustomerGroup does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @return customerGroup
      */
 
@@ -385,7 +385,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>. If the referenced Channel does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @return channel
      */
 

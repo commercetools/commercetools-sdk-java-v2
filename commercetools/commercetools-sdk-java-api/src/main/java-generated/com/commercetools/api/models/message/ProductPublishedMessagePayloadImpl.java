@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Publish update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishAction" rel="nofollow">Publish</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPublishedMessagePayloadImpl implements ProductPublishedMessagePayload, ModelBase {
@@ -59,7 +60,7 @@ public class ProductPublishedMessagePayloadImpl implements ProductPublishedMessa
     }
 
     /**
-     *  <p>List of image URLs which were removed during the Publish update action.</p>
+     *  <p>List of image URLs which were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishAction" rel="nofollow">Publish</a> update action.</p>
      */
 
     public java.util.List<String> getRemovedImageUrls() {
@@ -67,7 +68,7 @@ public class ProductPublishedMessagePayloadImpl implements ProductPublishedMessa
     }
 
     /**
-     *  <p>Current Product Projection of the Product at the time of creation.</p>
+     *  <p>Current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> at the time of creation.</p>
      */
 
     public com.commercetools.api.models.product.ProductProjection getProductProjection() {
@@ -75,7 +76,7 @@ public class ProductPublishedMessagePayloadImpl implements ProductPublishedMessa
     }
 
     /**
-     *  <p>Publishing Scope that was used during the Publish update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishScope" rel="nofollow">Publishing Scope</a> that was used during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishAction" rel="nofollow">Publish</a> update action.</p>
      */
 
     public com.commercetools.api.models.cart.ProductPublishScope getScope() {

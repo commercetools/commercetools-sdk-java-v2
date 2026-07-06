@@ -16,6 +16,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     RemoveAssetChange removeAssetChange = RemoveAssetChange.builder()
  *             .change("{change}")
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .catalogData("{catalogData}")
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
@@ -26,6 +28,10 @@ public class RemoveAssetChangeBuilder implements Builder<RemoveAssetChange> {
     private String change;
 
     private com.commercetools.history.models.common.Asset previousValue;
+
+    private String catalogData;
+
+    private String variant;
 
     /**
      * set the value to the change
@@ -74,6 +80,33 @@ public class RemoveAssetChangeBuilder implements Builder<RemoveAssetChange> {
     }
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     * @return Builder
+     */
+
+    public RemoveAssetChangeBuilder catalogData(final String catalogData) {
+        this.catalogData = catalogData;
+        return this;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     * @return Builder
+     */
+
+    public RemoveAssetChangeBuilder variant(final String variant) {
+        this.variant = variant;
+        return this;
+    }
+
+    /**
      * value of change}
      * @return change
      */
@@ -92,13 +125,38 @@ public class RemoveAssetChangeBuilder implements Builder<RemoveAssetChange> {
     }
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
+    /**
      * builds RemoveAssetChange with checking for non-null required values
      * @return RemoveAssetChange
      */
     public RemoveAssetChange build() {
         Objects.requireNonNull(change, RemoveAssetChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, RemoveAssetChange.class + ": previousValue is missing");
-        return new RemoveAssetChangeImpl(change, previousValue);
+        Objects.requireNonNull(catalogData, RemoveAssetChange.class + ": catalogData is missing");
+        Objects.requireNonNull(variant, RemoveAssetChange.class + ": variant is missing");
+        return new RemoveAssetChangeImpl(change, previousValue, catalogData, variant);
     }
 
     /**
@@ -106,7 +164,7 @@ public class RemoveAssetChangeBuilder implements Builder<RemoveAssetChange> {
      * @return RemoveAssetChange
      */
     public RemoveAssetChange buildUnchecked() {
-        return new RemoveAssetChangeImpl(change, previousValue);
+        return new RemoveAssetChangeImpl(change, previousValue, catalogData, variant);
     }
 
     /**
@@ -126,6 +184,8 @@ public class RemoveAssetChangeBuilder implements Builder<RemoveAssetChange> {
         RemoveAssetChangeBuilder builder = new RemoveAssetChangeBuilder();
         builder.change = template.getChange();
         builder.previousValue = template.getPreviousValue();
+        builder.catalogData = template.getCatalogData();
+        builder.variant = template.getVariant();
         return builder;
     }
 

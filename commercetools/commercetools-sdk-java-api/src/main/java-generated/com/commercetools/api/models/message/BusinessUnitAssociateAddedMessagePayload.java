@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.business_unit.Associate;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Add Associate update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAddAssociateAction" rel="nofollow">Add Associate</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface BusinessUnitAssociateAddedMessagePayload extends MessagePayload
     String BUSINESS_UNIT_ASSOCIATE_ADDED = "BusinessUnitAssociateAdded";
 
     /**
-     *  <p>The Associate that was added to the Business Unit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @return associate
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface BusinessUnitAssociateAddedMessagePayload extends MessagePayload
     public Associate getAssociate();
 
     /**
-     *  <p>The Associate that was added to the Business Unit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param associate value to be set
      */
 
@@ -125,8 +125,8 @@ public interface BusinessUnitAssociateAddedMessagePayload extends MessagePayload
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAssociateAddedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAssociateAddedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitAssociateAddedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitAssociateAddedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitAssociateAddedMessagePayload>";

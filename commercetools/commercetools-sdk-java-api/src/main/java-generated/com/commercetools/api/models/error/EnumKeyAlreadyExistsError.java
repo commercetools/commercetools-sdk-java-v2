@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Returned when an AttributeEnumType or AttributeLocalizedEnumType contains a key that already exists.</p>
+ *  <p>Returned when an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeEnumType" rel="nofollow">AttributeEnumType</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumType" rel="nofollow">AttributeLocalizedEnumType</a> contains a key that already exists.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -165,8 +165,8 @@ public interface EnumKeyAlreadyExistsError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<EnumKeyAlreadyExistsError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<EnumKeyAlreadyExistsError>() {
+    public static tools.jackson.core.type.TypeReference<EnumKeyAlreadyExistsError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<EnumKeyAlreadyExistsError>() {
             @Override
             public String toString() {
                 return "TypeReference<EnumKeyAlreadyExistsError>";

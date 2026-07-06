@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ReturnItem
@@ -50,7 +50,7 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
     public String getId();
 
     /**
-     *  <p>User-defined unique identifier of the Return Item.</p>
+     *  <p>User-defined identifier of the Return Item. Unique among Return Items in the Order.</p>
      * @return key
      */
 
@@ -58,7 +58,7 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
     public String getKey();
 
     /**
-     *  <p>Number of Line Items or Custom Line Items returned.</p>
+     *  <p>Quantity of Line Items or Custom Line Items returned.</p>
      * @return quantity
      */
     @NotNull
@@ -92,8 +92,8 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
     /**
      *  <p>Payment status of the Return Item:</p>
      *  <ul>
-     *   <li><code>NonRefundable</code>, for items in the <code>Advised</code> ReturnShipmentState</li>
-     *   <li><code>Initial</code>, for items in the <code>Returned</code> ReturnShipmentState</li>
+     *   <li><code>NonRefundable</code>, for items in the <code>Advised</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnShipmentState" rel="nofollow">ReturnShipmentState</a></li>
+     *   <li><code>Initial</code>, for items in the <code>Returned</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnShipmentState" rel="nofollow">ReturnShipmentState</a></li>
      *  </ul>
      * @return paymentState
      */
@@ -118,7 +118,7 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     *  <p>Date and time (UTC) the Return Item was intitially created.</p>
+     *  <p>Date and time (UTC) the Return Item was initially created.</p>
      * @return createdAt
      */
     @NotNull
@@ -133,14 +133,14 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
     public void setId(final String id);
 
     /**
-     *  <p>User-defined unique identifier of the Return Item.</p>
+     *  <p>User-defined identifier of the Return Item. Unique among Return Items in the Order.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p>Number of Line Items or Custom Line Items returned.</p>
+     *  <p>Quantity of Line Items or Custom Line Items returned.</p>
      * @param quantity value to be set
      */
 
@@ -163,8 +163,8 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
     /**
      *  <p>Payment status of the Return Item:</p>
      *  <ul>
-     *   <li><code>NonRefundable</code>, for items in the <code>Advised</code> ReturnShipmentState</li>
-     *   <li><code>Initial</code>, for items in the <code>Returned</code> ReturnShipmentState</li>
+     *   <li><code>NonRefundable</code>, for items in the <code>Advised</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnShipmentState" rel="nofollow">ReturnShipmentState</a></li>
+     *   <li><code>Initial</code>, for items in the <code>Returned</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnShipmentState" rel="nofollow">ReturnShipmentState</a></li>
      *  </ul>
      * @param paymentState value to be set
      */
@@ -186,7 +186,7 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
     /**
-     *  <p>Date and time (UTC) the Return Item was intitially created.</p>
+     *  <p>Date and time (UTC) the Return Item was initially created.</p>
      * @param createdAt value to be set
      */
 
@@ -251,8 +251,8 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ReturnItem> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ReturnItem>() {
+    public static tools.jackson.core.type.TypeReference<ReturnItem> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ReturnItem>() {
             @Override
             public String toString() {
                 return "TypeReference<ReturnItem>";

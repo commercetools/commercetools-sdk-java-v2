@@ -62,10 +62,12 @@ public class CartDiscountTest {
                         .stackingMode(com.commercetools.api.models.cart_discount.StackingMode.findEnum("Stacking")) },
                 new Object[] { "custom",
                         CartDiscount.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
-                new Object[] { "discountGroup",
+                new Object[] { "discountGroup", CartDiscount.builder()
+                        .discountGroup(new com.commercetools.api.models.discount_group.DiscountGroupReferenceImpl()) },
+                new Object[] { "recurringOrderScope",
                         CartDiscount.builder()
-                                .discountGroup(
-                                    new com.commercetools.api.models.discount_group.DiscountGroupReferenceImpl()) } };
+                                .recurringOrderScope(
+                                    new com.commercetools.api.models.recurring_order.RecurringOrderScopeImpl()) } };
     }
 
     @Test
@@ -228,5 +230,13 @@ public class CartDiscountTest {
         value.setDiscountGroup(new com.commercetools.api.models.discount_group.DiscountGroupReferenceImpl());
         Assertions.assertThat(value.getDiscountGroup())
                 .isEqualTo(new com.commercetools.api.models.discount_group.DiscountGroupReferenceImpl());
+    }
+
+    @Test
+    public void recurringOrderScope() {
+        CartDiscount value = CartDiscount.of();
+        value.setRecurringOrderScope(new com.commercetools.api.models.recurring_order.RecurringOrderScopeImpl());
+        Assertions.assertThat(value.getRecurringOrderScope())
+                .isEqualTo(new com.commercetools.api.models.recurring_order.RecurringOrderScopeImpl());
     }
 }

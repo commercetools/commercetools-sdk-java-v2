@@ -10,15 +10,15 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Adds an address to an Order when shipping to multiple addresses is desired.</p>
+ *  <p>Adds an address to the <code>itemShippingAddresses</code> of an Order. Use this action when shipping is defined per item. For example, when shipping items to multiple addresses or when using different Shipping Methods, even if all items share the same address.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -126,8 +126,8 @@ public interface StagedOrderAddItemShippingAddressAction extends StagedOrderUpda
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddItemShippingAddressAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddItemShippingAddressAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrderAddItemShippingAddressAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrderAddItemShippingAddressAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderAddItemShippingAddressAction>";

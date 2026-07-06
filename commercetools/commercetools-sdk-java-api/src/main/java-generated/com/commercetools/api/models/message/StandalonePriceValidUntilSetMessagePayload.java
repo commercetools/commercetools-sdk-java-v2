@@ -9,12 +9,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Valid Until update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidUntilAction" rel="nofollow">Set Valid Until</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,7 +37,7 @@ public interface StandalonePriceValidUntilSetMessagePayload extends MessagePaylo
     String STANDALONE_PRICE_VALID_UNTIL_SET = "StandalonePriceValidUntilSet";
 
     /**
-     *  <p>Value of StandalonePrice <code>validUntil</code> after the Set Valid Until update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validUntil</code> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidUntilAction" rel="nofollow">Set Valid Until</a> update action.</p>
      * @return validUntil
      */
 
@@ -44,7 +45,7 @@ public interface StandalonePriceValidUntilSetMessagePayload extends MessagePaylo
     public ZonedDateTime getValidUntil();
 
     /**
-     *  <p>Value of StandalonePrice <code>validUntil</code> before the Set Valid Until update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validUntil</code> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidUntilAction" rel="nofollow">Set Valid Until</a> update action.</p>
      * @return previousValidUntil
      */
 
@@ -52,14 +53,14 @@ public interface StandalonePriceValidUntilSetMessagePayload extends MessagePaylo
     public ZonedDateTime getPreviousValidUntil();
 
     /**
-     *  <p>Value of StandalonePrice <code>validUntil</code> after the Set Valid Until update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validUntil</code> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidUntilAction" rel="nofollow">Set Valid Until</a> update action.</p>
      * @param validUntil value to be set
      */
 
     public void setValidUntil(final ZonedDateTime validUntil);
 
     /**
-     *  <p>Value of StandalonePrice <code>validUntil</code> before the Set Valid Until update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validUntil</code> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidUntilAction" rel="nofollow">Set Valid Until</a> update action.</p>
      * @param previousValidUntil value to be set
      */
 
@@ -138,8 +139,8 @@ public interface StandalonePriceValidUntilSetMessagePayload extends MessagePaylo
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceValidUntilSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceValidUntilSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<StandalonePriceValidUntilSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StandalonePriceValidUntilSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<StandalonePriceValidUntilSetMessagePayload>";

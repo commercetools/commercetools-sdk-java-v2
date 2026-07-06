@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductSetKeyAction
@@ -36,7 +37,7 @@ public interface ProductSetKeyAction extends ProductUpdateAction {
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     *  <p>To update a Product using the Import API and the Merchant Center, the Product <code>key</code> must match the pattern <code>^[A-Za-z0-9_-]{2,256}$</code>.</p>
+     *  <p>To update a Product using the <span>Import API</span> and the <span>Merchant Center</span>, the Product <code>key</code> must match the pattern <code>^[A-Za-z0-9_-]{2,256}$</code>.</p>
      * @return key
      */
 
@@ -45,7 +46,7 @@ public interface ProductSetKeyAction extends ProductUpdateAction {
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     *  <p>To update a Product using the Import API and the Merchant Center, the Product <code>key</code> must match the pattern <code>^[A-Za-z0-9_-]{2,256}$</code>.</p>
+     *  <p>To update a Product using the <span>Import API</span> and the <span>Merchant Center</span>, the Product <code>key</code> must match the pattern <code>^[A-Za-z0-9_-]{2,256}$</code>.</p>
      * @param key value to be set
      */
 
@@ -122,8 +123,8 @@ public interface ProductSetKeyAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSetKeyAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSetKeyAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductSetKeyAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSetKeyAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSetKeyAction>";

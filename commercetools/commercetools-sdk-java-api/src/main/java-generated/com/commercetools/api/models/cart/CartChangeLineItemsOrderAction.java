@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CartChangeLineItemsOrderAction
@@ -38,7 +38,7 @@ public interface CartChangeLineItemsOrderAction extends CartUpdateAction {
     String CHANGE_LINE_ITEMS_ORDER = "changeLineItemsOrder";
 
     /**
-     *  <p>All existing LineItem <code>id</code>s in the desired new order.</p>
+     *  <p>All existing <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>id</code>s in the desired new order.</p>
      * @return lineItemOrder
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface CartChangeLineItemsOrderAction extends CartUpdateAction {
     public List<String> getLineItemOrder();
 
     /**
-     *  <p>All existing LineItem <code>id</code>s in the desired new order.</p>
+     *  <p>All existing <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>id</code>s in the desired new order.</p>
      * @param lineItemOrder values to be set
      */
 
@@ -54,7 +54,7 @@ public interface CartChangeLineItemsOrderAction extends CartUpdateAction {
     public void setLineItemOrder(final String... lineItemOrder);
 
     /**
-     *  <p>All existing LineItem <code>id</code>s in the desired new order.</p>
+     *  <p>All existing <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> <code>id</code>s in the desired new order.</p>
      * @param lineItemOrder values to be set
      */
 
@@ -127,8 +127,8 @@ public interface CartChangeLineItemsOrderAction extends CartUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartChangeLineItemsOrderAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartChangeLineItemsOrderAction>() {
+    public static tools.jackson.core.type.TypeReference<CartChangeLineItemsOrderAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartChangeLineItemsOrderAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartChangeLineItemsOrderAction>";

@@ -9,12 +9,12 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * TaxRate
@@ -69,7 +69,7 @@ public interface TaxRate {
     public Boolean getIncludedInPrice();
 
     /**
-     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>A two-digit country code as per <span>ISO 3166-1 alpha-2</span>.</p>
      * @return country
      */
     @NotNull
@@ -121,7 +121,7 @@ public interface TaxRate {
     public void setIncludedInPrice(final Boolean includedInPrice);
 
     /**
-     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>A two-digit country code as per <span>ISO 3166-1 alpha-2</span>.</p>
      * @param country value to be set
      */
 
@@ -232,8 +232,8 @@ public interface TaxRate {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TaxRate> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TaxRate>() {
+    public static tools.jackson.core.type.TypeReference<TaxRate> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TaxRate>() {
             @Override
             public String toString() {
                 return "TypeReference<TaxRate>";

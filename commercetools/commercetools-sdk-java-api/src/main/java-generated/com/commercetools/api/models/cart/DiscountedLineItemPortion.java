@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.common.TypedMoney;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * DiscountedLineItemPortion
@@ -36,7 +36,7 @@ import jakarta.validation.constraints.NotNull;
 public interface DiscountedLineItemPortion {
 
     /**
-     *  <p>A CartDiscountReference or DirectDiscountReference of the applicable discount on the Line Item.</p>
+     *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountReference" rel="nofollow">CartDiscountReference</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscountReference" rel="nofollow">DirectDiscountReference</a> of the applicable discount on the Line Item.</p>
      * @return discount
      */
     @NotNull
@@ -54,7 +54,7 @@ public interface DiscountedLineItemPortion {
     public TypedMoney getDiscountedAmount();
 
     /**
-     *  <p>A CartDiscountReference or DirectDiscountReference of the applicable discount on the Line Item.</p>
+     *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountReference" rel="nofollow">CartDiscountReference</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscountReference" rel="nofollow">DirectDiscountReference</a> of the applicable discount on the Line Item.</p>
      * @param discount value to be set
      */
 
@@ -137,8 +137,8 @@ public interface DiscountedLineItemPortion {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DiscountedLineItemPortion> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DiscountedLineItemPortion>() {
+    public static tools.jackson.core.type.TypeReference<DiscountedLineItemPortion> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DiscountedLineItemPortion>() {
             @Override
             public String toString() {
                 return "TypeReference<DiscountedLineItemPortion>";

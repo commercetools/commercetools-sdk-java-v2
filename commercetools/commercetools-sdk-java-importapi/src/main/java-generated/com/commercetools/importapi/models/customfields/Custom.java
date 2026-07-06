@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.importapi.models.common.TypeKeyReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>The representation to be sent to the server when creating a resource with Custom Fields.</p>
@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface Custom {
 
     /**
-     *  <p>The Type that provides the field definitions for this object. If the referenced Type does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Type is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that provides the field definitions for this object. If the referenced Type does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Type is created.</p>
      * @return type
      */
     @NotNull
@@ -51,7 +51,7 @@ public interface Custom {
     public FieldContainer getFields();
 
     /**
-     *  <p>The Type that provides the field definitions for this object. If the referenced Type does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Type is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that provides the field definitions for this object. If the referenced Type does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Type is created.</p>
      * @param type value to be set
      */
 
@@ -134,8 +134,8 @@ public interface Custom {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Custom> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Custom>() {
+    public static tools.jackson.core.type.TypeReference<Custom> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Custom>() {
             @Override
             public String toString() {
                 return "TypeReference<Custom>";

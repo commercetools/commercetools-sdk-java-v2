@@ -37,7 +37,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     private java.util.List<com.commercetools.importapi.models.importcontainers.ImportContainer> results;
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @param limit value to be set
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @param offset value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     *  <p>ImportContainers matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainers</a> matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -93,7 +93,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     *  <p>ImportContainers matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainers</a> matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -105,7 +105,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     *  <p>ImportContainers matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainers</a> matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     *  <p>ImportContainers matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainers</a> matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -136,7 +136,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     *  <p>ImportContainers matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainers</a> matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -150,7 +150,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     *  <p>ImportContainers matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainers</a> matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -162,7 +162,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     *  <p>ImportContainers matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainers</a> matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -173,7 +173,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @return limit
      */
 
@@ -182,7 +182,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @return offset
      */
 
@@ -209,7 +209,7 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
-     *  <p>ImportContainers matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainers</a> matching the query.</p>
      * @return results
      */
 

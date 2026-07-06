@@ -8,15 +8,15 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when the <code>type</code> is different for an AttributeDefinition using the same <code>name</code> in multiple Product Types.</p>
- *  <p>The error is returned as a failed response to the Create ProductType request.</p>
+ *  <p>The error is returned as a failed response to the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/product-types:POST" rel="nofollow">Create ProductType</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -186,8 +186,8 @@ public interface AttributeDefinitionTypeConflictError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AttributeDefinitionTypeConflictError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AttributeDefinitionTypeConflictError>() {
+    public static tools.jackson.core.type.TypeReference<AttributeDefinitionTypeConflictError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AttributeDefinitionTypeConflictError>() {
             @Override
             public String toString() {
                 return "TypeReference<AttributeDefinitionTypeConflictError>";

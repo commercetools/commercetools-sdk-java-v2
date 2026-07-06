@@ -39,7 +39,7 @@ public class ProductSearchFacetStatsValueBuilder implements Builder<ProductSearc
     private com.commercetools.api.models.search.SearchFieldType fieldType;
 
     /**
-     *  <p>Name of the stats facet to appear in the ProductSearchFacetResultStats.</p>
+     *  <p>Name of the stats facet to appear in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchFacetResultStats" rel="nofollow">ProductSearchFacetResultStats</a>.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -98,7 +98,7 @@ public class ProductSearchFacetStatsValueBuilder implements Builder<ProductSearc
     }
 
     /**
-     *  <p>The searchable Product field to facet on.</p>
+     *  <p>The <span>searchable Product field</span> to facet on.</p>
      * @param field value to be set
      * @return Builder
      */
@@ -121,7 +121,7 @@ public class ProductSearchFacetStatsValueBuilder implements Builder<ProductSearc
     }
 
     /**
-     *  <p>Name of the stats facet to appear in the ProductSearchFacetResultStats.</p>
+     *  <p>Name of the stats facet to appear in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchFacetResultStats" rel="nofollow">ProductSearchFacetResultStats</a>.</p>
      * @return name
      */
 
@@ -150,7 +150,7 @@ public class ProductSearchFacetStatsValueBuilder implements Builder<ProductSearc
     }
 
     /**
-     *  <p>The searchable Product field to facet on.</p>
+     *  <p>The <span>searchable Product field</span> to facet on.</p>
      * @return field
      */
 

@@ -18,6 +18,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .customTypeId("{customTypeId}")
  *             .asset(assetBuilder -> assetBuilder)
+ *             .catalogData("{catalogData}")
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
@@ -36,6 +38,10 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
     private String customTypeId;
 
     private com.commercetools.history.models.change_value.AssetChangeValue asset;
+
+    private String catalogData;
+
+    private String variant;
 
     /**
      * set the value to the change
@@ -71,7 +77,7 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
     }
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -82,7 +88,7 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
     }
 
     /**
-     *  <p><code>id</code> of the referenced Type.</p>
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param customTypeId value to be set
      * @return Builder
      */
@@ -129,6 +135,33 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
     }
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     * @return Builder
+     */
+
+    public SetAssetCustomFieldChangeBuilder catalogData(final String catalogData) {
+        this.catalogData = catalogData;
+        return this;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     * @return Builder
+     */
+
+    public SetAssetCustomFieldChangeBuilder variant(final String variant) {
+        this.variant = variant;
+        return this;
+    }
+
+    /**
      * value of change}
      * @return change
      */
@@ -156,7 +189,7 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
     }
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @return name
      */
 
@@ -165,7 +198,7 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
     }
 
     /**
-     *  <p><code>id</code> of the referenced Type.</p>
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @return customTypeId
      */
 
@@ -183,6 +216,29 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
     }
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
+    /**
      * builds SetAssetCustomFieldChange with checking for non-null required values
      * @return SetAssetCustomFieldChange
      */
@@ -193,7 +249,10 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
         Objects.requireNonNull(name, SetAssetCustomFieldChange.class + ": name is missing");
         Objects.requireNonNull(customTypeId, SetAssetCustomFieldChange.class + ": customTypeId is missing");
         Objects.requireNonNull(asset, SetAssetCustomFieldChange.class + ": asset is missing");
-        return new SetAssetCustomFieldChangeImpl(change, previousValue, nextValue, name, customTypeId, asset);
+        Objects.requireNonNull(catalogData, SetAssetCustomFieldChange.class + ": catalogData is missing");
+        Objects.requireNonNull(variant, SetAssetCustomFieldChange.class + ": variant is missing");
+        return new SetAssetCustomFieldChangeImpl(change, previousValue, nextValue, name, customTypeId, asset,
+            catalogData, variant);
     }
 
     /**
@@ -201,7 +260,8 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
      * @return SetAssetCustomFieldChange
      */
     public SetAssetCustomFieldChange buildUnchecked() {
-        return new SetAssetCustomFieldChangeImpl(change, previousValue, nextValue, name, customTypeId, asset);
+        return new SetAssetCustomFieldChangeImpl(change, previousValue, nextValue, name, customTypeId, asset,
+            catalogData, variant);
     }
 
     /**
@@ -225,6 +285,8 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
         builder.name = template.getName();
         builder.customTypeId = template.getCustomTypeId();
         builder.asset = template.getAsset();
+        builder.catalogData = template.getCatalogData();
+        builder.variant = template.getVariant();
         return builder;
     }
 

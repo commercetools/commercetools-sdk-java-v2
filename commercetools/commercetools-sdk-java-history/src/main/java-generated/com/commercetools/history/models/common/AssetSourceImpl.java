@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- * AssetSource
+ *  <p>Representation of an <span>Asset</span> in a specific format, for example a video in a certain encoding, or an image in a certain resolution.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssetSourceImpl implements AssetSource, ModelBase {
@@ -50,7 +51,7 @@ public class AssetSourceImpl implements AssetSource, ModelBase {
     }
 
     /**
-     *
+     *  <p>URI of the AssetSource.</p>
      */
 
     public String getUri() {
@@ -58,7 +59,7 @@ public class AssetSourceImpl implements AssetSource, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined identifier of the AssetSource. Must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:Asset" rel="nofollow">Asset</a>.</p>
      */
 
     public String getKey() {
@@ -66,7 +67,7 @@ public class AssetSourceImpl implements AssetSource, ModelBase {
     }
 
     /**
-     *
+     *  <p>Width and height of the AssetSource.</p>
      */
 
     public com.commercetools.history.models.common.AssetDimensions getDimensions() {
@@ -74,7 +75,7 @@ public class AssetSourceImpl implements AssetSource, ModelBase {
     }
 
     /**
-     *
+     *  <p>Indicates the type of content, for example <code>application/pdf</code>.</p>
      */
 
     public String getContentType() {

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Remove from Category update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemoveFromCategoryAction" rel="nofollow">Remove from Category</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveFromCategoryChangeImpl implements RemoveFromCategoryChange, ModelBase {
@@ -32,6 +33,8 @@ public class RemoveFromCategoryChangeImpl implements RemoveFromCategoryChange, M
 
     private com.commercetools.history.models.common.Reference category;
 
+    private String catalogData;
+
     /**
      * create instance with all properties
      */
@@ -39,11 +42,13 @@ public class RemoveFromCategoryChangeImpl implements RemoveFromCategoryChange, M
     RemoveFromCategoryChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.Reference> previousValue,
             @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.Reference> nextValue,
-            @JsonProperty("category") final com.commercetools.history.models.common.Reference category) {
+            @JsonProperty("category") final com.commercetools.history.models.common.Reference category,
+            @JsonProperty("catalogData") final String catalogData) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.category = category;
+        this.catalogData = catalogData;
         this.type = REMOVE_FROM_CATEGORY_CHANGE;
     }
 
@@ -94,6 +99,18 @@ public class RemoveFromCategoryChangeImpl implements RemoveFromCategoryChange, M
         return this.category;
     }
 
+    /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
@@ -119,6 +136,10 @@ public class RemoveFromCategoryChangeImpl implements RemoveFromCategoryChange, M
         this.category = category;
     }
 
+    public void setCatalogData(final String catalogData) {
+        this.catalogData = catalogData;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -134,11 +155,13 @@ public class RemoveFromCategoryChangeImpl implements RemoveFromCategoryChange, M
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(category, that.category)
+                .append(catalogData, that.catalogData)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(category, that.category)
+                .append(catalogData, that.catalogData)
                 .isEquals();
     }
 
@@ -149,6 +172,7 @@ public class RemoveFromCategoryChangeImpl implements RemoveFromCategoryChange, M
                 .append(previousValue)
                 .append(nextValue)
                 .append(category)
+                .append(catalogData)
                 .toHashCode();
     }
 
@@ -159,6 +183,7 @@ public class RemoveFromCategoryChangeImpl implements RemoveFromCategoryChange, M
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
                 .append("category", category)
+                .append("catalogData", catalogData)
                 .build();
     }
 

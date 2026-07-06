@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ImageDimensions
@@ -22,8 +22,8 @@ import jakarta.validation.constraints.NotNull;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ImageDimensions imageDimensions = ImageDimensions.builder()
- *             .w(1)
- *             .h(1)
+ *             .w(0.3)
+ *             .h(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ImageDimensions {
 
     /**
-     *
+     *  <p>Width of the image.</p>
      * @return w
      */
     @NotNull
@@ -41,7 +41,7 @@ public interface ImageDimensions {
     public Integer getW();
 
     /**
-     *
+     *  <p>Height of the image.</p>
      * @return h
      */
     @NotNull
@@ -49,14 +49,14 @@ public interface ImageDimensions {
     public Integer getH();
 
     /**
-     * set w
+     *  <p>Width of the image.</p>
      * @param w value to be set
      */
 
     public void setW(final Integer w);
 
     /**
-     * set h
+     *  <p>Height of the image.</p>
      * @param h value to be set
      */
 
@@ -131,8 +131,8 @@ public interface ImageDimensions {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ImageDimensions> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ImageDimensions>() {
+    public static tools.jackson.core.type.TypeReference<ImageDimensions> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ImageDimensions>() {
             @Override
             public String toString() {
                 return "TypeReference<ImageDimensions>";

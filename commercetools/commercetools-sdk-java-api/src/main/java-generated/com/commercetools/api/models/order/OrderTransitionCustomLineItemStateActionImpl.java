@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Produces the Custom Line Item State Transition Message.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItemStateTransitionMessage" rel="nofollow">Custom Line Item State Transition</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderTransitionCustomLineItemStateActionImpl
@@ -72,7 +73,7 @@ public class OrderTransitionCustomLineItemStateActionImpl
     }
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      */
 
     public String getCustomLineItemId() {
@@ -80,7 +81,7 @@ public class OrderTransitionCustomLineItemStateActionImpl
     }
 
     /**
-     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      */
 
     public String getCustomLineItemKey() {
@@ -88,7 +89,7 @@ public class OrderTransitionCustomLineItemStateActionImpl
     }
 
     /**
-     *  <p>Number of Custom Line Items that should transition State.</p>
+     *  <p>Quantity of Custom Line Items that should transition <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      */
 
     public Long getQuantity() {
@@ -96,7 +97,7 @@ public class OrderTransitionCustomLineItemStateActionImpl
     }
 
     /**
-     *  <p>State the Custom Line Item should transition from.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the Custom Line Item should transition from.</p>
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getFromState() {
@@ -104,7 +105,7 @@ public class OrderTransitionCustomLineItemStateActionImpl
     }
 
     /**
-     *  <p>State the Custom Line Item should transition to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> the Custom Line Item should transition to.</p>
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getToState() {
@@ -112,7 +113,7 @@ public class OrderTransitionCustomLineItemStateActionImpl
     }
 
     /**
-     *  <p>Date and time (UTC) to perform the State transition.</p>
+     *  <p>Date and time (UTC) to perform the <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition.</p>
      */
 
     public java.time.ZonedDateTime getActualTransitionDate() {

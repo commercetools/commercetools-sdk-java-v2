@@ -24,7 +24,7 @@ public class DirectDiscountReferenceBuilder implements Builder<DirectDiscountRef
     private String id;
 
     /**
-     *  <p>Unique identifier of the referenced DirectDiscount.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">DirectDiscount</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class DirectDiscountReferenceBuilder implements Builder<DirectDiscountRef
     }
 
     /**
-     *  <p>Unique identifier of the referenced DirectDiscount.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">DirectDiscount</a>.</p>
      * @return id
      */
 

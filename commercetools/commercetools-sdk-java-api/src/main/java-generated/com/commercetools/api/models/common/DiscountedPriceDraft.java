@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.product_discount.ProductDiscountReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * DiscountedPriceDraft
@@ -35,7 +35,7 @@ import jakarta.validation.constraints.NotNull;
 public interface DiscountedPriceDraft extends io.vrap.rmf.base.client.Draft<DiscountedPriceDraft> {
 
     /**
-     *  <p>Sets the money value for the discounted price. To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
+     *  <p>Sets the money value for the discounted price. To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @return value
      */
     @NotNull
@@ -44,7 +44,7 @@ public interface DiscountedPriceDraft extends io.vrap.rmf.base.client.Draft<Disc
     public Money getValue();
 
     /**
-     *  <p>Relates the referenced ProductDiscount to the discounted price.</p>
+     *  <p>Relates the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> to the discounted price.</p>
      * @return discount
      */
     @NotNull
@@ -53,14 +53,14 @@ public interface DiscountedPriceDraft extends io.vrap.rmf.base.client.Draft<Disc
     public ProductDiscountReference getDiscount();
 
     /**
-     *  <p>Sets the money value for the discounted price. To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
+     *  <p>Sets the money value for the discounted price. To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param value value to be set
      */
 
     public void setValue(final Money value);
 
     /**
-     *  <p>Relates the referenced ProductDiscount to the discounted price.</p>
+     *  <p>Relates the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> to the discounted price.</p>
      * @param discount value to be set
      */
 
@@ -136,8 +136,8 @@ public interface DiscountedPriceDraft extends io.vrap.rmf.base.client.Draft<Disc
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DiscountedPriceDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DiscountedPriceDraft>() {
+    public static tools.jackson.core.type.TypeReference<DiscountedPriceDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DiscountedPriceDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<DiscountedPriceDraft>";

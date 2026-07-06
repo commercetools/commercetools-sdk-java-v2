@@ -8,15 +8,15 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>The current status of ImportOperations in an ImportContainer.</p>
+ *  <p>The current status of <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperations</a> in an <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainer</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ImportSummary {
 
     /**
-     *  <p>The current ProcessingStates of ImportOperations in an ImportContainer.</p>
+     *  <p>The current <a href="https://docs.commercetools.com/apis/ctp:import:type:ProcessingState" rel="nofollow">ProcessingStates</a> of ImportOperations in an ImportContainer.</p>
      * @return states
      */
     @NotNull
@@ -51,7 +51,7 @@ public interface ImportSummary {
     public Long getTotal();
 
     /**
-     *  <p>The current ProcessingStates of ImportOperations in an ImportContainer.</p>
+     *  <p>The current <a href="https://docs.commercetools.com/apis/ctp:import:type:ProcessingState" rel="nofollow">ProcessingStates</a> of ImportOperations in an ImportContainer.</p>
      * @param states value to be set
      */
 
@@ -134,8 +134,8 @@ public interface ImportSummary {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ImportSummary> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ImportSummary>() {
+    public static tools.jackson.core.type.TypeReference<ImportSummary> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ImportSummary>() {
             @Override
             public String toString() {
                 return "TypeReference<ImportSummary>";

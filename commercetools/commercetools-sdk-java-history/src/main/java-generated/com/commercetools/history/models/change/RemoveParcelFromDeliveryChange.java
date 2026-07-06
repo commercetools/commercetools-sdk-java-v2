@@ -9,18 +9,18 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.Parcel;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Remove Parcel From Delivery on Orders.</li>
- *   <li>Remove Parcel From Delivery on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderRemoveParcelFromDeliveryAction" rel="nofollow">Remove Parcel From Delivery</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveParcelFromDeliveryAction" rel="nofollow">Remove Parcel From Delivery</a> on Staged Orders.</li>
  *  </ul>
  *
  * <hr>
@@ -71,7 +71,7 @@ public interface RemoveParcelFromDeliveryChange extends Change {
     public Parcel getPreviousValue();
 
     /**
-     *  <p><code>id</code> of the Delivery from which the Parcel was removed.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> from which the Parcel was removed.</p>
      * @return deliveryId
      */
     @NotNull
@@ -93,7 +93,7 @@ public interface RemoveParcelFromDeliveryChange extends Change {
     public void setPreviousValue(final Parcel previousValue);
 
     /**
-     *  <p><code>id</code> of the Delivery from which the Parcel was removed.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> from which the Parcel was removed.</p>
      * @param deliveryId value to be set
      */
 
@@ -170,8 +170,8 @@ public interface RemoveParcelFromDeliveryChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<RemoveParcelFromDeliveryChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<RemoveParcelFromDeliveryChange>() {
+    public static tools.jackson.core.type.TypeReference<RemoveParcelFromDeliveryChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<RemoveParcelFromDeliveryChange>() {
             @Override
             public String toString() {
                 return "TypeReference<RemoveParcelFromDeliveryChange>";

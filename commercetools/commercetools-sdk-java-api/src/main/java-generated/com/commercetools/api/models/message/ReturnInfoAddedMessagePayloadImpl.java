@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Add ReturnInfo update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderAddReturnInfoAction" rel="nofollow">Add ReturnInfo</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReturnInfoAddedMessagePayloadImpl implements ReturnInfoAddedMessagePayload, ModelBase {
@@ -52,7 +53,7 @@ public class ReturnInfoAddedMessagePayloadImpl implements ReturnInfoAddedMessage
     }
 
     /**
-     *  <p>The ReturnInfo that was added to the Order.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnInfo" rel="nofollow">ReturnInfo</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      */
 
     public com.commercetools.api.models.order.ReturnInfo getReturnInfo() {

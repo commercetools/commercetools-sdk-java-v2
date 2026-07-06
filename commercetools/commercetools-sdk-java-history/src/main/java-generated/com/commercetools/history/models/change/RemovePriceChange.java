@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.Price;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Change triggered by the Remove Embedded Price update action.</p>
+ *  <p>This Change is no longer triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemovePriceAction" rel="nofollow">Remove Embedded Price</a> update action. It has been deprecated and replaced by the <a href="https://docs.commercetools.com/apis/ctp:history:type:SetPricesChange" rel="nofollow">SetPricesChange</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .catalogData("{catalogData}")
  *             .priceId("{priceId}")
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
@@ -36,6 +37,7 @@ import jakarta.validation.constraints.NotNull;
 @io.vrap.rmf.base.client.utils.json.SubType("RemovePriceChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = RemovePriceChangeImpl.class)
+@Deprecated
 public interface RemovePriceChange extends Change {
 
     /**
@@ -78,9 +80,10 @@ public interface RemovePriceChange extends Change {
     public Price getNextValue();
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
-     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
-     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *  </ul>
      * @return catalogData
      */
@@ -89,12 +92,21 @@ public interface RemovePriceChange extends Change {
     public String getCatalogData();
 
     /**
-     *  <p><code>id</code> of the Embedded Price.</p>
+     *  <p><code>id</code> of the Embedded <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</p>
      * @return priceId
      */
     @NotNull
     @JsonProperty("priceId")
     public String getPriceId();
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+    @NotNull
+    @JsonProperty("variant")
+    public String getVariant();
 
     /**
      * set change
@@ -118,9 +130,10 @@ public interface RemovePriceChange extends Change {
     public void setNextValue(final Price nextValue);
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
-     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
-     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *  </ul>
      * @param catalogData value to be set
      */
@@ -128,11 +141,19 @@ public interface RemovePriceChange extends Change {
     public void setCatalogData(final String catalogData);
 
     /**
-     *  <p><code>id</code> of the Embedded Price.</p>
+     *  <p><code>id</code> of the Embedded <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</p>
      * @param priceId value to be set
      */
 
     public void setPriceId(final String priceId);
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     */
+
+    public void setVariant(final String variant);
 
     /**
      * factory method
@@ -154,6 +175,7 @@ public interface RemovePriceChange extends Change {
         instance.setNextValue(template.getNextValue());
         instance.setCatalogData(template.getCatalogData());
         instance.setPriceId(template.getPriceId());
+        instance.setVariant(template.getVariant());
         return instance;
     }
 
@@ -175,6 +197,7 @@ public interface RemovePriceChange extends Change {
         instance.setNextValue(com.commercetools.history.models.common.Price.deepCopy(template.getNextValue()));
         instance.setCatalogData(template.getCatalogData());
         instance.setPriceId(template.getPriceId());
+        instance.setVariant(template.getVariant());
         return instance;
     }
 
@@ -209,8 +232,8 @@ public interface RemovePriceChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<RemovePriceChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<RemovePriceChange>() {
+    public static tools.jackson.core.type.TypeReference<RemovePriceChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<RemovePriceChange>() {
             @Override
             public String toString() {
                 return "TypeReference<RemovePriceChange>";

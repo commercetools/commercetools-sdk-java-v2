@@ -18,7 +18,7 @@ public class UnresolvedReferencesTest {
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { "key", UnresolvedReferences.builder().key("key") },
                 new Object[] { "typeId", UnresolvedReferences.builder()
-                        .typeId(com.commercetools.importapi.models.common.ReferenceType.findEnum("cart")) } };
+                        .typeId(com.commercetools.importapi.models.common.ReferenceType.findEnum("associate-role")) } };
     }
 
     @Test
@@ -31,8 +31,8 @@ public class UnresolvedReferencesTest {
     @Test
     public void typeId() {
         UnresolvedReferences value = UnresolvedReferences.of();
-        value.setTypeId(com.commercetools.importapi.models.common.ReferenceType.findEnum("cart"));
+        value.setTypeId(com.commercetools.importapi.models.common.ReferenceType.findEnum("associate-role"));
         Assertions.assertThat(value.getTypeId())
-                .isEqualTo(com.commercetools.importapi.models.common.ReferenceType.findEnum("cart"));
+                .isEqualTo(com.commercetools.importapi.models.common.ReferenceType.findEnum("associate-role"));
     }
 }

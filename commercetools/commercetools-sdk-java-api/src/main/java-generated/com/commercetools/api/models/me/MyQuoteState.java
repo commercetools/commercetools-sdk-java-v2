@@ -11,16 +11,16 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>QuoteStates that can be set using the Change My Quote State update action.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteState" rel="nofollow">QuoteStates</a> that can be set using the <a href="https://docs.commercetools.com/apis/ctp:api:type:MyQuoteChangeMyQuoteStateAction" rel="nofollow">Change My Quote State</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface MyQuoteState extends JsonEnum {
 
     /**
-    <p>A state indicating that the Buyer has declined the Quote.</p> */
+    <p>A state indicating that the <span>Buyer</span> has declined the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a>.</p> */
     MyQuoteState DECLINED = MyQuoteStateEnum.DECLINED;
     /**
-    <p>A state indicating that the Buyer has accepted the Quote.</p> */
+    <p>A state indicating that the <span>Buyer</span> has accepted the <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a>.</p> */
     MyQuoteState ACCEPTED = MyQuoteStateEnum.ACCEPTED;
 
     /**

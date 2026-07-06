@@ -65,7 +65,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p>
+     *  <p>Determined based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> and its tiered prices, and either the sum of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> prices or the <code>shippingRateInput</code> field.</p>
      * @param builder function to build the price value
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p>
+     *  <p>Determined based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> and its tiered prices, and either the sum of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> prices or the <code>shippingRateInput</code> field.</p>
      * @param builder function to build the price value
      * @return Builder
      */
@@ -89,7 +89,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p>
+     *  <p>Determined based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> and its tiered prices, and either the sum of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> prices or the <code>shippingRateInput</code> field.</p>
      * @param price value to be set
      * @return Builder
      */
@@ -172,8 +172,8 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Automatically set in the <code>Platform</code> TaxMode after the shipping address is set.</p>
-     *  <p>For the <code>External</code> TaxMode the Tax Rate must be set explicitly with the ExternalTaxRateDraft.</p>
+     *  <p>Automatically set in the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetShippingAddressAction" rel="nofollow">shipping address is set</a>.</p>
+     *  <p>For the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> the Tax Rate must be set explicitly with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ExternalTaxRateDraft" rel="nofollow">ExternalTaxRateDraft</a>.</p>
      * @param builder function to build the taxRate value
      * @return Builder
      */
@@ -185,8 +185,8 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Automatically set in the <code>Platform</code> TaxMode after the shipping address is set.</p>
-     *  <p>For the <code>External</code> TaxMode the Tax Rate must be set explicitly with the ExternalTaxRateDraft.</p>
+     *  <p>Automatically set in the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetShippingAddressAction" rel="nofollow">shipping address is set</a>.</p>
+     *  <p>For the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> the Tax Rate must be set explicitly with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ExternalTaxRateDraft" rel="nofollow">ExternalTaxRateDraft</a>.</p>
      * @param builder function to build the taxRate value
      * @return Builder
      */
@@ -198,8 +198,8 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Automatically set in the <code>Platform</code> TaxMode after the shipping address is set.</p>
-     *  <p>For the <code>External</code> TaxMode the Tax Rate must be set explicitly with the ExternalTaxRateDraft.</p>
+     *  <p>Automatically set in the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetShippingAddressAction" rel="nofollow">shipping address is set</a>.</p>
+     *  <p>For the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> the Tax Rate must be set explicitly with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ExternalTaxRateDraft" rel="nofollow">ExternalTaxRateDraft</a>.</p>
      * @param taxRate value to be set
      * @return Builder
      */
@@ -210,7 +210,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -223,7 +223,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -235,7 +235,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param taxCategory value to be set
      * @return Builder
      */
@@ -411,7 +411,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Indicates whether the ShippingMethod referenced in this ShippingInfo is allowed for the Cart.</p>
+     *  <p>Indicates whether the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> referenced in this ShippingInfo is allowed for the Cart.</p>
      * @param shippingMethodState value to be set
      * @return Builder
      */
@@ -432,7 +432,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p>
+     *  <p>Determined based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> and its tiered prices, and either the sum of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> prices or the <code>shippingRateInput</code> field.</p>
      * @return price
      */
 
@@ -460,8 +460,8 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Automatically set in the <code>Platform</code> TaxMode after the shipping address is set.</p>
-     *  <p>For the <code>External</code> TaxMode the Tax Rate must be set explicitly with the ExternalTaxRateDraft.</p>
+     *  <p>Automatically set in the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetShippingAddressAction" rel="nofollow">shipping address is set</a>.</p>
+     *  <p>For the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a> the Tax Rate must be set explicitly with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ExternalTaxRateDraft" rel="nofollow">ExternalTaxRateDraft</a>.</p>
      * @return taxRate
      */
 
@@ -471,7 +471,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @return taxCategory
      */
 
@@ -511,7 +511,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
-     *  <p>Indicates whether the ShippingMethod referenced in this ShippingInfo is allowed for the Cart.</p>
+     *  <p>Indicates whether the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> referenced in this ShippingInfo is allowed for the Cart.</p>
      * @return shippingMethodState
      */
 

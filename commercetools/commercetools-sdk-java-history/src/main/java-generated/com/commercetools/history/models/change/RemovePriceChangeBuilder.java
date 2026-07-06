@@ -19,11 +19,13 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .catalogData("{catalogData}")
  *             .priceId("{priceId}")
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
 
     private String change;
@@ -35,6 +37,8 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
     private String catalogData;
 
     private String priceId;
+
+    private String variant;
 
     /**
      * set the value to the change
@@ -118,9 +122,10 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
-     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
-     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *  </ul>
      * @param catalogData value to be set
      * @return Builder
@@ -132,13 +137,25 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
     }
 
     /**
-     *  <p><code>id</code> of the Embedded Price.</p>
+     *  <p><code>id</code> of the Embedded <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</p>
      * @param priceId value to be set
      * @return Builder
      */
 
     public RemovePriceChangeBuilder priceId(final String priceId) {
         this.priceId = priceId;
+        return this;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     * @return Builder
+     */
+
+    public RemovePriceChangeBuilder variant(final String variant) {
+        this.variant = variant;
         return this;
     }
 
@@ -170,9 +187,10 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
-     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
-     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *  </ul>
      * @return catalogData
      */
@@ -182,12 +200,22 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
     }
 
     /**
-     *  <p><code>id</code> of the Embedded Price.</p>
+     *  <p><code>id</code> of the Embedded <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</p>
      * @return priceId
      */
 
     public String getPriceId() {
         return this.priceId;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+
+    public String getVariant() {
+        return this.variant;
     }
 
     /**
@@ -200,7 +228,8 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
         Objects.requireNonNull(nextValue, RemovePriceChange.class + ": nextValue is missing");
         Objects.requireNonNull(catalogData, RemovePriceChange.class + ": catalogData is missing");
         Objects.requireNonNull(priceId, RemovePriceChange.class + ": priceId is missing");
-        return new RemovePriceChangeImpl(change, previousValue, nextValue, catalogData, priceId);
+        Objects.requireNonNull(variant, RemovePriceChange.class + ": variant is missing");
+        return new RemovePriceChangeImpl(change, previousValue, nextValue, catalogData, priceId, variant);
     }
 
     /**
@@ -208,7 +237,7 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
      * @return RemovePriceChange
      */
     public RemovePriceChange buildUnchecked() {
-        return new RemovePriceChangeImpl(change, previousValue, nextValue, catalogData, priceId);
+        return new RemovePriceChangeImpl(change, previousValue, nextValue, catalogData, priceId, variant);
     }
 
     /**
@@ -231,6 +260,7 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
         builder.nextValue = template.getNextValue();
         builder.catalogData = template.getCatalogData();
         builder.priceId = template.getPriceId();
+        builder.variant = template.getVariant();
         return builder;
     }
 

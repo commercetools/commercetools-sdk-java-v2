@@ -45,7 +45,7 @@ public class CustomerPagedSearchResponseBuilder implements Builder<CustomerPaged
     }
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @param limit value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class CustomerPagedSearchResponseBuilder implements Builder<CustomerPaged
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @param offset value to be set
      * @return Builder
      */
@@ -168,7 +168,7 @@ public class CustomerPagedSearchResponseBuilder implements Builder<CustomerPaged
     }
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @return limit
      */
 
@@ -177,7 +177,7 @@ public class CustomerPagedSearchResponseBuilder implements Builder<CustomerPaged
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @return offset
      */
 

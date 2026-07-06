@@ -26,6 +26,7 @@ public class ShippingMethodAddZoneActionBuilder implements Builder<ShippingMetho
 
     /**
      *  <p>Value to add to <code>zoneRates</code>.</p>
+     *  <p>Adds a new <a href="https://docs.commercetools.com/apis/ctp:api:type:ZoneRate" rel="nofollow">ZoneRate</a> entry to the <code>zoneRates</code> array with the specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> and an empty <code>shippingRates</code> array. After adding the Zone, you can add <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRates</a> for this Zone using the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethodAddShippingRateAction" rel="nofollow">Add ShippingRate</a> update action.</p>
      * @param builder function to build the zone value
      * @return Builder
      */
@@ -38,6 +39,7 @@ public class ShippingMethodAddZoneActionBuilder implements Builder<ShippingMetho
 
     /**
      *  <p>Value to add to <code>zoneRates</code>.</p>
+     *  <p>Adds a new <a href="https://docs.commercetools.com/apis/ctp:api:type:ZoneRate" rel="nofollow">ZoneRate</a> entry to the <code>zoneRates</code> array with the specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> and an empty <code>shippingRates</code> array. After adding the Zone, you can add <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRates</a> for this Zone using the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethodAddShippingRateAction" rel="nofollow">Add ShippingRate</a> update action.</p>
      * @param builder function to build the zone value
      * @return Builder
      */
@@ -50,6 +52,7 @@ public class ShippingMethodAddZoneActionBuilder implements Builder<ShippingMetho
 
     /**
      *  <p>Value to add to <code>zoneRates</code>.</p>
+     *  <p>Adds a new <a href="https://docs.commercetools.com/apis/ctp:api:type:ZoneRate" rel="nofollow">ZoneRate</a> entry to the <code>zoneRates</code> array with the specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> and an empty <code>shippingRates</code> array. After adding the Zone, you can add <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRates</a> for this Zone using the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethodAddShippingRateAction" rel="nofollow">Add ShippingRate</a> update action.</p>
      * @param zone value to be set
      * @return Builder
      */
@@ -62,6 +65,7 @@ public class ShippingMethodAddZoneActionBuilder implements Builder<ShippingMetho
 
     /**
      *  <p>Value to add to <code>zoneRates</code>.</p>
+     *  <p>Adds a new <a href="https://docs.commercetools.com/apis/ctp:api:type:ZoneRate" rel="nofollow">ZoneRate</a> entry to the <code>zoneRates</code> array with the specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> and an empty <code>shippingRates</code> array. After adding the Zone, you can add <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRates</a> for this Zone using the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethodAddShippingRateAction" rel="nofollow">Add ShippingRate</a> update action.</p>
      * @return zone
      */
 

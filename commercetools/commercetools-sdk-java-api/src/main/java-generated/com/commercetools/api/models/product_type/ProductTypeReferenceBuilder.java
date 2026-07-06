@@ -30,7 +30,7 @@ public class ProductTypeReferenceBuilder implements Builder<ProductTypeReference
     private com.commercetools.api.models.product_type.ProductType obj;
 
     /**
-     *  <p>Unique identifier of the referenced ProductType.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class ProductTypeReferenceBuilder implements Builder<ProductTypeReference
     }
 
     /**
-     *  <p>Contains the representation of the expanded ProductType. Only present in responses to requests with Reference Expansion for ProductTypes.</p>
+     *  <p>Contains the representation of the expanded ProductType. Only present in responses to requests with <span>Reference Expansion</span> for ProductTypes.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ProductTypeReferenceBuilder implements Builder<ProductTypeReference
     }
 
     /**
-     *  <p>Contains the representation of the expanded ProductType. Only present in responses to requests with Reference Expansion for ProductTypes.</p>
+     *  <p>Contains the representation of the expanded ProductType. Only present in responses to requests with <span>Reference Expansion</span> for ProductTypes.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class ProductTypeReferenceBuilder implements Builder<ProductTypeReference
     }
 
     /**
-     *  <p>Contains the representation of the expanded ProductType. Only present in responses to requests with Reference Expansion for ProductTypes.</p>
+     *  <p>Contains the representation of the expanded ProductType. Only present in responses to requests with <span>Reference Expansion</span> for ProductTypes.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class ProductTypeReferenceBuilder implements Builder<ProductTypeReference
     }
 
     /**
-     *  <p>Unique identifier of the referenced ProductType.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>.</p>
      * @return id
      */
 
@@ -85,7 +85,7 @@ public class ProductTypeReferenceBuilder implements Builder<ProductTypeReference
     }
 
     /**
-     *  <p>Contains the representation of the expanded ProductType. Only present in responses to requests with Reference Expansion for ProductTypes.</p>
+     *  <p>Contains the representation of the expanded ProductType. Only present in responses to requests with <span>Reference Expansion</span> for ProductTypes.</p>
      * @return obj
      */
 

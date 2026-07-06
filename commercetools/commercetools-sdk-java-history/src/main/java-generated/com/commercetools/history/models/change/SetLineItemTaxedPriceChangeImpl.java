@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * SetLineItemTaxedPriceChange
@@ -34,6 +35,8 @@ public class SetLineItemTaxedPriceChangeImpl implements SetLineItemTaxedPriceCha
 
     private String lineItemId;
 
+    private String variant;
+
     /**
      * create instance with all properties
      */
@@ -42,12 +45,13 @@ public class SetLineItemTaxedPriceChangeImpl implements SetLineItemTaxedPriceCha
             @JsonProperty("previousValue") final com.commercetools.history.models.common.TaxedItemPrice previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.TaxedItemPrice nextValue,
             @JsonProperty("lineItem") final com.commercetools.history.models.common.LocalizedString lineItem,
-            @JsonProperty("lineItemId") final String lineItemId) {
+            @JsonProperty("lineItemId") final String lineItemId, @JsonProperty("variant") final String variant) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.lineItem = lineItem;
         this.lineItemId = lineItemId;
+        this.variant = variant;
         this.type = SET_LINE_ITEM_TAXED_PRICE_CHANGE;
     }
 
@@ -91,7 +95,7 @@ public class SetLineItemTaxedPriceChangeImpl implements SetLineItemTaxedPriceCha
     }
 
     /**
-     *  <p>Name of the Product the Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Line Item is based on.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getLineItem() {
@@ -99,11 +103,20 @@ public class SetLineItemTaxedPriceChangeImpl implements SetLineItemTaxedPriceCha
     }
 
     /**
-     *  <p><code>id</code> of the updated LineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
      */
 
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     */
+
+    public String getVariant() {
+        return this.variant;
     }
 
     public void setChange(final String change) {
@@ -126,6 +139,10 @@ public class SetLineItemTaxedPriceChangeImpl implements SetLineItemTaxedPriceCha
         this.lineItemId = lineItemId;
     }
 
+    public void setVariant(final String variant) {
+        this.variant = variant;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -142,12 +159,14 @@ public class SetLineItemTaxedPriceChangeImpl implements SetLineItemTaxedPriceCha
                 .append(nextValue, that.nextValue)
                 .append(lineItem, that.lineItem)
                 .append(lineItemId, that.lineItemId)
+                .append(variant, that.variant)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(lineItem, that.lineItem)
                 .append(lineItemId, that.lineItemId)
+                .append(variant, that.variant)
                 .isEquals();
     }
 
@@ -159,6 +178,7 @@ public class SetLineItemTaxedPriceChangeImpl implements SetLineItemTaxedPriceCha
                 .append(nextValue)
                 .append(lineItem)
                 .append(lineItemId)
+                .append(variant)
                 .toHashCode();
     }
 
@@ -170,6 +190,7 @@ public class SetLineItemTaxedPriceChangeImpl implements SetLineItemTaxedPriceCha
                 .append("nextValue", nextValue)
                 .append("lineItem", lineItem)
                 .append("lineItemId", lineItemId)
+                .append("variant", variant)
                 .build();
     }
 

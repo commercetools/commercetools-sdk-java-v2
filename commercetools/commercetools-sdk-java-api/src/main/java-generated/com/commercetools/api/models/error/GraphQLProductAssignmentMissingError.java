@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.product.ProductReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Returned when a Product is not assigned to the Product Selection. The error is returned as a failed response either to the Set Variant Selection or to the Set Variant Exclusion update action.</p>
+ *  <p>Returned when a Product is not assigned to the Product Selection. The error is returned as a failed response either to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantSelectionAction" rel="nofollow">Set Variant Selection</a> or to the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantExclusionAction" rel="nofollow">Set Variant Exclusion</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -48,7 +48,7 @@ public interface GraphQLProductAssignmentMissingError extends GraphQLErrorObject
     public String getCode();
 
     /**
-     *  <p>Reference to the Product for which the error was returned.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> for which the error was returned.</p>
      * @return product
      */
     @NotNull
@@ -57,7 +57,7 @@ public interface GraphQLProductAssignmentMissingError extends GraphQLErrorObject
     public ProductReference getProduct();
 
     /**
-     *  <p>Reference to the Product for which the error was returned.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> for which the error was returned.</p>
      * @param product value to be set
      */
 
@@ -134,8 +134,8 @@ public interface GraphQLProductAssignmentMissingError extends GraphQLErrorObject
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLProductAssignmentMissingError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLProductAssignmentMissingError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLProductAssignmentMissingError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLProductAssignmentMissingError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLProductAssignmentMissingError>";

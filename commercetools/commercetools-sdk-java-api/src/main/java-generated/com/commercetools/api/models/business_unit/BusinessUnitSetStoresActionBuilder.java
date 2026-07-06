@@ -25,7 +25,7 @@ public class BusinessUnitSetStoresActionBuilder implements Builder<BusinessUnitS
     private java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores;
 
     /**
-     *  <p>Stores to set. Overrides the current list of Stores.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set. Overrides the current list of Stores.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class BusinessUnitSetStoresActionBuilder implements Builder<BusinessUnitS
     }
 
     /**
-     *  <p>Stores to set. Overrides the current list of Stores.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set. Overrides the current list of Stores.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class BusinessUnitSetStoresActionBuilder implements Builder<BusinessUnitS
     }
 
     /**
-     *  <p>Stores to set. Overrides the current list of Stores.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set. Overrides the current list of Stores.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class BusinessUnitSetStoresActionBuilder implements Builder<BusinessUnitS
     }
 
     /**
-     *  <p>Stores to set. Overrides the current list of Stores.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set. Overrides the current list of Stores.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class BusinessUnitSetStoresActionBuilder implements Builder<BusinessUnitS
     }
 
     /**
-     *  <p>Stores to set. Overrides the current list of Stores.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set. Overrides the current list of Stores.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class BusinessUnitSetStoresActionBuilder implements Builder<BusinessUnitS
     }
 
     /**
-     *  <p>Stores to set. Overrides the current list of Stores.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set. Overrides the current list of Stores.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -103,7 +103,7 @@ public class BusinessUnitSetStoresActionBuilder implements Builder<BusinessUnitS
     }
 
     /**
-     *  <p>Stores to set. Overrides the current list of Stores.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set. Overrides the current list of Stores.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -114,7 +114,7 @@ public class BusinessUnitSetStoresActionBuilder implements Builder<BusinessUnitS
     }
 
     /**
-     *  <p>Stores to set. Overrides the current list of Stores.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set. Overrides the current list of Stores.</p>
      * @return stores
      */
 

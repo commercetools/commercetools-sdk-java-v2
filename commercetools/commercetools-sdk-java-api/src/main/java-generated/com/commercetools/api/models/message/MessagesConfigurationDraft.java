@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Defines the configuration for the Messages Query feature for the Project.</p>
+ *  <p>Defines the configuration for the <span>Messages Query</span> feature for the Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface MessagesConfigurationDraft extends io.vrap.rmf.base.client.Draft<MessagesConfigurationDraft> {
 
     /**
-     *  <p>Setting to <code>true</code> activates the Messages Query feature.</p>
+     *  <p>Setting to <code>true</code> activates the <span>Messages Query</span> feature.</p>
      * @return enabled
      */
     @NotNull
@@ -41,7 +41,7 @@ public interface MessagesConfigurationDraft extends io.vrap.rmf.base.client.Draf
     public Boolean getEnabled();
 
     /**
-     *  <p>Specifies the number of days each Message should be available via the Messages Query API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API.</p>
+     *  <p>Specifies the number of days each Message should be available via the <span>Messages Query</span> API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API.</p>
      * @return deleteDaysAfterCreation
      */
     @NotNull
@@ -49,14 +49,14 @@ public interface MessagesConfigurationDraft extends io.vrap.rmf.base.client.Draf
     public Integer getDeleteDaysAfterCreation();
 
     /**
-     *  <p>Setting to <code>true</code> activates the Messages Query feature.</p>
+     *  <p>Setting to <code>true</code> activates the <span>Messages Query</span> feature.</p>
      * @param enabled value to be set
      */
 
     public void setEnabled(final Boolean enabled);
 
     /**
-     *  <p>Specifies the number of days each Message should be available via the Messages Query API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API.</p>
+     *  <p>Specifies the number of days each Message should be available via the <span>Messages Query</span> API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API.</p>
      * @param deleteDaysAfterCreation value to be set
      */
 
@@ -131,8 +131,8 @@ public interface MessagesConfigurationDraft extends io.vrap.rmf.base.client.Draf
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MessagesConfigurationDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MessagesConfigurationDraft>() {
+    public static tools.jackson.core.type.TypeReference<MessagesConfigurationDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MessagesConfigurationDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<MessagesConfigurationDraft>";

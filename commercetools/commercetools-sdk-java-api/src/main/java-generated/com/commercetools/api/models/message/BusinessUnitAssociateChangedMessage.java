@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.business_unit.Associate;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Change Associate update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeAssociateAction" rel="nofollow">Change Associate</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface BusinessUnitAssociateChangedMessage extends Message {
     String BUSINESS_UNIT_ASSOCIATE_CHANGED = "BusinessUnitAssociateChanged";
 
     /**
-     *  <p>The Associate that was updated.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> that was updated.</p>
      * @return associate
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface BusinessUnitAssociateChangedMessage extends Message {
     public Associate getAssociate();
 
     /**
-     *  <p>The Associate that was updated.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> that was updated.</p>
      * @param associate value to be set
      */
 
@@ -153,8 +153,8 @@ public interface BusinessUnitAssociateChangedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAssociateChangedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAssociateChangedMessage>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitAssociateChangedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitAssociateChangedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitAssociateChangedMessage>";

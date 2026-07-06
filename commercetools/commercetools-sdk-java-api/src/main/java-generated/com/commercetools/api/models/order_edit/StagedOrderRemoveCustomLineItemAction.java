@@ -9,13 +9,14 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>This update action does not support specifying a quantity, unlike the Remove LineItem update action.</p>
- *  <p>If <code>shippingDetails</code> must be partially removed, use the Change CustomLineItem Quantity update action.</p>
+ *  <p>This update action does not support specifying a quantity, unlike the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">Remove LineItem</a> update action.</p>
+ *  <p>If <code>shippingDetails</code> must be partially removed, use the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderChangeCustomLineItemQuantityAction" rel="nofollow">Change CustomLineItem Quantity</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,7 +38,7 @@ public interface StagedOrderRemoveCustomLineItemAction extends StagedOrderUpdate
     String REMOVE_CUSTOM_LINE_ITEM = "removeCustomLineItem";
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
 
@@ -45,7 +46,7 @@ public interface StagedOrderRemoveCustomLineItemAction extends StagedOrderUpdate
     public String getCustomLineItemId();
 
     /**
-     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemKey
      */
 
@@ -53,14 +54,14 @@ public interface StagedOrderRemoveCustomLineItemAction extends StagedOrderUpdate
     public String getCustomLineItemKey();
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      */
 
     public void setCustomLineItemId(final String customLineItemId);
 
     /**
-     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemKey value to be set
      */
 
@@ -137,8 +138,8 @@ public interface StagedOrderRemoveCustomLineItemAction extends StagedOrderUpdate
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderRemoveCustomLineItemAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderRemoveCustomLineItemAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrderRemoveCustomLineItemAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrderRemoveCustomLineItemAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderRemoveCustomLineItemAction>";

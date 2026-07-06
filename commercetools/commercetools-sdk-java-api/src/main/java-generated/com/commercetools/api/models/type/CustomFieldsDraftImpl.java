@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+ *  <p>The representation used when creating or updating a <span>customizable data type</span> with Custom Fields.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldsDraftImpl implements CustomFieldsDraft, ModelBase {
@@ -43,7 +44,7 @@ public class CustomFieldsDraftImpl implements CustomFieldsDraft, ModelBase {
     }
 
     /**
-     *  <p><code>id</code> or <code>key</code> of the Type.</p>
+     *  <p><code>id</code> or <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -51,7 +52,7 @@ public class CustomFieldsDraftImpl implements CustomFieldsDraft, ModelBase {
     }
 
     /**
-     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     *  <p>Object containing the Custom Fields for the <span>customized resource or data type</span>.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {

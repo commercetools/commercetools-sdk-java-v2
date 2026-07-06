@@ -28,7 +28,7 @@ public class FieldDefinitionOrderValueBuilder implements Builder<FieldDefinition
     private com.commercetools.history.models.common.LocalizedString label;
 
     /**
-     *  <p>Name of the FieldDefinition.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class FieldDefinitionOrderValueBuilder implements Builder<FieldDefinition
     }
 
     /**
-     *  <p>Name of the FieldDefinition.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>.</p>
      * @return name
      */
 

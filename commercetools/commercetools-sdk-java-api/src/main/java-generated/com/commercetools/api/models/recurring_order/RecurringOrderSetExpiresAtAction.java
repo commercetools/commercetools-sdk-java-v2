@@ -9,12 +9,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Setting the expiration date and time generates the RecurringOrderExpiresAtSet Message.</p>
+ *  <p>Setting the expiration date and time generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderExpiresAtSetMessage" rel="nofollow">RecurringOrderExpiresAtSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,7 +38,7 @@ public interface RecurringOrderSetExpiresAtAction extends RecurringOrderUpdateAc
 
     /**
      *  <p>Date and time (UTC) the Recurring Order should expire. If empty, any existing value will be removed.</p>
-     *  <p>If the date or time is extended or removed when the RecurringOrderState is <code>Expired</code>, the state will be updated to <code>Active</code>.</p>
+     *  <p>If the date or time is extended or removed when the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderState" rel="nofollow">RecurringOrderState</a> is <code>Expired</code>, the state will be updated to <code>Active</code>.</p>
      * @return expiresAt
      */
 
@@ -46,7 +47,7 @@ public interface RecurringOrderSetExpiresAtAction extends RecurringOrderUpdateAc
 
     /**
      *  <p>Date and time (UTC) the Recurring Order should expire. If empty, any existing value will be removed.</p>
-     *  <p>If the date or time is extended or removed when the RecurringOrderState is <code>Expired</code>, the state will be updated to <code>Active</code>.</p>
+     *  <p>If the date or time is extended or removed when the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderState" rel="nofollow">RecurringOrderState</a> is <code>Expired</code>, the state will be updated to <code>Active</code>.</p>
      * @param expiresAt value to be set
      */
 
@@ -119,8 +120,8 @@ public interface RecurringOrderSetExpiresAtAction extends RecurringOrderUpdateAc
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<RecurringOrderSetExpiresAtAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<RecurringOrderSetExpiresAtAction>() {
+    public static tools.jackson.core.type.TypeReference<RecurringOrderSetExpiresAtAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<RecurringOrderSetExpiresAtAction>() {
             @Override
             public String toString() {
                 return "TypeReference<RecurringOrderSetExpiresAtAction>";

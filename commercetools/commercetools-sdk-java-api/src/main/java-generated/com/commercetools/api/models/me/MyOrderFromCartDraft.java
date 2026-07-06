@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * MyOrderFromCartDraft
@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface MyOrderFromCartDraft extends io.vrap.rmf.base.client.Draft<MyOrderFromCartDraft> {
 
     /**
-     *  <p><code>id</code> of the Cart from which the Order is created.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> from which the Order is created.</p>
      * @return id
      */
     @NotNull
@@ -41,7 +41,7 @@ public interface MyOrderFromCartDraft extends io.vrap.rmf.base.client.Draft<MyOr
     public String getId();
 
     /**
-     *  <p>Current <code>version</code> of the Cart from which the Order is created.</p>
+     *  <p>Current <code>version</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> from which the Order is created.</p>
      * @return version
      */
     @NotNull
@@ -49,14 +49,14 @@ public interface MyOrderFromCartDraft extends io.vrap.rmf.base.client.Draft<MyOr
     public Long getVersion();
 
     /**
-     *  <p><code>id</code> of the Cart from which the Order is created.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> from which the Order is created.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     *  <p>Current <code>version</code> of the Cart from which the Order is created.</p>
+     *  <p>Current <code>version</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> from which the Order is created.</p>
      * @param version value to be set
      */
 
@@ -131,8 +131,8 @@ public interface MyOrderFromCartDraft extends io.vrap.rmf.base.client.Draft<MyOr
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyOrderFromCartDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyOrderFromCartDraft>() {
+    public static tools.jackson.core.type.TypeReference<MyOrderFromCartDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyOrderFromCartDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<MyOrderFromCartDraft>";

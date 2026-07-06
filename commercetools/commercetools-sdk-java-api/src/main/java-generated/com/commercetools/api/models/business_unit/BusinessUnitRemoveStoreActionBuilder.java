@@ -25,7 +25,7 @@ public class BusinessUnitRemoveStoreActionBuilder implements Builder<BusinessUni
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
     /**
-     *  <p>Store to remove.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to remove.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class BusinessUnitRemoveStoreActionBuilder implements Builder<BusinessUni
     }
 
     /**
-     *  <p>Store to remove.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to remove.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class BusinessUnitRemoveStoreActionBuilder implements Builder<BusinessUni
     }
 
     /**
-     *  <p>Store to remove.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to remove.</p>
      * @param store value to be set
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class BusinessUnitRemoveStoreActionBuilder implements Builder<BusinessUni
     }
 
     /**
-     *  <p>Store to remove.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to remove.</p>
      * @return store
      */
 

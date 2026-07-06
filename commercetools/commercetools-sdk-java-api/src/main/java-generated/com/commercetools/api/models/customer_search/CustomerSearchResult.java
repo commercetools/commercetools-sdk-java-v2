@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CustomerSearchResult
@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface CustomerSearchResult {
 
     /**
-     *  <p><code>id</code> of the Customer matching the search query.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> matching the search query.</p>
      * @return id
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface CustomerSearchResult {
     public Double getRelevance();
 
     /**
-     *  <p><code>id</code> of the Customer matching the search query.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> matching the search query.</p>
      * @param id value to be set
      */
 
@@ -131,8 +131,8 @@ public interface CustomerSearchResult {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerSearchResult> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerSearchResult>() {
+    public static tools.jackson.core.type.TypeReference<CustomerSearchResult> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerSearchResult>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerSearchResult>";

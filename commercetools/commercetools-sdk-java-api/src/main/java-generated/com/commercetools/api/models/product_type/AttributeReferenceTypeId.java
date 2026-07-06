@@ -17,52 +17,52 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AttributeReferenceTypeId extends JsonEnum {
 
     /**
-    <p>References a AssociateRole. Only available for B2B-enabled Projects.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a>. Only available for <span>B2B</span>-enabled Projects.</p> */
     AttributeReferenceTypeId ASSOCIATE_ROLE = AttributeReferenceTypeIdEnum.ASSOCIATE_ROLE;
     /**
-    <p>References a BusinessUnit. Only available for B2B-enabled Projects.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>. Only available for <span>B2B</span>-enabled Projects.</p> */
     AttributeReferenceTypeId BUSINESS_UNIT = AttributeReferenceTypeIdEnum.BUSINESS_UNIT;
     /**
-    <p>References a Cart.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p> */
     AttributeReferenceTypeId CART = AttributeReferenceTypeIdEnum.CART;
     /**
-    <p>References a CartDiscount.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a>.</p> */
     AttributeReferenceTypeId CART_DISCOUNT = AttributeReferenceTypeIdEnum.CART_DISCOUNT;
     /**
-    <p>References a Category.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a>.</p> */
     AttributeReferenceTypeId CATEGORY = AttributeReferenceTypeIdEnum.CATEGORY;
     /**
-    <p>References a Channel.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p> */
     AttributeReferenceTypeId CHANNEL = AttributeReferenceTypeIdEnum.CHANNEL;
     /**
-    <p>References a Customer.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>.</p> */
     AttributeReferenceTypeId CUSTOMER = AttributeReferenceTypeIdEnum.CUSTOMER;
     /**
-    <p>References a CustomerGroup.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a>.</p> */
     AttributeReferenceTypeId CUSTOMER_GROUP = AttributeReferenceTypeIdEnum.CUSTOMER_GROUP;
     /**
-    <p>References a CustomObject.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomObject" rel="nofollow">CustomObject</a>.</p> */
     AttributeReferenceTypeId KEY_VALUE_DOCUMENT = AttributeReferenceTypeIdEnum.KEY_VALUE_DOCUMENT;
     /**
-    <p>References an Order.</p> */
+    <p>References an <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p> */
     AttributeReferenceTypeId ORDER = AttributeReferenceTypeIdEnum.ORDER;
     /**
-    <p>References a Product.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p> */
     AttributeReferenceTypeId PRODUCT = AttributeReferenceTypeIdEnum.PRODUCT;
     /**
-    <p>References a ProductType.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>.</p> */
     AttributeReferenceTypeId PRODUCT_TYPE = AttributeReferenceTypeIdEnum.PRODUCT_TYPE;
     /**
-    <p>References a Review.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a>.</p> */
     AttributeReferenceTypeId REVIEW = AttributeReferenceTypeIdEnum.REVIEW;
     /**
-    <p>References a ShippingMethod.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a>.</p> */
     AttributeReferenceTypeId SHIPPING_METHOD = AttributeReferenceTypeIdEnum.SHIPPING_METHOD;
     /**
-    <p>References a State.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p> */
     AttributeReferenceTypeId STATE = AttributeReferenceTypeIdEnum.STATE;
     /**
-    <p>References a Zone.</p> */
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a>.</p> */
     AttributeReferenceTypeId ZONE = AttributeReferenceTypeIdEnum.ZONE;
 
     /**

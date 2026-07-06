@@ -60,7 +60,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     private com.commercetools.importapi.models.customfields.Custom custom;
 
     /**
-     *  <p>User-defined unique identifier. If a Category with this <code>key</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -177,7 +177,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Category.parent</code>. If the referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Category is created.</p>
+     *  <p>Maps to <code>Category.parent</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Category is created.</p>
      * @param builder function to build the parent value
      * @return Builder
      */
@@ -189,7 +189,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Category.parent</code>. If the referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Category is created.</p>
+     *  <p>Maps to <code>Category.parent</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Category is created.</p>
      * @param builder function to build the parent value
      * @return Builder
      */
@@ -201,7 +201,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Category.parent</code>. If the referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Category is created.</p>
+     *  <p>Maps to <code>Category.parent</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Category is created.</p>
      * @param parent value to be set
      * @return Builder
      */
@@ -467,7 +467,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>User-defined unique identifier. If a Category with this <code>key</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @return key
      */
 
@@ -504,7 +504,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Category.parent</code>. If the referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Category is created.</p>
+     *  <p>Maps to <code>Category.parent</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Category is created.</p>
      * @return parent
      */
 

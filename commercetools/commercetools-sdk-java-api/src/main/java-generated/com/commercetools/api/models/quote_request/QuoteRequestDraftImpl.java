@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * QuoteRequestDraft
@@ -62,7 +63,7 @@ public class QuoteRequestDraftImpl implements QuoteRequestDraft, ModelBase {
     }
 
     /**
-     *  <p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, and Carts with <code>Multiple</code> ShippingMode are not supported. The Cart must have a <code>shippingAddress</code> defined, otherwise an InvalidOperation error is returned when creating a Quote Request.</p>
+     *  <p>Cart for which a Quote is requested. Anonymous Carts, Carts with <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">Discount Codes</a>, and Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a> are not supported. The Cart must have a <code>shippingAddress</code> defined, otherwise an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned when <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/quote-requests:POST" rel="nofollow">creating a Quote Request</a>.</p>
      */
 
     public com.commercetools.api.models.cart.CartResourceIdentifier getCart() {
@@ -102,7 +103,7 @@ public class QuoteRequestDraftImpl implements QuoteRequestDraft, ModelBase {
     }
 
     /**
-     *  <p>State of the Quote Request. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Quote Request. This reference can point to a State in a custom workflow.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {
@@ -110,7 +111,8 @@ public class QuoteRequestDraftImpl implements QuoteRequestDraft, ModelBase {
     }
 
     /**
-     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer.</p>
+     *  <p>Identifier for a purchase order, usually in a B2B context. The purchase order number is typically entered by the <span>Buyer</span>.</p>
+     *  <p>If not provided, the <code>purchaseOrderNumber</code> from the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> is used.</p>
      */
 
     public String getPurchaseOrderNumber() {

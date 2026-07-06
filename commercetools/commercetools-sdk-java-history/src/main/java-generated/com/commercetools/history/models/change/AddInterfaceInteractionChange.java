@@ -7,17 +7,17 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
-import com.commercetools.history.models.change_value.CustomFieldExpandedValue;
+import com.commercetools.history.models.common.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Change triggered by the Add InterfaceInteraction update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentAddInterfaceInteractionAction" rel="nofollow">Add InterfaceInteraction</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -63,7 +63,7 @@ public interface AddInterfaceInteractionChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("nextValue")
-    public CustomFieldExpandedValue getNextValue();
+    public CustomFields getNextValue();
 
     /**
      * set change
@@ -77,7 +77,7 @@ public interface AddInterfaceInteractionChange extends Change {
      * @param nextValue value to be set
      */
 
-    public void setNextValue(final CustomFieldExpandedValue nextValue);
+    public void setNextValue(final CustomFields nextValue);
 
     /**
      * factory method
@@ -113,8 +113,7 @@ public interface AddInterfaceInteractionChange extends Change {
         }
         AddInterfaceInteractionChangeImpl instance = new AddInterfaceInteractionChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(
-            com.commercetools.history.models.change_value.CustomFieldExpandedValue.deepCopy(template.getNextValue()));
+        instance.setNextValue(com.commercetools.history.models.common.CustomFields.deepCopy(template.getNextValue()));
         return instance;
     }
 
@@ -149,8 +148,8 @@ public interface AddInterfaceInteractionChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AddInterfaceInteractionChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AddInterfaceInteractionChange>() {
+    public static tools.jackson.core.type.TypeReference<AddInterfaceInteractionChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AddInterfaceInteractionChange>() {
             @Override
             public String toString() {
                 return "TypeReference<AddInterfaceInteractionChange>";

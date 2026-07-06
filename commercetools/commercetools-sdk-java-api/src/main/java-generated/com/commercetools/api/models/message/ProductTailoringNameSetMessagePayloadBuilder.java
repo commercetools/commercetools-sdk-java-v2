@@ -122,7 +122,7 @@ public class ProductTailoringNameSetMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The name of the Product Tailoring after the Set Name update action.</p>
+     *  <p>The name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -134,7 +134,7 @@ public class ProductTailoringNameSetMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The name of the Product Tailoring after the Set Name update action.</p>
+     *  <p>The name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -146,7 +146,7 @@ public class ProductTailoringNameSetMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The name of the Product Tailoring after the Set Name update action.</p>
+     *  <p>The name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -158,7 +158,7 @@ public class ProductTailoringNameSetMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The name of the ProductTailoring before the Set Name update action.</p>
+     *  <p>The name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @param builder function to build the oldName value
      * @return Builder
      */
@@ -170,7 +170,7 @@ public class ProductTailoringNameSetMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The name of the ProductTailoring before the Set Name update action.</p>
+     *  <p>The name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @param builder function to build the oldName value
      * @return Builder
      */
@@ -182,7 +182,7 @@ public class ProductTailoringNameSetMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The name of the ProductTailoring before the Set Name update action.</p>
+     *  <p>The name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @param oldName value to be set
      * @return Builder
      */
@@ -222,7 +222,7 @@ public class ProductTailoringNameSetMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The name of the Product Tailoring after the Set Name update action.</p>
+     *  <p>The name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @return name
      */
 
@@ -232,7 +232,7 @@ public class ProductTailoringNameSetMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
-     *  <p>The name of the ProductTailoring before the Set Name update action.</p>
+     *  <p>The name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @return oldName
      */
 

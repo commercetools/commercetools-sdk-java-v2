@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Set Prices update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetPricesAction" rel="nofollow">Set Prices</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetPricesChangeImpl implements SetPricesChange, ModelBase {
@@ -34,6 +35,10 @@ public class SetPricesChangeImpl implements SetPricesChange, ModelBase {
 
     private String variant;
 
+    private java.util.List<com.commercetools.history.models.common.Price> addedItems;
+
+    private java.util.List<com.commercetools.history.models.common.Price> removedItems;
+
     /**
      * create instance with all properties
      */
@@ -41,12 +46,16 @@ public class SetPricesChangeImpl implements SetPricesChange, ModelBase {
     SetPricesChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.Price> previousValue,
             @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.Price> nextValue,
-            @JsonProperty("catalogData") final String catalogData, @JsonProperty("variant") final String variant) {
+            @JsonProperty("catalogData") final String catalogData, @JsonProperty("variant") final String variant,
+            @JsonProperty("addedItems") final java.util.List<com.commercetools.history.models.common.Price> addedItems,
+            @JsonProperty("removedItems") final java.util.List<com.commercetools.history.models.common.Price> removedItems) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.catalogData = catalogData;
         this.variant = variant;
+        this.addedItems = addedItems;
+        this.removedItems = removedItems;
         this.type = SET_PRICES_CHANGE;
     }
 
@@ -90,9 +99,10 @@ public class SetPricesChangeImpl implements SetPricesChange, ModelBase {
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
-     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
-     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *  </ul>
      */
 
@@ -101,11 +111,28 @@ public class SetPricesChangeImpl implements SetPricesChange, ModelBase {
     }
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
      */
 
     public String getVariant() {
         return this.variant;
+    }
+
+    /**
+     *  <p>Elements added to the array.</p>
+     */
+
+    public java.util.List<com.commercetools.history.models.common.Price> getAddedItems() {
+        return this.addedItems;
+    }
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     */
+
+    public java.util.List<com.commercetools.history.models.common.Price> getRemovedItems() {
+        return this.removedItems;
     }
 
     public void setChange(final String change) {
@@ -136,6 +163,22 @@ public class SetPricesChangeImpl implements SetPricesChange, ModelBase {
         this.variant = variant;
     }
 
+    public void setAddedItems(final com.commercetools.history.models.common.Price... addedItems) {
+        this.addedItems = new ArrayList<>(Arrays.asList(addedItems));
+    }
+
+    public void setAddedItems(final java.util.List<com.commercetools.history.models.common.Price> addedItems) {
+        this.addedItems = addedItems;
+    }
+
+    public void setRemovedItems(final com.commercetools.history.models.common.Price... removedItems) {
+        this.removedItems = new ArrayList<>(Arrays.asList(removedItems));
+    }
+
+    public void setRemovedItems(final java.util.List<com.commercetools.history.models.common.Price> removedItems) {
+        this.removedItems = removedItems;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -152,12 +195,16 @@ public class SetPricesChangeImpl implements SetPricesChange, ModelBase {
                 .append(nextValue, that.nextValue)
                 .append(catalogData, that.catalogData)
                 .append(variant, that.variant)
+                .append(addedItems, that.addedItems)
+                .append(removedItems, that.removedItems)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(catalogData, that.catalogData)
                 .append(variant, that.variant)
+                .append(addedItems, that.addedItems)
+                .append(removedItems, that.removedItems)
                 .isEquals();
     }
 
@@ -169,6 +216,8 @@ public class SetPricesChangeImpl implements SetPricesChange, ModelBase {
                 .append(nextValue)
                 .append(catalogData)
                 .append(variant)
+                .append(addedItems)
+                .append(removedItems)
                 .toHashCode();
     }
 
@@ -180,6 +229,8 @@ public class SetPricesChangeImpl implements SetPricesChange, ModelBase {
                 .append("nextValue", nextValue)
                 .append("catalogData", catalogData)
                 .append("variant", variant)
+                .append("addedItems", addedItems)
+                .append("removedItems", removedItems)
                 .build();
     }
 

@@ -9,19 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li>Change the label of a LocalizedEnumValue on Product Types.</li>
- *   <li>Change LocalizedEnumValue Label on Types.</li>
- *  </ul>
+ * ChangeLocalizedEnumValueLabelChange
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -83,7 +79,7 @@ public interface ChangeLocalizedEnumValueLabelChange extends Change {
     public LocalizedString getNextValue();
 
     /**
-     *  <p>Name of the updated FieldDefinition; only present on changes to Types.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>; only present on changes to Types.</p>
      * @return fieldName
      */
     @NotNull
@@ -91,7 +87,7 @@ public interface ChangeLocalizedEnumValueLabelChange extends Change {
     public String getFieldName();
 
     /**
-     *  <p>Name of the updated AttributeDefinition; only present on changes to Product Types.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>; only present on changes to Product Types.</p>
      * @return attributeName
      */
     @NotNull
@@ -128,14 +124,14 @@ public interface ChangeLocalizedEnumValueLabelChange extends Change {
     public void setNextValue(final LocalizedString nextValue);
 
     /**
-     *  <p>Name of the updated FieldDefinition; only present on changes to Types.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>; only present on changes to Types.</p>
      * @param fieldName value to be set
      */
 
     public void setFieldName(final String fieldName);
 
     /**
-     *  <p>Name of the updated AttributeDefinition; only present on changes to Product Types.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>; only present on changes to Product Types.</p>
      * @param attributeName value to be set
      */
 
@@ -229,8 +225,8 @@ public interface ChangeLocalizedEnumValueLabelChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChangeLocalizedEnumValueLabelChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChangeLocalizedEnumValueLabelChange>() {
+    public static tools.jackson.core.type.TypeReference<ChangeLocalizedEnumValueLabelChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChangeLocalizedEnumValueLabelChange>() {
             @Override
             public String toString() {
                 return "TypeReference<ChangeLocalizedEnumValueLabelChange>";

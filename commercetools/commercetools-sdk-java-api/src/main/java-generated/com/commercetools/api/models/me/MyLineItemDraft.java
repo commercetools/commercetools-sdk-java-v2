@@ -13,11 +13,11 @@ import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>For Product Variant identification, either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
@@ -37,7 +37,7 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
         io.vrap.rmf.base.client.Draft<MyLineItemDraft> {
 
     /**
-     *  <p>User-defined unique identifier of the LineItem.</p>
+     *  <p>User-defined identifier of the LineItem. Must be unique among LineItems in the Cart.</p>
      * @return key
      */
 
@@ -45,7 +45,7 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
     public String getKey();
 
     /**
-     *  <p><code>id</code> of the Product.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return productId
      */
 
@@ -53,7 +53,7 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
     public String getProductId();
 
     /**
-     *  <p><code>id</code> of the ProductVariant in the Product. If not provided, the Master Variant is used.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in the Product. If not provided, the Master Variant is used.</p>
      * @return variantId
      */
 
@@ -61,7 +61,7 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
     public Long getVariantId();
 
     /**
-     *  <p><code>sku</code> of the ProductVariant.</p>
+     *  <p><code>sku</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return sku
      */
 
@@ -69,7 +69,7 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
     public String getSku();
 
     /**
-     *  <p>Number of Product Variants to add to the Cart.</p>
+     *  <p>Quantity of Product Variants to add to the Cart.</p>
      * @return quantity
      */
 
@@ -77,7 +77,7 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
     public Long getQuantity();
 
     /**
-     *  <p>Date and time (UTC) the Product Variant is added to the Cart. If not set, it defaults to the current date and time.</p>
+     *  <p>Date and time (UTC) the Product Variant was added to the Cart. If not set, it defaults to the current date and time.</p>
      *  <p>Optional for backwards compatibility reasons.</p>
      * @return addedAt
      */
@@ -86,7 +86,7 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
     public ZonedDateTime getAddedAt();
 
     /**
-     *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>Used to identify <span>Inventory entries</span> that must be reserved. The Channel must have the <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @return supplyChannel
      */
     @Valid
@@ -94,8 +94,8 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
     public ChannelResourceIdentifier getSupplyChannel();
 
     /**
-     *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
-     *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     *  <p>Used to <span>select</span> a Product Price. The Channel must have the <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the Cart is bound to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
      * @return distributionChannel
      */
     @Valid
@@ -127,42 +127,42 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>User-defined unique identifier of the LineItem.</p>
+     *  <p>User-defined identifier of the LineItem. Must be unique among LineItems in the Cart.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p><code>id</code> of the Product.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param productId value to be set
      */
 
     public void setProductId(final String productId);
 
     /**
-     *  <p><code>id</code> of the ProductVariant in the Product. If not provided, the Master Variant is used.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in the Product. If not provided, the Master Variant is used.</p>
      * @param variantId value to be set
      */
 
     public void setVariantId(final Long variantId);
 
     /**
-     *  <p><code>sku</code> of the ProductVariant.</p>
+     *  <p><code>sku</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param sku value to be set
      */
 
     public void setSku(final String sku);
 
     /**
-     *  <p>Number of Product Variants to add to the Cart.</p>
+     *  <p>Quantity of Product Variants to add to the Cart.</p>
      * @param quantity value to be set
      */
 
     public void setQuantity(final Long quantity);
 
     /**
-     *  <p>Date and time (UTC) the Product Variant is added to the Cart. If not set, it defaults to the current date and time.</p>
+     *  <p>Date and time (UTC) the Product Variant was added to the Cart. If not set, it defaults to the current date and time.</p>
      *  <p>Optional for backwards compatibility reasons.</p>
      * @param addedAt value to be set
      */
@@ -170,15 +170,15 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
     public void setAddedAt(final ZonedDateTime addedAt);
 
     /**
-     *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>Used to identify <span>Inventory entries</span> that must be reserved. The Channel must have the <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param supplyChannel value to be set
      */
 
     public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
 
     /**
-     *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
-     *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     *  <p>Used to <span>select</span> a Product Price. The Channel must have the <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the Cart is bound to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
      * @param distributionChannel value to be set
      */
 
@@ -296,8 +296,8 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyLineItemDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyLineItemDraft>() {
+    public static tools.jackson.core.type.TypeReference<MyLineItemDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyLineItemDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<MyLineItemDraft>";

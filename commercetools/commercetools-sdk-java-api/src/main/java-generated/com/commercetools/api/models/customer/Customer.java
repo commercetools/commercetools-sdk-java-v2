@@ -18,12 +18,12 @@ import com.commercetools.api.models.customer_group.CustomerGroupReference;
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>If <code>stores</code> is not empty, the Customer is specific to those Stores.</p>
@@ -39,7 +39,10 @@ import jakarta.validation.constraints.NotNull;
  *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .email("{email}")
  *             .plusAddresses(addressesBuilder -> addressesBuilder)
+ *             .plusShippingAddressIds(shippingAddressIdsBuilder -> shippingAddressIdsBuilder)
+ *             .plusBillingAddressIds(billingAddressIdsBuilder -> billingAddressIdsBuilder)
  *             .isEmailVerified(true)
+ *             .plusCustomerGroupAssignments(customerGroupAssignmentsBuilder -> customerGroupAssignmentsBuilder)
  *             .plusStores(storesBuilder -> storesBuilder)
  *             .authenticationMode(AuthenticationMode.PASSWORD)
  *             .build()
@@ -127,7 +130,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     public CreatedBy getCreatedBy();
 
     /**
-     *  <p>Email address of the Customer that is unique for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
+     *  <p>Email address of the Customer that is <span>unique</span> for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
      * @return email
      */
     @NotNull
@@ -219,7 +222,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
      *  <p>IDs of addresses in <code>addresses</code> used as shipping addresses.</p>
      * @return shippingAddressIds
      */
-
+    @NotNull
     @JsonProperty("shippingAddressIds")
     public List<String> getShippingAddressIds();
 
@@ -235,12 +238,12 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
      *  <p>IDs of addresses in <code>addresses</code> used as billing addresses.</p>
      * @return billingAddressIds
      */
-
+    @NotNull
     @JsonProperty("billingAddressIds")
     public List<String> getBillingAddressIds();
 
     /**
-     *  <p>Indicates whether the email address of the Customer is verified.</p>
+     *  <p>Indicates whether the email address of the Customer is <span>verified</span>.</p>
      * @return isEmailVerified
      */
     @NotNull
@@ -248,7 +251,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     public Boolean getIsEmailVerified();
 
     /**
-     *  <p>CustomerGroup to which the Customer belongs.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> to which the Customer belongs.</p>
      * @return customerGroup
      */
     @Valid
@@ -257,15 +260,16 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
 
     /**
      *  <p>Customer Groups that the Customer belongs to.</p>
-     *  <p>Used for Line Item price selection.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
      * @return customerGroupAssignments
      */
+    @NotNull
     @Valid
     @JsonProperty("customerGroupAssignments")
     public List<CustomerGroupAssignment> getCustomerGroupAssignments();
 
     /**
-     *  <p>Custom Fields for the Customer.</p>
+     *  <p>Custom Fields of the Customer.</p>
      * @return custom
      */
     @Valid
@@ -289,10 +293,10 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     public String getSalutation();
 
     /**
-     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      * @return stores
      */
@@ -374,7 +378,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     public void setCreatedBy(final CreatedBy createdBy);
 
     /**
-     *  <p>Email address of the Customer that is unique for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
+     *  <p>Email address of the Customer that is <span>unique</span> for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
      * @param email value to be set
      */
 
@@ -496,14 +500,14 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     public void setBillingAddressIds(final List<String> billingAddressIds);
 
     /**
-     *  <p>Indicates whether the email address of the Customer is verified.</p>
+     *  <p>Indicates whether the email address of the Customer is <span>verified</span>.</p>
      * @param isEmailVerified value to be set
      */
 
     public void setIsEmailVerified(final Boolean isEmailVerified);
 
     /**
-     *  <p>CustomerGroup to which the Customer belongs.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> to which the Customer belongs.</p>
      * @param customerGroup value to be set
      */
 
@@ -511,7 +515,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
 
     /**
      *  <p>Customer Groups that the Customer belongs to.</p>
-     *  <p>Used for Line Item price selection.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
      * @param customerGroupAssignments values to be set
      */
 
@@ -520,14 +524,14 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
 
     /**
      *  <p>Customer Groups that the Customer belongs to.</p>
-     *  <p>Used for Line Item price selection.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
      * @param customerGroupAssignments values to be set
      */
 
     public void setCustomerGroupAssignments(final List<CustomerGroupAssignment> customerGroupAssignments);
 
     /**
-     *  <p>Custom Fields for the Customer.</p>
+     *  <p>Custom Fields of the Customer.</p>
      * @param custom value to be set
      */
 
@@ -548,10 +552,10 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     public void setSalutation(final String salutation);
 
     /**
-     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      * @param stores values to be set
      */
@@ -560,10 +564,10 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     public void setStores(final StoreKeyReference... stores);
 
     /**
-     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
-     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the <span>Password Flow for global Customers</span>.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the <span>Password Flow for Customers in a Store</span> for those specific Stores.</li>
      *  </ul>
      * @param stores values to be set
      */
@@ -724,8 +728,8 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Customer> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Customer>() {
+    public static tools.jackson.core.type.TypeReference<Customer> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Customer>() {
             @Override
             public String toString() {
                 return "TypeReference<Customer>";

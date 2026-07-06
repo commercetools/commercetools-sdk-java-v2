@@ -13,15 +13,15 @@ import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.Reference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Base representation of a Message containing common fields to all Message Types.</p>
+ *  <p>Base representation of a Message containing common fields to all <span>Message Types</span>.</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern
@@ -103,7 +103,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     public Long getSequenceNumber();
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
     @NotNull
@@ -120,7 +120,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     public Long getResourceVersion();
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      * @return type
      */
     @NotNull
@@ -185,7 +185,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     public void setSequenceNumber(final Long sequenceNumber);
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      */
 
@@ -574,6 +574,30 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for businessUnitCustomerGroupAssignmentAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentAddedMessageBuilder businessUnitCustomerGroupAssignmentAddedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for businessUnitCustomerGroupAssignmentRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentRemovedMessageBuilder businessUnitCustomerGroupAssignmentRemovedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for businessUnitCustomerGroupAssignmentsSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentsSetMessageBuilder businessUnitCustomerGroupAssignmentsSetBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentsSetMessageBuilder.of();
+    }
+
+    /**
      * builder for businessUnitDefaultBillingAddressSet subtype
      * @return builder
      */
@@ -726,6 +750,46 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for cartFrozen subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CartFrozenMessageBuilder cartFrozenBuilder() {
+        return com.commercetools.api.models.message.CartFrozenMessageBuilder.of();
+    }
+
+    /**
+     * builder for cartLocked subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CartLockedMessageBuilder cartLockedBuilder() {
+        return com.commercetools.api.models.message.CartLockedMessageBuilder.of();
+    }
+
+    /**
+     * builder for cartPurchaseOrderNumberSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CartPurchaseOrderNumberSetMessageBuilder cartPurchaseOrderNumberSetBuilder() {
+        return com.commercetools.api.models.message.CartPurchaseOrderNumberSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for cartUnfrozen subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CartUnfrozenMessageBuilder cartUnfrozenBuilder() {
+        return com.commercetools.api.models.message.CartUnfrozenMessageBuilder.of();
+    }
+
+    /**
+     * builder for cartUnlocked subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CartUnlockedMessageBuilder cartUnlockedBuilder() {
+        return com.commercetools.api.models.message.CartUnlockedMessageBuilder.of();
+    }
+
+    /**
      * builder for categoryCreated subtype
      * @return builder
      */
@@ -811,6 +875,22 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      */
     public static com.commercetools.api.models.message.CustomerAddressRemovedMessageBuilder customerAddressRemovedBuilder() {
         return com.commercetools.api.models.message.CustomerAddressRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for customerBillingAddressAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerBillingAddressAddedMessageBuilder customerBillingAddressAddedBuilder() {
+        return com.commercetools.api.models.message.CustomerBillingAddressAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for customerBillingAddressRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerBillingAddressRemovedMessageBuilder customerBillingAddressRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerBillingAddressRemovedMessageBuilder.of();
     }
 
     /**
@@ -926,6 +1006,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for customerExternalIdSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerExternalIdSetMessageBuilder customerExternalIdSetBuilder() {
+        return com.commercetools.api.models.message.CustomerExternalIdSetMessageBuilder.of();
+    }
+
+    /**
      * builder for customerFirstNameSet subtype
      * @return builder
      */
@@ -1027,6 +1115,22 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      */
     public static com.commercetools.api.models.message.CustomerPasswordUpdatedMessageBuilder customerPasswordUpdatedBuilder() {
         return com.commercetools.api.models.message.CustomerPasswordUpdatedMessageBuilder.of();
+    }
+
+    /**
+     * builder for customerShippingAddressAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerShippingAddressAddedMessageBuilder customerShippingAddressAddedBuilder() {
+        return com.commercetools.api.models.message.CustomerShippingAddressAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for customerShippingAddressRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerShippingAddressRemovedMessageBuilder customerShippingAddressRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerShippingAddressRemovedMessageBuilder.of();
     }
 
     /**
@@ -1158,6 +1262,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for discountGroupIsActiveSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.DiscountGroupIsActiveSetMessageBuilder discountGroupIsActiveSetBuilder() {
+        return com.commercetools.api.models.message.DiscountGroupIsActiveSetMessageBuilder.of();
+    }
+
+    /**
      * builder for discountGroupKeySet subtype
      * @return builder
      */
@@ -1190,11 +1302,43 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for inventoryEntryOutOfStock subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.InventoryEntryOutOfStockMessageBuilder inventoryEntryOutOfStockBuilder() {
+        return com.commercetools.api.models.message.InventoryEntryOutOfStockMessageBuilder.of();
+    }
+
+    /**
      * builder for inventoryEntryQuantitySet subtype
      * @return builder
      */
     public static com.commercetools.api.models.message.InventoryEntryQuantitySetMessageBuilder inventoryEntryQuantitySetBuilder() {
         return com.commercetools.api.models.message.InventoryEntryQuantitySetMessageBuilder.of();
+    }
+
+    /**
+     * builder for inventoryEntryReorderPoint subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.InventoryEntryReorderPointMessageBuilder inventoryEntryReorderPointBuilder() {
+        return com.commercetools.api.models.message.InventoryEntryReorderPointMessageBuilder.of();
+    }
+
+    /**
+     * builder for inventoryEntryReservationExpirationInMinutesSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.InventoryEntryReservationExpirationInMinutesSetMessageBuilder inventoryEntryReservationExpirationInMinutesSetBuilder() {
+        return com.commercetools.api.models.message.InventoryEntryReservationExpirationInMinutesSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for inventoryEntrySafetyStock subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.InventoryEntrySafetyStockMessageBuilder inventoryEntrySafetyStockBuilder() {
+        return com.commercetools.api.models.message.InventoryEntrySafetyStockMessageBuilder.of();
     }
 
     /**
@@ -1419,6 +1563,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      */
     public static com.commercetools.api.models.message.OrderPaymentAddedMessageBuilder orderPaymentAddedBuilder() {
         return com.commercetools.api.models.message.OrderPaymentAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for orderPaymentRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.OrderPaymentRemovedMessageBuilder orderPaymentRemovedBuilder() {
+        return com.commercetools.api.models.message.OrderPaymentRemovedMessageBuilder.of();
     }
 
     /**
@@ -1779,6 +1931,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      */
     public static com.commercetools.api.models.message.PaymentTransactionAddedMessageBuilder paymentTransactionAddedBuilder() {
         return com.commercetools.api.models.message.PaymentTransactionAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for paymentTransactionInterfaceIdSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentTransactionInterfaceIdSetMessageBuilder paymentTransactionInterfaceIdSetBuilder() {
+        return com.commercetools.api.models.message.PaymentTransactionInterfaceIdSetMessageBuilder.of();
     }
 
     /**
@@ -2286,6 +2446,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for recurringOrderFailed subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderFailedMessageBuilder recurringOrderFailedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderFailedMessageBuilder.of();
+    }
+
+    /**
      * builder for recurringOrderKeySet subtype
      * @return builder
      */
@@ -2614,6 +2782,78 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for variantCreated subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantCreatedMessageBuilder variantCreatedBuilder() {
+        return com.commercetools.api.models.message.VariantCreatedMessageBuilder.of();
+    }
+
+    /**
+     * builder for variantDeleted subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantDeletedMessageBuilder variantDeletedBuilder() {
+        return com.commercetools.api.models.message.VariantDeletedMessageBuilder.of();
+    }
+
+    /**
+     * builder for variantImageAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantImageAddedMessageBuilder variantImageAddedBuilder() {
+        return com.commercetools.api.models.message.VariantImageAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for variantImagesSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantImagesSetMessageBuilder variantImagesSetBuilder() {
+        return com.commercetools.api.models.message.VariantImagesSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for variantKeySet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantKeySetMessageBuilder variantKeySetBuilder() {
+        return com.commercetools.api.models.message.VariantKeySetMessageBuilder.of();
+    }
+
+    /**
+     * builder for variantPublished subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantPublishedMessageBuilder variantPublishedBuilder() {
+        return com.commercetools.api.models.message.VariantPublishedMessageBuilder.of();
+    }
+
+    /**
+     * builder for variantSkuSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantSkuSetMessageBuilder variantSkuSetBuilder() {
+        return com.commercetools.api.models.message.VariantSkuSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for variantStagedChangesRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantStagedChangesRemovedMessageBuilder variantStagedChangesRemovedBuilder() {
+        return com.commercetools.api.models.message.VariantStagedChangesRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for variantUnpublished subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantUnpublishedMessageBuilder variantUnpublishedBuilder() {
+        return com.commercetools.api.models.message.VariantUnpublishedMessageBuilder.of();
+    }
+
+    /**
      * accessor map function
      * @param <T> mapped type
      * @param helper function to map the object
@@ -2627,8 +2867,8 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Message> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Message>() {
+    public static tools.jackson.core.type.TypeReference<Message> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Message>() {
             @Override
             public String toString() {
                 return "TypeReference<Message>";

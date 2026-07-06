@@ -34,7 +34,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     private java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> updatedProductSelections;
 
     /**
-     *  <p>ProductSelectionSettings that were added to the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> that were added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param addedProductSelections value to be set
      * @return Builder
      */
@@ -46,7 +46,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>ProductSelectionSettings that were added to the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> that were added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param addedProductSelections value to be set
      * @return Builder
      */
@@ -58,7 +58,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>ProductSelectionSettings that were added to the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> that were added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param addedProductSelections value to be set
      * @return Builder
      */
@@ -73,7 +73,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>ProductSelectionSettings that were added to the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> that were added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the addedProductSelections value
      * @return Builder
      */
@@ -89,7 +89,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>ProductSelectionSettings that were added to the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> that were added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the addedProductSelections value
      * @return Builder
      */
@@ -103,7 +103,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>ProductSelectionSettings that were added to the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> that were added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the addedProductSelections value
      * @return Builder
      */
@@ -115,7 +115,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>ProductSelectionSettings that were added to the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> that were added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the addedProductSelections value
      * @return Builder
      */
@@ -127,7 +127,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>ProductSelectionSettings that were removed from the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> that were removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param removedProductSelections value to be set
      * @return Builder
      */
@@ -139,7 +139,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>ProductSelectionSettings that were removed from the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> that were removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param removedProductSelections value to be set
      * @return Builder
      */
@@ -151,7 +151,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>ProductSelectionSettings that were removed from the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> that were removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param removedProductSelections value to be set
      * @return Builder
      */
@@ -166,7 +166,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>ProductSelectionSettings that were removed from the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> that were removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the removedProductSelections value
      * @return Builder
      */
@@ -182,7 +182,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>ProductSelectionSettings that were removed from the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> that were removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the removedProductSelections value
      * @return Builder
      */
@@ -196,7 +196,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>ProductSelectionSettings that were removed from the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> that were removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the removedProductSelections value
      * @return Builder
      */
@@ -208,7 +208,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>ProductSelectionSettings that were removed from the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> that were removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the removedProductSelections value
      * @return Builder
      */
@@ -220,7 +220,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>ProductSelectionSettings that were updated in the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> that were updated in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param updatedProductSelections value to be set
      * @return Builder
      */
@@ -232,7 +232,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>ProductSelectionSettings that were updated in the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> that were updated in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param updatedProductSelections value to be set
      * @return Builder
      */
@@ -244,7 +244,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>ProductSelectionSettings that were updated in the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> that were updated in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param updatedProductSelections value to be set
      * @return Builder
      */
@@ -259,7 +259,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>ProductSelectionSettings that were updated in the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> that were updated in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the updatedProductSelections value
      * @return Builder
      */
@@ -275,7 +275,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>ProductSelectionSettings that were updated in the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> that were updated in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the updatedProductSelections value
      * @return Builder
      */
@@ -289,7 +289,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>ProductSelectionSettings that were updated in the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> that were updated in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the updatedProductSelections value
      * @return Builder
      */
@@ -301,7 +301,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>ProductSelectionSettings that were updated in the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> that were updated in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @param builder function to build the updatedProductSelections value
      * @return Builder
      */
@@ -313,7 +313,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>ProductSelectionSettings that were added to the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> that were added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @return addedProductSelections
      */
 
@@ -323,7 +323,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>ProductSelectionSettings that were removed from the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> that were removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @return removedProductSelections
      */
 
@@ -333,7 +333,7 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>ProductSelectionSettings that were updated in the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> that were updated in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      * @return updatedProductSelections
      */
 

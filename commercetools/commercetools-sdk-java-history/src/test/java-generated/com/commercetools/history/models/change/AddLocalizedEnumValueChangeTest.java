@@ -18,7 +18,7 @@ public class AddLocalizedEnumValueChangeTest {
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { "change", AddLocalizedEnumValueChange.builder().change("change") },
                 new Object[] { "nextValue", AddLocalizedEnumValueChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.AttributeLocalizedEnumValueImpl()) },
+                        .nextValue(new com.commercetools.history.models.common.CustomFieldLocalizedEnumValueImpl()) },
                 new Object[] { "fieldName", AddLocalizedEnumValueChange.builder().fieldName("fieldName") },
                 new Object[] { "attributeName",
                         AddLocalizedEnumValueChange.builder().attributeName("attributeName") } };
@@ -34,9 +34,9 @@ public class AddLocalizedEnumValueChangeTest {
     @Test
     public void nextValue() {
         AddLocalizedEnumValueChange value = AddLocalizedEnumValueChange.of();
-        value.setNextValue(new com.commercetools.history.models.common.AttributeLocalizedEnumValueImpl());
+        value.setNextValue(new com.commercetools.history.models.common.CustomFieldLocalizedEnumValueImpl());
         Assertions.assertThat(value.getNextValue())
-                .isEqualTo(new com.commercetools.history.models.common.AttributeLocalizedEnumValueImpl());
+                .isEqualTo(new com.commercetools.history.models.common.CustomFieldLocalizedEnumValueImpl());
     }
 
     @Test

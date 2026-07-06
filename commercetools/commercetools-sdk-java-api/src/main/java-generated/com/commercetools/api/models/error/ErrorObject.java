@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Represents a single error. Multiple errors may be included in an ErrorResponse.</p>
+ *  <p>Represents a single error. Multiple errors may be included in an <a href="https://docs.commercetools.com/apis/ctp:api:type:ErrorResponse" rel="nofollow">ErrorResponse</a>.</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern
@@ -141,6 +141,22 @@ public interface ErrorObject {
      */
     public static com.commercetools.api.models.error.BadGatewayErrorBuilder badGatewayBuilder() {
         return com.commercetools.api.models.error.BadGatewayErrorBuilder.of();
+    }
+
+    /**
+     * builder for bulkOperationMaxItemsExceeded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.BulkOperationMaxItemsExceededErrorBuilder bulkOperationMaxItemsExceededBuilder() {
+        return com.commercetools.api.models.error.BulkOperationMaxItemsExceededErrorBuilder.of();
+    }
+
+    /**
+     * builder for circularDependency subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.CircularDependencyErrorBuilder circularDependencyBuilder() {
+        return com.commercetools.api.models.error.CircularDependencyErrorBuilder.of();
     }
 
     /**
@@ -288,6 +304,14 @@ public interface ErrorObject {
     }
 
     /**
+     * builder for exactLockConflict subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.ExactLockConflictErrorBuilder exactLockConflictBuilder() {
+        return com.commercetools.api.models.error.ExactLockConflictErrorBuilder.of();
+    }
+
+    /**
      * builder for expiredCustomerEmailToken subtype
      * @return builder
      */
@@ -309,6 +333,30 @@ public interface ErrorObject {
      */
     public static com.commercetools.api.models.error.ExtensionBadResponseErrorBuilder extensionBadResponseBuilder() {
         return com.commercetools.api.models.error.ExtensionBadResponseErrorBuilder.of();
+    }
+
+    /**
+     * builder for extensionChainTooDeep subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.ExtensionChainTooDeepErrorBuilder extensionChainTooDeepBuilder() {
+        return com.commercetools.api.models.error.ExtensionChainTooDeepErrorBuilder.of();
+    }
+
+    /**
+     * builder for extensionChainTooWide subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.ExtensionChainTooWideErrorBuilder extensionChainTooWideBuilder() {
+        return com.commercetools.api.models.error.ExtensionChainTooWideErrorBuilder.of();
+    }
+
+    /**
+     * builder for extensionDependencyExists subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.ExtensionDependencyExistsErrorBuilder extensionDependencyExistsBuilder() {
+        return com.commercetools.api.models.error.ExtensionDependencyExistsErrorBuilder.of();
     }
 
     /**
@@ -456,6 +504,22 @@ public interface ErrorObject {
     }
 
     /**
+     * builder for lineItemQuantityAboveLimit subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.LineItemQuantityAboveLimitErrorBuilder lineItemQuantityAboveLimitBuilder() {
+        return com.commercetools.api.models.error.LineItemQuantityAboveLimitErrorBuilder.of();
+    }
+
+    /**
+     * builder for lineItemQuantityBelowLimit subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.LineItemQuantityBelowLimitErrorBuilder lineItemQuantityBelowLimitBuilder() {
+        return com.commercetools.api.models.error.LineItemQuantityBelowLimitErrorBuilder.of();
+    }
+
+    /**
      * builder for lockedField subtype
      * @return builder
      */
@@ -480,6 +544,14 @@ public interface ErrorObject {
     }
 
     /**
+     * builder for maxDiscountGroupsReached subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.MaxDiscountGroupsReachedErrorBuilder maxDiscountGroupsReachedBuilder() {
+        return com.commercetools.api.models.error.MaxDiscountGroupsReachedErrorBuilder.of();
+    }
+
+    /**
      * builder for maxResourceLimitExceeded subtype
      * @return builder
      */
@@ -493,6 +565,14 @@ public interface ErrorObject {
      */
     public static com.commercetools.api.models.error.MaxStoreReferencesReachedErrorBuilder maxStoreReferencesReachedBuilder() {
         return com.commercetools.api.models.error.MaxStoreReferencesReachedErrorBuilder.of();
+    }
+
+    /**
+     * builder for missingDependency subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.MissingDependencyErrorBuilder missingDependencyBuilder() {
+        return com.commercetools.api.models.error.MissingDependencyErrorBuilder.of();
     }
 
     /**
@@ -616,6 +696,14 @@ public interface ErrorObject {
     }
 
     /**
+     * builder for recurringOrderFailure subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.RecurringOrderFailureErrorBuilder recurringOrderFailureBuilder() {
+        return com.commercetools.api.models.error.RecurringOrderFailureErrorBuilder.of();
+    }
+
+    /**
      * builder for referenceExists subtype
      * @return builder
      */
@@ -728,6 +816,14 @@ public interface ErrorObject {
     }
 
     /**
+     * builder for validityLockConflict subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.ValidityLockConflictErrorBuilder validityLockConflictBuilder() {
+        return com.commercetools.api.models.error.ValidityLockConflictErrorBuilder.of();
+    }
+
+    /**
      * accessor map function
      * @param <T> mapped type
      * @param helper function to map the object
@@ -741,8 +837,8 @@ public interface ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ErrorObject> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ErrorObject>() {
+    public static tools.jackson.core.type.TypeReference<ErrorObject> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ErrorObject>() {
             @Override
             public String toString() {
                 return "TypeReference<ErrorObject>";

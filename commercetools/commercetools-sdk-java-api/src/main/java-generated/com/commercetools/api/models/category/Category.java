@@ -16,12 +16,12 @@ import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * Category
@@ -108,7 +108,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     public LocalizedString getName();
 
     /**
-     *  <p>User-defined identifier used as a deep-link URL to the related Category per Locale. A Category can have the same slug for different Locales, but they are unique across the Project. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
+     *  <p>User-defined identifier used as a deep-link URL to the related Category per <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a>. A Category can have the same slug for different Locales, but they are unique across the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For <span>good performance</span>, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
      * @return slug
      */
     @NotNull
@@ -182,7 +182,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     public LocalizedString getMetaKeywords();
 
     /**
-     *  <p>Custom Fields for the Category.</p>
+     *  <p>Custom Fields of the Category.</p>
      * @return custom
      */
     @Valid
@@ -255,7 +255,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>User-defined identifier used as a deep-link URL to the related Category per Locale. A Category can have the same slug for different Locales, but they are unique across the Project. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
+     *  <p>User-defined identifier used as a deep-link URL to the related Category per <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a>. A Category can have the same slug for different Locales, but they are unique across the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For <span>good performance</span>, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
      * @param slug value to be set
      */
 
@@ -326,7 +326,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     public void setMetaKeywords(final LocalizedString metaKeywords);
 
     /**
-     *  <p>Custom Fields for the Category.</p>
+     *  <p>Custom Fields of the Category.</p>
      * @param custom value to be set
      */
 
@@ -473,8 +473,8 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Category> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Category>() {
+    public static tools.jackson.core.type.TypeReference<Category> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Category>() {
             @Override
             public String toString() {
                 return "TypeReference<Category>";

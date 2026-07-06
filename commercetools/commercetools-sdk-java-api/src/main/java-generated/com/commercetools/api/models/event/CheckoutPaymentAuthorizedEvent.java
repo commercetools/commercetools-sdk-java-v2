@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated when a payment is successfully authorized in Checkout. This event indicates the payment has been validated and the amount has been reserved but not yet charged.</p>
+ *  <p>Generated when a payment is successfully authorized in Checkout. This event indicates that the payment has been validated and the amount has been reserved but not yet charged.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -150,8 +150,8 @@ public interface CheckoutPaymentAuthorizedEvent extends Event {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CheckoutPaymentAuthorizedEvent> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CheckoutPaymentAuthorizedEvent>() {
+    public static tools.jackson.core.type.TypeReference<CheckoutPaymentAuthorizedEvent> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CheckoutPaymentAuthorizedEvent>() {
             @Override
             public String toString() {
                 return "TypeReference<CheckoutPaymentAuthorizedEvent>";

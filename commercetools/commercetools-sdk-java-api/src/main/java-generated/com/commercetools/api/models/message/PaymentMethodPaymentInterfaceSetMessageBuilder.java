@@ -188,7 +188,7 @@ public class PaymentMethodPaymentInterfaceSetMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -200,7 +200,7 @@ public class PaymentMethodPaymentInterfaceSetMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -262,7 +262,7 @@ public class PaymentMethodPaymentInterfaceSetMessageBuilder
     }
 
     /**
-     *  <p>Payment interface of the Payment Method after the Set PaymentInterface update action.</p>
+     *  <p>Payment interface of the Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetPaymentInterfaceAction" rel="nofollow">Set PaymentInterface</a> update action.</p>
      * @param paymentInterface value to be set
      * @return Builder
      */
@@ -273,7 +273,7 @@ public class PaymentMethodPaymentInterfaceSetMessageBuilder
     }
 
     /**
-     *  <p>Payment interface of the Payment Method before the Set PaymentInterface update action.</p>
+     *  <p>Payment interface of the Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetPaymentInterfaceAction" rel="nofollow">Set PaymentInterface</a> update action.</p>
      * @param oldPaymentInterface value to be set
      * @return Builder
      */
@@ -350,7 +350,7 @@ public class PaymentMethodPaymentInterfaceSetMessageBuilder
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -378,7 +378,7 @@ public class PaymentMethodPaymentInterfaceSetMessageBuilder
     }
 
     /**
-     *  <p>Payment interface of the Payment Method after the Set PaymentInterface update action.</p>
+     *  <p>Payment interface of the Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetPaymentInterfaceAction" rel="nofollow">Set PaymentInterface</a> update action.</p>
      * @return paymentInterface
      */
 
@@ -388,7 +388,7 @@ public class PaymentMethodPaymentInterfaceSetMessageBuilder
     }
 
     /**
-     *  <p>Payment interface of the Payment Method before the Set PaymentInterface update action.</p>
+     *  <p>Payment interface of the Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetPaymentInterfaceAction" rel="nofollow">Set PaymentInterface</a> update action.</p>
      * @return oldPaymentInterface
      */
 

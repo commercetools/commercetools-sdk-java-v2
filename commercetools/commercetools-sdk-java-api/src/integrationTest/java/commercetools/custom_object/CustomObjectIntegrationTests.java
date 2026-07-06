@@ -9,9 +9,6 @@ import java.util.Map;
 
 import com.commercetools.api.models.custom_object.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JavaType;
-import com.fasterxml.jackson.databind.type.TypeFactory;
 import commercetools.utils.CommercetoolsTestUtils;
 import commercetools.utils.ValueObject;
 
@@ -19,6 +16,10 @@ import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import tools.jackson.core.type.TypeReference;
+import tools.jackson.databind.JavaType;
+import tools.jackson.databind.type.TypeFactory;
 
 public class CustomObjectIntegrationTests {
 
@@ -117,7 +118,7 @@ public class CustomObjectIntegrationTests {
             Assertions.assertEquals(typeRefCustomObject.getValue().getBars().get(1).getName(), "Winchester");
             Assertions.assertEquals(typeRefCustomObject.getValue().getBars().get(1).getNumber(), 2);
 
-            JavaType javaType = TypeFactory.defaultInstance()
+            JavaType javaType = TypeFactory.createDefaultInstance()
                     .constructParametricType(GenericCustomObject.class, Foo.class);
             GenericCustomObject<Foo> javaTypeCustomObject = (GenericCustomObject<Foo>) CommercetoolsTestUtils
                     .getProjectApiRoot()

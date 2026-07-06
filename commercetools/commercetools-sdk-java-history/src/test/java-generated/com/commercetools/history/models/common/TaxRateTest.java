@@ -19,8 +19,9 @@ public class TaxRateTest {
 
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { "id", TaxRate.builder().id("id") },
+                new Object[] { "key", TaxRate.builder().key("key") },
                 new Object[] { "name", TaxRate.builder().name("name") },
-                new Object[] { "amount", TaxRate.builder().amount(3) },
+                new Object[] { "amount", TaxRate.builder().amount(0.43789625) },
                 new Object[] { "includedInPrice", TaxRate.builder().includedInPrice(true) },
                 new Object[] { "country", TaxRate.builder().country("country") },
                 new Object[] { "state", TaxRate.builder().state("state") },
@@ -37,6 +38,13 @@ public class TaxRateTest {
     }
 
     @Test
+    public void key() {
+        TaxRate value = TaxRate.of();
+        value.setKey("key");
+        Assertions.assertThat(value.getKey()).isEqualTo("key");
+    }
+
+    @Test
     public void name() {
         TaxRate value = TaxRate.of();
         value.setName("name");
@@ -46,8 +54,8 @@ public class TaxRateTest {
     @Test
     public void amount() {
         TaxRate value = TaxRate.of();
-        value.setAmount(3);
-        Assertions.assertThat(value.getAmount()).isEqualTo(3);
+        value.setAmount(0.43789625);
+        Assertions.assertThat(value.getAmount()).isEqualTo(0.43789625);
     }
 
     @Test

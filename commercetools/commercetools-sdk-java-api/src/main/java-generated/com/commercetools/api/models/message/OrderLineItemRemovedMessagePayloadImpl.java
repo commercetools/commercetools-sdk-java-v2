@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Remove LineItem update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">Remove LineItem</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemovedMessagePayload, ModelBase {
@@ -83,7 +84,7 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
     }
 
     /**
-     *  <p>Unique identifier of the Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a>.</p>
      */
 
     public String getLineItemId() {
@@ -91,7 +92,7 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
     }
 
     /**
-     *  <p>User-defined unique identifier of the LineItem.</p>
+     *  <p>User-defined identifier of the LineItem. Unique among LineItems in the Order.</p>
      */
 
     public String getLineItemKey() {
@@ -99,7 +100,7 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
     }
 
     /**
-     *  <p>Quantity of Line Items that were removed during the Remove LineItem update action.</p>
+     *  <p>Quantity of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Items</a> that were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">Remove LineItem</a> update action.</p>
      */
 
     public Long getRemovedQuantity() {
@@ -107,7 +108,7 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
     }
 
     /**
-     *  <p>Line Item quantity after the Remove LineItem update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> quantity after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">Remove LineItem</a> update action.</p>
      */
 
     public Long getNewQuantity() {
@@ -115,7 +116,7 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
     }
 
     /**
-     *  <p>ItemStates after the Remove LineItem update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ItemState" rel="nofollow">ItemStates</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">Remove LineItem</a> update action.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.ItemState> getNewState() {
@@ -123,7 +124,7 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
     }
 
     /**
-     *  <p><code>totalPrice</code> of the Order after the Remove LineItem update action.</p>
+     *  <p><code>totalPrice</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">Remove LineItem</a> update action.</p>
      */
 
     public com.commercetools.api.models.common.CentPrecisionMoney getNewTotalPrice() {
@@ -131,7 +132,7 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
     }
 
     /**
-     *  <p>TaxedItemPrice of the Order after the Remove LineItem update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedItemPrice" rel="nofollow">TaxedItemPrice</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">Remove LineItem</a> update action.</p>
      */
 
     public com.commercetools.api.models.cart.TaxedItemPrice getNewTaxedPrice() {
@@ -139,7 +140,7 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
     }
 
     /**
-     *  <p>Price of the Order after the Remove LineItem update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">Remove LineItem</a> update action.</p>
      */
 
     public com.commercetools.api.models.common.Price getNewPrice() {
@@ -147,7 +148,7 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
     }
 
     /**
-     *  <p>Shipping Details of the Order after the Remove LineItem update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ItemShippingDetails" rel="nofollow">Shipping Details</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">Remove LineItem</a> update action.</p>
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetails getNewShippingDetail() {

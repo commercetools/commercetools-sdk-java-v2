@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful recalculation of a Discount on a Line Item.</p>
+ *  <p>Generated after a successful recalculation of a Discount on a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscountSetMessage, ModelBase {
@@ -158,7 +159,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -174,7 +175,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -190,7 +191,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
     }
 
     /**
-     *  <p>Unique identifier for the Line Item.</p>
+     *  <p>Unique identifier for the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a>.</p>
      */
 
     public String getLineItemId() {
@@ -198,7 +199,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
     }
 
     /**
-     *  <p>User-defined unique identifier of the LineItem.</p>
+     *  <p>User-defined identifier of the LineItem. Unique among LineItems in the Order.</p>
      */
 
     public String getLineItemKey() {
@@ -206,7 +207,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
     }
 
     /**
-     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     *  <p>Array of <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedLineItemPriceForQuantity" rel="nofollow">DiscountedLineItemPriceForQuantity</a> after the Discount recalculation.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity() {
@@ -214,7 +215,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
     }
 
     /**
-     *  <p>Total Price of the Line Item after the Discount recalculation.</p>
+     *  <p>Total Price of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> after the Discount recalculation.</p>
      */
 
     public com.commercetools.api.models.common.CentPrecisionMoney getTotalPrice() {
@@ -222,7 +223,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
     }
 
     /**
-     *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedItemPrice" rel="nofollow">TaxedItemPrice</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a> after the Discount recalculation.</p>
      */
 
     public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice() {
@@ -230,7 +231,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
     }
 
     /**
-     *  <p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p>
+     *  <p>Total taxed prices based on the quantity of Line Item assigned to each <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">Shipping Method</a>. Only applicable for Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set after <code>perMethodTaxRate</code> is set.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> getTaxedPricePortions() {

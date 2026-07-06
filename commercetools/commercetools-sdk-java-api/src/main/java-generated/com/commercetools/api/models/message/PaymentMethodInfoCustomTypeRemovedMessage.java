@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after removing Custom Fields from a PaymentMethodInfo using the Set MethodInfo Custom Type update action on Payments and the Set MethodInfo Custom Type update action on My Payments.</p>
+ *  <p>Generated after removing Custom Fields from a PaymentMethodInfo using the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoCustomTypeAction" rel="nofollow">Set MethodInfo Custom Type</a> update action on Payments and the <a href="https://docs.commercetools.com/apis/ctp:api:type:MyPaymentSetMethodInfoCustomTypeAction" rel="nofollow">Set MethodInfo Custom Type</a> update action on My Payments.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -42,7 +43,7 @@ public interface PaymentMethodInfoCustomTypeRemovedMessage extends Message {
     String PAYMENT_METHOD_INFO_CUSTOM_TYPE_REMOVED = "PaymentMethodInfoCustomTypeRemoved";
 
     /**
-     *  <p><code>id</code> of the Type that was removed. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that was removed. Absent if there was no previous Custom Type present.</p>
      * @return oldTypeId
      */
 
@@ -50,7 +51,7 @@ public interface PaymentMethodInfoCustomTypeRemovedMessage extends Message {
     public String getOldTypeId();
 
     /**
-     *  <p><code>id</code> of the Type that was removed. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that was removed. Absent if there was no previous Custom Type present.</p>
      * @param oldTypeId value to be set
      */
 
@@ -149,8 +150,8 @@ public interface PaymentMethodInfoCustomTypeRemovedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentMethodInfoCustomTypeRemovedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentMethodInfoCustomTypeRemovedMessage>() {
+    public static tools.jackson.core.type.TypeReference<PaymentMethodInfoCustomTypeRemovedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentMethodInfoCustomTypeRemovedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentMethodInfoCustomTypeRemovedMessage>";

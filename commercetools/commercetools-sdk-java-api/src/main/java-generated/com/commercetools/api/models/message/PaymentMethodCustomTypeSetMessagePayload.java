@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after adding a Custom Type to a Payment Method using the Set Custom Type update action.</p>
+ *  <p>Generated after adding a Custom Type to a Payment Method using the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetCustomTypeAction" rel="nofollow">Set Custom Type</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -49,7 +49,7 @@ public interface PaymentMethodCustomTypeSetMessagePayload extends MessagePayload
     public CustomFields getCustomFields();
 
     /**
-     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the previous <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a>. Absent if there was no previous Custom Type present.</p>
      * @return oldTypeId
      */
 
@@ -64,7 +64,7 @@ public interface PaymentMethodCustomTypeSetMessagePayload extends MessagePayload
     public void setCustomFields(final CustomFields customFields);
 
     /**
-     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the previous <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a>. Absent if there was no previous Custom Type present.</p>
      * @param oldTypeId value to be set
      */
 
@@ -142,8 +142,8 @@ public interface PaymentMethodCustomTypeSetMessagePayload extends MessagePayload
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentMethodCustomTypeSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentMethodCustomTypeSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<PaymentMethodCustomTypeSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentMethodCustomTypeSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentMethodCustomTypeSetMessagePayload>";

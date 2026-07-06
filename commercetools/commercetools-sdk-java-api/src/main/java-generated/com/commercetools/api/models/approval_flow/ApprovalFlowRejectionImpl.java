@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ApprovalFlowRejection
@@ -48,7 +49,7 @@ public class ApprovalFlowRejectionImpl implements ApprovalFlowRejection, ModelBa
     }
 
     /**
-     *  <p>Associate who rejected the Approval Flow.</p>
+     *  <p>Associate who rejected the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      */
 
     public com.commercetools.api.models.business_unit.Associate getRejecter() {
@@ -56,7 +57,7 @@ public class ApprovalFlowRejectionImpl implements ApprovalFlowRejection, ModelBa
     }
 
     /**
-     *  <p>Date and time (UTC) the Approval Flow was rejected.</p>
+     *  <p>Date and time (UTC) the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> was rejected.</p>
      */
 
     public java.time.ZonedDateTime getRejectedAt() {
@@ -64,7 +65,7 @@ public class ApprovalFlowRejectionImpl implements ApprovalFlowRejection, ModelBa
     }
 
     /**
-     *  <p>The reason for the rejection of the Approval Flow.</p>
+     *  <p>The reason for the rejection of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      */
 
     public String getReason() {

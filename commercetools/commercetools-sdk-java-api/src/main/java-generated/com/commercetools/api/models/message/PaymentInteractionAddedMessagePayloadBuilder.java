@@ -25,7 +25,7 @@ public class PaymentInteractionAddedMessagePayloadBuilder implements Builder<Pay
     private com.commercetools.api.models.type.CustomFields interaction;
 
     /**
-     *  <p>The interface interaction that was added to the Payment.</p>
+     *  <p>The interface interaction that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a>.</p>
      * @param builder function to build the interaction value
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class PaymentInteractionAddedMessagePayloadBuilder implements Builder<Pay
     }
 
     /**
-     *  <p>The interface interaction that was added to the Payment.</p>
+     *  <p>The interface interaction that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a>.</p>
      * @param builder function to build the interaction value
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class PaymentInteractionAddedMessagePayloadBuilder implements Builder<Pay
     }
 
     /**
-     *  <p>The interface interaction that was added to the Payment.</p>
+     *  <p>The interface interaction that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a>.</p>
      * @param interaction value to be set
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class PaymentInteractionAddedMessagePayloadBuilder implements Builder<Pay
     }
 
     /**
-     *  <p>The interface interaction that was added to the Payment.</p>
+     *  <p>The interface interaction that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a>.</p>
      * @return interaction
      */
 

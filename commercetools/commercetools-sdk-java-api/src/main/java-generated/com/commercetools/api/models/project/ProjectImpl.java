@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * Project
@@ -52,6 +53,12 @@ public class ProjectImpl implements Project, ModelBase {
 
     private com.commercetools.api.models.project.BusinessUnitConfiguration businessUnits;
 
+    private com.commercetools.api.models.project.InventoryConfiguration inventory;
+
+    private com.commercetools.api.models.project.DiscountsConfiguration discounts;
+
+    private com.commercetools.api.models.project.ProductCatalogModel productCatalogModel;
+
     /**
      * create instance with all properties
      */
@@ -68,7 +75,10 @@ public class ProjectImpl implements Project, ModelBase {
             @JsonProperty("shippingRateInputType") final com.commercetools.api.models.project.ShippingRateInputType shippingRateInputType,
             @JsonProperty("externalOAuth") final com.commercetools.api.models.project.ExternalOAuth externalOAuth,
             @JsonProperty("searchIndexing") final com.commercetools.api.models.project.SearchIndexingConfiguration searchIndexing,
-            @JsonProperty("businessUnits") final com.commercetools.api.models.project.BusinessUnitConfiguration businessUnits) {
+            @JsonProperty("businessUnits") final com.commercetools.api.models.project.BusinessUnitConfiguration businessUnits,
+            @JsonProperty("inventory") final com.commercetools.api.models.project.InventoryConfiguration inventory,
+            @JsonProperty("discounts") final com.commercetools.api.models.project.DiscountsConfiguration discounts,
+            @JsonProperty("productCatalogModel") final com.commercetools.api.models.project.ProductCatalogModel productCatalogModel) {
         this.version = version;
         this.key = key;
         this.name = name;
@@ -84,6 +94,9 @@ public class ProjectImpl implements Project, ModelBase {
         this.externalOAuth = externalOAuth;
         this.searchIndexing = searchIndexing;
         this.businessUnits = businessUnits;
+        this.inventory = inventory;
+        this.discounts = discounts;
+        this.productCatalogModel = productCatalogModel;
     }
 
     /**
@@ -157,7 +170,7 @@ public class ProjectImpl implements Project, ModelBase {
     }
 
     /**
-     *  <p>Holds the configuration for the Messages Query feature.</p>
+     *  <p>Holds the configuration for the <span>Messages Query</span> feature.</p>
      */
 
     public com.commercetools.api.models.message.MessagesConfiguration getMessages() {
@@ -165,7 +178,7 @@ public class ProjectImpl implements Project, ModelBase {
     }
 
     /**
-     *  <p>Holds the configuration for the Carts feature.</p>
+     *  <p>Holds the configuration for the <span>Carts</span> feature.</p>
      */
 
     public com.commercetools.api.models.project.CartsConfiguration getCarts() {
@@ -173,7 +186,7 @@ public class ProjectImpl implements Project, ModelBase {
     }
 
     /**
-     *  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>
+     *  <p>Holds the configuration for the <span>Shopping Lists</span> feature.</p>
      */
 
     public com.commercetools.api.models.project.ShoppingListsConfiguration getShoppingLists() {
@@ -181,7 +194,7 @@ public class ProjectImpl implements Project, ModelBase {
     }
 
     /**
-     *  <p>Holds the configuration for the tiered shipping rates feature.</p>
+     *  <p>Holds the configuration for the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">tiered shipping rates</a> feature.</p>
      */
 
     public com.commercetools.api.models.project.ShippingRateInputType getShippingRateInputType() {
@@ -189,7 +202,7 @@ public class ProjectImpl implements Project, ModelBase {
     }
 
     /**
-     *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
+     *  <p>Represents a RFC 7662 compliant <span>OAuth 2.0 Token Introspection</span> endpoint.</p>
      */
 
     public com.commercetools.api.models.project.ExternalOAuth getExternalOAuth() {
@@ -205,11 +218,35 @@ public class ProjectImpl implements Project, ModelBase {
     }
 
     /**
-     *  <p>Holds configuration specific to Business Units.</p>
+     *  <p>Holds configuration specific to <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Units</a>.</p>
      */
 
     public com.commercetools.api.models.project.BusinessUnitConfiguration getBusinessUnits() {
         return this.businessUnits;
+    }
+
+    /**
+     *  <p>Holds configuration specific to inventory.</p>
+     */
+
+    public com.commercetools.api.models.project.InventoryConfiguration getInventory() {
+        return this.inventory;
+    }
+
+    /**
+     *  <p>Holds configuration specific to discounts, including how Product and Cart Discounts are combined in every Cart of the Project.</p>
+     */
+
+    public com.commercetools.api.models.project.DiscountsConfiguration getDiscounts() {
+        return this.discounts;
+    }
+
+    /**
+     *  <p>Determines how Product Variants are managed in the Project. If not set, defaults to <code>Classic</code> behavior.</p>
+     */
+
+    public com.commercetools.api.models.project.ProductCatalogModel getProductCatalogModel() {
+        return this.productCatalogModel;
     }
 
     public void setVersion(final Long version) {
@@ -286,6 +323,19 @@ public class ProjectImpl implements Project, ModelBase {
         this.businessUnits = businessUnits;
     }
 
+    public void setInventory(final com.commercetools.api.models.project.InventoryConfiguration inventory) {
+        this.inventory = inventory;
+    }
+
+    public void setDiscounts(final com.commercetools.api.models.project.DiscountsConfiguration discounts) {
+        this.discounts = discounts;
+    }
+
+    public void setProductCatalogModel(
+            final com.commercetools.api.models.project.ProductCatalogModel productCatalogModel) {
+        this.productCatalogModel = productCatalogModel;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -311,6 +361,9 @@ public class ProjectImpl implements Project, ModelBase {
                 .append(externalOAuth, that.externalOAuth)
                 .append(searchIndexing, that.searchIndexing)
                 .append(businessUnits, that.businessUnits)
+                .append(inventory, that.inventory)
+                .append(discounts, that.discounts)
+                .append(productCatalogModel, that.productCatalogModel)
                 .append(version, that.version)
                 .append(key, that.key)
                 .append(name, that.name)
@@ -326,6 +379,9 @@ public class ProjectImpl implements Project, ModelBase {
                 .append(externalOAuth, that.externalOAuth)
                 .append(searchIndexing, that.searchIndexing)
                 .append(businessUnits, that.businessUnits)
+                .append(inventory, that.inventory)
+                .append(discounts, that.discounts)
+                .append(productCatalogModel, that.productCatalogModel)
                 .isEquals();
     }
 
@@ -346,6 +402,9 @@ public class ProjectImpl implements Project, ModelBase {
                 .append(externalOAuth)
                 .append(searchIndexing)
                 .append(businessUnits)
+                .append(inventory)
+                .append(discounts)
+                .append(productCatalogModel)
                 .toHashCode();
     }
 
@@ -366,6 +425,9 @@ public class ProjectImpl implements Project, ModelBase {
                 .append("externalOAuth", externalOAuth)
                 .append("searchIndexing", searchIndexing)
                 .append("businessUnits", businessUnits)
+                .append("inventory", inventory)
+                .append("discounts", discounts)
+                .append("productCatalogModel", productCatalogModel)
                 .build();
     }
 

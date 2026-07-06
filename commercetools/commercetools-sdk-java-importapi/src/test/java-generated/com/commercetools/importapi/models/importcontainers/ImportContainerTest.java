@@ -22,7 +22,7 @@ public class ImportContainerTest {
                 new Object[] { "resourceType",
                         ImportContainer.builder()
                                 .resourceType(com.commercetools.importapi.models.common.ImportResourceType
-                                        .findEnum("category")) },
+                                        .findEnum("business-unit")) },
                 new Object[] { "version", ImportContainer.builder().version(2L) },
                 new Object[] { "retentionPolicy",
                         ImportContainer.builder()
@@ -46,9 +46,9 @@ public class ImportContainerTest {
     @Test
     public void resourceType() {
         ImportContainer value = ImportContainer.of();
-        value.setResourceType(com.commercetools.importapi.models.common.ImportResourceType.findEnum("category"));
+        value.setResourceType(com.commercetools.importapi.models.common.ImportResourceType.findEnum("business-unit"));
         Assertions.assertThat(value.getResourceType())
-                .isEqualTo(com.commercetools.importapi.models.common.ImportResourceType.findEnum("category"));
+                .isEqualTo(com.commercetools.importapi.models.common.ImportResourceType.findEnum("business-unit"));
     }
 
     @Test

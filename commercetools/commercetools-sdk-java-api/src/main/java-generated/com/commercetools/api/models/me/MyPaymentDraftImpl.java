@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * MyPaymentDraft
@@ -51,7 +52,7 @@ public class MyPaymentDraftImpl implements MyPaymentDraft, ModelBase {
     }
 
     /**
-     *  <p>Money value the Payment intends to receive from the customer. The value usually matches the Cart or Order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value usually matches the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> gross total.</p>
      */
 
     public com.commercetools.api.models.common.Money getAmountPlanned() {
@@ -75,7 +76,7 @@ public class MyPaymentDraftImpl implements MyPaymentDraft, ModelBase {
     }
 
     /**
-     *  <p>Financial transactions of the TransactionTypes <code>Authorization</code> or <code>Charge</code>.</p>
+     *  <p>Financial transactions of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionTypes</a> <code>Authorization</code> or <code>Charge</code>.</p>
      */
 
     public com.commercetools.api.models.me.MyTransactionDraft getTransaction() {

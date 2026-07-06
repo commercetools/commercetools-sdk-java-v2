@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShippingMethod
@@ -57,6 +58,8 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
 
     private com.commercetools.api.models.type.CustomFields custom;
 
+    private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
+
     /**
      * create instance with all properties
      */
@@ -74,7 +77,8 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
             @JsonProperty("zoneRates") final java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> zoneRates,
             @JsonProperty("active") final Boolean active, @JsonProperty("isDefault") final Boolean isDefault,
             @JsonProperty("predicate") final String predicate,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
+            @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -92,6 +96,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
         this.isDefault = isDefault;
         this.predicate = predicate;
         this.custom = custom;
+        this.stores = stores;
     }
 
     /**
@@ -157,7 +162,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     *  <p>Unique name of the ShippingMethod within a Project.</p>
+     *  <p>Unique name of the ShippingMethod within a <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      */
 
     public String getName() {
@@ -189,7 +194,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     *  <p>TaxCategory of all ZoneRates of the ShippingMethod.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> of all ZoneRates of the ShippingMethod.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory() {
@@ -197,7 +202,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     *  <p>Defines ShippingRates (prices) for specific Zones.</p>
+     *  <p>Defines <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRates</a> (prices) for specific Zones.</p>
      */
 
     public java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> getZoneRates() {
@@ -214,7 +219,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     *  <p>If <code>true</code>, this ShippingMethod is the Project's default ShippingMethod. When retrieving matching Shipping Methods, it is returned as the first item in the array. This flag does not automatically apply the Shipping Method to Carts.</p>
+     *  <p>If <code>true</code>, this ShippingMethod is the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>'s default ShippingMethod. When retrieving <span>matching Shipping Methods</span>, it is returned as the first item in the array. This flag does not automatically apply the Shipping Method to Carts.</p>
      */
 
     public Boolean getIsDefault() {
@@ -222,7 +227,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     *  <p>Valid Cart predicate to select a ShippingMethod for a Cart.</p>
+     *  <p>Valid <span>Cart predicate</span> to select a ShippingMethod for a Cart.</p>
      */
 
     public String getPredicate() {
@@ -235,6 +240,17 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
+    }
+
+    /**
+     *  <ul>
+     *   <li>If a value exists, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If empty, the Shipping Method applies to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
+     *  </ul>
+     */
+
+    public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {
+        return this.stores;
     }
 
     public void setId(final String id) {
@@ -311,6 +327,14 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
         this.custom = custom;
     }
 
+    public void setStores(final com.commercetools.api.models.store.StoreKeyReference... stores) {
+        this.stores = new ArrayList<>(Arrays.asList(stores));
+    }
+
+    public void setStores(final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores) {
+        this.stores = stores;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -338,6 +362,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
                 .append(isDefault, that.isDefault)
                 .append(predicate, that.predicate)
                 .append(custom, that.custom)
+                .append(stores, that.stores)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -355,6 +380,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
                 .append(isDefault, that.isDefault)
                 .append(predicate, that.predicate)
                 .append(custom, that.custom)
+                .append(stores, that.stores)
                 .isEquals();
     }
 
@@ -377,6 +403,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
                 .append(isDefault)
                 .append(predicate)
                 .append(custom)
+                .append(stores)
                 .toHashCode();
     }
 
@@ -399,6 +426,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
                 .append("isDefault", isDefault)
                 .append("predicate", predicate)
                 .append("custom", custom)
+                .append("stores", stores)
                 .build();
     }
 

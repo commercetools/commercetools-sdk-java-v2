@@ -30,7 +30,7 @@ public class BusinessUnitReferenceBuilder implements Builder<BusinessUnitReferen
     private com.commercetools.api.models.business_unit.BusinessUnit obj;
 
     /**
-     *  <p>Unique identifier of the referenced BusinessUnit.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class BusinessUnitReferenceBuilder implements Builder<BusinessUnitReferen
     }
 
     /**
-     *  <p>Contains the representation of the expanded BusinessUnit. Only present in responses to requests with Reference Expansion for BusinessUnit.</p>
+     *  <p>Contains the representation of the expanded BusinessUnit. Only present in responses to requests with <span>Reference Expansion</span> for BusinessUnit.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class BusinessUnitReferenceBuilder implements Builder<BusinessUnitReferen
     }
 
     /**
-     *  <p>Contains the representation of the expanded BusinessUnit. Only present in responses to requests with Reference Expansion for BusinessUnit.</p>
+     *  <p>Contains the representation of the expanded BusinessUnit. Only present in responses to requests with <span>Reference Expansion</span> for BusinessUnit.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class BusinessUnitReferenceBuilder implements Builder<BusinessUnitReferen
     }
 
     /**
-     *  <p>Unique identifier of the referenced BusinessUnit.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>.</p>
      * @return id
      */
 
@@ -74,7 +74,7 @@ public class BusinessUnitReferenceBuilder implements Builder<BusinessUnitReferen
     }
 
     /**
-     *  <p>Contains the representation of the expanded BusinessUnit. Only present in responses to requests with Reference Expansion for BusinessUnit.</p>
+     *  <p>Contains the representation of the expanded BusinessUnit. Only present in responses to requests with <span>Reference Expansion</span> for BusinessUnit.</p>
      * @return obj
      */
 

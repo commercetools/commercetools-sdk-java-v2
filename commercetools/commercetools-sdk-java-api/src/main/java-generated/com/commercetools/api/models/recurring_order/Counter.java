@@ -9,14 +9,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Configuration to track skips for a RecurringOrder.</p>
+ *  <p>Configuration to track skips for a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,7 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@io.vrap.rmf.base.client.utils.json.SubType("counter")
+@io.vrap.rmf.base.client.utils.json.SubType("Counter")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CounterImpl.class)
 public interface Counter extends SkipConfiguration {
@@ -37,7 +37,7 @@ public interface Counter extends SkipConfiguration {
     /**
      * discriminator value for Counter
      */
-    String COUNTER = "counter";
+    String COUNTER = "Counter";
 
     /**
      *  <p>Number of Orders that will be skipped.</p>
@@ -155,8 +155,8 @@ public interface Counter extends SkipConfiguration {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Counter> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Counter>() {
+    public static tools.jackson.core.type.TypeReference<Counter> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Counter>() {
             @Override
             public String toString() {
                 return "TypeReference<Counter>";

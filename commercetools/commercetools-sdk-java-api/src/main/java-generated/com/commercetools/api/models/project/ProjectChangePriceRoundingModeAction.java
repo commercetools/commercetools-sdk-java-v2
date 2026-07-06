@@ -9,11 +9,11 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.cart.RoundingMode;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProjectChangePriceRoundingModeAction
@@ -39,7 +39,7 @@ public interface ProjectChangePriceRoundingModeAction extends ProjectUpdateActio
     String CHANGE_PRICE_ROUNDING_MODE = "changePriceRoundingMode";
 
     /**
-     *  <p>Project-level default rounding mode for calculating the total prices on LineItems and CustomLineItems. See CartsConfiguration.</p>
+     *  <p>Project-level default rounding mode for calculating the total prices on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>. See <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">CartsConfiguration</a>.</p>
      * @return priceRoundingMode
      */
     @NotNull
@@ -47,7 +47,7 @@ public interface ProjectChangePriceRoundingModeAction extends ProjectUpdateActio
     public RoundingMode getPriceRoundingMode();
 
     /**
-     *  <p>Project-level default rounding mode for calculating the total prices on LineItems and CustomLineItems. See CartsConfiguration.</p>
+     *  <p>Project-level default rounding mode for calculating the total prices on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>. See <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">CartsConfiguration</a>.</p>
      * @param priceRoundingMode value to be set
      */
 
@@ -122,8 +122,8 @@ public interface ProjectChangePriceRoundingModeAction extends ProjectUpdateActio
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangePriceRoundingModeAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangePriceRoundingModeAction>() {
+    public static tools.jackson.core.type.TypeReference<ProjectChangePriceRoundingModeAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProjectChangePriceRoundingModeAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProjectChangePriceRoundingModeAction>";

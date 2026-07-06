@@ -187,7 +187,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -198,7 +198,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -260,7 +260,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
     }
 
     /**
-     *  <p>Delivery that was added to the Order. The Delivery in the Message body does not contain Parcels if those were part of the initial Add Delivery update action. In that case, the update action produces an additional Parcel Added To Delivery Message containing information about the Parcels.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>. The <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> in the Message body does not contain <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcels</a> if those were part of the initial <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderAddDeliveryAction" rel="nofollow">Add Delivery</a> update action. In that case, the update action produces an additional <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelAddedToDeliveryMessage" rel="nofollow">Parcel Added To Delivery</a> Message containing information about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcels</a>.</p>
      * @param builder function to build the delivery value
      * @return Builder
      */
@@ -272,7 +272,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
     }
 
     /**
-     *  <p>Delivery that was added to the Order. The Delivery in the Message body does not contain Parcels if those were part of the initial Add Delivery update action. In that case, the update action produces an additional Parcel Added To Delivery Message containing information about the Parcels.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>. The <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> in the Message body does not contain <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcels</a> if those were part of the initial <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderAddDeliveryAction" rel="nofollow">Add Delivery</a> update action. In that case, the update action produces an additional <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelAddedToDeliveryMessage" rel="nofollow">Parcel Added To Delivery</a> Message containing information about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcels</a>.</p>
      * @param builder function to build the delivery value
      * @return Builder
      */
@@ -284,7 +284,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
     }
 
     /**
-     *  <p>Delivery that was added to the Order. The Delivery in the Message body does not contain Parcels if those were part of the initial Add Delivery update action. In that case, the update action produces an additional Parcel Added To Delivery Message containing information about the Parcels.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>. The <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> in the Message body does not contain <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcels</a> if those were part of the initial <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderAddDeliveryAction" rel="nofollow">Add Delivery</a> update action. In that case, the update action produces an additional <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelAddedToDeliveryMessage" rel="nofollow">Parcel Added To Delivery</a> Message containing information about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcels</a>.</p>
      * @param delivery value to be set
      * @return Builder
      */
@@ -295,7 +295,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingKey value to be set
      * @return Builder
      */
@@ -371,7 +371,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -399,7 +399,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
     }
 
     /**
-     *  <p>Delivery that was added to the Order. The Delivery in the Message body does not contain Parcels if those were part of the initial Add Delivery update action. In that case, the update action produces an additional Parcel Added To Delivery Message containing information about the Parcels.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>. The <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a> in the Message body does not contain <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcels</a> if those were part of the initial <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderAddDeliveryAction" rel="nofollow">Add Delivery</a> update action. In that case, the update action produces an additional <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelAddedToDeliveryMessage" rel="nofollow">Parcel Added To Delivery</a> Message containing information about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcels</a>.</p>
      * @return delivery
      */
 
@@ -408,7 +408,7 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shippingKey
      */
 

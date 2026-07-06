@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Following this update the Products are reindexed asynchronously to reflect this change on the search endpoint. When enabling search on an existing Attribute type definition, the constraint regarding the maximum size of a searchable Attribute will not be enforced. Instead, AttributeDefinitions exceeding this limit will be treated as not searchable and will not be available for full-text search.</p>
+ *  <p>Following this update the Products are reindexed asynchronously to reflect this change on the search endpoint. When enabling search on an existing Attribute type definition, the constraint regarding the maximum size of a searchable Attribute will not be enforced. Instead, AttributeDefinitions exceeding this limit will be treated as not searchable and will not be available for full-text search. To use the Attribute in search, filters, or facets, set <code>isSearchable</code> to <code>true</code> for all AttributeDefinitions with the same <code>name</code> across different ProductTypes. If the <code>isSearchable</code> values are different, the Attribute isn't available for search, filters, or facets.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface ProductTypeChangeIsSearchableAction extends ProductTypeUpdateAc
     public String getAttributeName();
 
     /**
-     *  <p>Determines whether the Attribute's values can be used in full-text search queries, filters, and facets. See AttributeDefinition for details.</p>
+     *  <p>Determines whether the Attribute's values can be used in full-text search queries, filters, and facets. See <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> for details.</p>
      * @return isSearchable
      */
     @NotNull
@@ -62,7 +62,7 @@ public interface ProductTypeChangeIsSearchableAction extends ProductTypeUpdateAc
     public void setAttributeName(final String attributeName);
 
     /**
-     *  <p>Determines whether the Attribute's values can be used in full-text search queries, filters, and facets. See AttributeDefinition for details.</p>
+     *  <p>Determines whether the Attribute's values can be used in full-text search queries, filters, and facets. See <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> for details.</p>
      * @param isSearchable value to be set
      */
 
@@ -139,8 +139,8 @@ public interface ProductTypeChangeIsSearchableAction extends ProductTypeUpdateAc
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangeIsSearchableAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangeIsSearchableAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductTypeChangeIsSearchableAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductTypeChangeIsSearchableAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductTypeChangeIsSearchableAction>";

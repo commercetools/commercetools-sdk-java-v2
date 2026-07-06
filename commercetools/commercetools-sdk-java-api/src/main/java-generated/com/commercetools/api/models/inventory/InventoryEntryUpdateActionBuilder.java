@@ -43,8 +43,20 @@ public class InventoryEntryUpdateActionBuilder {
         return com.commercetools.api.models.inventory.InventoryEntrySetKeyActionBuilder.of();
     }
 
+    public com.commercetools.api.models.inventory.InventoryEntrySetReorderPointActionBuilder setReorderPointBuilder() {
+        return com.commercetools.api.models.inventory.InventoryEntrySetReorderPointActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.inventory.InventoryEntrySetReservationExpirationInMinutesActionBuilder setReservationExpirationInMinutesBuilder() {
+        return com.commercetools.api.models.inventory.InventoryEntrySetReservationExpirationInMinutesActionBuilder.of();
+    }
+
     public com.commercetools.api.models.inventory.InventoryEntrySetRestockableInDaysActionBuilder setRestockableInDaysBuilder() {
         return com.commercetools.api.models.inventory.InventoryEntrySetRestockableInDaysActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.inventory.InventoryEntrySetSafetyStockActionBuilder setSafetyStockBuilder() {
+        return com.commercetools.api.models.inventory.InventoryEntrySetSafetyStockActionBuilder.of();
     }
 
     public com.commercetools.api.models.inventory.InventoryEntrySetSupplyChannelActionBuilder setSupplyChannelBuilder() {

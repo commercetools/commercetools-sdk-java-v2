@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+ *  <p>A geographical location representing a country and optionally a state within this country. A location can only be assigned to one Zone.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LocationImpl implements Location, ModelBase {
@@ -42,7 +43,7 @@ public class LocationImpl implements Location, ModelBase {
     }
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Country code of the geographic location.</p>
      */
 
     public String getCountry() {
@@ -50,7 +51,7 @@ public class LocationImpl implements Location, ModelBase {
     }
 
     /**
-     *
+     *  <p>State within the country.</p>
      */
 
     public String getState() {

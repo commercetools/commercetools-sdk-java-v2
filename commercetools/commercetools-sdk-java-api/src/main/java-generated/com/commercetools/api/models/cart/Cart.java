@@ -20,13 +20,14 @@ import com.commercetools.api.models.customer_group.CustomerGroupReference;
 import com.commercetools.api.models.order.PaymentInfo;
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.type.CustomFields;
+import com.commercetools.api.models.warning.WarningObject;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * Cart
@@ -92,7 +93,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public String getKey();
 
     /**
-     *  <p><code>id</code> of the Customer that the Cart belongs to.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that the Cart belongs to.</p>
      * @return customerId
      */
 
@@ -108,7 +109,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public String getCustomerEmail();
 
     /**
-     *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for Line Item price selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Customer Group of the Customer that the Cart belongs to. Used for <span>Line Item price selection</span>.</p>
      * @return customerGroup
      */
     @Valid
@@ -116,7 +117,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public CustomerGroupReference getCustomerGroup();
 
     /**
-     *  <p>Anonymous session associated with the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">Anonymous session</a> associated with the Cart.</p>
      * @return anonymousId
      */
 
@@ -124,7 +125,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public String getAnonymousId();
 
     /**
-     *  <p>Reference to a Business Unit the Cart belongs to. Only available for B2B-enabled Projects.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Business Unit the Cart belongs to. Only available for <span>B2B</span>-enabled Projects.</p>
      * @return businessUnit
      */
     @Valid
@@ -132,7 +133,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public BusinessUnitKeyReference getBusinessUnit();
 
     /**
-     *  <p>Reference to a Store the Cart belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Store the Cart belongs to.</p>
      * @return store
      */
     @Valid
@@ -140,7 +141,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public StoreKeyReference getStore();
 
     /**
-     *  <p>Line Items added to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> added to the Cart.</p>
      * @return lineItems
      */
     @NotNull
@@ -149,7 +150,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public List<LineItem> getLineItems();
 
     /**
-     *  <p>Custom Line Items added to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> added to the Cart.</p>
      * @return customLineItems
      */
     @NotNull
@@ -158,7 +159,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public List<CustomLineItem> getCustomLineItems();
 
     /**
-     *  <p>Sum of all LineItem quantities, excluding CustomLineItems. Only present when the Cart has at least one LineItem.</p>
+     *  <p>Sum of all <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities, excluding <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>. Only present when the Cart has at least one LineItem.</p>
      * @return totalLineItemQuantity
      */
 
@@ -166,8 +167,8 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public Long getTotalLineItemQuantity();
 
     /**
-     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
-     *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     *  <p>Sum of the <code>totalPrice</code> field of all <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and if available, the <code>price</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a>. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
+     *  <p>Taxes are included if <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRate</a> <code>includedInPrice</code> is <code>true</code> for each price.</p>
      * @return totalPrice
      */
     @NotNull
@@ -177,8 +178,8 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <ul>
-     *   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set. For Carts with <code>Multiple</code> ShippingMode, all Line Items and Custom Line Items must be fully distributed between the Shipping Methods (via <code>shippingDetails</code>), otherwise <code>taxedPrice</code> is not automatically set.</li>
-     *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set. For Carts with <code>Multiple</code> ShippingMode, all allocations must have their respective tax rates present in <code>perMethodTaxRate</code>, otherwise <code>taxedPrice</code> is not automatically set.</li>
+     *   <li>For a Cart with <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it is automatically set when a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetShippingAddressAction" rel="nofollow">shipping address is set</a>. For Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>, all Line Items and Custom Line Items must be fully distributed between the Shipping Methods (via <code>shippingDetails</code>), otherwise <code>taxedPrice</code> is not automatically set.</li>
+     *   <li>For a Cart with <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set. For Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>, all allocations must have their respective tax rates present in <code>perMethodTaxRate</code>, otherwise <code>taxedPrice</code> is not automatically set.</li>
      *  </ul>
      *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      * @return taxedPrice
@@ -188,7 +189,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public TaxedPrice getTaxedPrice();
 
     /**
-     *  <p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
+     *  <p>Sum of the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> across all Shipping Methods.</p>
      *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      * @return taxedShippingPrice
      */
@@ -213,7 +214,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public TaxMode getTaxMode();
 
     /**
-     *  <p>Indicates how the total prices on LineItems and CustomLineItems are rounded when calculated. Configured in Project settings.</p>
+     *  <p>Indicates how the total prices on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a> are rounded when calculated. Configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a>.</p>
      * @return priceRoundingMode
      */
     @NotNull
@@ -221,7 +222,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public RoundingMode getPriceRoundingMode();
 
     /**
-     *  <p>Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>. Configured in Project settings.</p>
+     *  <p>Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>. Configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a>.</p>
      * @return taxRoundingMode
      */
     @NotNull
@@ -253,6 +254,14 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public CartState getCartState();
 
     /**
+     *  <p>Determines freezing behavior when <code>cartState</code> is <code>Frozen</code>.</p>
+     * @return freezeStrategy
+     */
+
+    @JsonProperty("freezeStrategy")
+    public FreezeStrategy getFreezeStrategy();
+
+    /**
      *  <p>Billing address associated with the Cart.</p>
      * @return billingAddress
      */
@@ -261,7 +270,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public Address getBillingAddress();
 
     /**
-     *  <p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     *  <p>Shipping address for a Cart with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Determines eligible <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> rates. For a Cart with <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it also determines Tax Rates of Line Items.</p>
      * @return shippingAddress
      */
     @Valid
@@ -277,7 +286,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public ShippingMode getShippingMode();
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Single</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shippingKey
      */
 
@@ -285,7 +294,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public String getShippingKey();
 
     /**
-     *  <p>Shipping-related information of a Cart with <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
+     *  <p>Shipping-related information of a Cart with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set when a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetShippingMethodAction" rel="nofollow">Shipping Method is set</a>.</p>
      * @return shippingInfo
      */
     @Valid
@@ -293,10 +302,10 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public ShippingInfo getShippingInfo();
 
     /**
-     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <p>Input used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>:</p>
      *  <ul>
-     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
-     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
+     *   <li>If <code>CartClassification</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ClassificationShippingRateInput" rel="nofollow">ClassificationShippingRateInput</a>.</li>
+     *   <li>If <code>CartScore</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ScoreShippingRateInput" rel="nofollow">ScoreShippingRateInput</a>.</li>
      *   <li>If <code>CartValue</code>, it cannot be used.</li>
      *  </ul>
      * @return shippingRateInput
@@ -306,7 +315,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public ShippingRateInput getShippingRateInput();
 
     /**
-     *  <p>Custom Fields of the Shipping Method in a Cart with <code>Single</code> ShippingMode.</p>
+     *  <p>Custom Fields of the Shipping Method in a Cart with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shippingCustomFields
      */
     @Valid
@@ -314,7 +323,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public CustomFields getShippingCustomFields();
 
     /**
-     *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     *  <p>Shipping-related information of a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Updated automatically each time a new <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>.</p>
      * @return shipping
      */
     @NotNull
@@ -323,8 +332,8 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public List<Shipping> getShipping();
 
     /**
-     *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
-     *  <p>For Carts with <code>Single</code> ShippingMode: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Additional shipping addresses of the Cart as specified by <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> using the <code>shippingDetails</code> field.</p>
+     *  <p>For Carts with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @return itemShippingAddresses
      */
     @NotNull
@@ -351,7 +360,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public List<DirectDiscount> getDirectDiscounts();
 
     /**
-     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Cart.</p>
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemMode" rel="nofollow">LineItemMode</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRemoveLineItemAction" rel="nofollow">removed</a> from the Cart.</p>
      * @return refusedGifts
      */
     @NotNull
@@ -368,7 +377,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public PaymentInfo getPaymentInfo();
 
     /**
-     *  <p>Used for Line Item price selection.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
      * @return country
      */
 
@@ -376,7 +385,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public String getCountry();
 
     /**
-     *  <p>Languages of the Cart. Can only contain languages supported by the Project.</p>
+     *  <p>Language of the Cart. Must be one of the languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @return locale
      */
 
@@ -408,12 +417,29 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public DiscountTypeCombination getDiscountTypeCombination();
 
     /**
-     *  <p>Number of days after the last modification before a Cart is deleted. Configured in Project settings.</p>
+     *  <p>Indicates whether the Cart has been <span>locked</span>, preventing edits.</p>
+     * @return lock
+     */
+    @Valid
+    @JsonProperty("lock")
+    public CartLock getLock();
+
+    /**
+     *  <p>Number of days after the last modification before a Cart is deleted. Configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a>.</p>
      * @return deleteDaysAfterLastModification
      */
 
     @JsonProperty("deleteDaysAfterLastModification")
     public Integer getDeleteDaysAfterLastModification();
+
+    /**
+     *  <p>User-defined identifier of a purchase order.</p>
+     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> or Merchant to track the purchase order during the <span>quote and order flow</span>.</p>
+     * @return purchaseOrderNumber
+     */
+
+    @JsonProperty("purchaseOrderNumber")
+    public String getPurchaseOrderNumber();
 
     /**
      *  <p>Date and time (UTC) the Cart was initially created.</p>
@@ -448,6 +474,14 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public CreatedBy getCreatedBy();
 
     /**
+     *  <p>Warnings about the processing of a request.</p>
+     * @return warnings
+     */
+    @Valid
+    @JsonProperty("warnings")
+    public List<WarningObject> getWarnings();
+
+    /**
      *  <p>Unique identifier of the Cart.</p>
      * @param id value to be set
      */
@@ -469,7 +503,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setKey(final String key);
 
     /**
-     *  <p><code>id</code> of the Customer that the Cart belongs to.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that the Cart belongs to.</p>
      * @param customerId value to be set
      */
 
@@ -483,35 +517,35 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setCustomerEmail(final String customerEmail);
 
     /**
-     *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for Line Item price selection.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Customer Group of the Customer that the Cart belongs to. Used for <span>Line Item price selection</span>.</p>
      * @param customerGroup value to be set
      */
 
     public void setCustomerGroup(final CustomerGroupReference customerGroup);
 
     /**
-     *  <p>Anonymous session associated with the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">Anonymous session</a> associated with the Cart.</p>
      * @param anonymousId value to be set
      */
 
     public void setAnonymousId(final String anonymousId);
 
     /**
-     *  <p>Reference to a Business Unit the Cart belongs to. Only available for B2B-enabled Projects.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Business Unit the Cart belongs to. Only available for <span>B2B</span>-enabled Projects.</p>
      * @param businessUnit value to be set
      */
 
     public void setBusinessUnit(final BusinessUnitKeyReference businessUnit);
 
     /**
-     *  <p>Reference to a Store the Cart belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Store the Cart belongs to.</p>
      * @param store value to be set
      */
 
     public void setStore(final StoreKeyReference store);
 
     /**
-     *  <p>Line Items added to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> added to the Cart.</p>
      * @param lineItems values to be set
      */
 
@@ -519,14 +553,14 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setLineItems(final LineItem... lineItems);
 
     /**
-     *  <p>Line Items added to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:LineItems" rel="nofollow">Line Items</a> added to the Cart.</p>
      * @param lineItems values to be set
      */
 
     public void setLineItems(final List<LineItem> lineItems);
 
     /**
-     *  <p>Custom Line Items added to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> added to the Cart.</p>
      * @param customLineItems values to be set
      */
 
@@ -534,22 +568,22 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setCustomLineItems(final CustomLineItem... customLineItems);
 
     /**
-     *  <p>Custom Line Items added to the Cart.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItems" rel="nofollow">Custom Line Items</a> added to the Cart.</p>
      * @param customLineItems values to be set
      */
 
     public void setCustomLineItems(final List<CustomLineItem> customLineItems);
 
     /**
-     *  <p>Sum of all LineItem quantities, excluding CustomLineItems. Only present when the Cart has at least one LineItem.</p>
+     *  <p>Sum of all <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities, excluding <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>. Only present when the Cart has at least one LineItem.</p>
      * @param totalLineItemQuantity value to be set
      */
 
     public void setTotalLineItemQuantity(final Long totalLineItemQuantity);
 
     /**
-     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
-     *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     *  <p>Sum of the <code>totalPrice</code> field of all <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and if available, the <code>price</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a>. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
+     *  <p>Taxes are included if <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRate</a> <code>includedInPrice</code> is <code>true</code> for each price.</p>
      * @param totalPrice value to be set
      */
 
@@ -557,8 +591,8 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <ul>
-     *   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set. For Carts with <code>Multiple</code> ShippingMode, all Line Items and Custom Line Items must be fully distributed between the Shipping Methods (via <code>shippingDetails</code>), otherwise <code>taxedPrice</code> is not automatically set.</li>
-     *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set. For Carts with <code>Multiple</code> ShippingMode, all allocations must have their respective tax rates present in <code>perMethodTaxRate</code>, otherwise <code>taxedPrice</code> is not automatically set.</li>
+     *   <li>For a Cart with <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it is automatically set when a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetShippingAddressAction" rel="nofollow">shipping address is set</a>. For Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>, all Line Items and Custom Line Items must be fully distributed between the Shipping Methods (via <code>shippingDetails</code>), otherwise <code>taxedPrice</code> is not automatically set.</li>
+     *   <li>For a Cart with <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set. For Carts with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>, all allocations must have their respective tax rates present in <code>perMethodTaxRate</code>, otherwise <code>taxedPrice</code> is not automatically set.</li>
      *  </ul>
      *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      * @param taxedPrice value to be set
@@ -567,7 +601,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setTaxedPrice(final TaxedPrice taxedPrice);
 
     /**
-     *  <p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
+     *  <p>Sum of the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> across all Shipping Methods.</p>
      *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      * @param taxedShippingPrice value to be set
      */
@@ -589,14 +623,14 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setTaxMode(final TaxMode taxMode);
 
     /**
-     *  <p>Indicates how the total prices on LineItems and CustomLineItems are rounded when calculated. Configured in Project settings.</p>
+     *  <p>Indicates how the total prices on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a> are rounded when calculated. Configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a>.</p>
      * @param priceRoundingMode value to be set
      */
 
     public void setPriceRoundingMode(final RoundingMode priceRoundingMode);
 
     /**
-     *  <p>Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>. Configured in Project settings.</p>
+     *  <p>Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>. Configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a>.</p>
      * @param taxRoundingMode value to be set
      */
 
@@ -624,6 +658,13 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setCartState(final CartState cartState);
 
     /**
+     *  <p>Determines freezing behavior when <code>cartState</code> is <code>Frozen</code>.</p>
+     * @param freezeStrategy value to be set
+     */
+
+    public void setFreezeStrategy(final FreezeStrategy freezeStrategy);
+
+    /**
      *  <p>Billing address associated with the Cart.</p>
      * @param billingAddress value to be set
      */
@@ -631,7 +672,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setBillingAddress(final Address billingAddress);
 
     /**
-     *  <p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     *  <p>Shipping address for a Cart with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Determines eligible <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> rates. For a Cart with <code>Platform</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>, it also determines Tax Rates of Line Items.</p>
      * @param shippingAddress value to be set
      */
 
@@ -645,24 +686,24 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setShippingMode(final ShippingMode shippingMode);
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Single</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingKey value to be set
      */
 
     public void setShippingKey(final String shippingKey);
 
     /**
-     *  <p>Shipping-related information of a Cart with <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
+     *  <p>Shipping-related information of a Cart with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Automatically set when a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetShippingMethodAction" rel="nofollow">Shipping Method is set</a>.</p>
      * @param shippingInfo value to be set
      */
 
     public void setShippingInfo(final ShippingInfo shippingInfo);
 
     /**
-     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <p>Input used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>:</p>
      *  <ul>
-     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
-     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
+     *   <li>If <code>CartClassification</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ClassificationShippingRateInput" rel="nofollow">ClassificationShippingRateInput</a>.</li>
+     *   <li>If <code>CartScore</code>, it is <a href="https://docs.commercetools.com/apis/ctp:api:type:ScoreShippingRateInput" rel="nofollow">ScoreShippingRateInput</a>.</li>
      *   <li>If <code>CartValue</code>, it cannot be used.</li>
      *  </ul>
      * @param shippingRateInput value to be set
@@ -671,14 +712,14 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setShippingRateInput(final ShippingRateInput shippingRateInput);
 
     /**
-     *  <p>Custom Fields of the Shipping Method in a Cart with <code>Single</code> ShippingMode.</p>
+     *  <p>Custom Fields of the Shipping Method in a Cart with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingCustomFields value to be set
      */
 
     public void setShippingCustomFields(final CustomFields shippingCustomFields);
 
     /**
-     *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     *  <p>Shipping-related information of a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Updated automatically each time a new <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>.</p>
      * @param shipping values to be set
      */
 
@@ -686,15 +727,15 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setShipping(final Shipping... shipping);
 
     /**
-     *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     *  <p>Shipping-related information of a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Updated automatically each time a new <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddShippingMethodAction" rel="nofollow">Shipping Method is added</a>.</p>
      * @param shipping values to be set
      */
 
     public void setShipping(final List<Shipping> shipping);
 
     /**
-     *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
-     *  <p>For Carts with <code>Single</code> ShippingMode: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Additional shipping addresses of the Cart as specified by <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> using the <code>shippingDetails</code> field.</p>
+     *  <p>For Carts with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @param itemShippingAddresses values to be set
      */
 
@@ -702,8 +743,8 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setItemShippingAddresses(final Address... itemShippingAddresses);
 
     /**
-     *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
-     *  <p>For Carts with <code>Single</code> ShippingMode: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>Additional shipping addresses of the Cart as specified by <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> using the <code>shippingDetails</code> field.</p>
+     *  <p>For Carts with <code>Single</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @param itemShippingAddresses values to be set
      */
 
@@ -740,7 +781,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setDirectDiscounts(final List<DirectDiscount> directDiscounts);
 
     /**
-     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Cart.</p>
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemMode" rel="nofollow">LineItemMode</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRemoveLineItemAction" rel="nofollow">removed</a> from the Cart.</p>
      * @param refusedGifts values to be set
      */
 
@@ -748,7 +789,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setRefusedGifts(final CartDiscountReference... refusedGifts);
 
     /**
-     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Cart.</p>
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemMode" rel="nofollow">LineItemMode</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRemoveLineItemAction" rel="nofollow">removed</a> from the Cart.</p>
      * @param refusedGifts values to be set
      */
 
@@ -762,14 +803,14 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setPaymentInfo(final PaymentInfo paymentInfo);
 
     /**
-     *  <p>Used for Line Item price selection.</p>
+     *  <p>Used for <span>Line Item price selection</span>.</p>
      * @param country value to be set
      */
 
     public void setCountry(final String country);
 
     /**
-     *  <p>Languages of the Cart. Can only contain languages supported by the Project.</p>
+     *  <p>Language of the Cart. Must be one of the languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param locale value to be set
      */
 
@@ -797,11 +838,26 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setDiscountTypeCombination(final DiscountTypeCombination discountTypeCombination);
 
     /**
-     *  <p>Number of days after the last modification before a Cart is deleted. Configured in Project settings.</p>
+     *  <p>Indicates whether the Cart has been <span>locked</span>, preventing edits.</p>
+     * @param lock value to be set
+     */
+
+    public void setLock(final CartLock lock);
+
+    /**
+     *  <p>Number of days after the last modification before a Cart is deleted. Configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a>.</p>
      * @param deleteDaysAfterLastModification value to be set
      */
 
     public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification);
+
+    /**
+     *  <p>User-defined identifier of a purchase order.</p>
+     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> or Merchant to track the purchase order during the <span>quote and order flow</span>.</p>
+     * @param purchaseOrderNumber value to be set
+     */
+
+    public void setPurchaseOrderNumber(final String purchaseOrderNumber);
 
     /**
      *  <p>Date and time (UTC) the Cart was initially created.</p>
@@ -830,6 +886,21 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
      */
 
     public void setCreatedBy(final CreatedBy createdBy);
+
+    /**
+     *  <p>Warnings about the processing of a request.</p>
+     * @param warnings values to be set
+     */
+
+    @JsonIgnore
+    public void setWarnings(final WarningObject... warnings);
+
+    /**
+     *  <p>Warnings about the processing of a request.</p>
+     * @param warnings values to be set
+     */
+
+    public void setWarnings(final List<WarningObject> warnings);
 
     /**
      * factory method
@@ -870,6 +941,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
         instance.setTaxCalculationMode(template.getTaxCalculationMode());
         instance.setInventoryMode(template.getInventoryMode());
         instance.setCartState(template.getCartState());
+        instance.setFreezeStrategy(template.getFreezeStrategy());
         instance.setBillingAddress(template.getBillingAddress());
         instance.setShippingAddress(template.getShippingAddress());
         instance.setShippingMode(template.getShippingMode());
@@ -888,9 +960,12 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
         instance.setOrigin(template.getOrigin());
         instance.setCustom(template.getCustom());
         instance.setDiscountTypeCombination(template.getDiscountTypeCombination());
+        instance.setLock(template.getLock());
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
+        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         instance.setLastModifiedBy(template.getLastModifiedBy());
         instance.setCreatedBy(template.getCreatedBy());
+        instance.setWarnings(template.getWarnings());
         return instance;
     }
 
@@ -944,6 +1019,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
         instance.setTaxCalculationMode(template.getTaxCalculationMode());
         instance.setInventoryMode(template.getInventoryMode());
         instance.setCartState(template.getCartState());
+        instance.setFreezeStrategy(template.getFreezeStrategy());
         instance.setBillingAddress(com.commercetools.api.models.common.Address.deepCopy(template.getBillingAddress()));
         instance.setShippingAddress(
             com.commercetools.api.models.common.Address.deepCopy(template.getShippingAddress()));
@@ -986,10 +1062,17 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         instance.setDiscountTypeCombination(
             com.commercetools.api.models.cart.DiscountTypeCombination.deepCopy(template.getDiscountTypeCombination()));
+        instance.setLock(com.commercetools.api.models.cart.CartLock.deepCopy(template.getLock()));
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
+        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         instance.setLastModifiedBy(
             com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setWarnings(Optional.ofNullable(template.getWarnings())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.warning.WarningObject::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 
@@ -1024,8 +1107,8 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Cart> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Cart>() {
+    public static tools.jackson.core.type.TypeReference<Cart> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Cart>() {
             @Override
             public String toString() {
                 return "TypeReference<Cart>";

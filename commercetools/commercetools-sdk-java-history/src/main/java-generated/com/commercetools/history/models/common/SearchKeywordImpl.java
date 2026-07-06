@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * SearchKeyword
@@ -43,7 +44,7 @@ public class SearchKeywordImpl implements SearchKeyword, ModelBase {
     }
 
     /**
-     *
+     *  <p>Text to return in the <a href="https://docs.commercetools.com/apis/ctp:api:type:SuggestionResult" rel="nofollow">SuggestionResult</a>.</p>
      */
 
     public String getText() {
@@ -51,7 +52,7 @@ public class SearchKeywordImpl implements SearchKeyword, ModelBase {
     }
 
     /**
-     *
+     *  <p>If no tokenizer is defined, the <code>text</code> is used as a single token.</p>
      */
 
     public com.commercetools.history.models.common.SuggestTokenizer getSuggestTokenizer() {

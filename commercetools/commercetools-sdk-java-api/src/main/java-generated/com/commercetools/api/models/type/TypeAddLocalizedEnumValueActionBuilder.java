@@ -28,7 +28,7 @@ public class TypeAddLocalizedEnumValueActionBuilder implements Builder<TypeAddLo
     private com.commercetools.api.models.type.CustomFieldLocalizedEnumValue value;
 
     /**
-     *  <p><code>name</code> of the FieldDefinition to update.</p>
+     *  <p><code>name</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a> to update.</p>
      * @param fieldName value to be set
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class TypeAddLocalizedEnumValueActionBuilder implements Builder<TypeAddLo
     }
 
     /**
-     *  <p><code>name</code> of the FieldDefinition to update.</p>
+     *  <p><code>name</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a> to update.</p>
      * @return fieldName
      */
 

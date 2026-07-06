@@ -17,15 +17,15 @@ public class RecurringOrderCreatedMessagePayloadTest {
     }
 
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { "order", RecurringOrderCreatedMessagePayload.builder()
-                .order(new com.commercetools.api.models.recurring_order.RecurringOrderImpl()) } };
+        return new Object[][] { new Object[] { "recurringOrder", RecurringOrderCreatedMessagePayload.builder()
+                .recurringOrder(new com.commercetools.api.models.recurring_order.RecurringOrderImpl()) } };
     }
 
     @Test
-    public void order() {
+    public void recurringOrder() {
         RecurringOrderCreatedMessagePayload value = RecurringOrderCreatedMessagePayload.of();
-        value.setOrder(new com.commercetools.api.models.recurring_order.RecurringOrderImpl());
-        Assertions.assertThat(value.getOrder())
+        value.setRecurringOrder(new com.commercetools.api.models.recurring_order.RecurringOrderImpl());
+        Assertions.assertThat(value.getRecurringOrder())
                 .isEqualTo(new com.commercetools.api.models.recurring_order.RecurringOrderImpl());
     }
 }

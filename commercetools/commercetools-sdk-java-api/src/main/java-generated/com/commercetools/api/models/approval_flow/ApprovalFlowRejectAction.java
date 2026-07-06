@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>This update action allows an Associate to reject an Approval Flow, setting its status to <code>Rejected</code>. The process takes into account all Associate Roles held by the Associate, aligning with the matched Approval Rules and their respective approver hierarchies. Even a single rejection in the process will result in the rejection of the entire Approval Flow.</p>
+ *  <p>This update action allows an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> to reject an Approval Flow, setting its status to <code>Rejected</code>. The process takes into account all <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Roles</a> held by the Associate, aligning with the matched <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">Approval Rules</a> and their respective approver hierarchies. Even a single rejection in the process will result in the rejection of the entire Approval Flow.</p>
  *  <p>An Associate is eligible to reject only if their roles are within tiers of the Approval Rule hierarchy that are yet to be rejected. An Associate may alter a prior approval into a rejection.</p>
  *
  * <hr>
@@ -36,7 +37,7 @@ public interface ApprovalFlowRejectAction extends ApprovalFlowUpdateAction {
     String REJECT = "reject";
 
     /**
-     *  <p>The reason for the rejection of the Approval Flow.</p>
+     *  <p>The reason for the rejection of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @return reason
      */
 
@@ -44,7 +45,7 @@ public interface ApprovalFlowRejectAction extends ApprovalFlowUpdateAction {
     public String getReason();
 
     /**
-     *  <p>The reason for the rejection of the Approval Flow.</p>
+     *  <p>The reason for the rejection of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @param reason value to be set
      */
 
@@ -117,8 +118,8 @@ public interface ApprovalFlowRejectAction extends ApprovalFlowUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ApprovalFlowRejectAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ApprovalFlowRejectAction>() {
+    public static tools.jackson.core.type.TypeReference<ApprovalFlowRejectAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ApprovalFlowRejectAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ApprovalFlowRejectAction>";

@@ -23,7 +23,7 @@ public class ReplicaMyCartDraftBuilder implements Builder<ReplicaMyCartDraft> {
     private java.lang.Object reference;
 
     /**
-     *  <p>Reference to a Cart or Order that is replicated.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that is replicated.</p>
      * @param reference value to be set
      * @return Builder
      */
@@ -34,7 +34,7 @@ public class ReplicaMyCartDraftBuilder implements Builder<ReplicaMyCartDraft> {
     }
 
     /**
-     *  <p>Reference to a Cart or Order that is replicated.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that is replicated.</p>
      * @return reference
      */
 

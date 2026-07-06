@@ -9,15 +9,15 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Result of a distinct facet or a ranges facet.</p>
+ *  <p>Result of a <span>distinct facet</span> or a <span>ranges facet</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -131,8 +131,8 @@ public interface ProductSearchFacetResultBucket extends ProductSearchFacetResult
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSearchFacetResultBucket> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSearchFacetResultBucket>() {
+    public static tools.jackson.core.type.TypeReference<ProductSearchFacetResultBucket> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSearchFacetResultBucket>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSearchFacetResultBucket>";

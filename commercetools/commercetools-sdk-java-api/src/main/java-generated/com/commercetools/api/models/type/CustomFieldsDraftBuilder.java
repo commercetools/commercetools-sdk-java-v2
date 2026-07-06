@@ -30,7 +30,7 @@ public class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p><code>id</code> or <code>key</code> of the Type.</p>
+     *  <p><code>id</code> or <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
     }
 
     /**
-     *  <p><code>id</code> or <code>key</code> of the Type.</p>
+     *  <p><code>id</code> or <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
     }
 
     /**
-     *  <p><code>id</code> or <code>key</code> of the Type.</p>
+     *  <p><code>id</code> or <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
     }
 
     /**
-     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     *  <p>Object containing the Custom Fields for the <span>customized resource or data type</span>.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
     }
 
     /**
-     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     *  <p>Object containing the Custom Fields for the <span>customized resource or data type</span>.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -89,7 +89,7 @@ public class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
     }
 
     /**
-     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     *  <p>Object containing the Custom Fields for the <span>customized resource or data type</span>.</p>
      * @param fields value to be set
      * @return Builder
      */
@@ -100,7 +100,7 @@ public class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
     }
 
     /**
-     *  <p><code>id</code> or <code>key</code> of the Type.</p>
+     *  <p><code>id</code> or <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @return type
      */
 
@@ -109,7 +109,7 @@ public class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
     }
 
     /**
-     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     *  <p>Object containing the Custom Fields for the <span>customized resource or data type</span>.</p>
      * @return fields
      */
 

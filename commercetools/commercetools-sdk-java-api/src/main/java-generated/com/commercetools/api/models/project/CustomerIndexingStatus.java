@@ -23,7 +23,7 @@ public interface CustomerIndexingStatus extends JsonEnum {
     <p>Indexing is in progress.</p> */
     CustomerIndexingStatus INDEXING = CustomerIndexingStatusEnum.INDEXING;
     /**
-    <p>Indexing is complete and the Search Customers endpoint returns up-to-date results.</p> */
+    <p>Indexing is complete and the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers/search:POST" rel="nofollow">Search Customers</a> endpoint returns up-to-date results.</p> */
     CustomerIndexingStatus READY = CustomerIndexingStatusEnum.READY;
     /**
     <p>Indexing failed due to an internal error.</p> */

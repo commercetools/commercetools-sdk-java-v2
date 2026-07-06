@@ -8,12 +8,20 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Changes the CartState from <code>Active</code> to <code>Frozen</code>. Results in a Frozen Cart. Fails with InvalidOperation error when the Cart is empty.</p>
+ *  <p>Freezes the Cart based on the provided <a href="https://docs.commercetools.com/apis/ctp:api:type:FreezeStrategy" rel="nofollow">FreezeStrategy</a>.</p>
+ *  <p>The following behavior occurs:</p>
+ *  <ul>
+ *   <li>Changes the Cart State from <code>Active</code> to <code>Frozen</code>.</li>
+ *   <li>Sets the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:FreezeStrategy" rel="nofollow">FreezeStrategy</a> on the Cart's <code>freezeStrategy</code> field.</li>
+ *   <li>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartFrozenMessage" rel="nofollow">CartFrozen</a> Message.</li>
+ *  </ul>
+ *  <p>If the Cart is empty, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,6 +43,21 @@ public interface CartFreezeCartAction extends CartUpdateAction {
     String FREEZE_CART = "freezeCart";
 
     /**
+     *  <p>Strategy that determines the freezing behavior.</p>
+     * @return strategy
+     */
+
+    @JsonProperty("strategy")
+    public FreezeStrategy getStrategy();
+
+    /**
+     *  <p>Strategy that determines the freezing behavior.</p>
+     * @param strategy value to be set
+     */
+
+    public void setStrategy(final FreezeStrategy strategy);
+
+    /**
      * factory method
      * @return instance of CartFreezeCartAction
      */
@@ -49,6 +72,7 @@ public interface CartFreezeCartAction extends CartUpdateAction {
      */
     public static CartFreezeCartAction of(final CartFreezeCartAction template) {
         CartFreezeCartActionImpl instance = new CartFreezeCartActionImpl();
+        instance.setStrategy(template.getStrategy());
         return instance;
     }
 
@@ -65,6 +89,7 @@ public interface CartFreezeCartAction extends CartUpdateAction {
             return null;
         }
         CartFreezeCartActionImpl instance = new CartFreezeCartActionImpl();
+        instance.setStrategy(template.getStrategy());
         return instance;
     }
 
@@ -99,8 +124,8 @@ public interface CartFreezeCartAction extends CartUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartFreezeCartAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartFreezeCartAction>() {
+    public static tools.jackson.core.type.TypeReference<CartFreezeCartAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartFreezeCartAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartFreezeCartAction>";

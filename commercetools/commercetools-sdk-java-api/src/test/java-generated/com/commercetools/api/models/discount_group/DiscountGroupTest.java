@@ -27,6 +27,7 @@ public class DiscountGroupTest {
                         DiscountGroup.builder()
                                 .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
                 new Object[] { "sortOrder", DiscountGroup.builder().sortOrder("sortOrder") },
+                new Object[] { "isActive", DiscountGroup.builder().isActive(true) },
                 new Object[] { "createdAt",
                         DiscountGroup.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
                 new Object[] { "lastModifiedAt",
@@ -79,6 +80,13 @@ public class DiscountGroupTest {
         DiscountGroup value = DiscountGroup.of();
         value.setSortOrder("sortOrder");
         Assertions.assertThat(value.getSortOrder()).isEqualTo("sortOrder");
+    }
+
+    @Test
+    public void isActive() {
+        DiscountGroup value = DiscountGroup.of();
+        value.setIsActive(true);
+        Assertions.assertThat(value.getIsActive()).isEqualTo(true);
     }
 
     @Test

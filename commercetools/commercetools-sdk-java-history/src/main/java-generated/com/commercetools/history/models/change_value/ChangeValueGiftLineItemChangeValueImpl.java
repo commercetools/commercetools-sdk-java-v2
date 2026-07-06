@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ChangeValueGiftLineItemChangeValue
@@ -64,7 +65,7 @@ public class ChangeValueGiftLineItemChangeValueImpl implements ChangeValueGiftLi
     }
 
     /**
-     *  <p>Reference to a Product.</p>
+     *  <p>Reference to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      */
 
     public com.commercetools.history.models.common.Reference getProduct() {
@@ -72,7 +73,7 @@ public class ChangeValueGiftLineItemChangeValueImpl implements ChangeValueGiftLi
     }
 
     /**
-     *  <p><code>id</code> of the ProductVariant.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      */
 
     public Integer getVariantId() {
@@ -80,7 +81,7 @@ public class ChangeValueGiftLineItemChangeValueImpl implements ChangeValueGiftLi
     }
 
     /**
-     *  <p>Channel with ChannelRoleEnum <code>InventorySupply</code>.</p>
+     *  <p>Channel with <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> <code>InventorySupply</code>.</p>
      */
 
     public com.commercetools.history.models.common.Reference getSupplyChannel() {
@@ -88,7 +89,7 @@ public class ChangeValueGiftLineItemChangeValueImpl implements ChangeValueGiftLi
     }
 
     /**
-     *  <p>Channel with ChannelRoleEnum <code>ProductDistribution</code>.</p>
+     *  <p>Channel with <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> <code>ProductDistribution</code>.</p>
      */
 
     public com.commercetools.history.models.common.Reference getDistributionChannel() {

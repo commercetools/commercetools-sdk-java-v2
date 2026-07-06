@@ -3,6 +3,8 @@ package com.commercetools.history.models.common;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -13,9 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ProductVariantChannelAvailability productVariantChannelAvailability = ProductVariantChannelAvailability.builder()
- *             .isOnStock(true)
- *             .restockableInDays(1)
- *             .availableQuantity(1)
+ *             .id("{id}")
+ *             .version(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -23,70 +24,120 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantChannelAvailabilityBuilder implements Builder<ProductVariantChannelAvailability> {
 
+    @Nullable
     private Boolean isOnStock;
 
-    private Integer restockableInDays;
+    @Nullable
+    private Long restockableInDays;
 
-    private Integer availableQuantity;
+    @Nullable
+    private Long availableQuantity;
+
+    private String id;
+
+    private Long version;
 
     /**
-     * set the value to the isOnStock
+     *  <p>Indicates whether a Product Variant is in stock in a specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @param isOnStock value to be set
      * @return Builder
      */
 
-    public ProductVariantChannelAvailabilityBuilder isOnStock(final Boolean isOnStock) {
+    public ProductVariantChannelAvailabilityBuilder isOnStock(@Nullable final Boolean isOnStock) {
         this.isOnStock = isOnStock;
         return this;
     }
 
     /**
-     * set the value to the restockableInDays
+     *  <p>Number of days to restock a Product Variant once it is out of stock in a specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @param restockableInDays value to be set
      * @return Builder
      */
 
-    public ProductVariantChannelAvailabilityBuilder restockableInDays(final Integer restockableInDays) {
+    public ProductVariantChannelAvailabilityBuilder restockableInDays(@Nullable final Long restockableInDays) {
         this.restockableInDays = restockableInDays;
         return this;
     }
 
     /**
-     * set the value to the availableQuantity
+     *  <p>Number of items of this Product Variant that are in stock in a specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @param availableQuantity value to be set
      * @return Builder
      */
 
-    public ProductVariantChannelAvailabilityBuilder availableQuantity(final Integer availableQuantity) {
+    public ProductVariantChannelAvailabilityBuilder availableQuantity(@Nullable final Long availableQuantity) {
         this.availableQuantity = availableQuantity;
         return this;
     }
 
     /**
-     * value of isOnStock}
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
+     * @param id value to be set
+     * @return Builder
+     */
+
+    public ProductVariantChannelAvailabilityBuilder id(final String id) {
+        this.id = id;
+        return this;
+    }
+
+    /**
+     *  <p>Current version of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
+     * @param version value to be set
+     * @return Builder
+     */
+
+    public ProductVariantChannelAvailabilityBuilder version(final Long version) {
+        this.version = version;
+        return this;
+    }
+
+    /**
+     *  <p>Indicates whether a Product Variant is in stock in a specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @return isOnStock
      */
 
+    @Nullable
     public Boolean getIsOnStock() {
         return this.isOnStock;
     }
 
     /**
-     * value of restockableInDays}
+     *  <p>Number of days to restock a Product Variant once it is out of stock in a specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @return restockableInDays
      */
 
-    public Integer getRestockableInDays() {
+    @Nullable
+    public Long getRestockableInDays() {
         return this.restockableInDays;
     }
 
     /**
-     * value of availableQuantity}
+     *  <p>Number of items of this Product Variant that are in stock in a specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @return availableQuantity
      */
 
-    public Integer getAvailableQuantity() {
+    @Nullable
+    public Long getAvailableQuantity() {
         return this.availableQuantity;
+    }
+
+    /**
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
+     * @return id
+     */
+
+    public String getId() {
+        return this.id;
+    }
+
+    /**
+     *  <p>Current version of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
+     * @return version
+     */
+
+    public Long getVersion() {
+        return this.version;
     }
 
     /**
@@ -94,12 +145,9 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
      * @return ProductVariantChannelAvailability
      */
     public ProductVariantChannelAvailability build() {
-        Objects.requireNonNull(isOnStock, ProductVariantChannelAvailability.class + ": isOnStock is missing");
-        Objects.requireNonNull(restockableInDays,
-            ProductVariantChannelAvailability.class + ": restockableInDays is missing");
-        Objects.requireNonNull(availableQuantity,
-            ProductVariantChannelAvailability.class + ": availableQuantity is missing");
-        return new ProductVariantChannelAvailabilityImpl(isOnStock, restockableInDays, availableQuantity);
+        Objects.requireNonNull(id, ProductVariantChannelAvailability.class + ": id is missing");
+        Objects.requireNonNull(version, ProductVariantChannelAvailability.class + ": version is missing");
+        return new ProductVariantChannelAvailabilityImpl(isOnStock, restockableInDays, availableQuantity, id, version);
     }
 
     /**
@@ -107,7 +155,7 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
      * @return ProductVariantChannelAvailability
      */
     public ProductVariantChannelAvailability buildUnchecked() {
-        return new ProductVariantChannelAvailabilityImpl(isOnStock, restockableInDays, availableQuantity);
+        return new ProductVariantChannelAvailabilityImpl(isOnStock, restockableInDays, availableQuantity, id, version);
     }
 
     /**
@@ -128,6 +176,8 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
         builder.isOnStock = template.getIsOnStock();
         builder.restockableInDays = template.getRestockableInDays();
         builder.availableQuantity = template.getAvailableQuantity();
+        builder.id = template.getId();
+        builder.version = template.getVersion();
         return builder;
     }
 

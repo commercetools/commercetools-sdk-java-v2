@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.recurrence_policy.RecurrencePolicySchedule;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Set Schedule update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetScheduleAction" rel="nofollow">Set Schedule</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface RecurringOrderScheduleSetMessagePayload extends MessagePayload 
     String RECURRING_ORDER_SCHEDULE_SET = "RecurringOrderScheduleSet";
 
     /**
-     *  <p>Schedule of the Recurring Order after the Set Schedule update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicySchedule" rel="nofollow">Schedule</a> of the Recurring Order after the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetScheduleAction" rel="nofollow">Set Schedule</a> update action.</p>
      * @return recurrencePolicySchedule
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface RecurringOrderScheduleSetMessagePayload extends MessagePayload 
     public RecurrencePolicySchedule getRecurrencePolicySchedule();
 
     /**
-     *  <p>Schedule of the Recurring Order before the Set Schedule update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicySchedule" rel="nofollow">Schedule</a> of the Recurring Order before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetScheduleAction" rel="nofollow">Set Schedule</a> update action.</p>
      * @return oldRecurrencePolicySchedule
      */
     @NotNull
@@ -59,14 +59,14 @@ public interface RecurringOrderScheduleSetMessagePayload extends MessagePayload 
     public RecurrencePolicySchedule getOldRecurrencePolicySchedule();
 
     /**
-     *  <p>Schedule of the Recurring Order after the Set Schedule update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicySchedule" rel="nofollow">Schedule</a> of the Recurring Order after the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetScheduleAction" rel="nofollow">Set Schedule</a> update action.</p>
      * @param recurrencePolicySchedule value to be set
      */
 
     public void setRecurrencePolicySchedule(final RecurrencePolicySchedule recurrencePolicySchedule);
 
     /**
-     *  <p>Schedule of the Recurring Order before the Set Schedule update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicySchedule" rel="nofollow">Schedule</a> of the Recurring Order before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetScheduleAction" rel="nofollow">Set Schedule</a> update action.</p>
      * @param oldRecurrencePolicySchedule value to be set
      */
 
@@ -146,8 +146,8 @@ public interface RecurringOrderScheduleSetMessagePayload extends MessagePayload 
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<RecurringOrderScheduleSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<RecurringOrderScheduleSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<RecurringOrderScheduleSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<RecurringOrderScheduleSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<RecurringOrderScheduleSetMessagePayload>";

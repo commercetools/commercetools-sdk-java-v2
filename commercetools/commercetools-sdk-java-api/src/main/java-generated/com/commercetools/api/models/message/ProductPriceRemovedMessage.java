@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Price;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Remove Price update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemovePriceAction" rel="nofollow">Remove Price</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -49,7 +49,7 @@ public interface ProductPriceRemovedMessage extends Message {
     String PRODUCT_PRICE_REMOVED = "ProductPriceRemoved";
 
     /**
-     *  <p>Unique identifier of the ProductVariant for which the Price was removed.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which the Price was removed.</p>
      * @return variantId
      */
     @NotNull
@@ -57,7 +57,7 @@ public interface ProductPriceRemovedMessage extends Message {
     public Long getVariantId();
 
     /**
-     *  <p>The Embedded Price that was removed from the ProductVariant.</p>
+     *  <p>The Embedded Price that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return price
      */
     @NotNull
@@ -66,7 +66,7 @@ public interface ProductPriceRemovedMessage extends Message {
     public Price getPrice();
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @return staged
      */
     @NotNull
@@ -74,21 +74,21 @@ public interface ProductPriceRemovedMessage extends Message {
     public Boolean getStaged();
 
     /**
-     *  <p>Unique identifier of the ProductVariant for which the Price was removed.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which the Price was removed.</p>
      * @param variantId value to be set
      */
 
     public void setVariantId(final Long variantId);
 
     /**
-     *  <p>The Embedded Price that was removed from the ProductVariant.</p>
+     *  <p>The Embedded Price that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param price value to be set
      */
 
     public void setPrice(final Price price);
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @param staged value to be set
      */
 
@@ -187,8 +187,8 @@ public interface ProductPriceRemovedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductPriceRemovedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductPriceRemovedMessage>() {
+    public static tools.jackson.core.type.TypeReference<ProductPriceRemovedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductPriceRemovedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductPriceRemovedMessage>";

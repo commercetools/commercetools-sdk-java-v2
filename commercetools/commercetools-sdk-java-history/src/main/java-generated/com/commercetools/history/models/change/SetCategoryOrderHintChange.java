@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.CategoryOrderHints;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Change triggered by the Set Category Order Hint update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetCategoryOrderHintAction" rel="nofollow">Set Category Order Hint</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -78,9 +78,10 @@ public interface SetCategoryOrderHintChange extends Change {
     public CategoryOrderHints getNextValue();
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
-     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
-     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *  </ul>
      * @return catalogData
      */
@@ -89,7 +90,7 @@ public interface SetCategoryOrderHintChange extends Change {
     public String getCatalogData();
 
     /**
-     *  <p><code>id</code> of the updated Category.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a>.</p>
      * @return categoryId
      */
     @NotNull
@@ -118,9 +119,10 @@ public interface SetCategoryOrderHintChange extends Change {
     public void setNextValue(final CategoryOrderHints nextValue);
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
-     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
-     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *  </ul>
      * @param catalogData value to be set
      */
@@ -128,7 +130,7 @@ public interface SetCategoryOrderHintChange extends Change {
     public void setCatalogData(final String catalogData);
 
     /**
-     *  <p><code>id</code> of the updated Category.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a>.</p>
      * @param categoryId value to be set
      */
 
@@ -211,8 +213,8 @@ public interface SetCategoryOrderHintChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetCategoryOrderHintChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetCategoryOrderHintChange>() {
+    public static tools.jackson.core.type.TypeReference<SetCategoryOrderHintChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetCategoryOrderHintChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetCategoryOrderHintChange>";

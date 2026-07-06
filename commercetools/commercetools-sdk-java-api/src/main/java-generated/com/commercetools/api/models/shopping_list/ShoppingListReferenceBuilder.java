@@ -30,7 +30,7 @@ public class ShoppingListReferenceBuilder implements Builder<ShoppingListReferen
     private com.commercetools.api.models.shopping_list.ShoppingList obj;
 
     /**
-     *  <p>Unique identifier of the referenced ShoppingList.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class ShoppingListReferenceBuilder implements Builder<ShoppingListReferen
     }
 
     /**
-     *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with Reference Expansion for ShoppingLists.</p>
+     *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with <span>Reference Expansion</span> for ShoppingLists.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ShoppingListReferenceBuilder implements Builder<ShoppingListReferen
     }
 
     /**
-     *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with Reference Expansion for ShoppingLists.</p>
+     *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with <span>Reference Expansion</span> for ShoppingLists.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class ShoppingListReferenceBuilder implements Builder<ShoppingListReferen
     }
 
     /**
-     *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with Reference Expansion for ShoppingLists.</p>
+     *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with <span>Reference Expansion</span> for ShoppingLists.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class ShoppingListReferenceBuilder implements Builder<ShoppingListReferen
     }
 
     /**
-     *  <p>Unique identifier of the referenced ShoppingList.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @return id
      */
 
@@ -86,7 +86,7 @@ public class ShoppingListReferenceBuilder implements Builder<ShoppingListReferen
     }
 
     /**
-     *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with Reference Expansion for ShoppingLists.</p>
+     *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with <span>Reference Expansion</span> for ShoppingLists.</p>
      * @return obj
      */
 

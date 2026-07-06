@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set MethodInfo InterfaceAccount update action on Payments and Set MethodInfo InterfaceAccount update action on My Payments.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoInterfaceAccountAction" rel="nofollow">Set MethodInfo InterfaceAccount</a> update action on Payments and <a href="https://docs.commercetools.com/apis/ctp:api:type:MyPaymentSetMethodInfoInterfaceAccountAction" rel="nofollow">Set MethodInfo InterfaceAccount</a> update action on My Payments.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +36,7 @@ public interface PaymentMethodInfoInterfaceAccountSetMessagePayload extends Mess
     String PAYMENT_METHOD_INFO_INTERFACE_ACCOUNT_SET = "PaymentMethodInfoInterfaceAccountSet";
 
     /**
-     *  <p>Interface account of the Payment Method after the Set MethodInfo InterfaceAccount update action.</p>
+     *  <p>Interface account of the Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoInterfaceAccountAction" rel="nofollow">Set MethodInfo InterfaceAccount</a> update action.</p>
      * @return interfaceAccount
      */
 
@@ -43,7 +44,7 @@ public interface PaymentMethodInfoInterfaceAccountSetMessagePayload extends Mess
     public String getInterfaceAccount();
 
     /**
-     *  <p>Interface account of the Payment Method before the Set MethodInfo InterfaceAccount update action.</p>
+     *  <p>Interface account of the Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoInterfaceAccountAction" rel="nofollow">Set MethodInfo InterfaceAccount</a> update action.</p>
      * @return oldInterfaceAccount
      */
 
@@ -51,14 +52,14 @@ public interface PaymentMethodInfoInterfaceAccountSetMessagePayload extends Mess
     public String getOldInterfaceAccount();
 
     /**
-     *  <p>Interface account of the Payment Method after the Set MethodInfo InterfaceAccount update action.</p>
+     *  <p>Interface account of the Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoInterfaceAccountAction" rel="nofollow">Set MethodInfo InterfaceAccount</a> update action.</p>
      * @param interfaceAccount value to be set
      */
 
     public void setInterfaceAccount(final String interfaceAccount);
 
     /**
-     *  <p>Interface account of the Payment Method before the Set MethodInfo InterfaceAccount update action.</p>
+     *  <p>Interface account of the Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoInterfaceAccountAction" rel="nofollow">Set MethodInfo InterfaceAccount</a> update action.</p>
      * @param oldInterfaceAccount value to be set
      */
 
@@ -137,8 +138,8 @@ public interface PaymentMethodInfoInterfaceAccountSetMessagePayload extends Mess
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentMethodInfoInterfaceAccountSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentMethodInfoInterfaceAccountSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<PaymentMethodInfoInterfaceAccountSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentMethodInfoInterfaceAccountSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentMethodInfoInterfaceAccountSetMessagePayload>";

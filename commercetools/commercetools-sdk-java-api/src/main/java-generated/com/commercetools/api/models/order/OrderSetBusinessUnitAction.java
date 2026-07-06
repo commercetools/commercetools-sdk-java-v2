@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Updates the Business Unit on the Order. Setting the Order's <code>businessUnit</code> does not recalculate prices or discounts on the Order.</p>
- *  <p>Produces the OrderBusinessUnitSet Message.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderBusinessUnitSetMessage" rel="nofollow">OrderBusinessUnitSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface OrderSetBusinessUnitAction extends OrderUpdateAction {
 
     /**
      *  <p>New Business Unit to assign to the Order. If empty, any existing value is removed.</p>
-     *  <p>If the referenced Business Unit does not exist, a ReferencedResourceNotFound error is returned.</p>
+     *  <p>If the referenced Business Unit does not exist, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ReferencedResourceNotFoundError" rel="nofollow">ReferencedResourceNotFound</a> error is returned.</p>
      * @return businessUnit
      */
     @Valid
@@ -49,7 +49,7 @@ public interface OrderSetBusinessUnitAction extends OrderUpdateAction {
 
     /**
      *  <p>New Business Unit to assign to the Order. If empty, any existing value is removed.</p>
-     *  <p>If the referenced Business Unit does not exist, a ReferencedResourceNotFound error is returned.</p>
+     *  <p>If the referenced Business Unit does not exist, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ReferencedResourceNotFoundError" rel="nofollow">ReferencedResourceNotFound</a> error is returned.</p>
      * @param businessUnit value to be set
      */
 
@@ -123,8 +123,8 @@ public interface OrderSetBusinessUnitAction extends OrderUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderSetBusinessUnitAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderSetBusinessUnitAction>() {
+    public static tools.jackson.core.type.TypeReference<OrderSetBusinessUnitAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderSetBusinessUnitAction>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderSetBusinessUnitAction>";

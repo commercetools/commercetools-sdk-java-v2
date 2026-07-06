@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>
@@ -56,7 +57,7 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
     }
 
     /**
-     *  <p>Configuration for the Product Projection Search and Search Term Suggestions APIs.</p>
+     *  <p>Configuration for the <span>Product Projection Search</span> and <span>Search Term Suggestions</span> APIs.</p>
      */
 
     public com.commercetools.api.models.project.SearchIndexingConfigurationValues getProducts() {
@@ -64,7 +65,7 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
     }
 
     /**
-     *  <p>Configuration for the Product Search feature.</p>
+     *  <p>Configuration for the <span>Product Search</span> feature.</p>
      */
 
     public com.commercetools.api.models.project.SearchIndexingConfigurationValues getProductsSearch() {
@@ -72,7 +73,7 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
     }
 
     /**
-     *  <p>Configuration for the Order Search feature.</p>
+     *  <p>Configuration for the <span>Order Search</span> feature.</p>
      */
 
     public com.commercetools.api.models.project.SearchIndexingConfigurationValues getOrders() {
@@ -80,7 +81,7 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
     }
 
     /**
-     *  <p>Configuration for the Customer Search feature.</p>
+     *  <p>Configuration for the <span>Customer Search</span> feature.</p>
      */
 
     public com.commercetools.api.models.project.SearchIndexingConfigurationValues getCustomers() {
@@ -88,7 +89,7 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
     }
 
     /**
-     *  <p>Configuration for the Business Unit Search feature.</p>
+     *  <p>Configuration for the <span>Business Unit Search</span> feature.</p>
      */
 
     public com.commercetools.api.models.project.SearchIndexingConfigurationValues getBusinessUnits() {

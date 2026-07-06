@@ -9,18 +9,18 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set CustomLineItem Custom Type on Orders.</li>
- *   <li>Set CustomLineItem Custom Type on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetCustomLineItemCustomFieldAction" rel="nofollow">Set CustomLineItem Custom Type</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetCustomLineItemCustomFieldAction" rel="nofollow">Set CustomLineItem Custom Type</a> on Staged Orders.</li>
  *  </ul>
  *
  * <hr>
@@ -32,6 +32,7 @@ import jakarta.validation.constraints.NotNull;
  *             .name("{name}")
  *             .customLineItem(customLineItemBuilder -> customLineItemBuilder)
  *             .customLineItemId("{customLineItemId}")
+ *             .customTypeId("{customTypeId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -79,7 +80,7 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
     public Object getNextValue();
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @return name
      */
     @NotNull
@@ -87,7 +88,7 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
     public String getName();
 
     /**
-     *  <p>Name of the updated CustomLineItem.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @return customLineItem
      */
     @NotNull
@@ -96,12 +97,20 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
     public LocalizedString getCustomLineItem();
 
     /**
-     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @return customLineItemId
      */
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
+
+    /**
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
+     * @return customTypeId
+     */
+    @NotNull
+    @JsonProperty("customTypeId")
+    public String getCustomTypeId();
 
     /**
      * set change
@@ -125,25 +134,32 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
     public void setNextValue(final Object nextValue);
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @param name value to be set
      */
 
     public void setName(final String name);
 
     /**
-     *  <p>Name of the updated CustomLineItem.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @param customLineItem value to be set
      */
 
     public void setCustomLineItem(final LocalizedString customLineItem);
 
     /**
-     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @param customLineItemId value to be set
      */
 
     public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
+     * @param customTypeId value to be set
+     */
+
+    public void setCustomTypeId(final String customTypeId);
 
     /**
      * factory method
@@ -166,6 +182,7 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
         instance.setName(template.getName());
         instance.setCustomLineItem(template.getCustomLineItem());
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomTypeId(template.getCustomTypeId());
         return instance;
     }
 
@@ -190,6 +207,7 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
         instance.setCustomLineItem(
             com.commercetools.history.models.common.LocalizedString.deepCopy(template.getCustomLineItem()));
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomTypeId(template.getCustomTypeId());
         return instance;
     }
 
@@ -224,8 +242,8 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetCustomLineItemCustomFieldChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetCustomLineItemCustomFieldChange>() {
+    public static tools.jackson.core.type.TypeReference<SetCustomLineItemCustomFieldChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetCustomLineItemCustomFieldChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetCustomLineItemCustomFieldChange>";

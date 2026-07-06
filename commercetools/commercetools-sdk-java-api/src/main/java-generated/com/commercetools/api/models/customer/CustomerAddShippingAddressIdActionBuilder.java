@@ -29,7 +29,7 @@ public class CustomerAddShippingAddressIdActionBuilder implements Builder<Custom
     private String addressKey;
 
     /**
-     *  <p><code>id</code> of the Address to become a shipping address.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become a shipping address.</p>
      * @param addressId value to be set
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class CustomerAddShippingAddressIdActionBuilder implements Builder<Custom
     }
 
     /**
-     *  <p><code>key</code> of the Address to become a shipping address.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become a shipping address.</p>
      * @param addressKey value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class CustomerAddShippingAddressIdActionBuilder implements Builder<Custom
     }
 
     /**
-     *  <p><code>id</code> of the Address to become a shipping address.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become a shipping address.</p>
      * @return addressId
      */
 
@@ -61,7 +61,7 @@ public class CustomerAddShippingAddressIdActionBuilder implements Builder<Custom
     }
 
     /**
-     *  <p><code>key</code> of the Address to become a shipping address.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become a shipping address.</p>
      * @return addressKey
      */
 

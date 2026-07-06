@@ -10,18 +10,18 @@ import javax.annotation.Nullable;
 import com.commercetools.history.models.change_value.ParcelChangeValue;
 import com.commercetools.history.models.common.TrackingData;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set Parcel Tracking Data on Orders.</li>
- *   <li>Set Parcel Tracking Data on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetParcelTrackingDataAction" rel="nofollow">Set Parcel Tracking Data</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetParcelTrackingDataAction" rel="nofollow">Set Parcel Tracking Data</a> on Staged Orders.</li>
  *  </ul>
  *
  * <hr>
@@ -193,8 +193,8 @@ public interface SetParcelTrackingDataChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetParcelTrackingDataChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetParcelTrackingDataChange>() {
+    public static tools.jackson.core.type.TypeReference<SetParcelTrackingDataChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetParcelTrackingDataChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetParcelTrackingDataChange>";

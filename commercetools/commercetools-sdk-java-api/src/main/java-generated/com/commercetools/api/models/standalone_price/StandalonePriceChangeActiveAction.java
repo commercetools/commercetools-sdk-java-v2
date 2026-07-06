@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Updating the value of a StandalonePrice produces the StandalonePriceActiveChanged Message.</p>
+ *  <p>Updating the value of a <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceActiveChangedMessage" rel="nofollow">StandalonePriceActiveChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface StandalonePriceChangeActiveAction extends StandalonePriceUpdate
     String CHANGE_ACTIVE = "changeActive";
 
     /**
-     *  <p>New value to set for the <code>active</code> field of the StandalonePrice.</p>
+     *  <p>New value to set for the <code>active</code> field of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @return active
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface StandalonePriceChangeActiveAction extends StandalonePriceUpdate
     public Boolean getActive();
 
     /**
-     *  <p>New value to set for the <code>active</code> field of the StandalonePrice.</p>
+     *  <p>New value to set for the <code>active</code> field of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param active value to be set
      */
 
@@ -120,8 +120,8 @@ public interface StandalonePriceChangeActiveAction extends StandalonePriceUpdate
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceChangeActiveAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceChangeActiveAction>() {
+    public static tools.jackson.core.type.TypeReference<StandalonePriceChangeActiveAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StandalonePriceChangeActiveAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StandalonePriceChangeActiveAction>";

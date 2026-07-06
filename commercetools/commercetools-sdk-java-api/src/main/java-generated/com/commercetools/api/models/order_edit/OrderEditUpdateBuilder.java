@@ -33,7 +33,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
     private Boolean dryRun;
 
     /**
-     *  <p>Expected version of the Order Edit on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the Order Edit on which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      * @param version value to be set
      * @return Builder
      */
@@ -113,7 +113,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
     }
 
     /**
-     *  <p>If set to <code>true</code>, the Order Edit is applied on the Order without persisting it.</p>
+     *  <p>If set to <code>true</code>, the Order Edit is applied on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> without persisting it.</p>
      * @param dryRun value to be set
      * @return Builder
      */
@@ -124,7 +124,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
     }
 
     /**
-     *  <p>Expected version of the Order Edit on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the Order Edit on which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      * @return version
      */
 
@@ -142,7 +142,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
     }
 
     /**
-     *  <p>If set to <code>true</code>, the Order Edit is applied on the Order without persisting it.</p>
+     *  <p>If set to <code>true</code>, the Order Edit is applied on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> without persisting it.</p>
      * @return dryRun
      */
 

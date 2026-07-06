@@ -36,7 +36,7 @@ public class ProductSearchFacetCountValueBuilder implements Builder<ProductSearc
     private com.commercetools.api.models.product_search.ProductSearchFacetCountLevelEnum level;
 
     /**
-     *  <p>Name of the count facet to appear in the ProductSearchFacetResultCount.</p>
+     *  <p>Name of the count facet to appear in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchFacetResultCount" rel="nofollow">ProductSearchFacetResultCount</a>.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -107,7 +107,7 @@ public class ProductSearchFacetCountValueBuilder implements Builder<ProductSearc
     }
 
     /**
-     *  <p>Name of the count facet to appear in the ProductSearchFacetResultCount.</p>
+     *  <p>Name of the count facet to appear in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchFacetResultCount" rel="nofollow">ProductSearchFacetResultCount</a>.</p>
      * @return name
      */
 

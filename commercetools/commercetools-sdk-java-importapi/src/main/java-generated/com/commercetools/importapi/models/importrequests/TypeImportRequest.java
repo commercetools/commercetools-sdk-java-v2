@@ -10,15 +10,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.importapi.models.types.TypeImport;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>The request body to import Types. Contains data for Types to be created or updated in a Project.</p>
+ *  <p>The request body to <a href="https://docs.commercetools.com/apis/ctp:import:endpoint:/{projectKey}/types/import-containers/{importContainerKey}:POST" rel="nofollow">import Types</a>. Contains data for <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Types</a> to be created or updated in a Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -135,8 +135,8 @@ public interface TypeImportRequest extends ImportRequest {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TypeImportRequest> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TypeImportRequest>() {
+    public static tools.jackson.core.type.TypeReference<TypeImportRequest> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TypeImportRequest>() {
             @Override
             public String toString() {
                 return "TypeReference<TypeImportRequest>";

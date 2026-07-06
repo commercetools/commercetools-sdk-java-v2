@@ -117,7 +117,7 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
     }
 
     /**
-     *  <p>Address removed from <code>billingAddressesIds</code>.</p>
+     *  <p>Address removed from <code>billingAddressIds</code>.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -129,7 +129,7 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
     }
 
     /**
-     *  <p>Address removed from <code>billingAddressesIds</code>.</p>
+     *  <p>Address removed from <code>billingAddressIds</code>.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -141,7 +141,7 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
     }
 
     /**
-     *  <p>Address removed from <code>billingAddressesIds</code>.</p>
+     *  <p>Address removed from <code>billingAddressIds</code>.</p>
      * @param address value to be set
      * @return Builder
      */
@@ -179,7 +179,7 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
     }
 
     /**
-     *  <p>Address removed from <code>billingAddressesIds</code>.</p>
+     *  <p>Address removed from <code>billingAddressIds</code>.</p>
      * @return address
      */
 

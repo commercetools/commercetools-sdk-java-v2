@@ -121,7 +121,7 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
     }
 
     /**
-     *  <p>The Customer to be part of the Business Unit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> to be part of the Business Unit.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -134,7 +134,7 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
     }
 
     /**
-     *  <p>The Customer to be part of the Business Unit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> to be part of the Business Unit.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -146,7 +146,7 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
     }
 
     /**
-     *  <p>The Customer to be part of the Business Unit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> to be part of the Business Unit.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -167,7 +167,7 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
     }
 
     /**
-     *  <p>The Customer to be part of the Business Unit.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> to be part of the Business Unit.</p>
      * @return customer
      */
 

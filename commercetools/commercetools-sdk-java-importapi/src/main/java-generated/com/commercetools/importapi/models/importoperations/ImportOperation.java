@@ -13,12 +13,12 @@ import com.commercetools.importapi.models.common.ProcessingState;
 import com.commercetools.importapi.models.common.UnresolvedReferences;
 import com.commercetools.importapi.models.errors.ErrorObject;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Represents the import status of a resource.</p>
@@ -53,7 +53,7 @@ public interface ImportOperation {
     public Long getVersion();
 
     /**
-     *  <p><code>key</code> of the ImportContainer.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainer</a>.</p>
      * @return importContainerKey
      */
     @NotNull
@@ -93,7 +93,7 @@ public interface ImportOperation {
     public Long getResourceVersion();
 
     /**
-     *  <p>Contains errors if the import was unsuccessful. See Errors.</p>
+     *  <p>Contains errors if the import was unsuccessful. See <span>Errors</span>.</p>
      * @return errors
      */
     @Valid
@@ -140,7 +140,7 @@ public interface ImportOperation {
     public void setVersion(final Long version);
 
     /**
-     *  <p><code>key</code> of the ImportContainer.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainer</a>.</p>
      * @param importContainerKey value to be set
      */
 
@@ -175,7 +175,7 @@ public interface ImportOperation {
     public void setResourceVersion(final Long resourceVersion);
 
     /**
-     *  <p>Contains errors if the import was unsuccessful. See Errors.</p>
+     *  <p>Contains errors if the import was unsuccessful. See <span>Errors</span>.</p>
      * @param errors values to be set
      */
 
@@ -183,7 +183,7 @@ public interface ImportOperation {
     public void setErrors(final ErrorObject... errors);
 
     /**
-     *  <p>Contains errors if the import was unsuccessful. See Errors.</p>
+     *  <p>Contains errors if the import was unsuccessful. See <span>Errors</span>.</p>
      * @param errors values to be set
      */
 
@@ -320,8 +320,8 @@ public interface ImportOperation {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ImportOperation> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ImportOperation>() {
+    public static tools.jackson.core.type.TypeReference<ImportOperation> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ImportOperation>() {
             @Override
             public String toString() {
                 return "TypeReference<ImportOperation>";

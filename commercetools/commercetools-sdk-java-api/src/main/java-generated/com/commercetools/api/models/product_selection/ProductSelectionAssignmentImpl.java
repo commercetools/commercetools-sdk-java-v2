@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,11 +15,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
  *  <p>Given the mode of Product Selection, this assignment refers to, it may contain:</p>
  *  <ul>
- *   <li><code>variantSelection</code> field for a Product Selection with <code>Individual</code> ProductSelectionMode.</li>
- *   <li><code>variantExclusion</code> field for a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</li>
+ *   <li><code>variantSelection</code> field for a Product Selection with <code>Individual</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</li>
+ *   <li><code>variantExclusion</code> field for a Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</li>
  *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -73,7 +74,7 @@ public class ProductSelectionAssignmentImpl implements ProductSelectionAssignmen
 
     /**
      *  <p>Defines which particular Variants of the Product are included in the Product Selection. If undefined all Variants of the referenced Product are included.</p>
-     *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. The list of SKUs will be updated automatically on any published change of those performed on the respective Product itself. Staged changes do not affect this field.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {
@@ -82,7 +83,7 @@ public class ProductSelectionAssignmentImpl implements ProductSelectionAssignmen
 
     /**
      *  <p>Defines which particular Variants of the Product are excluded from the Product Selection. If undefined all Variants of the referenced Product are excluded.</p>
-     *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. The list of SKUs will be updated automatically on any published change of those performed on the respective Product itself. Staged changes do not affect this field.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion() {

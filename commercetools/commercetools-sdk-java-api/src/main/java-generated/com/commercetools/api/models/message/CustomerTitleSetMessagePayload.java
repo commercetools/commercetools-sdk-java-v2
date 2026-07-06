@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Title update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetTitleAction" rel="nofollow">Set Title</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +36,7 @@ public interface CustomerTitleSetMessagePayload extends MessagePayload {
     String CUSTOMER_TITLE_SET = "CustomerTitleSet";
 
     /**
-     *  <p>The <code>title</code> that was set during the Set Title update action.</p>
+     *  <p>The <code>title</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetTitleAction" rel="nofollow">Set Title</a> update action.</p>
      * @return title
      */
 
@@ -43,7 +44,7 @@ public interface CustomerTitleSetMessagePayload extends MessagePayload {
     public String getTitle();
 
     /**
-     *  <p>The <code>title</code> that was set during the Set Title update action.</p>
+     *  <p>The <code>title</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetTitleAction" rel="nofollow">Set Title</a> update action.</p>
      * @param title value to be set
      */
 
@@ -116,8 +117,8 @@ public interface CustomerTitleSetMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerTitleSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerTitleSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<CustomerTitleSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerTitleSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerTitleSetMessagePayload>";

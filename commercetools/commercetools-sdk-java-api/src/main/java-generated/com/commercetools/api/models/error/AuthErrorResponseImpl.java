@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Represents errors related to authentication and authorization in a format conforming to the OAuth 2.0 specification.</p>
+ *  <p>Represents errors related to authentication and authorization in a format conforming to the <span>OAuth 2.0 specification</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AuthErrorResponseImpl implements AuthErrorResponse, ModelBase {
@@ -79,7 +80,7 @@ public class AuthErrorResponseImpl implements AuthErrorResponse, ModelBase {
     }
 
     /**
-     *  <p>Error code as per the OAuth 2.0 specification. For example: <code>"access_denied"</code>.</p>
+     *  <p>Error code as per the <span>OAuth 2.0 specification</span>. For example: <code>"access_denied"</code>.</p>
      */
 
     public String getError() {

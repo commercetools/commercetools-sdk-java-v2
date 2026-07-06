@@ -9,7 +9,6 @@ import com.commercetools.api.models.product.ProductResourceIdentifier;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -18,6 +17,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ReviewSetTargetAction
@@ -54,7 +55,7 @@ public class ReviewSetTargetActionImpl implements ReviewSetTargetAction, ModelBa
     }
 
     /**
-     *  <p>Value to set, specified as ProductResourceIdentifier or ChannelResourceIdentifier, respectively. If empty, any existing value will be removed.</p>
+     *  <p>Value to set, specified as <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductResourceIdentifier" rel="nofollow">ProductResourceIdentifier</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelResourceIdentifier" rel="nofollow">ChannelResourceIdentifier</a>, respectively. If empty, any existing value will be removed.</p>
      */
 
     public java.lang.Object getTarget() {

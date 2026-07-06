@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductSelection
@@ -110,7 +111,7 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
     }
 
     /**
-     *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+     *  <p>Present on resources updated after 1/02/2019 except for <span>events not tracked</span>.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -118,7 +119,7 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
     }
 
     /**
-     *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+     *  <p>Present on resources created after 1/02/2019 except for <span>events not tracked</span>.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -150,7 +151,7 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
     }
 
     /**
-     *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
+     *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">including or excluding</a> them explicitly.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductSelectionMode getMode() {

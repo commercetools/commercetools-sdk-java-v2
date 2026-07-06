@@ -25,7 +25,7 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
     private java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values;
 
     /**
-     *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
+     *  <p>The classification items that can be used for specifying any <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>.</p>
      * @param values value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
     }
 
     /**
-     *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
+     *  <p>The classification items that can be used for specifying any <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>.</p>
      * @param values value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
     }
 
     /**
-     *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
+     *  <p>The classification items that can be used for specifying any <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>.</p>
      * @param values value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
     }
 
     /**
-     *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
+     *  <p>The classification items that can be used for specifying any <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>.</p>
      * @param builder function to build the values value
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
     }
 
     /**
-     *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
+     *  <p>The classification items that can be used for specifying any <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>.</p>
      * @param builder function to build the values value
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
     }
 
     /**
-     *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
+     *  <p>The classification items that can be used for specifying any <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>.</p>
      * @param builder function to build the values value
      * @return Builder
      */
@@ -105,7 +105,7 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
     }
 
     /**
-     *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
+     *  <p>The classification items that can be used for specifying any <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>.</p>
      * @param builder function to build the values value
      * @return Builder
      */
@@ -116,7 +116,7 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
     }
 
     /**
-     *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
+     *  <p>The classification items that can be used for specifying any <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>.</p>
      * @return values
      */
 

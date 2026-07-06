@@ -93,6 +93,14 @@ public class ByProjectKeyBusinessUnitsKeyByKeyTest {
                                 .businessUnits()
                                 .withKey("test_key")
                                 .delete()
+                                .withDataErasure(true)
+                                .createHttpRequest(),
+                        "delete", "test_projectKey/business-units/key=test_key?dataErasure=true", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .businessUnits()
+                                .withKey("test_key")
+                                .delete()
                                 .withVersion(2)
                                 .createHttpRequest(),
                         "delete", "test_projectKey/business-units/key=test_key?version=2", },
@@ -129,6 +137,11 @@ public class ByProjectKeyBusinessUnitsKeyByKeyTest {
                         .businessUnits()
                         .withKey("test_key")
                         .post(com.commercetools.api.models.business_unit.BusinessUnitUpdate.of()), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .businessUnits()
+                        .withKey("test_key")
+                        .delete()
+                        .withDataErasure(true), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .businessUnits()
                         .withKey("test_key")

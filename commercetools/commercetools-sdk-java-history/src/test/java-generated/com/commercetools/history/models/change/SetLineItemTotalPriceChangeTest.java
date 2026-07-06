@@ -23,8 +23,11 @@ public class SetLineItemTotalPriceChangeTest {
                 new Object[] { "nextValue",
                         SetLineItemTotalPriceChange.builder()
                                 .nextValue(new com.commercetools.history.models.common.MoneyImpl()) },
-                new Object[] { "lineItem", SetLineItemTotalPriceChange.builder()
-                        .lineItem(new com.commercetools.history.models.common.LocalizedStringImpl()) } };
+                new Object[] { "lineItem",
+                        SetLineItemTotalPriceChange.builder()
+                                .lineItem(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "lineItemId", SetLineItemTotalPriceChange.builder().lineItemId("lineItemId") },
+                new Object[] { "variant", SetLineItemTotalPriceChange.builder().variant("variant") } };
     }
 
     @Test
@@ -55,5 +58,19 @@ public class SetLineItemTotalPriceChangeTest {
         value.setLineItem(new com.commercetools.history.models.common.LocalizedStringImpl());
         Assertions.assertThat(value.getLineItem())
                 .isEqualTo(new com.commercetools.history.models.common.LocalizedStringImpl());
+    }
+
+    @Test
+    public void lineItemId() {
+        SetLineItemTotalPriceChange value = SetLineItemTotalPriceChange.of();
+        value.setLineItemId("lineItemId");
+        Assertions.assertThat(value.getLineItemId()).isEqualTo("lineItemId");
+    }
+
+    @Test
+    public void variant() {
+        SetLineItemTotalPriceChange value = SetLineItemTotalPriceChange.of();
+        value.setVariant("variant");
+        Assertions.assertThat(value.getVariant()).isEqualTo("variant");
     }
 }

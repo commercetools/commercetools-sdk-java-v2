@@ -8,12 +8,12 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * SuggestionResult
@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface SuggestionResult {
 
     /**
-     *  <p>The result may contain multiple Suggestions identified by their Locale. See Suggestions for two languages.</p>
+     *  <p>The result may contain multiple Suggestions identified by their <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a>. See <span>Suggestions for two languages</span>.</p>
      * @return map of the pattern property values
      */
     @NotNull
@@ -42,7 +42,7 @@ public interface SuggestionResult {
     public Map<String, List<Suggestion>> values();
 
     /**
-     *  <p>The result may contain multiple Suggestions identified by their Locale. See Suggestions for two languages.</p>
+     *  <p>The result may contain multiple Suggestions identified by their <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a>. See <span>Suggestions for two languages</span>.</p>
      * @param key property name
      * @param value property value
      */
@@ -117,8 +117,8 @@ public interface SuggestionResult {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SuggestionResult> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SuggestionResult>() {
+    public static tools.jackson.core.type.TypeReference<SuggestionResult> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SuggestionResult>() {
             @Override
             public String toString() {
                 return "TypeReference<SuggestionResult>";

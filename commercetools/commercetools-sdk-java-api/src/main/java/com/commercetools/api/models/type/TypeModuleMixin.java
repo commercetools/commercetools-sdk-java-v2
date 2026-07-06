@@ -9,10 +9,11 @@ import com.commercetools.api.SimpleModuleMixin;
 import com.commercetools.api.json.ApiModuleOptions;
 import com.commercetools.api.json.CustomFieldDeserializer;
 import com.commercetools.api.json.CustomFieldJsonNodeDeserializer;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.module.SimpleModule;
 
 import io.vrap.rmf.base.client.utils.json.modules.ModuleOptions;
+
+import tools.jackson.core.type.TypeReference;
+import tools.jackson.databind.module.SimpleModule;
 
 @RegisterSimpleModuleMixin
 public class TypeModuleMixin implements SimpleModuleMixin {

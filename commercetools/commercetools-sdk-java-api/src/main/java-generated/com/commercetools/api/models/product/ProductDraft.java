@@ -14,12 +14,12 @@ import com.commercetools.api.models.product_type.ProductTypeResourceIdentifier;
 import com.commercetools.api.models.state.StateResourceIdentifier;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductDraft
@@ -60,7 +60,7 @@ public interface ProductDraft
     public LocalizedString getName();
 
     /**
-     *  <p>User-defined identifier used in a deep-link URL for the Product. It must be unique across a Project, but a Product can have the same slug in different Locales. It must match the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
+     *  <p>User-defined identifier used in a deep-link URL for the Product. It must be unique across a Project, but a Product can have the same slug in different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>. It must match the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
      * @return slug
      */
     @NotNull
@@ -70,8 +70,7 @@ public interface ProductDraft
 
     /**
      *  <p>User-defined unique identifier for the Product.</p>
-     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Products with the Import API and the Merchant Center.</p>
-     *  <p>To update a Product using the Import API or Merchant Center, the Product <code>key</code> must match the pattern <code>^[A-Za-z0-9_-]{2,256}$</code>.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Products with the <span>Import API</span> and the <span>Merchant Center</span>.</p>
      * @return key
      */
 
@@ -95,7 +94,7 @@ public interface ProductDraft
     public List<CategoryResourceIdentifier> getCategories();
 
     /**
-     *  <p>Numerical values to allow ordering of Products within specified Categories. If the referenced Categories are not also assigned in the <code>categories</code> field, an InvalidOperation error is returned.</p>
+     *  <p>Numerical values to allow ordering of Products within specified Categories. If the referenced Categories are not also assigned in the <code>categories</code> field, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return categoryOrderHints
      */
     @Valid
@@ -127,7 +126,8 @@ public interface ProductDraft
     public LocalizedString getMetaKeywords();
 
     /**
-     *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided also.</p>
+     *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided or if the referenced Product Type contains any Variant-level <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> with <code>isRequired</code> set to <code>true</code>.</p>
+     *  <p>Must not be provided when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> to create Variants instead.</p>
      * @return masterVariant
      */
     @Valid
@@ -136,6 +136,7 @@ public interface ProductDraft
 
     /**
      *  <p>The additional Product Variants for the Product.</p>
+     *  <p>Must not be provided when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> to create Variants instead.</p>
      * @return variants
      */
     @Valid
@@ -151,7 +152,7 @@ public interface ProductDraft
     public TaxCategoryResourceIdentifier getTaxCategory();
 
     /**
-     *  <p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p>
+     *  <p>Used by <span>Search Term Suggestions</span>, but is also considered for a <span>full text search</span> in the Product Projection Search API.</p>
      * @return searchKeywords
      */
     @Valid
@@ -167,7 +168,7 @@ public interface ProductDraft
     public StateResourceIdentifier getState();
 
     /**
-     *  <p>If <code>true</code>, the Product is published immediately to the current projection.</p>
+     *  <p>If <code>true</code>, the platform sets the <code>published</code> flag on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> to <code>true</code>. This makes the current representation retrievable in <span>Product Projection</span> endpoints and indexes it for <span>Product Search</span>. You can also set this flag later using the <span>Publish</span> update action.</p>
      * @return publish
      */
 
@@ -183,7 +184,7 @@ public interface ProductDraft
     public ProductPriceModeEnum getPriceMode();
 
     /**
-     *  <p>Product Attributes according to the respective AttributeDefinition. <strong>Not supported</strong> by Product Projection Search.</p>
+     *  <p>Product Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionDraft" rel="nofollow">AttributeDefinition</a>. <strong>Not supported</strong> by <span>Product Projection Search</span>.</p>
      * @return attributes
      */
     @Valid
@@ -205,7 +206,7 @@ public interface ProductDraft
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>User-defined identifier used in a deep-link URL for the Product. It must be unique across a Project, but a Product can have the same slug in different Locales. It must match the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
+     *  <p>User-defined identifier used in a deep-link URL for the Product. It must be unique across a Project, but a Product can have the same slug in different <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a>. It must match the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
      * @param slug value to be set
      */
 
@@ -213,8 +214,7 @@ public interface ProductDraft
 
     /**
      *  <p>User-defined unique identifier for the Product.</p>
-     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Products with the Import API and the Merchant Center.</p>
-     *  <p>To update a Product using the Import API or Merchant Center, the Product <code>key</code> must match the pattern <code>^[A-Za-z0-9_-]{2,256}$</code>.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Products with the <span>Import API</span> and the <span>Merchant Center</span>.</p>
      * @param key value to be set
      */
 
@@ -243,7 +243,7 @@ public interface ProductDraft
     public void setCategories(final List<CategoryResourceIdentifier> categories);
 
     /**
-     *  <p>Numerical values to allow ordering of Products within specified Categories. If the referenced Categories are not also assigned in the <code>categories</code> field, an InvalidOperation error is returned.</p>
+     *  <p>Numerical values to allow ordering of Products within specified Categories. If the referenced Categories are not also assigned in the <code>categories</code> field, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param categoryOrderHints value to be set
      */
 
@@ -271,7 +271,8 @@ public interface ProductDraft
     public void setMetaKeywords(final LocalizedString metaKeywords);
 
     /**
-     *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided also.</p>
+     *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided or if the referenced Product Type contains any Variant-level <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> with <code>isRequired</code> set to <code>true</code>.</p>
+     *  <p>Must not be provided when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> to create Variants instead.</p>
      * @param masterVariant value to be set
      */
 
@@ -279,6 +280,7 @@ public interface ProductDraft
 
     /**
      *  <p>The additional Product Variants for the Product.</p>
+     *  <p>Must not be provided when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> to create Variants instead.</p>
      * @param variants values to be set
      */
 
@@ -287,6 +289,7 @@ public interface ProductDraft
 
     /**
      *  <p>The additional Product Variants for the Product.</p>
+     *  <p>Must not be provided when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> to create Variants instead.</p>
      * @param variants values to be set
      */
 
@@ -300,7 +303,7 @@ public interface ProductDraft
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
 
     /**
-     *  <p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p>
+     *  <p>Used by <span>Search Term Suggestions</span>, but is also considered for a <span>full text search</span> in the Product Projection Search API.</p>
      * @param searchKeywords value to be set
      */
 
@@ -314,7 +317,7 @@ public interface ProductDraft
     public void setState(final StateResourceIdentifier state);
 
     /**
-     *  <p>If <code>true</code>, the Product is published immediately to the current projection.</p>
+     *  <p>If <code>true</code>, the platform sets the <code>published</code> flag on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> to <code>true</code>. This makes the current representation retrievable in <span>Product Projection</span> endpoints and indexes it for <span>Product Search</span>. You can also set this flag later using the <span>Publish</span> update action.</p>
      * @param publish value to be set
      */
 
@@ -328,7 +331,7 @@ public interface ProductDraft
     public void setPriceMode(final ProductPriceModeEnum priceMode);
 
     /**
-     *  <p>Product Attributes according to the respective AttributeDefinition. <strong>Not supported</strong> by Product Projection Search.</p>
+     *  <p>Product Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionDraft" rel="nofollow">AttributeDefinition</a>. <strong>Not supported</strong> by <span>Product Projection Search</span>.</p>
      * @param attributes values to be set
      */
 
@@ -336,7 +339,7 @@ public interface ProductDraft
     public void setAttributes(final Attribute... attributes);
 
     /**
-     *  <p>Product Attributes according to the respective AttributeDefinition. <strong>Not supported</strong> by Product Projection Search.</p>
+     *  <p>Product Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionDraft" rel="nofollow">AttributeDefinition</a>. <strong>Not supported</strong> by <span>Product Projection Search</span>.</p>
      * @param attributes values to be set
      */
 
@@ -463,8 +466,8 @@ public interface ProductDraft
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductDraft>() {
+    public static tools.jackson.core.type.TypeReference<ProductDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductDraft>";

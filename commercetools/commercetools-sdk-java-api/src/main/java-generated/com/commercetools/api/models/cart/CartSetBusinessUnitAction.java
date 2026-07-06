@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Updates the Business Unit on the Cart. The Cart must have an existing Business Unit assigned already.</p>
@@ -40,7 +40,7 @@ public interface CartSetBusinessUnitAction extends CartUpdateAction {
     String SET_BUSINESS_UNIT = "setBusinessUnit";
 
     /**
-     *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart.</p>
+     *  <p>New Business Unit to assign to the Cart, which must have access to the <span>Store</span> that is set on the Cart.</p>
      * @return businessUnit
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface CartSetBusinessUnitAction extends CartUpdateAction {
     public BusinessUnitResourceIdentifier getBusinessUnit();
 
     /**
-     *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart.</p>
+     *  <p>New Business Unit to assign to the Cart, which must have access to the <span>Store</span> that is set on the Cart.</p>
      * @param businessUnit value to be set
      */
 
@@ -123,8 +123,8 @@ public interface CartSetBusinessUnitAction extends CartUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartSetBusinessUnitAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartSetBusinessUnitAction>() {
+    public static tools.jackson.core.type.TypeReference<CartSetBusinessUnitAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartSetBusinessUnitAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartSetBusinessUnitAction>";

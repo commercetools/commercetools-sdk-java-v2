@@ -10,18 +10,18 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.ItemState;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Change the state of CustomLineItem according to allowed transitions on Orders.</li>
- *   <li>Change the state of CustomLineItem according to allowed transitions on Staged Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderTransitionCustomLineItemStateAction" rel="nofollow">Change the state of CustomLineItem according to allowed transitions</a> on Orders.</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderTransitionCustomLineItemStateAction" rel="nofollow">Change the state of CustomLineItem according to allowed transitions</a> on Staged Orders.</li>
  *  </ul>
  *
  * <hr>
@@ -33,6 +33,7 @@ import jakarta.validation.constraints.NotNull;
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .lineItemId("{lineItemId}")
+ *             .customLineItemId("{customLineItemId}")
  *             .stateId("{stateId}")
  *             .build()
  * </code></pre>
@@ -83,7 +84,7 @@ public interface TransitionCustomLineItemStateChange extends Change {
     public List<ItemState> getNextValue();
 
     /**
-     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
      * @return lineItemId
      */
     @NotNull
@@ -91,7 +92,15 @@ public interface TransitionCustomLineItemStateChange extends Change {
     public String getLineItemId();
 
     /**
-     *  <p><code>id</code> of the State involved in the transition.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
+     * @return customLineItemId
+     */
+    @NotNull
+    @JsonProperty("customLineItemId")
+    public String getCustomLineItemId();
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> involved in the transition.</p>
      * @return stateId
      */
     @NotNull
@@ -136,14 +145,21 @@ public interface TransitionCustomLineItemStateChange extends Change {
     public void setNextValue(final List<ItemState> nextValue);
 
     /**
-     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
 
     /**
-     *  <p><code>id</code> of the State involved in the transition.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
+     * @param customLineItemId value to be set
+     */
+
+    public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> involved in the transition.</p>
      * @param stateId value to be set
      */
 
@@ -168,6 +184,7 @@ public interface TransitionCustomLineItemStateChange extends Change {
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
         instance.setLineItemId(template.getLineItemId());
+        instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setStateId(template.getStateId());
         return instance;
     }
@@ -198,6 +215,7 @@ public interface TransitionCustomLineItemStateChange extends Change {
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setLineItemId(template.getLineItemId());
+        instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setStateId(template.getStateId());
         return instance;
     }
@@ -234,8 +252,8 @@ public interface TransitionCustomLineItemStateChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TransitionCustomLineItemStateChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TransitionCustomLineItemStateChange>() {
+    public static tools.jackson.core.type.TypeReference<TransitionCustomLineItemStateChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TransitionCustomLineItemStateChange>() {
             @Override
             public String toString() {
                 return "TypeReference<TransitionCustomLineItemStateChange>";

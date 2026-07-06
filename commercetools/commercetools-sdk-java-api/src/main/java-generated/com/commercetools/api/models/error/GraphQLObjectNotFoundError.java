@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Returned if the requested resource was not found or the Product Search index is inactive.</p>
+ *  <p>Returned if the requested resource was not found or the Product Search index is <span>inactive</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -111,8 +111,8 @@ public interface GraphQLObjectNotFoundError extends GraphQLErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLObjectNotFoundError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLObjectNotFoundError>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLObjectNotFoundError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLObjectNotFoundError>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLObjectNotFoundError>";

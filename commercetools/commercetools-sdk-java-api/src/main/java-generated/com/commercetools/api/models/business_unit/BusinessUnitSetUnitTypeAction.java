@@ -8,15 +8,15 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>This action generates a BusinessUnitTypeSet Message.</p>
+ *  <p>This action generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitTypeSetMessage" rel="nofollow">BusinessUnitTypeSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ public interface BusinessUnitSetUnitTypeAction extends BusinessUnitUpdateAction 
     String SET_UNIT_TYPE = "setUnitType";
 
     /**
-     *  <p>New type of the Business Unit.</p>
+     *  <p>New type of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      *  <p>If <code>unitType="Company"</code>, the Business Unit <code>storeMode</code>, <code>associateMode</code>, and <code>approvalRuleMode</code> field values must be <code>Explicit</code>.</p>
      * @return unitType
      */
@@ -48,7 +48,7 @@ public interface BusinessUnitSetUnitTypeAction extends BusinessUnitUpdateAction 
     public BusinessUnitType getUnitType();
 
     /**
-     *  <p>New parent unit for the Business Unit, if <code>unitType="Division"</code>.</p>
+     *  <p>New parent unit for the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>, if <code>unitType="Division"</code>.</p>
      * @return parentUnit
      */
     @Valid
@@ -56,7 +56,7 @@ public interface BusinessUnitSetUnitTypeAction extends BusinessUnitUpdateAction 
     public BusinessUnitResourceIdentifier getParentUnit();
 
     /**
-     *  <p>New type of the Business Unit.</p>
+     *  <p>New type of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      *  <p>If <code>unitType="Company"</code>, the Business Unit <code>storeMode</code>, <code>associateMode</code>, and <code>approvalRuleMode</code> field values must be <code>Explicit</code>.</p>
      * @param unitType value to be set
      */
@@ -64,7 +64,7 @@ public interface BusinessUnitSetUnitTypeAction extends BusinessUnitUpdateAction 
     public void setUnitType(final BusinessUnitType unitType);
 
     /**
-     *  <p>New parent unit for the Business Unit, if <code>unitType="Division"</code>.</p>
+     *  <p>New parent unit for the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>, if <code>unitType="Division"</code>.</p>
      * @param parentUnit value to be set
      */
 
@@ -140,8 +140,8 @@ public interface BusinessUnitSetUnitTypeAction extends BusinessUnitUpdateAction 
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitSetUnitTypeAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitSetUnitTypeAction>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitSetUnitTypeAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitSetUnitTypeAction>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitSetUnitTypeAction>";

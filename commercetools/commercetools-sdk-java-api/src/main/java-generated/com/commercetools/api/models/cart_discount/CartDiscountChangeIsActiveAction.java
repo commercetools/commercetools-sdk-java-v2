@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CartDiscountChangeIsActiveAction
@@ -39,7 +39,7 @@ public interface CartDiscountChangeIsActiveAction extends CartDiscountUpdateActi
 
     /**
      *  <p>New value to set. If set to <code>true</code>, the Discount will be applied to the Cart.</p>
-     *  <p>If the limit for active Cart Discounts is reached, a MaxCartDiscountsReached error is returned.</p>
+     *  <p>If the limit for active Cart Discounts is reached, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxCartDiscountsReachedError" rel="nofollow">MaxCartDiscountsReached</a> error is returned.</p>
      * @return isActive
      */
     @NotNull
@@ -48,7 +48,7 @@ public interface CartDiscountChangeIsActiveAction extends CartDiscountUpdateActi
 
     /**
      *  <p>New value to set. If set to <code>true</code>, the Discount will be applied to the Cart.</p>
-     *  <p>If the limit for active Cart Discounts is reached, a MaxCartDiscountsReached error is returned.</p>
+     *  <p>If the limit for active Cart Discounts is reached, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxCartDiscountsReachedError" rel="nofollow">MaxCartDiscountsReached</a> error is returned.</p>
      * @param isActive value to be set
      */
 
@@ -121,8 +121,8 @@ public interface CartDiscountChangeIsActiveAction extends CartDiscountUpdateActi
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountChangeIsActiveAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountChangeIsActiveAction>() {
+    public static tools.jackson.core.type.TypeReference<CartDiscountChangeIsActiveAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartDiscountChangeIsActiveAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartDiscountChangeIsActiveAction>";

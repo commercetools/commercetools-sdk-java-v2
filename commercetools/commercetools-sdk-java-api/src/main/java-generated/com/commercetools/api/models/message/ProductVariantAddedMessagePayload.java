@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.product.ProductVariant;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Add ProductVariant update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductAddVariantAction" rel="nofollow">Add ProductVariant</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface ProductVariantAddedMessagePayload extends MessagePayload {
     String PRODUCT_VARIANT_ADDED = "ProductVariantAdded";
 
     /**
-     *  <p>Unique identifier of the Product Variant that was added.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> that was added.</p>
      * @return variant
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface ProductVariantAddedMessagePayload extends MessagePayload {
     public ProductVariant getVariant();
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @return staged
      */
     @NotNull
@@ -58,14 +58,14 @@ public interface ProductVariantAddedMessagePayload extends MessagePayload {
     public Boolean getStaged();
 
     /**
-     *  <p>Unique identifier of the Product Variant that was added.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> that was added.</p>
      * @param variant value to be set
      */
 
     public void setVariant(final ProductVariant variant);
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @param staged value to be set
      */
 
@@ -141,8 +141,8 @@ public interface ProductVariantAddedMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductVariantAddedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductVariantAddedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<ProductVariantAddedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductVariantAddedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductVariantAddedMessagePayload>";

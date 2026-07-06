@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Indicates the best deal logic applies to a Cart or Order and indicates the discount type that offers the best deal.</p>
+ *  <p>Indicates if a Product Discount or Cart Discount offers the best deal for a Cart or Order.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BestDealImpl implements BestDeal, ModelBase {
@@ -51,7 +52,7 @@ public class BestDealImpl implements BestDeal, ModelBase {
     }
 
     /**
-     *  <p>Discount type that offers the best deal; the value can be <code>product-discount</code> or <code>cart-discount</code>.</p>
+     *  <p>Discount type that offers the best deal; the value can be <code>ProductDiscount</code> or <code>CartDiscount</code>.</p>
      */
 
     public String getChosenDiscountType() {

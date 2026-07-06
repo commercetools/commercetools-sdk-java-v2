@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShoppingList
@@ -154,7 +155,7 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
     }
 
     /**
-     *  <p>Reference to a Customer associated with the ShoppingList.</p>
+     *  <p>Reference to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> associated with the ShoppingList.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
@@ -162,7 +163,7 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
     }
 
     /**
-     *  <p>Human-readable identifiers usually used as deep-link URL to the related ShoppingList. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. The slug must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set on the Project.</p>
+     *  <p>Human-readable identifiers usually used as deep-link URL to the related ShoppingList. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. The slug must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>. For <span>good performance</span>, indexes are provided for the first 15 <code>languages</code> set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getSlug() {
@@ -194,7 +195,7 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
     }
 
     /**
-     *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the default value configured in the Project is used.</p>
+     *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListsConfiguration" rel="nofollow">default value</a> configured in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> is used.</p>
      */
 
     public Long getDeleteDaysAfterLastModification() {
@@ -202,7 +203,7 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
     }
 
     /**
-     *  <p>Identifies ShoppingLists belonging to an anonymous session.</p>
+     *  <p>Identifies ShoppingLists belonging to an <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">anonymous session</a>.</p>
      */
 
     public String getAnonymousId() {
@@ -218,7 +219,7 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
     }
 
     /**
-     *  <p>Reference to the Business Unit the Shopping List belongs to. Only available for B2B-enabled Projects.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Business Unit the Shopping List belongs to. Only available for <span>B2B</span>-enabled Projects.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {

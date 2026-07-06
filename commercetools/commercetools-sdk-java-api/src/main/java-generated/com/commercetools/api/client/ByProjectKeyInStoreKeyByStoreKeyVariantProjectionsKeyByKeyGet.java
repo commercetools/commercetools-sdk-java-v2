@@ -1,0 +1,1073 @@
+
+package com.commercetools.api.client;
+
+import java.net.URI;
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
+
+import io.vrap.rmf.base.client.*;
+import io.vrap.rmf.base.client.utils.Generated;
+
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+import tools.jackson.core.type.TypeReference;
+
+/**
+ *  <p>Retrieves a Variant Projection by its key in the specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
+ *  <p>Only returns Variants belonging to Products distributed through the Store's configured channels.</p>
+ *  <p>Required access scopes:</p>
+ *  <ul>
+ *   <li><p>To retrieve the current representation, the <code>view_published_products:{projectKey}</code> scope is required.</p></li>
+ *   <li><p>To retrieve the staged representation, the API Client must have the <code>view_products:{projectKey}</code> scope.</p></li>
+ *   <li><p>To access Variant Projections in the context of a Store, the <code>view_products:{projectKey}:{storeKey}</code> scope is required.</p></li>
+ *  </ul>
+ *
+ * <hr>
+ * <div class=code-example>
+ * <pre><code class='java'>{@code
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.variant.VariantProjection>> result = apiRoot
+ *            .withProjectKey("{projectKey}")
+ *            .inStoreKeyWithStoreKeyValue("{storeKey}")
+ *            .variantProjections()
+ *            .withKey("{key}")
+ *            .get()
+ *            .execute()
+ * }</code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+public class ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet extends
+        TypeApiMethod<ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet, com.commercetools.api.models.variant.VariantProjection>
+        implements
+        com.commercetools.api.client.ProjectionselectingvariantTrait<ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet>,
+        com.commercetools.api.client.PriceselectingTrait<ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet>,
+        com.commercetools.api.client.LocaleprojectingTrait<ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet>,
+        com.commercetools.api.client.AttributefilteringTrait<ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet>,
+        com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet>,
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet>,
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.variant.VariantProjection> resultType() {
+        return new TypeReference<com.commercetools.api.models.variant.VariantProjection>() {
+        };
+    }
+
+    private String projectKey;
+    private String storeKey;
+    private String key;
+
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet(final ApiHttpClient apiHttpClient,
+            String projectKey, String storeKey, String key) {
+        super(apiHttpClient);
+        this.projectKey = projectKey;
+        this.storeKey = storeKey;
+        this.key = key;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet(
+            ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.storeKey = t.storeKey;
+        this.key = t.key;
+    }
+
+    @Override
+    protected ApiHttpRequest buildHttpRequest() {
+        List<String> params = new ArrayList<>(getQueryParamUriStrings());
+        String httpRequestPath = String.format("%s/in-store/key=%s/variant-projections/key=%s",
+            encodePathParam(this.projectKey), encodePathParam(this.storeKey), encodePathParam(this.key));
+        if (!params.isEmpty()) {
+            httpRequestPath += "?" + String.join("&", params);
+        }
+        return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
+    }
+
+    @Override
+    public ApiHttpResponse<com.commercetools.api.models.variant.VariantProjection> executeBlocking(
+            final ApiHttpClient client, final Duration timeout) {
+        return executeBlocking(client, timeout, com.commercetools.api.models.variant.VariantProjection.class);
+    }
+
+    @Override
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.variant.VariantProjection>> execute(
+            final ApiHttpClient client) {
+        return execute(client, com.commercetools.api.models.variant.VariantProjection.class);
+    }
+
+    public String getProjectKey() {
+        return this.projectKey;
+    }
+
+    public String getStoreKey() {
+        return this.storeKey;
+    }
+
+    public String getKey() {
+        return this.key;
+    }
+
+    public List<String> getStaged() {
+        return this.getQueryParam("staged");
+    }
+
+    public List<String> getPriceCurrency() {
+        return this.getQueryParam("priceCurrency");
+    }
+
+    public List<String> getPriceCountry() {
+        return this.getQueryParam("priceCountry");
+    }
+
+    public List<String> getPriceCustomerGroup() {
+        return this.getQueryParam("priceCustomerGroup");
+    }
+
+    public List<String> getPriceCustomerGroupAssignments() {
+        return this.getQueryParam("priceCustomerGroupAssignments");
+    }
+
+    public List<String> getPriceChannel() {
+        return this.getQueryParam("priceChannel");
+    }
+
+    public List<String> getPriceRecurrencePolicy() {
+        return this.getQueryParam("priceRecurrencePolicy");
+    }
+
+    public List<String> getLocaleProjection() {
+        return this.getQueryParam("localeProjection");
+    }
+
+    public List<String> getFilterAttributes() {
+        return this.getQueryParam("filter[attributes]");
+    }
+
+    public List<String> getExpand() {
+        return this.getQueryParam("expand");
+    }
+
+    public void setProjectKey(final String projectKey) {
+        this.projectKey = projectKey;
+    }
+
+    public void setStoreKey(final String storeKey) {
+        this.storeKey = storeKey;
+    }
+
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
+    /**
+     * set staged with the specified value
+     * @param staged value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withStaged(final TValue staged) {
+        return copy().withQueryParam("staged", staged);
+    }
+
+    /**
+     * add additional staged query parameter
+     * @param staged value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addStaged(final TValue staged) {
+        return copy().addQueryParam("staged", staged);
+    }
+
+    /**
+     * set staged with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withStaged(final Supplier<Boolean> supplier) {
+        return copy().withQueryParam("staged", supplier.get());
+    }
+
+    /**
+     * add additional staged query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addStaged(final Supplier<Boolean> supplier) {
+        return copy().addQueryParam("staged", supplier.get());
+    }
+
+    /**
+     * set staged with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withStaged(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("staged", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional staged query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addStaged(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("staged", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set staged with the specified values
+     * @param staged values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withStaged(
+            final Collection<TValue> staged) {
+        return copy().withoutQueryParam("staged")
+                .addQueryParams(
+                    staged.stream().map(s -> new ParamEntry<>("staged", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional staged query parameters
+     * @param staged values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addStaged(
+            final Collection<TValue> staged) {
+        return copy().addQueryParams(
+            staged.stream().map(s -> new ParamEntry<>("staged", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * set priceCurrency with the specified value
+     * @param priceCurrency value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withPriceCurrency(
+            final TValue priceCurrency) {
+        return copy().withQueryParam("priceCurrency", priceCurrency);
+    }
+
+    /**
+     * add additional priceCurrency query parameter
+     * @param priceCurrency value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addPriceCurrency(
+            final TValue priceCurrency) {
+        return copy().addQueryParam("priceCurrency", priceCurrency);
+    }
+
+    /**
+     * set priceCurrency with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withPriceCurrency(
+            final Supplier<String> supplier) {
+        return copy().withQueryParam("priceCurrency", supplier.get());
+    }
+
+    /**
+     * add additional priceCurrency query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addPriceCurrency(
+            final Supplier<String> supplier) {
+        return copy().addQueryParam("priceCurrency", supplier.get());
+    }
+
+    /**
+     * set priceCurrency with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withPriceCurrency(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("priceCurrency", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional priceCurrency query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addPriceCurrency(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("priceCurrency", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set priceCurrency with the specified values
+     * @param priceCurrency values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withPriceCurrency(
+            final Collection<TValue> priceCurrency) {
+        return copy().withoutQueryParam("priceCurrency")
+                .addQueryParams(priceCurrency.stream()
+                        .map(s -> new ParamEntry<>("priceCurrency", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional priceCurrency query parameters
+     * @param priceCurrency values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addPriceCurrency(
+            final Collection<TValue> priceCurrency) {
+        return copy().addQueryParams(priceCurrency.stream()
+                .map(s -> new ParamEntry<>("priceCurrency", s.toString()))
+                .collect(Collectors.toList()));
+    }
+
+    /**
+     * set priceCountry with the specified value
+     * @param priceCountry value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withPriceCountry(
+            final TValue priceCountry) {
+        return copy().withQueryParam("priceCountry", priceCountry);
+    }
+
+    /**
+     * add additional priceCountry query parameter
+     * @param priceCountry value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addPriceCountry(
+            final TValue priceCountry) {
+        return copy().addQueryParam("priceCountry", priceCountry);
+    }
+
+    /**
+     * set priceCountry with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withPriceCountry(
+            final Supplier<String> supplier) {
+        return copy().withQueryParam("priceCountry", supplier.get());
+    }
+
+    /**
+     * add additional priceCountry query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addPriceCountry(
+            final Supplier<String> supplier) {
+        return copy().addQueryParam("priceCountry", supplier.get());
+    }
+
+    /**
+     * set priceCountry with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withPriceCountry(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("priceCountry", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional priceCountry query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addPriceCountry(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("priceCountry", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set priceCountry with the specified values
+     * @param priceCountry values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withPriceCountry(
+            final Collection<TValue> priceCountry) {
+        return copy().withoutQueryParam("priceCountry")
+                .addQueryParams(priceCountry.stream()
+                        .map(s -> new ParamEntry<>("priceCountry", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional priceCountry query parameters
+     * @param priceCountry values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addPriceCountry(
+            final Collection<TValue> priceCountry) {
+        return copy().addQueryParams(priceCountry.stream()
+                .map(s -> new ParamEntry<>("priceCountry", s.toString()))
+                .collect(Collectors.toList()));
+    }
+
+    /**
+     * set priceCustomerGroup with the specified value
+     * @param priceCustomerGroup value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withPriceCustomerGroup(
+            final TValue priceCustomerGroup) {
+        return copy().withQueryParam("priceCustomerGroup", priceCustomerGroup);
+    }
+
+    /**
+     * add additional priceCustomerGroup query parameter
+     * @param priceCustomerGroup value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addPriceCustomerGroup(
+            final TValue priceCustomerGroup) {
+        return copy().addQueryParam("priceCustomerGroup", priceCustomerGroup);
+    }
+
+    /**
+     * set priceCustomerGroup with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withPriceCustomerGroup(
+            final Supplier<String> supplier) {
+        return copy().withQueryParam("priceCustomerGroup", supplier.get());
+    }
+
+    /**
+     * add additional priceCustomerGroup query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addPriceCustomerGroup(
+            final Supplier<String> supplier) {
+        return copy().addQueryParam("priceCustomerGroup", supplier.get());
+    }
+
+    /**
+     * set priceCustomerGroup with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withPriceCustomerGroup(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("priceCustomerGroup", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional priceCustomerGroup query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addPriceCustomerGroup(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("priceCustomerGroup", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set priceCustomerGroup with the specified values
+     * @param priceCustomerGroup values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withPriceCustomerGroup(
+            final Collection<TValue> priceCustomerGroup) {
+        return copy().withoutQueryParam("priceCustomerGroup")
+                .addQueryParams(priceCustomerGroup.stream()
+                        .map(s -> new ParamEntry<>("priceCustomerGroup", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional priceCustomerGroup query parameters
+     * @param priceCustomerGroup values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addPriceCustomerGroup(
+            final Collection<TValue> priceCustomerGroup) {
+        return copy().addQueryParams(priceCustomerGroup.stream()
+                .map(s -> new ParamEntry<>("priceCustomerGroup", s.toString()))
+                .collect(Collectors.toList()));
+    }
+
+    /**
+     * set priceCustomerGroupAssignments with the specified value
+     * @param priceCustomerGroupAssignments value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withPriceCustomerGroupAssignments(
+            final TValue priceCustomerGroupAssignments) {
+        return copy().withQueryParam("priceCustomerGroupAssignments", priceCustomerGroupAssignments);
+    }
+
+    /**
+     * add additional priceCustomerGroupAssignments query parameter
+     * @param priceCustomerGroupAssignments value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addPriceCustomerGroupAssignments(
+            final TValue priceCustomerGroupAssignments) {
+        return copy().addQueryParam("priceCustomerGroupAssignments", priceCustomerGroupAssignments);
+    }
+
+    /**
+     * set priceCustomerGroupAssignments with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withPriceCustomerGroupAssignments(
+            final Supplier<String> supplier) {
+        return copy().withQueryParam("priceCustomerGroupAssignments", supplier.get());
+    }
+
+    /**
+     * add additional priceCustomerGroupAssignments query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addPriceCustomerGroupAssignments(
+            final Supplier<String> supplier) {
+        return copy().addQueryParam("priceCustomerGroupAssignments", supplier.get());
+    }
+
+    /**
+     * set priceCustomerGroupAssignments with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withPriceCustomerGroupAssignments(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("priceCustomerGroupAssignments", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional priceCustomerGroupAssignments query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addPriceCustomerGroupAssignments(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("priceCustomerGroupAssignments", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set priceCustomerGroupAssignments with the specified values
+     * @param priceCustomerGroupAssignments values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withPriceCustomerGroupAssignments(
+            final Collection<TValue> priceCustomerGroupAssignments) {
+        return copy().withoutQueryParam("priceCustomerGroupAssignments")
+                .addQueryParams(priceCustomerGroupAssignments.stream()
+                        .map(s -> new ParamEntry<>("priceCustomerGroupAssignments", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional priceCustomerGroupAssignments query parameters
+     * @param priceCustomerGroupAssignments values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addPriceCustomerGroupAssignments(
+            final Collection<TValue> priceCustomerGroupAssignments) {
+        return copy().addQueryParams(priceCustomerGroupAssignments.stream()
+                .map(s -> new ParamEntry<>("priceCustomerGroupAssignments", s.toString()))
+                .collect(Collectors.toList()));
+    }
+
+    /**
+     * set priceChannel with the specified value
+     * @param priceChannel value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withPriceChannel(
+            final TValue priceChannel) {
+        return copy().withQueryParam("priceChannel", priceChannel);
+    }
+
+    /**
+     * add additional priceChannel query parameter
+     * @param priceChannel value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addPriceChannel(
+            final TValue priceChannel) {
+        return copy().addQueryParam("priceChannel", priceChannel);
+    }
+
+    /**
+     * set priceChannel with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withPriceChannel(
+            final Supplier<String> supplier) {
+        return copy().withQueryParam("priceChannel", supplier.get());
+    }
+
+    /**
+     * add additional priceChannel query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addPriceChannel(
+            final Supplier<String> supplier) {
+        return copy().addQueryParam("priceChannel", supplier.get());
+    }
+
+    /**
+     * set priceChannel with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withPriceChannel(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("priceChannel", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional priceChannel query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addPriceChannel(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("priceChannel", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set priceChannel with the specified values
+     * @param priceChannel values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withPriceChannel(
+            final Collection<TValue> priceChannel) {
+        return copy().withoutQueryParam("priceChannel")
+                .addQueryParams(priceChannel.stream()
+                        .map(s -> new ParamEntry<>("priceChannel", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional priceChannel query parameters
+     * @param priceChannel values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addPriceChannel(
+            final Collection<TValue> priceChannel) {
+        return copy().addQueryParams(priceChannel.stream()
+                .map(s -> new ParamEntry<>("priceChannel", s.toString()))
+                .collect(Collectors.toList()));
+    }
+
+    /**
+     * set priceRecurrencePolicy with the specified value
+     * @param priceRecurrencePolicy value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withPriceRecurrencePolicy(
+            final TValue priceRecurrencePolicy) {
+        return copy().withQueryParam("priceRecurrencePolicy", priceRecurrencePolicy);
+    }
+
+    /**
+     * add additional priceRecurrencePolicy query parameter
+     * @param priceRecurrencePolicy value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addPriceRecurrencePolicy(
+            final TValue priceRecurrencePolicy) {
+        return copy().addQueryParam("priceRecurrencePolicy", priceRecurrencePolicy);
+    }
+
+    /**
+     * set priceRecurrencePolicy with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withPriceRecurrencePolicy(
+            final Supplier<String> supplier) {
+        return copy().withQueryParam("priceRecurrencePolicy", supplier.get());
+    }
+
+    /**
+     * add additional priceRecurrencePolicy query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addPriceRecurrencePolicy(
+            final Supplier<String> supplier) {
+        return copy().addQueryParam("priceRecurrencePolicy", supplier.get());
+    }
+
+    /**
+     * set priceRecurrencePolicy with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withPriceRecurrencePolicy(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("priceRecurrencePolicy", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional priceRecurrencePolicy query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addPriceRecurrencePolicy(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("priceRecurrencePolicy", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set priceRecurrencePolicy with the specified values
+     * @param priceRecurrencePolicy values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withPriceRecurrencePolicy(
+            final Collection<TValue> priceRecurrencePolicy) {
+        return copy().withoutQueryParam("priceRecurrencePolicy")
+                .addQueryParams(priceRecurrencePolicy.stream()
+                        .map(s -> new ParamEntry<>("priceRecurrencePolicy", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional priceRecurrencePolicy query parameters
+     * @param priceRecurrencePolicy values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addPriceRecurrencePolicy(
+            final Collection<TValue> priceRecurrencePolicy) {
+        return copy().addQueryParams(priceRecurrencePolicy.stream()
+                .map(s -> new ParamEntry<>("priceRecurrencePolicy", s.toString()))
+                .collect(Collectors.toList()));
+    }
+
+    /**
+     * set localeProjection with the specified value
+     * @param localeProjection value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withLocaleProjection(
+            final TValue localeProjection) {
+        return copy().withQueryParam("localeProjection", localeProjection);
+    }
+
+    /**
+     * add additional localeProjection query parameter
+     * @param localeProjection value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addLocaleProjection(
+            final TValue localeProjection) {
+        return copy().addQueryParam("localeProjection", localeProjection);
+    }
+
+    /**
+     * set localeProjection with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withLocaleProjection(
+            final Supplier<String> supplier) {
+        return copy().withQueryParam("localeProjection", supplier.get());
+    }
+
+    /**
+     * add additional localeProjection query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addLocaleProjection(
+            final Supplier<String> supplier) {
+        return copy().addQueryParam("localeProjection", supplier.get());
+    }
+
+    /**
+     * set localeProjection with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withLocaleProjection(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("localeProjection", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional localeProjection query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addLocaleProjection(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("localeProjection", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set localeProjection with the specified values
+     * @param localeProjection values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withLocaleProjection(
+            final Collection<TValue> localeProjection) {
+        return copy().withoutQueryParam("localeProjection")
+                .addQueryParams(localeProjection.stream()
+                        .map(s -> new ParamEntry<>("localeProjection", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional localeProjection query parameters
+     * @param localeProjection values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addLocaleProjection(
+            final Collection<TValue> localeProjection) {
+        return copy().addQueryParams(localeProjection.stream()
+                .map(s -> new ParamEntry<>("localeProjection", s.toString()))
+                .collect(Collectors.toList()));
+    }
+
+    /**
+     * set filterAttributes with the specified value
+     * @param filterAttributes value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withFilterAttributes(
+            final TValue filterAttributes) {
+        return copy().withQueryParam("filter[attributes]", filterAttributes);
+    }
+
+    /**
+     * add additional filterAttributes query parameter
+     * @param filterAttributes value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addFilterAttributes(
+            final TValue filterAttributes) {
+        return copy().addQueryParam("filter[attributes]", filterAttributes);
+    }
+
+    /**
+     * set filterAttributes with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withFilterAttributes(
+            final Supplier<String> supplier) {
+        return copy().withQueryParam("filter[attributes]", supplier.get());
+    }
+
+    /**
+     * add additional filterAttributes query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addFilterAttributes(
+            final Supplier<String> supplier) {
+        return copy().addQueryParam("filter[attributes]", supplier.get());
+    }
+
+    /**
+     * set filterAttributes with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withFilterAttributes(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("filter[attributes]", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional filterAttributes query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addFilterAttributes(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("filter[attributes]", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set filterAttributes with the specified values
+     * @param filterAttributes values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withFilterAttributes(
+            final Collection<TValue> filterAttributes) {
+        return copy().withoutQueryParam("filter[attributes]")
+                .addQueryParams(filterAttributes.stream()
+                        .map(s -> new ParamEntry<>("filter[attributes]", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional filterAttributes query parameters
+     * @param filterAttributes values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addFilterAttributes(
+            final Collection<TValue> filterAttributes) {
+        return copy().addQueryParams(filterAttributes.stream()
+                .map(s -> new ParamEntry<>("filter[attributes]", s.toString()))
+                .collect(Collectors.toList()));
+    }
+
+    /**
+     * set expand with the specified value
+     * @param expand value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withExpand(final TValue expand) {
+        return copy().withQueryParam("expand", expand);
+    }
+
+    /**
+     * add additional expand query parameter
+     * @param expand value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addExpand(final TValue expand) {
+        return copy().addQueryParam("expand", expand);
+    }
+
+    /**
+     * set expand with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withExpand(final Supplier<String> supplier) {
+        return copy().withQueryParam("expand", supplier.get());
+    }
+
+    /**
+     * add additional expand query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addExpand(final Supplier<String> supplier) {
+        return copy().addQueryParam("expand", supplier.get());
+    }
+
+    /**
+     * set expand with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withExpand(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("expand", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional expand query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addExpand(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("expand", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set expand with the specified values
+     * @param expand values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet withExpand(
+            final Collection<TValue> expand) {
+        return copy().withoutQueryParam("expand")
+                .addQueryParams(
+                    expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional expand query parameters
+     * @param expand values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet addExpand(
+            final Collection<TValue> expand) {
+        return copy().addQueryParams(
+            expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet that = (ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet) o;
+
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(storeKey, that.storeKey)
+                .append(key, that.key)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(projectKey).append(storeKey).append(key).toHashCode();
+    }
+
+    @Override
+    protected ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet copy() {
+        return new ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsKeyByKeyGet(this);
+    }
+}

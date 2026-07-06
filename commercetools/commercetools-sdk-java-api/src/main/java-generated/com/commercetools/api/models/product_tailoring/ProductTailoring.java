@@ -16,12 +16,12 @@ import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.warning.WarningObject;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>A single ProductTailoring representation contains the <em>current</em> and the <em>staged</em> representation of its product information tailored per Store.</p>
@@ -124,7 +124,7 @@ public interface ProductTailoring extends BaseResource {
     public ProductReference getProduct();
 
     /**
-     *  <p>If <code>true</code>, the tailored information contained in the <code>current</code> ProductTailoringData is provided when retrieving the ProductProjection in Store. For information not part of the ProductTailoringData, the original information contained in the ProductData is provided. If <code>false</code>, only the original information contained in the ProductData is provided.</p>
+     *  <p>If <code>true</code>, the tailored information contained in the <code>current</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringData" rel="nofollow">ProductTailoringData</a> is provided when <span>retrieving the ProductProjection in Store</span>. For information not part of the ProductTailoringData, the original information contained in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductData" rel="nofollow">ProductData</a> is provided. If <code>false</code>, only the original information contained in the ProductData is provided.</p>
      * @return published
      */
     @NotNull
@@ -132,7 +132,7 @@ public interface ProductTailoring extends BaseResource {
     public Boolean getPublished();
 
     /**
-     *  <p>Current (published) data of the ProductTailoring.</p>
+     *  <p>Current data of the ProductTailoring returned in the <span>Product Projection</span> response when the ProductTailoring is published.</p>
      * @return current
      */
     @NotNull
@@ -141,7 +141,7 @@ public interface ProductTailoring extends BaseResource {
     public ProductTailoringData getCurrent();
 
     /**
-     *  <p>Staged (unpublished) data of the ProductTailoring.</p>
+     *  <p>Staged data of the ProductTailoring. This data is not returned in the Product Projection response by default.</p>
      * @return staged
      */
     @NotNull
@@ -229,21 +229,21 @@ public interface ProductTailoring extends BaseResource {
     public void setProduct(final ProductReference product);
 
     /**
-     *  <p>If <code>true</code>, the tailored information contained in the <code>current</code> ProductTailoringData is provided when retrieving the ProductProjection in Store. For information not part of the ProductTailoringData, the original information contained in the ProductData is provided. If <code>false</code>, only the original information contained in the ProductData is provided.</p>
+     *  <p>If <code>true</code>, the tailored information contained in the <code>current</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringData" rel="nofollow">ProductTailoringData</a> is provided when <span>retrieving the ProductProjection in Store</span>. For information not part of the ProductTailoringData, the original information contained in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductData" rel="nofollow">ProductData</a> is provided. If <code>false</code>, only the original information contained in the ProductData is provided.</p>
      * @param published value to be set
      */
 
     public void setPublished(final Boolean published);
 
     /**
-     *  <p>Current (published) data of the ProductTailoring.</p>
+     *  <p>Current data of the ProductTailoring returned in the <span>Product Projection</span> response when the ProductTailoring is published.</p>
      * @param current value to be set
      */
 
     public void setCurrent(final ProductTailoringData current);
 
     /**
-     *  <p>Staged (unpublished) data of the ProductTailoring.</p>
+     *  <p>Staged data of the ProductTailoring. This data is not returned in the Product Projection response by default.</p>
      * @param staged value to be set
      */
 
@@ -371,8 +371,8 @@ public interface ProductTailoring extends BaseResource {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductTailoring> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductTailoring>() {
+    public static tools.jackson.core.type.TypeReference<ProductTailoring> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductTailoring>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductTailoring>";

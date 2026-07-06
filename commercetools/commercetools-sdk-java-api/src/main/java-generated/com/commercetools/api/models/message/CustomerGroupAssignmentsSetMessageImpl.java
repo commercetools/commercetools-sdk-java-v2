@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set CustomerGroupAssignments update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerGroupAssignmentsSetMessageImpl implements CustomerGroupAssignmentsSetMessage, ModelBase {
@@ -46,6 +47,8 @@ public class CustomerGroupAssignmentsSetMessageImpl implements CustomerGroupAssi
 
     private java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments;
 
+    private java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> oldCustomerGroupAssignments;
+
     /**
      * create instance with all properties
      */
@@ -60,7 +63,8 @@ public class CustomerGroupAssignmentsSetMessageImpl implements CustomerGroupAssi
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("customerGroupAssignments") final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments) {
+            @JsonProperty("customerGroupAssignments") final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments,
+            @JsonProperty("oldCustomerGroupAssignments") final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> oldCustomerGroupAssignments) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -72,6 +76,7 @@ public class CustomerGroupAssignmentsSetMessageImpl implements CustomerGroupAssi
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.customerGroupAssignments = customerGroupAssignments;
+        this.oldCustomerGroupAssignments = oldCustomerGroupAssignments;
         this.type = CUSTOMER_GROUP_ASSIGNMENTS_SET;
     }
 
@@ -139,7 +144,7 @@ public class CustomerGroupAssignmentsSetMessageImpl implements CustomerGroupAssi
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -155,7 +160,7 @@ public class CustomerGroupAssignmentsSetMessageImpl implements CustomerGroupAssi
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -171,11 +176,19 @@ public class CustomerGroupAssignmentsSetMessageImpl implements CustomerGroupAssi
     }
 
     /**
-     *  <p>Customer Groups assigned to the Customer during the Set CustomerGroupAssignments update action.</p>
+     *  <p>Customer Groups assigned to the Customer during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</p>
      */
 
     public java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> getCustomerGroupAssignments() {
         return this.customerGroupAssignments;
+    }
+
+    /**
+     *  <p>Customer Groups assigned to the Customer before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAssignmentsAction" rel="nofollow">Set CustomerGroupAssignments</a> update action.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> getOldCustomerGroupAssignments() {
+        return this.oldCustomerGroupAssignments;
     }
 
     public void setId(final String id) {
@@ -229,6 +242,16 @@ public class CustomerGroupAssignmentsSetMessageImpl implements CustomerGroupAssi
         this.customerGroupAssignments = customerGroupAssignments;
     }
 
+    public void setOldCustomerGroupAssignments(
+            final com.commercetools.api.models.customer.CustomerGroupAssignment... oldCustomerGroupAssignments) {
+        this.oldCustomerGroupAssignments = new ArrayList<>(Arrays.asList(oldCustomerGroupAssignments));
+    }
+
+    public void setOldCustomerGroupAssignments(
+            final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> oldCustomerGroupAssignments) {
+        this.oldCustomerGroupAssignments = oldCustomerGroupAssignments;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -251,6 +274,7 @@ public class CustomerGroupAssignmentsSetMessageImpl implements CustomerGroupAssi
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(customerGroupAssignments, that.customerGroupAssignments)
+                .append(oldCustomerGroupAssignments, that.oldCustomerGroupAssignments)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -263,6 +287,7 @@ public class CustomerGroupAssignmentsSetMessageImpl implements CustomerGroupAssi
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(customerGroupAssignments, that.customerGroupAssignments)
+                .append(oldCustomerGroupAssignments, that.oldCustomerGroupAssignments)
                 .isEquals();
     }
 
@@ -280,6 +305,7 @@ public class CustomerGroupAssignmentsSetMessageImpl implements CustomerGroupAssi
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
                 .append(customerGroupAssignments)
+                .append(oldCustomerGroupAssignments)
                 .toHashCode();
     }
 
@@ -297,6 +323,7 @@ public class CustomerGroupAssignmentsSetMessageImpl implements CustomerGroupAssi
                 .append("type", type)
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
                 .append("customerGroupAssignments", customerGroupAssignments)
+                .append("oldCustomerGroupAssignments", oldCustomerGroupAssignments)
                 .build();
     }
 

@@ -184,7 +184,7 @@ public class ShoppingListLineItemRemovedMessageBuilder implements Builder<Shoppi
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -196,7 +196,7 @@ public class ShoppingListLineItemRemovedMessageBuilder implements Builder<Shoppi
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -258,7 +258,7 @@ public class ShoppingListLineItemRemovedMessageBuilder implements Builder<Shoppi
     }
 
     /**
-     *  <p>Line Item that was removed from the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">Line Item</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -271,7 +271,7 @@ public class ShoppingListLineItemRemovedMessageBuilder implements Builder<Shoppi
     }
 
     /**
-     *  <p>Line Item that was removed from the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">Line Item</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -283,7 +283,7 @@ public class ShoppingListLineItemRemovedMessageBuilder implements Builder<Shoppi
     }
 
     /**
-     *  <p>Line Item that was removed from the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">Line Item</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @param lineItem value to be set
      * @return Builder
      */
@@ -360,7 +360,7 @@ public class ShoppingListLineItemRemovedMessageBuilder implements Builder<Shoppi
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -388,7 +388,7 @@ public class ShoppingListLineItemRemovedMessageBuilder implements Builder<Shoppi
     }
 
     /**
-     *  <p>Line Item that was removed from the ShoppingList.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">Line Item</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @return lineItem
      */
 

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,13 +15,15 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
  * DiscountCodeInfo
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeInfoImpl implements DiscountCodeInfo, ModelBase {
 
-    private com.commercetools.history.models.common.Reference discountCode;
+    private com.commercetools.history.models.common.DiscountCodeReference discountCode;
 
     private com.commercetools.history.models.common.DiscountCodeState state;
 
@@ -31,7 +32,7 @@ public class DiscountCodeInfoImpl implements DiscountCodeInfo, ModelBase {
      */
     @JsonCreator
     DiscountCodeInfoImpl(
-            @JsonProperty("discountCode") final com.commercetools.history.models.common.Reference discountCode,
+            @JsonProperty("discountCode") final com.commercetools.history.models.common.DiscountCodeReference discountCode,
             @JsonProperty("state") final com.commercetools.history.models.common.DiscountCodeState state) {
         this.discountCode = discountCode;
         this.state = state;
@@ -44,22 +45,22 @@ public class DiscountCodeInfoImpl implements DiscountCodeInfo, ModelBase {
     }
 
     /**
-     *
+     *  <p>Discount Code associated with the Cart or Order.</p>
      */
 
-    public com.commercetools.history.models.common.Reference getDiscountCode() {
+    public com.commercetools.history.models.common.DiscountCodeReference getDiscountCode() {
         return this.discountCode;
     }
 
     /**
-     *
+     *  <p>Indicates the state of the Discount Code applied to the Cart or Order.</p>
      */
 
     public com.commercetools.history.models.common.DiscountCodeState getState() {
         return this.state;
     }
 
-    public void setDiscountCode(final com.commercetools.history.models.common.Reference discountCode) {
+    public void setDiscountCode(final com.commercetools.history.models.common.DiscountCodeReference discountCode) {
         this.discountCode = discountCode;
     }
 

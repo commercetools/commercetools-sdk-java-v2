@@ -9,15 +9,15 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a Price is updated due to a Product Discount.</p>
+ *  <p>Generated after a Price is updated due to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">Product Discount</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface ProductPriceDiscountsSetMessage extends Message {
     String PRODUCT_PRICE_DISCOUNTS_SET = "ProductPriceDiscountsSet";
 
     /**
-     *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     *  <p>Array containing details about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were updated.</p>
      * @return updatedPrices
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface ProductPriceDiscountsSetMessage extends Message {
     public List<ProductPriceDiscountsSetUpdatedPrice> getUpdatedPrices();
 
     /**
-     *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     *  <p>Array containing details about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were updated.</p>
      * @param updatedPrices values to be set
      */
 
@@ -64,7 +64,7 @@ public interface ProductPriceDiscountsSetMessage extends Message {
     public void setUpdatedPrices(final ProductPriceDiscountsSetUpdatedPrice... updatedPrices);
 
     /**
-     *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     *  <p>Array containing details about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were updated.</p>
      * @param updatedPrices values to be set
      */
 
@@ -163,8 +163,8 @@ public interface ProductPriceDiscountsSetMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductPriceDiscountsSetMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductPriceDiscountsSetMessage>() {
+    public static tools.jackson.core.type.TypeReference<ProductPriceDiscountsSetMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductPriceDiscountsSetMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductPriceDiscountsSetMessage>";

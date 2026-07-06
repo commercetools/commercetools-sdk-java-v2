@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.associate_role.AssociateRoleKeyReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * RuleRequester
@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface RuleRequester {
 
     /**
-     *  <p>The Associate Role that an Associate must hold for the Approval Rule to apply to the Orders they create.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Role</a> that an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> must hold for the Approval Rule to apply to the Orders they create.</p>
      * @return associateRole
      */
     @NotNull
@@ -43,7 +43,7 @@ public interface RuleRequester {
     public AssociateRoleKeyReference getAssociateRole();
 
     /**
-     *  <p>The Associate Role that an Associate must hold for the Approval Rule to apply to the Orders they create.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Role</a> that an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> must hold for the Approval Rule to apply to the Orders they create.</p>
      * @param associateRole value to be set
      */
 
@@ -117,8 +117,8 @@ public interface RuleRequester {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<RuleRequester> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<RuleRequester>() {
+    public static tools.jackson.core.type.TypeReference<RuleRequester> typeReference() {
+        return new tools.jackson.core.type.TypeReference<RuleRequester>() {
             @Override
             public String toString() {
                 return "TypeReference<RuleRequester>";

@@ -30,7 +30,7 @@ public class MethodExternalTaxRateDraftBuilder implements Builder<MethodExternal
     private com.commercetools.api.models.cart.ExternalTaxRateDraft taxRate;
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingMethodKey value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class MethodExternalTaxRateDraftBuilder implements Builder<MethodExternal
     }
 
     /**
-     *  <p>External Tax Rate for the Shipping Method, if the Cart has <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the Shipping Method, if the Cart has <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param builder function to build the taxRate value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class MethodExternalTaxRateDraftBuilder implements Builder<MethodExternal
     }
 
     /**
-     *  <p>External Tax Rate for the Shipping Method, if the Cart has <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the Shipping Method, if the Cart has <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param builder function to build the taxRate value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class MethodExternalTaxRateDraftBuilder implements Builder<MethodExternal
     }
 
     /**
-     *  <p>External Tax Rate for the Shipping Method, if the Cart has <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the Shipping Method, if the Cart has <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param taxRate value to be set
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class MethodExternalTaxRateDraftBuilder implements Builder<MethodExternal
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shippingMethodKey
      */
 
@@ -86,7 +86,7 @@ public class MethodExternalTaxRateDraftBuilder implements Builder<MethodExternal
     }
 
     /**
-     *  <p>External Tax Rate for the Shipping Method, if the Cart has <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the Shipping Method, if the Cart has <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @return taxRate
      */
 

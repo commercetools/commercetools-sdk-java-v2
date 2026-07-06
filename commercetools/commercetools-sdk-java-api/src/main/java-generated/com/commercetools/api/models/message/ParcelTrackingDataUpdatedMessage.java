@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.order.TrackingData;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Set Parcel Tracking Data update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetParcelTrackingDataAction" rel="nofollow">Set Parcel Tracking Data</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -48,7 +48,7 @@ public interface ParcelTrackingDataUpdatedMessage extends OrderMessage {
     String PARCEL_TRACKING_DATA_UPDATED = "ParcelTrackingDataUpdated";
 
     /**
-     *  <p>Unique identifier of the Delivery.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @return deliveryId
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface ParcelTrackingDataUpdatedMessage extends OrderMessage {
     public String getDeliveryId();
 
     /**
-     *  <p>Unique identifier of the Parcel.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @return parcelId
      */
     @NotNull
@@ -64,7 +64,7 @@ public interface ParcelTrackingDataUpdatedMessage extends OrderMessage {
     public String getParcelId();
 
     /**
-     *  <p>The Tracking Data that was added to the Parcel.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:TrackingData" rel="nofollow">Tracking Data</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @return trackingData
      */
     @Valid
@@ -72,7 +72,7 @@ public interface ParcelTrackingDataUpdatedMessage extends OrderMessage {
     public TrackingData getTrackingData();
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shippingKey
      */
 
@@ -80,28 +80,28 @@ public interface ParcelTrackingDataUpdatedMessage extends OrderMessage {
     public String getShippingKey();
 
     /**
-     *  <p>Unique identifier of the Delivery.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param deliveryId value to be set
      */
 
     public void setDeliveryId(final String deliveryId);
 
     /**
-     *  <p>Unique identifier of the Parcel.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param parcelId value to be set
      */
 
     public void setParcelId(final String parcelId);
 
     /**
-     *  <p>The Tracking Data that was added to the Parcel.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:TrackingData" rel="nofollow">Tracking Data</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param trackingData value to be set
      */
 
     public void setTrackingData(final TrackingData trackingData);
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingKey value to be set
      */
 
@@ -202,8 +202,8 @@ public interface ParcelTrackingDataUpdatedMessage extends OrderMessage {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ParcelTrackingDataUpdatedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ParcelTrackingDataUpdatedMessage>() {
+    public static tools.jackson.core.type.TypeReference<ParcelTrackingDataUpdatedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ParcelTrackingDataUpdatedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<ParcelTrackingDataUpdatedMessage>";

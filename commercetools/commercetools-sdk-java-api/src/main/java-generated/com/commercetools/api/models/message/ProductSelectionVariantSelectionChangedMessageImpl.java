@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Variant Selection update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantSelectionAction" rel="nofollow">Set Variant Selection</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionVariantSelectionChangedMessageImpl
@@ -148,7 +149,7 @@ public class ProductSelectionVariantSelectionChangedMessageImpl
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -164,7 +165,7 @@ public class ProductSelectionVariantSelectionChangedMessageImpl
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -180,7 +181,7 @@ public class ProductSelectionVariantSelectionChangedMessageImpl
     }
 
     /**
-     *  <p>Product for which the Product Variant Selection changed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> for which the Product Variant Selection changed.</p>
      */
 
     public com.commercetools.api.models.product.ProductReference getProduct() {
@@ -188,7 +189,7 @@ public class ProductSelectionVariantSelectionChangedMessageImpl
     }
 
     /**
-     *  <p>Product Variant Selection before the Set Variant Selection update action.</p>
+     *  <p>Product Variant Selection before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantSelectionAction" rel="nofollow">Set Variant Selection</a> update action.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductVariantSelection getOldVariantSelection() {
@@ -196,7 +197,7 @@ public class ProductSelectionVariantSelectionChangedMessageImpl
     }
 
     /**
-     *  <p>Product Variant Selection after the Set Variant Selection update action.</p>
+     *  <p>Product Variant Selection after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetVariantSelectionAction" rel="nofollow">Set Variant Selection</a> update action.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductVariantSelection getNewVariantSelection() {

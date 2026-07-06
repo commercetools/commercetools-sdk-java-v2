@@ -27,7 +27,7 @@ public class AssociateRoleLabelBuilder implements Builder<AssociateRoleLabel> {
     private String name;
 
     /**
-     *  <p>User-defined unique identifier of the Associate Role.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Role</a>.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class AssociateRoleLabelBuilder implements Builder<AssociateRoleLabel> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Associate Role.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Role</a>.</p>
      * @return key
      */
 

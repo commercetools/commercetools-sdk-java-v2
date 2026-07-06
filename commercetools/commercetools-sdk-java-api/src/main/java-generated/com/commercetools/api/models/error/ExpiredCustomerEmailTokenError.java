@@ -8,18 +8,18 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when the provided email token of the Customer has expired.</p>
  *  <p>The error is returned as a failed response to:</p>
  *  <ul>
- *   <li>Get Customer by email token and Get Customer in Store by email token requests</li>
- *   <li>Verify email of Customer and Verify email of Customer in Store requests</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers/email-token={emailToken}:GET" rel="nofollow">Get Customer by email token</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/customers/email-token={emailToken}:GET" rel="nofollow">Get Customer in Store by email token</a> requests</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/customers/email/confirm:POST" rel="nofollow">Verify email of Customer</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/customers/email/confirm:POST" rel="nofollow">Verify email of Customer in Store</a> requests</li>
  *  </ul>
  *
  * <hr>
@@ -134,8 +134,8 @@ public interface ExpiredCustomerEmailTokenError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ExpiredCustomerEmailTokenError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ExpiredCustomerEmailTokenError>() {
+    public static tools.jackson.core.type.TypeReference<ExpiredCustomerEmailTokenError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ExpiredCustomerEmailTokenError>() {
             @Override
             public String toString() {
                 return "TypeReference<ExpiredCustomerEmailTokenError>";

@@ -31,7 +31,7 @@ public class PaymentMethodInfoTokenSetMessagePayloadBuilder
     private com.commercetools.api.models.payment_method.PaymentMethodToken oldToken;
 
     /**
-     *  <p>Token of the Payment Method after the Set MethodInfo Token update action.</p>
+     *  <p>Token of the Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoTokenAction" rel="nofollow">Set MethodInfo Token</a> update action.</p>
      * @param builder function to build the token value
      * @return Builder
      */
@@ -43,7 +43,7 @@ public class PaymentMethodInfoTokenSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Token of the Payment Method after the Set MethodInfo Token update action.</p>
+     *  <p>Token of the Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoTokenAction" rel="nofollow">Set MethodInfo Token</a> update action.</p>
      * @param builder function to build the token value
      * @return Builder
      */
@@ -55,7 +55,7 @@ public class PaymentMethodInfoTokenSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Token of the Payment Method after the Set MethodInfo Token update action.</p>
+     *  <p>Token of the Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoTokenAction" rel="nofollow">Set MethodInfo Token</a> update action.</p>
      * @param token value to be set
      * @return Builder
      */
@@ -67,7 +67,7 @@ public class PaymentMethodInfoTokenSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Token of the Payment Method before the Set MethodInfo Token update action.</p>
+     *  <p>Token of the Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoTokenAction" rel="nofollow">Set MethodInfo Token</a> update action.</p>
      * @param builder function to build the oldToken value
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class PaymentMethodInfoTokenSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Token of the Payment Method before the Set MethodInfo Token update action.</p>
+     *  <p>Token of the Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoTokenAction" rel="nofollow">Set MethodInfo Token</a> update action.</p>
      * @param builder function to build the oldToken value
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class PaymentMethodInfoTokenSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Token of the Payment Method before the Set MethodInfo Token update action.</p>
+     *  <p>Token of the Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoTokenAction" rel="nofollow">Set MethodInfo Token</a> update action.</p>
      * @param oldToken value to be set
      * @return Builder
      */
@@ -104,7 +104,7 @@ public class PaymentMethodInfoTokenSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Token of the Payment Method after the Set MethodInfo Token update action.</p>
+     *  <p>Token of the Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoTokenAction" rel="nofollow">Set MethodInfo Token</a> update action.</p>
      * @return token
      */
 
@@ -114,7 +114,7 @@ public class PaymentMethodInfoTokenSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Token of the Payment Method before the Set MethodInfo Token update action.</p>
+     *  <p>Token of the Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoTokenAction" rel="nofollow">Set MethodInfo Token</a> update action.</p>
      * @return oldToken
      */
 

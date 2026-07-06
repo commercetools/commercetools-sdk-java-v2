@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * MyCustomerChangePassword
@@ -43,7 +43,7 @@ public interface MyCustomerChangePassword {
 
     /**
      *  <p>Current password of the Customer.</p>
-     *  <p>If the current password does not match, an InvalidCurrentPassword error is returned.</p>
+     *  <p>If the current password does not match, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidCurrentPasswordError" rel="nofollow">InvalidCurrentPassword</a> error is returned.</p>
      * @return currentPassword
      */
     @NotNull
@@ -67,7 +67,7 @@ public interface MyCustomerChangePassword {
 
     /**
      *  <p>Current password of the Customer.</p>
-     *  <p>If the current password does not match, an InvalidCurrentPassword error is returned.</p>
+     *  <p>If the current password does not match, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidCurrentPasswordError" rel="nofollow">InvalidCurrentPassword</a> error is returned.</p>
      * @param currentPassword value to be set
      */
 
@@ -151,8 +151,8 @@ public interface MyCustomerChangePassword {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerChangePassword> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerChangePassword>() {
+    public static tools.jackson.core.type.TypeReference<MyCustomerChangePassword> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyCustomerChangePassword>() {
             @Override
             public String toString() {
                 return "TypeReference<MyCustomerChangePassword>";

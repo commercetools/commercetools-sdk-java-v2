@@ -33,7 +33,7 @@ public class StagedOrderSetReturnShipmentStateActionBuilder
     private com.commercetools.api.models.order.ReturnShipmentState shipmentState;
 
     /**
-     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @param returnItemId value to be set
      * @return Builder
      */
@@ -44,7 +44,7 @@ public class StagedOrderSetReturnShipmentStateActionBuilder
     }
 
     /**
-     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @param returnItemKey value to be set
      * @return Builder
      */
@@ -55,7 +55,8 @@ public class StagedOrderSetReturnShipmentStateActionBuilder
     }
 
     /**
-     *  <p>New shipment state of the ReturnItem.</p>
+     *  <p>New shipment state of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a>.</p>
+     *  <p>This update action can only transition Return Items from the <code>Returned</code> state to <code>BackInStock</code> or <code>Unusable</code>. The initial <code>Advised</code> and <code>Returned</code> states can only be set at creation time on <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItemDraft" rel="nofollow">ReturnItemDraft</a>.</p>
      * @param shipmentState value to be set
      * @return Builder
      */
@@ -67,7 +68,7 @@ public class StagedOrderSetReturnShipmentStateActionBuilder
     }
 
     /**
-     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @return returnItemId
      */
 
@@ -77,7 +78,7 @@ public class StagedOrderSetReturnShipmentStateActionBuilder
     }
 
     /**
-     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @return returnItemKey
      */
 
@@ -87,7 +88,8 @@ public class StagedOrderSetReturnShipmentStateActionBuilder
     }
 
     /**
-     *  <p>New shipment state of the ReturnItem.</p>
+     *  <p>New shipment state of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a>.</p>
+     *  <p>This update action can only transition Return Items from the <code>Returned</code> state to <code>BackInStock</code> or <code>Unusable</code>. The initial <code>Advised</code> and <code>Returned</code> states can only be set at creation time on <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItemDraft" rel="nofollow">ReturnItemDraft</a>.</p>
      * @return shipmentState
      */
 

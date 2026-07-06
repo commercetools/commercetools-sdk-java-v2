@@ -8,15 +8,15 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Updating the Associate on a Business Unit generates the BusinessUnitAssociateChanged Message.</p>
+ *  <p>Updating the <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> on a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAssociateChangedMessage" rel="nofollow">BusinessUnitAssociateChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -123,8 +123,8 @@ public interface BusinessUnitChangeAssociateAction extends BusinessUnitUpdateAct
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitChangeAssociateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitChangeAssociateAction>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitChangeAssociateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitChangeAssociateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitChangeAssociateAction>";

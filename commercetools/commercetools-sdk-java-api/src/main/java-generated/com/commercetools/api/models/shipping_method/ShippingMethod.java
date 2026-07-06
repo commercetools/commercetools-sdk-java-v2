@@ -13,15 +13,16 @@ import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.tax_category.TaxCategoryReference;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ShippingMethod
@@ -40,6 +41,7 @@ import jakarta.validation.constraints.NotNull;
  *             .plusZoneRates(zoneRatesBuilder -> zoneRatesBuilder)
  *             .active(true)
  *             .isDefault(true)
+ *             .plusStores(storesBuilder -> storesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -109,7 +111,7 @@ public interface ShippingMethod
     public String getKey();
 
     /**
-     *  <p>Unique name of the ShippingMethod within a Project.</p>
+     *  <p>Unique name of the ShippingMethod within a <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @return name
      */
     @NotNull
@@ -141,7 +143,7 @@ public interface ShippingMethod
     public LocalizedString getLocalizedDescription();
 
     /**
-     *  <p>TaxCategory of all ZoneRates of the ShippingMethod.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> of all ZoneRates of the ShippingMethod.</p>
      * @return taxCategory
      */
     @NotNull
@@ -150,7 +152,7 @@ public interface ShippingMethod
     public TaxCategoryReference getTaxCategory();
 
     /**
-     *  <p>Defines ShippingRates (prices) for specific Zones.</p>
+     *  <p>Defines <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRates</a> (prices) for specific Zones.</p>
      * @return zoneRates
      */
     @NotNull
@@ -168,7 +170,7 @@ public interface ShippingMethod
     public Boolean getActive();
 
     /**
-     *  <p>If <code>true</code>, this ShippingMethod is the Project's default ShippingMethod. When retrieving matching Shipping Methods, it is returned as the first item in the array. This flag does not automatically apply the Shipping Method to Carts.</p>
+     *  <p>If <code>true</code>, this ShippingMethod is the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>'s default ShippingMethod. When retrieving <span>matching Shipping Methods</span>, it is returned as the first item in the array. This flag does not automatically apply the Shipping Method to Carts.</p>
      * @return isDefault
      */
     @NotNull
@@ -176,7 +178,7 @@ public interface ShippingMethod
     public Boolean getIsDefault();
 
     /**
-     *  <p>Valid Cart predicate to select a ShippingMethod for a Cart.</p>
+     *  <p>Valid <span>Cart predicate</span> to select a ShippingMethod for a Cart.</p>
      * @return predicate
      */
 
@@ -190,6 +192,18 @@ public interface ShippingMethod
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
+
+    /**
+     *  <ul>
+     *   <li>If a value exists, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If empty, the Shipping Method applies to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
+     *  </ul>
+     * @return stores
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("stores")
+    public List<StoreKeyReference> getStores();
 
     /**
      *  <p>Unique identifier of the ShippingMethod.</p>
@@ -241,7 +255,7 @@ public interface ShippingMethod
     public void setKey(final String key);
 
     /**
-     *  <p>Unique name of the ShippingMethod within a Project.</p>
+     *  <p>Unique name of the ShippingMethod within a <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param name value to be set
      */
 
@@ -269,14 +283,14 @@ public interface ShippingMethod
     public void setLocalizedDescription(final LocalizedString localizedDescription);
 
     /**
-     *  <p>TaxCategory of all ZoneRates of the ShippingMethod.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> of all ZoneRates of the ShippingMethod.</p>
      * @param taxCategory value to be set
      */
 
     public void setTaxCategory(final TaxCategoryReference taxCategory);
 
     /**
-     *  <p>Defines ShippingRates (prices) for specific Zones.</p>
+     *  <p>Defines <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRates</a> (prices) for specific Zones.</p>
      * @param zoneRates values to be set
      */
 
@@ -284,7 +298,7 @@ public interface ShippingMethod
     public void setZoneRates(final ZoneRate... zoneRates);
 
     /**
-     *  <p>Defines ShippingRates (prices) for specific Zones.</p>
+     *  <p>Defines <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRates</a> (prices) for specific Zones.</p>
      * @param zoneRates values to be set
      */
 
@@ -299,14 +313,14 @@ public interface ShippingMethod
     public void setActive(final Boolean active);
 
     /**
-     *  <p>If <code>true</code>, this ShippingMethod is the Project's default ShippingMethod. When retrieving matching Shipping Methods, it is returned as the first item in the array. This flag does not automatically apply the Shipping Method to Carts.</p>
+     *  <p>If <code>true</code>, this ShippingMethod is the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>'s default ShippingMethod. When retrieving <span>matching Shipping Methods</span>, it is returned as the first item in the array. This flag does not automatically apply the Shipping Method to Carts.</p>
      * @param isDefault value to be set
      */
 
     public void setIsDefault(final Boolean isDefault);
 
     /**
-     *  <p>Valid Cart predicate to select a ShippingMethod for a Cart.</p>
+     *  <p>Valid <span>Cart predicate</span> to select a ShippingMethod for a Cart.</p>
      * @param predicate value to be set
      */
 
@@ -318,6 +332,27 @@ public interface ShippingMethod
      */
 
     public void setCustom(final CustomFields custom);
+
+    /**
+     *  <ul>
+     *   <li>If a value exists, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If empty, the Shipping Method applies to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
+     *  </ul>
+     * @param stores values to be set
+     */
+
+    @JsonIgnore
+    public void setStores(final StoreKeyReference... stores);
+
+    /**
+     *  <ul>
+     *   <li>If a value exists, the Shipping Method applies to <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that matches any Store in this field.</li>
+     *   <li>If empty, the Shipping Method applies to all <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, irrespective of a Store.</li>
+     *  </ul>
+     * @param stores values to be set
+     */
+
+    public void setStores(final List<StoreKeyReference> stores);
 
     /**
      * factory method
@@ -351,6 +386,7 @@ public interface ShippingMethod
         instance.setIsDefault(template.getIsDefault());
         instance.setPredicate(template.getPredicate());
         instance.setCustom(template.getCustom());
+        instance.setStores(template.getStores());
         return instance;
     }
 
@@ -392,6 +428,11 @@ public interface ShippingMethod
         instance.setIsDefault(template.getIsDefault());
         instance.setPredicate(template.getPredicate());
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
+        instance.setStores(Optional.ofNullable(template.getStores())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.store.StoreKeyReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 
@@ -430,8 +471,8 @@ public interface ShippingMethod
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethod> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethod>() {
+    public static tools.jackson.core.type.TypeReference<ShippingMethod> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShippingMethod>() {
             @Override
             public String toString() {
                 return "TypeReference<ShippingMethod>";

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Change Address update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeAddressAction" rel="nofollow">Change Address</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerAddressChangedMessageImpl implements CustomerAddressChangedMessage, ModelBase {
@@ -46,6 +47,8 @@ public class CustomerAddressChangedMessageImpl implements CustomerAddressChanged
 
     private com.commercetools.api.models.common.Address address;
 
+    private java.util.List<com.commercetools.api.models.common.AddressRole> addressRoles;
+
     /**
      * create instance with all properties
      */
@@ -59,7 +62,8 @@ public class CustomerAddressChangedMessageImpl implements CustomerAddressChanged
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("address") final com.commercetools.api.models.common.Address address) {
+            @JsonProperty("address") final com.commercetools.api.models.common.Address address,
+            @JsonProperty("addressRoles") final java.util.List<com.commercetools.api.models.common.AddressRole> addressRoles) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -71,6 +75,7 @@ public class CustomerAddressChangedMessageImpl implements CustomerAddressChanged
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.address = address;
+        this.addressRoles = addressRoles;
         this.type = CUSTOMER_ADDRESS_CHANGED;
     }
 
@@ -138,7 +143,7 @@ public class CustomerAddressChangedMessageImpl implements CustomerAddressChanged
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -154,7 +159,7 @@ public class CustomerAddressChangedMessageImpl implements CustomerAddressChanged
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -170,11 +175,19 @@ public class CustomerAddressChangedMessageImpl implements CustomerAddressChanged
     }
 
     /**
-     *  <p>Address that was set during the Change Address update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeAddressAction" rel="nofollow">Change Address</a> update action.</p>
      */
 
     public com.commercetools.api.models.common.Address getAddress() {
         return this.address;
+    }
+
+    /**
+     *  <p>Indicates if the address was used for shipping or billing purposes.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.common.AddressRole> getAddressRoles() {
+        return this.addressRoles;
     }
 
     public void setId(final String id) {
@@ -222,6 +235,14 @@ public class CustomerAddressChangedMessageImpl implements CustomerAddressChanged
         this.address = address;
     }
 
+    public void setAddressRoles(final com.commercetools.api.models.common.AddressRole... addressRoles) {
+        this.addressRoles = new ArrayList<>(Arrays.asList(addressRoles));
+    }
+
+    public void setAddressRoles(final java.util.List<com.commercetools.api.models.common.AddressRole> addressRoles) {
+        this.addressRoles = addressRoles;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -244,6 +265,7 @@ public class CustomerAddressChangedMessageImpl implements CustomerAddressChanged
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(address, that.address)
+                .append(addressRoles, that.addressRoles)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -256,6 +278,7 @@ public class CustomerAddressChangedMessageImpl implements CustomerAddressChanged
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(address, that.address)
+                .append(addressRoles, that.addressRoles)
                 .isEquals();
     }
 
@@ -273,6 +296,7 @@ public class CustomerAddressChangedMessageImpl implements CustomerAddressChanged
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
                 .append(address)
+                .append(addressRoles)
                 .toHashCode();
     }
 
@@ -290,6 +314,7 @@ public class CustomerAddressChangedMessageImpl implements CustomerAddressChanged
                 .append("type", type)
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
                 .append("address", address)
+                .append("addressRoles", addressRoles)
                 .build();
     }
 

@@ -52,7 +52,7 @@ public class CustomerLabelBuilder implements Builder<CustomerLabel> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Customer.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>.</p>
      * @param customerNumber value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class CustomerLabelBuilder implements Builder<CustomerLabel> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Customer.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>.</p>
      * @return customerNumber
      */
 

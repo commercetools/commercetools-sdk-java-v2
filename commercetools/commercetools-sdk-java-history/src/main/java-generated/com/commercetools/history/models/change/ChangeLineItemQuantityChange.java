@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Change triggered by the Change LineItem Quantity update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderChangeLineItemQuantityAction" rel="nofollow">Change LineItem Quantity</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -76,7 +76,7 @@ public interface ChangeLineItemQuantityChange extends Change {
     public Integer getNextValue();
 
     /**
-     *  <p>Name of the Product the updated Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the updated Line Item is based on.</p>
      * @return lineItem
      */
     @NotNull
@@ -85,7 +85,7 @@ public interface ChangeLineItemQuantityChange extends Change {
     public LocalizedString getLineItem();
 
     /**
-     *  <p><code>id</code> of the updated LineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
      * @return lineItemId
      */
     @NotNull
@@ -114,14 +114,14 @@ public interface ChangeLineItemQuantityChange extends Change {
     public void setNextValue(final Integer nextValue);
 
     /**
-     *  <p>Name of the Product the updated Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the updated Line Item is based on.</p>
      * @param lineItem value to be set
      */
 
     public void setLineItem(final LocalizedString lineItem);
 
     /**
-     *  <p><code>id</code> of the updated LineItem.</p>
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
      * @param lineItemId value to be set
      */
 
@@ -202,8 +202,8 @@ public interface ChangeLineItemQuantityChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChangeLineItemQuantityChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChangeLineItemQuantityChange>() {
+    public static tools.jackson.core.type.TypeReference<ChangeLineItemQuantityChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChangeLineItemQuantityChange>() {
             @Override
             public String toString() {
                 return "TypeReference<ChangeLineItemQuantityChange>";

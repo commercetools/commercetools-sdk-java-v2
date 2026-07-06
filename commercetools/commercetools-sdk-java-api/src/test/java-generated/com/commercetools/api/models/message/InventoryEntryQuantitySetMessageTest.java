@@ -25,6 +25,7 @@ public class InventoryEntryQuantitySetMessageTest {
                         InventoryEntryQuantitySetMessage.builder().oldAvailableQuantity(9L) },
                 new Object[] { "newAvailableQuantity",
                         InventoryEntryQuantitySetMessage.builder().newAvailableQuantity(8L) },
+                new Object[] { "sku", InventoryEntryQuantitySetMessage.builder().sku("sku") },
                 new Object[] { "supplyChannel", InventoryEntryQuantitySetMessage.builder()
                         .supplyChannel(new com.commercetools.api.models.channel.ChannelReferenceImpl()) } };
     }
@@ -55,6 +56,13 @@ public class InventoryEntryQuantitySetMessageTest {
         InventoryEntryQuantitySetMessage value = InventoryEntryQuantitySetMessage.of();
         value.setNewAvailableQuantity(8L);
         Assertions.assertThat(value.getNewAvailableQuantity()).isEqualTo(8L);
+    }
+
+    @Test
+    public void sku() {
+        InventoryEntryQuantitySetMessage value = InventoryEntryQuantitySetMessage.of();
+        value.setSku("sku");
+        Assertions.assertThat(value.getSku()).isEqualTo("sku");
     }
 
     @Test

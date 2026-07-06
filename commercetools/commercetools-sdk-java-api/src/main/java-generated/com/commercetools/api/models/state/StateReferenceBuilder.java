@@ -30,7 +30,7 @@ public class StateReferenceBuilder implements Builder<StateReference> {
     private com.commercetools.api.models.state.State obj;
 
     /**
-     *  <p>Unique identifier of the referenced State.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class StateReferenceBuilder implements Builder<StateReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded State. Only present in responses to requests with Reference Expansion for States.</p>
+     *  <p>Contains the representation of the expanded State. Only present in responses to requests with <span>Reference Expansion</span> for States.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class StateReferenceBuilder implements Builder<StateReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded State. Only present in responses to requests with Reference Expansion for States.</p>
+     *  <p>Contains the representation of the expanded State. Only present in responses to requests with <span>Reference Expansion</span> for States.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class StateReferenceBuilder implements Builder<StateReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded State. Only present in responses to requests with Reference Expansion for States.</p>
+     *  <p>Contains the representation of the expanded State. Only present in responses to requests with <span>Reference Expansion</span> for States.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class StateReferenceBuilder implements Builder<StateReference> {
     }
 
     /**
-     *  <p>Unique identifier of the referenced State.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      * @return id
      */
 
@@ -85,7 +85,7 @@ public class StateReferenceBuilder implements Builder<StateReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded State. Only present in responses to requests with Reference Expansion for States.</p>
+     *  <p>Contains the representation of the expanded State. Only present in responses to requests with <span>Reference Expansion</span> for States.</p>
      * @return obj
      */
 

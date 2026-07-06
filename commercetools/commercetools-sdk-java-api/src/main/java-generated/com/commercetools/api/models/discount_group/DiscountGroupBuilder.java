@@ -22,6 +22,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .key("{key}")
  *             .sortOrder("{sortOrder}")
+ *             .isActive(true)
  *             .build()
  * </code></pre>
  * </div>
@@ -46,6 +47,8 @@ public class DiscountGroupBuilder implements Builder<DiscountGroup> {
     private com.commercetools.api.models.common.LocalizedString description;
 
     private String sortOrder;
+
+    private Boolean isActive;
 
     @Nullable
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
@@ -188,6 +191,17 @@ public class DiscountGroupBuilder implements Builder<DiscountGroup> {
 
     public DiscountGroupBuilder sortOrder(final String sortOrder) {
         this.sortOrder = sortOrder;
+        return this;
+    }
+
+    /**
+     *  <p>A DiscountGroup must be active for its CartDiscounts to be considered during discount application.</p>
+     * @param isActive value to be set
+     * @return Builder
+     */
+
+    public DiscountGroupBuilder isActive(final Boolean isActive) {
+        this.isActive = isActive;
         return this;
     }
 
@@ -338,6 +352,15 @@ public class DiscountGroupBuilder implements Builder<DiscountGroup> {
     }
 
     /**
+     *  <p>A DiscountGroup must be active for its CartDiscounts to be considered during discount application.</p>
+     * @return isActive
+     */
+
+    public Boolean getIsActive() {
+        return this.isActive;
+    }
+
+    /**
      *  <p>IDs and references that last modified the DiscountGroup.</p>
      * @return lastModifiedBy
      */
@@ -368,8 +391,9 @@ public class DiscountGroupBuilder implements Builder<DiscountGroup> {
         Objects.requireNonNull(lastModifiedAt, DiscountGroup.class + ": lastModifiedAt is missing");
         Objects.requireNonNull(key, DiscountGroup.class + ": key is missing");
         Objects.requireNonNull(sortOrder, DiscountGroup.class + ": sortOrder is missing");
+        Objects.requireNonNull(isActive, DiscountGroup.class + ": isActive is missing");
         return new DiscountGroupImpl(id, version, createdAt, lastModifiedAt, name, key, description, sortOrder,
-            lastModifiedBy, createdBy);
+            isActive, lastModifiedBy, createdBy);
     }
 
     /**
@@ -378,7 +402,7 @@ public class DiscountGroupBuilder implements Builder<DiscountGroup> {
      */
     public DiscountGroup buildUnchecked() {
         return new DiscountGroupImpl(id, version, createdAt, lastModifiedAt, name, key, description, sortOrder,
-            lastModifiedBy, createdBy);
+            isActive, lastModifiedBy, createdBy);
     }
 
     /**
@@ -404,6 +428,7 @@ public class DiscountGroupBuilder implements Builder<DiscountGroup> {
         builder.key = template.getKey();
         builder.description = template.getDescription();
         builder.sortOrder = template.getSortOrder();
+        builder.isActive = template.getIsActive();
         builder.lastModifiedBy = template.getLastModifiedBy();
         builder.createdBy = template.getCreatedBy();
         return builder;

@@ -9,14 +9,14 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.DiscountedPrice;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a Product Discount is successfully applied to a StandalonePrice.</p>
+ *  <p>Generated after a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">Product Discount</a> is successfully applied to a StandalonePrice.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface StandalonePriceDiscountSetMessagePayload extends MessagePayload
     String STANDALONE_PRICE_DISCOUNT_SET = "StandalonePriceDiscountSet";
 
     /**
-     *  <p>The new <code>discounted</code> value of the updated StandalonePrice.</p>
+     *  <p>The new <code>discounted</code> value of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @return discounted
      */
     @Valid
@@ -46,7 +46,7 @@ public interface StandalonePriceDiscountSetMessagePayload extends MessagePayload
     public DiscountedPrice getDiscounted();
 
     /**
-     *  <p>The new <code>discounted</code> value of the updated StandalonePrice.</p>
+     *  <p>The new <code>discounted</code> value of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param discounted value to be set
      */
 
@@ -122,8 +122,8 @@ public interface StandalonePriceDiscountSetMessagePayload extends MessagePayload
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceDiscountSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceDiscountSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<StandalonePriceDiscountSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StandalonePriceDiscountSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<StandalonePriceDiscountSetMessagePayload>";

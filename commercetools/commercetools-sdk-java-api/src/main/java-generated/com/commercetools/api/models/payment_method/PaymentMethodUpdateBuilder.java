@@ -28,7 +28,7 @@ public class PaymentMethodUpdateBuilder implements Builder<PaymentMethodUpdate> 
     private java.util.List<com.commercetools.api.models.payment_method.PaymentMethodUpdateAction> actions;
 
     /**
-     *  <p>Expected version of the PaymentMethod on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the PaymentMethod on which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      * @param version value to be set
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class PaymentMethodUpdateBuilder implements Builder<PaymentMethodUpdate> 
     }
 
     /**
-     *  <p>Expected version of the PaymentMethod on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the PaymentMethod on which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      * @return version
      */
 

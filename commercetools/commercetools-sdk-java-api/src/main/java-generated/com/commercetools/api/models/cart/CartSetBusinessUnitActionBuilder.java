@@ -25,7 +25,7 @@ public class CartSetBusinessUnitActionBuilder implements Builder<CartSetBusiness
     private com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit;
 
     /**
-     *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart.</p>
+     *  <p>New Business Unit to assign to the Cart, which must have access to the <span>Store</span> that is set on the Cart.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class CartSetBusinessUnitActionBuilder implements Builder<CartSetBusiness
     }
 
     /**
-     *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart.</p>
+     *  <p>New Business Unit to assign to the Cart, which must have access to the <span>Store</span> that is set on the Cart.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class CartSetBusinessUnitActionBuilder implements Builder<CartSetBusiness
     }
 
     /**
-     *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart.</p>
+     *  <p>New Business Unit to assign to the Cart, which must have access to the <span>Store</span> that is set on the Cart.</p>
      * @param businessUnit value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class CartSetBusinessUnitActionBuilder implements Builder<CartSetBusiness
     }
 
     /**
-     *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart.</p>
+     *  <p>New Business Unit to assign to the Cart, which must have access to the <span>Store</span> that is set on the Cart.</p>
      * @return businessUnit
      */
 

@@ -8,15 +8,15 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+ *  <p>The representation used when creating or updating a <span>customizable data type</span> with Custom Fields.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface CustomFieldsDraft extends io.vrap.rmf.base.client.Draft<CustomFieldsDraft> {
 
     /**
-     *  <p><code>id</code> or <code>key</code> of the Type.</p>
+     *  <p><code>id</code> or <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @return type
      */
     @NotNull
@@ -42,7 +42,7 @@ public interface CustomFieldsDraft extends io.vrap.rmf.base.client.Draft<CustomF
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     *  <p>Object containing the Custom Fields for the <span>customized resource or data type</span>.</p>
      * @return fields
      */
     @Valid
@@ -50,14 +50,14 @@ public interface CustomFieldsDraft extends io.vrap.rmf.base.client.Draft<CustomF
     public FieldContainer getFields();
 
     /**
-     *  <p><code>id</code> or <code>key</code> of the Type.</p>
+     *  <p><code>id</code> or <code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     *  <p>Object containing the Custom Fields for the <span>customized resource or data type</span>.</p>
      * @param fields value to be set
      */
 
@@ -140,8 +140,8 @@ public interface CustomFieldsDraft extends io.vrap.rmf.base.client.Draft<CustomF
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomFieldsDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomFieldsDraft>() {
+    public static tools.jackson.core.type.TypeReference<CustomFieldsDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomFieldsDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomFieldsDraft>";

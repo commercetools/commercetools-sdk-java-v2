@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ApprovalFlow
@@ -146,7 +147,7 @@ public class ApprovalFlowImpl implements ApprovalFlow, ModelBase {
     }
 
     /**
-     *  <p>Order that needs to be approved.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that needs to be approved.</p>
      */
 
     public com.commercetools.api.models.order.OrderReference getOrder() {
@@ -154,7 +155,7 @@ public class ApprovalFlowImpl implements ApprovalFlow, ModelBase {
     }
 
     /**
-     *  <p>Business Unit the Approval Flow belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> the Approval Flow belongs to.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
@@ -162,7 +163,7 @@ public class ApprovalFlowImpl implements ApprovalFlow, ModelBase {
     }
 
     /**
-     *  <p>Approval Rules that matched the Order.</p>
+     *  <p>Approval Rules that matched the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.approval_rule.ApprovalRule> getRules() {
@@ -178,7 +179,7 @@ public class ApprovalFlowImpl implements ApprovalFlow, ModelBase {
     }
 
     /**
-     *  <p>Present when the status of the Approval Flow is <code>Rejected</code>.</p>
+     *  <p>Present when the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlowStatus" rel="nofollow">status</a> of the Approval Flow is <code>Rejected</code>.</p>
      */
 
     public com.commercetools.api.models.approval_flow.ApprovalFlowRejection getRejection() {

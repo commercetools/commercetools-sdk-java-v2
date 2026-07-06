@@ -8,16 +8,17 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Reference to a RecurringOrder.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +41,15 @@ public interface RecurringOrderReference extends Reference {
     String RECURRING_ORDER = "recurring-order";
 
     /**
-     *  <p>Contains the representation of the expanded RecurringOrder. Only present in responses to requests with Reference Expansion for RecurringOrders.</p>
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
+
+    /**
+     *  <p>Contains the representation of the expanded RecurringOrder. Only present in responses to requests with <span>Reference Expansion</span> for RecurringOrders.</p>
      * @return obj
      */
     @Valid
@@ -48,7 +57,7 @@ public interface RecurringOrderReference extends Reference {
     public RecurringOrder getObj();
 
     /**
-     *  <p>Unique identifier of the referenced RecurringOrder.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a>.</p>
      * @return id
      */
     @NotNull
@@ -56,14 +65,14 @@ public interface RecurringOrderReference extends Reference {
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded RecurringOrder. Only present in responses to requests with Reference Expansion for RecurringOrders.</p>
+     *  <p>Contains the representation of the expanded RecurringOrder. Only present in responses to requests with <span>Reference Expansion</span> for RecurringOrders.</p>
      * @param obj value to be set
      */
 
     public void setObj(final RecurringOrder obj);
 
     /**
-     *  <p>Unique identifier of the referenced RecurringOrder.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a>.</p>
      * @param id value to be set
      */
 
@@ -138,8 +147,8 @@ public interface RecurringOrderReference extends Reference {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<RecurringOrderReference> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<RecurringOrderReference>() {
+    public static tools.jackson.core.type.TypeReference<RecurringOrderReference> typeReference() {
+        return new tools.jackson.core.type.TypeReference<RecurringOrderReference>() {
             @Override
             public String toString() {
                 return "TypeReference<RecurringOrderReference>";

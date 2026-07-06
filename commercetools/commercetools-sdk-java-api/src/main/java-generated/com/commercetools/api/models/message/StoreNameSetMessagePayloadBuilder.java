@@ -30,7 +30,7 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
     private java.util.List<com.commercetools.api.models.common.LocalizedString> nameAllLocales;
 
     /**
-     *  <p>Name of the Store set during the Set Name update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
     }
 
     /**
-     *  <p>Name of the Store set during the Set Name update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
     }
 
     /**
-     *  <p>Name of the Store set during the Set Name update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
     }
 
     /**
-     *  <p>Names set for the Store in different locales.</p>
+     *  <p>Names set for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> in different locales.</p>
      * @param nameAllLocales value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
     }
 
     /**
-     *  <p>Names set for the Store in different locales.</p>
+     *  <p>Names set for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> in different locales.</p>
      * @param nameAllLocales value to be set
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
     }
 
     /**
-     *  <p>Names set for the Store in different locales.</p>
+     *  <p>Names set for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> in different locales.</p>
      * @param nameAllLocales value to be set
      * @return Builder
      */
@@ -105,7 +105,7 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
     }
 
     /**
-     *  <p>Names set for the Store in different locales.</p>
+     *  <p>Names set for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> in different locales.</p>
      * @param builder function to build the nameAllLocales value
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
     }
 
     /**
-     *  <p>Names set for the Store in different locales.</p>
+     *  <p>Names set for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> in different locales.</p>
      * @param builder function to build the nameAllLocales value
      * @return Builder
      */
@@ -133,7 +133,7 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
     }
 
     /**
-     *  <p>Names set for the Store in different locales.</p>
+     *  <p>Names set for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> in different locales.</p>
      * @param builder function to build the nameAllLocales value
      * @return Builder
      */
@@ -144,7 +144,7 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
     }
 
     /**
-     *  <p>Names set for the Store in different locales.</p>
+     *  <p>Names set for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> in different locales.</p>
      * @param builder function to build the nameAllLocales value
      * @return Builder
      */
@@ -155,7 +155,7 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
     }
 
     /**
-     *  <p>Name of the Store set during the Set Name update action.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetNameAction" rel="nofollow">Set Name</a> update action.</p>
      * @return name
      */
 
@@ -165,7 +165,7 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
     }
 
     /**
-     *  <p>Names set for the Store in different locales.</p>
+     *  <p>Names set for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> in different locales.</p>
      * @return nameAllLocales
      */
 

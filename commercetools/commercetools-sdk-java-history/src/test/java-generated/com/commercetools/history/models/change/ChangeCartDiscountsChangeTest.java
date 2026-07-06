@@ -23,8 +23,16 @@ public class ChangeCartDiscountsChangeTest {
                         ChangeCartDiscountsChange.builder()
                                 .previousValue(Collections
                                         .singletonList(new com.commercetools.history.models.common.ReferenceImpl())) },
-                new Object[] { "nextValue", ChangeCartDiscountsChange.builder()
-                        .nextValue(
+                new Object[] { "nextValue",
+                        ChangeCartDiscountsChange.builder()
+                                .nextValue(Collections
+                                        .singletonList(new com.commercetools.history.models.common.ReferenceImpl())) },
+                new Object[] { "addedItems",
+                        ChangeCartDiscountsChange.builder()
+                                .addedItems(Collections
+                                        .singletonList(new com.commercetools.history.models.common.ReferenceImpl())) },
+                new Object[] { "removedItems", ChangeCartDiscountsChange.builder()
+                        .removedItems(
                             Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl())) } };
     }
 
@@ -48,6 +56,22 @@ public class ChangeCartDiscountsChangeTest {
         ChangeCartDiscountsChange value = ChangeCartDiscountsChange.of();
         value.setNextValue(Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl()));
         Assertions.assertThat(value.getNextValue())
+                .isEqualTo(Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl()));
+    }
+
+    @Test
+    public void addedItems() {
+        ChangeCartDiscountsChange value = ChangeCartDiscountsChange.of();
+        value.setAddedItems(Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl()));
+        Assertions.assertThat(value.getAddedItems())
+                .isEqualTo(Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl()));
+    }
+
+    @Test
+    public void removedItems() {
+        ChangeCartDiscountsChange value = ChangeCartDiscountsChange.of();
+        value.setRemovedItems(Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl()));
+        Assertions.assertThat(value.getRemovedItems())
                 .isEqualTo(Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl()));
     }
 }

@@ -30,7 +30,7 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. If the referenced Shipping Method has a predicate that does not match the Cart, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param builder function to build the shippingMethod value
      * @return Builder
      */
@@ -44,7 +44,7 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. If the referenced Shipping Method has a predicate that does not match the Cart, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param builder function to build the shippingMethod value
      * @return Builder
      */
@@ -57,7 +57,7 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. If the referenced Shipping Method has a predicate that does not match the Cart, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param shippingMethod value to be set
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param externalTaxRate value to be set
      * @return Builder
      */
@@ -106,7 +106,7 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. If the referenced Shipping Method has a predicate that does not match the Cart, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return shippingMethod
      */
 
@@ -116,7 +116,7 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @return externalTaxRate
      */
 

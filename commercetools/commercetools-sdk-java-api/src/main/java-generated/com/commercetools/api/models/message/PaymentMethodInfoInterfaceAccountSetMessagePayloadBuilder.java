@@ -30,7 +30,7 @@ public class PaymentMethodInfoInterfaceAccountSetMessagePayloadBuilder
     private String oldInterfaceAccount;
 
     /**
-     *  <p>Interface account of the Payment Method after the Set MethodInfo InterfaceAccount update action.</p>
+     *  <p>Interface account of the Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoInterfaceAccountAction" rel="nofollow">Set MethodInfo InterfaceAccount</a> update action.</p>
      * @param interfaceAccount value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class PaymentMethodInfoInterfaceAccountSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Interface account of the Payment Method before the Set MethodInfo InterfaceAccount update action.</p>
+     *  <p>Interface account of the Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoInterfaceAccountAction" rel="nofollow">Set MethodInfo InterfaceAccount</a> update action.</p>
      * @param oldInterfaceAccount value to be set
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class PaymentMethodInfoInterfaceAccountSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Interface account of the Payment Method after the Set MethodInfo InterfaceAccount update action.</p>
+     *  <p>Interface account of the Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoInterfaceAccountAction" rel="nofollow">Set MethodInfo InterfaceAccount</a> update action.</p>
      * @return interfaceAccount
      */
 
@@ -64,7 +64,7 @@ public class PaymentMethodInfoInterfaceAccountSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Interface account of the Payment Method before the Set MethodInfo InterfaceAccount update action.</p>
+     *  <p>Interface account of the Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoInterfaceAccountAction" rel="nofollow">Set MethodInfo InterfaceAccount</a> update action.</p>
      * @return oldInterfaceAccount
      */
 

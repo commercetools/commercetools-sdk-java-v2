@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * PaymentMethodToken
@@ -42,7 +42,7 @@ public interface PaymentMethodToken {
      *  <ul>
      *   <li>in the payload of Payment and PaymentMethod messages</li>
      *   <li>when querying MyPayments</li>
-     *   <li>in referenced Payments and PaymentMethods embedded through Reference Expansion</li>
+     *   <li>in referenced Payments and PaymentMethods embedded through <span>Reference Expansion</span></li>
      *  </ul>
      * @return value
      */
@@ -61,7 +61,7 @@ public interface PaymentMethodToken {
      *  <ul>
      *   <li>in the payload of Payment and PaymentMethod messages</li>
      *   <li>when querying MyPayments</li>
-     *   <li>in referenced Payments and PaymentMethods embedded through Reference Expansion</li>
+     *   <li>in referenced Payments and PaymentMethods embedded through <span>Reference Expansion</span></li>
      *  </ul>
      * @param value value to be set
      */
@@ -135,8 +135,8 @@ public interface PaymentMethodToken {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentMethodToken> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentMethodToken>() {
+    public static tools.jackson.core.type.TypeReference<PaymentMethodToken> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentMethodToken>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentMethodToken>";

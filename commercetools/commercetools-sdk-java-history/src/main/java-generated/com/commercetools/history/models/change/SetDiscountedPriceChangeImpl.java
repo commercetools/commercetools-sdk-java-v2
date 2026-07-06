@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Set Discounted Embedded Price update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetDiscountedPriceAction" rel="nofollow">Set Discounted Embedded Price</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, ModelBase {
@@ -26,9 +27,9 @@ public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, M
 
     private String change;
 
-    private com.commercetools.history.models.common.Price previousValue;
+    private com.commercetools.history.models.common.DiscountedPrice previousValue;
 
-    private com.commercetools.history.models.common.Price nextValue;
+    private com.commercetools.history.models.common.DiscountedPrice nextValue;
 
     private String catalogData;
 
@@ -36,21 +37,25 @@ public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, M
 
     private String priceId;
 
+    private com.commercetools.history.models.common.Price price;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetDiscountedPriceChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.Price previousValue,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.Price nextValue,
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.DiscountedPrice previousValue,
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.DiscountedPrice nextValue,
             @JsonProperty("catalogData") final String catalogData, @JsonProperty("variant") final String variant,
-            @JsonProperty("priceId") final String priceId) {
+            @JsonProperty("priceId") final String priceId,
+            @JsonProperty("price") final com.commercetools.history.models.common.Price price) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.catalogData = catalogData;
         this.variant = variant;
         this.priceId = priceId;
+        this.price = price;
         this.type = SET_DISCOUNTED_PRICE_CHANGE;
     }
 
@@ -81,7 +86,7 @@ public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, M
      *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.common.Price getPreviousValue() {
+    public com.commercetools.history.models.common.DiscountedPrice getPreviousValue() {
         return this.previousValue;
     }
 
@@ -89,14 +94,15 @@ public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, M
      *  <p>Value after the change.</p>
      */
 
-    public com.commercetools.history.models.common.Price getNextValue() {
+    public com.commercetools.history.models.common.DiscountedPrice getNextValue() {
         return this.nextValue;
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
-     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
-     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *  </ul>
      */
 
@@ -105,7 +111,8 @@ public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, M
     }
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the updated ProductVariant.</p>
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
      */
 
     public String getVariant() {
@@ -113,22 +120,30 @@ public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, M
     }
 
     /**
-     *  <p><code>id</code> of the Embedded Price.</p>
+     *  <p><code>id</code> of the Embedded <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</p>
      */
 
     public String getPriceId() {
         return this.priceId;
     }
 
+    /**
+     *  <p>Embedded Price of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+     */
+
+    public com.commercetools.history.models.common.Price getPrice() {
+        return this.price;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.Price previousValue) {
+    public void setPreviousValue(final com.commercetools.history.models.common.DiscountedPrice previousValue) {
         this.previousValue = previousValue;
     }
 
-    public void setNextValue(final com.commercetools.history.models.common.Price nextValue) {
+    public void setNextValue(final com.commercetools.history.models.common.DiscountedPrice nextValue) {
         this.nextValue = nextValue;
     }
 
@@ -142,6 +157,10 @@ public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, M
 
     public void setPriceId(final String priceId) {
         this.priceId = priceId;
+    }
+
+    public void setPrice(final com.commercetools.history.models.common.Price price) {
+        this.price = price;
     }
 
     @Override
@@ -161,6 +180,7 @@ public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, M
                 .append(catalogData, that.catalogData)
                 .append(variant, that.variant)
                 .append(priceId, that.priceId)
+                .append(price, that.price)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
@@ -168,6 +188,7 @@ public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, M
                 .append(catalogData, that.catalogData)
                 .append(variant, that.variant)
                 .append(priceId, that.priceId)
+                .append(price, that.price)
                 .isEquals();
     }
 
@@ -180,6 +201,7 @@ public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, M
                 .append(catalogData)
                 .append(variant)
                 .append(priceId)
+                .append(price)
                 .toHashCode();
     }
 
@@ -192,6 +214,7 @@ public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, M
                 .append("catalogData", catalogData)
                 .append("variant", variant)
                 .append("priceId", priceId)
+                .append("price", price)
                 .build();
     }
 

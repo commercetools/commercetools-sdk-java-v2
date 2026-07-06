@@ -9,12 +9,12 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * StandalonePriceUpdate
@@ -36,7 +36,7 @@ public interface StandalonePriceUpdate extends
         com.commercetools.api.models.ResourceUpdate<StandalonePriceUpdate, StandalonePriceUpdateAction, StandalonePriceUpdateBuilder> {
 
     /**
-     *  <p>Expected version of the StandalonePrice on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the StandalonePrice on which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      * @return version
      */
     @NotNull
@@ -53,7 +53,7 @@ public interface StandalonePriceUpdate extends
     public List<StandalonePriceUpdateAction> getActions();
 
     /**
-     *  <p>Expected version of the StandalonePrice on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the StandalonePrice on which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      * @param version value to be set
      */
 
@@ -147,8 +147,8 @@ public interface StandalonePriceUpdate extends
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceUpdate> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceUpdate>() {
+    public static tools.jackson.core.type.TypeReference<StandalonePriceUpdate> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StandalonePriceUpdate>() {
             @Override
             public String toString() {
                 return "TypeReference<StandalonePriceUpdate>";

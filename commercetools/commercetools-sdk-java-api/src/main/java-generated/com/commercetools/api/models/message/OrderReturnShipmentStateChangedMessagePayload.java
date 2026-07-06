@@ -9,14 +9,14 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.order.ReturnShipmentState;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Set ReturnShipmentState update action on Orders and Order Edits.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetReturnShipmentStateAction" rel="nofollow">Set ReturnShipmentState</a> update action on <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">Order Edits</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface OrderReturnShipmentStateChangedMessagePayload extends OrderMess
     String ORDER_RETURN_SHIPMENT_STATE_CHANGED = "OrderReturnShipmentStateChanged";
 
     /**
-     *  <p>Unique identifier of the ReturnItem.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a>.</p>
      * @return returnItemId
      */
     @NotNull
@@ -48,7 +48,7 @@ public interface OrderReturnShipmentStateChangedMessagePayload extends OrderMess
     public String getReturnItemId();
 
     /**
-     *  <p>State of the ReturnItem after the Set Return Shipment State update action.</p>
+     *  <p>State of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetReturnShipmentStateAction" rel="nofollow">Set Return Shipment State</a> update action.</p>
      * @return returnShipmentState
      */
     @NotNull
@@ -56,14 +56,14 @@ public interface OrderReturnShipmentStateChangedMessagePayload extends OrderMess
     public ReturnShipmentState getReturnShipmentState();
 
     /**
-     *  <p>Unique identifier of the ReturnItem.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a>.</p>
      * @param returnItemId value to be set
      */
 
     public void setReturnItemId(final String returnItemId);
 
     /**
-     *  <p>State of the ReturnItem after the Set Return Shipment State update action.</p>
+     *  <p>State of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetReturnShipmentStateAction" rel="nofollow">Set Return Shipment State</a> update action.</p>
      * @param returnShipmentState value to be set
      */
 
@@ -142,8 +142,8 @@ public interface OrderReturnShipmentStateChangedMessagePayload extends OrderMess
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderReturnShipmentStateChangedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderReturnShipmentStateChangedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<OrderReturnShipmentStateChangedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderReturnShipmentStateChangedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderReturnShipmentStateChangedMessagePayload>";

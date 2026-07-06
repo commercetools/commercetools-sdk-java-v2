@@ -1,7 +1,6 @@
 
 package com.commercetools.api.json;
 
-import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.ZonedDateTime;
@@ -16,14 +15,15 @@ import com.commercetools.api.models.type.CustomFieldEnumValue;
 import com.commercetools.api.models.type.CustomFieldLocalizedEnumValue;
 import com.commercetools.api.models.type.FieldContainerBuilder;
 import com.commercetools.api.models.type.FieldContainerImpl;
-import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.DeserializationContext;
-import com.fasterxml.jackson.databind.JsonDeserializer;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.node.JsonNodeType;
 
-public class CustomFieldDeserializer extends JsonDeserializer<FieldContainerImpl> {
+import tools.jackson.core.JsonParser;
+import tools.jackson.core.type.TypeReference;
+import tools.jackson.databind.DeserializationContext;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.ValueDeserializer;
+import tools.jackson.databind.node.JsonNodeType;
+
+public class CustomFieldDeserializer extends ValueDeserializer<FieldContainerImpl> {
 
     private static Pattern p = Pattern.compile("^[0-9]");
     private static Pattern dateTime = Pattern.compile(
@@ -62,13 +62,14 @@ public class CustomFieldDeserializer extends JsonDeserializer<FieldContainerImpl
     }
 
     @Override
-    public FieldContainerImpl deserialize(JsonParser p, DeserializationContext ctx) throws IOException {
+    public FieldContainerImpl deserialize(JsonParser p, DeserializationContext ctx) {
 
         JsonNode node = p.readValueAsTree();
 
         FieldContainerBuilder builder = FieldContainerBuilder.of();
 
-        node.fields()
+        node.properties()
+                .iterator()
                 .forEachRemaining(nodeEntry -> builder.addValue(nodeEntry.getKey(),
                     mapValue(p, nodeEntry.getKey(), nodeEntry.getValue())));
 
@@ -76,15 +77,10 @@ public class CustomFieldDeserializer extends JsonDeserializer<FieldContainerImpl
     }
 
     private Object mapValue(final JsonParser p, final String name, final JsonNode nodeValue) {
-        try {
-            if (customFieldTypes != null && customFieldTypes.containsKey(name)) {
-                return p.getCodec().treeAsTokens(nodeValue).readValueAs(customFieldTypes.get(name));
-            }
-            return p.getCodec().treeAsTokens(nodeValue).readValueAs(typeRef(nodeValue));
+        if (customFieldTypes != null && customFieldTypes.containsKey(name)) {
+            return p.objectReadContext().treeAsTokens(nodeValue).readValueAs(customFieldTypes.get(name));
         }
-        catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        return p.objectReadContext().treeAsTokens(nodeValue).readValueAs(typeRef(nodeValue));
     }
 
     private TypeReference<?> typeRef(JsonNode valueNode) {
@@ -102,7 +98,7 @@ public class CustomFieldDeserializer extends JsonDeserializer<FieldContainerImpl
                 };
             case STRING:
                 if (deserializeAsDate) {
-                    String val = valueNode.asText();
+                    String val = valueNode.asString();
                     if (p.matcher(val).find()) {
                         if (dateTime.matcher(val).find()) {
                             return new TypeReference<ZonedDateTime>() {
@@ -217,7 +213,7 @@ public class CustomFieldDeserializer extends JsonDeserializer<FieldContainerImpl
                 return ElemType.NUMBER;
             case STRING:
                 if (deserializeAsDate) {
-                    String val = valueNode.asText();
+                    String val = valueNode.asString();
                     if (p.matcher(val).find()) {
                         if (dateTime.matcher(val).find()) {
                             return ElemType.DATETIME;

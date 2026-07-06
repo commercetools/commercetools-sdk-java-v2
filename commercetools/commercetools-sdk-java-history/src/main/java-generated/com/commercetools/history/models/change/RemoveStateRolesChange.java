@@ -9,14 +9,14 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.StateRoleEnum;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Change triggered by the Remove State roles update action.</p>
+ *  <p>This Change is no longer triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:StateRemoveRolesAction" rel="nofollow">Remove State roles</a> update action. It has been deprecated and replaced by the <a href="https://docs.commercetools.com/apis/ctp:history:type:SetStateRolesChange" rel="nofollow">SetStateRolesChange</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,6 +33,7 @@ import jakarta.validation.constraints.NotNull;
 @io.vrap.rmf.base.client.utils.json.SubType("RemoveStateRolesChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = RemoveStateRolesChangeImpl.class)
+@Deprecated
 public interface RemoveStateRolesChange extends Change {
 
     /**
@@ -180,8 +181,8 @@ public interface RemoveStateRolesChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<RemoveStateRolesChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<RemoveStateRolesChange>() {
+    public static tools.jackson.core.type.TypeReference<RemoveStateRolesChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<RemoveStateRolesChange>() {
             @Override
             public String toString() {
                 return "TypeReference<RemoveStateRolesChange>";

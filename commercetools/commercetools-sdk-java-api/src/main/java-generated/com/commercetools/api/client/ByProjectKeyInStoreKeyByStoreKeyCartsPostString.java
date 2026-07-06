@@ -12,24 +12,29 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>Creates a Cart in a Store.</p>
- *  <p>If the referenced ShippingMethod in the CartDraft has a predicate that does not match, or if the Shipping Method is not active, an InvalidOperation error is returned.</p>
+ *  <p>Creates a Cart in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
+ *  <p>An <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned in one of the following cases:</p>
+ *  <ol>
+ *   <li>If the referenced Shipping Method has a predicate that does not match the Cart.</li>
+ *   <li>If the referenced Shipping Method is not active.</li>
+ *   <li>If the referenced Shipping Method is associated with a Store that is different from the Cart's Store.</li>
+ *  </ol>
  *  <p>Specific Error Codes:</p>
  *  <ul>
- *   <li>DiscountCodeNonApplicable</li>
- *   <li>InvalidItemShippingDetails</li>
- *   <li>MatchingPriceNotFound</li>
- *   <li>MissingTaxRateForCountry</li>
- *   <li>CountryNotConfiguredInStore</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeNonApplicableError" rel="nofollow">DiscountCodeNonApplicable</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidItemShippingDetailsError" rel="nofollow">InvalidItemShippingDetails</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CountryNotConfiguredInStoreError" rel="nofollow">CountryNotConfiguredInStore</a></li>
  *  </ul>
  *
  * <hr>

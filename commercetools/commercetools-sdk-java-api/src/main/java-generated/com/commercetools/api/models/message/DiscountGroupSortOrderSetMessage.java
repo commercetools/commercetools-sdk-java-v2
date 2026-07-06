@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set SortOrder update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroupSetSortOrderAction" rel="nofollow">Set SortOrder</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -42,7 +43,7 @@ public interface DiscountGroupSortOrderSetMessage extends Message {
     String DISCOUNT_GROUP_SORT_ORDER_SET = "DiscountGroupSortOrderSet";
 
     /**
-     *  <p><code>sortOrder</code> value of the DiscountGroup after the Set SortOrder update action.</p>
+     *  <p><code>sortOrder</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroup" rel="nofollow">DiscountGroup</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroupSetSortOrderAction" rel="nofollow">Set SortOrder</a> update action.</p>
      * @return sortOrder
      */
 
@@ -50,7 +51,7 @@ public interface DiscountGroupSortOrderSetMessage extends Message {
     public String getSortOrder();
 
     /**
-     *  <p><code>sortOrder</code> value of the DiscountGroup before the Set SortOrder update action.</p>
+     *  <p><code>sortOrder</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroup" rel="nofollow">DiscountGroup</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroupSetSortOrderAction" rel="nofollow">Set SortOrder</a> update action.</p>
      * @return oldSortOrder
      */
 
@@ -58,14 +59,14 @@ public interface DiscountGroupSortOrderSetMessage extends Message {
     public String getOldSortOrder();
 
     /**
-     *  <p><code>sortOrder</code> value of the DiscountGroup after the Set SortOrder update action.</p>
+     *  <p><code>sortOrder</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroup" rel="nofollow">DiscountGroup</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroupSetSortOrderAction" rel="nofollow">Set SortOrder</a> update action.</p>
      * @param sortOrder value to be set
      */
 
     public void setSortOrder(final String sortOrder);
 
     /**
-     *  <p><code>sortOrder</code> value of the DiscountGroup before the Set SortOrder update action.</p>
+     *  <p><code>sortOrder</code> value of the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroup" rel="nofollow">DiscountGroup</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountGroupSetSortOrderAction" rel="nofollow">Set SortOrder</a> update action.</p>
      * @param oldSortOrder value to be set
      */
 
@@ -162,8 +163,8 @@ public interface DiscountGroupSortOrderSetMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DiscountGroupSortOrderSetMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DiscountGroupSortOrderSetMessage>() {
+    public static tools.jackson.core.type.TypeReference<DiscountGroupSortOrderSetMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DiscountGroupSortOrderSetMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<DiscountGroupSortOrderSetMessage>";

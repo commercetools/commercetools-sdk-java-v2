@@ -48,7 +48,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     private com.commercetools.importapi.models.common.ProductKeyReference product;
 
     /**
-     *  <p>User-defined unique identifier. If a ProductVariant with this <code>key</code> exists on the specified <code>product</code>, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> with this <code>key</code> exists on the specified <code>product</code>, it is updated with the imported data.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -71,7 +71,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
 
     /**
      *  <ul>
-     *   <li>When creating a new ProductVariant, set to <code>false</code>; otherwise, the import operation will fail with a NewMasterVariantAdditionNotAllowed error.</li>
+     *   <li>When creating a new ProductVariant, set to <code>false</code>; otherwise, the import operation will fail with a <a href="https://docs.commercetools.com/apis/ctp:import:type:NewMasterVariantAdditionNotAllowedError" rel="nofollow">NewMasterVariantAdditionNotAllowed</a> error.</li>
      *   <li>Set to <code>true</code> if the ProductVariant exists and you want to set this ProductVariant as the Master Variant.</li>
      *  </ul>
      * @param isMasterVariant value to be set
@@ -84,7 +84,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
+     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be <code>unresolved</code>.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -96,7 +96,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
+     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be <code>unresolved</code>.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
+     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be <code>unresolved</code>.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -123,7 +123,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
+     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be <code>unresolved</code>.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -139,7 +139,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
+     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be <code>unresolved</code>.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -332,7 +332,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
 
     /**
      *  <ul>
-     *   <li>Set to <code>false</code> to update both the current and staged projections of the Product with the new Product Variant data.</li>
+     *   <li>Set to <code>false</code> to update both the <span>current and staged projections</span> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> with the new Product Variant data.</li>
      *   <li>Leave empty or set to <code>true</code> to only update the staged projection.</li>
      *  </ul>
      * @param staged value to be set
@@ -345,7 +345,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-     *  <p>The Product containing this ProductVariant. If the referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Product is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product</a> containing this ProductVariant. If the referenced Product does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Product is created.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -357,7 +357,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-     *  <p>The Product containing this ProductVariant. If the referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Product is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product</a> containing this ProductVariant. If the referenced Product does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Product is created.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -369,7 +369,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-     *  <p>The Product containing this ProductVariant. If the referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Product is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product</a> containing this ProductVariant. If the referenced Product does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Product is created.</p>
      * @param product value to be set
      * @return Builder
      */
@@ -381,7 +381,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-     *  <p>User-defined unique identifier. If a ProductVariant with this <code>key</code> exists on the specified <code>product</code>, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> with this <code>key</code> exists on the specified <code>product</code>, it is updated with the imported data.</p>
      * @return key
      */
 
@@ -401,7 +401,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
 
     /**
      *  <ul>
-     *   <li>When creating a new ProductVariant, set to <code>false</code>; otherwise, the import operation will fail with a NewMasterVariantAdditionNotAllowed error.</li>
+     *   <li>When creating a new ProductVariant, set to <code>false</code>; otherwise, the import operation will fail with a <a href="https://docs.commercetools.com/apis/ctp:import:type:NewMasterVariantAdditionNotAllowedError" rel="nofollow">NewMasterVariantAdditionNotAllowed</a> error.</li>
      *   <li>Set to <code>true</code> if the ProductVariant exists and you want to set this ProductVariant as the Master Variant.</li>
      *  </ul>
      * @return isMasterVariant
@@ -412,7 +412,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
+     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be <code>unresolved</code>.</p>
      * @return attributes
      */
 
@@ -443,7 +443,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
 
     /**
      *  <ul>
-     *   <li>Set to <code>false</code> to update both the current and staged projections of the Product with the new Product Variant data.</li>
+     *   <li>Set to <code>false</code> to update both the <span>current and staged projections</span> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> with the new Product Variant data.</li>
      *   <li>Leave empty or set to <code>true</code> to only update the staged projection.</li>
      *  </ul>
      * @return staged
@@ -455,7 +455,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-     *  <p>The Product containing this ProductVariant. If the referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Product is created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product</a> containing this ProductVariant. If the referenced Product does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Product is created.</p>
      * @return product
      */
 

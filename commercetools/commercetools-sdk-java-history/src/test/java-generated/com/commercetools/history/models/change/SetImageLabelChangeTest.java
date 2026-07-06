@@ -23,7 +23,8 @@ public class SetImageLabelChangeTest {
                 new Object[] { "nextValue",
                         SetImageLabelChange.builder()
                                 .nextValue(new com.commercetools.history.models.common.ImageImpl()) },
-                new Object[] { "catalogData", SetImageLabelChange.builder().catalogData("catalogData") } };
+                new Object[] { "catalogData", SetImageLabelChange.builder().catalogData("catalogData") },
+                new Object[] { "variant", SetImageLabelChange.builder().variant("variant") } };
     }
 
     @Test
@@ -53,5 +54,12 @@ public class SetImageLabelChangeTest {
         SetImageLabelChange value = SetImageLabelChange.of();
         value.setCatalogData("catalogData");
         Assertions.assertThat(value.getCatalogData()).isEqualTo("catalogData");
+    }
+
+    @Test
+    public void variant() {
+        SetImageLabelChange value = SetImageLabelChange.of();
+        value.setVariant("variant");
+        Assertions.assertThat(value.getVariant()).isEqualTo("variant");
     }
 }

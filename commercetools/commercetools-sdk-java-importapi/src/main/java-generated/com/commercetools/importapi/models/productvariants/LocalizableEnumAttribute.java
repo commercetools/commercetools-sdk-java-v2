@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This type represents an attribute whose value is a localized enum. The attribute value refers to the key of the enum value.</p>
@@ -38,7 +38,7 @@ public interface LocalizableEnumAttribute extends Attribute {
     String LENUM = "lenum";
 
     /**
-     *  <p>The key of the localized enum value. Must match the key of an AttributeLocalizedEnumValue in the Product Type.</p>
+     *  <p>The key of the localized enum value. Must match the key of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumValue" rel="nofollow">AttributeLocalizedEnumValue</a> in the Product Type.</p>
      * @return value
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface LocalizableEnumAttribute extends Attribute {
     public String getValue();
 
     /**
-     *  <p>The key of the localized enum value. Must match the key of an AttributeLocalizedEnumValue in the Product Type.</p>
+     *  <p>The key of the localized enum value. Must match the key of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumValue" rel="nofollow">AttributeLocalizedEnumValue</a> in the Product Type.</p>
      * @param value value to be set
      */
 
@@ -121,8 +121,8 @@ public interface LocalizableEnumAttribute extends Attribute {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<LocalizableEnumAttribute> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<LocalizableEnumAttribute>() {
+    public static tools.jackson.core.type.TypeReference<LocalizableEnumAttribute> typeReference() {
+        return new tools.jackson.core.type.TypeReference<LocalizableEnumAttribute>() {
             @Override
             public String toString() {
                 return "TypeReference<LocalizableEnumAttribute>";

@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Address;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Remove Billing Address Identifier update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitRemoveBillingAddressIdAction" rel="nofollow">Remove Billing Address Identifier</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface BusinessUnitBillingAddressRemovedMessage extends Message {
     String BUSINESS_UNIT_BILLING_ADDRESS_REMOVED = "BusinessUnitBillingAddressRemoved";
 
     /**
-     *  <p>The address that was removed from the billing addresses of the Business Unit.</p>
+     *  <p>The address that was removed from the billing addresses of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @return address
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface BusinessUnitBillingAddressRemovedMessage extends Message {
     public Address getAddress();
 
     /**
-     *  <p>The address that was removed from the billing addresses of the Business Unit.</p>
+     *  <p>The address that was removed from the billing addresses of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param address value to be set
      */
 
@@ -154,8 +154,8 @@ public interface BusinessUnitBillingAddressRemovedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitBillingAddressRemovedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitBillingAddressRemovedMessage>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitBillingAddressRemovedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitBillingAddressRemovedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitBillingAddressRemovedMessage>";

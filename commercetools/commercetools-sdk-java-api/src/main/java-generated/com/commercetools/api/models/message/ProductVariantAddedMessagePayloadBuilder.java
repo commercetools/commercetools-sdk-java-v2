@@ -28,7 +28,7 @@ public class ProductVariantAddedMessagePayloadBuilder implements Builder<Product
     private Boolean staged;
 
     /**
-     *  <p>Unique identifier of the Product Variant that was added.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> that was added.</p>
      * @param builder function to build the variant value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class ProductVariantAddedMessagePayloadBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Unique identifier of the Product Variant that was added.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> that was added.</p>
      * @param builder function to build the variant value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class ProductVariantAddedMessagePayloadBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Unique identifier of the Product Variant that was added.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> that was added.</p>
      * @param variant value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class ProductVariantAddedMessagePayloadBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class ProductVariantAddedMessagePayloadBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Unique identifier of the Product Variant that was added.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> that was added.</p>
      * @return variant
      */
 
@@ -84,7 +84,7 @@ public class ProductVariantAddedMessagePayloadBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @return staged
      */
 

@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.associate_role.AssociateRole;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Create AssociateRole request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/associate-roles:POST" rel="nofollow">Create AssociateRole</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface AssociateRoleCreatedMessagePayload extends MessagePayload {
     String ASSOCIATE_ROLE_CREATED = "AssociateRoleCreated";
 
     /**
-     *  <p>The AssociateRole that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a> that was created.</p>
      * @return associateRole
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface AssociateRoleCreatedMessagePayload extends MessagePayload {
     public AssociateRole getAssociateRole();
 
     /**
-     *  <p>The AssociateRole that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a> that was created.</p>
      * @param associateRole value to be set
      */
 
@@ -124,8 +124,8 @@ public interface AssociateRoleCreatedMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AssociateRoleCreatedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AssociateRoleCreatedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<AssociateRoleCreatedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AssociateRoleCreatedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<AssociateRoleCreatedMessagePayload>";

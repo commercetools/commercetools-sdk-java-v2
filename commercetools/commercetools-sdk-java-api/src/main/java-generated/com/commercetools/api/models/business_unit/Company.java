@@ -9,14 +9,14 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Business Unit type to represent the top level of a business. Contains specific fields and values that differentiate a Company from the generic BusinessUnit.</p>
+ *  <p>Business Unit type to represent the top level of a business. Contains specific fields and values that differentiate a Company from the generic <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,6 +32,8 @@ import jakarta.validation.constraints.NotNull;
  *             .storeMode(BusinessUnitStoreMode.EXPLICIT)
  *             .name("{name}")
  *             .plusAddresses(addressesBuilder -> addressesBuilder)
+ *             .plusShippingAddressIds(shippingAddressIdsBuilder -> shippingAddressIdsBuilder)
+ *             .plusBillingAddressIds(billingAddressIdsBuilder -> billingAddressIdsBuilder)
  *             .associateMode(BusinessUnitAssociateMode.EXPLICIT)
  *             .plusAssociates(associatesBuilder -> associatesBuilder)
  *             .topLevelUnit(topLevelUnitBuilder -> topLevelUnitBuilder)
@@ -124,6 +126,7 @@ public interface Company extends BusinessUnit {
         instance.setName(template.getName());
         instance.setContactEmail(template.getContactEmail());
         instance.setCustom(template.getCustom());
+        instance.setCustomerGroupAssignments(template.getCustomerGroupAssignments());
         instance.setAddresses(template.getAddresses());
         instance.setShippingAddressIds(template.getShippingAddressIds());
         instance.setDefaultShippingAddressId(template.getDefaultShippingAddressId());
@@ -174,6 +177,11 @@ public interface Company extends BusinessUnit {
         instance.setName(template.getName());
         instance.setContactEmail(template.getContactEmail());
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
+        instance.setCustomerGroupAssignments(Optional.ofNullable(template.getCustomerGroupAssignments())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.customer.CustomerGroupAssignment::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setAddresses(Optional.ofNullable(template.getAddresses())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.common.Address::deepCopy)
@@ -235,8 +243,8 @@ public interface Company extends BusinessUnit {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Company> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Company>() {
+    public static tools.jackson.core.type.TypeReference<Company> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Company>() {
             @Override
             public String toString() {
                 return "TypeReference<Company>";

@@ -30,7 +30,7 @@ public class PaymentMethodInfoInterfaceSetMessagePayloadBuilder
     private String oldInterface;
 
     /**
-     *  <p>Payment interface of the Payment Method after the Set MethodInfo Interface update action.</p>
+     *  <p>Payment interface of the Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoInterfaceAction" rel="nofollow">Set MethodInfo Interface</a> update action.</p>
      * @param _interface value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class PaymentMethodInfoInterfaceSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Payment interface of the Payment Method before the Set MethodInfo Interface update action.</p>
+     *  <p>Payment interface of the Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoInterfaceAction" rel="nofollow">Set MethodInfo Interface</a> update action.</p>
      * @param oldInterface value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class PaymentMethodInfoInterfaceSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Payment interface of the Payment Method after the Set MethodInfo Interface update action.</p>
+     *  <p>Payment interface of the Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoInterfaceAction" rel="nofollow">Set MethodInfo Interface</a> update action.</p>
      * @return interface
      */
 
@@ -62,7 +62,7 @@ public class PaymentMethodInfoInterfaceSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Payment interface of the Payment Method before the Set MethodInfo Interface update action.</p>
+     *  <p>Payment interface of the Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoInterfaceAction" rel="nofollow">Set MethodInfo Interface</a> update action.</p>
      * @return oldInterface
      */
 

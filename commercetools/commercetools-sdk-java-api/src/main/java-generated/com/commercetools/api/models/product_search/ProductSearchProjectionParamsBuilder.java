@@ -20,6 +20,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class ProductSearchProjectionParamsBuilder implements Builder<ProductSearchProjectionParams> {
 
     @Nullable
@@ -50,7 +51,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     private String storeProjection;
 
     /**
-     *  <p>Expands a <code>value</code> of type Reference in a ProductProjection. In case the referenced object does not exist, the API returns the non-expanded reference.</p>
+     *  <p>Expands a <code>value</code> of type <a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> in a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjection</a>. In case the referenced object does not exist, the API returns the non-expanded reference.</p>
      * @param expand value to be set
      * @return Builder
      */
@@ -61,7 +62,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>Expands a <code>value</code> of type Reference in a ProductProjection. In case the referenced object does not exist, the API returns the non-expanded reference.</p>
+     *  <p>Expands a <code>value</code> of type <a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> in a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjection</a>. In case the referenced object does not exist, the API returns the non-expanded reference.</p>
      * @param expand value to be set
      * @return Builder
      */
@@ -72,7 +73,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>Expands a <code>value</code> of type Reference in a ProductProjection. In case the referenced object does not exist, the API returns the non-expanded reference.</p>
+     *  <p>Expands a <code>value</code> of type <a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> in a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjection</a>. In case the referenced object does not exist, the API returns the non-expanded reference.</p>
      * @param expand value to be set
      * @return Builder
      */
@@ -86,7 +87,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>Set to <code>true</code> to retrieve the staged Product Projection</p>
+     *  <p>Set to <code>true</code> to retrieve the <span>staged</span> Product Projection</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -97,7 +98,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>The currency used for Product price selection.</p>
+     *  <p>The currency used for <span>Product price selection</span>.</p>
      * @param priceCurrency value to be set
      * @return Builder
      */
@@ -108,7 +109,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>The country used for Product price selection. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
+     *  <p>The country used for <span>Product price selection</span>. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      * @param priceCountry value to be set
      * @return Builder
      */
@@ -119,7 +120,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p><code>id</code> of an existing CustomerGroup used for Product price selection. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> used for <span>Product price selection</span>. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      * @param priceCustomerGroup value to be set
      * @return Builder
      */
@@ -130,7 +131,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>IDs of existing CustomerGroups used for Product price selection, when using multiple Customer Groups. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
+     *  <p>IDs of existing <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroups</a> used for <span>Product price selection</span>, when using <span>multiple Customer Groups</span>. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      * @param priceCustomerGroupAssignments value to be set
      * @return Builder
      */
@@ -142,7 +143,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>IDs of existing CustomerGroups used for Product price selection, when using multiple Customer Groups. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
+     *  <p>IDs of existing <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroups</a> used for <span>Product price selection</span>, when using <span>multiple Customer Groups</span>. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      * @param priceCustomerGroupAssignments value to be set
      * @return Builder
      */
@@ -154,7 +155,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>IDs of existing CustomerGroups used for Product price selection, when using multiple Customer Groups. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
+     *  <p>IDs of existing <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroups</a> used for <span>Product price selection</span>, when using <span>multiple Customer Groups</span>. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      * @param priceCustomerGroupAssignments value to be set
      * @return Builder
      */
@@ -169,7 +170,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p><code>id</code> of an existing Channel used for Product price selection. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> used for <span>Product price selection</span>. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      * @param priceChannel value to be set
      * @return Builder
      */
@@ -180,7 +181,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>Used for locale-based projection.</p>
+     *  <p>Used for <span>locale-based projection</span>.</p>
      * @param localeProjection value to be set
      * @return Builder
      */
@@ -191,7 +192,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>Used for locale-based projection.</p>
+     *  <p>Used for <span>locale-based projection</span>.</p>
      * @param localeProjection value to be set
      * @return Builder
      */
@@ -203,7 +204,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>Used for locale-based projection.</p>
+     *  <p>Used for <span>locale-based projection</span>.</p>
      * @param localeProjection value to be set
      * @return Builder
      */
@@ -217,7 +218,9 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p><code>key</code> of an existing Store. If the Store has defined <code>languages</code>, <code>countries</code>, <code>distributionChannels</code>, or <code>supplyChannels</code>, they are used for projections based on locale, price, and inventory. For Projects with active Product Selections, the API does not take the availability of the Product in the specified Store into account. Product Tailoring modifies the product information returned in API responses, but evaluating query expressions is restricted to the original product information.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. If the Store has defined <code>languages</code>, <code>countries</code>, <code>distributionChannels</code>, or <code>supplyChannels</code>, they are used for projections based on <span>locale</span>, <span>price</span>, and <span>inventory</span>.</p>
+     *  <p>For Projects with active <span>Product Selections</span>, the API does not take the <span>availability of the Product in the specified Store</span> into account.</p>
+     *  <p><span>Product Tailoring</span> modifies the product information returned in API responses. However, you can only specify <span>query expressions</span> for the original Product data, not for tailored data.</p>
      * @param storeProjection value to be set
      * @return Builder
      */
@@ -228,7 +231,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>Expands a <code>value</code> of type Reference in a ProductProjection. In case the referenced object does not exist, the API returns the non-expanded reference.</p>
+     *  <p>Expands a <code>value</code> of type <a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> in a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjection</a>. In case the referenced object does not exist, the API returns the non-expanded reference.</p>
      * @return expand
      */
 
@@ -238,7 +241,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>Set to <code>true</code> to retrieve the staged Product Projection</p>
+     *  <p>Set to <code>true</code> to retrieve the <span>staged</span> Product Projection</p>
      * @return staged
      */
 
@@ -248,7 +251,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>The currency used for Product price selection.</p>
+     *  <p>The currency used for <span>Product price selection</span>.</p>
      * @return priceCurrency
      */
 
@@ -258,7 +261,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>The country used for Product price selection. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
+     *  <p>The country used for <span>Product price selection</span>. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      * @return priceCountry
      */
 
@@ -268,7 +271,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p><code>id</code> of an existing CustomerGroup used for Product price selection. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> used for <span>Product price selection</span>. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      * @return priceCustomerGroup
      */
 
@@ -278,7 +281,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>IDs of existing CustomerGroups used for Product price selection, when using multiple Customer Groups. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
+     *  <p>IDs of existing <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroups</a> used for <span>Product price selection</span>, when using <span>multiple Customer Groups</span>. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      * @return priceCustomerGroupAssignments
      */
 
@@ -288,7 +291,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p><code>id</code> of an existing Channel used for Product price selection. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> used for <span>Product price selection</span>. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      * @return priceChannel
      */
 
@@ -298,7 +301,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>Used for locale-based projection.</p>
+     *  <p>Used for <span>locale-based projection</span>.</p>
      * @return localeProjection
      */
 
@@ -308,7 +311,9 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p><code>key</code> of an existing Store. If the Store has defined <code>languages</code>, <code>countries</code>, <code>distributionChannels</code>, or <code>supplyChannels</code>, they are used for projections based on locale, price, and inventory. For Projects with active Product Selections, the API does not take the availability of the Product in the specified Store into account. Product Tailoring modifies the product information returned in API responses, but evaluating query expressions is restricted to the original product information.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>. If the Store has defined <code>languages</code>, <code>countries</code>, <code>distributionChannels</code>, or <code>supplyChannels</code>, they are used for projections based on <span>locale</span>, <span>price</span>, and <span>inventory</span>.</p>
+     *  <p>For Projects with active <span>Product Selections</span>, the API does not take the <span>availability of the Product in the specified Store</span> into account.</p>
+     *  <p><span>Product Tailoring</span> modifies the product information returned in API responses. However, you can only specify <span>query expressions</span> for the original Product data, not for tailored data.</p>
      * @return storeProjection
      */
 

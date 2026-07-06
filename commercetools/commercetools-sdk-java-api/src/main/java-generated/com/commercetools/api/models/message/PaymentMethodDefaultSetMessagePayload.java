@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Set Default update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetDefaultAction" rel="nofollow">Set Default</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ public interface PaymentMethodDefaultSetMessagePayload extends MessagePayload {
     String PAYMENT_METHOD_DEFAULT_SET = "PaymentMethodDefaultSet";
 
     /**
-     *  <p>Default Payment Method after the Set Default update action.</p>
+     *  <p>Default Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetDefaultAction" rel="nofollow">Set Default</a> update action.</p>
      * @return default
      */
     @NotNull
@@ -47,7 +47,7 @@ public interface PaymentMethodDefaultSetMessagePayload extends MessagePayload {
     public Boolean getDefault();
 
     /**
-     *  <p>Default Payment Method before the Set Default update action.</p>
+     *  <p>Default Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetDefaultAction" rel="nofollow">Set Default</a> update action.</p>
      * @return oldDefault
      */
     @NotNull
@@ -55,14 +55,14 @@ public interface PaymentMethodDefaultSetMessagePayload extends MessagePayload {
     public Boolean getOldDefault();
 
     /**
-     *  <p>Default Payment Method after the Set Default update action.</p>
+     *  <p>Default Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetDefaultAction" rel="nofollow">Set Default</a> update action.</p>
      * @param _default value to be set
      */
 
     public void setDefault(final Boolean _default);
 
     /**
-     *  <p>Default Payment Method before the Set Default update action.</p>
+     *  <p>Default Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodSetDefaultAction" rel="nofollow">Set Default</a> update action.</p>
      * @param oldDefault value to be set
      */
 
@@ -139,8 +139,8 @@ public interface PaymentMethodDefaultSetMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentMethodDefaultSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentMethodDefaultSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<PaymentMethodDefaultSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentMethodDefaultSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentMethodDefaultSetMessagePayload>";

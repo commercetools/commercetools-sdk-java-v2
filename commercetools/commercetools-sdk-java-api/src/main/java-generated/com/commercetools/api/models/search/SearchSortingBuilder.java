@@ -53,7 +53,7 @@ public class SearchSortingBuilder implements Builder<SearchSorting> {
     }
 
     /**
-     *  <p>String value specifying linguistic and regional preferences using the IETF language tag format, as described in BCP 47. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
+     *  <p>String value specifying linguistic and regional preferences using the <span>IETF language tag format</span>, as described in <span>BCP 47</span>. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
      * @param language value to be set
      * @return Builder
      */
@@ -98,7 +98,7 @@ public class SearchSortingBuilder implements Builder<SearchSorting> {
     }
 
     /**
-     *  <p>Allows you to apply a sort filter.</p>
+     *  <p>Allows you to apply a <span>sort filter</span>.</p>
      * @param builder function to build the filter value
      * @return Builder
      */
@@ -110,7 +110,7 @@ public class SearchSortingBuilder implements Builder<SearchSorting> {
     }
 
     /**
-     *  <p>Allows you to apply a sort filter.</p>
+     *  <p>Allows you to apply a <span>sort filter</span>.</p>
      * @param builder function to build the filter value
      * @return Builder
      */
@@ -122,7 +122,7 @@ public class SearchSortingBuilder implements Builder<SearchSorting> {
     }
 
     /**
-     *  <p>Allows you to apply a sort filter.</p>
+     *  <p>Allows you to apply a <span>sort filter</span>.</p>
      * @param filter value to be set
      * @return Builder
      */
@@ -142,7 +142,7 @@ public class SearchSortingBuilder implements Builder<SearchSorting> {
     }
 
     /**
-     *  <p>String value specifying linguistic and regional preferences using the IETF language tag format, as described in BCP 47. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
+     *  <p>String value specifying linguistic and regional preferences using the <span>IETF language tag format</span>, as described in <span>BCP 47</span>. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
      * @return language
      */
 
@@ -181,7 +181,7 @@ public class SearchSortingBuilder implements Builder<SearchSorting> {
     }
 
     /**
-     *  <p>Allows you to apply a sort filter.</p>
+     *  <p>Allows you to apply a <span>sort filter</span>.</p>
      * @return filter
      */
 

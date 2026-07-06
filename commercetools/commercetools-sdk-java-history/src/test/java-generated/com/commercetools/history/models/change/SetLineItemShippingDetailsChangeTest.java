@@ -23,7 +23,11 @@ public class SetLineItemShippingDetailsChangeTest {
                 new Object[] { "nextValue",
                         SetLineItemShippingDetailsChange.builder()
                                 .nextValue(new com.commercetools.history.models.common.ItemShippingDetailsImpl()) },
-                new Object[] { "lineItemId", SetLineItemShippingDetailsChange.builder().lineItemId("lineItemId") } };
+                new Object[] { "lineItemId", SetLineItemShippingDetailsChange.builder().lineItemId("lineItemId") },
+                new Object[] { "lineItem",
+                        SetLineItemShippingDetailsChange.builder()
+                                .lineItem(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "variant", SetLineItemShippingDetailsChange.builder().variant("variant") } };
     }
 
     @Test
@@ -54,5 +58,20 @@ public class SetLineItemShippingDetailsChangeTest {
         SetLineItemShippingDetailsChange value = SetLineItemShippingDetailsChange.of();
         value.setLineItemId("lineItemId");
         Assertions.assertThat(value.getLineItemId()).isEqualTo("lineItemId");
+    }
+
+    @Test
+    public void lineItem() {
+        SetLineItemShippingDetailsChange value = SetLineItemShippingDetailsChange.of();
+        value.setLineItem(new com.commercetools.history.models.common.LocalizedStringImpl());
+        Assertions.assertThat(value.getLineItem())
+                .isEqualTo(new com.commercetools.history.models.common.LocalizedStringImpl());
+    }
+
+    @Test
+    public void variant() {
+        SetLineItemShippingDetailsChange value = SetLineItemShippingDetailsChange.of();
+        value.setVariant("variant");
+        Assertions.assertThat(value.getVariant()).isEqualTo("variant");
     }
 }

@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.CustomLineItem;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Change triggered by the Remove CustomLineItem update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveCustomLineItemAction" rel="nofollow">Remove CustomLineItem</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -168,8 +168,8 @@ public interface RemoveCustomLineItemChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<RemoveCustomLineItemChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<RemoveCustomLineItemChange>() {
+    public static tools.jackson.core.type.TypeReference<RemoveCustomLineItemChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<RemoveCustomLineItemChange>() {
             @Override
             public String toString() {
                 return "TypeReference<RemoveCustomLineItemChange>";

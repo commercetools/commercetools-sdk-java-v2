@@ -24,7 +24,7 @@ public class ProjectChangePriceRoundingModeActionBuilder implements Builder<Proj
     private com.commercetools.api.models.cart.RoundingMode priceRoundingMode;
 
     /**
-     *  <p>Project-level default rounding mode for calculating the total prices on LineItems and CustomLineItems. See CartsConfiguration.</p>
+     *  <p>Project-level default rounding mode for calculating the total prices on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>. See <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">CartsConfiguration</a>.</p>
      * @param priceRoundingMode value to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class ProjectChangePriceRoundingModeActionBuilder implements Builder<Proj
     }
 
     /**
-     *  <p>Project-level default rounding mode for calculating the total prices on LineItems and CustomLineItems. See CartsConfiguration.</p>
+     *  <p>Project-level default rounding mode for calculating the total prices on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>. See <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">CartsConfiguration</a>.</p>
      * @return priceRoundingMode
      */
 

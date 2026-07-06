@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProjectSetBusinessUnitAssociateRoleOnCreationAction
@@ -40,7 +40,7 @@ public interface ProjectSetBusinessUnitAssociateRoleOnCreationAction extends Pro
     String SET_MY_BUSINESS_UNIT_ASSOCIATE_ROLE_ON_CREATION = "setMyBusinessUnitAssociateRoleOnCreation";
 
     /**
-     *  <p>Default Associate Role assigned to the Associate creating a Business Unit using the My Business Unit endpoint.</p>
+     *  <p>Default <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Role</a> assigned to the Associate creating a Business Unit using the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/business-units:POST" rel="nofollow">My Business Unit endpoint</a>.</p>
      * @return associateRole
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface ProjectSetBusinessUnitAssociateRoleOnCreationAction extends Pro
     public AssociateRoleResourceIdentifier getAssociateRole();
 
     /**
-     *  <p>Default Associate Role assigned to the Associate creating a Business Unit using the My Business Unit endpoint.</p>
+     *  <p>Default <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">Associate Role</a> assigned to the Associate creating a Business Unit using the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/business-units:POST" rel="nofollow">My Business Unit endpoint</a>.</p>
      * @param associateRole value to be set
      */
 
@@ -127,8 +127,8 @@ public interface ProjectSetBusinessUnitAssociateRoleOnCreationAction extends Pro
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProjectSetBusinessUnitAssociateRoleOnCreationAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProjectSetBusinessUnitAssociateRoleOnCreationAction>() {
+    public static tools.jackson.core.type.TypeReference<ProjectSetBusinessUnitAssociateRoleOnCreationAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProjectSetBusinessUnitAssociateRoleOnCreationAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProjectSetBusinessUnitAssociateRoleOnCreationAction>";

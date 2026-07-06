@@ -1,6 +1,7 @@
 
 package com.commercetools.api.models.product;
 
+import java.util.Collections;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -55,6 +56,9 @@ public interface ProductMixin extends Referencable<Product>, ResourceIdentifiabl
                 .state(StateReference.deepCopy(template.getState()))
                 .reviewRatingStatistics(ReviewRatingStatistics.deepCopy(template.getReviewRatingStatistics()))
                 .priceMode(template.getPriceMode())
+                .attributes(Optional.ofNullable(productDataLike.getAttributes())
+                        .map(a -> a.stream().map(Attribute::deepCopy).collect(Collectors.toList()))
+                        .orElse(Collections.emptyList()))
                 .build();
     }
 }

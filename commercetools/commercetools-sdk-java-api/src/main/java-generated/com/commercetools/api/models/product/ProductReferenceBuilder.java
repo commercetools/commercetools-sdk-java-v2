@@ -30,7 +30,7 @@ public class ProductReferenceBuilder implements Builder<ProductReference> {
     private com.commercetools.api.models.product.Product obj;
 
     /**
-     *  <p>Unique identifier of the referenced Product.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class ProductReferenceBuilder implements Builder<ProductReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Product. Only present in responses to requests with Reference Expansion for Products.</p>
+     *  <p>Contains the representation of the expanded Product. Only present in responses to requests with <span>Reference Expansion</span> for Products.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ProductReferenceBuilder implements Builder<ProductReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Product. Only present in responses to requests with Reference Expansion for Products.</p>
+     *  <p>Contains the representation of the expanded Product. Only present in responses to requests with <span>Reference Expansion</span> for Products.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class ProductReferenceBuilder implements Builder<ProductReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Product. Only present in responses to requests with Reference Expansion for Products.</p>
+     *  <p>Contains the representation of the expanded Product. Only present in responses to requests with <span>Reference Expansion</span> for Products.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class ProductReferenceBuilder implements Builder<ProductReference> {
     }
 
     /**
-     *  <p>Unique identifier of the referenced Product.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      * @return id
      */
 
@@ -85,7 +85,7 @@ public class ProductReferenceBuilder implements Builder<ProductReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Product. Only present in responses to requests with Reference Expansion for Products.</p>
+     *  <p>Contains the representation of the expanded Product. Only present in responses to requests with <span>Reference Expansion</span> for Products.</p>
      * @return obj
      */
 

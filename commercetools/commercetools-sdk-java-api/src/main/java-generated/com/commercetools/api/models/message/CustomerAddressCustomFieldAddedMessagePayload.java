@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after adding a Custom Field to an Address of a Customer using the Set CustomField in Address update action. If a Custom Field already exists with the same name, a CustomerAddressCustomFieldChanged Message is generated instead.</p>
+ *  <p>Generated after adding a Custom Field to an Address of a Customer using the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetAddressCustomFieldAction" rel="nofollow">Set CustomField in Address</a> update action. If a Custom Field already exists with the same name, a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddressCustomFieldChangedMessage" rel="nofollow">CustomerAddressCustomFieldChanged</a> Message is generated instead.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -46,7 +46,7 @@ public interface CustomerAddressCustomFieldAddedMessagePayload extends MessagePa
     public String getName();
 
     /**
-     *  <p>The added CustomFieldValue based on the FieldType.</p>
+     *  <p>The added <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a>.</p>
      * @return value
      */
     @NotNull
@@ -54,7 +54,7 @@ public interface CustomerAddressCustomFieldAddedMessagePayload extends MessagePa
     public Object getValue();
 
     /**
-     *  <p><code>id</code> of the Address to which the Custom Field was added.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to which the Custom Field was added.</p>
      * @return addressId
      */
 
@@ -69,14 +69,14 @@ public interface CustomerAddressCustomFieldAddedMessagePayload extends MessagePa
     public void setName(final String name);
 
     /**
-     *  <p>The added CustomFieldValue based on the FieldType.</p>
+     *  <p>The added <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a> based on the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldType" rel="nofollow">FieldType</a>.</p>
      * @param value value to be set
      */
 
     public void setValue(final Object value);
 
     /**
-     *  <p><code>id</code> of the Address to which the Custom Field was added.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to which the Custom Field was added.</p>
      * @param addressId value to be set
      */
 
@@ -157,8 +157,8 @@ public interface CustomerAddressCustomFieldAddedMessagePayload extends MessagePa
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerAddressCustomFieldAddedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerAddressCustomFieldAddedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<CustomerAddressCustomFieldAddedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerAddressCustomFieldAddedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerAddressCustomFieldAddedMessagePayload>";

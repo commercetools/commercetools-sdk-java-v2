@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Change Price update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangePriceAction" rel="nofollow">Change Price</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPriceChangedMessageImpl implements ProductPriceChangedMessage, ModelBase {
@@ -154,7 +155,7 @@ public class ProductPriceChangedMessageImpl implements ProductPriceChangedMessag
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -170,7 +171,7 @@ public class ProductPriceChangedMessageImpl implements ProductPriceChangedMessag
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -186,7 +187,7 @@ public class ProductPriceChangedMessageImpl implements ProductPriceChangedMessag
     }
 
     /**
-     *  <p>Unique identifier of the ProductVariant for which the Price was changed.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which the Price was changed.</p>
      */
 
     public Long getVariantId() {
@@ -194,7 +195,7 @@ public class ProductPriceChangedMessageImpl implements ProductPriceChangedMessag
     }
 
     /**
-     *  <p>The current Embedded Price before the Change Embedded Price update action.</p>
+     *  <p>The current Embedded Price before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangePriceAction" rel="nofollow">Change Embedded Price</a> update action.</p>
      */
 
     public com.commercetools.api.models.common.Price getOldPrice() {
@@ -202,7 +203,7 @@ public class ProductPriceChangedMessageImpl implements ProductPriceChangedMessag
     }
 
     /**
-     *  <p>The Embedded Price after the Change Embedded Price update action.</p>
+     *  <p>The Embedded Price after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangePriceAction" rel="nofollow">Change Embedded Price</a> update action.</p>
      */
 
     public com.commercetools.api.models.common.Price getNewPrice() {
@@ -210,7 +211,7 @@ public class ProductPriceChangedMessageImpl implements ProductPriceChangedMessag
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      */
 
     public Boolean getStaged() {
@@ -218,7 +219,7 @@ public class ProductPriceChangedMessageImpl implements ProductPriceChangedMessag
     }
 
     /**
-     *  <p>The staged Embedded Price before the Change Embedded Price update action.</p>
+     *  <p>The staged Embedded Price before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangePriceAction" rel="nofollow">Change Embedded Price</a> update action.</p>
      */
 
     public com.commercetools.api.models.common.Price getOldStagedPrice() {

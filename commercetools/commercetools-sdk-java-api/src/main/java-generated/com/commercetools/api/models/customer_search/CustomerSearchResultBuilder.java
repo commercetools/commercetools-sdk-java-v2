@@ -27,7 +27,7 @@ public class CustomerSearchResultBuilder implements Builder<CustomerSearchResult
     private Double relevance;
 
     /**
-     *  <p><code>id</code> of the Customer matching the search query.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> matching the search query.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class CustomerSearchResultBuilder implements Builder<CustomerSearchResult
     }
 
     /**
-     *  <p><code>id</code> of the Customer matching the search query.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> matching the search query.</p>
      * @return id
      */
 

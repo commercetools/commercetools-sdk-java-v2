@@ -16,12 +16,12 @@ import com.commercetools.api.models.common.PriceDraft;
 import com.commercetools.api.models.tax_category.TaxRate;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Represents a snapshot of a Product Variant at the time it was imported with the Order. The Product Variant can be specified by providing a <code>productId</code> and <code>variant.id</code>, or by providing a <code>variant.sku</code>.</p>
@@ -54,7 +54,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     public LocalizedString getName();
 
     /**
-     *  <p>User-defined unique identifier of the Line Item.</p>
+     *  <p>User-defined identifier of the Line Item. Must be unique among Line Items in the Order.</p>
      * @return key
      */
 
@@ -62,7 +62,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     public String getKey();
 
     /**
-     *  <p>The Product Variant to use as a Line Item.</p>
+     *  <p>The Product Variant to use as a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a>.</p>
      * @return variant
      */
     @NotNull
@@ -71,7 +71,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     public ProductVariantImportDraft getVariant();
 
     /**
-     *  <p><code>id</code> of the Product the Product Variant belongs to.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Product Variant belongs to.</p>
      *  <p>If provided, you must also set <code>variant.id</code>.</p>
      * @return productId
      */
@@ -80,7 +80,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     public String getProductId();
 
     /**
-     *  <p>The number of Product Variants in the LineItem. Can be a negative value.</p>
+     *  <p>Quantity of the Product Variant. Can be a negative value.</p>
      * @return quantity
      */
     @NotNull
@@ -105,7 +105,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     public TaxRate getTaxRate();
 
     /**
-     *  <p>The Channel used to select a Price. This Channel must have the <code>ProductDistribution</code> role.</p>
+     *  <p>The Channel used to <span>select a Price</span>. This Channel must have the <code>ProductDistribution</code> role.</p>
      * @return distributionChannel
      */
     @Valid
@@ -113,7 +113,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     public ChannelResourceIdentifier getDistributionChannel();
 
     /**
-     *  <p>The Channel used to supply Line Items. By providing supply Channel information, you can uniquely identify Inventory entries that should be reserved. This Channel must have the <code>InventorySupply</code> role.</p>
+     *  <p>The Channel used to supply Line Items. By providing supply Channel information, you can uniquely identify <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">Inventory entries</a> that should be reserved. This Channel must have the <code>InventorySupply</code> role.</p>
      * @return supplyChannel
      */
     @Valid
@@ -121,7 +121,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     public ChannelResourceIdentifier getSupplyChannel();
 
     /**
-     *  <p>Inventory mode specific to the LineItem, valid for the entire <code>quantity</code> of the LineItem. Set only if Inventory mode should be different from the <code>inventoryMode</code> specified on the OrderImportDraft.</p>
+     *  <p>Inventory mode specific to the LineItem, valid for the entire <code>quantity</code> of the LineItem. Set only if Inventory mode should be different from the <code>inventoryMode</code> specified on the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderImportDraft" rel="nofollow">OrderImportDraft</a>.</p>
      * @return inventoryMode
      */
 
@@ -145,7 +145,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     public List<ItemState> getState();
 
     /**
-     *  <p>Custom Fields of the LineItem.</p>
+     *  <p>Custom Fields for the LineItem.</p>
      * @return custom
      */
     @Valid
@@ -160,21 +160,21 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>User-defined unique identifier of the Line Item.</p>
+     *  <p>User-defined identifier of the Line Item. Must be unique among Line Items in the Order.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p>The Product Variant to use as a Line Item.</p>
+     *  <p>The Product Variant to use as a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Item</a>.</p>
      * @param variant value to be set
      */
 
     public void setVariant(final ProductVariantImportDraft variant);
 
     /**
-     *  <p><code>id</code> of the Product the Product Variant belongs to.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the Product Variant belongs to.</p>
      *  <p>If provided, you must also set <code>variant.id</code>.</p>
      * @param productId value to be set
      */
@@ -182,7 +182,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     public void setProductId(final String productId);
 
     /**
-     *  <p>The number of Product Variants in the LineItem. Can be a negative value.</p>
+     *  <p>Quantity of the Product Variant. Can be a negative value.</p>
      * @param quantity value to be set
      */
 
@@ -203,21 +203,21 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     public void setTaxRate(final TaxRate taxRate);
 
     /**
-     *  <p>The Channel used to select a Price. This Channel must have the <code>ProductDistribution</code> role.</p>
+     *  <p>The Channel used to <span>select a Price</span>. This Channel must have the <code>ProductDistribution</code> role.</p>
      * @param distributionChannel value to be set
      */
 
     public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
 
     /**
-     *  <p>The Channel used to supply Line Items. By providing supply Channel information, you can uniquely identify Inventory entries that should be reserved. This Channel must have the <code>InventorySupply</code> role.</p>
+     *  <p>The Channel used to supply Line Items. By providing supply Channel information, you can uniquely identify <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">Inventory entries</a> that should be reserved. This Channel must have the <code>InventorySupply</code> role.</p>
      * @param supplyChannel value to be set
      */
 
     public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
 
     /**
-     *  <p>Inventory mode specific to the LineItem, valid for the entire <code>quantity</code> of the LineItem. Set only if Inventory mode should be different from the <code>inventoryMode</code> specified on the OrderImportDraft.</p>
+     *  <p>Inventory mode specific to the LineItem, valid for the entire <code>quantity</code> of the LineItem. Set only if Inventory mode should be different from the <code>inventoryMode</code> specified on the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderImportDraft" rel="nofollow">OrderImportDraft</a>.</p>
      * @param inventoryMode value to be set
      */
 
@@ -246,7 +246,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     public void setState(final List<ItemState> state);
 
     /**
-     *  <p>Custom Fields of the LineItem.</p>
+     *  <p>Custom Fields for the LineItem.</p>
      * @param custom value to be set
      */
 
@@ -351,8 +351,8 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<LineItemImportDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<LineItemImportDraft>() {
+    public static tools.jackson.core.type.TypeReference<LineItemImportDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<LineItemImportDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<LineItemImportDraft>";

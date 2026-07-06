@@ -27,7 +27,7 @@ public class ApprovalRuleStatusSetMessagePayloadBuilder implements Builder<Appro
     private com.commercetools.api.models.approval_rule.ApprovalRuleStatus oldStatus;
 
     /**
-     *  <p>Status of the ApprovalRule after the Set Status update action.</p>
+     *  <p>Status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetStatusAction" rel="nofollow">Set Status</a> update action.</p>
      * @param status value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class ApprovalRuleStatusSetMessagePayloadBuilder implements Builder<Appro
     }
 
     /**
-     *  <p>Status of the ApprovalRule before the Set Status update action.</p>
+     *  <p>Status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetStatusAction" rel="nofollow">Set Status</a> update action.</p>
      * @param oldStatus value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class ApprovalRuleStatusSetMessagePayloadBuilder implements Builder<Appro
     }
 
     /**
-     *  <p>Status of the ApprovalRule after the Set Status update action.</p>
+     *  <p>Status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetStatusAction" rel="nofollow">Set Status</a> update action.</p>
      * @return status
      */
 
@@ -60,7 +60,7 @@ public class ApprovalRuleStatusSetMessagePayloadBuilder implements Builder<Appro
     }
 
     /**
-     *  <p>Status of the ApprovalRule before the Set Status update action.</p>
+     *  <p>Status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetStatusAction" rel="nofollow">Set Status</a> update action.</p>
      * @return oldStatus
      */
 

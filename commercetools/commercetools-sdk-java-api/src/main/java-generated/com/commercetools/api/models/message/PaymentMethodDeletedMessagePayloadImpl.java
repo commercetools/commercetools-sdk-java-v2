@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Delete PaymentMethod request.</p>
+ *  <p>Generated after a successful <span>Delete PaymentMethod</span> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentMethodDeletedMessagePayloadImpl implements PaymentMethodDeletedMessagePayload, ModelBase {
@@ -52,7 +53,7 @@ public class PaymentMethodDeletedMessagePayloadImpl implements PaymentMethodDele
     }
 
     /**
-     *  <p>The PaymentMethod that was deleted.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethod" rel="nofollow">PaymentMethod</a> that was deleted.</p>
      */
 
     public com.commercetools.api.models.payment_method.PaymentMethod getPaymentMethod() {

@@ -4,6 +4,8 @@ package com.commercetools.history.models.common;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,8 +20,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .label(labelBuilder -> labelBuilder)
  *             .isRequired(true)
+ *             .level(AttributeLevelEnum.PRODUCT)
  *             .attributeConstraint(AttributeConstraintEnum.NONE)
- *             .inputTip(inputTipBuilder -> inputTipBuilder)
  *             .inputHint(TextInputHint.SINGLE_LINE)
  *             .isSearchable(true)
  *             .build()
@@ -37,8 +39,11 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     private Boolean isRequired;
 
+    private com.commercetools.history.models.common.AttributeLevelEnum level;
+
     private com.commercetools.history.models.common.AttributeConstraintEnum attributeConstraint;
 
+    @Nullable
     private com.commercetools.history.models.common.LocalizedString inputTip;
 
     private com.commercetools.history.models.common.TextInputHint inputHint;
@@ -46,7 +51,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     private Boolean isSearchable;
 
     /**
-     * set the value to the type using the builder function
+     *  <p>Describes the Type of the Attribute.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -58,7 +63,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     * set the value to the type using the builder function
+     *  <p>Describes the Type of the Attribute.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -70,7 +75,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     * set the value to the type
+     *  <p>Describes the Type of the Attribute.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -81,7 +86,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>The unique name of the attribute used in the API. The name must be between two and 256 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). When using the same <code>name</code> for an attribute in two or more product types all fields of the AttributeDefinition of this attribute need to be the same across the product types, otherwise an AttributeDefinitionAlreadyExists error code will be returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
+     *  <p>User-defined name of the Attribute that is unique within the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -92,7 +97,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     * set the value to the label using the builder function
+     *  <p>Human-readable label for the Attribute.</p>
      * @param builder function to build the label value
      * @return Builder
      */
@@ -104,7 +109,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     * set the value to the label using the builder function
+     *  <p>Human-readable label for the Attribute.</p>
      * @param builder function to build the label value
      * @return Builder
      */
@@ -116,7 +121,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     * set the value to the label
+     *  <p>Human-readable label for the Attribute.</p>
      * @param label value to be set
      * @return Builder
      */
@@ -127,7 +132,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>Whether the attribute is required to have a value.</p>
+     *  <p>If <code>true</code>, the Attribute must have a value on a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param isRequired value to be set
      * @return Builder
      */
@@ -138,7 +143,18 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     * set the value to the attributeConstraint
+     *  <p>Specifies whether the Attribute is defined at the Product or Variant level.</p>
+     * @param level value to be set
+     * @return Builder
+     */
+
+    public AttributeDefinitionBuilder level(final com.commercetools.history.models.common.AttributeLevelEnum level) {
+        this.level = level;
+        return this;
+    }
+
+    /**
+     *  <p>Specifies how Attributes are validated across all variants of a Product.</p>
      * @param attributeConstraint value to be set
      * @return Builder
      */
@@ -150,7 +166,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     * set the value to the inputTip using the builder function
+     *  <p>Provides additional Attribute information to aid content managers configure Product details.</p>
      * @param builder function to build the inputTip value
      * @return Builder
      */
@@ -162,7 +178,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     * set the value to the inputTip using the builder function
+     *  <p>Provides additional Attribute information to aid content managers configure Product details.</p>
      * @param builder function to build the inputTip value
      * @return Builder
      */
@@ -174,18 +190,19 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     * set the value to the inputTip
+     *  <p>Provides additional Attribute information to aid content managers configure Product details.</p>
      * @param inputTip value to be set
      * @return Builder
      */
 
-    public AttributeDefinitionBuilder inputTip(final com.commercetools.history.models.common.LocalizedString inputTip) {
+    public AttributeDefinitionBuilder inputTip(
+            @Nullable final com.commercetools.history.models.common.LocalizedString inputTip) {
         this.inputTip = inputTip;
         return this;
     }
 
     /**
-     * set the value to the inputHint
+     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeTextType" rel="nofollow">AttributeTextType</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizableTextType" rel="nofollow">AttributeLocalizableTextType</a>).</p>
      * @param inputHint value to be set
      * @return Builder
      */
@@ -196,7 +213,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>Whether the attribute's values should generally be enabled in product search. This determines whether the value is stored in products for matching terms in the context of full-text search queries and can be used in facets &amp; filters as part of product search queries. The exact features that are enabled/disabled with this flag depend on the concrete attribute type and are described there. The max size of a searchable field is <strong>restricted to 10922 characters</strong>. This constraint is enforced at both product creation and product update. If the length of the input exceeds the maximum size an InvalidField error is returned.</p>
+     *  <p>If <code>true</code>, the Attribute's values are available in the <span>Product Search</span> or the <span>Product Projection Search</span> API for use in full-text search queries, filters, and facets. However, if an Attribute's <code>level</code> is set as <code>Product</code>, then Product Projection Search does <strong>not support</strong> the Attribute.</p>
+     *  <p>The exact features that are available with this flag depend on the specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeType" rel="nofollow">AttributeType</a>. The maximum size of a searchable field is <strong>restricted</strong> by the <span>Field content size limit</span>. This constraint is enforced at both <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/products:POST" rel="nofollow">Product creation</a> and <span>Product update</span>. If the length of the input exceeds the maximum size, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      * @param isSearchable value to be set
      * @return Builder
      */
@@ -207,7 +225,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     * value of type}
+     *  <p>Describes the Type of the Attribute.</p>
      * @return type
      */
 
@@ -216,7 +234,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>The unique name of the attribute used in the API. The name must be between two and 256 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). When using the same <code>name</code> for an attribute in two or more product types all fields of the AttributeDefinition of this attribute need to be the same across the product types, otherwise an AttributeDefinitionAlreadyExists error code will be returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
+     *  <p>User-defined name of the Attribute that is unique within the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      * @return name
      */
 
@@ -225,7 +243,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     * value of label}
+     *  <p>Human-readable label for the Attribute.</p>
      * @return label
      */
 
@@ -234,7 +252,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>Whether the attribute is required to have a value.</p>
+     *  <p>If <code>true</code>, the Attribute must have a value on a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return isRequired
      */
 
@@ -243,7 +261,16 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     * value of attributeConstraint}
+     *  <p>Specifies whether the Attribute is defined at the Product or Variant level.</p>
+     * @return level
+     */
+
+    public com.commercetools.history.models.common.AttributeLevelEnum getLevel() {
+        return this.level;
+    }
+
+    /**
+     *  <p>Specifies how Attributes are validated across all variants of a Product.</p>
      * @return attributeConstraint
      */
 
@@ -252,16 +279,17 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     * value of inputTip}
+     *  <p>Provides additional Attribute information to aid content managers configure Product details.</p>
      * @return inputTip
      */
 
+    @Nullable
     public com.commercetools.history.models.common.LocalizedString getInputTip() {
         return this.inputTip;
     }
 
     /**
-     * value of inputHint}
+     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeTextType" rel="nofollow">AttributeTextType</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizableTextType" rel="nofollow">AttributeLocalizableTextType</a>).</p>
      * @return inputHint
      */
 
@@ -270,7 +298,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *  <p>Whether the attribute's values should generally be enabled in product search. This determines whether the value is stored in products for matching terms in the context of full-text search queries and can be used in facets &amp; filters as part of product search queries. The exact features that are enabled/disabled with this flag depend on the concrete attribute type and are described there. The max size of a searchable field is <strong>restricted to 10922 characters</strong>. This constraint is enforced at both product creation and product update. If the length of the input exceeds the maximum size an InvalidField error is returned.</p>
+     *  <p>If <code>true</code>, the Attribute's values are available in the <span>Product Search</span> or the <span>Product Projection Search</span> API for use in full-text search queries, filters, and facets. However, if an Attribute's <code>level</code> is set as <code>Product</code>, then Product Projection Search does <strong>not support</strong> the Attribute.</p>
+     *  <p>The exact features that are available with this flag depend on the specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeType" rel="nofollow">AttributeType</a>. The maximum size of a searchable field is <strong>restricted</strong> by the <span>Field content size limit</span>. This constraint is enforced at both <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/products:POST" rel="nofollow">Product creation</a> and <span>Product update</span>. If the length of the input exceeds the maximum size, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      * @return isSearchable
      */
 
@@ -287,12 +316,12 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
         Objects.requireNonNull(name, AttributeDefinition.class + ": name is missing");
         Objects.requireNonNull(label, AttributeDefinition.class + ": label is missing");
         Objects.requireNonNull(isRequired, AttributeDefinition.class + ": isRequired is missing");
+        Objects.requireNonNull(level, AttributeDefinition.class + ": level is missing");
         Objects.requireNonNull(attributeConstraint, AttributeDefinition.class + ": attributeConstraint is missing");
-        Objects.requireNonNull(inputTip, AttributeDefinition.class + ": inputTip is missing");
         Objects.requireNonNull(inputHint, AttributeDefinition.class + ": inputHint is missing");
         Objects.requireNonNull(isSearchable, AttributeDefinition.class + ": isSearchable is missing");
-        return new AttributeDefinitionImpl(type, name, label, isRequired, attributeConstraint, inputTip, inputHint,
-            isSearchable);
+        return new AttributeDefinitionImpl(type, name, label, isRequired, level, attributeConstraint, inputTip,
+            inputHint, isSearchable);
     }
 
     /**
@@ -300,8 +329,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
      * @return AttributeDefinition
      */
     public AttributeDefinition buildUnchecked() {
-        return new AttributeDefinitionImpl(type, name, label, isRequired, attributeConstraint, inputTip, inputHint,
-            isSearchable);
+        return new AttributeDefinitionImpl(type, name, label, isRequired, level, attributeConstraint, inputTip,
+            inputHint, isSearchable);
     }
 
     /**
@@ -323,6 +352,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
         builder.name = template.getName();
         builder.label = template.getLabel();
         builder.isRequired = template.getIsRequired();
+        builder.level = template.getLevel();
         builder.attributeConstraint = template.getAttributeConstraint();
         builder.inputTip = template.getInputTip();
         builder.inputHint = template.getInputHint();

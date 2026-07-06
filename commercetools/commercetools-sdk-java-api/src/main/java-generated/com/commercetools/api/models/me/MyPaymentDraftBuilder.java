@@ -36,7 +36,7 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
     private com.commercetools.api.models.me.MyTransactionDraft transaction;
 
     /**
-     *  <p>Money value the Payment intends to receive from the customer. The value usually matches the Cart or Order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value usually matches the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> gross total.</p>
      * @param builder function to build the amountPlanned value
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
     }
 
     /**
-     *  <p>Money value the Payment intends to receive from the customer. The value usually matches the Cart or Order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value usually matches the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> gross total.</p>
      * @param builder function to build the amountPlanned value
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
     }
 
     /**
-     *  <p>Money value the Payment intends to receive from the customer. The value usually matches the Cart or Order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value usually matches the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> gross total.</p>
      * @param amountPlanned value to be set
      * @return Builder
      */
@@ -143,7 +143,7 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
     }
 
     /**
-     *  <p>Financial transactions of the TransactionTypes <code>Authorization</code> or <code>Charge</code>.</p>
+     *  <p>Financial transactions of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionTypes</a> <code>Authorization</code> or <code>Charge</code>.</p>
      * @param builder function to build the transaction value
      * @return Builder
      */
@@ -155,7 +155,7 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
     }
 
     /**
-     *  <p>Financial transactions of the TransactionTypes <code>Authorization</code> or <code>Charge</code>.</p>
+     *  <p>Financial transactions of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionTypes</a> <code>Authorization</code> or <code>Charge</code>.</p>
      * @param builder function to build the transaction value
      * @return Builder
      */
@@ -167,7 +167,7 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
     }
 
     /**
-     *  <p>Financial transactions of the TransactionTypes <code>Authorization</code> or <code>Charge</code>.</p>
+     *  <p>Financial transactions of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionTypes</a> <code>Authorization</code> or <code>Charge</code>.</p>
      * @param transaction value to be set
      * @return Builder
      */
@@ -179,7 +179,7 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
     }
 
     /**
-     *  <p>Money value the Payment intends to receive from the customer. The value usually matches the Cart or Order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value usually matches the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> gross total.</p>
      * @return amountPlanned
      */
 
@@ -208,7 +208,7 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
     }
 
     /**
-     *  <p>Financial transactions of the TransactionTypes <code>Authorization</code> or <code>Charge</code>.</p>
+     *  <p>Financial transactions of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionTypes</a> <code>Authorization</code> or <code>Charge</code>.</p>
      * @return transaction
      */
 

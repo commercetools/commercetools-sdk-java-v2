@@ -9,14 +9,14 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Change Approval Rule Mode update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeApprovalRuleModeAction" rel="nofollow">Change Approval Rule Mode</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -46,7 +46,7 @@ public interface BusinessUnitApprovalRuleModeChangedMessage extends Message {
     String BUSINESS_UNIT_APPROVAL_RULE_MODE_CHANGED = "BusinessUnitApprovalRuleModeChanged";
 
     /**
-     *  <p>BusinessUnitApprovalRuleMode of the Business Unit after the Change Approval Rule Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitApprovalRuleMode" rel="nofollow">BusinessUnitApprovalRuleMode</a> of the Business Unit after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeApprovalRuleModeAction" rel="nofollow">Change Approval Rule Mode</a> update action.</p>
      * @return approvalRuleMode
      */
     @NotNull
@@ -54,7 +54,7 @@ public interface BusinessUnitApprovalRuleModeChangedMessage extends Message {
     public BusinessUnitApprovalRuleMode getApprovalRuleMode();
 
     /**
-     *  <p>BusinessUnitApprovalRuleMode of the Business Unit before the Change Approval Rule Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitApprovalRuleMode" rel="nofollow">BusinessUnitApprovalRuleMode</a> of the Business Unit before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeApprovalRuleModeAction" rel="nofollow">Change Approval Rule Mode</a> update action.</p>
      * @return oldApprovalRuleMode
      */
 
@@ -62,14 +62,14 @@ public interface BusinessUnitApprovalRuleModeChangedMessage extends Message {
     public BusinessUnitApprovalRuleMode getOldApprovalRuleMode();
 
     /**
-     *  <p>BusinessUnitApprovalRuleMode of the Business Unit after the Change Approval Rule Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitApprovalRuleMode" rel="nofollow">BusinessUnitApprovalRuleMode</a> of the Business Unit after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeApprovalRuleModeAction" rel="nofollow">Change Approval Rule Mode</a> update action.</p>
      * @param approvalRuleMode value to be set
      */
 
     public void setApprovalRuleMode(final BusinessUnitApprovalRuleMode approvalRuleMode);
 
     /**
-     *  <p>BusinessUnitApprovalRuleMode of the Business Unit before the Change Approval Rule Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitApprovalRuleMode" rel="nofollow">BusinessUnitApprovalRuleMode</a> of the Business Unit before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeApprovalRuleModeAction" rel="nofollow">Change Approval Rule Mode</a> update action.</p>
      * @param oldApprovalRuleMode value to be set
      */
 
@@ -170,8 +170,8 @@ public interface BusinessUnitApprovalRuleModeChangedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitApprovalRuleModeChangedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitApprovalRuleModeChangedMessage>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitApprovalRuleModeChangedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitApprovalRuleModeChangedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitApprovalRuleModeChangedMessage>";

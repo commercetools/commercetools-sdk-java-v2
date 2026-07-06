@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * State
@@ -177,7 +178,7 @@ public class StateImpl implements State, ModelBase {
     }
 
     /**
-     *  <p><code>true</code> for States that are an integral part of the Project. Those States cannot be deleted and their <code>key</code> cannot be changed.</p>
+     *  <p><code>true</code> for States that are an integral part of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Those States cannot be deleted and their <code>key</code> cannot be changed.</p>
      */
 
     public Boolean getBuiltIn() {
@@ -185,7 +186,7 @@ public class StateImpl implements State, ModelBase {
     }
 
     /**
-     *  <p>Roles the State can fulfill for Reviews and Line Items.</p>
+     *  <p>Roles the State can fulfill for <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Reviews</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">Line Items</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.state.StateRoleEnum> getRoles() {
@@ -194,7 +195,7 @@ public class StateImpl implements State, ModelBase {
 
     /**
      *  <ul>
-     *   <li>list of States of the same <code>type</code> that the current State can be transitioned to. For example, when the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and this list contains the reference to the <em>Shipped</em> <code>OrderState</code>, the transition <em>Initial</em> -&gt; <em>Shipped</em> is allowed.</li>
+     *   <li>list of States of the same <code>type</code> that the current State can be transitioned to. For example, when the current State is the <em>Initial</em> State of <a href="https://docs.commercetools.com/apis/ctp:api:type:StateTypeEnum" rel="nofollow">StateType</a> <code>OrderState</code> and this list contains the reference to the <em>Shipped</em> <code>OrderState</code>, the transition <em>Initial</em> -&gt; <em>Shipped</em> is allowed.</li>
      *   <li>if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.</li>
      *   <li>if not set, the validation is turned off and the current State can be transitioned to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>

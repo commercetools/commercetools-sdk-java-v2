@@ -7,14 +7,16 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.commercetools.api.models.common.ResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>ResourceIdentifier to a StagedQuote.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,6 +37,14 @@ public interface StagedQuoteResourceIdentifier
      * discriminator value for StagedQuoteResourceIdentifier
      */
     String STAGED_QUOTE = "staged-quote";
+
+    /**
+     *
+     * @return typeId
+     */
+
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
 
     /**
      * factory method
@@ -105,8 +115,8 @@ public interface StagedQuoteResourceIdentifier
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedQuoteResourceIdentifier> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedQuoteResourceIdentifier>() {
+    public static tools.jackson.core.type.TypeReference<StagedQuoteResourceIdentifier> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedQuoteResourceIdentifier>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedQuoteResourceIdentifier>";

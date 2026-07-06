@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * Image
@@ -47,7 +48,7 @@ public class ImageImpl implements Image, ModelBase {
     }
 
     /**
-     *
+     *  <p>URL of the image in its original size that must be unique within a single <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      */
 
     public String getUrl() {
@@ -55,7 +56,7 @@ public class ImageImpl implements Image, ModelBase {
     }
 
     /**
-     *
+     *  <p>Dimensions of the original image.</p>
      */
 
     public com.commercetools.history.models.common.ImageDimensions getDimensions() {
@@ -63,7 +64,7 @@ public class ImageImpl implements Image, ModelBase {
     }
 
     /**
-     *
+     *  <p>Custom label for the image.</p>
      */
 
     public String getLabel() {

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Adding a Store to a Business Unit generates a BusinessUnitStoreAdded Message. Only applicable when <code>storeMode</code> is <code>Explicit</code>.</p>
+ *  <p>Adding a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitStoreAddedMessage" rel="nofollow">BusinessUnitStoreAdded</a> Message. Only applicable when <code>storeMode</code> is <code>Explicit</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitAddStoreActionImpl implements BusinessUnitAddStoreAction, ModelBase {
@@ -52,7 +53,7 @@ public class BusinessUnitAddStoreActionImpl implements BusinessUnitAddStoreActio
     }
 
     /**
-     *  <p>Store to add.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to add.</p>
      */
 
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {

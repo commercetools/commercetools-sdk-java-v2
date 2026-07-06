@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Represents the import status of a resource.</p>
@@ -86,7 +87,7 @@ public class ImportOperationImpl implements ImportOperation, ModelBase {
     }
 
     /**
-     *  <p><code>key</code> of the ImportContainer.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainer</a>.</p>
      */
 
     public String getImportContainerKey() {
@@ -126,7 +127,7 @@ public class ImportOperationImpl implements ImportOperation, ModelBase {
     }
 
     /**
-     *  <p>Contains errors if the import was unsuccessful. See Errors.</p>
+     *  <p>Contains errors if the import was unsuccessful. See <span>Errors</span>.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.errors.ErrorObject> getErrors() {

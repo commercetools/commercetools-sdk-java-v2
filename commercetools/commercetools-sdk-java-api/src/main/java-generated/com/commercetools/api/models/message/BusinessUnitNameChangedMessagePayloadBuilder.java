@@ -24,7 +24,7 @@ public class BusinessUnitNameChangedMessagePayloadBuilder implements Builder<Bus
     private String name;
 
     /**
-     *  <p>Updated name of the Business Unit.</p>
+     *  <p>Updated name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class BusinessUnitNameChangedMessagePayloadBuilder implements Builder<Bus
     }
 
     /**
-     *  <p>Updated name of the Business Unit.</p>
+     *  <p>Updated name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @return name
      */
 

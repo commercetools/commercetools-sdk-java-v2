@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>The InventoryEntry information of the Product Variant. If there is a supply Channel for the InventoryEntry, then <code>channels</code> is returned. If not, then <code>isOnStock</code>, <code>restockableInDays</code>, and <code>availableQuantity</code> are returned.</p>
+ *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> information of the Product Variant. If there is a supply <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for the InventoryEntry, then <code>channels</code> is returned. If not, then <code>isOnStock</code>, <code>restockableInDays</code>, and <code>availableQuantity</code> are returned.</p>
+ *  <p>Only available for Projects with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Classic</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantAvailabilityImpl implements ProductVariantAvailability, ModelBase {
@@ -59,7 +61,7 @@ public class ProductVariantAvailabilityImpl implements ProductVariantAvailabilit
     }
 
     /**
-     *  <p>For each InventoryEntry with a supply Channel, an entry is added to <code>channels</code>.</p>
+     *  <p>For each <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> with a supply Channel, an entry is added to <code>channels</code>.</p>
      */
 
     public com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap getChannels() {
@@ -67,7 +69,7 @@ public class ProductVariantAvailabilityImpl implements ProductVariantAvailabilit
     }
 
     /**
-     *  <p>Indicates whether a Product Variant is in stock.</p>
+     *  <p><code>true</code> if the Product Variant is in stock, based on an <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> that has no assigned supply <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>. This value reflects global or default availability; it does not aggregate the channel-specific availabilities found in the <code>channels</code> field.</p>
      */
 
     public Boolean getIsOnStock() {
@@ -91,7 +93,7 @@ public class ProductVariantAvailabilityImpl implements ProductVariantAvailabilit
     }
 
     /**
-     *  <p>Unique identifier of the InventoryEntry.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
      */
 
     public String getId() {
@@ -99,7 +101,7 @@ public class ProductVariantAvailabilityImpl implements ProductVariantAvailabilit
     }
 
     /**
-     *  <p>Current version of the InventoryEntry.</p>
+     *  <p>Current version of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
      */
 
     public Long getVersion() {

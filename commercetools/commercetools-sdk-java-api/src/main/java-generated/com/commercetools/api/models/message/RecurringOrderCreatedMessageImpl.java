@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Create RecurringOrder request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/recurring-orders:POST" rel="nofollow">Create RecurringOrder</a> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RecurringOrderCreatedMessageImpl implements RecurringOrderCreatedMessage, ModelBase {
@@ -44,7 +45,7 @@ public class RecurringOrderCreatedMessageImpl implements RecurringOrderCreatedMe
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
-    private com.commercetools.api.models.recurring_order.RecurringOrder order;
+    private com.commercetools.api.models.recurring_order.RecurringOrder recurringOrder;
 
     /**
      * create instance with all properties
@@ -59,7 +60,7 @@ public class RecurringOrderCreatedMessageImpl implements RecurringOrderCreatedMe
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("order") final com.commercetools.api.models.recurring_order.RecurringOrder order) {
+            @JsonProperty("recurringOrder") final com.commercetools.api.models.recurring_order.RecurringOrder recurringOrder) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -70,7 +71,7 @@ public class RecurringOrderCreatedMessageImpl implements RecurringOrderCreatedMe
         this.resource = resource;
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
-        this.order = order;
+        this.recurringOrder = recurringOrder;
         this.type = RECURRING_ORDER_CREATED;
     }
 
@@ -138,7 +139,7 @@ public class RecurringOrderCreatedMessageImpl implements RecurringOrderCreatedMe
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -154,7 +155,7 @@ public class RecurringOrderCreatedMessageImpl implements RecurringOrderCreatedMe
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -170,11 +171,11 @@ public class RecurringOrderCreatedMessageImpl implements RecurringOrderCreatedMe
     }
 
     /**
-     *  <p>RecurringOrder that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> that was created.</p>
      */
 
-    public com.commercetools.api.models.recurring_order.RecurringOrder getOrder() {
-        return this.order;
+    public com.commercetools.api.models.recurring_order.RecurringOrder getRecurringOrder() {
+        return this.recurringOrder;
     }
 
     public void setId(final String id) {
@@ -218,8 +219,8 @@ public class RecurringOrderCreatedMessageImpl implements RecurringOrderCreatedMe
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
     }
 
-    public void setOrder(final com.commercetools.api.models.recurring_order.RecurringOrder order) {
-        this.order = order;
+    public void setRecurringOrder(final com.commercetools.api.models.recurring_order.RecurringOrder recurringOrder) {
+        this.recurringOrder = recurringOrder;
     }
 
     @Override
@@ -243,7 +244,7 @@ public class RecurringOrderCreatedMessageImpl implements RecurringOrderCreatedMe
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
-                .append(order, that.order)
+                .append(recurringOrder, that.recurringOrder)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -255,7 +256,7 @@ public class RecurringOrderCreatedMessageImpl implements RecurringOrderCreatedMe
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
-                .append(order, that.order)
+                .append(recurringOrder, that.recurringOrder)
                 .isEquals();
     }
 
@@ -272,7 +273,7 @@ public class RecurringOrderCreatedMessageImpl implements RecurringOrderCreatedMe
                 .append(resourceVersion)
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
-                .append(order)
+                .append(recurringOrder)
                 .toHashCode();
     }
 
@@ -289,7 +290,7 @@ public class RecurringOrderCreatedMessageImpl implements RecurringOrderCreatedMe
                 .append("resourceVersion", resourceVersion)
                 .append("type", type)
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
-                .append("order", order)
+                .append("recurringOrder", recurringOrder)
                 .build();
     }
 

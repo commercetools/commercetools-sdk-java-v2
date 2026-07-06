@@ -29,7 +29,7 @@ import com.commercetools.api.client.ProjectRequestBuilder;
  * {@include.example example.GraphQLModuleTest#queryBuilding}
  *
  * <p>The module provides a {@link com.commercetools.graphql.api.GraphQLModule Jackson module}. It's configured
- * as SPI and gets automatically registered to the SDKs {@link com.fasterxml.jackson.databind.ObjectMapper}. This module
+ * as SPI and gets automatically registered to the SDKs {@link tools.jackson.databind.ObjectMapper}. This module
  * will configure the ObjectMapper to deserialize the response data object as {@link com.commercetools.graphql.api.GraphQLData}
  * instance too and can access it's methods by casting it.</p>
  *

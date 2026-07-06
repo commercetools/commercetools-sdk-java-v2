@@ -12,17 +12,17 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
  *  <p>When using the endpoint, the Store specified in the path and the Stores specified in the payload's <code>stores</code> field are added to the CartDiscount.</p>
- *  <p>Creating a Cart Discount produces the CartDiscountCreated Message.</p>
+ *  <p>Creating a Cart Discount produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCreatedMessage" rel="nofollow">CartDiscountCreated</a> Message.</p>
  *
  * <hr>
  * <div class=code-example>

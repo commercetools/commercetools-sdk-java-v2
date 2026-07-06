@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductSearchMatchingVariants
@@ -43,7 +44,7 @@ public class ProductSearchMatchingVariantsImpl implements ProductSearchMatchingV
     }
 
     /**
-     *  <p><code>true</code> if all Variants of the returned Product match the search query, or if search query does not specify any expression for a Product Variant field.</p>
+     *  <p><code>true</code> if all Variants of the returned Product match the search query, or if search query does not specify any expression for a <span>Product Variant field</span>.</p>
      *  <p><code>false</code> if only a subset of the Product Variants match the search query.</p>
      *  <p>Is always <code>false</code> for query expressions on Product Variant fields.</p>
      */

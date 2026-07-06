@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CustomerGroupDraft
@@ -43,7 +43,7 @@ public interface CustomerGroupDraft extends com.commercetools.api.models.Customi
     public String getKey();
 
     /**
-     *  <p>Unique value which must be different from any value used for <code>name</code> in CustomerGroup in the Project. If not, a DuplicateField error is returned.</p>
+     *  <p>Unique value which must be different from any value used for <code>name</code> in <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> in the Project. If not, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return groupName
      */
     @NotNull
@@ -66,7 +66,7 @@ public interface CustomerGroupDraft extends com.commercetools.api.models.Customi
     public void setKey(final String key);
 
     /**
-     *  <p>Unique value which must be different from any value used for <code>name</code> in CustomerGroup in the Project. If not, a DuplicateField error is returned.</p>
+     *  <p>Unique value which must be different from any value used for <code>name</code> in <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> in the Project. If not, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param groupName value to be set
      */
 
@@ -150,8 +150,8 @@ public interface CustomerGroupDraft extends com.commercetools.api.models.Customi
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerGroupDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerGroupDraft>() {
+    public static tools.jackson.core.type.TypeReference<CustomerGroupDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerGroupDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerGroupDraft>";

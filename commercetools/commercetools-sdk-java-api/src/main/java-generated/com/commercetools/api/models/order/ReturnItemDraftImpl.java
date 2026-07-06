@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ReturnItemDraft
@@ -62,7 +63,7 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Return Item.</p>
+     *  <p>User-defined identifier of the Return Item. Must be unique among Return Items in the Order.</p>
      */
 
     public String getKey() {
@@ -70,7 +71,7 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
     }
 
     /**
-     *  <p>Number of Line Items or Custom Line Items to return.</p>
+     *  <p>Quantity of Line Items or Custom Line Items to return.</p>
      */
 
     public Long getQuantity() {
@@ -78,8 +79,8 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
     }
 
     /**
-     *  <p><code>id</code> of the LineItem to return.</p>
-     *  <p>Required if Line Items are returned, to create a LineItemReturnItem.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to return.</p>
+     *  <p>Required if Line Items are returned, to create a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemReturnItem" rel="nofollow">LineItemReturnItem</a>.</p>
      */
 
     public String getLineItemId() {
@@ -87,8 +88,8 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
     }
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to return.</p>
-     *  <p>Required if Custom Line Items are returned, to create a CustomLineItemReturnItem.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to return.</p>
+     *  <p>Required if Custom Line Items are returned, to create a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItemReturnItem" rel="nofollow">CustomLineItemReturnItem</a>.</p>
      */
 
     public String getCustomLineItemId() {

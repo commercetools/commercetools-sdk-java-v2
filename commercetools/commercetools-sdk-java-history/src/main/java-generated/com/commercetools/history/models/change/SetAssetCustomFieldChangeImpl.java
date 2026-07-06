@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,12 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li>Set Asset CustomField on Categories.</li>
- *   <li>Set Asset CustomField on Products.</li>
- *  </ul>
+ * SetAssetCustomFieldChange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange, ModelBase {
@@ -40,6 +37,10 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
 
     private com.commercetools.history.models.change_value.AssetChangeValue asset;
 
+    private String catalogData;
+
+    private String variant;
+
     /**
      * create instance with all properties
      */
@@ -48,13 +49,16 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
             @JsonProperty("previousValue") final java.lang.Object previousValue,
             @JsonProperty("nextValue") final java.lang.Object nextValue, @JsonProperty("name") final String name,
             @JsonProperty("customTypeId") final String customTypeId,
-            @JsonProperty("asset") final com.commercetools.history.models.change_value.AssetChangeValue asset) {
+            @JsonProperty("asset") final com.commercetools.history.models.change_value.AssetChangeValue asset,
+            @JsonProperty("catalogData") final String catalogData, @JsonProperty("variant") final String variant) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.name = name;
         this.customTypeId = customTypeId;
         this.asset = asset;
+        this.catalogData = catalogData;
+        this.variant = variant;
         this.type = SET_ASSET_CUSTOM_FIELD_CHANGE;
     }
 
@@ -98,7 +102,7 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
     }
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      */
 
     public String getName() {
@@ -106,7 +110,7 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
     }
 
     /**
-     *  <p><code>id</code> of the referenced Type.</p>
+     *  <p><code>id</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      */
 
     public String getCustomTypeId() {
@@ -119,6 +123,27 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
 
     public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
         return this.asset;
+    }
+
+    /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     */
+
+    public String getVariant() {
+        return this.variant;
     }
 
     public void setChange(final String change) {
@@ -145,6 +170,14 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
         this.asset = asset;
     }
 
+    public void setCatalogData(final String catalogData) {
+        this.catalogData = catalogData;
+    }
+
+    public void setVariant(final String variant) {
+        this.variant = variant;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -162,6 +195,8 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
                 .append(name, that.name)
                 .append(customTypeId, that.customTypeId)
                 .append(asset, that.asset)
+                .append(catalogData, that.catalogData)
+                .append(variant, that.variant)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
@@ -169,6 +204,8 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
                 .append(name, that.name)
                 .append(customTypeId, that.customTypeId)
                 .append(asset, that.asset)
+                .append(catalogData, that.catalogData)
+                .append(variant, that.variant)
                 .isEquals();
     }
 
@@ -181,6 +218,8 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
                 .append(name)
                 .append(customTypeId)
                 .append(asset)
+                .append(catalogData)
+                .append(variant)
                 .toHashCode();
     }
 
@@ -193,6 +232,8 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
                 .append("name", name)
                 .append("customTypeId", customTypeId)
                 .append("asset", asset)
+                .append("catalogData", catalogData)
+                .append("variant", variant)
                 .build();
     }
 

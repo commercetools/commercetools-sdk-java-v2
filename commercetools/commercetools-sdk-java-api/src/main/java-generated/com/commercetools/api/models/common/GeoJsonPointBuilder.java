@@ -24,7 +24,7 @@ public class GeoJsonPointBuilder implements Builder<GeoJsonPoint> {
     private java.util.List<Double> coordinates;
 
     /**
-     *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the Point.</p>
+     *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the <span>Point</span>.</p>
      * @param coordinates value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class GeoJsonPointBuilder implements Builder<GeoJsonPoint> {
     }
 
     /**
-     *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the Point.</p>
+     *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the <span>Point</span>.</p>
      * @param coordinates value to be set
      * @return Builder
      */
@@ -46,7 +46,7 @@ public class GeoJsonPointBuilder implements Builder<GeoJsonPoint> {
     }
 
     /**
-     *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the Point.</p>
+     *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the <span>Point</span>.</p>
      * @param coordinates value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class GeoJsonPointBuilder implements Builder<GeoJsonPoint> {
     }
 
     /**
-     *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the Point.</p>
+     *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the <span>Point</span>.</p>
      * @return coordinates
      */
 

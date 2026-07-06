@@ -11,12 +11,12 @@ import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.payment.PaymentMethodInfoDraft;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * MyPaymentDraft
@@ -37,7 +37,7 @@ public interface MyPaymentDraft extends MyPaymentDraftMixin,
         com.commercetools.api.models.CustomizableDraft<MyPaymentDraft>, io.vrap.rmf.base.client.Draft<MyPaymentDraft> {
 
     /**
-     *  <p>Money value the Payment intends to receive from the customer. The value usually matches the Cart or Order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value usually matches the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> gross total.</p>
      * @return amountPlanned
      */
     @NotNull
@@ -62,7 +62,7 @@ public interface MyPaymentDraft extends MyPaymentDraftMixin,
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>Financial transactions of the TransactionTypes <code>Authorization</code> or <code>Charge</code>.</p>
+     *  <p>Financial transactions of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionTypes</a> <code>Authorization</code> or <code>Charge</code>.</p>
      * @return transaction
      */
     @Valid
@@ -70,7 +70,7 @@ public interface MyPaymentDraft extends MyPaymentDraftMixin,
     public MyTransactionDraft getTransaction();
 
     /**
-     *  <p>Money value the Payment intends to receive from the customer. The value usually matches the Cart or Order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value usually matches the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> gross total.</p>
      * @param amountPlanned value to be set
      */
 
@@ -91,7 +91,7 @@ public interface MyPaymentDraft extends MyPaymentDraftMixin,
     public void setCustom(final CustomFieldsDraft custom);
 
     /**
-     *  <p>Financial transactions of the TransactionTypes <code>Authorization</code> or <code>Charge</code>.</p>
+     *  <p>Financial transactions of the <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionTypes</a> <code>Authorization</code> or <code>Charge</code>.</p>
      * @param transaction value to be set
      */
 
@@ -171,8 +171,8 @@ public interface MyPaymentDraft extends MyPaymentDraftMixin,
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyPaymentDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyPaymentDraft>() {
+    public static tools.jackson.core.type.TypeReference<MyPaymentDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyPaymentDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<MyPaymentDraft>";

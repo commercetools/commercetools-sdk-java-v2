@@ -42,7 +42,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
     private com.commercetools.api.models.common.Attribution attributedTo;
 
     /**
-     *  <p><code>id</code> of the API Client which modified the resource.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> which modified the resource.</p>
      * @param clientId value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
     }
 
     /**
-     *  <p>External user ID provided by the <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> scope.</p>
+     *  <p><span>External user ID</span> provided by the <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> <span>scope</span>.</p>
      * @param externalUserId value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
     }
 
     /**
-     *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who modified the resource using a token from the <span>password flow</span>.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
     }
 
     /**
-     *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who modified the resource using a token from the <span>password flow</span>.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -88,7 +88,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
     }
 
     /**
-     *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who modified the resource using a token from the <span>password flow</span>.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -100,7 +100,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
     }
 
     /**
-     *  <p>Indicates the anonymous session during which the resource was modified.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">anonymous session</a> during which the resource was modified.</p>
      * @param anonymousId value to be set
      * @return Builder
      */
@@ -111,7 +111,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
     }
 
     /**
-     *  <p>Indicates the Customer who modified the resource in the context of a Business Unit. Only available for B2B-enabled Projects when an Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who modified the resource in the context of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. Only available for <span>B2B</span>-enabled Projects when an Associate acts on behalf of a company using the <span>associate endpoints</span>.</p>
      * @param builder function to build the associate value
      * @return Builder
      */
@@ -123,7 +123,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
     }
 
     /**
-     *  <p>Indicates the Customer who modified the resource in the context of a Business Unit. Only available for B2B-enabled Projects when an Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who modified the resource in the context of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. Only available for <span>B2B</span>-enabled Projects when an Associate acts on behalf of a company using the <span>associate endpoints</span>.</p>
      * @param builder function to build the associate value
      * @return Builder
      */
@@ -135,7 +135,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
     }
 
     /**
-     *  <p>Indicates the Customer who modified the resource in the context of a Business Unit. Only available for B2B-enabled Projects when an Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who modified the resource in the context of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. Only available for <span>B2B</span>-enabled Projects when an Associate acts on behalf of a company using the <span>associate endpoints</span>.</p>
      * @param associate value to be set
      * @return Builder
      */
@@ -183,7 +183,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
     }
 
     /**
-     *  <p><code>id</code> of the API Client which modified the resource.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> which modified the resource.</p>
      * @return clientId
      */
 
@@ -193,7 +193,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
     }
 
     /**
-     *  <p>External user ID provided by the <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> scope.</p>
+     *  <p><span>External user ID</span> provided by the <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> <span>scope</span>.</p>
      * @return externalUserId
      */
 
@@ -203,7 +203,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
     }
 
     /**
-     *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who modified the resource using a token from the <span>password flow</span>.</p>
      * @return customer
      */
 
@@ -213,7 +213,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
     }
 
     /**
-     *  <p>Indicates the anonymous session during which the resource was modified.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">anonymous session</a> during which the resource was modified.</p>
      * @return anonymousId
      */
 
@@ -223,7 +223,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
     }
 
     /**
-     *  <p>Indicates the Customer who modified the resource in the context of a Business Unit. Only available for B2B-enabled Projects when an Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>Indicates the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> who modified the resource in the context of a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>. Only available for <span>B2B</span>-enabled Projects when an Associate acts on behalf of a company using the <span>associate endpoints</span>.</p>
      * @return associate
      */
 

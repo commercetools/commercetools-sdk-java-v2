@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Add Country, Remove Country, or Set Countries update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreAddCountryAction" rel="nofollow">Add Country</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreRemoveCountryAction" rel="nofollow">Remove Country</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetCountriesAction" rel="nofollow">Set Countries</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreCountriesChangedMessagePayloadImpl implements StoreCountriesChangedMessagePayload, ModelBase {
@@ -56,7 +57,7 @@ public class StoreCountriesChangedMessagePayloadImpl implements StoreCountriesCh
     }
 
     /**
-     *  <p>Countries added to the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.store_country.StoreCountry> getAddedCountries() {
@@ -64,7 +65,7 @@ public class StoreCountriesChangedMessagePayloadImpl implements StoreCountriesCh
     }
 
     /**
-     *  <p>Countries removed from the Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCountry" rel="nofollow">Countries</a> removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.store_country.StoreCountry> getRemovedCountries() {

@@ -190,7 +190,7 @@ public class ProductPricesSetMessageBuilder implements Builder<ProductPricesSetM
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -201,7 +201,7 @@ public class ProductPricesSetMessageBuilder implements Builder<ProductPricesSetM
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -263,7 +263,7 @@ public class ProductPricesSetMessageBuilder implements Builder<ProductPricesSetM
     }
 
     /**
-     *  <p>Unique identifier of the ProductVariant for which the Price was set.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which the Price was set.</p>
      * @param variantId value to be set
      * @return Builder
      */
@@ -274,7 +274,7 @@ public class ProductPricesSetMessageBuilder implements Builder<ProductPricesSetM
     }
 
     /**
-     *  <p>The Embedded Prices that were set on the ProductVariant.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param prices value to be set
      * @return Builder
      */
@@ -285,7 +285,7 @@ public class ProductPricesSetMessageBuilder implements Builder<ProductPricesSetM
     }
 
     /**
-     *  <p>The Embedded Prices that were set on the ProductVariant.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param prices value to be set
      * @return Builder
      */
@@ -297,7 +297,7 @@ public class ProductPricesSetMessageBuilder implements Builder<ProductPricesSetM
     }
 
     /**
-     *  <p>The Embedded Prices that were set on the ProductVariant.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param prices value to be set
      * @return Builder
      */
@@ -311,7 +311,7 @@ public class ProductPricesSetMessageBuilder implements Builder<ProductPricesSetM
     }
 
     /**
-     *  <p>The Embedded Prices that were set on the ProductVariant.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -326,7 +326,7 @@ public class ProductPricesSetMessageBuilder implements Builder<ProductPricesSetM
     }
 
     /**
-     *  <p>The Embedded Prices that were set on the ProductVariant.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -339,7 +339,7 @@ public class ProductPricesSetMessageBuilder implements Builder<ProductPricesSetM
     }
 
     /**
-     *  <p>The Embedded Prices that were set on the ProductVariant.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -350,7 +350,7 @@ public class ProductPricesSetMessageBuilder implements Builder<ProductPricesSetM
     }
 
     /**
-     *  <p>The Embedded Prices that were set on the ProductVariant.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -361,7 +361,7 @@ public class ProductPricesSetMessageBuilder implements Builder<ProductPricesSetM
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -437,7 +437,7 @@ public class ProductPricesSetMessageBuilder implements Builder<ProductPricesSetM
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -465,7 +465,7 @@ public class ProductPricesSetMessageBuilder implements Builder<ProductPricesSetM
     }
 
     /**
-     *  <p>Unique identifier of the ProductVariant for which the Price was set.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which the Price was set.</p>
      * @return variantId
      */
 
@@ -474,7 +474,7 @@ public class ProductPricesSetMessageBuilder implements Builder<ProductPricesSetM
     }
 
     /**
-     *  <p>The Embedded Prices that were set on the ProductVariant.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return prices
      */
 
@@ -483,7 +483,7 @@ public class ProductPricesSetMessageBuilder implements Builder<ProductPricesSetM
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @return staged
      */
 

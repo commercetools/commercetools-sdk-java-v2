@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Price;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Change Price update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangePriceAction" rel="nofollow">Change Price</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -50,7 +50,7 @@ public interface ProductPriceChangedMessage extends Message {
     String PRODUCT_PRICE_CHANGED = "ProductPriceChanged";
 
     /**
-     *  <p>Unique identifier of the ProductVariant for which the Price was changed.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which the Price was changed.</p>
      * @return variantId
      */
     @NotNull
@@ -58,7 +58,7 @@ public interface ProductPriceChangedMessage extends Message {
     public Long getVariantId();
 
     /**
-     *  <p>The current Embedded Price before the Change Embedded Price update action.</p>
+     *  <p>The current Embedded Price before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangePriceAction" rel="nofollow">Change Embedded Price</a> update action.</p>
      * @return oldPrice
      */
     @NotNull
@@ -67,7 +67,7 @@ public interface ProductPriceChangedMessage extends Message {
     public Price getOldPrice();
 
     /**
-     *  <p>The Embedded Price after the Change Embedded Price update action.</p>
+     *  <p>The Embedded Price after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangePriceAction" rel="nofollow">Change Embedded Price</a> update action.</p>
      * @return newPrice
      */
     @NotNull
@@ -76,7 +76,7 @@ public interface ProductPriceChangedMessage extends Message {
     public Price getNewPrice();
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @return staged
      */
     @NotNull
@@ -84,7 +84,7 @@ public interface ProductPriceChangedMessage extends Message {
     public Boolean getStaged();
 
     /**
-     *  <p>The staged Embedded Price before the Change Embedded Price update action.</p>
+     *  <p>The staged Embedded Price before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangePriceAction" rel="nofollow">Change Embedded Price</a> update action.</p>
      * @return oldStagedPrice
      */
     @Valid
@@ -92,35 +92,35 @@ public interface ProductPriceChangedMessage extends Message {
     public Price getOldStagedPrice();
 
     /**
-     *  <p>Unique identifier of the ProductVariant for which the Price was changed.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which the Price was changed.</p>
      * @param variantId value to be set
      */
 
     public void setVariantId(final Long variantId);
 
     /**
-     *  <p>The current Embedded Price before the Change Embedded Price update action.</p>
+     *  <p>The current Embedded Price before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangePriceAction" rel="nofollow">Change Embedded Price</a> update action.</p>
      * @param oldPrice value to be set
      */
 
     public void setOldPrice(final Price oldPrice);
 
     /**
-     *  <p>The Embedded Price after the Change Embedded Price update action.</p>
+     *  <p>The Embedded Price after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangePriceAction" rel="nofollow">Change Embedded Price</a> update action.</p>
      * @param newPrice value to be set
      */
 
     public void setNewPrice(final Price newPrice);
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @param staged value to be set
      */
 
     public void setStaged(final Boolean staged);
 
     /**
-     *  <p>The staged Embedded Price before the Change Embedded Price update action.</p>
+     *  <p>The staged Embedded Price before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductChangePriceAction" rel="nofollow">Change Embedded Price</a> update action.</p>
      * @param oldStagedPrice value to be set
      */
 
@@ -223,8 +223,8 @@ public interface ProductPriceChangedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductPriceChangedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductPriceChangedMessage>() {
+    public static tools.jackson.core.type.TypeReference<ProductPriceChangedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductPriceChangedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductPriceChangedMessage>";

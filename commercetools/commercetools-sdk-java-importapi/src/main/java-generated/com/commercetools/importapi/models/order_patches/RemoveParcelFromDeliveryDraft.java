@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * RemoveParcelFromDeliveryDraft
@@ -32,7 +32,7 @@ import jakarta.validation.constraints.NotNull;
 public interface RemoveParcelFromDeliveryDraft extends io.vrap.rmf.base.client.Draft<RemoveParcelFromDeliveryDraft> {
 
     /**
-     *  <p><code>id</code> of the Parcel to be removed from the Delivery.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a> to be removed from the Delivery.</p>
      * @return parcelId
      */
     @NotNull
@@ -40,7 +40,7 @@ public interface RemoveParcelFromDeliveryDraft extends io.vrap.rmf.base.client.D
     public String getParcelId();
 
     /**
-     *  <p><code>id</code> of the Parcel to be removed from the Delivery.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a> to be removed from the Delivery.</p>
      * @param parcelId value to be set
      */
 
@@ -113,8 +113,8 @@ public interface RemoveParcelFromDeliveryDraft extends io.vrap.rmf.base.client.D
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<RemoveParcelFromDeliveryDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<RemoveParcelFromDeliveryDraft>() {
+    public static tools.jackson.core.type.TypeReference<RemoveParcelFromDeliveryDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<RemoveParcelFromDeliveryDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<RemoveParcelFromDeliveryDraft>";

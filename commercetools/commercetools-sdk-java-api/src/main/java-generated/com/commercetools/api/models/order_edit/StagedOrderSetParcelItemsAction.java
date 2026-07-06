@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.order.DeliveryItem;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Produces the ParcelItemsUpdated Message.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ParcelItemsUpdatedMessage" rel="nofollow">ParcelItemsUpdated</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -42,7 +42,7 @@ public interface StagedOrderSetParcelItemsAction extends StagedOrderUpdateAction
     String SET_PARCEL_ITEMS = "setParcelItems";
 
     /**
-     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @return parcelId
      */
@@ -51,7 +51,7 @@ public interface StagedOrderSetParcelItemsAction extends StagedOrderUpdateAction
     public String getParcelId();
 
     /**
-     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @return parcelKey
      */
@@ -69,7 +69,7 @@ public interface StagedOrderSetParcelItemsAction extends StagedOrderUpdateAction
     public List<DeliveryItem> getItems();
 
     /**
-     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @param parcelId value to be set
      */
@@ -77,7 +77,7 @@ public interface StagedOrderSetParcelItemsAction extends StagedOrderUpdateAction
     public void setParcelId(final String parcelId);
 
     /**
-     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p><code>key</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @param parcelKey value to be set
      */
@@ -174,8 +174,8 @@ public interface StagedOrderSetParcelItemsAction extends StagedOrderUpdateAction
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetParcelItemsAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetParcelItemsAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrderSetParcelItemsAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrderSetParcelItemsAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderSetParcelItemsAction>";

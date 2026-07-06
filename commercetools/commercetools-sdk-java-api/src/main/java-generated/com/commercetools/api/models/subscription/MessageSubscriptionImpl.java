@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,9 +15,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Messages will be delivered even if the Messages Query HTTP API is not enabled.</p>
- *  <p>For MessageSubscriptions, the format of the payload is MessageDeliveryPayload.</p>
+ *  <p>Messages will be delivered even if the Messages Query HTTP API <span>is not enabled</span>.</p>
+ *  <p>For MessageSubscriptions, the format of the payload is <a href="https://docs.commercetools.com/apis/ctp:api:type:MessageDeliveryPayload" rel="nofollow">MessageDeliveryPayload</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MessageSubscriptionImpl implements MessageSubscription, ModelBase {

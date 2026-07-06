@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after removing a Custom Type from a Price using the Set Price Custom Type update action.</p>
+ *  <p>Generated after removing a Custom Type from a Price using the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetProductPriceCustomTypeAction" rel="nofollow">Set Price Custom Type</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPriceCustomFieldsRemovedMessagePayloadImpl
@@ -59,7 +60,7 @@ public class ProductPriceCustomFieldsRemovedMessagePayloadImpl
     }
 
     /**
-     *  <p>Unique identifier of the Price from which the Custom Type was removed.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> from which the Custom Type was removed.</p>
      */
 
     public String getPriceId() {
@@ -67,7 +68,7 @@ public class ProductPriceCustomFieldsRemovedMessagePayloadImpl
     }
 
     /**
-     *  <p>Unique identifier of the ProductVariant to which the Price belongs.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to which the Price belongs.</p>
      */
 
     public Long getVariantId() {
@@ -75,7 +76,7 @@ public class ProductPriceCustomFieldsRemovedMessagePayloadImpl
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      */
 
     public Boolean getStaged() {

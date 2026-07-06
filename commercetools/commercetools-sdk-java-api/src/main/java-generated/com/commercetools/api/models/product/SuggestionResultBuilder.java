@@ -24,7 +24,7 @@ public class SuggestionResultBuilder implements Builder<SuggestionResult> {
     private Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> values = new HashMap<>();
 
     /**
-     *  <p>The result may contain multiple Suggestions identified by their Locale. See Suggestions for two languages.</p>
+     *  <p>The result may contain multiple Suggestions identified by their <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a>. See <span>Suggestions for two languages</span>.</p>
      * @param values properties to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class SuggestionResultBuilder implements Builder<SuggestionResult> {
     }
 
     /**
-     *  <p>The result may contain multiple Suggestions identified by their Locale. See Suggestions for two languages.</p>
+     *  <p>The result may contain multiple Suggestions identified by their <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a>. See <span>Suggestions for two languages</span>.</p>
      * @param key property name
      * @param value property value
      * @return Builder
@@ -52,7 +52,7 @@ public class SuggestionResultBuilder implements Builder<SuggestionResult> {
     }
 
     /**
-     *  <p>The result may contain multiple Suggestions identified by their Locale. See Suggestions for two languages.</p>
+     *  <p>The result may contain multiple Suggestions identified by their <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a>. See <span>Suggestions for two languages</span>.</p>
      * @return pattern properties
      */
 

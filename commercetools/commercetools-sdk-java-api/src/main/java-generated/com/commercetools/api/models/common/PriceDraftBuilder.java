@@ -57,7 +57,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     private com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifier recurrencePolicy;
 
     /**
-     *  <p>User-defined identifier for the Price. It must be unique per ProductVariant.</p>
+     *  <p>User-defined identifier for the Price. It must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Money value of this Price.</p>
-     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Money value of this Price.</p>
-     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -95,7 +95,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Money value of this Price.</p>
-     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -117,7 +117,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-     *  <p>Set this field if this Price is only valid for the referenced CustomerGroup.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a>.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -131,7 +131,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-     *  <p>Set this field if this Price is only valid for the referenced CustomerGroup.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a>.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -144,7 +144,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-     *  <p>Set this field if this Price is only valid for the referenced CustomerGroup.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a>.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -156,7 +156,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -169,7 +169,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -181,7 +181,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @param channel value to be set
      * @return Builder
      */
@@ -204,7 +204,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-     *  <p>Set this field if this Price is only valid until the specified date and time. Must be at least 1 ms later than <code>validFrom</code>. Prices that are no longer valid are not automatically removed, but they can be removed if necessary.</p>
+     *  <p>Set this field if this Price is only valid until the specified date and time. Must be at least 1 ms later than <code>validFrom</code>. Prices that are no longer valid are not automatically removed, but they can be <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemovePriceAction" rel="nofollow">removed</a> if necessary.</p>
      * @param validUntil value to be set
      * @return Builder
      */
@@ -216,11 +216,11 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Set this field to add a DiscountedPrice from an <strong>external service</strong>.</p>
-     *  <p>Otherwise, Composable Commerce sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:</p>
+     *  <p>Otherwise, Composable Commerce sets this field automatically if at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> applies. The DiscountedPrice must reference a ProductDiscount with:</p>
      *  <ul>
      *   <li>The <code>isActive</code> flag set to <code>true</code>.</li>
-     *   <li>A ProductDiscountValue of type <code>external</code>.</li>
-     *   <li>A <code>predicate</code> that matches the ProductVariant the Price is referenced from.</li>
+     *   <li>A <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueExternal" rel="nofollow">ProductDiscountValue</a> of type <code>external</code>.</li>
+     *   <li>A <code>predicate</code> that matches the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> the Price is referenced from.</li>
      *  </ul>
      * @param builder function to build the discounted value
      * @return Builder
@@ -234,11 +234,11 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Set this field to add a DiscountedPrice from an <strong>external service</strong>.</p>
-     *  <p>Otherwise, Composable Commerce sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:</p>
+     *  <p>Otherwise, Composable Commerce sets this field automatically if at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> applies. The DiscountedPrice must reference a ProductDiscount with:</p>
      *  <ul>
      *   <li>The <code>isActive</code> flag set to <code>true</code>.</li>
-     *   <li>A ProductDiscountValue of type <code>external</code>.</li>
-     *   <li>A <code>predicate</code> that matches the ProductVariant the Price is referenced from.</li>
+     *   <li>A <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueExternal" rel="nofollow">ProductDiscountValue</a> of type <code>external</code>.</li>
+     *   <li>A <code>predicate</code> that matches the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> the Price is referenced from.</li>
      *  </ul>
      * @param builder function to build the discounted value
      * @return Builder
@@ -252,11 +252,11 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Set this field to add a DiscountedPrice from an <strong>external service</strong>.</p>
-     *  <p>Otherwise, Composable Commerce sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:</p>
+     *  <p>Otherwise, Composable Commerce sets this field automatically if at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> applies. The DiscountedPrice must reference a ProductDiscount with:</p>
      *  <ul>
      *   <li>The <code>isActive</code> flag set to <code>true</code>.</li>
-     *   <li>A ProductDiscountValue of type <code>external</code>.</li>
-     *   <li>A <code>predicate</code> that matches the ProductVariant the Price is referenced from.</li>
+     *   <li>A <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueExternal" rel="nofollow">ProductDiscountValue</a> of type <code>external</code>.</li>
+     *   <li>A <code>predicate</code> that matches the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> the Price is referenced from.</li>
      *  </ul>
      * @param discounted value to be set
      * @return Builder
@@ -269,7 +269,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-     *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     *  <p>Set this field to specify different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities.</p>
      *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers value to be set
      * @return Builder
@@ -281,7 +281,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-     *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     *  <p>Set this field to specify different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities.</p>
      *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers value to be set
      * @return Builder
@@ -294,7 +294,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-     *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     *  <p>Set this field to specify different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities.</p>
      *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers value to be set
      * @return Builder
@@ -309,7 +309,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-     *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     *  <p>Set this field to specify different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities.</p>
      *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
@@ -325,7 +325,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-     *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     *  <p>Set this field to specify different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities.</p>
      *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
@@ -339,7 +339,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-     *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     *  <p>Set this field to specify different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities.</p>
      *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
@@ -351,7 +351,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-     *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     *  <p>Set this field to specify different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities.</p>
      *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
@@ -398,7 +398,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-     *  <p>RecurrencePolicy for which this Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a> for which this Price is valid.</p>
      * @param builder function to build the recurrencePolicy value
      * @return Builder
      */
@@ -412,7 +412,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-     *  <p>RecurrencePolicy for which this Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a> for which this Price is valid.</p>
      * @param builder function to build the recurrencePolicy value
      * @return Builder
      */
@@ -425,7 +425,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-     *  <p>RecurrencePolicy for which this Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a> for which this Price is valid.</p>
      * @param recurrencePolicy value to be set
      * @return Builder
      */
@@ -437,7 +437,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-     *  <p>User-defined identifier for the Price. It must be unique per ProductVariant.</p>
+     *  <p>User-defined identifier for the Price. It must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return key
      */
 
@@ -448,7 +448,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Money value of this Price.</p>
-     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
+     *  <p>To set the money value in high precision, use <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoneyDraft" rel="nofollow">HighPrecisionMoneyDraft</a>.</p>
      * @return value
      */
 
@@ -467,7 +467,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-     *  <p>Set this field if this Price is only valid for the referenced CustomerGroup.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a>.</p>
      * @return customerGroup
      */
 
@@ -477,7 +477,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @return channel
      */
 
@@ -497,7 +497,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-     *  <p>Set this field if this Price is only valid until the specified date and time. Must be at least 1 ms later than <code>validFrom</code>. Prices that are no longer valid are not automatically removed, but they can be removed if necessary.</p>
+     *  <p>Set this field if this Price is only valid until the specified date and time. Must be at least 1 ms later than <code>validFrom</code>. Prices that are no longer valid are not automatically removed, but they can be <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductRemovePriceAction" rel="nofollow">removed</a> if necessary.</p>
      * @return validUntil
      */
 
@@ -508,11 +508,11 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Set this field to add a DiscountedPrice from an <strong>external service</strong>.</p>
-     *  <p>Otherwise, Composable Commerce sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:</p>
+     *  <p>Otherwise, Composable Commerce sets this field automatically if at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> applies. The DiscountedPrice must reference a ProductDiscount with:</p>
      *  <ul>
      *   <li>The <code>isActive</code> flag set to <code>true</code>.</li>
-     *   <li>A ProductDiscountValue of type <code>external</code>.</li>
-     *   <li>A <code>predicate</code> that matches the ProductVariant the Price is referenced from.</li>
+     *   <li>A <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueExternal" rel="nofollow">ProductDiscountValue</a> of type <code>external</code>.</li>
+     *   <li>A <code>predicate</code> that matches the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> the Price is referenced from.</li>
      *  </ul>
      * @return discounted
      */
@@ -523,7 +523,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-     *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     *  <p>Set this field to specify different Prices for certain <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> quantities.</p>
      *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @return tiers
      */
@@ -544,7 +544,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
-     *  <p>RecurrencePolicy for which this Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicy" rel="nofollow">RecurrencePolicy</a> for which this Price is valid.</p>
      * @return recurrencePolicy
      */
 

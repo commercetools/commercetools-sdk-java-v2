@@ -8,20 +8,20 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>This is the last step in the email verification process of a Customer. Returns a <code>200</code> status if successful.</p>
- *  <p>After the email is verified, all email tokens issued previously through the email verification flow are invalidated. This invalidation of tokens is eventually consistent.</p>
- *  <p>A ResourceNotFound error is returned in the following scenarios:</p>
+ *  <p>This is the last step in the <span>email verification process of a Customer</span>. Returns a <code>200</code> status if successful.</p>
+ *  <p>After the email is verified, all email tokens issued previously through the <span>email verification flow</span> are invalidated. This invalidation of tokens is <span>eventually consistent</span>.</p>
+ *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error is returned in the following scenarios:</p>
  *  <ul>
- *   <li>If no Customer exists with the <code>id</code> specified in the customer:{id} scope.</li>
+ *   <li>If no Customer exists with the <code>id</code> specified in the <span>customer:{id}</span> scope.</li>
  *   <li>If the Customer exists but is associated with a different Store than what is specified in the <code>manage_my_profile:{projectKey}:{storeKey}</code> scope.</li>
  *  </ul>
  *

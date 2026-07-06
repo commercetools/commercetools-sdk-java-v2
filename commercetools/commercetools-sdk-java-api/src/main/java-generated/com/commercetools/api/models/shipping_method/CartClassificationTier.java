@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Money;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>The ShippingRate maps to an abstract Cart categorization expressed by strings (for example, <code>Light</code>, <code>Medium</code>, or <code>Heavy</code>).</p>
+ *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> maps to an abstract Cart categorization expressed by strings (for example, <code>Light</code>, <code>Medium</code>, or <code>Heavy</code>).</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
     String CART_CLASSIFICATION = "CartClassification";
 
     /**
-     *  <p><code>key</code> selected from the <code>values</code> of the CartClassificationType configured in the Project.</p>
+     *  <p><code>key</code> selected from the <code>values</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartClassificationType" rel="nofollow">CartClassificationType</a> configured in the Project.</p>
      * @return value
      */
     @NotNull
@@ -58,7 +58,7 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
     public Money getPrice();
 
     /**
-     *  <p>Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</p>
+     *  <p>Appears in response to <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-cart:GET" rel="nofollow">Get ShippingMethods for a Cart</a> if the shipping rate matches the search query.</p>
      * @return isMatching
      */
 
@@ -66,7 +66,7 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
     public Boolean getIsMatching();
 
     /**
-     *  <p><code>key</code> selected from the <code>values</code> of the CartClassificationType configured in the Project.</p>
+     *  <p><code>key</code> selected from the <code>values</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartClassificationType" rel="nofollow">CartClassificationType</a> configured in the Project.</p>
      * @param value value to be set
      */
 
@@ -80,7 +80,7 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
     public void setPrice(final Money price);
 
     /**
-     *  <p>Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</p>
+     *  <p>Appears in response to <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/shipping-methods/matching-cart:GET" rel="nofollow">Get ShippingMethods for a Cart</a> if the shipping rate matches the search query.</p>
      * @param isMatching value to be set
      */
 
@@ -157,8 +157,8 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartClassificationTier> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartClassificationTier>() {
+    public static tools.jackson.core.type.TypeReference<CartClassificationTier> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartClassificationTier>() {
             @Override
             public String toString() {
                 return "TypeReference<CartClassificationTier>";

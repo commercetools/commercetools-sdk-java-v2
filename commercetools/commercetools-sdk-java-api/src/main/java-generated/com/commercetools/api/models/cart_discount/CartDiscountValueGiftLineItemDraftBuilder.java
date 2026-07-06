@@ -76,7 +76,7 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
     }
 
     /**
-     *  <p>ProductVariant of the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> of the Product.</p>
      * @param variantId value to be set
      * @return Builder
      */
@@ -173,7 +173,7 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
     }
 
     /**
-     *  <p>ProductVariant of the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> of the Product.</p>
      * @return variantId
      */
 

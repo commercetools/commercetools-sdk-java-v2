@@ -34,7 +34,7 @@ public class PaymentMethodTokenBuilder implements Builder<PaymentMethodToken> {
      *  <ul>
      *   <li>in the payload of Payment and PaymentMethod messages</li>
      *   <li>when querying MyPayments</li>
-     *   <li>in referenced Payments and PaymentMethods embedded through Reference Expansion</li>
+     *   <li>in referenced Payments and PaymentMethods embedded through <span>Reference Expansion</span></li>
      *  </ul>
      * @param value value to be set
      * @return Builder
@@ -56,7 +56,7 @@ public class PaymentMethodTokenBuilder implements Builder<PaymentMethodToken> {
      *  <ul>
      *   <li>in the payload of Payment and PaymentMethod messages</li>
      *   <li>when querying MyPayments</li>
-     *   <li>in referenced Payments and PaymentMethods embedded through Reference Expansion</li>
+     *   <li>in referenced Payments and PaymentMethods embedded through <span>Reference Expansion</span></li>
      *  </ul>
      * @return value
      */

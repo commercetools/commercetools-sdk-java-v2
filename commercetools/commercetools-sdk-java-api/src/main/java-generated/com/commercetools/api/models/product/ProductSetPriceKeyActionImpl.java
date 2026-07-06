@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Sets the key of an Embedded Price. Produces the ProductPriceKeySet Message.</p>
+ *  <p>Sets the key of an <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Price</a>. Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPriceKeySetMessage" rel="nofollow">ProductPriceKeySet</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetPriceKeyActionImpl implements ProductSetPriceKeyAction, ModelBase {
@@ -58,7 +59,7 @@ public class ProductSetPriceKeyActionImpl implements ProductSetPriceKeyAction, M
     }
 
     /**
-     *  <p>The <code>id</code> of the Price to set the key.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> to set the key.</p>
      */
 
     public String getPriceId() {
@@ -66,7 +67,7 @@ public class ProductSetPriceKeyActionImpl implements ProductSetPriceKeyAction, M
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
+     *  <p>If <code>true</code>, only the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Price</a> is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      */
 
     public Boolean getStaged() {

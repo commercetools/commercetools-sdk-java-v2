@@ -50,7 +50,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
     private Integer refreshTokenValiditySeconds;
 
     /**
-     *  <p>The OAuth2 <code>client_id</code> that can be used to obtain an access token.</p>
+     *  <p>The OAuth2 <code>client_id</code> that can be used to <span>obtain an access token</span>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -72,7 +72,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
     }
 
     /**
-     *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
+     *  <p>Whitespace-separated list of <span>OAuth scopes</span> that can be used when <span>obtaining an access token</span>.</p>
      * @param scope value to be set
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
     }
 
     /**
-     *  <p>Only shown once in the response of creating the APIClient. This is the OAuth2 <code>client_secret</code> that can be used to obtain an access token.</p>
+     *  <p>Only shown once in the response of creating the APIClient. This is the OAuth2 <code>client_secret</code> that can be used to <span>obtain an access token</span>.</p>
      * @param secret value to be set
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
     }
 
     /**
-     *  <p>Date of the last day this APIClient was used to obtain an access token.</p>
+     *  <p>Date of the last day this APIClient was used to <span>obtain an access token</span>.</p>
      * @param lastUsedAt value to be set
      * @return Builder
      */
@@ -127,7 +127,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
     }
 
     /**
-     *  <p>Expiration time in seconds for each access token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.</p>
+     *  <p>Expiration time in seconds for each access token obtained by the APIClient. Only present when set with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClientDraft" rel="nofollow">APIClientDraft</a>. If not present the default value applies.</p>
      * @param accessTokenValiditySeconds value to be set
      * @return Builder
      */
@@ -138,7 +138,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
     }
 
     /**
-     *  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.</p>
+     *  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. Only present when set with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClientDraft" rel="nofollow">APIClientDraft</a>. If not present the default value applies.</p>
      * @param refreshTokenValiditySeconds value to be set
      * @return Builder
      */
@@ -149,7 +149,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
     }
 
     /**
-     *  <p>The OAuth2 <code>client_id</code> that can be used to obtain an access token.</p>
+     *  <p>The OAuth2 <code>client_id</code> that can be used to <span>obtain an access token</span>.</p>
      * @return id
      */
 
@@ -167,7 +167,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
     }
 
     /**
-     *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
+     *  <p>Whitespace-separated list of <span>OAuth scopes</span> that can be used when <span>obtaining an access token</span>.</p>
      * @return scope
      */
 
@@ -176,7 +176,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
     }
 
     /**
-     *  <p>Only shown once in the response of creating the APIClient. This is the OAuth2 <code>client_secret</code> that can be used to obtain an access token.</p>
+     *  <p>Only shown once in the response of creating the APIClient. This is the OAuth2 <code>client_secret</code> that can be used to <span>obtain an access token</span>.</p>
      * @return secret
      */
 
@@ -186,7 +186,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
     }
 
     /**
-     *  <p>Date of the last day this APIClient was used to obtain an access token.</p>
+     *  <p>Date of the last day this APIClient was used to <span>obtain an access token</span>.</p>
      * @return lastUsedAt
      */
 
@@ -216,7 +216,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
     }
 
     /**
-     *  <p>Expiration time in seconds for each access token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.</p>
+     *  <p>Expiration time in seconds for each access token obtained by the APIClient. Only present when set with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClientDraft" rel="nofollow">APIClientDraft</a>. If not present the default value applies.</p>
      * @return accessTokenValiditySeconds
      */
 
@@ -226,7 +226,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
     }
 
     /**
-     *  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.</p>
+     *  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. Only present when set with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClientDraft" rel="nofollow">APIClientDraft</a>. If not present the default value applies.</p>
      * @return refreshTokenValiditySeconds
      */
 

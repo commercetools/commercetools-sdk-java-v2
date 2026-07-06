@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>The <code>stagedActions</code> field cannot be updated if the Order Edit <code>result</code> is OrderEdit Applied.</p>
+ *  <p>The <code>stagedActions</code> field cannot be updated if the Order Edit <code>result</code> is <span>OrderEdit Applied</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -123,8 +123,8 @@ public interface OrderEditAddStagedActionAction extends OrderEditUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderEditAddStagedActionAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderEditAddStagedActionAction>() {
+    public static tools.jackson.core.type.TypeReference<OrderEditAddStagedActionAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderEditAddStagedActionAction>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderEditAddStagedActionAction>";

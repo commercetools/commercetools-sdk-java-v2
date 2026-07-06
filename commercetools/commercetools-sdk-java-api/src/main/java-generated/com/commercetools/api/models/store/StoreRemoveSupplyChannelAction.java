@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>This update action produces the StoreSupplyChannelsChanged Message.</p>
+ *  <p>This update action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSupplyChannelsChangedMessage" rel="nofollow">StoreSupplyChannelsChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface StoreRemoveSupplyChannelAction extends StoreUpdateAction {
     String REMOVE_SUPPLY_CHANNEL = "removeSupplyChannel";
 
     /**
-     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @return supplyChannel
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface StoreRemoveSupplyChannelAction extends StoreUpdateAction {
     public ChannelResourceIdentifier getSupplyChannel();
 
     /**
-     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param supplyChannel value to be set
      */
 
@@ -123,8 +123,8 @@ public interface StoreRemoveSupplyChannelAction extends StoreUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StoreRemoveSupplyChannelAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StoreRemoveSupplyChannelAction>() {
+    public static tools.jackson.core.type.TypeReference<StoreRemoveSupplyChannelAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StoreRemoveSupplyChannelAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StoreRemoveSupplyChannelAction>";

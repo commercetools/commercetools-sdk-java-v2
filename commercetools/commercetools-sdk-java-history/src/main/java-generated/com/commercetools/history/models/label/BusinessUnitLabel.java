@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * BusinessUnitLabel
@@ -47,7 +47,7 @@ public interface BusinessUnitLabel extends Label {
     public String getType();
 
     /**
-     *  <p>User-defined unique identifier of the Business Unit.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @return key
      */
     @NotNull
@@ -63,7 +63,7 @@ public interface BusinessUnitLabel extends Label {
     public String getName();
 
     /**
-     *  <p>User-defined unique identifier of the Business Unit.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param key value to be set
      */
 
@@ -145,8 +145,8 @@ public interface BusinessUnitLabel extends Label {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitLabel> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitLabel>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitLabel> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitLabel>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitLabel>";

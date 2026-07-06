@@ -29,7 +29,7 @@ public class StoreLanguagesChangedMessagePayloadBuilder implements Builder<Store
     private java.util.List<String> removedLanguages;
 
     /**
-     *  <p>Locales added to the Store after the Set Languages update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a> added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetLanguagesAction" rel="nofollow">Set Languages</a> update action.</p>
      * @param addedLanguages value to be set
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class StoreLanguagesChangedMessagePayloadBuilder implements Builder<Store
     }
 
     /**
-     *  <p>Locales added to the Store after the Set Languages update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a> added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetLanguagesAction" rel="nofollow">Set Languages</a> update action.</p>
      * @param addedLanguages value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class StoreLanguagesChangedMessagePayloadBuilder implements Builder<Store
     }
 
     /**
-     *  <p>Locales added to the Store after the Set Languages update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a> added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetLanguagesAction" rel="nofollow">Set Languages</a> update action.</p>
      * @param addedLanguages value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class StoreLanguagesChangedMessagePayloadBuilder implements Builder<Store
     }
 
     /**
-     *  <p>Locales removed from the Store during the Set Languages update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a> removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> during the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetLanguagesAction" rel="nofollow">Set Languages</a> update action.</p>
      * @param removedLanguages value to be set
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class StoreLanguagesChangedMessagePayloadBuilder implements Builder<Store
     }
 
     /**
-     *  <p>Locales removed from the Store during the Set Languages update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a> removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> during the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetLanguagesAction" rel="nofollow">Set Languages</a> update action.</p>
      * @param removedLanguages value to be set
      * @return Builder
      */
@@ -89,7 +89,7 @@ public class StoreLanguagesChangedMessagePayloadBuilder implements Builder<Store
     }
 
     /**
-     *  <p>Locales removed from the Store during the Set Languages update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a> removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> during the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetLanguagesAction" rel="nofollow">Set Languages</a> update action.</p>
      * @param removedLanguages value to be set
      * @return Builder
      */
@@ -103,7 +103,7 @@ public class StoreLanguagesChangedMessagePayloadBuilder implements Builder<Store
     }
 
     /**
-     *  <p>Locales added to the Store after the Set Languages update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a> added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetLanguagesAction" rel="nofollow">Set Languages</a> update action.</p>
      * @return addedLanguages
      */
 
@@ -113,7 +113,7 @@ public class StoreLanguagesChangedMessagePayloadBuilder implements Builder<Store
     }
 
     /**
-     *  <p>Locales removed from the Store during the Set Languages update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locales</a> removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> during the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetLanguagesAction" rel="nofollow">Set Languages</a> update action.</p>
      * @return removedLanguages
      */
 

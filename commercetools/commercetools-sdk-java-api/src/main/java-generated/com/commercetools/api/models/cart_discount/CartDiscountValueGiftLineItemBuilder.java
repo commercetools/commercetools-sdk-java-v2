@@ -75,7 +75,7 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
     }
 
     /**
-     *  <p>ProductVariant of the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> of the Product.</p>
      * @param variantId value to be set
      * @return Builder
      */
@@ -86,7 +86,7 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
     }
 
     /**
-     *  <p>Channel must have the ChannelRoleEnum <code>InventorySupply</code>.</p>
+     *  <p>Channel must have the <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> <code>InventorySupply</code>.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
@@ -98,7 +98,7 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
     }
 
     /**
-     *  <p>Channel must have the ChannelRoleEnum <code>InventorySupply</code>.</p>
+     *  <p>Channel must have the <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> <code>InventorySupply</code>.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
@@ -110,7 +110,7 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
     }
 
     /**
-     *  <p>Channel must have the ChannelRoleEnum <code>InventorySupply</code>.</p>
+     *  <p>Channel must have the <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> <code>InventorySupply</code>.</p>
      * @param supplyChannel value to be set
      * @return Builder
      */
@@ -122,7 +122,7 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
     }
 
     /**
-     *  <p>Channel must have the ChannelRoleEnum <code>ProductDistribution</code>.</p>
+     *  <p>Channel must have the <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> <code>ProductDistribution</code>.</p>
      * @param builder function to build the distributionChannel value
      * @return Builder
      */
@@ -135,7 +135,7 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
     }
 
     /**
-     *  <p>Channel must have the ChannelRoleEnum <code>ProductDistribution</code>.</p>
+     *  <p>Channel must have the <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> <code>ProductDistribution</code>.</p>
      * @param builder function to build the distributionChannel value
      * @return Builder
      */
@@ -147,7 +147,7 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
     }
 
     /**
-     *  <p>Channel must have the ChannelRoleEnum <code>ProductDistribution</code>.</p>
+     *  <p>Channel must have the <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> <code>ProductDistribution</code>.</p>
      * @param distributionChannel value to be set
      * @return Builder
      */
@@ -169,7 +169,7 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
     }
 
     /**
-     *  <p>ProductVariant of the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> of the Product.</p>
      * @return variantId
      */
 
@@ -178,7 +178,7 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
     }
 
     /**
-     *  <p>Channel must have the ChannelRoleEnum <code>InventorySupply</code>.</p>
+     *  <p>Channel must have the <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> <code>InventorySupply</code>.</p>
      * @return supplyChannel
      */
 
@@ -188,7 +188,7 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
     }
 
     /**
-     *  <p>Channel must have the ChannelRoleEnum <code>ProductDistribution</code>.</p>
+     *  <p>Channel must have the <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a> <code>ProductDistribution</code>.</p>
      * @return distributionChannel
      */
 

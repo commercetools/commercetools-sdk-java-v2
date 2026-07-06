@@ -8,16 +8,17 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Reference to a ShippingMethod.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +42,15 @@ public interface ShippingMethodReference extends Reference, com.commercetools.ap
     String SHIPPING_METHOD = "shipping-method";
 
     /**
-     *  <p>Contains the representation of the expanded ShippingMethod. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
+
+    /**
+     *  <p>Contains the representation of the expanded ShippingMethod. Only present in responses to requests with <span>Reference Expansion</span> for ShippingMethods.</p>
      * @return obj
      */
     @Valid
@@ -49,7 +58,7 @@ public interface ShippingMethodReference extends Reference, com.commercetools.ap
     public ShippingMethod getObj();
 
     /**
-     *  <p>Unique identifier of the referenced ShippingMethod.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a>.</p>
      * @return id
      */
     @NotNull
@@ -57,14 +66,14 @@ public interface ShippingMethodReference extends Reference, com.commercetools.ap
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded ShippingMethod. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>
+     *  <p>Contains the representation of the expanded ShippingMethod. Only present in responses to requests with <span>Reference Expansion</span> for ShippingMethods.</p>
      * @param obj value to be set
      */
 
     public void setObj(final ShippingMethod obj);
 
     /**
-     *  <p>Unique identifier of the referenced ShippingMethod.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a>.</p>
      * @param id value to be set
      */
 
@@ -139,8 +148,8 @@ public interface ShippingMethodReference extends Reference, com.commercetools.ap
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodReference> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodReference>() {
+    public static tools.jackson.core.type.TypeReference<ShippingMethodReference> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShippingMethodReference>() {
             @Override
             public String toString() {
                 return "TypeReference<ShippingMethodReference>";

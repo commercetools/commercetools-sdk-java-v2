@@ -37,7 +37,7 @@ public class ParcelTrackingDataUpdatedMessagePayloadBuilder
     private String shippingKey;
 
     /**
-     *  <p>Unique identifier of the Delivery.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param deliveryId value to be set
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class ParcelTrackingDataUpdatedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Unique identifier of the Parcel.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param parcelId value to be set
      * @return Builder
      */
@@ -59,7 +59,7 @@ public class ParcelTrackingDataUpdatedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The Tracking Data that was added to the Parcel.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:TrackingData" rel="nofollow">Tracking Data</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param builder function to build the trackingData value
      * @return Builder
      */
@@ -71,7 +71,7 @@ public class ParcelTrackingDataUpdatedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The Tracking Data that was added to the Parcel.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:TrackingData" rel="nofollow">Tracking Data</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param builder function to build the trackingData value
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class ParcelTrackingDataUpdatedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The Tracking Data that was added to the Parcel.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:TrackingData" rel="nofollow">Tracking Data</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param trackingData value to be set
      * @return Builder
      */
@@ -95,7 +95,7 @@ public class ParcelTrackingDataUpdatedMessagePayloadBuilder
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingKey value to be set
      * @return Builder
      */
@@ -106,7 +106,7 @@ public class ParcelTrackingDataUpdatedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Unique identifier of the Delivery.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @return deliveryId
      */
 
@@ -115,7 +115,7 @@ public class ParcelTrackingDataUpdatedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Unique identifier of the Parcel.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @return parcelId
      */
 
@@ -124,7 +124,7 @@ public class ParcelTrackingDataUpdatedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The Tracking Data that was added to the Parcel.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:TrackingData" rel="nofollow">Tracking Data</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @return trackingData
      */
 
@@ -134,7 +134,7 @@ public class ParcelTrackingDataUpdatedMessagePayloadBuilder
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shippingKey
      */
 

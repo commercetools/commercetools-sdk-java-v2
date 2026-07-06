@@ -3,12 +3,12 @@ package io.vrap.rmf.base.client.utils.json.modules;
 
 import java.util.Set;
 
-import com.fasterxml.jackson.databind.jsontype.NamedType;
-import com.fasterxml.jackson.databind.module.SimpleModule;
-
 import io.vrap.rmf.base.client.utils.json.SubType;
 
 import org.reflections.Reflections;
+
+import tools.jackson.databind.jsontype.NamedType;
+import tools.jackson.databind.module.SimpleModule;
 
 public class SubTypeModule extends SimpleModule {
     public SubTypeModule(final String prefix) {

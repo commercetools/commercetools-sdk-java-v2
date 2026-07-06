@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+ *  <p>A geographical location representing a country and optionally a state within this country. A location can only be assigned to one Zone.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -23,7 +23,6 @@ import jakarta.validation.constraints.NotNull;
  * <pre><code class='java'>
  *     Location location = Location.builder()
  *             .country("{country}")
- *             .state("{state}")
  *             .build()
  * </code></pre>
  * </div>
@@ -33,7 +32,7 @@ import jakarta.validation.constraints.NotNull;
 public interface Location {
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Country code of the geographic location.</p>
      * @return country
      */
     @NotNull
@@ -41,22 +40,22 @@ public interface Location {
     public String getCountry();
 
     /**
-     *
+     *  <p>State within the country.</p>
      * @return state
      */
-    @NotNull
+
     @JsonProperty("state")
     public String getState();
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Country code of the geographic location.</p>
      * @param country value to be set
      */
 
     public void setCountry(final String country);
 
     /**
-     * set state
+     *  <p>State within the country.</p>
      * @param state value to be set
      */
 
@@ -131,8 +130,8 @@ public interface Location {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Location> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Location>() {
+    public static tools.jackson.core.type.TypeReference<Location> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Location>() {
             @Override
             public String toString() {
                 return "TypeReference<Location>";

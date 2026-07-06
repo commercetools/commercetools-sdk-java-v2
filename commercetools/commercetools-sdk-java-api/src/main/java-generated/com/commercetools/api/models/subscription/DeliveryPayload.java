@@ -10,15 +10,15 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.message.UserProvidedIdentifiers;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>All payloads for the PlatformFormat share these common fields.</p>
+ *  <p>All payloads for the <a href="https://docs.commercetools.com/apis/ctp:api:type:PlatformFormat" rel="nofollow">PlatformFormat</a> share these common fields.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +35,7 @@ import jakarta.validation.constraints.NotNull;
 public interface DeliveryPayload extends SubscriptionNotification {
 
     /**
-     *  <p><code>key</code> of the Project. Useful for processing notifications if the Destination receives them from multiple Projects.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Useful for processing notifications if the Destination receives them from multiple Projects.</p>
      * @return projectKey
      */
     @NotNull
@@ -60,7 +60,7 @@ public interface DeliveryPayload extends SubscriptionNotification {
     public UserProvidedIdentifiers getResourceUserProvidedIdentifiers();
 
     /**
-     *  <p><code>key</code> of the Project. Useful for processing notifications if the Destination receives them from multiple Projects.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Useful for processing notifications if the Destination receives them from multiple Projects.</p>
      * @param projectKey value to be set
      */
 
@@ -118,8 +118,8 @@ public interface DeliveryPayload extends SubscriptionNotification {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DeliveryPayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DeliveryPayload>() {
+    public static tools.jackson.core.type.TypeReference<DeliveryPayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DeliveryPayload>() {
             @Override
             public String toString() {
                 return "TypeReference<DeliveryPayload>";

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Create Product Tailoring or Create Product Tailoring in Store request.</p>
+ *  <p>Generated after a successful <span>Create Product Tailoring</span> or <span>Create Product Tailoring in Store</span> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTailoringCreatedMessageImpl implements ProductTailoringCreatedMessage, ModelBase {
@@ -186,7 +187,7 @@ public class ProductTailoringCreatedMessageImpl implements ProductTailoringCreat
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -202,7 +203,7 @@ public class ProductTailoringCreatedMessageImpl implements ProductTailoringCreat
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -250,7 +251,7 @@ public class ProductTailoringCreatedMessageImpl implements ProductTailoringCreat
     }
 
     /**
-     *  <p>The description of the Product Tailoring at the time of creation.</p>
+     *  <p>The description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -258,7 +259,7 @@ public class ProductTailoringCreatedMessageImpl implements ProductTailoringCreat
     }
 
     /**
-     *  <p>The name of the Product Tailoring at the time of creation.</p>
+     *  <p>The name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -266,7 +267,7 @@ public class ProductTailoringCreatedMessageImpl implements ProductTailoringCreat
     }
 
     /**
-     *  <p>The slug of the Product Tailoring at the time of creation.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getSlug() {
@@ -274,7 +275,7 @@ public class ProductTailoringCreatedMessageImpl implements ProductTailoringCreat
     }
 
     /**
-     *  <p>The metaTitle of the Product Tailoring at the time of creation.</p>
+     *  <p>The metaTitle of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
@@ -282,7 +283,7 @@ public class ProductTailoringCreatedMessageImpl implements ProductTailoringCreat
     }
 
     /**
-     *  <p>The metaDescription of the Product Tailoring at the time of creation.</p>
+     *  <p>The metaDescription of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaDescription() {
@@ -290,7 +291,7 @@ public class ProductTailoringCreatedMessageImpl implements ProductTailoringCreat
     }
 
     /**
-     *  <p>The metaKeywords of the Product Tailoring at the time of creation.</p>
+     *  <p>The metaKeywords of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
@@ -298,7 +299,7 @@ public class ProductTailoringCreatedMessageImpl implements ProductTailoringCreat
     }
 
     /**
-     *  <p>The variants of the Product Tailoring at the time of creation.</p>
+     *  <p>The variants of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> at the time of creation.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoring> getVariants() {
@@ -306,7 +307,7 @@ public class ProductTailoringCreatedMessageImpl implements ProductTailoringCreat
     }
 
     /**
-     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> getAttributes() {

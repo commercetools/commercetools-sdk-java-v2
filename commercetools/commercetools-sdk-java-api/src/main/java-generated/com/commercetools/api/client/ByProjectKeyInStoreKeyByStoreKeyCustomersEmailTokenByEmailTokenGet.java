@@ -11,17 +11,17 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>Use this method to retrieve a Store-specific Customer's details by using the email token during their email verification process.</p>
- *  <p>If the Customer exists in the Project but the <code>stores</code> field references a different Store, this method returns a ResourceNotFound error.</p>
+ *  <p>Use this method to retrieve a Store-specific Customer's details by using the email token during their <span>email verification process</span>.</p>
+ *  <p>If the Customer exists in the Project but the <code>stores</code> field references a different <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>, this method returns a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error.</p>
  *
  * <hr>
  * <div class=code-example>

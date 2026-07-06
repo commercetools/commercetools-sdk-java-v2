@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Change Associate Mode update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeAssociateModeAction" rel="nofollow">Change Associate Mode</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitAssociateModeChangedMessagePayloadImpl
@@ -57,7 +58,7 @@ public class BusinessUnitAssociateModeChangedMessagePayloadImpl
     }
 
     /**
-     *  <p>BusinessUnitAssociateMode of the Business Unit after the Change Associate Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAssociateMode" rel="nofollow">BusinessUnitAssociateMode</a> of the Business Unit after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeAssociateModeAction" rel="nofollow">Change Associate Mode</a> update action.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitAssociateMode getAssociateMode() {
@@ -65,7 +66,7 @@ public class BusinessUnitAssociateModeChangedMessagePayloadImpl
     }
 
     /**
-     *  <p>BusinessUnitAssociateMode of the Business Unit before the Change Associate Mode update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAssociateMode" rel="nofollow">BusinessUnitAssociateMode</a> of the Business Unit before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeAssociateModeAction" rel="nofollow">Change Associate Mode</a> update action.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitAssociateMode getOldAssociateMode() {

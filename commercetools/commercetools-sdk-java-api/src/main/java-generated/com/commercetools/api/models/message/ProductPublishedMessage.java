@@ -10,15 +10,15 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.cart.ProductPublishScope;
 import com.commercetools.api.models.product.ProductProjection;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Publish update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishAction" rel="nofollow">Publish</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -50,7 +50,7 @@ public interface ProductPublishedMessage extends Message {
     String PRODUCT_PUBLISHED = "ProductPublished";
 
     /**
-     *  <p>List of image URLs which were removed during the Publish update action.</p>
+     *  <p>List of image URLs which were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishAction" rel="nofollow">Publish</a> update action.</p>
      * @return removedImageUrls
      */
     @NotNull
@@ -58,7 +58,7 @@ public interface ProductPublishedMessage extends Message {
     public List<String> getRemovedImageUrls();
 
     /**
-     *  <p>Current Product Projection of the Product at the time of creation.</p>
+     *  <p>Current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> at the time of creation.</p>
      * @return productProjection
      */
     @NotNull
@@ -67,7 +67,7 @@ public interface ProductPublishedMessage extends Message {
     public ProductProjection getProductProjection();
 
     /**
-     *  <p>Publishing Scope that was used during the Publish update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishScope" rel="nofollow">Publishing Scope</a> that was used during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishAction" rel="nofollow">Publish</a> update action.</p>
      * @return scope
      */
     @NotNull
@@ -75,7 +75,7 @@ public interface ProductPublishedMessage extends Message {
     public ProductPublishScope getScope();
 
     /**
-     *  <p>List of image URLs which were removed during the Publish update action.</p>
+     *  <p>List of image URLs which were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishAction" rel="nofollow">Publish</a> update action.</p>
      * @param removedImageUrls values to be set
      */
 
@@ -83,21 +83,21 @@ public interface ProductPublishedMessage extends Message {
     public void setRemovedImageUrls(final String... removedImageUrls);
 
     /**
-     *  <p>List of image URLs which were removed during the Publish update action.</p>
+     *  <p>List of image URLs which were removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishAction" rel="nofollow">Publish</a> update action.</p>
      * @param removedImageUrls values to be set
      */
 
     public void setRemovedImageUrls(final List<String> removedImageUrls);
 
     /**
-     *  <p>Current Product Projection of the Product at the time of creation.</p>
+     *  <p>Current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> at the time of creation.</p>
      * @param productProjection value to be set
      */
 
     public void setProductProjection(final ProductProjection productProjection);
 
     /**
-     *  <p>Publishing Scope that was used during the Publish update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishScope" rel="nofollow">Publishing Scope</a> that was used during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPublishAction" rel="nofollow">Publish</a> update action.</p>
      * @param scope value to be set
      */
 
@@ -198,8 +198,8 @@ public interface ProductPublishedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductPublishedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductPublishedMessage>() {
+    public static tools.jackson.core.type.TypeReference<ProductPublishedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductPublishedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductPublishedMessage>";

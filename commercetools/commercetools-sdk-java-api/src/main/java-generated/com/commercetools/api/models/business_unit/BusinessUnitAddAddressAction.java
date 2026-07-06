@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.BaseAddress;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Adding an address to a Business Unit generates a BusinessUnitAddressAdded Message.</p>
+ *  <p>Adding an address to a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitAddressAddedMessage" rel="nofollow">BusinessUnitAddressAdded</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface BusinessUnitAddAddressAction extends BusinessUnitUpdateAction {
     String ADD_ADDRESS = "addAddress";
 
     /**
-     *  <p>Address to add to the addresses of the Business Unit.</p>
+     *  <p>Address to add to the addresses of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @return address
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface BusinessUnitAddAddressAction extends BusinessUnitUpdateAction {
     public BaseAddress getAddress();
 
     /**
-     *  <p>Address to add to the addresses of the Business Unit.</p>
+     *  <p>Address to add to the addresses of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param address value to be set
      */
 
@@ -122,8 +122,8 @@ public interface BusinessUnitAddAddressAction extends BusinessUnitUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAddAddressAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAddAddressAction>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitAddAddressAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitAddAddressAction>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitAddAddressAction>";

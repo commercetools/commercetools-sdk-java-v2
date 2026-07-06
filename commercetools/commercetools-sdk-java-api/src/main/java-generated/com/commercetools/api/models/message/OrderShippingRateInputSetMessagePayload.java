@@ -9,14 +9,14 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.cart.ShippingRateInput;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Set ShippingRateInput update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingRateInputAction" rel="nofollow">Set ShippingRateInput</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface OrderShippingRateInputSetMessagePayload extends OrderMessagePay
     String ORDER_SHIPPING_RATE_INPUT_SET = "OrderShippingRateInputSet";
 
     /**
-     *  <p>ShippingRateInput after the Set ShippingRateInput update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRateInput" rel="nofollow">ShippingRateInput</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingRateInputAction" rel="nofollow">Set ShippingRateInput</a> update action.</p>
      * @return shippingRateInput
      */
     @Valid
@@ -46,7 +46,7 @@ public interface OrderShippingRateInputSetMessagePayload extends OrderMessagePay
     public ShippingRateInput getShippingRateInput();
 
     /**
-     *  <p>ShippingRateInput before the Set ShippingRateInput update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRateInput" rel="nofollow">ShippingRateInput</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingRateInputAction" rel="nofollow">Set ShippingRateInput</a> update action.</p>
      * @return oldShippingRateInput
      */
     @Valid
@@ -54,14 +54,14 @@ public interface OrderShippingRateInputSetMessagePayload extends OrderMessagePay
     public ShippingRateInput getOldShippingRateInput();
 
     /**
-     *  <p>ShippingRateInput after the Set ShippingRateInput update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRateInput" rel="nofollow">ShippingRateInput</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingRateInputAction" rel="nofollow">Set ShippingRateInput</a> update action.</p>
      * @param shippingRateInput value to be set
      */
 
     public void setShippingRateInput(final ShippingRateInput shippingRateInput);
 
     /**
-     *  <p>ShippingRateInput before the Set ShippingRateInput update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRateInput" rel="nofollow">ShippingRateInput</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetShippingRateInputAction" rel="nofollow">Set ShippingRateInput</a> update action.</p>
      * @param oldShippingRateInput value to be set
      */
 
@@ -141,8 +141,8 @@ public interface OrderShippingRateInputSetMessagePayload extends OrderMessagePay
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderShippingRateInputSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderShippingRateInputSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<OrderShippingRateInputSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderShippingRateInputSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderShippingRateInputSetMessagePayload>";

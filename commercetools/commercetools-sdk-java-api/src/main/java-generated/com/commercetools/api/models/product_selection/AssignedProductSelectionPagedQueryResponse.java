@@ -9,15 +9,15 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>PagedQueryResult containing an array of AssignedProductSelection.</p>
+ *  <p><span>PagedQueryResult</span> containing an array of <a href="https://docs.commercetools.com/apis/ctp:api:type:AssignedProductSelection" rel="nofollow">AssignedProductSelection</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface AssignedProductSelectionPagedQueryResponse
         extends com.commercetools.api.models.ResourcePagedQueryResponse<AssignedProductSelection> {
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @return limit
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface AssignedProductSelectionPagedQueryResponse
     public Long getLimit();
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @return offset
      */
     @NotNull
@@ -62,7 +62,7 @@ public interface AssignedProductSelectionPagedQueryResponse
     public Long getCount();
 
     /**
-     *  <p>Total number of results matching the query. Present only when the <code>withTotal</code> query parameter is set to <code>true</code>. This number is an estimation that is not strongly consistent. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     *  <p>Total number of results matching the query. Present only when the <code>withTotal</code> query parameter is set to <code>true</code>. This number is an estimation that is not <span>strongly consistent</span>. When the results are filtered with a <span>Query Predicate</span>, <code>total</code> is subject to a <span>limit</span>.</p>
      * @return total
      */
 
@@ -79,14 +79,14 @@ public interface AssignedProductSelectionPagedQueryResponse
     public List<AssignedProductSelection> getResults();
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @param limit value to be set
      */
 
     public void setLimit(final Long limit);
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @param offset value to be set
      */
 
@@ -100,7 +100,7 @@ public interface AssignedProductSelectionPagedQueryResponse
     public void setCount(final Long count);
 
     /**
-     *  <p>Total number of results matching the query. Present only when the <code>withTotal</code> query parameter is set to <code>true</code>. This number is an estimation that is not strongly consistent. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     *  <p>Total number of results matching the query. Present only when the <code>withTotal</code> query parameter is set to <code>true</code>. This number is an estimation that is not <span>strongly consistent</span>. When the results are filtered with a <span>Query Predicate</span>, <code>total</code> is subject to a <span>limit</span>.</p>
      * @param total value to be set
      */
 
@@ -204,8 +204,8 @@ public interface AssignedProductSelectionPagedQueryResponse
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AssignedProductSelectionPagedQueryResponse> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AssignedProductSelectionPagedQueryResponse>() {
+    public static tools.jackson.core.type.TypeReference<AssignedProductSelectionPagedQueryResponse> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AssignedProductSelectionPagedQueryResponse>() {
             @Override
             public String toString() {
                 return "TypeReference<AssignedProductSelectionPagedQueryResponse>";

@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>AWS EventBridge can be used to push events and messages to a serverless event bus that can forward them to AWS SQS, SNS, Lambda, and other AWS services based on forwarding rules. Once the Subscription is created, an equivalent "partner event source" is created in AWS EventBridge. This event source must be associated with an event bus for the Subscription setup to be complete.</p>
+ *  <p><span>AWS EventBridge</span> can be used to push events and messages to a serverless event bus that can forward them to AWS SQS, SNS, Lambda, and other AWS services based on forwarding rules. Once the Subscription is created, an equivalent "partner event source" is created in AWS EventBridge. This event source must be associated with an event bus for the Subscription setup to be complete.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -155,8 +155,8 @@ public interface EventBridgeDestination extends Destination {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<EventBridgeDestination> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<EventBridgeDestination>() {
+    public static tools.jackson.core.type.TypeReference<EventBridgeDestination> typeReference() {
+        return new tools.jackson.core.type.TypeReference<EventBridgeDestination>() {
             @Override
             public String toString() {
                 return "TypeReference<EventBridgeDestination>";

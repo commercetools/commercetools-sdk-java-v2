@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * OrderSetLocaleAction
@@ -35,7 +36,7 @@ public interface OrderSetLocaleAction extends OrderUpdateAction {
     String SET_LOCALE = "setLocale";
 
     /**
-     *  <p>Value to set. Must be one of the Project's languages. If empty, any existing value is removed.</p>
+     *  <p>Value to set. Must be one of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>'s languages. If empty, any existing value is removed.</p>
      * @return locale
      */
 
@@ -43,7 +44,7 @@ public interface OrderSetLocaleAction extends OrderUpdateAction {
     public String getLocale();
 
     /**
-     *  <p>Value to set. Must be one of the Project's languages. If empty, any existing value is removed.</p>
+     *  <p>Value to set. Must be one of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>'s languages. If empty, any existing value is removed.</p>
      * @param locale value to be set
      */
 
@@ -116,8 +117,8 @@ public interface OrderSetLocaleAction extends OrderUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderSetLocaleAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderSetLocaleAction>() {
+    public static tools.jackson.core.type.TypeReference<OrderSetLocaleAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderSetLocaleAction>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderSetLocaleAction>";

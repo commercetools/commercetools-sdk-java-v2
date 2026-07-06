@@ -24,7 +24,7 @@ public class LocalizedEnumFieldBuilder implements Builder<LocalizedEnumField> {
     private String value;
 
     /**
-     *  <p>The key of the localized enum value. Must match the key of a CustomFieldLocalizedEnumValue in the CustomFieldLocalizedEnumType.</p>
+     *  <p>The key of the localized enum value. Must match the key of a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumValue" rel="nofollow">CustomFieldLocalizedEnumValue</a> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumType" rel="nofollow">CustomFieldLocalizedEnumType</a>.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class LocalizedEnumFieldBuilder implements Builder<LocalizedEnumField> {
     }
 
     /**
-     *  <p>The key of the localized enum value. Must match the key of a CustomFieldLocalizedEnumValue in the CustomFieldLocalizedEnumType.</p>
+     *  <p>The key of the localized enum value. Must match the key of a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumValue" rel="nofollow">CustomFieldLocalizedEnumValue</a> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumType" rel="nofollow">CustomFieldLocalizedEnumType</a>.</p>
      * @return value
      */
 

@@ -71,6 +71,10 @@ public class CartDiscountUpdateActionBuilder {
         return com.commercetools.api.models.cart_discount.CartDiscountSetKeyActionBuilder.of();
     }
 
+    public com.commercetools.api.models.cart_discount.CartDiscountSetRecurringOrderScopeActionBuilder setRecurringOrderScopeBuilder() {
+        return com.commercetools.api.models.cart_discount.CartDiscountSetRecurringOrderScopeActionBuilder.of();
+    }
+
     public com.commercetools.api.models.cart_discount.CartDiscountSetStoresActionBuilder setStoresBuilder() {
         return com.commercetools.api.models.cart_discount.CartDiscountSetStoresActionBuilder.of();
     }

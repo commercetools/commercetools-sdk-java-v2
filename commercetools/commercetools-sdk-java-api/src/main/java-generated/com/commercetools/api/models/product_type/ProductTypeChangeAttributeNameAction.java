@@ -8,15 +8,15 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Renames an AttributeDefinition and also renames all corresponding Attributes on all Products with this ProductType. The renaming of the Attributes is eventually consistent.</p>
- *  <p>If the AttributeDefinition name to be changed does not exist, an AttributeNameDoesNotExist error is returned.</p>
+ *  <p>Renames an AttributeDefinition and also renames all corresponding Attributes on all <span>Products</span> with this ProductType. The renaming of the Attributes is <span>eventually consistent</span>.</p>
+ *  <p>If the AttributeDefinition name to be changed does not exist, an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeNameDoesNotExistError" rel="nofollow">AttributeNameDoesNotExist</a> error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -48,8 +48,8 @@ public interface ProductTypeChangeAttributeNameAction extends ProductTypeUpdateA
     public String getAttributeName();
 
     /**
-     *  <p>New user-defined name of the Attribute that is unique to the Project.</p>
-     *  <p>When using the same <code>name</code> for an Attribute in two or more ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes. If not, an AttributeDefinitionAlreadyExists error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
+     *  <p>New user-defined name of the Attribute that must be unique within the ProductType.</p>
+     *  <p>To use the same <code>name</code> in multiple ProductTypes, each AttributeDefinition must have the same <code>type</code>; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionTypeConflictError" rel="nofollow">AttributeDefinitionTypeConflict</a> error is returned. For <code>enum</code> or <code>lenum</code> Types and sets of these AttributeTypes, the enum values can be different for each ProductType.</p>
      * @return newAttributeName
      */
     @NotNull
@@ -64,8 +64,8 @@ public interface ProductTypeChangeAttributeNameAction extends ProductTypeUpdateA
     public void setAttributeName(final String attributeName);
 
     /**
-     *  <p>New user-defined name of the Attribute that is unique to the Project.</p>
-     *  <p>When using the same <code>name</code> for an Attribute in two or more ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes. If not, an AttributeDefinitionAlreadyExists error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
+     *  <p>New user-defined name of the Attribute that must be unique within the ProductType.</p>
+     *  <p>To use the same <code>name</code> in multiple ProductTypes, each AttributeDefinition must have the same <code>type</code>; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionTypeConflictError" rel="nofollow">AttributeDefinitionTypeConflict</a> error is returned. For <code>enum</code> or <code>lenum</code> Types and sets of these AttributeTypes, the enum values can be different for each ProductType.</p>
      * @param newAttributeName value to be set
      */
 
@@ -142,8 +142,8 @@ public interface ProductTypeChangeAttributeNameAction extends ProductTypeUpdateA
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangeAttributeNameAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangeAttributeNameAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductTypeChangeAttributeNameAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductTypeChangeAttributeNameAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductTypeChangeAttributeNameAction>";

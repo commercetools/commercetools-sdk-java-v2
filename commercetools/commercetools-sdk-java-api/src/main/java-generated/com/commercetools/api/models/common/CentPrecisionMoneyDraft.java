@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>This draft type is the alternative to Money.</p>
+ *  <p>This draft type is the alternative to <a href="https://docs.commercetools.com/apis/ctp:api:type:Money" rel="nofollow">Money</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -134,8 +135,8 @@ public interface CentPrecisionMoneyDraft
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CentPrecisionMoneyDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CentPrecisionMoneyDraft>() {
+    public static tools.jackson.core.type.TypeReference<CentPrecisionMoneyDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CentPrecisionMoneyDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<CentPrecisionMoneyDraft>";

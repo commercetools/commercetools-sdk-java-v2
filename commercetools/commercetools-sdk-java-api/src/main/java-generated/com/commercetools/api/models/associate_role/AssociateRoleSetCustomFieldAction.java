@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * AssociateRoleSetCustomFieldAction
@@ -38,7 +38,7 @@ public interface AssociateRoleSetCustomFieldAction extends AssociateRoleUpdateAc
     String SET_CUSTOM_FIELD = "setCustomField";
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Field</a>.</p>
      * @return name
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface AssociateRoleSetCustomFieldAction extends AssociateRoleUpdateAc
     public String getName();
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperationError error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperationError</a> error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @return value
      */
 
@@ -54,14 +54,14 @@ public interface AssociateRoleSetCustomFieldAction extends AssociateRoleUpdateAc
     public Object getValue();
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Field</a>.</p>
      * @param name value to be set
      */
 
     public void setName(final String name);
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperationError error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperationError</a> error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
      * @param value value to be set
      */
 
@@ -137,8 +137,8 @@ public interface AssociateRoleSetCustomFieldAction extends AssociateRoleUpdateAc
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AssociateRoleSetCustomFieldAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AssociateRoleSetCustomFieldAction>() {
+    public static tools.jackson.core.type.TypeReference<AssociateRoleSetCustomFieldAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AssociateRoleSetCustomFieldAction>() {
             @Override
             public String toString() {
                 return "TypeReference<AssociateRoleSetCustomFieldAction>";

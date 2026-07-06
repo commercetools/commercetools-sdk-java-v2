@@ -7,7 +7,6 @@ import java.util.*;
 import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -17,8 +16,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Reference to an Order.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to an <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderReferenceImpl implements OrderReference, ModelBase {
@@ -48,7 +49,7 @@ public class OrderReferenceImpl implements OrderReference, ModelBase {
     }
 
     /**
-     *  <p>Type of referenced resource.</p>
+     *
      */
 
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
@@ -56,7 +57,7 @@ public class OrderReferenceImpl implements OrderReference, ModelBase {
     }
 
     /**
-     *  <p>Unique identifier of the referenced Order.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      */
 
     public String getId() {
@@ -64,7 +65,7 @@ public class OrderReferenceImpl implements OrderReference, ModelBase {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Order. Only present in responses to requests with Reference Expansion for Orders.</p>
+     *  <p>Contains the representation of the expanded Order. Only present in responses to requests with <span>Reference Expansion</span> for Orders.</p>
      */
 
     public com.commercetools.api.models.order.Order getObj() {

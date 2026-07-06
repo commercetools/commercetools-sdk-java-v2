@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductProjection
@@ -130,7 +131,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *  <p>Unique identifier of the Product.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      */
 
     public String getId() {
@@ -138,7 +139,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *  <p>Current version of the Product.</p>
+     *  <p>Current version of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      */
 
     public Long getVersion() {
@@ -162,7 +163,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Product.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      */
 
     public String getKey() {
@@ -170,7 +171,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *  <p>The ProductType defining the Attributes of the Product.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a> defining the Attributes of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      */
 
     public com.commercetools.api.models.product_type.ProductTypeReference getProductType() {
@@ -178,7 +179,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *  <p>Name of the Product.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -186,7 +187,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *  <p>Description of the Product.</p>
+     *  <p>Description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {
@@ -194,7 +195,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different locales. Matches the pattern <code>[a-zA-Z0-9_\-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in the Project.</p>
+     *  <p>User-defined identifier used in a deep-link URL for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>. Must be unique across a Project, but can be the same for Products in different locales. Matches the pattern <code>[a-zA-Z0-9_\-]{2,256}</code>. For <span>good performance</span>, indexes are provided for the first 15 <code>languages</code> set in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getSlug() {
@@ -202,7 +203,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *  <p>Categories assigned to the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.category.CategoryReference> getCategories() {
@@ -210,7 +211,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *  <p>Order of Product in Categories.</p>
+     *  <p>Order of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> in <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a>.</p>
      */
 
     public com.commercetools.api.models.product.CategoryOrderHints getCategoryOrderHints() {
@@ -218,7 +219,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *  <p>Title of the Product displayed in search results.</p>
+     *  <p>Title of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> displayed in search results.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
@@ -226,7 +227,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *  <p>Description of the Product displayed in search results below the meta title.</p>
+     *  <p>Description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> displayed in search results below the meta title.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaDescription() {
@@ -234,7 +235,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *  <p>Keywords that give additional information about the Product to search engines.</p>
+     *  <p>Keywords that give additional information about the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> to search engines.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
@@ -242,7 +243,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *  <p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p>
+     *  <p>Used by <span>Search Term Suggestions</span>, but is also considered for a <span>full text search</span> in the Product Projection Search API.</p>
      */
 
     public com.commercetools.api.models.product.SearchKeywords getSearchKeywords() {
@@ -258,7 +259,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *  <p><code>true</code> if the Product is published.</p>
+     *  <p><code>true</code> if the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:CurrentStaged" rel="nofollow">published</a>.</p>
      */
 
     public Boolean getPublished() {
@@ -266,7 +267,8 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *  <p>The Master Variant of the Product.</p>
+     *  <p>The Master Variant of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
+     *  <p>Omitted when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variant Projections API</span> instead.</p>
      */
 
     public com.commercetools.api.models.product.ProductVariant getMasterVariant() {
@@ -275,6 +277,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
 
     /**
      *  <p>Additional Product Variants.</p>
+     *  <p>Empty when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variant Projections API</span> instead.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product.ProductVariant> getVariants() {
@@ -282,7 +285,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *  <p>The TaxCategory of the Product.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory() {
@@ -290,7 +293,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *  <p>State of the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {
@@ -298,7 +301,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *  <p>Review statistics of the Product.</p>
+     *  <p>Review statistics of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
      */
 
     public com.commercetools.api.models.review.ReviewRatingStatistics getReviewRatingStatistics() {
@@ -306,7 +309,8 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *  <p>Indicates whether the Prices of the Product Projection are embedded or standalone. Projecting Prices only works with <code>Embedded</code>, there is currently no support for <code>Standalone</code>.</p>
+     *  <p>Indicates whether the Prices of the Product Projection are <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">embedded</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">standalone</a>.</p>
+     *  <p>When <span>projecting Prices by Store</span>, the API supports only Embedded Prices (<code>Embedded</code>).</p>
      */
 
     public com.commercetools.api.models.product.ProductPriceModeEnum getPriceMode() {
@@ -314,7 +318,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionDraft" rel="nofollow">AttributeDefinition</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {

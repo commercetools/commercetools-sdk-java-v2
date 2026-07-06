@@ -30,7 +30,7 @@ public class ReviewReferenceBuilder implements Builder<ReviewReference> {
     private com.commercetools.api.models.review.Review obj;
 
     /**
-     *  <p>Unique identifier of the referenced Review.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class ReviewReferenceBuilder implements Builder<ReviewReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>
+     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with <span>Reference Expansion</span> for Reviews.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ReviewReferenceBuilder implements Builder<ReviewReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>
+     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with <span>Reference Expansion</span> for Reviews.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class ReviewReferenceBuilder implements Builder<ReviewReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>
+     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with <span>Reference Expansion</span> for Reviews.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class ReviewReferenceBuilder implements Builder<ReviewReference> {
     }
 
     /**
-     *  <p>Unique identifier of the referenced Review.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a>.</p>
      * @return id
      */
 
@@ -85,7 +85,7 @@ public class ReviewReferenceBuilder implements Builder<ReviewReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>
+     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with <span>Reference Expansion</span> for Reviews.</p>
      * @return obj
      */
 

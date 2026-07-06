@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .messages(messagesBuilder -> messagesBuilder)
  *             .carts(cartsBuilder -> cartsBuilder)
+ *             .inventory(inventoryBuilder -> inventoryBuilder)
+ *             .discounts(discountsBuilder -> discountsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -67,6 +69,13 @@ public class ProjectBuilder implements Builder<Project> {
 
     @Nullable
     private com.commercetools.api.models.project.BusinessUnitConfiguration businessUnits;
+
+    private com.commercetools.api.models.project.InventoryConfiguration inventory;
+
+    private com.commercetools.api.models.project.DiscountsConfiguration discounts;
+
+    @Nullable
+    private com.commercetools.api.models.project.ProductCatalogModel productCatalogModel;
 
     /**
      *  <p>Current version of the Project.</p>
@@ -232,7 +241,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the Messages Query feature.</p>
+     *  <p>Holds the configuration for the <span>Messages Query</span> feature.</p>
      * @param builder function to build the messages value
      * @return Builder
      */
@@ -244,7 +253,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the Messages Query feature.</p>
+     *  <p>Holds the configuration for the <span>Messages Query</span> feature.</p>
      * @param builder function to build the messages value
      * @return Builder
      */
@@ -256,7 +265,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the Messages Query feature.</p>
+     *  <p>Holds the configuration for the <span>Messages Query</span> feature.</p>
      * @param messages value to be set
      * @return Builder
      */
@@ -267,7 +276,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the Carts feature.</p>
+     *  <p>Holds the configuration for the <span>Carts</span> feature.</p>
      * @param builder function to build the carts value
      * @return Builder
      */
@@ -279,7 +288,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the Carts feature.</p>
+     *  <p>Holds the configuration for the <span>Carts</span> feature.</p>
      * @param builder function to build the carts value
      * @return Builder
      */
@@ -291,7 +300,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the Carts feature.</p>
+     *  <p>Holds the configuration for the <span>Carts</span> feature.</p>
      * @param carts value to be set
      * @return Builder
      */
@@ -302,7 +311,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>
+     *  <p>Holds the configuration for the <span>Shopping Lists</span> feature.</p>
      * @param builder function to build the shoppingLists value
      * @return Builder
      */
@@ -315,7 +324,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>
+     *  <p>Holds the configuration for the <span>Shopping Lists</span> feature.</p>
      * @param builder function to build the shoppingLists value
      * @return Builder
      */
@@ -327,7 +336,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>
+     *  <p>Holds the configuration for the <span>Shopping Lists</span> feature.</p>
      * @param shoppingLists value to be set
      * @return Builder
      */
@@ -339,7 +348,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the tiered shipping rates feature.</p>
+     *  <p>Holds the configuration for the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">tiered shipping rates</a> feature.</p>
      * @param shippingRateInputType value to be set
      * @return Builder
      */
@@ -351,7 +360,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the tiered shipping rates feature.</p>
+     *  <p>Holds the configuration for the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">tiered shipping rates</a> feature.</p>
      * @param builder function to build the shippingRateInputType value
      * @return Builder
      */
@@ -365,7 +374,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
+     *  <p>Represents a RFC 7662 compliant <span>OAuth 2.0 Token Introspection</span> endpoint.</p>
      * @param builder function to build the externalOAuth value
      * @return Builder
      */
@@ -377,7 +386,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
+     *  <p>Represents a RFC 7662 compliant <span>OAuth 2.0 Token Introspection</span> endpoint.</p>
      * @param builder function to build the externalOAuth value
      * @return Builder
      */
@@ -389,7 +398,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
+     *  <p>Represents a RFC 7662 compliant <span>OAuth 2.0 Token Introspection</span> endpoint.</p>
      * @param externalOAuth value to be set
      * @return Builder
      */
@@ -440,7 +449,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds configuration specific to Business Units.</p>
+     *  <p>Holds configuration specific to <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Units</a>.</p>
      * @param builder function to build the businessUnits value
      * @return Builder
      */
@@ -453,7 +462,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds configuration specific to Business Units.</p>
+     *  <p>Holds configuration specific to <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Units</a>.</p>
      * @param builder function to build the businessUnits value
      * @return Builder
      */
@@ -465,7 +474,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds configuration specific to Business Units.</p>
+     *  <p>Holds configuration specific to <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Units</a>.</p>
      * @param businessUnits value to be set
      * @return Builder
      */
@@ -473,6 +482,88 @@ public class ProjectBuilder implements Builder<Project> {
     public ProjectBuilder businessUnits(
             @Nullable final com.commercetools.api.models.project.BusinessUnitConfiguration businessUnits) {
         this.businessUnits = businessUnits;
+        return this;
+    }
+
+    /**
+     *  <p>Holds configuration specific to inventory.</p>
+     * @param builder function to build the inventory value
+     * @return Builder
+     */
+
+    public ProjectBuilder inventory(
+            Function<com.commercetools.api.models.project.InventoryConfigurationBuilder, com.commercetools.api.models.project.InventoryConfigurationBuilder> builder) {
+        this.inventory = builder.apply(com.commercetools.api.models.project.InventoryConfigurationBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Holds configuration specific to inventory.</p>
+     * @param builder function to build the inventory value
+     * @return Builder
+     */
+
+    public ProjectBuilder withInventory(
+            Function<com.commercetools.api.models.project.InventoryConfigurationBuilder, com.commercetools.api.models.project.InventoryConfiguration> builder) {
+        this.inventory = builder.apply(com.commercetools.api.models.project.InventoryConfigurationBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Holds configuration specific to inventory.</p>
+     * @param inventory value to be set
+     * @return Builder
+     */
+
+    public ProjectBuilder inventory(final com.commercetools.api.models.project.InventoryConfiguration inventory) {
+        this.inventory = inventory;
+        return this;
+    }
+
+    /**
+     *  <p>Holds configuration specific to discounts, including how Product and Cart Discounts are combined in every Cart of the Project.</p>
+     * @param builder function to build the discounts value
+     * @return Builder
+     */
+
+    public ProjectBuilder discounts(
+            Function<com.commercetools.api.models.project.DiscountsConfigurationBuilder, com.commercetools.api.models.project.DiscountsConfigurationBuilder> builder) {
+        this.discounts = builder.apply(com.commercetools.api.models.project.DiscountsConfigurationBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Holds configuration specific to discounts, including how Product and Cart Discounts are combined in every Cart of the Project.</p>
+     * @param builder function to build the discounts value
+     * @return Builder
+     */
+
+    public ProjectBuilder withDiscounts(
+            Function<com.commercetools.api.models.project.DiscountsConfigurationBuilder, com.commercetools.api.models.project.DiscountsConfiguration> builder) {
+        this.discounts = builder.apply(com.commercetools.api.models.project.DiscountsConfigurationBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Holds configuration specific to discounts, including how Product and Cart Discounts are combined in every Cart of the Project.</p>
+     * @param discounts value to be set
+     * @return Builder
+     */
+
+    public ProjectBuilder discounts(final com.commercetools.api.models.project.DiscountsConfiguration discounts) {
+        this.discounts = discounts;
+        return this;
+    }
+
+    /**
+     *  <p>Determines how Product Variants are managed in the Project. If not set, defaults to <code>Classic</code> behavior.</p>
+     * @param productCatalogModel value to be set
+     * @return Builder
+     */
+
+    public ProjectBuilder productCatalogModel(
+            @Nullable final com.commercetools.api.models.project.ProductCatalogModel productCatalogModel) {
+        this.productCatalogModel = productCatalogModel;
         return this;
     }
 
@@ -550,7 +641,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the Messages Query feature.</p>
+     *  <p>Holds the configuration for the <span>Messages Query</span> feature.</p>
      * @return messages
      */
 
@@ -559,7 +650,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the Carts feature.</p>
+     *  <p>Holds the configuration for the <span>Carts</span> feature.</p>
      * @return carts
      */
 
@@ -568,7 +659,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>
+     *  <p>Holds the configuration for the <span>Shopping Lists</span> feature.</p>
      * @return shoppingLists
      */
 
@@ -578,7 +669,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds the configuration for the tiered shipping rates feature.</p>
+     *  <p>Holds the configuration for the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">tiered shipping rates</a> feature.</p>
      * @return shippingRateInputType
      */
 
@@ -588,7 +679,7 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
+     *  <p>Represents a RFC 7662 compliant <span>OAuth 2.0 Token Introspection</span> endpoint.</p>
      * @return externalOAuth
      */
 
@@ -608,13 +699,41 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Holds configuration specific to Business Units.</p>
+     *  <p>Holds configuration specific to <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Units</a>.</p>
      * @return businessUnits
      */
 
     @Nullable
     public com.commercetools.api.models.project.BusinessUnitConfiguration getBusinessUnits() {
         return this.businessUnits;
+    }
+
+    /**
+     *  <p>Holds configuration specific to inventory.</p>
+     * @return inventory
+     */
+
+    public com.commercetools.api.models.project.InventoryConfiguration getInventory() {
+        return this.inventory;
+    }
+
+    /**
+     *  <p>Holds configuration specific to discounts, including how Product and Cart Discounts are combined in every Cart of the Project.</p>
+     * @return discounts
+     */
+
+    public com.commercetools.api.models.project.DiscountsConfiguration getDiscounts() {
+        return this.discounts;
+    }
+
+    /**
+     *  <p>Determines how Product Variants are managed in the Project. If not set, defaults to <code>Classic</code> behavior.</p>
+     * @return productCatalogModel
+     */
+
+    @Nullable
+    public com.commercetools.api.models.project.ProductCatalogModel getProductCatalogModel() {
+        return this.productCatalogModel;
     }
 
     /**
@@ -631,8 +750,11 @@ public class ProjectBuilder implements Builder<Project> {
         Objects.requireNonNull(createdAt, Project.class + ": createdAt is missing");
         Objects.requireNonNull(messages, Project.class + ": messages is missing");
         Objects.requireNonNull(carts, Project.class + ": carts is missing");
+        Objects.requireNonNull(inventory, Project.class + ": inventory is missing");
+        Objects.requireNonNull(discounts, Project.class + ": discounts is missing");
         return new ProjectImpl(version, key, name, countries, currencies, languages, createdAt, trialUntil, messages,
-            carts, shoppingLists, shippingRateInputType, externalOAuth, searchIndexing, businessUnits);
+            carts, shoppingLists, shippingRateInputType, externalOAuth, searchIndexing, businessUnits, inventory,
+            discounts, productCatalogModel);
     }
 
     /**
@@ -641,7 +763,8 @@ public class ProjectBuilder implements Builder<Project> {
      */
     public Project buildUnchecked() {
         return new ProjectImpl(version, key, name, countries, currencies, languages, createdAt, trialUntil, messages,
-            carts, shoppingLists, shippingRateInputType, externalOAuth, searchIndexing, businessUnits);
+            carts, shoppingLists, shippingRateInputType, externalOAuth, searchIndexing, businessUnits, inventory,
+            discounts, productCatalogModel);
     }
 
     /**
@@ -674,6 +797,9 @@ public class ProjectBuilder implements Builder<Project> {
         builder.externalOAuth = template.getExternalOAuth();
         builder.searchIndexing = template.getSearchIndexing();
         builder.businessUnits = template.getBusinessUnits();
+        builder.inventory = template.getInventory();
+        builder.discounts = template.getDiscounts();
+        builder.productCatalogModel = template.getProductCatalogModel();
         return builder;
     }
 

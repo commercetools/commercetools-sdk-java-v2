@@ -28,7 +28,7 @@ public class OrderPatchImportBuilder implements Builder<OrderPatchImport> {
     private com.commercetools.importapi.models.order_patches.OrderField fields;
 
     /**
-     *  <p>User-defined unique identifier. If an Order with this <code>orderNumber</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If an <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> with this <code>orderNumber</code> exists, it is updated with the imported data.</p>
      * @param orderNumber value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class OrderPatchImportBuilder implements Builder<OrderPatchImport> {
     }
 
     /**
-     *  <p>Each field referenced must be defined in an existing Order or the ImportOperationState is set to <code>validationFailed</code>.</p>
+     *  <p>Each field referenced must be defined in an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> or the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperationState" rel="nofollow">ImportOperationState</a> is set to <code>validationFailed</code>.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class OrderPatchImportBuilder implements Builder<OrderPatchImport> {
     }
 
     /**
-     *  <p>Each field referenced must be defined in an existing Order or the ImportOperationState is set to <code>validationFailed</code>.</p>
+     *  <p>Each field referenced must be defined in an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> or the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperationState" rel="nofollow">ImportOperationState</a> is set to <code>validationFailed</code>.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class OrderPatchImportBuilder implements Builder<OrderPatchImport> {
     }
 
     /**
-     *  <p>Each field referenced must be defined in an existing Order or the ImportOperationState is set to <code>validationFailed</code>.</p>
+     *  <p>Each field referenced must be defined in an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> or the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperationState" rel="nofollow">ImportOperationState</a> is set to <code>validationFailed</code>.</p>
      * @param fields value to be set
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class OrderPatchImportBuilder implements Builder<OrderPatchImport> {
     }
 
     /**
-     *  <p>User-defined unique identifier. If an Order with this <code>orderNumber</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If an <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> with this <code>orderNumber</code> exists, it is updated with the imported data.</p>
      * @return orderNumber
      */
 
@@ -83,7 +83,7 @@ public class OrderPatchImportBuilder implements Builder<OrderPatchImport> {
     }
 
     /**
-     *  <p>Each field referenced must be defined in an existing Order or the ImportOperationState is set to <code>validationFailed</code>.</p>
+     *  <p>Each field referenced must be defined in an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> or the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperationState" rel="nofollow">ImportOperationState</a> is set to <code>validationFailed</code>.</p>
      * @return fields
      */
 

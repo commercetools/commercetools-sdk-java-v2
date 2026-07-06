@@ -8,16 +8,16 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Updates the label of a single enum <code>value</code> in an AttributeLocalizedEnumType AttributeDefinition, or AttributeSetType of AttributeLocalizedEnumType AttributeDefinition.</p>
- *  <p>All Products will be updated to the new label in an eventually consistent way.</p>
+ *  <p>Updates the label of a single enum <code>value</code> in an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeLocalizedEnumType" rel="nofollow">AttributeLocalizedEnumType</a> AttributeDefinition, or <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeSetType" rel="nofollow">AttributeSetType</a> of AttributeLocalizedEnumType AttributeDefinition.</p>
+ *  <p>All Products will be updated to the new label in an <span>eventually consistent</span> way.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -145,8 +145,8 @@ public interface ProductTypeChangeLocalizedEnumValueLabelAction extends ProductT
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangeLocalizedEnumValueLabelAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangeLocalizedEnumValueLabelAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductTypeChangeLocalizedEnumValueLabelAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductTypeChangeLocalizedEnumValueLabelAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductTypeChangeLocalizedEnumValueLabelAction>";

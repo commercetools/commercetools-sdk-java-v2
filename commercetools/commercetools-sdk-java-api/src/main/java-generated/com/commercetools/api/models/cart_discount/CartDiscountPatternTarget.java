@@ -9,16 +9,16 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Pattern targets can be used to model Buy and Get discounts.</p>
- *  <p>Unlike CartDiscountLineItemsTarget and CartDiscountCustomLineItemsTarget, it does not apply to a (Custom) Line Item as a whole, but to individual units of a (Custom) Line Item. The discounts can apply multiple times on the same cart, but each unit can be discounted only once.</p>
+ *  <p>Unlike <span>CartDiscountLineItemsTarget</span> and <span>CartDiscountCustomLineItemsTarget</span>, it does not apply to a (Custom) Line Item as a whole, but to individual units of a (Custom) Line Item. The discounts can apply multiple times on the same cart, but each unit can be discounted only once.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -215,8 +215,8 @@ public interface CartDiscountPatternTarget extends CartDiscountTarget {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountPatternTarget> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountPatternTarget>() {
+    public static tools.jackson.core.type.TypeReference<CartDiscountPatternTarget> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartDiscountPatternTarget>() {
             @Override
             public String toString() {
                 return "TypeReference<CartDiscountPatternTarget>";

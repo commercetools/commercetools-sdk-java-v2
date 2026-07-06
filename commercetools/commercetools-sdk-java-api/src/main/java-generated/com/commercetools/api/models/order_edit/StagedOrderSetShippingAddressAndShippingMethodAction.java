@@ -12,12 +12,12 @@ import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Sets the shipping address and Shipping Method together to prevent an inconsistent state.</p>
@@ -60,7 +60,7 @@ public interface StagedOrderSetShippingAddressAndShippingMethodAction extends St
     public ShippingMethodResourceIdentifier getShippingMethod();
 
     /**
-     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @return externalTaxRate
      */
     @Valid
@@ -82,7 +82,7 @@ public interface StagedOrderSetShippingAddressAndShippingMethodAction extends St
     public void setShippingMethod(final ShippingMethodResourceIdentifier shippingMethod);
 
     /**
-     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param externalTaxRate value to be set
      */
 
@@ -165,8 +165,8 @@ public interface StagedOrderSetShippingAddressAndShippingMethodAction extends St
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingAddressAndShippingMethodAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingAddressAndShippingMethodAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrderSetShippingAddressAndShippingMethodAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrderSetShippingAddressAndShippingMethodAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderSetShippingAddressAndShippingMethodAction>";

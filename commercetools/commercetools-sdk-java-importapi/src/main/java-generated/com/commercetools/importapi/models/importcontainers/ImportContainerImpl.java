@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Contains the resources to be imported. Unless <code>resourceType</code> is specified, the ImportContainer can import all of the supported ImportResourceTypes.</p>
+ *  <p>Contains the resources to be imported. Unless <code>resourceType</code> is specified, the ImportContainer can import all of the supported <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">ImportResourceTypes</a>.</p>
+ *  <p>If the container was created <strong>without</strong> a <code>retentionPolicy</code>, it <strong>expires 72 hours</strong> after <code>createdAt</code>. If a <code>TimeToLiveRetentionPolicy</code> was set, expiry follows the configured <code>timeToLive</code> (between the minimum and maximum allowed values). The <code>expiresAt</code> field holds the calculated deletion time.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportContainerImpl implements ImportContainer, ModelBase {
@@ -71,7 +73,7 @@ public class ImportContainerImpl implements ImportContainer, ModelBase {
     }
 
     /**
-     *  <p>The resource type the ImportContainer supports. If not present, the ImportContainer can import all of the supported ImportResourceTypes.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">resource type</a> the ImportContainer supports. If not present, the ImportContainer can import all of the supported <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">ImportResourceTypes</a>.</p>
      */
 
     public com.commercetools.importapi.models.common.ImportResourceType getResourceType() {
@@ -87,7 +89,7 @@ public class ImportContainerImpl implements ImportContainer, ModelBase {
     }
 
     /**
-     *  <p>The retention policy of the ImportContainer.</p>
+     *  <p>Retention policy for this ImportContainer. If not set, the ImportContainer will expire <strong>72 hours</strong> after creation.</p>
      */
 
     public com.commercetools.importapi.models.importcontainers.RetentionPolicy getRetentionPolicy() {
@@ -111,7 +113,7 @@ public class ImportContainerImpl implements ImportContainer, ModelBase {
     }
 
     /**
-     *  <p>Date and time (UTC) the ImportContainer is automatically deleted. Only present if a <code>retentionPolicy</code> is set. ImportContainers without <code>expiresAt</code> are permanent until manually deleted.</p>
+     *  <p>Date and time (UTC) when the ImportContainer is automatically deleted. If no <code>retentionPolicy</code> was set at creation, this is <strong>72 hours</strong> after <code>createdAt</code>. If a <code>TimeToLiveRetentionPolicy</code> was set, it is derived from <code>timeToLive</code>.</p>
      */
 
     public java.time.ZonedDateTime getExpiresAt() {

@@ -26,7 +26,7 @@ public class OrderSetLocaleActionBuilder implements Builder<OrderSetLocaleAction
     private String locale;
 
     /**
-     *  <p>Value to set. Must be one of the Project's languages. If empty, any existing value is removed.</p>
+     *  <p>Value to set. Must be one of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>'s languages. If empty, any existing value is removed.</p>
      * @param locale value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class OrderSetLocaleActionBuilder implements Builder<OrderSetLocaleAction
     }
 
     /**
-     *  <p>Value to set. Must be one of the Project's languages. If empty, any existing value is removed.</p>
+     *  <p>Value to set. Must be one of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>'s languages. If empty, any existing value is removed.</p>
      * @return locale
      */
 

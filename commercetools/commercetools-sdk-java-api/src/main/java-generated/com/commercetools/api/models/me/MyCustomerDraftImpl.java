@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * MyCustomerDraft
@@ -95,7 +96,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     *  <p>Email address of the Customer that is unique for an entire Project or Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
+     *  <p>Email address of the Customer that is <span>unique</span> for an entire Project or Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
      */
 
     public String getEmail() {
@@ -207,7 +208,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     *  <p>Preferred language of the Customer. Must be one of the languages supported by the Project.</p>
+     *  <p>Preferred language of the Customer. Must be one of the languages supported by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>.</p>
      */
 
     public String getLocale() {
@@ -215,7 +216,7 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-     *  <p>Sets the Stores for the Customer.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> for the Customer.</p>
      */
 
     public java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> getStores() {

@@ -8,21 +8,21 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Removing a PriceTier from a StandalonePrice produces the Standalone Price Tier Removed Message.</p>
+ *  <p>Removing a <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">PriceTier</a> from a <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceTierRemovedMessage" rel="nofollow">Standalone Price Tier Removed</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     StandalonePriceRemovePriceTierAction standalonePriceRemovePriceTierAction = StandalonePriceRemovePriceTierAction.builder()
- *             .tierMinimumQuantity(0.3)
+ *             .minimumQuantity(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -38,19 +38,19 @@ public interface StandalonePriceRemovePriceTierAction extends StandalonePriceUpd
     String REMOVE_PRICE_TIER = "removePriceTier";
 
     /**
-     *  <p>The <code>minimumQuantity</code> of the PriceTier to be removed from the <code>tiers</code> field of the StandalonePrice.</p>
-     * @return tierMinimumQuantity
+     *  <p>The <code>minimumQuantity</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">PriceTier</a> to be removed from the <code>tiers</code> field of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
+     * @return minimumQuantity
      */
     @NotNull
-    @JsonProperty("tierMinimumQuantity")
-    public Long getTierMinimumQuantity();
+    @JsonProperty("minimumQuantity")
+    public Long getMinimumQuantity();
 
     /**
-     *  <p>The <code>minimumQuantity</code> of the PriceTier to be removed from the <code>tiers</code> field of the StandalonePrice.</p>
-     * @param tierMinimumQuantity value to be set
+     *  <p>The <code>minimumQuantity</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:PriceTier" rel="nofollow">PriceTier</a> to be removed from the <code>tiers</code> field of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
+     * @param minimumQuantity value to be set
      */
 
-    public void setTierMinimumQuantity(final Long tierMinimumQuantity);
+    public void setMinimumQuantity(final Long minimumQuantity);
 
     /**
      * factory method
@@ -67,7 +67,7 @@ public interface StandalonePriceRemovePriceTierAction extends StandalonePriceUpd
      */
     public static StandalonePriceRemovePriceTierAction of(final StandalonePriceRemovePriceTierAction template) {
         StandalonePriceRemovePriceTierActionImpl instance = new StandalonePriceRemovePriceTierActionImpl();
-        instance.setTierMinimumQuantity(template.getTierMinimumQuantity());
+        instance.setMinimumQuantity(template.getMinimumQuantity());
         return instance;
     }
 
@@ -85,7 +85,7 @@ public interface StandalonePriceRemovePriceTierAction extends StandalonePriceUpd
             return null;
         }
         StandalonePriceRemovePriceTierActionImpl instance = new StandalonePriceRemovePriceTierActionImpl();
-        instance.setTierMinimumQuantity(template.getTierMinimumQuantity());
+        instance.setMinimumQuantity(template.getMinimumQuantity());
         return instance;
     }
 
@@ -121,8 +121,8 @@ public interface StandalonePriceRemovePriceTierAction extends StandalonePriceUpd
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceRemovePriceTierAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceRemovePriceTierAction>() {
+    public static tools.jackson.core.type.TypeReference<StandalonePriceRemovePriceTierAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StandalonePriceRemovePriceTierAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StandalonePriceRemovePriceTierAction>";

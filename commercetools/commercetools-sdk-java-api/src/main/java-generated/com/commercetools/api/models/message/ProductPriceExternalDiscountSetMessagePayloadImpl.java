@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Discounted Price update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetDiscountedPriceAction" rel="nofollow">Set Discounted Price</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPriceExternalDiscountSetMessagePayloadImpl
@@ -71,7 +72,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadImpl
     }
 
     /**
-     *  <p>Unique identifier of the Product Variant for which the Discount was set.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> for which the Discount was set.</p>
      */
 
     public Integer getVariantId() {
@@ -79,7 +80,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadImpl
     }
 
     /**
-     *  <p>Key of the Product Variant for which the Discount was set.</p>
+     *  <p>Key of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> for which the Discount was set.</p>
      */
 
     public String getVariantKey() {
@@ -87,7 +88,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadImpl
     }
 
     /**
-     *  <p>SKU of the Product Variant for which Discount was set.</p>
+     *  <p>SKU of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> for which Discount was set.</p>
      */
 
     public String getSku() {
@@ -95,7 +96,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadImpl
     }
 
     /**
-     *  <p>Unique identifier of the Price.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</p>
      */
 
     public String getPriceId() {
@@ -103,7 +104,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadImpl
     }
 
     /**
-     *  <p>Discounted Price for the Product Variant for which Discount was set.</p>
+     *  <p>Discounted Price for the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">Product Variant</a> for which Discount was set.</p>
      */
 
     public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
@@ -111,7 +112,7 @@ public class ProductPriceExternalDiscountSetMessagePayloadImpl
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      */
 
     public Boolean getStaged() {

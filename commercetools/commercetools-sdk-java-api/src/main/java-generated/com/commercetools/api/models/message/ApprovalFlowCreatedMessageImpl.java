@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after an Approval Flow is created.</p>
+ *  <p>Generated after an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> is created.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ApprovalFlowCreatedMessageImpl implements ApprovalFlowCreatedMessage, ModelBase {
@@ -138,7 +139,7 @@ public class ApprovalFlowCreatedMessageImpl implements ApprovalFlowCreatedMessag
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -154,7 +155,7 @@ public class ApprovalFlowCreatedMessageImpl implements ApprovalFlowCreatedMessag
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -170,7 +171,7 @@ public class ApprovalFlowCreatedMessageImpl implements ApprovalFlowCreatedMessag
     }
 
     /**
-     *  <p>The Approval Flow that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> that was created.</p>
      */
 
     public com.commercetools.api.models.approval_flow.ApprovalFlow getApprovalFlow() {

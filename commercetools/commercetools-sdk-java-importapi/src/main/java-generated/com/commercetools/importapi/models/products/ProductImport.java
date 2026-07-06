@@ -17,15 +17,15 @@ import com.commercetools.importapi.models.common.StateKeyReference;
 import com.commercetools.importapi.models.common.TaxCategoryKeyReference;
 import com.commercetools.importapi.models.productvariants.Attribute;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Represents the data used to import a Product. Once imported, this data is persisted as a Product in the Project.</p>
+ *  <p>Represents the data used to import a Product. Once imported, this data is persisted as a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> in the Project.</p>
  *  <p>This is the minimal representation required for creating a Product in Composable Commerce.</p>
  *
  * <hr>
@@ -46,7 +46,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ProductImport extends ImportResource {
 
     /**
-     *  <p>User-defined unique identifier. If a Product with this <code>key</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @return key
      */
     @NotNull
@@ -63,7 +63,7 @@ public interface ProductImport extends ImportResource {
     public LocalizedString getName();
 
     /**
-     *  <p>Maps to <code>Product.productType</code>. If the referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductType is created.</p>
+     *  <p>Maps to <code>Product.productType</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ProductType is created.</p>
      * @return productType
      */
     @NotNull
@@ -89,7 +89,7 @@ public interface ProductImport extends ImportResource {
     public LocalizedString getDescription();
 
     /**
-     *  <p>Maps to <code>ProductData.categories</code>. If the referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Categories are created.</p>
+     *  <p>Maps to <code>ProductData.categories</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Categories are created.</p>
      * @return categories
      */
     @Valid
@@ -129,7 +129,7 @@ public interface ProductImport extends ImportResource {
     public LocalizedString getMetaKeywords();
 
     /**
-     *  <p>Maps to <code>Product.taxCategory</code>. If the referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
+     *  <p>Maps to <code>Product.taxCategory</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
      * @return taxCategory
      */
     @Valid
@@ -145,7 +145,7 @@ public interface ProductImport extends ImportResource {
     public SearchKeywords getSearchKeywords();
 
     /**
-     *  <p>Maps to <code>Product.state</code>. If the referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced State is created.</p>
+     *  <p>Maps to <code>Product.state</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced State is created.</p>
      * @return state
      */
     @Valid
@@ -153,7 +153,7 @@ public interface ProductImport extends ImportResource {
     public StateKeyReference getState();
 
     /**
-     *  <p>Determines the published status and current/staged projection of the Product. For more information, see Managing the published state of Products.</p>
+     *  <p>Determines the published status and current/staged projection of the Product. For more information, see <span>Managing the published state of Products</span>.</p>
      * @return publish
      */
 
@@ -169,7 +169,7 @@ public interface ProductImport extends ImportResource {
     public ProductPriceModeEnum getPriceMode();
 
     /**
-     *  <p>User-defined unique identifier. If a Product with this <code>key</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @param key value to be set
      */
 
@@ -183,7 +183,7 @@ public interface ProductImport extends ImportResource {
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>Maps to <code>Product.productType</code>. If the referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductType is created.</p>
+     *  <p>Maps to <code>Product.productType</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ProductType is created.</p>
      * @param productType value to be set
      */
 
@@ -204,7 +204,7 @@ public interface ProductImport extends ImportResource {
     public void setDescription(final LocalizedString description);
 
     /**
-     *  <p>Maps to <code>ProductData.categories</code>. If the referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Categories are created.</p>
+     *  <p>Maps to <code>ProductData.categories</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Categories are created.</p>
      * @param categories values to be set
      */
 
@@ -212,7 +212,7 @@ public interface ProductImport extends ImportResource {
     public void setCategories(final CategoryKeyReference... categories);
 
     /**
-     *  <p>Maps to <code>ProductData.categories</code>. If the referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Categories are created.</p>
+     *  <p>Maps to <code>ProductData.categories</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Categories are created.</p>
      * @param categories values to be set
      */
 
@@ -255,7 +255,7 @@ public interface ProductImport extends ImportResource {
     public void setMetaKeywords(final LocalizedString metaKeywords);
 
     /**
-     *  <p>Maps to <code>Product.taxCategory</code>. If the referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
+     *  <p>Maps to <code>Product.taxCategory</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
      * @param taxCategory value to be set
      */
 
@@ -269,14 +269,14 @@ public interface ProductImport extends ImportResource {
     public void setSearchKeywords(final SearchKeywords searchKeywords);
 
     /**
-     *  <p>Maps to <code>Product.state</code>. If the referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced State is created.</p>
+     *  <p>Maps to <code>Product.state</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced State is created.</p>
      * @param state value to be set
      */
 
     public void setState(final StateKeyReference state);
 
     /**
-     *  <p>Determines the published status and current/staged projection of the Product. For more information, see Managing the published state of Products.</p>
+     *  <p>Determines the published status and current/staged projection of the Product. For more information, see <span>Managing the published state of Products</span>.</p>
      * @param publish value to be set
      */
 
@@ -399,8 +399,8 @@ public interface ProductImport extends ImportResource {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductImport> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductImport>() {
+    public static tools.jackson.core.type.TypeReference<ProductImport> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductImport>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductImport>";

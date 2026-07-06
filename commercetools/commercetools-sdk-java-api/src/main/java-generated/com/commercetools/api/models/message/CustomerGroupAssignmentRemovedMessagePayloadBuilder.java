@@ -26,7 +26,7 @@ public class CustomerGroupAssignmentRemovedMessagePayloadBuilder
     private com.commercetools.api.models.customer.CustomerGroupAssignment customerGroupAssignment;
 
     /**
-     *  <p>Customer Group removed during the Remove CustomerGroupAssignment update action.</p>
+     *  <p>Customer Group removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerRemoveCustomerGroupAssignmentAction" rel="nofollow">Remove CustomerGroupAssignment</a> update action.</p>
      * @param builder function to build the customerGroupAssignment value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class CustomerGroupAssignmentRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Customer Group removed during the Remove CustomerGroupAssignment update action.</p>
+     *  <p>Customer Group removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerRemoveCustomerGroupAssignmentAction" rel="nofollow">Remove CustomerGroupAssignment</a> update action.</p>
      * @param builder function to build the customerGroupAssignment value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class CustomerGroupAssignmentRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Customer Group removed during the Remove CustomerGroupAssignment update action.</p>
+     *  <p>Customer Group removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerRemoveCustomerGroupAssignmentAction" rel="nofollow">Remove CustomerGroupAssignment</a> update action.</p>
      * @param customerGroupAssignment value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class CustomerGroupAssignmentRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Customer Group removed during the Remove CustomerGroupAssignment update action.</p>
+     *  <p>Customer Group removed during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerRemoveCustomerGroupAssignmentAction" rel="nofollow">Remove CustomerGroupAssignment</a> update action.</p>
      * @return customerGroupAssignment
      */
 

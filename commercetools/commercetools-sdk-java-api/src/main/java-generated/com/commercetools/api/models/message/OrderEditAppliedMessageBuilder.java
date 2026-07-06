@@ -187,7 +187,7 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -198,7 +198,7 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -260,7 +260,7 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     }
 
     /**
-     *  <p>OrderEdit that was applied.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a> that was applied.</p>
      * @param builder function to build the edit value
      * @return Builder
      */
@@ -272,7 +272,7 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     }
 
     /**
-     *  <p>OrderEdit that was applied.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a> that was applied.</p>
      * @param builder function to build the edit value
      * @return Builder
      */
@@ -284,7 +284,7 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     }
 
     /**
-     *  <p>OrderEdit that was applied.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a> that was applied.</p>
      * @param edit value to be set
      * @return Builder
      */
@@ -295,7 +295,7 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     }
 
     /**
-     *  <p>Information about a successfully applied OrderEdit.</p>
+     *  <p>Information about a successfully applied <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a>.</p>
      * @param builder function to build the result value
      * @return Builder
      */
@@ -307,7 +307,7 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     }
 
     /**
-     *  <p>Information about a successfully applied OrderEdit.</p>
+     *  <p>Information about a successfully applied <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a>.</p>
      * @param builder function to build the result value
      * @return Builder
      */
@@ -319,7 +319,7 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     }
 
     /**
-     *  <p>Information about a successfully applied OrderEdit.</p>
+     *  <p>Information about a successfully applied <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a>.</p>
      * @param result value to be set
      * @return Builder
      */
@@ -396,7 +396,7 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -424,7 +424,7 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     }
 
     /**
-     *  <p>OrderEdit that was applied.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a> that was applied.</p>
      * @return edit
      */
 
@@ -433,7 +433,7 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     }
 
     /**
-     *  <p>Information about a successfully applied OrderEdit.</p>
+     *  <p>Information about a successfully applied <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a>.</p>
      * @return result
      */
 

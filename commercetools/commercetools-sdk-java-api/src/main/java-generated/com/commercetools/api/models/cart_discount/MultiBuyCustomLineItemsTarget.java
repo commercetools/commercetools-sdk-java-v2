@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>This Discount target is similar to <code>MultiBuyLineItems</code>, but is applied on Custom Line Items instead of Line Items.</p>
@@ -41,7 +41,7 @@ public interface MultiBuyCustomLineItemsTarget extends CartDiscountTarget {
     String MULTI_BUY_CUSTOM_LINE_ITEMS = "multiBuyCustomLineItems";
 
     /**
-     *  <p>Valid CustomLineItems target predicate. The Discount will be applied to Custom Line Items that are matched by the predicate.</p>
+     *  <p>Valid <span>CustomLineItems target predicate</span>. The Discount will be applied to Custom Line Items that are matched by the predicate.</p>
      * @return predicate
      */
     @NotNull
@@ -81,7 +81,7 @@ public interface MultiBuyCustomLineItemsTarget extends CartDiscountTarget {
     public SelectionMode getSelectionMode();
 
     /**
-     *  <p>Valid CustomLineItems target predicate. The Discount will be applied to Custom Line Items that are matched by the predicate.</p>
+     *  <p>Valid <span>CustomLineItems target predicate</span>. The Discount will be applied to Custom Line Items that are matched by the predicate.</p>
      * @param predicate value to be set
      */
 
@@ -190,8 +190,8 @@ public interface MultiBuyCustomLineItemsTarget extends CartDiscountTarget {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MultiBuyCustomLineItemsTarget> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MultiBuyCustomLineItemsTarget>() {
+    public static tools.jackson.core.type.TypeReference<MultiBuyCustomLineItemsTarget> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MultiBuyCustomLineItemsTarget>() {
             @Override
             public String toString() {
                 return "TypeReference<MultiBuyCustomLineItemsTarget>";

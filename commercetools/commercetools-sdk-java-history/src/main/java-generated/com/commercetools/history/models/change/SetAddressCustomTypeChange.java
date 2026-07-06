@@ -10,15 +10,15 @@ import javax.annotation.Nullable;
 import com.commercetools.history.models.common.Address;
 import com.commercetools.history.models.common.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Change triggered by the Set Address Custom Type update action.</p>
+ * SetAddressCustomTypeChange
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -60,7 +60,7 @@ public interface SetAddressCustomTypeChange extends Change {
     public String getType();
 
     /**
-     *  <p>Address which was extended.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> which was extended.</p>
      * @return address
      */
     @NotNull
@@ -94,7 +94,7 @@ public interface SetAddressCustomTypeChange extends Change {
     public void setChange(final String change);
 
     /**
-     *  <p>Address which was extended.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> which was extended.</p>
      * @param address value to be set
      */
 
@@ -188,8 +188,8 @@ public interface SetAddressCustomTypeChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetAddressCustomTypeChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetAddressCustomTypeChange>() {
+    public static tools.jackson.core.type.TypeReference<SetAddressCustomTypeChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetAddressCustomTypeChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetAddressCustomTypeChange>";

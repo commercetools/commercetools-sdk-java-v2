@@ -8,16 +8,17 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Reference to a ShoppingList.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +42,15 @@ public interface ShoppingListReference extends Reference, com.commercetools.api.
     String SHOPPING_LIST = "shopping-list";
 
     /**
-     *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with Reference Expansion for ShoppingLists.</p>
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
+
+    /**
+     *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with <span>Reference Expansion</span> for ShoppingLists.</p>
      * @return obj
      */
     @Valid
@@ -49,7 +58,7 @@ public interface ShoppingListReference extends Reference, com.commercetools.api.
     public ShoppingList getObj();
 
     /**
-     *  <p>Unique identifier of the referenced ShoppingList.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @return id
      */
     @NotNull
@@ -57,14 +66,14 @@ public interface ShoppingListReference extends Reference, com.commercetools.api.
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with Reference Expansion for ShoppingLists.</p>
+     *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with <span>Reference Expansion</span> for ShoppingLists.</p>
      * @param obj value to be set
      */
 
     public void setObj(final ShoppingList obj);
 
     /**
-     *  <p>Unique identifier of the referenced ShoppingList.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>.</p>
      * @param id value to be set
      */
 
@@ -139,8 +148,8 @@ public interface ShoppingListReference extends Reference, com.commercetools.api.
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListReference> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListReference>() {
+    public static tools.jackson.core.type.TypeReference<ShoppingListReference> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ShoppingListReference>() {
             @Override
             public String toString() {
                 return "TypeReference<ShoppingListReference>";

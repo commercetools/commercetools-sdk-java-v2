@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Setting the status for an Approval Rule generates an ApprovalRuleStatusSet Message.</p>
+ *  <p>Setting the status for an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">Approval Rule</a> generates an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleStatusSetMessage" rel="nofollow">ApprovalRuleStatusSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -119,8 +119,8 @@ public interface ApprovalRuleSetStatusAction extends ApprovalRuleUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ApprovalRuleSetStatusAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ApprovalRuleSetStatusAction>() {
+    public static tools.jackson.core.type.TypeReference<ApprovalRuleSetStatusAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ApprovalRuleSetStatusAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ApprovalRuleSetStatusAction>";

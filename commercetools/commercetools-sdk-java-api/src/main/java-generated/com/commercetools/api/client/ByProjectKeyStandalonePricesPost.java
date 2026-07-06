@@ -11,19 +11,20 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>Creating a Standalone Price produces the StandalonePriceCreated Message.</p>
+ *  <p>Creating a Standalone Price produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceCreatedMessage" rel="nofollow">StandalonePriceCreated</a> Message.</p>
  *  <ul>
- *   <li>If the Standalone Price has the same price scope as an existing Standalone Price, a DuplicateStandalonePriceScope error is returned.</li>
- *   <li>If the Standalone Price has overlapping validity periods within the same price scope, a OverlappingStandalonePriceValidity error is returned. A Price without validity period does not conflict with a Price defined for a time period.</li>
+ *   <li>If the Standalone Price has the same price scope as an existing Standalone Price, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateStandalonePriceScopeError" rel="nofollow">DuplicateStandalonePriceScope</a> error is returned.</li>
+ *   <li>If the Standalone Price has overlapping validity periods within the same price scope, a <a href="https://docs.commercetools.com/apis/ctp:api:type:OverlappingStandalonePriceValidityError" rel="nofollow">OverlappingStandalonePriceValidity</a> error is returned. A Price without validity period does not conflict with a Price defined for a time period.</li>
+ *   <li>If a modification is already in progress for the exact combination of SKU and price scope fields, an <a href="https://docs.commercetools.com/apis/ctp:api:type:ExactLockConflictError" rel="nofollow">ExactLockConflict</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:ValidityLockConflictError" rel="nofollow">ValidityLockConflict</a> error is returned.</li>
  *  </ul>
  *
  * <hr>

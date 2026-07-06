@@ -10,15 +10,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Only Business Units of type <code>Division</code> can be have a store mode of <code>FromParent</code>. Changing the <code>storeMode</code> to <code>FromParent</code> empties the <code>stores</code> array on the BusinessUnit. This update action generates a BusinessUnitStoreModeChanged Message.</p>
+ *  <p>Only Business Units of type <code>Division</code> can be have a store mode of <code>FromParent</code>. Changing the <code>storeMode</code> to <code>FromParent</code> empties the <code>stores</code> array on the BusinessUnit. This update action generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitStoreModeChangedMessage" rel="nofollow">BusinessUnitStoreModeChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -49,7 +49,7 @@ public interface BusinessUnitSetStoreModeAction extends BusinessUnitUpdateAction
     public BusinessUnitStoreMode getStoreMode();
 
     /**
-     *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>Set the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
      * @return stores
      */
     @Valid
@@ -64,7 +64,7 @@ public interface BusinessUnitSetStoreModeAction extends BusinessUnitUpdateAction
     public void setStoreMode(final BusinessUnitStoreMode storeMode);
 
     /**
-     *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>Set the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
      * @param stores values to be set
      */
 
@@ -72,7 +72,7 @@ public interface BusinessUnitSetStoreModeAction extends BusinessUnitUpdateAction
     public void setStores(final StoreResourceIdentifier... stores);
 
     /**
-     *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>Set the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
      * @param stores values to be set
      */
 
@@ -151,8 +151,8 @@ public interface BusinessUnitSetStoreModeAction extends BusinessUnitUpdateAction
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitSetStoreModeAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitSetStoreModeAction>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitSetStoreModeAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitSetStoreModeAction>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitSetStoreModeAction>";

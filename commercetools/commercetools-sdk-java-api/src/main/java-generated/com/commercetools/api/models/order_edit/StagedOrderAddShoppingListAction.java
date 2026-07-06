@@ -11,15 +11,15 @@ import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Adds all LineItems of a ShoppingList to the Cart.</p>
+ *  <p>Adds all <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a> to the Cart.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -51,7 +51,7 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
     public ShoppingListResourceIdentifier getShoppingList();
 
     /**
-     *  <p><code>distributionChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p><code>distributionChannel</code> to set for all <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> that are added to the Cart. The Channel must have the <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @return distributionChannel
      */
     @Valid
@@ -59,7 +59,7 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
     public ChannelResourceIdentifier getDistributionChannel();
 
     /**
-     *  <p><code>supplyChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p><code>supplyChannel</code> to set for all <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> that are added to the Cart. The Channel must have the <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @return supplyChannel
      */
     @Valid
@@ -74,14 +74,14 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
     public void setShoppingList(final ShoppingListResourceIdentifier shoppingList);
 
     /**
-     *  <p><code>distributionChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p><code>distributionChannel</code> to set for all <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> that are added to the Cart. The Channel must have the <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param distributionChannel value to be set
      */
 
     public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
 
     /**
-     *  <p><code>supplyChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     *  <p><code>supplyChannel</code> to set for all <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a> that are added to the Cart. The Channel must have the <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
      * @param supplyChannel value to be set
      */
 
@@ -161,8 +161,8 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddShoppingListAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddShoppingListAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrderAddShoppingListAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrderAddShoppingListAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderAddShoppingListAction>";

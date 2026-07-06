@@ -8,16 +8,17 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Reference to a ProductSelection.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">ProductSelection</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -42,7 +43,15 @@ public interface ProductSelectionReference
     String PRODUCT_SELECTION = "product-selection";
 
     /**
-     *  <p>Unique identifier of the referenced ProductSelection.</p>
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
+
+    /**
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">ProductSelection</a>.</p>
      * @return id
      */
     @NotNull
@@ -50,7 +59,7 @@ public interface ProductSelectionReference
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>
+     *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with <span>Reference Expansion</span> for ProductSelections.</p>
      * @return obj
      */
     @Valid
@@ -58,14 +67,14 @@ public interface ProductSelectionReference
     public ProductSelection getObj();
 
     /**
-     *  <p>Unique identifier of the referenced ProductSelection.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelection" rel="nofollow">ProductSelection</a>.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>
+     *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with <span>Reference Expansion</span> for ProductSelections.</p>
      * @param obj value to be set
      */
 
@@ -140,8 +149,8 @@ public interface ProductSelectionReference
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionReference> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionReference>() {
+    public static tools.jackson.core.type.TypeReference<ProductSelectionReference> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSelectionReference>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSelectionReference>";

@@ -25,7 +25,7 @@ public class OrderDeletedMessagePayloadBuilder implements Builder<OrderDeletedMe
     private com.commercetools.api.models.order.Order order;
 
     /**
-     *  <p>Order that has been deleted.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that has been deleted.</p>
      * @param builder function to build the order value
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class OrderDeletedMessagePayloadBuilder implements Builder<OrderDeletedMe
     }
 
     /**
-     *  <p>Order that has been deleted.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that has been deleted.</p>
      * @param builder function to build the order value
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class OrderDeletedMessagePayloadBuilder implements Builder<OrderDeletedMe
     }
 
     /**
-     *  <p>Order that has been deleted.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that has been deleted.</p>
      * @param order value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class OrderDeletedMessagePayloadBuilder implements Builder<OrderDeletedMe
     }
 
     /**
-     *  <p>Order that has been deleted.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that has been deleted.</p>
      * @return order
      */
 

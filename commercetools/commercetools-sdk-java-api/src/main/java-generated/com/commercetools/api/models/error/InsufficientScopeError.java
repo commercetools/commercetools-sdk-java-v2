@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>This error occurs when your API Client does not have the OAuth scope required for the endpoint. Use an API Client with the required permissions for this endpoint instead.</p>
+ *  <p>This error occurs when your <span>API Client</span> does not have the <span>OAuth scope</span> required for the endpoint. Use an API Client with the required permissions for this endpoint instead.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -129,8 +129,8 @@ public interface InsufficientScopeError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<InsufficientScopeError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<InsufficientScopeError>() {
+    public static tools.jackson.core.type.TypeReference<InsufficientScopeError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<InsufficientScopeError>() {
             @Override
             public String toString() {
                 return "TypeReference<InsufficientScopeError>";

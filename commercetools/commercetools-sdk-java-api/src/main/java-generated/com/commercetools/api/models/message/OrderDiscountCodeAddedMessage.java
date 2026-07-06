@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.discount_code.DiscountCodeReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Add DiscountCode update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderAddDiscountCodeAction" rel="nofollow">Add DiscountCode</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface OrderDiscountCodeAddedMessage extends OrderMessage {
     String ORDER_DISCOUNT_CODE_ADDED = "OrderDiscountCodeAdded";
 
     /**
-     *  <p>DiscountCode that was added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> that was added.</p>
      * @return discountCode
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface OrderDiscountCodeAddedMessage extends OrderMessage {
     public DiscountCodeReference getDiscountCode();
 
     /**
-     *  <p>DiscountCode that was added.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> that was added.</p>
      * @param discountCode value to be set
      */
 
@@ -152,8 +152,8 @@ public interface OrderDiscountCodeAddedMessage extends OrderMessage {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderDiscountCodeAddedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderDiscountCodeAddedMessage>() {
+    public static tools.jackson.core.type.TypeReference<OrderDiscountCodeAddedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderDiscountCodeAddedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderDiscountCodeAddedMessage>";

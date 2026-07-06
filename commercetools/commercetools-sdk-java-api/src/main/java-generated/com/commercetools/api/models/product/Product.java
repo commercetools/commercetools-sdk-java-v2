@@ -18,15 +18,15 @@ import com.commercetools.api.models.state.StateReference;
 import com.commercetools.api.models.tax_category.TaxCategoryReference;
 import com.commercetools.api.models.warning.WarningObject;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>An abstract sellable good with a set of Attributes defined by a Product Type. Products themselves are not sellable. Instead, they act as a parent structure for Product Variants. Each Product must have at least one Product Variant, which is called the Master Variant. A single Product representation contains the <em>current</em> and the <em>staged</em> representation of its product data.</p>
+ * Product
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -99,7 +99,7 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
 
     /**
      *  <p>User-defined unique identifier of the Product.</p>
-     *  <p>This is different from the <code>key</code> of a ProductVariant.</p>
+     *  <p>This is different from the <code>key</code> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return key
      */
 
@@ -125,7 +125,7 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
     public ProductCatalogData getMasterData();
 
     /**
-     *  <p>The TaxCategory of the Product.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> of the Product.</p>
      * @return taxCategory
      */
     @Valid
@@ -133,7 +133,7 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
     public TaxCategoryReference getTaxCategory();
 
     /**
-     *  <p>State of the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Product.</p>
      * @return state
      */
     @Valid
@@ -208,7 +208,7 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
 
     /**
      *  <p>User-defined unique identifier of the Product.</p>
-     *  <p>This is different from the <code>key</code> of a ProductVariant.</p>
+     *  <p>This is different from the <code>key</code> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param key value to be set
      */
 
@@ -229,14 +229,14 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
     public void setMasterData(final ProductCatalogData masterData);
 
     /**
-     *  <p>The TaxCategory of the Product.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> of the Product.</p>
      * @param taxCategory value to be set
      */
 
     public void setTaxCategory(final TaxCategoryReference taxCategory);
 
     /**
-     *  <p>State of the Product.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Product.</p>
      * @param state value to be set
      */
 
@@ -377,8 +377,8 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Product> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Product>() {
+    public static tools.jackson.core.type.TypeReference<Product> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Product>() {
             @Override
             public String toString() {
                 return "TypeReference<Product>";

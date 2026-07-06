@@ -199,7 +199,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -210,7 +210,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -272,7 +272,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *  <p>State of the Review before the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param builder function to build the oldState value
      * @return Builder
      */
@@ -284,7 +284,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *  <p>State of the Review before the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param builder function to build the oldState value
      * @return Builder
      */
@@ -296,7 +296,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *  <p>State of the Review before the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param oldState value to be set
      * @return Builder
      */
@@ -308,7 +308,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *  <p>State of the Review after the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param builder function to build the newState value
      * @return Builder
      */
@@ -320,7 +320,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *  <p>State of the Review after the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param builder function to build the newState value
      * @return Builder
      */
@@ -332,7 +332,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *  <p>State of the Review after the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param newState value to be set
      * @return Builder
      */
@@ -344,7 +344,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *  <p>Whether the old Review was taken into account in the rating statistics of the target before the state transition.</p>
+     *  <p>Whether the old <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> was taken into account in the rating statistics of the target before the state transition.</p>
      * @param oldIncludedInStatistics value to be set
      * @return Builder
      */
@@ -355,7 +355,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *  <p>Whether the new Review was taken into account in the rating statistics of the target after the state transition.</p>
+     *  <p>Whether the new <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> was taken into account in the rating statistics of the target after the state transition.</p>
      * @param newIncludedInStatistics value to be set
      * @return Builder
      */
@@ -366,7 +366,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *  <p>Reference to the resource that the Review belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource that the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> belongs to.</p>
      * @param target value to be set
      * @return Builder
      */
@@ -378,7 +378,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *  <p>Reference to the resource that the Review belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource that the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> belongs to.</p>
      * @param builder function to build the target value
      * @return Builder
      */
@@ -390,7 +390,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     *  <p>Whether <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition validations were turned off during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @param force value to be set
      * @return Builder
      */
@@ -466,7 +466,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -494,7 +494,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *  <p>State of the Review before the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @return oldState
      */
 
@@ -504,7 +504,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *  <p>State of the Review after the Transition State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @return newState
      */
 
@@ -513,7 +513,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *  <p>Whether the old Review was taken into account in the rating statistics of the target before the state transition.</p>
+     *  <p>Whether the old <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> was taken into account in the rating statistics of the target before the state transition.</p>
      * @return oldIncludedInStatistics
      */
 
@@ -522,7 +522,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *  <p>Whether the new Review was taken into account in the rating statistics of the target after the state transition.</p>
+     *  <p>Whether the new <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> was taken into account in the rating statistics of the target after the state transition.</p>
      * @return newIncludedInStatistics
      */
 
@@ -531,7 +531,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *  <p>Reference to the resource that the Review belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource that the <a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> belongs to.</p>
      * @return target
      */
 
@@ -541,7 +541,7 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
     }
 
     /**
-     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     *  <p>Whether <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> transition validations were turned off during the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReviewTransitionStateAction" rel="nofollow">Transition State</a> update action.</p>
      * @return force
      */
 

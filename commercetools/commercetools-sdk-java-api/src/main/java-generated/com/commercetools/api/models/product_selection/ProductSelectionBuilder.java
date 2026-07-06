@@ -101,7 +101,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     }
 
     /**
-     *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+     *  <p>Present on resources updated after 1/02/2019 except for <span>events not tracked</span>.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -113,7 +113,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     }
 
     /**
-     *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+     *  <p>Present on resources updated after 1/02/2019 except for <span>events not tracked</span>.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -125,7 +125,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     }
 
     /**
-     *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+     *  <p>Present on resources updated after 1/02/2019 except for <span>events not tracked</span>.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -137,7 +137,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     }
 
     /**
-     *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+     *  <p>Present on resources created after 1/02/2019 except for <span>events not tracked</span>.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -149,7 +149,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     }
 
     /**
-     *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+     *  <p>Present on resources created after 1/02/2019 except for <span>events not tracked</span>.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -161,7 +161,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     }
 
     /**
-     *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+     *  <p>Present on resources created after 1/02/2019 except for <span>events not tracked</span>.</p>
      * @param createdBy value to be set
      * @return Builder
      */
@@ -229,7 +229,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     }
 
     /**
-     *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
+     *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">including or excluding</a> them explicitly.</p>
      * @param mode value to be set
      * @return Builder
      */
@@ -312,7 +312,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     }
 
     /**
-     *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+     *  <p>Present on resources updated after 1/02/2019 except for <span>events not tracked</span>.</p>
      * @return lastModifiedBy
      */
 
@@ -322,7 +322,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     }
 
     /**
-     *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+     *  <p>Present on resources created after 1/02/2019 except for <span>events not tracked</span>.</p>
      * @return createdBy
      */
 
@@ -360,7 +360,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     }
 
     /**
-     *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
+     *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">including or excluding</a> them explicitly.</p>
      * @return mode
      */
 

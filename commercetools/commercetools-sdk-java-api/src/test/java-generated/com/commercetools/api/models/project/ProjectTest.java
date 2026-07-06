@@ -41,7 +41,17 @@ public class ProjectTest {
                 new Object[] { "searchIndexing", Project.builder()
                         .searchIndexing(new com.commercetools.api.models.project.SearchIndexingConfigurationImpl()) },
                 new Object[] { "businessUnits", Project.builder()
-                        .businessUnits(new com.commercetools.api.models.project.BusinessUnitConfigurationImpl()) } };
+                        .businessUnits(new com.commercetools.api.models.project.BusinessUnitConfigurationImpl()) },
+                new Object[] { "inventory",
+                        Project.builder()
+                                .inventory(new com.commercetools.api.models.project.InventoryConfigurationImpl()) },
+                new Object[] { "discounts",
+                        Project.builder()
+                                .discounts(new com.commercetools.api.models.project.DiscountsConfigurationImpl()) },
+                new Object[] { "productCatalogModel",
+                        Project.builder()
+                                .productCatalogModel(
+                                    com.commercetools.api.models.project.ProductCatalogModel.findEnum("Classic")) } };
     }
 
     @Test
@@ -154,5 +164,29 @@ public class ProjectTest {
         value.setBusinessUnits(new com.commercetools.api.models.project.BusinessUnitConfigurationImpl());
         Assertions.assertThat(value.getBusinessUnits())
                 .isEqualTo(new com.commercetools.api.models.project.BusinessUnitConfigurationImpl());
+    }
+
+    @Test
+    public void inventory() {
+        Project value = Project.of();
+        value.setInventory(new com.commercetools.api.models.project.InventoryConfigurationImpl());
+        Assertions.assertThat(value.getInventory())
+                .isEqualTo(new com.commercetools.api.models.project.InventoryConfigurationImpl());
+    }
+
+    @Test
+    public void discounts() {
+        Project value = Project.of();
+        value.setDiscounts(new com.commercetools.api.models.project.DiscountsConfigurationImpl());
+        Assertions.assertThat(value.getDiscounts())
+                .isEqualTo(new com.commercetools.api.models.project.DiscountsConfigurationImpl());
+    }
+
+    @Test
+    public void productCatalogModel() {
+        Project value = Project.of();
+        value.setProductCatalogModel(com.commercetools.api.models.project.ProductCatalogModel.findEnum("Classic"));
+        Assertions.assertThat(value.getProductCatalogModel())
+                .isEqualTo(com.commercetools.api.models.project.ProductCatalogModel.findEnum("Classic"));
     }
 }

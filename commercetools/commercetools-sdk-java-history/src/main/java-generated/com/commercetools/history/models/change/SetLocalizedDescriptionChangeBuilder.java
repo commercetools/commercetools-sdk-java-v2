@@ -17,6 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .change("{change}")
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .catalogData("{catalogData}")
  *             .build()
  * </code></pre>
  * </div>
@@ -29,6 +30,8 @@ public class SetLocalizedDescriptionChangeBuilder implements Builder<SetLocalize
     private com.commercetools.history.models.common.LocalizedString previousValue;
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
+
+    private String catalogData;
 
     /**
      * set the value to the change
@@ -114,6 +117,22 @@ public class SetLocalizedDescriptionChangeBuilder implements Builder<SetLocalize
     }
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     *  <p>This field is only present if the change is related to the Product entity.</p>
+     * @param catalogData value to be set
+     * @return Builder
+     */
+
+    public SetLocalizedDescriptionChangeBuilder catalogData(final String catalogData) {
+        this.catalogData = catalogData;
+        return this;
+    }
+
+    /**
      * value of change}
      * @return change
      */
@@ -141,6 +160,20 @@ public class SetLocalizedDescriptionChangeBuilder implements Builder<SetLocalize
     }
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     *  <p>This field is only present if the change is related to the Product entity.</p>
+     * @return catalogData
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
      * builds SetLocalizedDescriptionChange with checking for non-null required values
      * @return SetLocalizedDescriptionChange
      */
@@ -148,7 +181,8 @@ public class SetLocalizedDescriptionChangeBuilder implements Builder<SetLocalize
         Objects.requireNonNull(change, SetLocalizedDescriptionChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, SetLocalizedDescriptionChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetLocalizedDescriptionChange.class + ": nextValue is missing");
-        return new SetLocalizedDescriptionChangeImpl(change, previousValue, nextValue);
+        Objects.requireNonNull(catalogData, SetLocalizedDescriptionChange.class + ": catalogData is missing");
+        return new SetLocalizedDescriptionChangeImpl(change, previousValue, nextValue, catalogData);
     }
 
     /**
@@ -156,7 +190,7 @@ public class SetLocalizedDescriptionChangeBuilder implements Builder<SetLocalize
      * @return SetLocalizedDescriptionChange
      */
     public SetLocalizedDescriptionChange buildUnchecked() {
-        return new SetLocalizedDescriptionChangeImpl(change, previousValue, nextValue);
+        return new SetLocalizedDescriptionChangeImpl(change, previousValue, nextValue, catalogData);
     }
 
     /**
@@ -177,6 +211,7 @@ public class SetLocalizedDescriptionChangeBuilder implements Builder<SetLocalize
         builder.change = template.getChange();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.catalogData = template.getCatalogData();
         return builder;
     }
 

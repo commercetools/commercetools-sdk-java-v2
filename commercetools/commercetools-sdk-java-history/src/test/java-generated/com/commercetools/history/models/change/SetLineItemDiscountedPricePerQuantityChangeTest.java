@@ -29,7 +29,9 @@ public class SetLineItemDiscountedPricePerQuantityChangeTest {
                 new Object[] { "lineItem",
                         SetLineItemDiscountedPricePerQuantityChange.builder()
                                 .lineItem(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { "variant", SetLineItemDiscountedPricePerQuantityChange.builder().variant("variant") } };
+                new Object[] { "variant", SetLineItemDiscountedPricePerQuantityChange.builder().variant("variant") },
+                new Object[] { "lineItemId",
+                        SetLineItemDiscountedPricePerQuantityChange.builder().lineItemId("lineItemId") } };
     }
 
     @Test
@@ -68,5 +70,12 @@ public class SetLineItemDiscountedPricePerQuantityChangeTest {
         SetLineItemDiscountedPricePerQuantityChange value = SetLineItemDiscountedPricePerQuantityChange.of();
         value.setVariant("variant");
         Assertions.assertThat(value.getVariant()).isEqualTo("variant");
+    }
+
+    @Test
+    public void lineItemId() {
+        SetLineItemDiscountedPricePerQuantityChange value = SetLineItemDiscountedPricePerQuantityChange.of();
+        value.setLineItemId("lineItemId");
+        Assertions.assertThat(value.getLineItemId()).isEqualTo("lineItemId");
     }
 }

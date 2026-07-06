@@ -9,12 +9,12 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CustomerPagedSearchResponse
@@ -45,7 +45,7 @@ public interface CustomerPagedSearchResponse {
     public Long getTotal();
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @return limit
      */
     @NotNull
@@ -53,7 +53,7 @@ public interface CustomerPagedSearchResponse {
     public Integer getLimit();
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @return offset
      */
     @NotNull
@@ -77,14 +77,14 @@ public interface CustomerPagedSearchResponse {
     public void setTotal(final Long total);
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @param limit value to be set
      */
 
     public void setLimit(final Integer limit);
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @param offset value to be set
      */
 
@@ -182,8 +182,8 @@ public interface CustomerPagedSearchResponse {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerPagedSearchResponse> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerPagedSearchResponse>() {
+    public static tools.jackson.core.type.TypeReference<CustomerPagedSearchResponse> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerPagedSearchResponse>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerPagedSearchResponse>";

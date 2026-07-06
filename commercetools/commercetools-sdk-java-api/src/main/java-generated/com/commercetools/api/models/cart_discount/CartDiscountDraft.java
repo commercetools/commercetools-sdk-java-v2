@@ -11,15 +11,16 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifier;
+import com.commercetools.api.models.recurring_order.RecurringOrderScopeDraft;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CartDiscountDraft
@@ -76,7 +77,7 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
     public CartDiscountValueDraft getValue();
 
     /**
-     *  <p>Valid Cart Predicate.</p>
+     *  <p>Valid <span>Cart Predicate</span>.</p>
      * @return cartPredicate
      */
     @NotNull
@@ -104,11 +105,11 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <ul>
-     *   <li>If defined, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If defined, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
      *   <li>If not defined, the Cart Discount applies on all Carts, irrespective of a Store.</li>
      *  </ul>
-     *  <p>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</p>
-     *  <p>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</p>
      * @return stores
      */
     @Valid
@@ -116,7 +117,7 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
     public List<StoreResourceIdentifier> getStores();
 
     /**
-     *  <p>Only active Discounts can be applied to the Cart. If the limit for active Cart Discounts is reached, a MaxCartDiscountsReached error is returned.</p>
+     *  <p>Only active Discounts can be applied to the Cart. If the <span>limit</span> for active Cart Discounts is reached, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxCartDiscountsReachedError" rel="nofollow">MaxCartDiscountsReached</a> error is returned.</p>
      * @return isActive
      */
 
@@ -140,7 +141,7 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
     public ZonedDateTime getValidUntil();
 
     /**
-     *  <p>States whether the Discount can only be used in a connection with a DiscountCode.</p>
+     *  <p>States whether the Discount can only be used in a connection with a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a>.</p>
      * @return requiresDiscountCode
      */
 
@@ -156,7 +157,7 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
     public StackingMode getStackingMode();
 
     /**
-     *  <p>Custom Fields of the CartDiscount.</p>
+     *  <p>Custom Fields for the CartDiscount.</p>
      * @return custom
      */
     @Valid
@@ -170,6 +171,15 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
     @Valid
     @JsonProperty("discountGroup")
     public DiscountGroupResourceIdentifier getDiscountGroup();
+
+    /**
+     *  <p>Scope of the Cart Discount for Recurring Orders.</p>
+     *  <p>If not set, the default is <a href="https://docs.commercetools.com/apis/ctp:api:type:NonRecurringOrdersOnlyDraft" rel="nofollow">NonRecurringOrdersOnlyDraft</a>.</p>
+     * @return recurringOrderScope
+     */
+    @Valid
+    @JsonProperty("recurringOrderScope")
+    public RecurringOrderScopeDraft getRecurringOrderScope();
 
     /**
      *  <p>Name of the CartDiscount.</p>
@@ -200,7 +210,7 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
     public void setValue(final CartDiscountValueDraft value);
 
     /**
-     *  <p>Valid Cart Predicate.</p>
+     *  <p>Valid <span>Cart Predicate</span>.</p>
      * @param cartPredicate value to be set
      */
 
@@ -225,11 +235,11 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <ul>
-     *   <li>If defined, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If defined, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
      *   <li>If not defined, the Cart Discount applies on all Carts, irrespective of a Store.</li>
      *  </ul>
-     *  <p>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</p>
-     *  <p>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</p>
      * @param stores values to be set
      */
 
@@ -238,18 +248,18 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <ul>
-     *   <li>If defined, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If defined, the Cart Discount applies on <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a> having a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> matching any Store defined for this field.</li>
      *   <li>If not defined, the Cart Discount applies on all Carts, irrespective of a Store.</li>
      *  </ul>
-     *  <p>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</p>
-     *  <p>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</p>
+     *  <p>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</p>
      * @param stores values to be set
      */
 
     public void setStores(final List<StoreResourceIdentifier> stores);
 
     /**
-     *  <p>Only active Discounts can be applied to the Cart. If the limit for active Cart Discounts is reached, a MaxCartDiscountsReached error is returned.</p>
+     *  <p>Only active Discounts can be applied to the Cart. If the <span>limit</span> for active Cart Discounts is reached, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxCartDiscountsReachedError" rel="nofollow">MaxCartDiscountsReached</a> error is returned.</p>
      * @param isActive value to be set
      */
 
@@ -270,7 +280,7 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
     public void setValidUntil(final ZonedDateTime validUntil);
 
     /**
-     *  <p>States whether the Discount can only be used in a connection with a DiscountCode.</p>
+     *  <p>States whether the Discount can only be used in a connection with a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a>.</p>
      * @param requiresDiscountCode value to be set
      */
 
@@ -284,7 +294,7 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
     public void setStackingMode(final StackingMode stackingMode);
 
     /**
-     *  <p>Custom Fields of the CartDiscount.</p>
+     *  <p>Custom Fields for the CartDiscount.</p>
      * @param custom value to be set
      */
 
@@ -296,6 +306,14 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
      */
 
     public void setDiscountGroup(final DiscountGroupResourceIdentifier discountGroup);
+
+    /**
+     *  <p>Scope of the Cart Discount for Recurring Orders.</p>
+     *  <p>If not set, the default is <a href="https://docs.commercetools.com/apis/ctp:api:type:NonRecurringOrdersOnlyDraft" rel="nofollow">NonRecurringOrdersOnlyDraft</a>.</p>
+     * @param recurringOrderScope value to be set
+     */
+
+    public void setRecurringOrderScope(final RecurringOrderScopeDraft recurringOrderScope);
 
     /**
      * factory method
@@ -327,6 +345,7 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
         instance.setStackingMode(template.getStackingMode());
         instance.setCustom(template.getCustom());
         instance.setDiscountGroup(template.getDiscountGroup());
+        instance.setRecurringOrderScope(template.getRecurringOrderScope());
         return instance;
     }
 
@@ -366,6 +385,8 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         instance.setDiscountGroup(com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifier
                 .deepCopy(template.getDiscountGroup()));
+        instance.setRecurringOrderScope(com.commercetools.api.models.recurring_order.RecurringOrderScopeDraft
+                .deepCopy(template.getRecurringOrderScope()));
         return instance;
     }
 
@@ -400,8 +421,8 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountDraft>() {
+    public static tools.jackson.core.type.TypeReference<CartDiscountDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartDiscountDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<CartDiscountDraft>";

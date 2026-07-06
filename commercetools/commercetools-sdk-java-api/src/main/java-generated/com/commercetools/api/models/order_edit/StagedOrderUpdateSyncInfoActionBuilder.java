@@ -44,7 +44,7 @@ public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *  <p>The synchronization destination to set. Must not be empty. The referenced Channel must have the Channel Role <code>OrderExport</code> or <code>OrderImport</code>. Otherwise this update action returns an InvalidInput error.</p>
+     *  <p>The synchronization destination to set. Must not be empty. The referenced Channel must have the <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Channel Role</a> <code>OrderExport</code> or <code>OrderImport</code>. Otherwise this update action returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -57,7 +57,7 @@ public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *  <p>The synchronization destination to set. Must not be empty. The referenced Channel must have the Channel Role <code>OrderExport</code> or <code>OrderImport</code>. Otherwise this update action returns an InvalidInput error.</p>
+     *  <p>The synchronization destination to set. Must not be empty. The referenced Channel must have the <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Channel Role</a> <code>OrderExport</code> or <code>OrderImport</code>. Otherwise this update action returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *  <p>The synchronization destination to set. Must not be empty. The referenced Channel must have the Channel Role <code>OrderExport</code> or <code>OrderImport</code>. Otherwise this update action returns an InvalidInput error.</p>
+     *  <p>The synchronization destination to set. Must not be empty. The referenced Channel must have the <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Channel Role</a> <code>OrderExport</code> or <code>OrderImport</code>. Otherwise this update action returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error.</p>
      * @param channel value to be set
      * @return Builder
      */
@@ -102,7 +102,7 @@ public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *  <p>The synchronization destination to set. Must not be empty. The referenced Channel must have the Channel Role <code>OrderExport</code> or <code>OrderImport</code>. Otherwise this update action returns an InvalidInput error.</p>
+     *  <p>The synchronization destination to set. Must not be empty. The referenced Channel must have the <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">Channel Role</a> <code>OrderExport</code> or <code>OrderImport</code>. Otherwise this update action returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error.</p>
      * @return channel
      */
 

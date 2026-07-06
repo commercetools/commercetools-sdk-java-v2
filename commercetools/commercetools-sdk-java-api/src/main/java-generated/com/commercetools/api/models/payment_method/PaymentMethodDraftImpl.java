@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * PaymentMethodDraft
@@ -96,7 +97,7 @@ public class PaymentMethodDraftImpl implements PaymentMethodDraft, ModelBase {
 
     /**
      *  <p>Reference to a Customer the PaymentMethod should belong to.</p>
-     *  <p>If <code>businessUnit</code> is set, the Customer must be an Associate of the Business Unit.</p>
+     *  <p>If <code>businessUnit</code> is set, the Customer must be an <a href="https://docs.commercetools.com/apis/ctp:api:type:Associate" rel="nofollow">Associate</a> of the Business Unit.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer() {
@@ -105,7 +106,7 @@ public class PaymentMethodDraftImpl implements PaymentMethodDraft, ModelBase {
 
     /**
      *  <p>Reference to a BusinessUnit the PaymentMethod should belong to.</p>
-     *  <p>Only available for B2B-enabled Projects.</p>
+     *  <p>Only available for <span>B2B</span>-enabled Projects.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getBusinessUnit() {

@@ -19,10 +19,10 @@ public class SetOrderTaxedPriceChangeTest {
         return new Object[][] { new Object[] { "change", SetOrderTaxedPriceChange.builder().change("change") },
                 new Object[] { "previousValue",
                         SetOrderTaxedPriceChange.builder()
-                                .previousValue(new com.commercetools.history.models.common.TaxedItemPriceImpl()) },
+                                .previousValue(new com.commercetools.history.models.common.TaxedPriceImpl()) },
                 new Object[] { "nextValue",
                         SetOrderTaxedPriceChange.builder()
-                                .nextValue(new com.commercetools.history.models.common.TaxedItemPriceImpl()) },
+                                .nextValue(new com.commercetools.history.models.common.TaxedPriceImpl()) },
                 new Object[] { "taxMode", SetOrderTaxedPriceChange.builder()
                         .taxMode(com.commercetools.history.models.common.TaxMode.findEnum("Platform")) } };
     }
@@ -37,17 +37,17 @@ public class SetOrderTaxedPriceChangeTest {
     @Test
     public void previousValue() {
         SetOrderTaxedPriceChange value = SetOrderTaxedPriceChange.of();
-        value.setPreviousValue(new com.commercetools.history.models.common.TaxedItemPriceImpl());
+        value.setPreviousValue(new com.commercetools.history.models.common.TaxedPriceImpl());
         Assertions.assertThat(value.getPreviousValue())
-                .isEqualTo(new com.commercetools.history.models.common.TaxedItemPriceImpl());
+                .isEqualTo(new com.commercetools.history.models.common.TaxedPriceImpl());
     }
 
     @Test
     public void nextValue() {
         SetOrderTaxedPriceChange value = SetOrderTaxedPriceChange.of();
-        value.setNextValue(new com.commercetools.history.models.common.TaxedItemPriceImpl());
+        value.setNextValue(new com.commercetools.history.models.common.TaxedPriceImpl());
         Assertions.assertThat(value.getNextValue())
-                .isEqualTo(new com.commercetools.history.models.common.TaxedItemPriceImpl());
+                .isEqualTo(new com.commercetools.history.models.common.TaxedPriceImpl());
     }
 
     @Test

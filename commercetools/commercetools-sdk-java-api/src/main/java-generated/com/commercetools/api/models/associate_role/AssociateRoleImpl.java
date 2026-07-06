@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * AssociateRole
@@ -133,7 +134,7 @@ public class AssociateRoleImpl implements AssociateRole, ModelBase {
     }
 
     /**
-     *  <p>Whether the AssociateRole can be assigned to an Associate by a buyer. If false, the AssociateRole can only be assigned using the general endpoint.</p>
+     *  <p>Whether the AssociateRole can be assigned to an Associate by a <span>buyer</span>. If false, the AssociateRole can only be assigned using the <span>general endpoint</span>.</p>
      */
 
     public Boolean getBuyerAssignable() {
@@ -157,7 +158,7 @@ public class AssociateRoleImpl implements AssociateRole, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields for the AssociateRole.</p>
+     *  <p>Custom Fields of the AssociateRole.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {

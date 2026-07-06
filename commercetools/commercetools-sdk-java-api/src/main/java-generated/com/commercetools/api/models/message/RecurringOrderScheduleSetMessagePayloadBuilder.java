@@ -29,7 +29,7 @@ public class RecurringOrderScheduleSetMessagePayloadBuilder
     private com.commercetools.api.models.recurrence_policy.RecurrencePolicySchedule oldRecurrencePolicySchedule;
 
     /**
-     *  <p>Schedule of the Recurring Order after the Set Schedule update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicySchedule" rel="nofollow">Schedule</a> of the Recurring Order after the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetScheduleAction" rel="nofollow">Set Schedule</a> update action.</p>
      * @param recurrencePolicySchedule value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class RecurringOrderScheduleSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Schedule of the Recurring Order after the Set Schedule update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicySchedule" rel="nofollow">Schedule</a> of the Recurring Order after the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetScheduleAction" rel="nofollow">Set Schedule</a> update action.</p>
      * @param builder function to build the recurrencePolicySchedule value
      * @return Builder
      */
@@ -55,7 +55,7 @@ public class RecurringOrderScheduleSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Schedule of the Recurring Order before the Set Schedule update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicySchedule" rel="nofollow">Schedule</a> of the Recurring Order before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetScheduleAction" rel="nofollow">Set Schedule</a> update action.</p>
      * @param oldRecurrencePolicySchedule value to be set
      * @return Builder
      */
@@ -67,7 +67,7 @@ public class RecurringOrderScheduleSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Schedule of the Recurring Order before the Set Schedule update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicySchedule" rel="nofollow">Schedule</a> of the Recurring Order before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetScheduleAction" rel="nofollow">Set Schedule</a> update action.</p>
      * @param builder function to build the oldRecurrencePolicySchedule value
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class RecurringOrderScheduleSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Schedule of the Recurring Order after the Set Schedule update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicySchedule" rel="nofollow">Schedule</a> of the Recurring Order after the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetScheduleAction" rel="nofollow">Set Schedule</a> update action.</p>
      * @return recurrencePolicySchedule
      */
 
@@ -90,7 +90,7 @@ public class RecurringOrderScheduleSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Schedule of the Recurring Order before the Set Schedule update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurrencePolicySchedule" rel="nofollow">Schedule</a> of the Recurring Order before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetScheduleAction" rel="nofollow">Set Schedule</a> update action.</p>
      * @return oldRecurrencePolicySchedule
      */
 

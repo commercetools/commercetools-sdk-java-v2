@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Delivery Address update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetDeliveryAddressAction" rel="nofollow">Set Delivery Address</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddressSetMessagePayload, ModelBase {
@@ -63,7 +64,7 @@ public class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddressSetM
     }
 
     /**
-     *  <p>Unique identifier of the Delivery.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      */
 
     public String getDeliveryId() {
@@ -71,7 +72,7 @@ public class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddressSetM
     }
 
     /**
-     *  <p>Address after the Set Delivery Address update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetDeliveryAddressAction" rel="nofollow">Set Delivery Address</a> update action.</p>
      */
 
     public com.commercetools.api.models.common.Address getAddress() {
@@ -79,7 +80,7 @@ public class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddressSetM
     }
 
     /**
-     *  <p>Address before the Set Delivery Address update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetDeliveryAddressAction" rel="nofollow">Set Delivery Address</a> update action.</p>
      */
 
     public com.commercetools.api.models.common.Address getOldAddress() {
@@ -87,7 +88,7 @@ public class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddressSetM
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      */
 
     public String getShippingKey() {

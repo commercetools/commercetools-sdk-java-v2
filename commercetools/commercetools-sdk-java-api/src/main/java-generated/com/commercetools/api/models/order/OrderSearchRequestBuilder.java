@@ -160,7 +160,7 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
     }
 
     /**
-     *  <p>The maximum number of search results to be returned on one page.</p>
+     *  <p>The maximum number of search results to be returned on one <span>page</span>.</p>
      * @param limit value to be set
      * @return Builder
      */
@@ -171,7 +171,7 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
     }
 
     /**
-     *  <p>The number of search results to be skipped in the response for pagination.</p>
+     *  <p>The number of search results to be skipped in the response for <span>pagination</span>.</p>
      * @param offset value to be set
      * @return Builder
      */
@@ -201,7 +201,7 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
     }
 
     /**
-     *  <p>The maximum number of search results to be returned on one page.</p>
+     *  <p>The maximum number of search results to be returned on one <span>page</span>.</p>
      * @return limit
      */
 
@@ -211,7 +211,7 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
     }
 
     /**
-     *  <p>The number of search results to be skipped in the response for pagination.</p>
+     *  <p>The number of search results to be skipped in the response for <span>pagination</span>.</p>
      * @return offset
      */
 

@@ -8,21 +8,17 @@ import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
-import com.commercetools.history.models.change_value.LocalizedEnumValue;
+import com.commercetools.history.models.common.AttributeLocalizedEnumValue;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li>Change the order of LocalizedEnumValues on Product Types.</li>
- *   <li>Change the order of LocalizedEnumValues on Types.</li>
- *  </ul>
+ * ChangeLocalizedEnumValueOrderChange
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -71,7 +67,7 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("previousValue")
-    public List<LocalizedEnumValue> getPreviousValue();
+    public List<AttributeLocalizedEnumValue> getPreviousValue();
 
     /**
      *  <p>Value after the change.</p>
@@ -80,10 +76,10 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("nextValue")
-    public List<LocalizedEnumValue> getNextValue();
+    public List<AttributeLocalizedEnumValue> getNextValue();
 
     /**
-     *  <p>Name of the updated FieldDefinition; only present on changes to Types.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>; only present on changes to Types.</p>
      * @return fieldName
      */
     @NotNull
@@ -91,7 +87,7 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
     public String getFieldName();
 
     /**
-     *  <p>Name of the updated AttributeDefinition; only present on changes to Product Types.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>; only present on changes to Product Types.</p>
      * @return attributeName
      */
     @NotNull
@@ -111,14 +107,14 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
      */
 
     @JsonIgnore
-    public void setPreviousValue(final LocalizedEnumValue... previousValue);
+    public void setPreviousValue(final AttributeLocalizedEnumValue... previousValue);
 
     /**
      *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
-    public void setPreviousValue(final List<LocalizedEnumValue> previousValue);
+    public void setPreviousValue(final List<AttributeLocalizedEnumValue> previousValue);
 
     /**
      *  <p>Value after the change.</p>
@@ -126,24 +122,24 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
      */
 
     @JsonIgnore
-    public void setNextValue(final LocalizedEnumValue... nextValue);
+    public void setNextValue(final AttributeLocalizedEnumValue... nextValue);
 
     /**
      *  <p>Value after the change.</p>
      * @param nextValue values to be set
      */
 
-    public void setNextValue(final List<LocalizedEnumValue> nextValue);
+    public void setNextValue(final List<AttributeLocalizedEnumValue> nextValue);
 
     /**
-     *  <p>Name of the updated FieldDefinition; only present on changes to Types.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>; only present on changes to Types.</p>
      * @param fieldName value to be set
      */
 
     public void setFieldName(final String fieldName);
 
     /**
-     *  <p>Name of the updated AttributeDefinition; only present on changes to Product Types.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>; only present on changes to Product Types.</p>
      * @param attributeName value to be set
      */
 
@@ -189,12 +185,12 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
         instance.setChange(template.getChange());
         instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
                 .map(t -> t.stream()
-                        .map(com.commercetools.history.models.change_value.LocalizedEnumValue::deepCopy)
+                        .map(com.commercetools.history.models.common.AttributeLocalizedEnumValue::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setNextValue(Optional.ofNullable(template.getNextValue())
                 .map(t -> t.stream()
-                        .map(com.commercetools.history.models.change_value.LocalizedEnumValue::deepCopy)
+                        .map(com.commercetools.history.models.common.AttributeLocalizedEnumValue::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setFieldName(template.getFieldName());
@@ -234,8 +230,8 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChangeLocalizedEnumValueOrderChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChangeLocalizedEnumValueOrderChange>() {
+    public static tools.jackson.core.type.TypeReference<ChangeLocalizedEnumValueOrderChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChangeLocalizedEnumValueOrderChange>() {
             @Override
             public String toString() {
                 return "TypeReference<ChangeLocalizedEnumValueOrderChange>";

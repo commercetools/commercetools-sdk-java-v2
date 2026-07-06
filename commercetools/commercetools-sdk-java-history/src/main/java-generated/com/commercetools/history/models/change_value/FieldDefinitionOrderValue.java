@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * FieldDefinitionOrderValue
@@ -35,7 +35,7 @@ import jakarta.validation.constraints.NotNull;
 public interface FieldDefinitionOrderValue {
 
     /**
-     *  <p>Name of the FieldDefinition.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>.</p>
      * @return name
      */
     @NotNull
@@ -52,7 +52,7 @@ public interface FieldDefinitionOrderValue {
     public LocalizedString getLabel();
 
     /**
-     *  <p>Name of the FieldDefinition.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>.</p>
      * @param name value to be set
      */
 
@@ -134,8 +134,8 @@ public interface FieldDefinitionOrderValue {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<FieldDefinitionOrderValue> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<FieldDefinitionOrderValue>() {
+    public static tools.jackson.core.type.TypeReference<FieldDefinitionOrderValue> typeReference() {
+        return new tools.jackson.core.type.TypeReference<FieldDefinitionOrderValue>() {
             @Override
             public String toString() {
                 return "TypeReference<FieldDefinitionOrderValue>";

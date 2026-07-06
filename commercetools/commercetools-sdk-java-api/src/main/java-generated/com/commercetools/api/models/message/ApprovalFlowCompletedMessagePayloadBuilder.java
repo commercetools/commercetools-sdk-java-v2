@@ -28,7 +28,7 @@ public class ApprovalFlowCompletedMessagePayloadBuilder implements Builder<Appro
     private com.commercetools.api.models.order.OrderReference order;
 
     /**
-     *  <p>Final status of the Approval Flow.</p>
+     *  <p>Final status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @param status value to be set
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class ApprovalFlowCompletedMessagePayloadBuilder implements Builder<Appro
     }
 
     /**
-     *  <p>Reference to the Order related to the completed Approval Flow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> related to the completed <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @param builder function to build the order value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class ApprovalFlowCompletedMessagePayloadBuilder implements Builder<Appro
     }
 
     /**
-     *  <p>Reference to the Order related to the completed Approval Flow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> related to the completed <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @param builder function to build the order value
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class ApprovalFlowCompletedMessagePayloadBuilder implements Builder<Appro
     }
 
     /**
-     *  <p>Reference to the Order related to the completed Approval Flow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> related to the completed <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @param order value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class ApprovalFlowCompletedMessagePayloadBuilder implements Builder<Appro
     }
 
     /**
-     *  <p>Final status of the Approval Flow.</p>
+     *  <p>Final status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @return status
      */
 
@@ -85,7 +85,7 @@ public class ApprovalFlowCompletedMessagePayloadBuilder implements Builder<Appro
     }
 
     /**
-     *  <p>Reference to the Order related to the completed Approval Flow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> related to the completed <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      * @return order
      */
 

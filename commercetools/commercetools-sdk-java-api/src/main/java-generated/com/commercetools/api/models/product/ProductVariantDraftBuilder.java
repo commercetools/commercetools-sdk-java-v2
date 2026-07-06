@@ -42,7 +42,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     private java.util.List<com.commercetools.api.models.common.AssetDraft> assets;
 
     /**
-     *  <p>User-defined unique SKU of the Product Variant.</p>
+     *  <p>User-defined SKU of the Product Variant. Must be unique across all ProductVariants in a Project.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *  <p>User-defined unique identifier for the ProductVariant.</p>
+     *  <p>User-defined identifier for the ProductVariant. Must be unique among ProductVariants in the same Product.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -152,7 +152,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Variant Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -164,7 +164,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Variant Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -176,7 +176,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Variant Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -191,7 +191,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Variant Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -206,7 +206,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Variant Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -219,7 +219,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Variant Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -230,7 +230,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Variant Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -416,7 +416,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *  <p>User-defined unique SKU of the Product Variant.</p>
+     *  <p>User-defined SKU of the Product Variant. Must be unique across all ProductVariants in a Project.</p>
      * @return sku
      */
 
@@ -426,7 +426,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *  <p>User-defined unique identifier for the ProductVariant.</p>
+     *  <p>User-defined identifier for the ProductVariant. Must be unique among ProductVariants in the same Product.</p>
      * @return key
      */
 
@@ -446,7 +446,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Variant Attributes according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>.</p>
      * @return attributes
      */
 

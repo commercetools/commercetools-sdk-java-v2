@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Represents the Buyer requesting renegotiation for a Quote. Valid for Quotes in a <code>Pending</code> state.</p>
+ *  <p>Represents the Buyer requesting renegotiation for a Quote. Valid for Quotes in a <code>Pending</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteState" rel="nofollow">state</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +36,7 @@ public interface QuoteRequestQuoteRenegotiationAction extends QuoteUpdateAction 
     String REQUEST_QUOTE_RENEGOTIATION = "requestQuoteRenegotiation";
 
     /**
-     *  <p>Message from the Buyer regarding the Quote renegotiation request.</p>
+     *  <p>Message from the <span>Buyer</span> regarding the Quote renegotiation request.</p>
      * @return buyerComment
      */
 
@@ -43,7 +44,7 @@ public interface QuoteRequestQuoteRenegotiationAction extends QuoteUpdateAction 
     public String getBuyerComment();
 
     /**
-     *  <p>Message from the Buyer regarding the Quote renegotiation request.</p>
+     *  <p>Message from the <span>Buyer</span> regarding the Quote renegotiation request.</p>
      * @param buyerComment value to be set
      */
 
@@ -118,8 +119,8 @@ public interface QuoteRequestQuoteRenegotiationAction extends QuoteUpdateAction 
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<QuoteRequestQuoteRenegotiationAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<QuoteRequestQuoteRenegotiationAction>() {
+    public static tools.jackson.core.type.TypeReference<QuoteRequestQuoteRenegotiationAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<QuoteRequestQuoteRenegotiationAction>() {
             @Override
             public String toString() {
                 return "TypeReference<QuoteRequestQuoteRenegotiationAction>";

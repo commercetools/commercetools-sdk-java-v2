@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Information about recurring orders and frequencies.</p>
@@ -35,7 +35,7 @@ import jakarta.validation.constraints.NotNull;
 public interface LineItemRecurrenceInfoDraft extends io.vrap.rmf.base.client.Draft<LineItemRecurrenceInfoDraft> {
 
     /**
-     *  <p>ResourceIdentifier to a RecurrencePolicy.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a RecurrencePolicy.</p>
      * @return recurrencePolicy
      */
     @NotNull
@@ -52,7 +52,7 @@ public interface LineItemRecurrenceInfoDraft extends io.vrap.rmf.base.client.Dra
     public PriceSelectionMode getPriceSelectionMode();
 
     /**
-     *  <p>ResourceIdentifier to a RecurrencePolicy.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to a RecurrencePolicy.</p>
      * @param recurrencePolicy value to be set
      */
 
@@ -135,8 +135,8 @@ public interface LineItemRecurrenceInfoDraft extends io.vrap.rmf.base.client.Dra
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<LineItemRecurrenceInfoDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<LineItemRecurrenceInfoDraft>() {
+    public static tools.jackson.core.type.TypeReference<LineItemRecurrenceInfoDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<LineItemRecurrenceInfoDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<LineItemRecurrenceInfoDraft>";

@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after removing a Custom Type from a Business Unit using the Set Custom Type update action.</p>
+ *  <p>Generated after removing a Custom Type from a Business Unit using the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetCustomTypeAction" rel="nofollow">Set Custom Type</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -42,7 +43,7 @@ public interface BusinessUnitCustomTypeRemovedMessage extends Message {
     String BUSINESS_UNIT_CUSTOM_TYPE_REMOVED = "BusinessUnitCustomTypeRemoved";
 
     /**
-     *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a> that was removed. Absent if there was no previous Custom Type present.</p>
      * @return oldTypeId
      */
 
@@ -50,7 +51,7 @@ public interface BusinessUnitCustomTypeRemovedMessage extends Message {
     public String getOldTypeId();
 
     /**
-     *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a> that was removed. Absent if there was no previous Custom Type present.</p>
      * @param oldTypeId value to be set
      */
 
@@ -147,8 +148,8 @@ public interface BusinessUnitCustomTypeRemovedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitCustomTypeRemovedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitCustomTypeRemovedMessage>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitCustomTypeRemovedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitCustomTypeRemovedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitCustomTypeRemovedMessage>";

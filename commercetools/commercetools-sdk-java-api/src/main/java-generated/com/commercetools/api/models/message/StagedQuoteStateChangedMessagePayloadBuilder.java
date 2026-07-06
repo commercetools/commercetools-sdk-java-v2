@@ -27,7 +27,7 @@ public class StagedQuoteStateChangedMessagePayloadBuilder implements Builder<Sta
     private com.commercetools.api.models.staged_quote.StagedQuoteState oldStagedQuoteState;
 
     /**
-     *  <p>State of the Staged Quote after the Change Staged Quote State update action.</p>
+     *  <p>State of the Staged Quote after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteChangeStagedQuoteStateAction" rel="nofollow">Change Staged Quote State</a> update action.</p>
      * @param stagedQuoteState value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class StagedQuoteStateChangedMessagePayloadBuilder implements Builder<Sta
     }
 
     /**
-     *  <p>State of the Staged Quote before the Change Staged Quote State update action.</p>
+     *  <p>State of the Staged Quote before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteChangeStagedQuoteStateAction" rel="nofollow">Change Staged Quote State</a> update action.</p>
      * @param oldStagedQuoteState value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class StagedQuoteStateChangedMessagePayloadBuilder implements Builder<Sta
     }
 
     /**
-     *  <p>State of the Staged Quote after the Change Staged Quote State update action.</p>
+     *  <p>State of the Staged Quote after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteChangeStagedQuoteStateAction" rel="nofollow">Change Staged Quote State</a> update action.</p>
      * @return stagedQuoteState
      */
 
@@ -60,7 +60,7 @@ public class StagedQuoteStateChangedMessagePayloadBuilder implements Builder<Sta
     }
 
     /**
-     *  <p>State of the Staged Quote before the Change Staged Quote State update action.</p>
+     *  <p>State of the Staged Quote before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuoteChangeStagedQuoteStateAction" rel="nofollow">Change Staged Quote State</a> update action.</p>
      * @return oldStagedQuoteState
      */
 

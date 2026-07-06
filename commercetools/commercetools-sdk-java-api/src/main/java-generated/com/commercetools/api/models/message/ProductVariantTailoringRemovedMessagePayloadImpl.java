@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Remove ProductVariant Tailoring update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringRemoveVariantAction" rel="nofollow">Remove ProductVariant Tailoring</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantTailoringRemovedMessagePayloadImpl
@@ -93,7 +94,7 @@ public class ProductVariantTailoringRemovedMessagePayloadImpl
     }
 
     /**
-     *  <p><code>id</code> of the ProductVariant removed from the Tailoring.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> removed from the Tailoring.</p>
      */
 
     public Long getVariantId() {
@@ -101,7 +102,7 @@ public class ProductVariantTailoringRemovedMessagePayloadImpl
     }
 
     /**
-     *  <p>The ProductVariantTailoring that was removed from the ProductTailoring.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">ProductVariantTailoring</a> that was removed from the ProductTailoring.</p>
      */
 
     public com.commercetools.api.models.product_tailoring.ProductVariantTailoring getVariant() {

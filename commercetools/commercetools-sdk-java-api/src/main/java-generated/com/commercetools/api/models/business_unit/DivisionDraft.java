@@ -9,15 +9,15 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Draft type to model divisions that are part of a Company or a higher-order Division. Contains the fields and values of the generic BusinessUnitDraft that are used specifically for creating a Division.</p>
+ *  <p>Draft type to model divisions that are part of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Company" rel="nofollow">Company</a> or a higher-order <a href="https://docs.commercetools.com/apis/ctp:api:type:Division" rel="nofollow">Division</a>. Contains the fields and values of the generic <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitDraft" rel="nofollow">BusinessUnitDraft</a> that are used specifically for creating a Division.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -51,7 +51,7 @@ public interface DivisionDraft extends BusinessUnitDraft, io.vrap.rmf.base.clien
     public BusinessUnitResourceIdentifier getParentUnit();
 
     /**
-     *  <p>If not set, the Division inherits the Stores from a parent unit. Set this to <code>Explicit</code> if you want to set the Stores explicitly in the <code>stores</code> field instead.</p>
+     *  <p>If not set, the Division inherits the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> from a parent unit. Set this to <code>Explicit</code> if you want to set the Stores explicitly in the <code>stores</code> field instead.</p>
      * @return storeMode
      */
 
@@ -82,7 +82,7 @@ public interface DivisionDraft extends BusinessUnitDraft, io.vrap.rmf.base.clien
     public void setParentUnit(final BusinessUnitResourceIdentifier parentUnit);
 
     /**
-     *  <p>If not set, the Division inherits the Stores from a parent unit. Set this to <code>Explicit</code> if you want to set the Stores explicitly in the <code>stores</code> field instead.</p>
+     *  <p>If not set, the Division inherits the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> from a parent unit. Set this to <code>Explicit</code> if you want to set the Stores explicitly in the <code>stores</code> field instead.</p>
      * @param storeMode value to be set
      */
 
@@ -132,6 +132,7 @@ public interface DivisionDraft extends BusinessUnitDraft, io.vrap.rmf.base.clien
         instance.setBillingAddresses(template.getBillingAddresses());
         instance.setDefaultBillingAddress(template.getDefaultBillingAddress());
         instance.setCustom(template.getCustom());
+        instance.setCustomerGroupAssignments(template.getCustomerGroupAssignments());
         instance.setParentUnit(template.getParentUnit());
         return instance;
     }
@@ -178,6 +179,11 @@ public interface DivisionDraft extends BusinessUnitDraft, io.vrap.rmf.base.clien
             Optional.ofNullable(template.getBillingAddresses()).map(ArrayList::new).orElse(null));
         instance.setDefaultBillingAddress(template.getDefaultBillingAddress());
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setCustomerGroupAssignments(Optional.ofNullable(template.getCustomerGroupAssignments())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.customer.CustomerGroupAssignmentDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setParentUnit(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier
                 .deepCopy(template.getParentUnit()));
         return instance;
@@ -214,8 +220,8 @@ public interface DivisionDraft extends BusinessUnitDraft, io.vrap.rmf.base.clien
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DivisionDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DivisionDraft>() {
+    public static tools.jackson.core.type.TypeReference<DivisionDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DivisionDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<DivisionDraft>";

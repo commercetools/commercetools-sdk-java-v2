@@ -26,7 +26,16 @@ public class ExtensionDraftTest {
                         ExtensionDraft.builder()
                                 .triggers(Collections.singletonList(
                                     new com.commercetools.api.models.extension.ExtensionTriggerImpl())) },
-                new Object[] { "timeoutInMs", ExtensionDraft.builder().timeoutInMs(6) } };
+                new Object[] { "timeoutInMs", ExtensionDraft.builder().timeoutInMs(6) },
+                new Object[] { "dependencies",
+                        ExtensionDraft.builder()
+                                .dependencies(Collections.singletonList(
+                                    new com.commercetools.api.models.extension.ExtensionResourceIdentifierImpl())) },
+                new Object[] { "expansionPaths",
+                        ExtensionDraft.builder().expansionPaths(Collections.singletonList("expansionPaths")) },
+                new Object[] { "additionalContext", ExtensionDraft.builder()
+                        .additionalContext(
+                            new com.commercetools.api.models.extension.ExtensionAdditionalContextDraftImpl()) } };
     }
 
     @Test
@@ -58,5 +67,30 @@ public class ExtensionDraftTest {
         ExtensionDraft value = ExtensionDraft.of();
         value.setTimeoutInMs(6);
         Assertions.assertThat(value.getTimeoutInMs()).isEqualTo(6);
+    }
+
+    @Test
+    public void dependencies() {
+        ExtensionDraft value = ExtensionDraft.of();
+        value.setDependencies(
+            Collections.singletonList(new com.commercetools.api.models.extension.ExtensionResourceIdentifierImpl()));
+        Assertions.assertThat(value.getDependencies())
+                .isEqualTo(Collections
+                        .singletonList(new com.commercetools.api.models.extension.ExtensionResourceIdentifierImpl()));
+    }
+
+    @Test
+    public void expansionPaths() {
+        ExtensionDraft value = ExtensionDraft.of();
+        value.setExpansionPaths(Collections.singletonList("expansionPaths"));
+        Assertions.assertThat(value.getExpansionPaths()).isEqualTo(Collections.singletonList("expansionPaths"));
+    }
+
+    @Test
+    public void additionalContext() {
+        ExtensionDraft value = ExtensionDraft.of();
+        value.setAdditionalContext(new com.commercetools.api.models.extension.ExtensionAdditionalContextDraftImpl());
+        Assertions.assertThat(value.getAdditionalContext())
+                .isEqualTo(new com.commercetools.api.models.extension.ExtensionAdditionalContextDraftImpl());
     }
 }

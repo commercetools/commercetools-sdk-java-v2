@@ -56,7 +56,7 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     }
 
     /**
-     *  <p>The resource type the ImportContainer supports. If not present, the ImportContainer can import all of the supported ImportResourceTypes.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">resource type</a> the ImportContainer supports. If not present, the ImportContainer can import all of the supported <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">ImportResourceTypes</a>.</p>
      * @param resourceType value to be set
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     }
 
     /**
-     *  <p>The retention policy of the ImportContainer.</p>
+     *  <p>Retention policy for this ImportContainer. If not set, the ImportContainer will expire <strong>72 hours</strong> after creation.</p>
      * @param retentionPolicy value to be set
      * @return Builder
      */
@@ -91,7 +91,7 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     }
 
     /**
-     *  <p>The retention policy of the ImportContainer.</p>
+     *  <p>Retention policy for this ImportContainer. If not set, the ImportContainer will expire <strong>72 hours</strong> after creation.</p>
      * @param builder function to build the retentionPolicy value
      * @return Builder
      */
@@ -127,7 +127,7 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     }
 
     /**
-     *  <p>Date and time (UTC) the ImportContainer is automatically deleted. Only present if a <code>retentionPolicy</code> is set. ImportContainers without <code>expiresAt</code> are permanent until manually deleted.</p>
+     *  <p>Date and time (UTC) when the ImportContainer is automatically deleted. If no <code>retentionPolicy</code> was set at creation, this is <strong>72 hours</strong> after <code>createdAt</code>. If a <code>TimeToLiveRetentionPolicy</code> was set, it is derived from <code>timeToLive</code>.</p>
      * @param expiresAt value to be set
      * @return Builder
      */
@@ -147,7 +147,7 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     }
 
     /**
-     *  <p>The resource type the ImportContainer supports. If not present, the ImportContainer can import all of the supported ImportResourceTypes.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">resource type</a> the ImportContainer supports. If not present, the ImportContainer can import all of the supported <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">ImportResourceTypes</a>.</p>
      * @return resourceType
      */
 
@@ -166,7 +166,7 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     }
 
     /**
-     *  <p>The retention policy of the ImportContainer.</p>
+     *  <p>Retention policy for this ImportContainer. If not set, the ImportContainer will expire <strong>72 hours</strong> after creation.</p>
      * @return retentionPolicy
      */
 
@@ -194,7 +194,7 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     }
 
     /**
-     *  <p>Date and time (UTC) the ImportContainer is automatically deleted. Only present if a <code>retentionPolicy</code> is set. ImportContainers without <code>expiresAt</code> are permanent until manually deleted.</p>
+     *  <p>Date and time (UTC) when the ImportContainer is automatically deleted. If no <code>retentionPolicy</code> was set at creation, this is <strong>72 hours</strong> after <code>createdAt</code>. If a <code>TimeToLiveRetentionPolicy</code> was set, it is derived from <code>timeToLive</code>.</p>
      * @return expiresAt
      */
 

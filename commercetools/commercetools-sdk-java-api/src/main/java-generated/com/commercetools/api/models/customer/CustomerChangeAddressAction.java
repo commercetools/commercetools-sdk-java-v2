@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.BaseAddress;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Changing an address of the Customer produces the CustomerAddressChanged Message.</p>
+ *  <p>Changing an address of the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddressChangedMessage" rel="nofollow">CustomerAddressChanged</a> Message.</p>
  *  <p>Either <code>addressId</code> or <code>addressKey</code> is required.</p>
  *
  * <hr>
@@ -41,7 +41,7 @@ public interface CustomerChangeAddressAction extends CustomerUpdateAction {
     String CHANGE_ADDRESS = "changeAddress";
 
     /**
-     *  <p><code>id</code> of the Address to change.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to change.</p>
      * @return addressId
      */
 
@@ -49,7 +49,7 @@ public interface CustomerChangeAddressAction extends CustomerUpdateAction {
     public String getAddressId();
 
     /**
-     *  <p><code>key</code> of the Address to change.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to change.</p>
      * @return addressKey
      */
 
@@ -66,14 +66,14 @@ public interface CustomerChangeAddressAction extends CustomerUpdateAction {
     public BaseAddress getAddress();
 
     /**
-     *  <p><code>id</code> of the Address to change.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to change.</p>
      * @param addressId value to be set
      */
 
     public void setAddressId(final String addressId);
 
     /**
-     *  <p><code>key</code> of the Address to change.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to change.</p>
      * @param addressKey value to be set
      */
 
@@ -157,8 +157,8 @@ public interface CustomerChangeAddressAction extends CustomerUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerChangeAddressAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerChangeAddressAction>() {
+    public static tools.jackson.core.type.TypeReference<CustomerChangeAddressAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerChangeAddressAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerChangeAddressAction>";

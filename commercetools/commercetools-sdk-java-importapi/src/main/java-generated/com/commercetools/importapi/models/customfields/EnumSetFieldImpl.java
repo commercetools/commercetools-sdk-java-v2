@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>A field with an enum set value.</p>
@@ -51,7 +52,7 @@ public class EnumSetFieldImpl implements EnumSetField, ModelBase {
     }
 
     /**
-     *  <p>JSON array of enum values, each represented by its key. Each key must match the key of a CustomFieldLocalizedEnumValue in the CustomFieldEnumType. The order of items in the array is not fixed.</p>
+     *  <p>JSON array of enum values, each represented by its key. Each key must match the key of a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldEnumValue" rel="nofollow">CustomFieldLocalizedEnumValue</a> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldEnumType" rel="nofollow">CustomFieldEnumType</a>. The order of items in the array is not fixed.</p>
      */
 
     public java.util.List<String> getValue() {

@@ -37,8 +37,13 @@ public class ShippingMethodDraftTest {
                 new Object[] { "active", ShippingMethodDraft.builder().active(true) },
                 new Object[] { "isDefault", ShippingMethodDraft.builder().isDefault(true) },
                 new Object[] { "predicate", ShippingMethodDraft.builder().predicate("predicate") },
-                new Object[] { "custom", ShippingMethodDraft.builder()
-                        .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
+                new Object[] { "custom",
+                        ShippingMethodDraft.builder()
+                                .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
+                new Object[] { "stores",
+                        ShippingMethodDraft.builder()
+                                .stores(Collections.singletonList(
+                                    new com.commercetools.api.models.store.StoreResourceIdentifierImpl())) } };
     }
 
     @Test
@@ -123,5 +128,15 @@ public class ShippingMethodDraftTest {
         value.setCustom(new com.commercetools.api.models.type.CustomFieldsDraftImpl());
         Assertions.assertThat(value.getCustom())
                 .isEqualTo(new com.commercetools.api.models.type.CustomFieldsDraftImpl());
+    }
+
+    @Test
+    public void stores() {
+        ShippingMethodDraft value = ShippingMethodDraft.of();
+        value.setStores(
+            Collections.singletonList(new com.commercetools.api.models.store.StoreResourceIdentifierImpl()));
+        Assertions.assertThat(value.getStores())
+                .isEqualTo(
+                    Collections.singletonList(new com.commercetools.api.models.store.StoreResourceIdentifierImpl()));
     }
 }

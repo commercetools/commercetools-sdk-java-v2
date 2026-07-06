@@ -36,7 +36,7 @@ public class StandalonePriceValidFromAndUntilSetMessagePayloadBuilder
     private java.time.ZonedDateTime previousValidUntil;
 
     /**
-     *  <p>Value of StandalonePrice <code>validFrom</code> after the Set Valid From and Until update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validFrom</code> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidFromAndUntilAction" rel="nofollow">Set Valid From and Until</a> update action.</p>
      * @param validFrom value to be set
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class StandalonePriceValidFromAndUntilSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Value of StandalonePrice <code>validFrom</code> before the Set Valid From and Until update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validFrom</code> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidFromAndUntilAction" rel="nofollow">Set Valid From and Until</a> update action.</p>
      * @param previousValidFrom value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class StandalonePriceValidFromAndUntilSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Value of StandalonePrice <code>validUntil</code> after the Set Valid From and Until update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validUntil</code> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidFromAndUntilAction" rel="nofollow">Set Valid From and Until</a> update action.</p>
      * @param validUntil value to be set
      * @return Builder
      */
@@ -72,7 +72,7 @@ public class StandalonePriceValidFromAndUntilSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Value of StandalonePrice <code>validUntil</code> before the Set Valid From and Until update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validUntil</code> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidFromAndUntilAction" rel="nofollow">Set Valid From and Until</a> update action.</p>
      * @param previousValidUntil value to be set
      * @return Builder
      */
@@ -84,7 +84,7 @@ public class StandalonePriceValidFromAndUntilSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Value of StandalonePrice <code>validFrom</code> after the Set Valid From and Until update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validFrom</code> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidFromAndUntilAction" rel="nofollow">Set Valid From and Until</a> update action.</p>
      * @return validFrom
      */
 
@@ -94,7 +94,7 @@ public class StandalonePriceValidFromAndUntilSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Value of StandalonePrice <code>validFrom</code> before the Set Valid From and Until update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validFrom</code> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidFromAndUntilAction" rel="nofollow">Set Valid From and Until</a> update action.</p>
      * @return previousValidFrom
      */
 
@@ -104,7 +104,7 @@ public class StandalonePriceValidFromAndUntilSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Value of StandalonePrice <code>validUntil</code> after the Set Valid From and Until update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validUntil</code> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidFromAndUntilAction" rel="nofollow">Set Valid From and Until</a> update action.</p>
      * @return validUntil
      */
 
@@ -114,7 +114,7 @@ public class StandalonePriceValidFromAndUntilSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Value of StandalonePrice <code>validUntil</code> before the Set Valid From and Until update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validUntil</code> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidFromAndUntilAction" rel="nofollow">Set Valid From and Until</a> update action.</p>
      * @return previousValidUntil
      */
 

@@ -34,7 +34,7 @@ public class ParcelRemovedFromDeliveryMessagePayloadBuilder
     private String shippingKey;
 
     /**
-     *  <p>Unique identifier of the Delivery.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param deliveryId value to be set
      * @return Builder
      */
@@ -45,7 +45,7 @@ public class ParcelRemovedFromDeliveryMessagePayloadBuilder
     }
 
     /**
-     *  <p>Parcel that was removed from the Delivery.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param builder function to build the parcel value
      * @return Builder
      */
@@ -57,7 +57,7 @@ public class ParcelRemovedFromDeliveryMessagePayloadBuilder
     }
 
     /**
-     *  <p>Parcel that was removed from the Delivery.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param builder function to build the parcel value
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class ParcelRemovedFromDeliveryMessagePayloadBuilder
     }
 
     /**
-     *  <p>Parcel that was removed from the Delivery.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param parcel value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class ParcelRemovedFromDeliveryMessagePayloadBuilder
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingKey value to be set
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class ParcelRemovedFromDeliveryMessagePayloadBuilder
     }
 
     /**
-     *  <p>Unique identifier of the Delivery.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @return deliveryId
      */
 
@@ -101,7 +101,7 @@ public class ParcelRemovedFromDeliveryMessagePayloadBuilder
     }
 
     /**
-     *  <p>Parcel that was removed from the Delivery.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @return parcel
      */
 
@@ -110,7 +110,7 @@ public class ParcelRemovedFromDeliveryMessagePayloadBuilder
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shippingKey
      */
 

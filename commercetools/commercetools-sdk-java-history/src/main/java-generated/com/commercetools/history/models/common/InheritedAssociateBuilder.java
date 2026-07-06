@@ -25,10 +25,10 @@ public class InheritedAssociateBuilder implements Builder<InheritedAssociate> {
 
     private java.util.List<com.commercetools.history.models.common.InheritedAssociateRoleAssignment> associateRoleAssignments;
 
-    private com.commercetools.history.models.common.Reference customer;
+    private com.commercetools.history.models.common.CustomerReference customer;
 
     /**
-     * set values to the associateRoleAssignments
+     *  <p>Inherited roles of the Associate within a Business Unit.</p>
      * @param associateRoleAssignments value to be set
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class InheritedAssociateBuilder implements Builder<InheritedAssociate> {
     }
 
     /**
-     * set value to the associateRoleAssignments
+     *  <p>Inherited roles of the Associate within a Business Unit.</p>
      * @param associateRoleAssignments value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class InheritedAssociateBuilder implements Builder<InheritedAssociate> {
     }
 
     /**
-     * add values to the associateRoleAssignments
+     *  <p>Inherited roles of the Associate within a Business Unit.</p>
      * @param associateRoleAssignments value to be set
      * @return Builder
      */
@@ -67,7 +67,7 @@ public class InheritedAssociateBuilder implements Builder<InheritedAssociate> {
     }
 
     /**
-     * add the value to the associateRoleAssignments using the builder function
+     *  <p>Inherited roles of the Associate within a Business Unit.</p>
      * @param builder function to build the associateRoleAssignments value
      * @return Builder
      */
@@ -84,7 +84,7 @@ public class InheritedAssociateBuilder implements Builder<InheritedAssociate> {
     }
 
     /**
-     * set the value to the associateRoleAssignments using the builder function
+     *  <p>Inherited roles of the Associate within a Business Unit.</p>
      * @param builder function to build the associateRoleAssignments value
      * @return Builder
      */
@@ -99,7 +99,7 @@ public class InheritedAssociateBuilder implements Builder<InheritedAssociate> {
     }
 
     /**
-     * add the value to the associateRoleAssignments using the builder function
+     *  <p>Inherited roles of the Associate within a Business Unit.</p>
      * @param builder function to build the associateRoleAssignments value
      * @return Builder
      */
@@ -111,7 +111,7 @@ public class InheritedAssociateBuilder implements Builder<InheritedAssociate> {
     }
 
     /**
-     * set the value to the associateRoleAssignments using the builder function
+     *  <p>Inherited roles of the Associate within a Business Unit.</p>
      * @param builder function to build the associateRoleAssignments value
      * @return Builder
      */
@@ -123,42 +123,43 @@ public class InheritedAssociateBuilder implements Builder<InheritedAssociate> {
     }
 
     /**
-     * set the value to the customer using the builder function
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that acts as an Associate in the Business Unit.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
 
     public InheritedAssociateBuilder customer(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
-        this.customer = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
+            Function<com.commercetools.history.models.common.CustomerReferenceBuilder, com.commercetools.history.models.common.CustomerReferenceBuilder> builder) {
+        this.customer = builder.apply(com.commercetools.history.models.common.CustomerReferenceBuilder.of()).build();
         return this;
     }
 
     /**
-     * set the value to the customer using the builder function
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that acts as an Associate in the Business Unit.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
 
     public InheritedAssociateBuilder withCustomer(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        this.customer = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
+            Function<com.commercetools.history.models.common.CustomerReferenceBuilder, com.commercetools.history.models.common.CustomerReference> builder) {
+        this.customer = builder.apply(com.commercetools.history.models.common.CustomerReferenceBuilder.of());
         return this;
     }
 
     /**
-     * set the value to the customer
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that acts as an Associate in the Business Unit.</p>
      * @param customer value to be set
      * @return Builder
      */
 
-    public InheritedAssociateBuilder customer(final com.commercetools.history.models.common.Reference customer) {
+    public InheritedAssociateBuilder customer(
+            final com.commercetools.history.models.common.CustomerReference customer) {
         this.customer = customer;
         return this;
     }
 
     /**
-     * value of associateRoleAssignments}
+     *  <p>Inherited roles of the Associate within a Business Unit.</p>
      * @return associateRoleAssignments
      */
 
@@ -167,11 +168,11 @@ public class InheritedAssociateBuilder implements Builder<InheritedAssociate> {
     }
 
     /**
-     * value of customer}
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that acts as an Associate in the Business Unit.</p>
      * @return customer
      */
 
-    public com.commercetools.history.models.common.Reference getCustomer() {
+    public com.commercetools.history.models.common.CustomerReference getCustomer() {
         return this.customer;
     }
 

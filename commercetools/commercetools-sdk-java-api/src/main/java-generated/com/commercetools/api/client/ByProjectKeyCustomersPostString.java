@@ -12,17 +12,17 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>If the <code>anonymousCart</code> field is set on the CustomerDraft, then the newly created Customer will be assigned to that Cart. Similarly, if the <code>anonymousId</code> field is set, the Customer will be set on all Carts, Orders, ShoppingLists and Payments with the same <code>anonymousId</code>.</p>
- *  <p>Creating a Customer produces the CustomerCreated Message. Simultaneously creating two Customers with the same email address can return a LockedField error.</p>
+ *  <p>Allows converting an anonymous Cart to the active Cart of a Customer with <span>cart merge</span>.</p>
+ *  <p>Creating a Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerCreatedMessage" rel="nofollow">CustomerCreated</a> Message. Simultaneously creating two Customers with the same email address can return a <a href="https://docs.commercetools.com/apis/ctp:api:type:LockedFieldError" rel="nofollow">LockedField</a> error.</p>
  *
  * <hr>
  * <div class=code-example>

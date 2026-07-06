@@ -8,22 +8,22 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- * AssetDimensions
+ *  <p>Dimensions of the Asset source specified by the number of pixels.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     AssetDimensions assetDimensions = AssetDimensions.builder()
- *             .w(1)
- *             .h(1)
+ *             .w(0.3)
+ *             .h(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface AssetDimensions {
 
     /**
-     *
+     *  <p>Width of the Asset source.</p>
      * @return w
      */
     @NotNull
@@ -41,7 +41,7 @@ public interface AssetDimensions {
     public Integer getW();
 
     /**
-     *
+     *  <p>Height of the Asset source.</p>
      * @return h
      */
     @NotNull
@@ -49,14 +49,14 @@ public interface AssetDimensions {
     public Integer getH();
 
     /**
-     * set w
+     *  <p>Width of the Asset source.</p>
      * @param w value to be set
      */
 
     public void setW(final Integer w);
 
     /**
-     * set h
+     *  <p>Height of the Asset source.</p>
      * @param h value to be set
      */
 
@@ -131,8 +131,8 @@ public interface AssetDimensions {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AssetDimensions> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AssetDimensions>() {
+    public static tools.jackson.core.type.TypeReference<AssetDimensions> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AssetDimensions>() {
             @Override
             public String toString() {
                 return "TypeReference<AssetDimensions>";

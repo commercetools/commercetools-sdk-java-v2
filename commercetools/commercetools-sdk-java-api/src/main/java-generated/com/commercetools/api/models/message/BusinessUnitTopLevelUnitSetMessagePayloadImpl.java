@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated when a Business Unit <code>topLevelUnit</code> is modified due to a hierarchy change after a successful Set Unit Type or Change Parent Unit update action.</p>
+ *  <p>Generated when a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> <code>topLevelUnit</code> is modified due to a hierarchy change after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitTopLevelUnitSetMessagePayloadImpl
@@ -57,7 +58,7 @@ public class BusinessUnitTopLevelUnitSetMessagePayloadImpl
     }
 
     /**
-     *  <p>Top-level unit of the Business Unit after the Set Unit Type or Change Parent Unit update action.</p>
+     *  <p>Top-level unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getTopLevelUnit() {
@@ -65,7 +66,7 @@ public class BusinessUnitTopLevelUnitSetMessagePayloadImpl
     }
 
     /**
-     *  <p>Top-level unit of the Business Unit before the Set Unit Type or Change Parent Unit update action.</p>
+     *  <p>Top-level unit of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitSetUnitTypeAction" rel="nofollow">Set Unit Type</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitChangeParentUnitAction" rel="nofollow">Change Parent Unit</a> update action.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getOldTopLevelUnit() {

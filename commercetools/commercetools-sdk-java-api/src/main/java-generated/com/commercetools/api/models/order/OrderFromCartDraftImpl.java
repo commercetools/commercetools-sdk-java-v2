@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * OrderFromCartDraft
@@ -75,7 +76,7 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
     }
 
     /**
-     *  <p><code>id</code> of the Cart used to create the Order.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> used to create the Order.</p>
      */
     @Deprecated
     public String getId() {
@@ -83,7 +84,7 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
     }
 
     /**
-     *  <p>ResourceIdentifier to the Cart from which the Order is created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> to the Cart from which the Order is created.</p>
      *  <p>This field is required, but is marked as optional for backwards compatibility reasons.</p>
      */
 
@@ -92,7 +93,7 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
     }
 
     /**
-     *  <p><code>version</code> of the Cart from which the Order is created.</p>
+     *  <p><code>version</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> from which the Order is created.</p>
      */
 
     public Long getVersion() {
@@ -108,8 +109,9 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
     }
 
     /**
-     *  <p>User-defined identifier for a purchase Order.</p>
-     *  <p>It is typically set by the Buyer and can be used with Quotes to track the purchase Order during the quote and order flow.</p>
+     *  <p>User-defined identifier for a purchase order.</p>
+     *  <p>It is typically set by the <a href="https://docs.commercetools.com/apis/ctp:api:type:Buyer" rel="nofollow">Buyer</a> or Merchant to track the purchase order during the <span>quote and order flow</span>.</p>
+     *  <p>If not provided, the <code>purchaseOrderNumber</code> from the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> is used.</p>
      */
 
     public String getPurchaseOrderNumber() {
@@ -149,10 +151,10 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields for the Order. The Custom Fields' type must match the Custom Fields' type in the referenced Cart.</p>
+     *  <p>Custom Fields for the Order. The Custom Fields' type must match the Custom Fields' type in the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
      *  <ul>
-     *   <li>If empty, the Custom Fields on the referenced Cart are added to the Order automatically.</li>
-     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order.</li>
+     *   <li>If empty, the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> are added to the Order automatically.</li>
+     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> and added to the Order.</li>
      *  </ul>
      */
 

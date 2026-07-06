@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Product Tailoring Set Slug update action.</p>
+ *  <p>Generated after a successful Product Tailoring <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetSlugAction" rel="nofollow">Set Slug</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTailoringSlugSetMessageImpl implements ProductTailoringSlugSetMessage, ModelBase {
@@ -154,7 +155,7 @@ public class ProductTailoringSlugSetMessageImpl implements ProductTailoringSlugS
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -170,7 +171,7 @@ public class ProductTailoringSlugSetMessageImpl implements ProductTailoringSlugS
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -210,7 +211,7 @@ public class ProductTailoringSlugSetMessageImpl implements ProductTailoringSlugS
     }
 
     /**
-     *  <p>The slug of the Product Tailoring after the Set Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">Product Tailoring</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetSlugAction" rel="nofollow">Set Slug</a> update action.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getSlug() {
@@ -218,7 +219,7 @@ public class ProductTailoringSlugSetMessageImpl implements ProductTailoringSlugS
     }
 
     /**
-     *  <p>The slug of the ProductTailoring before the Set Slug update action.</p>
+     *  <p>The slug of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetSlugAction" rel="nofollow">Set Slug</a> update action.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getOldSlug() {

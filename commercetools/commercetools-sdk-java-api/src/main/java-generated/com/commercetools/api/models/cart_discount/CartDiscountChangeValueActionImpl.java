@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Changes the CartDiscountValue for relative, absolute and fixed price CartDiscounts. Changing to Gift Line Item is not supported.</p>
+ *  <p>Changes the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValue" rel="nofollow">CartDiscountValue</a> for <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValueRelative" rel="nofollow">relative</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValueAbsolute" rel="nofollow">absolute</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValueFixed" rel="nofollow">fixed price</a> CartDiscounts. Changing to <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValueGiftLineItem" rel="nofollow">Gift Line Item</a> is not supported.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountChangeValueActionImpl implements CartDiscountChangeValueAction, ModelBase {
@@ -52,7 +53,8 @@ public class CartDiscountChangeValueActionImpl implements CartDiscountChangeValu
     }
 
     /**
-     *  <p>New value to set. When trying to set a CartDiscountValueGiftLineItemDraft an InvalidInput error is returned.</p>
+     *  <p>New value to set.</p>
+     *  <p>When trying to set a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountValueGiftLineItemDraft" rel="nofollow">CartDiscountValueGiftLineItemDraft</a> an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p>
      */
 
     public com.commercetools.api.models.cart_discount.CartDiscountValueDraft getValue() {

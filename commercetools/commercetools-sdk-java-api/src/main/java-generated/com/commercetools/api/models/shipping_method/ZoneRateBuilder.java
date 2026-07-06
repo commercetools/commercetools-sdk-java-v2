@@ -28,7 +28,7 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
     private java.util.List<com.commercetools.api.models.shipping_method.ShippingRate> shippingRates;
 
     /**
-     *  <p>Zone for which the shipping rates are valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> for which the shipping rates are valid.</p>
      * @param builder function to build the zone value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
     }
 
     /**
-     *  <p>Zone for which the shipping rates are valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> for which the shipping rates are valid.</p>
      * @param builder function to build the zone value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
     }
 
     /**
-     *  <p>Zone for which the shipping rates are valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> for which the shipping rates are valid.</p>
      * @param zone value to be set
      * @return Builder
      */
@@ -154,7 +154,7 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
     }
 
     /**
-     *  <p>Zone for which the shipping rates are valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> for which the shipping rates are valid.</p>
      * @return zone
      */
 

@@ -8,16 +8,17 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Reference to an InventoryEntry.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to an <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +42,15 @@ public interface InventoryEntryReference extends Reference, com.commercetools.ap
     String INVENTORY_ENTRY = "inventory-entry";
 
     /**
-     *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with Reference Expansion for InventoryEntries.</p>
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
+
+    /**
+     *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with <span>Reference Expansion</span> for InventoryEntries.</p>
      * @return obj
      */
     @Valid
@@ -49,7 +58,7 @@ public interface InventoryEntryReference extends Reference, com.commercetools.ap
     public InventoryEntry getObj();
 
     /**
-     *  <p>Unique identifier of the referenced InventoryEntry.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
      * @return id
      */
     @NotNull
@@ -57,14 +66,14 @@ public interface InventoryEntryReference extends Reference, com.commercetools.ap
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with Reference Expansion for InventoryEntries.</p>
+     *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with <span>Reference Expansion</span> for InventoryEntries.</p>
      * @param obj value to be set
      */
 
     public void setObj(final InventoryEntry obj);
 
     /**
-     *  <p>Unique identifier of the referenced InventoryEntry.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
      * @param id value to be set
      */
 
@@ -139,8 +148,8 @@ public interface InventoryEntryReference extends Reference, com.commercetools.ap
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntryReference> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntryReference>() {
+    public static tools.jackson.core.type.TypeReference<InventoryEntryReference> typeReference() {
+        return new tools.jackson.core.type.TypeReference<InventoryEntryReference>() {
             @Override
             public String toString() {
                 return "TypeReference<InventoryEntryReference>";

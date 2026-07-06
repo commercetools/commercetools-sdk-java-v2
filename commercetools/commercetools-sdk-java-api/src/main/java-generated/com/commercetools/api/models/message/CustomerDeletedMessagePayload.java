@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Delete Customer request.</p>
+ *  <p>Generated after a successful <span>Delete Customer</span> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,6 +36,21 @@ public interface CustomerDeletedMessagePayload extends MessagePayload {
     String CUSTOMER_DELETED = "CustomerDeleted";
 
     /**
+     *  <p>The email address of the Customer that was deleted.</p>
+     * @return email
+     */
+
+    @JsonProperty("email")
+    public String getEmail();
+
+    /**
+     *  <p>The email address of the Customer that was deleted.</p>
+     * @param email value to be set
+     */
+
+    public void setEmail(final String email);
+
+    /**
      * factory method
      * @return instance of CustomerDeletedMessagePayload
      */
@@ -49,6 +65,7 @@ public interface CustomerDeletedMessagePayload extends MessagePayload {
      */
     public static CustomerDeletedMessagePayload of(final CustomerDeletedMessagePayload template) {
         CustomerDeletedMessagePayloadImpl instance = new CustomerDeletedMessagePayloadImpl();
+        instance.setEmail(template.getEmail());
         return instance;
     }
 
@@ -65,6 +82,7 @@ public interface CustomerDeletedMessagePayload extends MessagePayload {
             return null;
         }
         CustomerDeletedMessagePayloadImpl instance = new CustomerDeletedMessagePayloadImpl();
+        instance.setEmail(template.getEmail());
         return instance;
     }
 
@@ -99,8 +117,8 @@ public interface CustomerDeletedMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerDeletedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerDeletedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<CustomerDeletedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerDeletedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerDeletedMessagePayload>";

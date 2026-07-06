@@ -17,9 +17,9 @@ public class StandalonePriceRemovePriceTierActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, StandalonePriceRemovePriceTierActionQueryBuilderDsl::of));
     }
 
-    public LongComparisonPredicateBuilder<StandalonePriceRemovePriceTierActionQueryBuilderDsl> tierMinimumQuantity() {
+    public LongComparisonPredicateBuilder<StandalonePriceRemovePriceTierActionQueryBuilderDsl> minimumQuantity() {
         return new LongComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("tierMinimumQuantity")),
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("minimumQuantity")),
             p -> new CombinationQueryPredicate<>(p, StandalonePriceRemovePriceTierActionQueryBuilderDsl::of));
     }
 

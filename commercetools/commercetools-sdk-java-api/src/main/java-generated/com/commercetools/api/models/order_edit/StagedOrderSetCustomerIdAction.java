@@ -9,13 +9,14 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Setting the Order's <code>customerId</code> does not recalculate prices or discounts on the Order. If the Customer belongs to a Customer Group, <code>customerGroup</code> on the Order is updated automatically.</p>
- *  <p>Produces the OrderCustomerSet Message.</p>
+ *  <p>Setting the Order's <code>customerId</code> does not recalculate prices or discounts on the Order. If the Customer belongs to a Customer Group, <code>customerGroup</code> on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> is updated automatically.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderCustomerSetMessage" rel="nofollow">OrderCustomerSet</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,7 +38,7 @@ public interface StagedOrderSetCustomerIdAction extends StagedOrderUpdateAction 
     String SET_CUSTOMER_ID = "setCustomerId";
 
     /**
-     *  <p><code>id</code> of an existing Customer. If empty, any existing value is removed.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>. If empty, any existing value is removed.</p>
      * @return customerId
      */
 
@@ -45,7 +46,7 @@ public interface StagedOrderSetCustomerIdAction extends StagedOrderUpdateAction 
     public String getCustomerId();
 
     /**
-     *  <p><code>id</code> of an existing Customer. If empty, any existing value is removed.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>. If empty, any existing value is removed.</p>
      * @param customerId value to be set
      */
 
@@ -118,8 +119,8 @@ public interface StagedOrderSetCustomerIdAction extends StagedOrderUpdateAction 
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomerIdAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomerIdAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrderSetCustomerIdAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrderSetCustomerIdAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderSetCustomerIdAction>";

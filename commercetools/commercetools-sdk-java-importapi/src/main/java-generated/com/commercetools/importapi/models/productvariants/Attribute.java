@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Represents the value of an Attribute of a Product Variant.</p>
@@ -33,8 +33,8 @@ import jakarta.validation.constraints.NotNull;
 public interface Attribute {
 
     /**
-     *  <p>Required if used for ProductVariantImport. Must not be set if used for ProductVariantPatch.</p>
-     *  <p>Must match <code>name</code> of an AttributeDefinition of the Product Type.</p>
+     *  <p>Required if used for <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantImport" rel="nofollow">ProductVariantImport</a>. Must not be set if used for <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantPatch" rel="nofollow">ProductVariantPatch</a>.</p>
+     *  <p>Must match <code>name</code> of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> of the Product Type.</p>
      * @return name
      */
 
@@ -42,7 +42,7 @@ public interface Attribute {
     public String getName();
 
     /**
-     *  <p>Must match <code>type</code> of an AttributeDefinition of the Product Type. The type is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     *  <p>Must match <code>type</code> of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> of the Product Type. The type is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
      * @return type
      */
     @NotNull
@@ -50,8 +50,8 @@ public interface Attribute {
     public String getType();
 
     /**
-     *  <p>Required if used for ProductVariantImport. Must not be set if used for ProductVariantPatch.</p>
-     *  <p>Must match <code>name</code> of an AttributeDefinition of the Product Type.</p>
+     *  <p>Required if used for <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantImport" rel="nofollow">ProductVariantImport</a>. Must not be set if used for <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantPatch" rel="nofollow">ProductVariantPatch</a>.</p>
+     *  <p>Must match <code>name</code> of an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a> of the Product Type.</p>
      * @param name value to be set
      */
 
@@ -268,8 +268,8 @@ public interface Attribute {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Attribute> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Attribute>() {
+    public static tools.jackson.core.type.TypeReference<Attribute> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Attribute>() {
             @Override
             public String toString() {
                 return "TypeReference<Attribute>";

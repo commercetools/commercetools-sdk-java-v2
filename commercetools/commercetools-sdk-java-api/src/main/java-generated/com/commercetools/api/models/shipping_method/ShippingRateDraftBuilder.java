@@ -68,7 +68,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     *  <p>Free shipping is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
+     *  <p><span>Free shipping</span> is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      * @param builder function to build the freeAbove value
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     *  <p>Free shipping is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
+     *  <p><span>Free shipping</span> is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      * @param builder function to build the freeAbove value
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     *  <p>Free shipping is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
+     *  <p><span>Free shipping</span> is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      * @param freeAbove value to be set
      * @return Builder
      */
@@ -181,7 +181,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     *  <p>Free shipping is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
+     *  <p><span>Free shipping</span> is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      * @return freeAbove
      */
 

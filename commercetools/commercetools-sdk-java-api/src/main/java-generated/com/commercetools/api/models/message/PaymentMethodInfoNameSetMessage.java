@@ -9,14 +9,14 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Set MethodInfo Name update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoNameAction" rel="nofollow">Set MethodInfo Name</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -45,7 +45,7 @@ public interface PaymentMethodInfoNameSetMessage extends Message {
     String PAYMENT_METHOD_INFO_NAME_SET = "PaymentMethodInfoNameSet";
 
     /**
-     *  <p>Name of the Payment Method after the Set MethodInfo Name update action.</p>
+     *  <p>Name of the Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoNameAction" rel="nofollow">Set MethodInfo Name</a> update action.</p>
      * @return name
      */
     @Valid
@@ -53,7 +53,7 @@ public interface PaymentMethodInfoNameSetMessage extends Message {
     public LocalizedString getName();
 
     /**
-     *  <p>Name of the Payment Method before the Set MethodInfo Name update action.</p>
+     *  <p>Name of the Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoNameAction" rel="nofollow">Set MethodInfo Name</a> update action.</p>
      * @return oldName
      */
     @Valid
@@ -61,14 +61,14 @@ public interface PaymentMethodInfoNameSetMessage extends Message {
     public LocalizedString getOldName();
 
     /**
-     *  <p>Name of the Payment Method after the Set MethodInfo Name update action.</p>
+     *  <p>Name of the Payment Method after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoNameAction" rel="nofollow">Set MethodInfo Name</a> update action.</p>
      * @param name value to be set
      */
 
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>Name of the Payment Method before the Set MethodInfo Name update action.</p>
+     *  <p>Name of the Payment Method before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetMethodInfoNameAction" rel="nofollow">Set MethodInfo Name</a> update action.</p>
      * @param oldName value to be set
      */
 
@@ -165,8 +165,8 @@ public interface PaymentMethodInfoNameSetMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentMethodInfoNameSetMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentMethodInfoNameSetMessage>() {
+    public static tools.jackson.core.type.TypeReference<PaymentMethodInfoNameSetMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentMethodInfoNameSetMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentMethodInfoNameSetMessage>";

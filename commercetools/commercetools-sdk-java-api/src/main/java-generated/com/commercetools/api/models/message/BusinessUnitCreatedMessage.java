@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.business_unit.BusinessUnit;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Create BusinessUnit request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/business-units:POST" rel="nofollow">Create BusinessUnit</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface BusinessUnitCreatedMessage extends Message {
     String BUSINESS_UNIT_CREATED = "BusinessUnitCreated";
 
     /**
-     *  <p>The Business Unit that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> that was created.</p>
      * @return businessUnit
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface BusinessUnitCreatedMessage extends Message {
     public BusinessUnit getBusinessUnit();
 
     /**
-     *  <p>The Business Unit that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a> that was created.</p>
      * @param businessUnit value to be set
      */
 
@@ -152,8 +152,8 @@ public interface BusinessUnitCreatedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitCreatedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitCreatedMessage>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitCreatedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitCreatedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitCreatedMessage>";

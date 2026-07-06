@@ -9,14 +9,14 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.Permission;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Change triggered by the Set Permissions, Add Permission, and Remove Permission update actions.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRoleSetPermissionsAction" rel="nofollow">Set Permissions</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRoleAddPermissionAction" rel="nofollow">Add Permission</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRoleRemovePermissionAction" rel="nofollow">Remove Permission</a> update actions.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,6 +26,8 @@ import jakarta.validation.constraints.NotNull;
  *             .change("{change}")
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .plusAddedItems(addedItemsBuilder -> addedItemsBuilder)
+ *             .plusRemovedItems(removedItemsBuilder -> removedItemsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -73,6 +75,22 @@ public interface SetPermissionsChange extends Change {
     public List<Permission> getNextValue();
 
     /**
+     *  <p>Elements added to the array.</p>
+     * @return addedItems
+     */
+    @NotNull
+    @JsonProperty("addedItems")
+    public List<Permission> getAddedItems();
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @return removedItems
+     */
+    @NotNull
+    @JsonProperty("removedItems")
+    public List<Permission> getRemovedItems();
+
+    /**
      * set change
      * @param change value to be set
      */
@@ -110,6 +128,36 @@ public interface SetPermissionsChange extends Change {
     public void setNextValue(final List<Permission> nextValue);
 
     /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems values to be set
+     */
+
+    @JsonIgnore
+    public void setAddedItems(final Permission... addedItems);
+
+    /**
+     *  <p>Elements added to the array.</p>
+     * @param addedItems values to be set
+     */
+
+    public void setAddedItems(final List<Permission> addedItems);
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems values to be set
+     */
+
+    @JsonIgnore
+    public void setRemovedItems(final Permission... removedItems);
+
+    /**
+     *  <p>Elements removed from the array.</p>
+     * @param removedItems values to be set
+     */
+
+    public void setRemovedItems(final List<Permission> removedItems);
+
+    /**
      * factory method
      * @return instance of SetPermissionsChange
      */
@@ -127,6 +175,8 @@ public interface SetPermissionsChange extends Change {
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        instance.setAddedItems(template.getAddedItems());
+        instance.setRemovedItems(template.getRemovedItems());
         return instance;
     }
 
@@ -146,6 +196,8 @@ public interface SetPermissionsChange extends Change {
         instance.setChange(template.getChange());
         instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue()).map(ArrayList::new).orElse(null));
         instance.setNextValue(Optional.ofNullable(template.getNextValue()).map(ArrayList::new).orElse(null));
+        instance.setAddedItems(Optional.ofNullable(template.getAddedItems()).map(ArrayList::new).orElse(null));
+        instance.setRemovedItems(Optional.ofNullable(template.getRemovedItems()).map(ArrayList::new).orElse(null));
         return instance;
     }
 
@@ -180,8 +232,8 @@ public interface SetPermissionsChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetPermissionsChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetPermissionsChange>() {
+    public static tools.jackson.core.type.TypeReference<SetPermissionsChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetPermissionsChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetPermissionsChange>";

@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Represents a single error.</p>
@@ -32,7 +32,7 @@ import jakarta.validation.constraints.NotNull;
 public interface GraphQLErrorObject {
 
     /**
-     *  <p>One of the error codes that is listed on the Errors page.</p>
+     *  <p>One of the error codes that is listed on the <span>Errors</span> page.</p>
      * @return code
      */
     @NotNull
@@ -123,6 +123,22 @@ public interface GraphQLErrorObject {
      */
     public static com.commercetools.api.models.error.GraphQLBadGatewayErrorBuilder badGatewayBuilder() {
         return com.commercetools.api.models.error.GraphQLBadGatewayErrorBuilder.of();
+    }
+
+    /**
+     * builder for bulkOperationMaxItemsExceeded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLBulkOperationMaxItemsExceededErrorBuilder bulkOperationMaxItemsExceededBuilder() {
+        return com.commercetools.api.models.error.GraphQLBulkOperationMaxItemsExceededErrorBuilder.of();
+    }
+
+    /**
+     * builder for circularDependency subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLCircularDependencyErrorBuilder circularDependencyBuilder() {
+        return com.commercetools.api.models.error.GraphQLCircularDependencyErrorBuilder.of();
     }
 
     /**
@@ -270,6 +286,14 @@ public interface GraphQLErrorObject {
     }
 
     /**
+     * builder for exactLockConflict subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLExactLockConflictErrorBuilder exactLockConflictBuilder() {
+        return com.commercetools.api.models.error.GraphQLExactLockConflictErrorBuilder.of();
+    }
+
+    /**
      * builder for expiredCustomerEmailToken subtype
      * @return builder
      */
@@ -291,6 +315,30 @@ public interface GraphQLErrorObject {
      */
     public static com.commercetools.api.models.error.GraphQLExtensionBadResponseErrorBuilder extensionBadResponseBuilder() {
         return com.commercetools.api.models.error.GraphQLExtensionBadResponseErrorBuilder.of();
+    }
+
+    /**
+     * builder for extensionChainTooDeep subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLExtensionChainTooDeepErrorBuilder extensionChainTooDeepBuilder() {
+        return com.commercetools.api.models.error.GraphQLExtensionChainTooDeepErrorBuilder.of();
+    }
+
+    /**
+     * builder for extensionChainTooWide subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLExtensionChainTooWideErrorBuilder extensionChainTooWideBuilder() {
+        return com.commercetools.api.models.error.GraphQLExtensionChainTooWideErrorBuilder.of();
+    }
+
+    /**
+     * builder for extensionDependencyExists subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLExtensionDependencyExistsErrorBuilder extensionDependencyExistsBuilder() {
+        return com.commercetools.api.models.error.GraphQLExtensionDependencyExistsErrorBuilder.of();
     }
 
     /**
@@ -438,6 +486,22 @@ public interface GraphQLErrorObject {
     }
 
     /**
+     * builder for lineItemQuantityAboveLimit subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLLineItemQuantityAboveLimitErrorBuilder lineItemQuantityAboveLimitBuilder() {
+        return com.commercetools.api.models.error.GraphQLLineItemQuantityAboveLimitErrorBuilder.of();
+    }
+
+    /**
+     * builder for lineItemQuantityBelowLimit subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLLineItemQuantityBelowLimitErrorBuilder lineItemQuantityBelowLimitBuilder() {
+        return com.commercetools.api.models.error.GraphQLLineItemQuantityBelowLimitErrorBuilder.of();
+    }
+
+    /**
      * builder for lockedField subtype
      * @return builder
      */
@@ -462,6 +526,14 @@ public interface GraphQLErrorObject {
     }
 
     /**
+     * builder for maxDiscountGroupsReached subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLMaxDiscountGroupsReachedErrorBuilder maxDiscountGroupsReachedBuilder() {
+        return com.commercetools.api.models.error.GraphQLMaxDiscountGroupsReachedErrorBuilder.of();
+    }
+
+    /**
      * builder for maxResourceLimitExceeded subtype
      * @return builder
      */
@@ -475,6 +547,14 @@ public interface GraphQLErrorObject {
      */
     public static com.commercetools.api.models.error.GraphQLMaxStoreReferencesReachedErrorBuilder maxStoreReferencesReachedBuilder() {
         return com.commercetools.api.models.error.GraphQLMaxStoreReferencesReachedErrorBuilder.of();
+    }
+
+    /**
+     * builder for missingDependency subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLMissingDependencyErrorBuilder missingDependencyBuilder() {
+        return com.commercetools.api.models.error.GraphQLMissingDependencyErrorBuilder.of();
     }
 
     /**
@@ -598,6 +678,14 @@ public interface GraphQLErrorObject {
     }
 
     /**
+     * builder for recurringOrderFailure subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLRecurringOrderFailureErrorBuilder recurringOrderFailureBuilder() {
+        return com.commercetools.api.models.error.GraphQLRecurringOrderFailureErrorBuilder.of();
+    }
+
+    /**
      * builder for referenceExists subtype
      * @return builder
      */
@@ -710,6 +798,14 @@ public interface GraphQLErrorObject {
     }
 
     /**
+     * builder for validityLockConflict subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLValidityLockConflictErrorBuilder validityLockConflictBuilder() {
+        return com.commercetools.api.models.error.GraphQLValidityLockConflictErrorBuilder.of();
+    }
+
+    /**
      * accessor map function
      * @param <T> mapped type
      * @param helper function to map the object
@@ -723,8 +819,8 @@ public interface GraphQLErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLErrorObject> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLErrorObject>() {
+    public static tools.jackson.core.type.TypeReference<GraphQLErrorObject> typeReference() {
+        return new tools.jackson.core.type.TypeReference<GraphQLErrorObject>() {
             @Override
             public String toString() {
                 return "TypeReference<GraphQLErrorObject>";

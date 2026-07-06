@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Represents a warning related to the returned response.</p>
@@ -21,8 +21,9 @@ import jakarta.validation.constraints.NotNull;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     WarningObject warningObject = WarningObject.imageProcessingOngoingBuilder()
+ *     WarningObject warningObject = WarningObject.cannotChangeReservationExpiryBuilder()
  *             message("{message}")
+ *             lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -77,6 +78,30 @@ public interface WarningObject {
     }
 
     /**
+     * builder for cannotChangeReservationExpiry subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.warning.CannotChangeReservationExpiryWarningBuilder cannotChangeReservationExpiryBuilder() {
+        return com.commercetools.api.models.warning.CannotChangeReservationExpiryWarningBuilder.of();
+    }
+
+    /**
+     * builder for cannotCreateReservation subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.warning.CannotCreateReservationWarningBuilder cannotCreateReservationBuilder() {
+        return com.commercetools.api.models.warning.CannotCreateReservationWarningBuilder.of();
+    }
+
+    /**
+     * builder for cannotUpdateReservation subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.warning.CannotUpdateReservationWarningBuilder cannotUpdateReservationBuilder() {
+        return com.commercetools.api.models.warning.CannotUpdateReservationWarningBuilder.of();
+    }
+
+    /**
      * builder for imageProcessingOngoing subtype
      * @return builder
      */
@@ -98,8 +123,8 @@ public interface WarningObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<WarningObject> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<WarningObject>() {
+    public static tools.jackson.core.type.TypeReference<WarningObject> typeReference() {
+        return new tools.jackson.core.type.TypeReference<WarningObject>() {
             @Override
             public String toString() {
                 return "TypeReference<WarningObject>";

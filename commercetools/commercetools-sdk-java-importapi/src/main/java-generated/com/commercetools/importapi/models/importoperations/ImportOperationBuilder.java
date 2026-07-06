@@ -68,7 +68,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p><code>key</code> of the ImportContainer.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainer</a>.</p>
      * @param importContainerKey value to be set
      * @return Builder
      */
@@ -123,7 +123,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>Contains errors if the import was unsuccessful. See Errors.</p>
+     *  <p>Contains errors if the import was unsuccessful. See <span>Errors</span>.</p>
      * @param errors value to be set
      * @return Builder
      */
@@ -135,7 +135,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>Contains errors if the import was unsuccessful. See Errors.</p>
+     *  <p>Contains errors if the import was unsuccessful. See <span>Errors</span>.</p>
      * @param errors value to be set
      * @return Builder
      */
@@ -147,7 +147,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>Contains errors if the import was unsuccessful. See Errors.</p>
+     *  <p>Contains errors if the import was unsuccessful. See <span>Errors</span>.</p>
      * @param errors value to be set
      * @return Builder
      */
@@ -162,7 +162,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>Contains errors if the import was unsuccessful. See Errors.</p>
+     *  <p>Contains errors if the import was unsuccessful. See <span>Errors</span>.</p>
      * @param builder function to build the errors value
      * @return Builder
      */
@@ -177,7 +177,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>Contains errors if the import was unsuccessful. See Errors.</p>
+     *  <p>Contains errors if the import was unsuccessful. See <span>Errors</span>.</p>
      * @param builder function to build the errors value
      * @return Builder
      */
@@ -325,7 +325,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p><code>key</code> of the ImportContainer.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainer</a>.</p>
      * @return importContainerKey
      */
 
@@ -371,7 +371,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>Contains errors if the import was unsuccessful. See Errors.</p>
+     *  <p>Contains errors if the import was unsuccessful. See <span>Errors</span>.</p>
      * @return errors
      */
 

@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after an Approval Flow is completed and reaches a final status.</p>
+ *  <p>Generated after an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a> is completed and reaches a final status.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ApprovalFlowCompletedMessagePayloadImpl implements ApprovalFlowCompletedMessagePayload, ModelBase {
@@ -56,7 +57,7 @@ public class ApprovalFlowCompletedMessagePayloadImpl implements ApprovalFlowComp
     }
 
     /**
-     *  <p>Final status of the Approval Flow.</p>
+     *  <p>Final status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      */
 
     public com.commercetools.api.models.approval_flow.ApprovalFlowStatus getStatus() {
@@ -64,7 +65,7 @@ public class ApprovalFlowCompletedMessagePayloadImpl implements ApprovalFlowComp
     }
 
     /**
-     *  <p>Reference to the Order related to the completed Approval Flow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> related to the completed <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalFlow" rel="nofollow">Approval Flow</a>.</p>
      */
 
     public com.commercetools.api.models.order.OrderReference getOrder() {

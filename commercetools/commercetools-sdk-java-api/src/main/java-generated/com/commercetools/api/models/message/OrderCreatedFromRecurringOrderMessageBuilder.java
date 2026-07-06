@@ -187,7 +187,7 @@ public class OrderCreatedFromRecurringOrderMessageBuilder implements Builder<Ord
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -199,7 +199,7 @@ public class OrderCreatedFromRecurringOrderMessageBuilder implements Builder<Ord
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -261,7 +261,7 @@ public class OrderCreatedFromRecurringOrderMessageBuilder implements Builder<Ord
     }
 
     /**
-     *  <p>Order that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that was created.</p>
      * @param builder function to build the order value
      * @return Builder
      */
@@ -273,7 +273,7 @@ public class OrderCreatedFromRecurringOrderMessageBuilder implements Builder<Ord
     }
 
     /**
-     *  <p>Order that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that was created.</p>
      * @param builder function to build the order value
      * @return Builder
      */
@@ -285,7 +285,7 @@ public class OrderCreatedFromRecurringOrderMessageBuilder implements Builder<Ord
     }
 
     /**
-     *  <p>Order that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that was created.</p>
      * @param order value to be set
      * @return Builder
      */
@@ -296,7 +296,7 @@ public class OrderCreatedFromRecurringOrderMessageBuilder implements Builder<Ord
     }
 
     /**
-     *  <p>Reference to the origin Recurring Order.</p>
+     *  <p>Reference to the origin <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @param builder function to build the recurringOrderRef value
      * @return Builder
      */
@@ -310,7 +310,7 @@ public class OrderCreatedFromRecurringOrderMessageBuilder implements Builder<Ord
     }
 
     /**
-     *  <p>Reference to the origin Recurring Order.</p>
+     *  <p>Reference to the origin <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @param builder function to build the recurringOrderRef value
      * @return Builder
      */
@@ -323,7 +323,7 @@ public class OrderCreatedFromRecurringOrderMessageBuilder implements Builder<Ord
     }
 
     /**
-     *  <p>Reference to the origin Recurring Order.</p>
+     *  <p>Reference to the origin <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @param recurringOrderRef value to be set
      * @return Builder
      */
@@ -400,7 +400,7 @@ public class OrderCreatedFromRecurringOrderMessageBuilder implements Builder<Ord
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -428,7 +428,7 @@ public class OrderCreatedFromRecurringOrderMessageBuilder implements Builder<Ord
     }
 
     /**
-     *  <p>Order that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that was created.</p>
      * @return order
      */
 
@@ -437,7 +437,7 @@ public class OrderCreatedFromRecurringOrderMessageBuilder implements Builder<Ord
     }
 
     /**
-     *  <p>Reference to the origin Recurring Order.</p>
+     *  <p>Reference to the origin <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @return recurringOrderRef
      */
 

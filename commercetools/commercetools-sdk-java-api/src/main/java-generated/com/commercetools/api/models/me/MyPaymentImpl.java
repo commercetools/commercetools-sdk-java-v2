@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * MyPayment
@@ -82,7 +83,7 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
     }
 
     /**
-     *  <p>Reference to a Customer associated with the Payment. Set automatically with a password flow token. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
+     *  <p>Reference to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> associated with the Payment. Set automatically with a <span>password flow token</span>. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
@@ -90,7 +91,7 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
     }
 
     /**
-     *  <p>Anonymous session associated with the Payment. Set automatically with a token for an anonymous session. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">Anonymous session</a> associated with the Payment. Set automatically with a <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">token for an anonymous session</a>. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
      */
 
     public String getAnonymousId() {
@@ -98,7 +99,7 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
     }
 
     /**
-     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> gross total.</p>
      */
 
     public com.commercetools.api.models.common.CentPrecisionMoney getAmountPlanned() {
@@ -114,7 +115,7 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
     }
 
     /**
-     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionType</a> and a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">TransactionState</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.payment.Transaction> getTransactions() {

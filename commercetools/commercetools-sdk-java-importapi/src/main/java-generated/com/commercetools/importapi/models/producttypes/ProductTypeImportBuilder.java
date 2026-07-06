@@ -36,7 +36,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     private java.util.List<com.commercetools.importapi.models.producttypes.AttributeDefinition> attributes;
 
     /**
-     *  <p>User-defined unique identifier. If a ProductType with this <code>key</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     }
 
     /**
-     *  <p>The <code>attributes</code> of ProductType.</p>
+     *  <p>The <code>attributes</code> of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     }
 
     /**
-     *  <p>The <code>attributes</code> of ProductType.</p>
+     *  <p>The <code>attributes</code> of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -93,7 +93,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     }
 
     /**
-     *  <p>The <code>attributes</code> of ProductType.</p>
+     *  <p>The <code>attributes</code> of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     }
 
     /**
-     *  <p>The <code>attributes</code> of ProductType.</p>
+     *  <p>The <code>attributes</code> of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -124,7 +124,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     }
 
     /**
-     *  <p>The <code>attributes</code> of ProductType.</p>
+     *  <p>The <code>attributes</code> of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -138,7 +138,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     }
 
     /**
-     *  <p>The <code>attributes</code> of ProductType.</p>
+     *  <p>The <code>attributes</code> of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -150,7 +150,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     }
 
     /**
-     *  <p>The <code>attributes</code> of ProductType.</p>
+     *  <p>The <code>attributes</code> of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -162,7 +162,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     }
 
     /**
-     *  <p>User-defined unique identifier. If a ProductType with this <code>key</code> exists, it is updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a> with this <code>key</code> exists, it is updated with the imported data.</p>
      * @return key
      */
 
@@ -189,7 +189,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     }
 
     /**
-     *  <p>The <code>attributes</code> of ProductType.</p>
+     *  <p>The <code>attributes</code> of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>.</p>
      * @return attributes
      */
 

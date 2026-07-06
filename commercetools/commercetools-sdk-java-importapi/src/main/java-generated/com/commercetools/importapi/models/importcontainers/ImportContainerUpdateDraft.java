@@ -9,11 +9,11 @@ import javax.annotation.Nullable;
 
 import com.commercetools.importapi.models.common.ImportResourceType;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>The representation sent to the server when updating an ImportContainer.</p>
@@ -41,7 +41,7 @@ public interface ImportContainerUpdateDraft extends io.vrap.rmf.base.client.Draf
     public Long getVersion();
 
     /**
-     *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">resource type</a> to be imported. If not given, the ImportContainer is able to import all of the supported <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">ImportResourceTypes</a>.</p>
      * @return resourceType
      */
 
@@ -56,7 +56,7 @@ public interface ImportContainerUpdateDraft extends io.vrap.rmf.base.client.Draf
     public void setVersion(final Long version);
 
     /**
-     *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">resource type</a> to be imported. If not given, the ImportContainer is able to import all of the supported <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">ImportResourceTypes</a>.</p>
      * @param resourceType value to be set
      */
 
@@ -131,8 +131,8 @@ public interface ImportContainerUpdateDraft extends io.vrap.rmf.base.client.Draf
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ImportContainerUpdateDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ImportContainerUpdateDraft>() {
+    public static tools.jackson.core.type.TypeReference<ImportContainerUpdateDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ImportContainerUpdateDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ImportContainerUpdateDraft>";

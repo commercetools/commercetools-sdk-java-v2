@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Number of days after the last modification before a Shopping List is deleted.</p>
@@ -53,7 +54,7 @@ public class ShoppingListSetDeleteDaysAfterLastModificationActionImpl
     }
 
     /**
-     *  <p>Value to set. If not provided, the default value for this field configured in Project settings is assigned.</p>
+     *  <p>Value to set. If not provided, the default value for this field configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListsConfiguration" rel="nofollow">Project settings</a> is assigned.</p>
      */
 
     public Long getDeleteDaysAfterLastModification() {

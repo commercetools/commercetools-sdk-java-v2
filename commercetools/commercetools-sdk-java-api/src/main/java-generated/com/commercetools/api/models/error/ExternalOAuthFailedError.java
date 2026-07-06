@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Returned when an external OAuth Introspection endpoint does not return a response within the time limit, or the response isn't compliant with RFC 7662 (for example, an HTTP status code like <code>500</code>).</p>
+ *  <p>Returned when an <span>external OAuth Introspection endpoint</span> does not return a response within the <span>time limit</span>, or the response isn't compliant with <span>RFC 7662</span> (for example, an HTTP status code like <code>500</code>).</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -129,8 +129,8 @@ public interface ExternalOAuthFailedError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ExternalOAuthFailedError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ExternalOAuthFailedError>() {
+    public static tools.jackson.core.type.TypeReference<ExternalOAuthFailedError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ExternalOAuthFailedError>() {
             @Override
             public String toString() {
                 return "TypeReference<ExternalOAuthFailedError>";

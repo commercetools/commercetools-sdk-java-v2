@@ -71,6 +71,10 @@ public class ReferenceBuilder {
         return com.commercetools.api.models.discount_group.DiscountGroupReferenceBuilder.of();
     }
 
+    public com.commercetools.api.models.extension.ExtensionReferenceBuilder extensionBuilder() {
+        return com.commercetools.api.models.extension.ExtensionReferenceBuilder.of();
+    }
+
     public com.commercetools.api.models.inventory.InventoryEntryReferenceBuilder inventoryEntryBuilder() {
         return com.commercetools.api.models.inventory.InventoryEntryReferenceBuilder.of();
     }
@@ -127,6 +131,10 @@ public class ReferenceBuilder {
         return com.commercetools.api.models.recurring_order.RecurringOrderReferenceBuilder.of();
     }
 
+    public com.commercetools.api.models.reservation.ReservationReferenceBuilder reservationBuilder() {
+        return com.commercetools.api.models.reservation.ReservationReferenceBuilder.of();
+    }
+
     public com.commercetools.api.models.review.ReviewReferenceBuilder reviewBuilder() {
         return com.commercetools.api.models.review.ReviewReferenceBuilder.of();
     }
@@ -161,6 +169,10 @@ public class ReferenceBuilder {
 
     public com.commercetools.api.models.type.TypeReferenceBuilder typeBuilder() {
         return com.commercetools.api.models.type.TypeReferenceBuilder.of();
+    }
+
+    public com.commercetools.api.models.variant.VariantReferenceBuilder variantBuilder() {
+        return com.commercetools.api.models.variant.VariantReferenceBuilder.of();
     }
 
     public com.commercetools.api.models.zone.ZoneReferenceBuilder zoneBuilder() {

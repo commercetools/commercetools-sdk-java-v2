@@ -190,7 +190,7 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -202,7 +202,7 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -264,7 +264,7 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
     }
 
     /**
-     *  <p>Unique identifier of the Custom Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -275,7 +275,7 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
     }
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @param customLineItemKey value to be set
      * @return Builder
      */
@@ -286,7 +286,7 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
     }
 
     /**
-     *  <p>Custom Line Item that was removed from the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param builder function to build the customLineItem value
      * @return Builder
      */
@@ -298,7 +298,7 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
     }
 
     /**
-     *  <p>Custom Line Item that was removed from the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param builder function to build the customLineItem value
      * @return Builder
      */
@@ -310,7 +310,7 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
     }
 
     /**
-     *  <p>Custom Line Item that was removed from the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @param customLineItem value to be set
      * @return Builder
      */
@@ -387,7 +387,7 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -415,7 +415,7 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
     }
 
     /**
-     *  <p>Unique identifier of the Custom Line Item.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @return customLineItemId
      */
 
@@ -424,7 +424,7 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
     }
 
     /**
-     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a>.</p>
      * @return customLineItemKey
      */
 
@@ -434,7 +434,7 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
     }
 
     /**
-     *  <p>Custom Line Item that was removed from the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">Custom Line Item</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      * @return customLineItem
      */
 

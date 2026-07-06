@@ -30,7 +30,7 @@ public class CustomerReferenceBuilder implements Builder<CustomerReference> {
     private com.commercetools.api.models.customer.Customer obj;
 
     /**
-     *  <p>Unique identifier of the referenced Customer.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class CustomerReferenceBuilder implements Builder<CustomerReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with Reference Expansion for Customers.</p>
+     *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with <a href="https://docs.commercetools.com/apis/ctp:api:type:Expansion" rel="nofollow">Reference Expansion</a> for Customers.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class CustomerReferenceBuilder implements Builder<CustomerReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with Reference Expansion for Customers.</p>
+     *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with <a href="https://docs.commercetools.com/apis/ctp:api:type:Expansion" rel="nofollow">Reference Expansion</a> for Customers.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class CustomerReferenceBuilder implements Builder<CustomerReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with Reference Expansion for Customers.</p>
+     *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with <a href="https://docs.commercetools.com/apis/ctp:api:type:Expansion" rel="nofollow">Reference Expansion</a> for Customers.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class CustomerReferenceBuilder implements Builder<CustomerReference> {
     }
 
     /**
-     *  <p>Unique identifier of the referenced Customer.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>.</p>
      * @return id
      */
 
@@ -85,7 +85,7 @@ public class CustomerReferenceBuilder implements Builder<CustomerReference> {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with Reference Expansion for Customers.</p>
+     *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with <a href="https://docs.commercetools.com/apis/ctp:api:type:Expansion" rel="nofollow">Reference Expansion</a> for Customers.</p>
      * @return obj
      */
 

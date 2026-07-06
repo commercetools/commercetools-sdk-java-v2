@@ -18,10 +18,6 @@ import com.commercetools.api.models.product.*;
 import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
 import com.commercetools.api.models.product_type.AttributePlainEnumValue;
 import com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
@@ -29,6 +25,11 @@ import org.assertj.core.api.Assertions;
 import org.assertj.core.util.Lists;
 import org.assertj.core.util.Maps;
 import org.junit.jupiter.api.Test;
+
+import tools.jackson.core.JacksonException;
+import tools.jackson.core.type.TypeReference;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.ObjectMapper;
 
 public class AttributesTest {
 
@@ -128,7 +129,7 @@ public class AttributesTest {
     }
 
     @Test
-    public void serializeAttributes() throws JsonProcessingException {
+    public void serializeAttributes() throws JacksonException {
         Attribute intAttribute = AttributeBuilder.of().name("int").value(13).build();
         Assertions.assertThat(JsonUtils.toJsonString(intAttribute)).isEqualTo("{\"name\":\"int\",\"value\":13}");
 
@@ -171,7 +172,7 @@ public class AttributesTest {
     }
 
     @Test
-    public void attributesAsJsonNode() throws JsonProcessingException {
+    public void attributesAsJsonNode() throws JacksonException {
         ApiModuleOptions options = ApiModuleOptions.of().withAttributeAsJsonNode(true);
         ObjectMapper mapper = JsonUtils.createObjectMapper(options);
 
@@ -182,7 +183,7 @@ public class AttributesTest {
     }
 
     @Test
-    public void attributesNumberAsDouble() throws JsonProcessingException {
+    public void attributesNumberAsDouble() throws JacksonException {
         ApiModuleOptions options = ApiModuleOptions.of().withAttributeNumberAsDouble(true);
         ObjectMapper mapper = JsonUtils.createObjectMapper(options);
 
@@ -192,7 +193,7 @@ public class AttributesTest {
     }
 
     @Test
-    public void attributeTypeByName() throws JsonProcessingException {
+    public void attributeTypeByName() throws JacksonException {
         ApiModuleOptions options = ApiModuleOptions.of()
                 .withAttributeTypes(Maps.newHashMap("test", new TypeReference<String>() {
                 }));

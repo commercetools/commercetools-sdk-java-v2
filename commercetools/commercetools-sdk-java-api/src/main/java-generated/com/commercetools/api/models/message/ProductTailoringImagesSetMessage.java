@@ -12,15 +12,15 @@ import com.commercetools.api.models.common.Image;
 import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Set Images update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -86,7 +86,7 @@ public interface ProductTailoringImagesSetMessage extends Message {
     public Long getVariantId();
 
     /**
-     *  <p>Images on the tailored Product Variant before the Set Images update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> on the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">Product Variant</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
      * @return oldImages
      */
     @Valid
@@ -94,7 +94,7 @@ public interface ProductTailoringImagesSetMessage extends Message {
     public List<Image> getOldImages();
 
     /**
-     *  <p>Images on the tailored Product Variant after the Set Images update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> on the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">Product Variant</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
      * @return images
      */
     @Valid
@@ -130,7 +130,7 @@ public interface ProductTailoringImagesSetMessage extends Message {
     public void setVariantId(final Long variantId);
 
     /**
-     *  <p>Images on the tailored Product Variant before the Set Images update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> on the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">Product Variant</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
      * @param oldImages values to be set
      */
 
@@ -138,14 +138,14 @@ public interface ProductTailoringImagesSetMessage extends Message {
     public void setOldImages(final Image... oldImages);
 
     /**
-     *  <p>Images on the tailored Product Variant before the Set Images update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> on the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">Product Variant</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
      * @param oldImages values to be set
      */
 
     public void setOldImages(final List<Image> oldImages);
 
     /**
-     *  <p>Images on the tailored Product Variant after the Set Images update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> on the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">Product Variant</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
      * @param images values to be set
      */
 
@@ -153,7 +153,7 @@ public interface ProductTailoringImagesSetMessage extends Message {
     public void setImages(final Image... images);
 
     /**
-     *  <p>Images on the tailored Product Variant after the Set Images update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> on the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">Product Variant</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
      * @param images values to be set
      */
 
@@ -266,8 +266,8 @@ public interface ProductTailoringImagesSetMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductTailoringImagesSetMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductTailoringImagesSetMessage>() {
+    public static tools.jackson.core.type.TypeReference<ProductTailoringImagesSetMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductTailoringImagesSetMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductTailoringImagesSetMessage>";

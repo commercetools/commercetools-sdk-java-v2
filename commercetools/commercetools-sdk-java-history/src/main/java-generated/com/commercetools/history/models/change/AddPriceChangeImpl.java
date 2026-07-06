@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,10 +15,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Add Price update action.</p>
+ *  <p>This Change is no longer triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductAddPriceAction" rel="nofollow">Add Price</a> update action. It has been deprecated and replaced by the <a href="https://docs.commercetools.com/apis/ctp:history:type:SetPricesChange" rel="nofollow">SetPricesChange</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class AddPriceChangeImpl implements AddPriceChange, ModelBase {
 
     private String type;
@@ -32,17 +34,21 @@ public class AddPriceChangeImpl implements AddPriceChange, ModelBase {
 
     private String priceId;
 
+    private String variant;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     AddPriceChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.Price nextValue,
-            @JsonProperty("catalogData") final String catalogData, @JsonProperty("priceId") final String priceId) {
+            @JsonProperty("catalogData") final String catalogData, @JsonProperty("priceId") final String priceId,
+            @JsonProperty("variant") final String variant) {
         this.change = change;
         this.nextValue = nextValue;
         this.catalogData = catalogData;
         this.priceId = priceId;
+        this.variant = variant;
         this.type = ADD_PRICE_CHANGE;
     }
 
@@ -78,9 +84,10 @@ public class AddPriceChangeImpl implements AddPriceChange, ModelBase {
     }
 
     /**
+     *  <p>Product data that was updated.</p>
      *  <ul>
-     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
-     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
      *  </ul>
      */
 
@@ -89,11 +96,20 @@ public class AddPriceChangeImpl implements AddPriceChange, ModelBase {
     }
 
     /**
-     *  <p><code>id</code> of the Embedded Price.</p>
+     *  <p><code>id</code> of the Embedded <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a>.</p>
      */
 
     public String getPriceId() {
         return this.priceId;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     */
+
+    public String getVariant() {
+        return this.variant;
     }
 
     public void setChange(final String change) {
@@ -112,6 +128,10 @@ public class AddPriceChangeImpl implements AddPriceChange, ModelBase {
         this.priceId = priceId;
     }
 
+    public void setVariant(final String variant) {
+        this.variant = variant;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -127,11 +147,13 @@ public class AddPriceChangeImpl implements AddPriceChange, ModelBase {
                 .append(nextValue, that.nextValue)
                 .append(catalogData, that.catalogData)
                 .append(priceId, that.priceId)
+                .append(variant, that.variant)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(nextValue, that.nextValue)
                 .append(catalogData, that.catalogData)
                 .append(priceId, that.priceId)
+                .append(variant, that.variant)
                 .isEquals();
     }
 
@@ -142,6 +164,7 @@ public class AddPriceChangeImpl implements AddPriceChange, ModelBase {
                 .append(nextValue)
                 .append(catalogData)
                 .append(priceId)
+                .append(variant)
                 .toHashCode();
     }
 
@@ -152,6 +175,7 @@ public class AddPriceChangeImpl implements AddPriceChange, ModelBase {
                 .append("nextValue", nextValue)
                 .append("catalogData", catalogData)
                 .append("priceId", priceId)
+                .append("variant", variant)
                 .build();
     }
 

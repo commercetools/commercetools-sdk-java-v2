@@ -9,12 +9,12 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * OrderPagedSearchResponse
@@ -43,7 +43,7 @@ public interface OrderPagedSearchResponse {
     public Long getTotal();
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @return offset
      */
 
@@ -51,7 +51,7 @@ public interface OrderPagedSearchResponse {
     public Long getOffset();
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @return limit
      */
 
@@ -75,14 +75,14 @@ public interface OrderPagedSearchResponse {
     public void setTotal(final Long total);
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @param offset value to be set
      */
 
     public void setOffset(final Long offset);
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @param limit value to be set
      */
 
@@ -178,8 +178,8 @@ public interface OrderPagedSearchResponse {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderPagedSearchResponse> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderPagedSearchResponse>() {
+    public static tools.jackson.core.type.TypeReference<OrderPagedSearchResponse> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderPagedSearchResponse>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderPagedSearchResponse>";

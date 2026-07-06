@@ -115,6 +115,11 @@ public class InventoryEntryQuantitySetMessageQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, InventoryEntryQuantitySetMessageQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<InventoryEntryQuantitySetMessageQueryBuilderDsl> sku() {
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("sku")),
+            p -> new CombinationQueryPredicate<>(p, InventoryEntryQuantitySetMessageQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<InventoryEntryQuantitySetMessageQueryBuilderDsl> supplyChannel(
             Function<com.commercetools.api.predicates.query.channel.ChannelReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.channel.ChannelReferenceQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()

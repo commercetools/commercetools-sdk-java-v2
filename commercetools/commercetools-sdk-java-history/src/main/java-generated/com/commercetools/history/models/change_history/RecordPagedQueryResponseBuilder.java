@@ -37,7 +37,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     private java.util.List<com.commercetools.history.models.change_history.Record> results;
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @param limit value to be set
      * @return Builder
      */
@@ -59,7 +59,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation and not strongly consistent.</p>
+     *  <p>Total number of results matching the query. This number is an estimation and not <span>strongly consistent</span>.</p>
      * @param total value to be set
      * @return Builder
      */
@@ -70,7 +70,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @param offset value to be set
      * @return Builder
      */
@@ -170,7 +170,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      * @return limit
      */
 
@@ -188,7 +188,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation and not strongly consistent.</p>
+     *  <p>Total number of results matching the query. This number is an estimation and not <span>strongly consistent</span>.</p>
      * @return total
      */
 
@@ -197,7 +197,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      * @return offset
      */
 

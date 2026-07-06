@@ -12,11 +12,11 @@ import com.commercetools.importapi.models.common.Image;
 import com.commercetools.importapi.models.common.ProductVariantKeyReference;
 import com.commercetools.importapi.models.productvariants.Attribute;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * LineItemProductVariantImportDraft
@@ -36,7 +36,7 @@ public interface LineItemProductVariantImportDraft
         extends io.vrap.rmf.base.client.Draft<LineItemProductVariantImportDraft> {
 
     /**
-     *  <p>Maps to <code>ProductVariant.product</code>. If the referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductVariant is created.</p>
+     *  <p>Maps to <code>ProductVariant.product</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ProductVariant is created.</p>
      * @return productVariant
      */
     @Valid
@@ -76,7 +76,7 @@ public interface LineItemProductVariantImportDraft
     public List<Image> getImages();
 
     /**
-     *  <p>Maps to <code>ProductVariant.product</code>. If the referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductVariant is created.</p>
+     *  <p>Maps to <code>ProductVariant.product</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced ProductVariant is created.</p>
      * @param productVariant value to be set
      */
 
@@ -223,8 +223,8 @@ public interface LineItemProductVariantImportDraft
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<LineItemProductVariantImportDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<LineItemProductVariantImportDraft>() {
+    public static tools.jackson.core.type.TypeReference<LineItemProductVariantImportDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<LineItemProductVariantImportDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<LineItemProductVariantImportDraft>";

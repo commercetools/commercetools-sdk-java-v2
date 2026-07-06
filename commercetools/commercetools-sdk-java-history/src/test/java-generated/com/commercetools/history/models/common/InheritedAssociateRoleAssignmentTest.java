@@ -17,26 +17,25 @@ public class InheritedAssociateRoleAssignmentTest {
 
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { "associateRole",
-                        InheritedAssociateRoleAssignment.builder()
-                                .associateRole(new com.commercetools.history.models.common.KeyReferenceImpl()) },
+                new Object[] { "associateRole", InheritedAssociateRoleAssignment.builder()
+                        .associateRole(new com.commercetools.history.models.common.AssociateRoleKeyReferenceImpl()) },
                 new Object[] { "source", InheritedAssociateRoleAssignment.builder()
-                        .source(new com.commercetools.history.models.common.KeyReferenceImpl()) } };
+                        .source(new com.commercetools.history.models.common.BusinessUnitKeyReferenceImpl()) } };
     }
 
     @Test
     public void associateRole() {
         InheritedAssociateRoleAssignment value = InheritedAssociateRoleAssignment.of();
-        value.setAssociateRole(new com.commercetools.history.models.common.KeyReferenceImpl());
+        value.setAssociateRole(new com.commercetools.history.models.common.AssociateRoleKeyReferenceImpl());
         Assertions.assertThat(value.getAssociateRole())
-                .isEqualTo(new com.commercetools.history.models.common.KeyReferenceImpl());
+                .isEqualTo(new com.commercetools.history.models.common.AssociateRoleKeyReferenceImpl());
     }
 
     @Test
     public void source() {
         InheritedAssociateRoleAssignment value = InheritedAssociateRoleAssignment.of();
-        value.setSource(new com.commercetools.history.models.common.KeyReferenceImpl());
+        value.setSource(new com.commercetools.history.models.common.BusinessUnitKeyReferenceImpl());
         Assertions.assertThat(value.getSource())
-                .isEqualTo(new com.commercetools.history.models.common.KeyReferenceImpl());
+                .isEqualTo(new com.commercetools.history.models.common.BusinessUnitKeyReferenceImpl());
     }
 }

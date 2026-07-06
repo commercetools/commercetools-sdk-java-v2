@@ -7,7 +7,6 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
-import java.util.stream.Collectors;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Utils;
@@ -108,12 +107,12 @@ public class CtOkHttp3Client extends HttpClientBase {
     }
 
     static ApiHttpResponse<byte[]> toResponse(final okhttp3.Response response) {
-        final ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders(response.headers()
-                .toMultimap()
-                .entrySet()
-                .stream()
-                .flatMap(e -> e.getValue().stream().map(value -> ApiHttpHeaders.headerEntry(e.getKey(), value)))
-                .collect(Collectors.toList()));
+        final okhttp3.Headers responseHeaders = response.headers();
+        final List<Map.Entry<String, String>> headerList = new ArrayList<>(responseHeaders.size());
+        for (int i = 0; i < responseHeaders.size(); i++) {
+            headerList.add(ApiHttpHeaders.headerEntry(responseHeaders.name(i), responseHeaders.value(i)));
+        }
+        final ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders(headerList);
 
         final ApiHttpResponse<byte[]> apiHttpResponse = new ApiHttpResponse<>(response.code(), apiHttpHeaders,
             Optional.ofNullable(response.body())
@@ -141,12 +140,9 @@ public class CtOkHttp3Client extends HttpClientBase {
 
         //default media type is JSON, if other media type is set as a header, use it
         okhttp3.MediaType mediaType = JSON;
-        if (apiHttpRequest.getHeaders()
-                .getHeaders()
-                .stream()
-                .anyMatch(s -> s.getKey().equalsIgnoreCase(CONTENT_TYPE))) {
-            mediaType = okhttp3.MediaType
-                    .parse(Objects.requireNonNull(apiHttpRequest.getHeaders().getFirst(ApiHttpHeaders.CONTENT_TYPE)));
+        final String contentTypeValue = apiHttpRequest.getHeaders().getFirst(ApiHttpHeaders.CONTENT_TYPE);
+        if (contentTypeValue != null) {
+            mediaType = okhttp3.MediaType.parse(contentTypeValue);
         }
 
         final okhttp3.RequestBody body = apiHttpRequest.getBody() == null ? null

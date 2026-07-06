@@ -8,15 +8,16 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.KeyReference;
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>KeyReference to a BusinessUnit.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:KeyReference" rel="nofollow">KeyReference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +40,15 @@ public interface BusinessUnitKeyReference extends KeyReference {
     String BUSINESS_UNIT = "business-unit";
 
     /**
-     *  <p>Unique and immutable key of the referenced BusinessUnit.</p>
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
+
+    /**
+     *  <p>Unique and immutable key of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>.</p>
      * @return key
      */
     @NotNull
@@ -47,7 +56,7 @@ public interface BusinessUnitKeyReference extends KeyReference {
     public String getKey();
 
     /**
-     *  <p>Unique and immutable key of the referenced BusinessUnit.</p>
+     *  <p>Unique and immutable key of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>.</p>
      * @param key value to be set
      */
 
@@ -120,8 +129,8 @@ public interface BusinessUnitKeyReference extends KeyReference {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitKeyReference> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitKeyReference>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitKeyReference> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitKeyReference>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitKeyReference>";

@@ -30,7 +30,7 @@ public class StandalonePriceValidUntilSetMessagePayloadBuilder
     private java.time.ZonedDateTime previousValidUntil;
 
     /**
-     *  <p>Value of StandalonePrice <code>validUntil</code> after the Set Valid Until update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validUntil</code> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidUntilAction" rel="nofollow">Set Valid Until</a> update action.</p>
      * @param validUntil value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class StandalonePriceValidUntilSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Value of StandalonePrice <code>validUntil</code> before the Set Valid Until update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validUntil</code> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidUntilAction" rel="nofollow">Set Valid Until</a> update action.</p>
      * @param previousValidUntil value to be set
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class StandalonePriceValidUntilSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Value of StandalonePrice <code>validUntil</code> after the Set Valid Until update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validUntil</code> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidUntilAction" rel="nofollow">Set Valid Until</a> update action.</p>
      * @return validUntil
      */
 
@@ -64,7 +64,7 @@ public class StandalonePriceValidUntilSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>Value of StandalonePrice <code>validUntil</code> before the Set Valid Until update action.</p>
+     *  <p>Value of <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a> <code>validUntil</code> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceSetValidUntilAction" rel="nofollow">Set Valid Until</a> update action.</p>
      * @return previousValidUntil
      */
 

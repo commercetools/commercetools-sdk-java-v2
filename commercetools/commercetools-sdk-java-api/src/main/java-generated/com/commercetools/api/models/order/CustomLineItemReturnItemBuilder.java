@@ -65,7 +65,7 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
     }
 
     /**
-     *  <p>User-defined unique identifier of the CustomLineItemReturnItem.</p>
+     *  <p>User-defined identifier of the CustomLineItemReturnItem. Must be unique among Return Items in the Order.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
     }
 
     /**
-     *  <p>Number of Custom Line Items returned.</p>
+     *  <p>Quantity of Custom Line Items returned.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -112,8 +112,8 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
     /**
      *  <p>Payment status of the Return Item:</p>
      *  <ul>
-     *   <li><code>NonRefundable</code>, for items in the <code>Advised</code> ReturnShipmentState</li>
-     *   <li><code>Initial</code>, for items in the <code>Returned</code> ReturnShipmentState</li>
+     *   <li><code>NonRefundable</code>, for items in the <code>Advised</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnShipmentState" rel="nofollow">ReturnShipmentState</a></li>
+     *   <li><code>Initial</code>, for items in the <code>Returned</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnShipmentState" rel="nofollow">ReturnShipmentState</a></li>
      *  </ul>
      * @param paymentState value to be set
      * @return Builder
@@ -173,7 +173,7 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
     }
 
     /**
-     *  <p>Date and time (UTC) the Return Item was intitially created.</p>
+     *  <p>Date and time (UTC) the Return Item was initially created.</p>
      * @param createdAt value to be set
      * @return Builder
      */
@@ -184,7 +184,7 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
     }
 
     /**
-     *  <p><code>id</code> of the returned CustomLineItem.</p>
+     *  <p><code>id</code> of the returned <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -204,7 +204,7 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
     }
 
     /**
-     *  <p>User-defined unique identifier of the CustomLineItemReturnItem.</p>
+     *  <p>User-defined identifier of the CustomLineItemReturnItem. Must be unique among Return Items in the Order.</p>
      * @return key
      */
 
@@ -214,7 +214,7 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
     }
 
     /**
-     *  <p>Number of Custom Line Items returned.</p>
+     *  <p>Quantity of Custom Line Items returned.</p>
      * @return quantity
      */
 
@@ -244,8 +244,8 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
     /**
      *  <p>Payment status of the Return Item:</p>
      *  <ul>
-     *   <li><code>NonRefundable</code>, for items in the <code>Advised</code> ReturnShipmentState</li>
-     *   <li><code>Initial</code>, for items in the <code>Returned</code> ReturnShipmentState</li>
+     *   <li><code>NonRefundable</code>, for items in the <code>Advised</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnShipmentState" rel="nofollow">ReturnShipmentState</a></li>
+     *   <li><code>Initial</code>, for items in the <code>Returned</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnShipmentState" rel="nofollow">ReturnShipmentState</a></li>
      *  </ul>
      * @return paymentState
      */
@@ -274,7 +274,7 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
     }
 
     /**
-     *  <p>Date and time (UTC) the Return Item was intitially created.</p>
+     *  <p>Date and time (UTC) the Return Item was initially created.</p>
      * @return createdAt
      */
 
@@ -283,7 +283,7 @@ public class CustomLineItemReturnItemBuilder implements Builder<CustomLineItemRe
     }
 
     /**
-     *  <p><code>id</code> of the returned CustomLineItem.</p>
+     *  <p><code>id</code> of the returned <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>.</p>
      * @return customLineItemId
      */
 

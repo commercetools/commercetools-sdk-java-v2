@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>PagedQueryResult with results containing an array of ImportContainer.</p>
+ *  <p><span>PagedQueryResult</span> with results containing an array of <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainer</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportContainerPagedResponseImpl implements ImportContainerPagedResponse, ModelBase {
@@ -54,7 +55,7 @@ public class ImportContainerPagedResponseImpl implements ImportContainerPagedRes
     }
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>Number of <span>results requested</span>.</p>
      */
 
     public Integer getLimit() {
@@ -62,7 +63,7 @@ public class ImportContainerPagedResponseImpl implements ImportContainerPagedRes
     }
 
     /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>Number of <span>elements skipped</span>.</p>
      */
 
     public Long getOffset() {
@@ -86,7 +87,7 @@ public class ImportContainerPagedResponseImpl implements ImportContainerPagedRes
     }
 
     /**
-     *  <p>ImportContainers matching the query.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainers</a> matching the query.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.importcontainers.ImportContainer> getResults() {

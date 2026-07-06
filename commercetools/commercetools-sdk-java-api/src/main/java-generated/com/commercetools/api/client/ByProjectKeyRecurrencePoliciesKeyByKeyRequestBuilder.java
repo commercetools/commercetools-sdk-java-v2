@@ -44,4 +44,12 @@ public class ByProjectKeyRecurrencePoliciesKeyByKeyRequestBuilder {
             op.apply(com.commercetools.api.models.recurrence_policy.RecurrencePolicyUpdateBuilder.of()).build());
     }
 
+    public ByProjectKeyRecurrencePoliciesKeyByKeyDelete delete() {
+        return new ByProjectKeyRecurrencePoliciesKeyByKeyDelete(apiHttpClient, projectKey, key);
+    }
+
+    public <TValue> ByProjectKeyRecurrencePoliciesKeyByKeyDelete delete(TValue version) {
+        return delete().withVersion(version);
+    }
+
 }

@@ -27,7 +27,7 @@ public class ShippingMethodChangeValueBuilder implements Builder<ShippingMethodC
     private String name;
 
     /**
-     *  <p><code>id</code> of the ShippingMethod.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class ShippingMethodChangeValueBuilder implements Builder<ShippingMethodC
     }
 
     /**
-     *  <p><code>id</code> of the ShippingMethod.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a>.</p>
      * @return id
      */
 

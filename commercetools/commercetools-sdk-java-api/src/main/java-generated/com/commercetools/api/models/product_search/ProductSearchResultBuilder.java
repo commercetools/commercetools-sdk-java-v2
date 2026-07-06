@@ -29,11 +29,12 @@ public class ProductSearchResultBuilder implements Builder<ProductSearchResult> 
     @Nullable
     private com.commercetools.api.models.product_search.ProductSearchMatchingVariants matchingVariants;
 
+    @Deprecated
     @Nullable
     private com.commercetools.api.models.product.ProductProjection productProjection;
 
     /**
-     *  <p><code>id</code> of the Product that matches the search query.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that matches the search query.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -44,7 +45,7 @@ public class ProductSearchResultBuilder implements Builder<ProductSearchResult> 
     }
 
     /**
-     *  <p>Information about which Product Variants match the search query. Only present if <code>markMatchingVariants</code> is set to <code>true</code> in the ProductSearchRequest.</p>
+     *  <p>Information about which Product Variants match the search query. Only present if <code>markMatchingVariants</code> is set to <code>true</code> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchRequest" rel="nofollow">ProductSearchRequest</a>.</p>
      * @param builder function to build the matchingVariants value
      * @return Builder
      */
@@ -58,7 +59,7 @@ public class ProductSearchResultBuilder implements Builder<ProductSearchResult> 
     }
 
     /**
-     *  <p>Information about which Product Variants match the search query. Only present if <code>markMatchingVariants</code> is set to <code>true</code> in the ProductSearchRequest.</p>
+     *  <p>Information about which Product Variants match the search query. Only present if <code>markMatchingVariants</code> is set to <code>true</code> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchRequest" rel="nofollow">ProductSearchRequest</a>.</p>
      * @param builder function to build the matchingVariants value
      * @return Builder
      */
@@ -71,7 +72,7 @@ public class ProductSearchResultBuilder implements Builder<ProductSearchResult> 
     }
 
     /**
-     *  <p>Information about which Product Variants match the search query. Only present if <code>markMatchingVariants</code> is set to <code>true</code> in the ProductSearchRequest.</p>
+     *  <p>Information about which Product Variants match the search query. Only present if <code>markMatchingVariants</code> is set to <code>true</code> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchRequest" rel="nofollow">ProductSearchRequest</a>.</p>
      * @param matchingVariants value to be set
      * @return Builder
      */
@@ -83,11 +84,11 @@ public class ProductSearchResultBuilder implements Builder<ProductSearchResult> 
     }
 
     /**
-     *  <p>Projected data of the Product with <code>id</code>. Only present if data integration with Product Projection parameters is requested.</p>
+     *  <p>Projected data of the Product with <code>id</code>. Only present if deprecated data integration <span>with Product Projection parameters</span> is requested.</p>
      * @param builder function to build the productProjection value
      * @return Builder
      */
-
+    @Deprecated
     public ProductSearchResultBuilder productProjection(
             Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjectionBuilder> builder) {
         this.productProjection = builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of())
@@ -96,11 +97,11 @@ public class ProductSearchResultBuilder implements Builder<ProductSearchResult> 
     }
 
     /**
-     *  <p>Projected data of the Product with <code>id</code>. Only present if data integration with Product Projection parameters is requested.</p>
+     *  <p>Projected data of the Product with <code>id</code>. Only present if deprecated data integration <span>with Product Projection parameters</span> is requested.</p>
      * @param builder function to build the productProjection value
      * @return Builder
      */
-
+    @Deprecated
     public ProductSearchResultBuilder withProductProjection(
             Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjection> builder) {
         this.productProjection = builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of());
@@ -108,11 +109,11 @@ public class ProductSearchResultBuilder implements Builder<ProductSearchResult> 
     }
 
     /**
-     *  <p>Projected data of the Product with <code>id</code>. Only present if data integration with Product Projection parameters is requested.</p>
+     *  <p>Projected data of the Product with <code>id</code>. Only present if deprecated data integration <span>with Product Projection parameters</span> is requested.</p>
      * @param productProjection value to be set
      * @return Builder
      */
-
+    @Deprecated
     public ProductSearchResultBuilder productProjection(
             @Nullable final com.commercetools.api.models.product.ProductProjection productProjection) {
         this.productProjection = productProjection;
@@ -120,7 +121,7 @@ public class ProductSearchResultBuilder implements Builder<ProductSearchResult> 
     }
 
     /**
-     *  <p><code>id</code> of the Product that matches the search query.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> that matches the search query.</p>
      * @return id
      */
 
@@ -129,7 +130,7 @@ public class ProductSearchResultBuilder implements Builder<ProductSearchResult> 
     }
 
     /**
-     *  <p>Information about which Product Variants match the search query. Only present if <code>markMatchingVariants</code> is set to <code>true</code> in the ProductSearchRequest.</p>
+     *  <p>Information about which Product Variants match the search query. Only present if <code>markMatchingVariants</code> is set to <code>true</code> in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchRequest" rel="nofollow">ProductSearchRequest</a>.</p>
      * @return matchingVariants
      */
 
@@ -139,10 +140,10 @@ public class ProductSearchResultBuilder implements Builder<ProductSearchResult> 
     }
 
     /**
-     *  <p>Projected data of the Product with <code>id</code>. Only present if data integration with Product Projection parameters is requested.</p>
+     *  <p>Projected data of the Product with <code>id</code>. Only present if deprecated data integration <span>with Product Projection parameters</span> is requested.</p>
      * @return productProjection
      */
-
+    @Deprecated
     @Nullable
     public com.commercetools.api.models.product.ProductProjection getProductProjection() {
         return this.productProjection;

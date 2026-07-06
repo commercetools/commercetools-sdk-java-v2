@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,10 +15,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Adds a DiscountCode to the Cart to activate the related CartDiscounts. Adding a Discount Code is only possible if no DirectDiscount has been applied to the Cart. Discount Codes can be added to frozen Carts, but their DiscountCodeState is then <code>DoesNotMatchCart</code>.</p>
- *  <p>The maximum number of Discount Codes in a Cart is restricted by a limit.</p>
- *  <p>Specific Error Code: MatchingPriceNotFound</p>
+ *  <p>Adds a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> to the Cart to activate the related <span>CartDiscounts</span>. If the related Cart Discounts are inactive or invalid, or belong to a different Store than the Cart, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeNonApplicableError" rel="nofollow">DiscountCodeNonApplicableError</a> is returned.</p>
+ *  <p>A Discount Code can be added only if no <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">DirectDiscount</a> has been applied to the Cart. For <a href="https://docs.commercetools.com/apis/ctp:api:type:FrozenCarts" rel="nofollow">frozen Carts</a>, the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeState" rel="nofollow">DiscountCodeState</a> must be <code>DoesNotMatchCart</code> when adding a Discount Code.</p>
+ *  <p>The maximum number of Discount Codes in a Cart is restricted by a <span>limit</span>.</p>
+ *  <p>Specific Error Code: <a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a></p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartAddDiscountCodeActionImpl implements MyCartAddDiscountCodeAction, ModelBase {
@@ -53,7 +55,7 @@ public class MyCartAddDiscountCodeActionImpl implements MyCartAddDiscountCodeAct
     }
 
     /**
-     *  <p><code>code</code> of a DiscountCode.</p>
+     *  <p><code>code</code> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a>.</p>
      */
 
     public String getCode() {

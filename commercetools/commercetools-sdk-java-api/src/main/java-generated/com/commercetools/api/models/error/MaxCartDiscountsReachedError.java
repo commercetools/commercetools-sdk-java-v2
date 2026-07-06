@@ -8,18 +8,18 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Returned when a Cart Discount cannot be created or activated as the limit for active Cart Discounts has been reached.</p>
+ *  <p>Returned when a Cart Discount cannot be created or activated as the <span>limit</span> for active Cart Discounts has been reached.</p>
  *  <p>The error is returned as a failed response to:</p>
  *  <ul>
- *   <li>Create CartDiscount and Create CartDiscount in Store requests</li>
- *   <li>Change IsActive update action</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/cart-discounts:POST" rel="nofollow">Create CartDiscount</a> and <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/cart-discounts:POST" rel="nofollow">Create CartDiscount in Store</a> requests</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountChangeIsActiveAction" rel="nofollow">Change IsActive</a> update action</li>
  *  </ul>
  *
  * <hr>
@@ -134,8 +134,8 @@ public interface MaxCartDiscountsReachedError extends ErrorObject {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MaxCartDiscountsReachedError> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MaxCartDiscountsReachedError>() {
+    public static tools.jackson.core.type.TypeReference<MaxCartDiscountsReachedError> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MaxCartDiscountsReachedError>() {
             @Override
             public String toString() {
                 return "TypeReference<MaxCartDiscountsReachedError>";

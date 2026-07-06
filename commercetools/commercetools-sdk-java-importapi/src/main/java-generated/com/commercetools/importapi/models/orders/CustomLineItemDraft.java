@@ -13,12 +13,12 @@ import com.commercetools.importapi.models.common.TaxCategoryKeyReference;
 import com.commercetools.importapi.models.common.TypedMoney;
 import com.commercetools.importapi.models.prices.TaxRate;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CustomLineItemDraft
@@ -101,7 +101,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public List<ItemState> getState();
 
     /**
-     *  <p>Maps to <code>CustomLineItem.taxCategory</code>. References a tax category by key. If the referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
+     *  <p>Maps to <code>CustomLineItem.taxCategory</code>. References a tax category by key. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
      * @return taxCategory
      */
     @Valid
@@ -117,7 +117,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public TaxRate getTaxRate();
 
     /**
-     *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @return externalTaxRate
      */
     @Valid
@@ -198,7 +198,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public void setState(final List<ItemState> state);
 
     /**
-     *  <p>Maps to <code>CustomLineItem.taxCategory</code>. References a tax category by key. If the referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
+     *  <p>Maps to <code>CustomLineItem.taxCategory</code>. References a tax category by key. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
      * @param taxCategory value to be set
      */
 
@@ -212,7 +212,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public void setTaxRate(final TaxRate taxRate);
 
     /**
-     *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</p>
      * @param externalTaxRate value to be set
      */
 
@@ -341,8 +341,8 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomLineItemDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomLineItemDraft>() {
+    public static tools.jackson.core.type.TypeReference<CustomLineItemDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomLineItemDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomLineItemDraft>";

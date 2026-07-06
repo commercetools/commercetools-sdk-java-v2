@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * FieldContainer
@@ -31,7 +31,7 @@ import jakarta.validation.constraints.NotNull;
 public interface FieldContainer {
 
     /**
-     *  <p>JSON object with keys matching the names of Custom Fields (that is, <code>name</code>s in the FieldDefinitions) and values given by CustomFieldValue.</p>
+     *  <p>JSON object with keys matching the names of Custom Fields (that is, <code>name</code>s in the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinitions</a>) and values given by <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a>.</p>
      * @return map of the pattern property values
      */
     @NotNull
@@ -39,7 +39,7 @@ public interface FieldContainer {
     public Map<String, Object> values();
 
     /**
-     *  <p>JSON object with keys matching the names of Custom Fields (that is, <code>name</code>s in the FieldDefinitions) and values given by CustomFieldValue.</p>
+     *  <p>JSON object with keys matching the names of Custom Fields (that is, <code>name</code>s in the <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinitions</a>) and values given by <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldValue" rel="nofollow">CustomFieldValue</a>.</p>
      * @param key property name
      * @param value property value
      */
@@ -114,8 +114,8 @@ public interface FieldContainer {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<FieldContainer> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<FieldContainer>() {
+    public static tools.jackson.core.type.TypeReference<FieldContainer> typeReference() {
+        return new tools.jackson.core.type.TypeReference<FieldContainer>() {
             @Override
             public String toString() {
                 return "TypeReference<FieldContainer>";

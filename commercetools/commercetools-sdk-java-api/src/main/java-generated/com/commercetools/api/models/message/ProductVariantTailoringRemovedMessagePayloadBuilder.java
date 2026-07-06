@@ -123,7 +123,7 @@ public class ProductVariantTailoringRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p><code>id</code> of the ProductVariant removed from the Tailoring.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> removed from the Tailoring.</p>
      * @param variantId value to be set
      * @return Builder
      */
@@ -134,7 +134,7 @@ public class ProductVariantTailoringRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The ProductVariantTailoring that was removed from the ProductTailoring.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">ProductVariantTailoring</a> that was removed from the ProductTailoring.</p>
      * @param builder function to build the variant value
      * @return Builder
      */
@@ -147,7 +147,7 @@ public class ProductVariantTailoringRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The ProductVariantTailoring that was removed from the ProductTailoring.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">ProductVariantTailoring</a> that was removed from the ProductTailoring.</p>
      * @param builder function to build the variant value
      * @return Builder
      */
@@ -160,7 +160,7 @@ public class ProductVariantTailoringRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The ProductVariantTailoring that was removed from the ProductTailoring.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">ProductVariantTailoring</a> that was removed from the ProductTailoring.</p>
      * @param variant value to be set
      * @return Builder
      */
@@ -200,7 +200,7 @@ public class ProductVariantTailoringRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p><code>id</code> of the ProductVariant removed from the Tailoring.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> removed from the Tailoring.</p>
      * @return variantId
      */
 
@@ -209,7 +209,7 @@ public class ProductVariantTailoringRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The ProductVariantTailoring that was removed from the ProductTailoring.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">ProductVariantTailoring</a> that was removed from the ProductTailoring.</p>
      * @return variant
      */
 

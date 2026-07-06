@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,6 +15,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
  * DeliveryItem
  */
@@ -24,13 +25,13 @@ public class DeliveryItemImpl implements DeliveryItem, ModelBase {
 
     private String id;
 
-    private Integer quantity;
+    private Long quantity;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    DeliveryItemImpl(@JsonProperty("id") final String id, @JsonProperty("quantity") final Integer quantity) {
+    DeliveryItemImpl(@JsonProperty("id") final String id, @JsonProperty("quantity") final Long quantity) {
         this.id = id;
         this.quantity = quantity;
     }
@@ -42,7 +43,7 @@ public class DeliveryItemImpl implements DeliveryItem, ModelBase {
     }
 
     /**
-     *
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> delivered.</p>
      */
 
     public String getId() {
@@ -50,10 +51,10 @@ public class DeliveryItemImpl implements DeliveryItem, ModelBase {
     }
 
     /**
-     *
+     *  <p>Quantity of Line Items or Custom Line Items delivered.</p>
      */
 
-    public Integer getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 
@@ -61,7 +62,7 @@ public class DeliveryItemImpl implements DeliveryItem, ModelBase {
         this.id = id;
     }
 
-    public void setQuantity(final Integer quantity) {
+    public void setQuantity(final Long quantity) {
         this.quantity = quantity;
     }
 

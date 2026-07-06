@@ -53,7 +53,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>Reference to the Order updated with this edit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Order updated with this edit.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>Reference to the Order updated with this edit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Order updated with this edit.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>Reference to the Order updated with this edit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Order updated with this edit.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -88,7 +88,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>Update actions to apply to the Order referenced in <code>resource</code>. Cannot be updated if the edit has been applied.</p>
+     *  <p>Update actions to apply to the Order referenced in <code>resource</code>. Cannot be updated if the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/edits/{id}/apply:POST" rel="nofollow">edit has been applied</a>.</p>
      * @param stagedActions value to be set
      * @return Builder
      */
@@ -100,7 +100,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>Update actions to apply to the Order referenced in <code>resource</code>. Cannot be updated if the edit has been applied.</p>
+     *  <p>Update actions to apply to the Order referenced in <code>resource</code>. Cannot be updated if the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/edits/{id}/apply:POST" rel="nofollow">edit has been applied</a>.</p>
      * @param stagedActions value to be set
      * @return Builder
      */
@@ -112,7 +112,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>Update actions to apply to the Order referenced in <code>resource</code>. Cannot be updated if the edit has been applied.</p>
+     *  <p>Update actions to apply to the Order referenced in <code>resource</code>. Cannot be updated if the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/edits/{id}/apply:POST" rel="nofollow">edit has been applied</a>.</p>
      * @param stagedActions value to be set
      * @return Builder
      */
@@ -127,7 +127,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>Update actions to apply to the Order referenced in <code>resource</code>. Cannot be updated if the edit has been applied.</p>
+     *  <p>Update actions to apply to the Order referenced in <code>resource</code>. Cannot be updated if the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/edits/{id}/apply:POST" rel="nofollow">edit has been applied</a>.</p>
      * @param builder function to build the stagedActions value
      * @return Builder
      */
@@ -143,7 +143,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>Update actions to apply to the Order referenced in <code>resource</code>. Cannot be updated if the edit has been applied.</p>
+     *  <p>Update actions to apply to the Order referenced in <code>resource</code>. Cannot be updated if the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/edits/{id}/apply:POST" rel="nofollow">edit has been applied</a>.</p>
      * @param builder function to build the stagedActions value
      * @return Builder
      */
@@ -203,8 +203,8 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>Set to <code>true</code> if you want to preview the edited Order first without persisting it (dry run). A dry run allows checking for potential errors when trying to apply the <code>stagedActions</code>.</p>
-     *  <p>Order API Extensions, if any, are also called in dry runs.</p>
+     *  <p>Set to <code>true</code> if you want to <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEditPreviewSuccess" rel="nofollow">preview</a> the edited Order first without persisting it (dry run). A dry run allows checking for potential <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEditPreviewFailure" rel="nofollow">errors</a> when trying to apply the <code>stagedActions</code>.</p>
+     *  <p>Order <span>API Extensions</span>, if any, are also called in dry runs.</p>
      * @param dryRun value to be set
      * @return Builder
      */
@@ -225,7 +225,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>Reference to the Order updated with this edit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Order updated with this edit.</p>
      * @return resource
      */
 
@@ -234,7 +234,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>Update actions to apply to the Order referenced in <code>resource</code>. Cannot be updated if the edit has been applied.</p>
+     *  <p>Update actions to apply to the Order referenced in <code>resource</code>. Cannot be updated if the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders/edits/{id}/apply:POST" rel="nofollow">edit has been applied</a>.</p>
      * @return stagedActions
      */
 
@@ -264,8 +264,8 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>Set to <code>true</code> if you want to preview the edited Order first without persisting it (dry run). A dry run allows checking for potential errors when trying to apply the <code>stagedActions</code>.</p>
-     *  <p>Order API Extensions, if any, are also called in dry runs.</p>
+     *  <p>Set to <code>true</code> if you want to <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEditPreviewSuccess" rel="nofollow">preview</a> the edited Order first without persisting it (dry run). A dry run allows checking for potential <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEditPreviewFailure" rel="nofollow">errors</a> when trying to apply the <code>stagedActions</code>.</p>
+     *  <p>Order <span>API Extensions</span>, if any, are also called in dry runs.</p>
      * @return dryRun
      */
 

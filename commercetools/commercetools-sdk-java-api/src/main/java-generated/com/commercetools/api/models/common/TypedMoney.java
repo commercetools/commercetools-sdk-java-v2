@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Base polymorphic read-only money type that stores currency in cent precision or high precision, that is in sub-cents.</p>
@@ -45,8 +45,8 @@ public interface TypedMoney extends Money {
     /**
      *  <p>Number of digits after the decimal separator.</p>
      *  <ul>
-     *   <li>For CentPrecisionMoney, it is equal to the default number of fraction digits for a currency.</li>
-     *   <li>For HighPrecisionMoney, it is greater than the default number of fraction digits for a currency.</li>
+     *   <li>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CentPrecisionMoney" rel="nofollow">CentPrecisionMoney</a>, it is equal to the default number of fraction digits for a currency.</li>
+     *   <li>For <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoney" rel="nofollow">HighPrecisionMoney</a>, it is greater than the default number of fraction digits for a currency.</li>
      *  </ul>
      * @return fractionDigits
      */
@@ -57,8 +57,8 @@ public interface TypedMoney extends Money {
     /**
      *  <p>Number of digits after the decimal separator.</p>
      *  <ul>
-     *   <li>For CentPrecisionMoney, it is equal to the default number of fraction digits for a currency.</li>
-     *   <li>For HighPrecisionMoney, it is greater than the default number of fraction digits for a currency.</li>
+     *   <li>For <a href="https://docs.commercetools.com/apis/ctp:api:type:CentPrecisionMoney" rel="nofollow">CentPrecisionMoney</a>, it is equal to the default number of fraction digits for a currency.</li>
+     *   <li>For <a href="https://docs.commercetools.com/apis/ctp:api:type:HighPrecisionMoney" rel="nofollow">HighPrecisionMoney</a>, it is greater than the default number of fraction digits for a currency.</li>
      *  </ul>
      * @param fractionDigits value to be set
      */
@@ -123,8 +123,8 @@ public interface TypedMoney extends Money {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TypedMoney> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TypedMoney>() {
+    public static tools.jackson.core.type.TypeReference<TypedMoney> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TypedMoney>() {
             @Override
             public String toString() {
                 return "TypeReference<TypedMoney>";

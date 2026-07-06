@@ -9,14 +9,14 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.recurring_order.RecurringOrderState;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Set RecurringOrderState update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetStateAction" rel="nofollow">Set RecurringOrderState</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ public interface RecurringOrderStateChangedMessagePayload extends MessagePayload
     String RECURRING_ORDER_STATE_CHANGED = "RecurringOrderStateChanged";
 
     /**
-     *  <p>RecurringOrderState after the Set RecurringOrderState update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderState" rel="nofollow">RecurringOrderState</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetStateAction" rel="nofollow">Set RecurringOrderState</a> update action.</p>
      * @return state
      */
     @NotNull
@@ -47,7 +47,7 @@ public interface RecurringOrderStateChangedMessagePayload extends MessagePayload
     public RecurringOrderState getState();
 
     /**
-     *  <p>RecurringOrderState before the Set RecurringOrderState update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderState" rel="nofollow">RecurringOrderState</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetStateAction" rel="nofollow">Set RecurringOrderState</a> update action.</p>
      * @return oldState
      */
 
@@ -55,14 +55,14 @@ public interface RecurringOrderStateChangedMessagePayload extends MessagePayload
     public RecurringOrderState getOldState();
 
     /**
-     *  <p>RecurringOrderState after the Set RecurringOrderState update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderState" rel="nofollow">RecurringOrderState</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetStateAction" rel="nofollow">Set RecurringOrderState</a> update action.</p>
      * @param state value to be set
      */
 
     public void setState(final RecurringOrderState state);
 
     /**
-     *  <p>RecurringOrderState before the Set RecurringOrderState update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderState" rel="nofollow">RecurringOrderState</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetStateAction" rel="nofollow">Set RecurringOrderState</a> update action.</p>
      * @param oldState value to be set
      */
 
@@ -140,8 +140,8 @@ public interface RecurringOrderStateChangedMessagePayload extends MessagePayload
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<RecurringOrderStateChangedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<RecurringOrderStateChangedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<RecurringOrderStateChangedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<RecurringOrderStateChangedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<RecurringOrderStateChangedMessagePayload>";

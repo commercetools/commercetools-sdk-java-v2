@@ -26,7 +26,7 @@ public class BusinessUnitBillingAddressRemovedMessagePayloadBuilder
     private com.commercetools.api.models.common.Address address;
 
     /**
-     *  <p>The address that was removed from the billing addresses of the Business Unit.</p>
+     *  <p>The address that was removed from the billing addresses of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class BusinessUnitBillingAddressRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The address that was removed from the billing addresses of the Business Unit.</p>
+     *  <p>The address that was removed from the billing addresses of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class BusinessUnitBillingAddressRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The address that was removed from the billing addresses of the Business Unit.</p>
+     *  <p>The address that was removed from the billing addresses of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param address value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class BusinessUnitBillingAddressRemovedMessagePayloadBuilder
     }
 
     /**
-     *  <p>The address that was removed from the billing addresses of the Business Unit.</p>
+     *  <p>The address that was removed from the billing addresses of the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @return address
      */
 

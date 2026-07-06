@@ -107,6 +107,10 @@ public class PaymentUpdateActionBuilder {
         return com.commercetools.api.models.payment.PaymentSetTransactionCustomTypeActionBuilder.of();
     }
 
+    public com.commercetools.api.models.payment.PaymentSetTransactionInterfaceIdActionBuilder setTransactionInterfaceIdBuilder() {
+        return com.commercetools.api.models.payment.PaymentSetTransactionInterfaceIdActionBuilder.of();
+    }
+
     public com.commercetools.api.models.payment.PaymentTransitionStateActionBuilder transitionStateBuilder() {
         return com.commercetools.api.models.payment.PaymentTransitionStateActionBuilder.of();
     }

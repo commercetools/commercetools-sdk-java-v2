@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Change Email update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerEmailChangedMessageImpl implements CustomerEmailChangedMessage, ModelBase {
@@ -46,6 +47,8 @@ public class CustomerEmailChangedMessageImpl implements CustomerEmailChangedMess
 
     private String email;
 
+    private String oldEmail;
+
     /**
      * create instance with all properties
      */
@@ -59,7 +62,7 @@ public class CustomerEmailChangedMessageImpl implements CustomerEmailChangedMess
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("email") final String email) {
+            @JsonProperty("email") final String email, @JsonProperty("oldEmail") final String oldEmail) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -71,6 +74,7 @@ public class CustomerEmailChangedMessageImpl implements CustomerEmailChangedMess
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.email = email;
+        this.oldEmail = oldEmail;
         this.type = CUSTOMER_EMAIL_CHANGED;
     }
 
@@ -138,7 +142,7 @@ public class CustomerEmailChangedMessageImpl implements CustomerEmailChangedMess
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -154,7 +158,7 @@ public class CustomerEmailChangedMessageImpl implements CustomerEmailChangedMess
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -170,11 +174,19 @@ public class CustomerEmailChangedMessageImpl implements CustomerEmailChangedMess
     }
 
     /**
-     *  <p>The <code>email</code> that was set during the Change Email update action.</p>
+     *  <p>The <code>email</code> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</p>
      */
 
     public String getEmail() {
         return this.email;
+    }
+
+    /**
+     *  <p>The <code>email</code> that was set before the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerChangeEmailAction" rel="nofollow">Change Email</a> update action.</p>
+     */
+
+    public String getOldEmail() {
+        return this.oldEmail;
     }
 
     public void setId(final String id) {
@@ -222,6 +234,10 @@ public class CustomerEmailChangedMessageImpl implements CustomerEmailChangedMess
         this.email = email;
     }
 
+    public void setOldEmail(final String oldEmail) {
+        this.oldEmail = oldEmail;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -244,6 +260,7 @@ public class CustomerEmailChangedMessageImpl implements CustomerEmailChangedMess
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(email, that.email)
+                .append(oldEmail, that.oldEmail)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -256,6 +273,7 @@ public class CustomerEmailChangedMessageImpl implements CustomerEmailChangedMess
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(email, that.email)
+                .append(oldEmail, that.oldEmail)
                 .isEquals();
     }
 
@@ -273,6 +291,7 @@ public class CustomerEmailChangedMessageImpl implements CustomerEmailChangedMess
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
                 .append(email)
+                .append(oldEmail)
                 .toHashCode();
     }
 
@@ -290,6 +309,7 @@ public class CustomerEmailChangedMessageImpl implements CustomerEmailChangedMess
                 .append("type", type)
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
                 .append("email", email)
+                .append("oldEmail", oldEmail)
                 .build();
     }
 

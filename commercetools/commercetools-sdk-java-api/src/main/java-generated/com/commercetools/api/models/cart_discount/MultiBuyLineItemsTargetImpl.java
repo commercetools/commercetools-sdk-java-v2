@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * MultiBuyLineItemsTarget
@@ -67,7 +68,7 @@ public class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarget, Mod
     }
 
     /**
-     *  <p>Valid LineItem target predicate. The Discount will be applied to Line Items that are matched by the predicate.</p>
+     *  <p>Valid <span>LineItem target predicate</span>. The Discount will be applied to Line Items that are matched by the predicate.</p>
      */
 
     public String getPredicate() {
@@ -75,7 +76,7 @@ public class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarget, Mod
     }
 
     /**
-     *  <p>Number of Line Items to be present in order to trigger an application of this Discount.</p>
+     *  <p>Quantity of Line Items required to trigger an application of this Discount.</p>
      */
 
     public Integer getTriggerQuantity() {
@@ -83,7 +84,7 @@ public class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarget, Mod
     }
 
     /**
-     *  <p>Number of Line Items that are discounted per application of this Discount. It must be less than or equal to the <code>triggerQuantity</code>.</p>
+     *  <p>Quantity of Line Items discounted per application of this Discount. It must be less than or equal to the <code>triggerQuantity</code>.</p>
      */
 
     public Integer getDiscountedQuantity() {

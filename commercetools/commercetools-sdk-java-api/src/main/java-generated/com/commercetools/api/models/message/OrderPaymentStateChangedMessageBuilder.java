@@ -187,7 +187,7 @@ public class OrderPaymentStateChangedMessageBuilder implements Builder<OrderPaym
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -199,7 +199,7 @@ public class OrderPaymentStateChangedMessageBuilder implements Builder<OrderPaym
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -261,7 +261,7 @@ public class OrderPaymentStateChangedMessageBuilder implements Builder<OrderPaym
     }
 
     /**
-     *  <p>PaymentState after the Change Payment State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentState" rel="nofollow">PaymentState</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangePaymentStateAction" rel="nofollow">Change Payment State</a> update action.</p>
      * @param paymentState value to be set
      * @return Builder
      */
@@ -273,7 +273,7 @@ public class OrderPaymentStateChangedMessageBuilder implements Builder<OrderPaym
     }
 
     /**
-     *  <p>PaymentState before the Change Payment State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentState" rel="nofollow">PaymentState</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangePaymentStateAction" rel="nofollow">Change Payment State</a> update action.</p>
      * @param oldPaymentState value to be set
      * @return Builder
      */
@@ -350,7 +350,7 @@ public class OrderPaymentStateChangedMessageBuilder implements Builder<OrderPaym
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -378,7 +378,7 @@ public class OrderPaymentStateChangedMessageBuilder implements Builder<OrderPaym
     }
 
     /**
-     *  <p>PaymentState after the Change Payment State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentState" rel="nofollow">PaymentState</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangePaymentStateAction" rel="nofollow">Change Payment State</a> update action.</p>
      * @return paymentState
      */
 
@@ -387,7 +387,7 @@ public class OrderPaymentStateChangedMessageBuilder implements Builder<OrderPaym
     }
 
     /**
-     *  <p>PaymentState before the Change Payment State update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentState" rel="nofollow">PaymentState</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderChangePaymentStateAction" rel="nofollow">Change Payment State</a> update action.</p>
      * @return oldPaymentState
      */
 

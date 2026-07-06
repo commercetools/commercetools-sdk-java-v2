@@ -70,7 +70,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
     }
 
     /**
-     *  <p>Reference to a Customer associated with the Payment. Set automatically with a password flow token. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
+     *  <p>Reference to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> associated with the Payment. Set automatically with a <span>password flow token</span>. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
     }
 
     /**
-     *  <p>Reference to a Customer associated with the Payment. Set automatically with a password flow token. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
+     *  <p>Reference to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> associated with the Payment. Set automatically with a <span>password flow token</span>. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
     }
 
     /**
-     *  <p>Reference to a Customer associated with the Payment. Set automatically with a password flow token. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
+     *  <p>Reference to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> associated with the Payment. Set automatically with a <span>password flow token</span>. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -105,7 +105,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
     }
 
     /**
-     *  <p>Anonymous session associated with the Payment. Set automatically with a token for an anonymous session. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">Anonymous session</a> associated with the Payment. Set automatically with a <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">token for an anonymous session</a>. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
      * @param anonymousId value to be set
      * @return Builder
      */
@@ -116,7 +116,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
     }
 
     /**
-     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> gross total.</p>
      * @param builder function to build the amountPlanned value
      * @return Builder
      */
@@ -128,7 +128,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
     }
 
     /**
-     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> gross total.</p>
      * @param builder function to build the amountPlanned value
      * @return Builder
      */
@@ -140,7 +140,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
     }
 
     /**
-     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> gross total.</p>
      * @param amountPlanned value to be set
      * @return Builder
      */
@@ -188,7 +188,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
     }
 
     /**
-     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionType</a> and a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">TransactionState</a>.</p>
      * @param transactions value to be set
      * @return Builder
      */
@@ -199,7 +199,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
     }
 
     /**
-     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionType</a> and a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">TransactionState</a>.</p>
      * @param transactions value to be set
      * @return Builder
      */
@@ -211,7 +211,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
     }
 
     /**
-     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionType</a> and a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">TransactionState</a>.</p>
      * @param transactions value to be set
      * @return Builder
      */
@@ -225,7 +225,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
     }
 
     /**
-     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionType</a> and a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">TransactionState</a>.</p>
      * @param builder function to build the transactions value
      * @return Builder
      */
@@ -240,7 +240,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
     }
 
     /**
-     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionType</a> and a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">TransactionState</a>.</p>
      * @param builder function to build the transactions value
      * @return Builder
      */
@@ -253,7 +253,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
     }
 
     /**
-     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionType</a> and a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">TransactionState</a>.</p>
      * @param builder function to build the transactions value
      * @return Builder
      */
@@ -264,7 +264,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
     }
 
     /**
-     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionType</a> and a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">TransactionState</a>.</p>
      * @param builder function to build the transactions value
      * @return Builder
      */
@@ -328,7 +328,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
     }
 
     /**
-     *  <p>Reference to a Customer associated with the Payment. Set automatically with a password flow token. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
+     *  <p>Reference to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> associated with the Payment. Set automatically with a <span>password flow token</span>. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
      * @return customer
      */
 
@@ -338,7 +338,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
     }
 
     /**
-     *  <p>Anonymous session associated with the Payment. Set automatically with a token for an anonymous session. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">Anonymous session</a> associated with the Payment. Set automatically with a <a href="https://docs.commercetools.com/apis/ctp:api:type:AnonymousSession" rel="nofollow">token for an anonymous session</a>. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
      * @return anonymousId
      */
 
@@ -348,7 +348,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
     }
 
     /**
-     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> gross total.</p>
      * @return amountPlanned
      */
 
@@ -366,7 +366,7 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
     }
 
     /**
-     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     *  <p>Financial transactions of the Payment. Each Transaction has a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionType" rel="nofollow">TransactionType</a> and a <a href="https://docs.commercetools.com/apis/ctp:api:type:TransactionState" rel="nofollow">TransactionState</a>.</p>
      * @return transactions
      */
 

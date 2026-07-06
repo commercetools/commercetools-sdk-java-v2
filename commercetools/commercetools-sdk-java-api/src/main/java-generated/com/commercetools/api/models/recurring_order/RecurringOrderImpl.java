@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * RecurringOrder
@@ -166,7 +167,7 @@ public class RecurringOrderImpl implements RecurringOrder, ModelBase {
     }
 
     /**
-     *  <p>Reference to the Cart for a RecurringOrder. The referenced Cart will have the <code>RecurringOrder</code> CartOrigin.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Cart for a RecurringOrder. The referenced Cart will have the <code>RecurringOrder</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:CartOrigin" rel="nofollow">CartOrigin</a>.</p>
      */
 
     public com.commercetools.api.models.cart.CartReference getCart() {
@@ -174,7 +175,7 @@ public class RecurringOrderImpl implements RecurringOrder, ModelBase {
     }
 
     /**
-     *  <p>Reference to the original Order that generated this RecurringOrder.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the original <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that generated this RecurringOrder. This field is automatically populated when the RecurringOrder is created via the <span>Create Order from Cart</span> endpoint and the Cart contains Line Items with defined <code>recurrenceInfo</code>. When the RecurringOrder is created directly via the <span>Create RecurringOrder</span> endpoint, this field remains empty.</p>
      */
 
     public com.commercetools.api.models.order.OrderReference getOriginOrder() {
@@ -230,7 +231,7 @@ public class RecurringOrderImpl implements RecurringOrder, ModelBase {
     }
 
     /**
-     *  <p>Reference to a Store.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a Store.</p>
      */
 
     public com.commercetools.api.models.store.StoreKeyReference getStore() {
@@ -238,7 +239,7 @@ public class RecurringOrderImpl implements RecurringOrder, ModelBase {
     }
 
     /**
-     *  <p>Reference to the Business Unit that the RecurringOrder belongs to.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the Business Unit that the RecurringOrder belongs to.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
@@ -246,7 +247,7 @@ public class RecurringOrderImpl implements RecurringOrder, ModelBase {
     }
 
     /**
-     *  <p>State of the RecurringOrder in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the RecurringOrder in a custom workflow.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {
@@ -270,7 +271,7 @@ public class RecurringOrderImpl implements RecurringOrder, ModelBase {
     }
 
     /**
-     *  <p>The Customer that the RecurringOrder belongs to.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> that the RecurringOrder belongs to.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {

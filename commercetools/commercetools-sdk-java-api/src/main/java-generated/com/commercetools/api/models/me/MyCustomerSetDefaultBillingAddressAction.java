@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Sets the default billing address from <code>addresses</code>. If the address is not currently a billing address, it is added to <code>billingAddressIds</code>. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
@@ -35,7 +36,7 @@ public interface MyCustomerSetDefaultBillingAddressAction extends MyCustomerUpda
     String SET_DEFAULT_BILLING_ADDRESS = "setDefaultBillingAddress";
 
     /**
-     *  <p><code>id</code> of the Address to become the default billing address.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become the default billing address.</p>
      * @return addressId
      */
 
@@ -43,7 +44,7 @@ public interface MyCustomerSetDefaultBillingAddressAction extends MyCustomerUpda
     public String getAddressId();
 
     /**
-     *  <p><code>key</code> of the Address to become the default billing address.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become the default billing address.</p>
      * @return addressKey
      */
 
@@ -51,14 +52,14 @@ public interface MyCustomerSetDefaultBillingAddressAction extends MyCustomerUpda
     public String getAddressKey();
 
     /**
-     *  <p><code>id</code> of the Address to become the default billing address.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become the default billing address.</p>
      * @param addressId value to be set
      */
 
     public void setAddressId(final String addressId);
 
     /**
-     *  <p><code>key</code> of the Address to become the default billing address.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to become the default billing address.</p>
      * @param addressKey value to be set
      */
 
@@ -136,8 +137,8 @@ public interface MyCustomerSetDefaultBillingAddressAction extends MyCustomerUpda
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerSetDefaultBillingAddressAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerSetDefaultBillingAddressAction>() {
+    public static tools.jackson.core.type.TypeReference<MyCustomerSetDefaultBillingAddressAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyCustomerSetDefaultBillingAddressAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyCustomerSetDefaultBillingAddressAction>";

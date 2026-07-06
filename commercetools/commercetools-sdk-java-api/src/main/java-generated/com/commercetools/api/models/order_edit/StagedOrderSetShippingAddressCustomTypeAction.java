@@ -11,11 +11,11 @@ import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
  * StagedOrderSetShippingAddressCustomTypeAction
@@ -40,7 +40,7 @@ public interface StagedOrderSetShippingAddressCustomTypeAction extends StagedOrd
     String SET_SHIPPING_ADDRESS_CUSTOM_TYPE = "setShippingAddressCustomType";
 
     /**
-     *  <p>Defines the Type that extends the <code>shippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>shippingAddress</code> with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>
      * @return type
      */
     @Valid
@@ -48,7 +48,8 @@ public interface StagedOrderSetShippingAddressCustomTypeAction extends StagedOrd
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>shippingAddress</code>.</p>
+     *  <p>Object containing the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the <code>shippingAddress</code>.</p>
+     *  <p>Required if at least one Custom Field is defined as required in the <code>fieldDefinitions</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @return fields
      */
     @Valid
@@ -56,14 +57,15 @@ public interface StagedOrderSetShippingAddressCustomTypeAction extends StagedOrd
     public FieldContainer getFields();
 
     /**
-     *  <p>Defines the Type that extends the <code>shippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>shippingAddress</code> with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>shippingAddress</code>.</p>
+     *  <p>Object containing the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the <code>shippingAddress</code>.</p>
+     *  <p>Required if at least one Custom Field is defined as required in the <code>fieldDefinitions</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param fields value to be set
      */
 
@@ -142,8 +144,8 @@ public interface StagedOrderSetShippingAddressCustomTypeAction extends StagedOrd
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingAddressCustomTypeAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingAddressCustomTypeAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrderSetShippingAddressCustomTypeAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrderSetShippingAddressCustomTypeAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderSetShippingAddressCustomTypeAction>";

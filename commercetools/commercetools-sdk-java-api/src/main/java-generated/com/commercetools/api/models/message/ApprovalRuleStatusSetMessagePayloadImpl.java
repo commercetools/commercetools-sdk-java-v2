@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Status update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetStatusAction" rel="nofollow">Set Status</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ApprovalRuleStatusSetMessagePayloadImpl implements ApprovalRuleStatusSetMessagePayload, ModelBase {
@@ -56,7 +57,7 @@ public class ApprovalRuleStatusSetMessagePayloadImpl implements ApprovalRuleStat
     }
 
     /**
-     *  <p>Status of the ApprovalRule after the Set Status update action.</p>
+     *  <p>Status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetStatusAction" rel="nofollow">Set Status</a> update action.</p>
      */
 
     public com.commercetools.api.models.approval_rule.ApprovalRuleStatus getStatus() {
@@ -64,7 +65,7 @@ public class ApprovalRuleStatusSetMessagePayloadImpl implements ApprovalRuleStat
     }
 
     /**
-     *  <p>Status of the ApprovalRule before the Set Status update action.</p>
+     *  <p>Status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetStatusAction" rel="nofollow">Set Status</a> update action.</p>
      */
 
     public com.commercetools.api.models.approval_rule.ApprovalRuleStatus getOldStatus() {

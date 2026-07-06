@@ -8,20 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li>Change Name on Customer Groups.</li>
- *   <li>Change Name on Product Types.</li>
- *   <li>Change Name on Tax Categories.</li>
- *   <li>Change Name on Zones.</li>
- *  </ul>
+ * ChangeNameChange
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -169,8 +163,8 @@ public interface ChangeNameChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ChangeNameChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ChangeNameChange>() {
+    public static tools.jackson.core.type.TypeReference<ChangeNameChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ChangeNameChange>() {
             @Override
             public String toString() {
                 return "TypeReference<ChangeNameChange>";

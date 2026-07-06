@@ -5,7 +5,6 @@ import com.commercetools.api.models.order.OrderSearchCustomType;
 import com.commercetools.api.models.order.OrderSearchRequest;
 import com.commercetools.api.models.order.OrderSearchRequestBuilder;
 import com.commercetools.api.models.order.OrderSearchSortOrder;
-import com.fasterxml.jackson.core.JsonProcessingException;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
@@ -15,11 +14,13 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.skyscreamer.jsonassert.JSONAssert;
 
+import tools.jackson.core.JacksonException;
+
 public class OrderQueryBuilderTest {
     @ParameterizedTest
     @MethodSource("searchBuilder")
     public void buildUnchecked(OrderSearchRequestBuilder builder, String expectedQuery)
-            throws JSONException, JsonProcessingException {
+            throws JSONException, JacksonException {
         OrderSearchRequest request = builder.buildUnchecked();
         Assertions.assertThat(request).isInstanceOf(OrderSearchRequest.class);
         JSONAssert.assertEquals(expectedQuery, JsonUtils.toJsonString(request), true);

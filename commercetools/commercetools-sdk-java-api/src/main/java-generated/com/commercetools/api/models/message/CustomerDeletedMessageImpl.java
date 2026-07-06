@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Delete Customer request.</p>
+ *  <p>Generated after a successful <span>Delete Customer</span> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerDeletedMessageImpl implements CustomerDeletedMessage, ModelBase {
@@ -44,6 +45,8 @@ public class CustomerDeletedMessageImpl implements CustomerDeletedMessage, Model
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
+    private String email;
+
     /**
      * create instance with all properties
      */
@@ -56,7 +59,8 @@ public class CustomerDeletedMessageImpl implements CustomerDeletedMessage, Model
             @JsonProperty("sequenceNumber") final Long sequenceNumber,
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
-            @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+            @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
+            @JsonProperty("email") final String email) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -67,6 +71,7 @@ public class CustomerDeletedMessageImpl implements CustomerDeletedMessage, Model
         this.resource = resource;
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
+        this.email = email;
         this.type = CUSTOMER_DELETED;
     }
 
@@ -134,7 +139,7 @@ public class CustomerDeletedMessageImpl implements CustomerDeletedMessage, Model
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -150,7 +155,7 @@ public class CustomerDeletedMessageImpl implements CustomerDeletedMessage, Model
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -163,6 +168,14 @@ public class CustomerDeletedMessageImpl implements CustomerDeletedMessage, Model
 
     public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {
         return this.resourceUserProvidedIdentifiers;
+    }
+
+    /**
+     *  <p>The email address of the Customer that was deleted.</p>
+     */
+
+    public String getEmail() {
+        return this.email;
     }
 
     public void setId(final String id) {
@@ -206,6 +219,10 @@ public class CustomerDeletedMessageImpl implements CustomerDeletedMessage, Model
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
     }
 
+    public void setEmail(final String email) {
+        this.email = email;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -227,6 +244,7 @@ public class CustomerDeletedMessageImpl implements CustomerDeletedMessage, Model
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(email, that.email)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -238,6 +256,7 @@ public class CustomerDeletedMessageImpl implements CustomerDeletedMessage, Model
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(email, that.email)
                 .isEquals();
     }
 
@@ -254,6 +273,7 @@ public class CustomerDeletedMessageImpl implements CustomerDeletedMessage, Model
                 .append(resourceVersion)
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
+                .append(email)
                 .toHashCode();
     }
 
@@ -270,6 +290,7 @@ public class CustomerDeletedMessageImpl implements CustomerDeletedMessage, Model
                 .append("resourceVersion", resourceVersion)
                 .append("type", type)
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
+                .append("email", email)
                 .build();
     }
 

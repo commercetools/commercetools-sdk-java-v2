@@ -25,7 +25,7 @@ public class AssociateRoleCreatedMessagePayloadBuilder implements Builder<Associ
     private com.commercetools.api.models.associate_role.AssociateRole associateRole;
 
     /**
-     *  <p>The AssociateRole that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a> that was created.</p>
      * @param builder function to build the associateRole value
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class AssociateRoleCreatedMessagePayloadBuilder implements Builder<Associ
     }
 
     /**
-     *  <p>The AssociateRole that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a> that was created.</p>
      * @param builder function to build the associateRole value
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class AssociateRoleCreatedMessagePayloadBuilder implements Builder<Associ
     }
 
     /**
-     *  <p>The AssociateRole that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a> that was created.</p>
      * @param associateRole value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class AssociateRoleCreatedMessagePayloadBuilder implements Builder<Associ
     }
 
     /**
-     *  <p>The AssociateRole that was created.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a> that was created.</p>
      * @return associateRole
      */
 

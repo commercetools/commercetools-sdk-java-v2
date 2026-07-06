@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * BusinessUnitUpdateAction
@@ -83,6 +83,14 @@ public interface BusinessUnitUpdateAction
      */
     public static com.commercetools.api.models.business_unit.BusinessUnitAddBillingAddressIdActionBuilder addBillingAddressIdBuilder() {
         return com.commercetools.api.models.business_unit.BusinessUnitAddBillingAddressIdActionBuilder.of();
+    }
+
+    /**
+     * builder for addCustomerGroupAssignment subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.business_unit.BusinessUnitAddCustomerGroupAssignmentActionBuilder addCustomerGroupAssignmentBuilder() {
+        return com.commercetools.api.models.business_unit.BusinessUnitAddCustomerGroupAssignmentActionBuilder.of();
     }
 
     /**
@@ -182,6 +190,14 @@ public interface BusinessUnitUpdateAction
     }
 
     /**
+     * builder for removeCustomerGroupAssignment subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.business_unit.BusinessUnitRemoveCustomerGroupAssignmentActionBuilder removeCustomerGroupAssignmentBuilder() {
+        return com.commercetools.api.models.business_unit.BusinessUnitRemoveCustomerGroupAssignmentActionBuilder.of();
+    }
+
+    /**
      * builder for removeShippingAddressId subtype
      * @return builder
      */
@@ -246,6 +262,14 @@ public interface BusinessUnitUpdateAction
     }
 
     /**
+     * builder for setCustomerGroupAssignments subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.business_unit.BusinessUnitSetCustomerGroupAssignmentsActionBuilder setCustomerGroupAssignmentsBuilder() {
+        return com.commercetools.api.models.business_unit.BusinessUnitSetCustomerGroupAssignmentsActionBuilder.of();
+    }
+
+    /**
      * builder for setDefaultBillingAddress subtype
      * @return builder
      */
@@ -299,8 +323,8 @@ public interface BusinessUnitUpdateAction
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitUpdateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitUpdateAction>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitUpdateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitUpdateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitUpdateAction>";

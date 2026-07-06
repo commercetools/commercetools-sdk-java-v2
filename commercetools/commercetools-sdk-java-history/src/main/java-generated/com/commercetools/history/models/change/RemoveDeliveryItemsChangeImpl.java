@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the Remove Delivery update action.</p>
+ *  <p>Change triggered by the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderRemoveDeliveryAction" rel="nofollow">Remove Delivery</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveDeliveryItemsChangeImpl implements RemoveDeliveryItemsChange, ModelBase {
@@ -26,14 +27,14 @@ public class RemoveDeliveryItemsChangeImpl implements RemoveDeliveryItemsChange,
 
     private String change;
 
-    private com.commercetools.history.models.common.Delivery previousValue;
+    private com.commercetools.history.models.change_value.DeliveryChangeValue previousValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     RemoveDeliveryItemsChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.Delivery previousValue) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.change_value.DeliveryChangeValue previousValue) {
         this.change = change;
         this.previousValue = previousValue;
         this.type = REMOVE_DELIVERY_ITEMS_CHANGE;
@@ -66,7 +67,7 @@ public class RemoveDeliveryItemsChangeImpl implements RemoveDeliveryItemsChange,
      *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.common.Delivery getPreviousValue() {
+    public com.commercetools.history.models.change_value.DeliveryChangeValue getPreviousValue() {
         return this.previousValue;
     }
 
@@ -74,7 +75,8 @@ public class RemoveDeliveryItemsChangeImpl implements RemoveDeliveryItemsChange,
         this.change = change;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.Delivery previousValue) {
+    public void setPreviousValue(
+            final com.commercetools.history.models.change_value.DeliveryChangeValue previousValue) {
         this.previousValue = previousValue;
     }
 

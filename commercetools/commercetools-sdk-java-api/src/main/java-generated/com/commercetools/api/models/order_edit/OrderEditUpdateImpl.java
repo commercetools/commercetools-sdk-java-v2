@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * OrderEditUpdate
@@ -47,7 +48,7 @@ public class OrderEditUpdateImpl implements OrderEditUpdate, ModelBase {
     }
 
     /**
-     *  <p>Expected version of the Order Edit on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the Order Edit on which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      */
 
     public Long getVersion() {
@@ -63,7 +64,7 @@ public class OrderEditUpdateImpl implements OrderEditUpdate, ModelBase {
     }
 
     /**
-     *  <p>If set to <code>true</code>, the Order Edit is applied on the Order without persisting it.</p>
+     *  <p>If set to <code>true</code>, the Order Edit is applied on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> without persisting it.</p>
      */
 
     public Boolean getDryRun() {

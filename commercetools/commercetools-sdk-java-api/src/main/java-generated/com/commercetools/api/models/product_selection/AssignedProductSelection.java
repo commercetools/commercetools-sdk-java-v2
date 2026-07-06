@@ -9,12 +9,12 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * AssignedProductSelection
@@ -45,7 +45,7 @@ public interface AssignedProductSelection {
 
     /**
      *  <p>Defines which Variants of the Product will be included in the Product Selection.</p>
-     *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> ProductSelectionMode.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</p>
      * @return variantSelection
      */
     @Valid
@@ -54,7 +54,7 @@ public interface AssignedProductSelection {
 
     /**
      *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
-     *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</p>
      * @return variantExclusion
      */
     @Valid
@@ -78,7 +78,7 @@ public interface AssignedProductSelection {
 
     /**
      *  <p>Defines which Variants of the Product will be included in the Product Selection.</p>
-     *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> ProductSelectionMode.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</p>
      * @param variantSelection value to be set
      */
 
@@ -86,7 +86,7 @@ public interface AssignedProductSelection {
 
     /**
      *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
-     *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</p>
      * @param variantExclusion value to be set
      */
 
@@ -175,8 +175,8 @@ public interface AssignedProductSelection {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AssignedProductSelection> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AssignedProductSelection>() {
+    public static tools.jackson.core.type.TypeReference<AssignedProductSelection> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AssignedProductSelection>() {
             @Override
             public String toString() {
                 return "TypeReference<AssignedProductSelection>";

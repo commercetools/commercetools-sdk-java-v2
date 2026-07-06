@@ -27,7 +27,7 @@ public class CustomerGroupSetMessagePayloadBuilder implements Builder<CustomerGr
     private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
 
     /**
-     *  <p>Customer Group that was set during the Set Customer Group update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">Customer Group</a> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAction" rel="nofollow">Set Customer Group</a> update action.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class CustomerGroupSetMessagePayloadBuilder implements Builder<CustomerGr
     }
 
     /**
-     *  <p>Customer Group that was set during the Set Customer Group update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">Customer Group</a> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAction" rel="nofollow">Set Customer Group</a> update action.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class CustomerGroupSetMessagePayloadBuilder implements Builder<CustomerGr
     }
 
     /**
-     *  <p>Customer Group that was set during the Set Customer Group update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">Customer Group</a> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAction" rel="nofollow">Set Customer Group</a> update action.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class CustomerGroupSetMessagePayloadBuilder implements Builder<CustomerGr
     }
 
     /**
-     *  <p>Customer Group that was set during the Set Customer Group update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">Customer Group</a> that was set during the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerSetCustomerGroupAction" rel="nofollow">Set Customer Group</a> update action.</p>
      * @return customerGroup
      */
 

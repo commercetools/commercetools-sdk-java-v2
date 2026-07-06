@@ -8,12 +8,13 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set InterfaceId update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetInterfaceIdAction" rel="nofollow">Set InterfaceId</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +36,7 @@ public interface PaymentInterfaceIdSetMessagePayload extends MessagePayload {
     String PAYMENT_INTERFACE_ID_SET = "PaymentInterfaceIdSet";
 
     /**
-     *  <p>Interface ID of the Payment after the Set InterfaceId update action.</p>
+     *  <p>Interface ID of the Payment after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetInterfaceIdAction" rel="nofollow">Set InterfaceId</a> update action.</p>
      * @return interfaceId
      */
 
@@ -43,7 +44,7 @@ public interface PaymentInterfaceIdSetMessagePayload extends MessagePayload {
     public String getInterfaceId();
 
     /**
-     *  <p>Interface ID of the Payment before the Set InterfaceId update action.</p>
+     *  <p>Interface ID of the Payment before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetInterfaceIdAction" rel="nofollow">Set InterfaceId</a> update action.</p>
      * @return oldInterfaceId
      */
 
@@ -51,14 +52,14 @@ public interface PaymentInterfaceIdSetMessagePayload extends MessagePayload {
     public String getOldInterfaceId();
 
     /**
-     *  <p>Interface ID of the Payment after the Set InterfaceId update action.</p>
+     *  <p>Interface ID of the Payment after the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetInterfaceIdAction" rel="nofollow">Set InterfaceId</a> update action.</p>
      * @param interfaceId value to be set
      */
 
     public void setInterfaceId(final String interfaceId);
 
     /**
-     *  <p>Interface ID of the Payment before the Set InterfaceId update action.</p>
+     *  <p>Interface ID of the Payment before the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentSetInterfaceIdAction" rel="nofollow">Set InterfaceId</a> update action.</p>
      * @param oldInterfaceId value to be set
      */
 
@@ -135,8 +136,8 @@ public interface PaymentInterfaceIdSetMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentInterfaceIdSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentInterfaceIdSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<PaymentInterfaceIdSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentInterfaceIdSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentInterfaceIdSetMessagePayload>";

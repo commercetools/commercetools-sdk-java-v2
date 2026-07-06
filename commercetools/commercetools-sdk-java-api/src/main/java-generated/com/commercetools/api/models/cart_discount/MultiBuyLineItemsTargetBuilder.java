@@ -38,7 +38,7 @@ public class MultiBuyLineItemsTargetBuilder implements Builder<MultiBuyLineItems
     private com.commercetools.api.models.cart_discount.SelectionMode selectionMode;
 
     /**
-     *  <p>Valid LineItem target predicate. The Discount will be applied to Line Items that are matched by the predicate.</p>
+     *  <p>Valid <span>LineItem target predicate</span>. The Discount will be applied to Line Items that are matched by the predicate.</p>
      * @param predicate value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class MultiBuyLineItemsTargetBuilder implements Builder<MultiBuyLineItems
     }
 
     /**
-     *  <p>Number of Line Items to be present in order to trigger an application of this Discount.</p>
+     *  <p>Quantity of Line Items required to trigger an application of this Discount.</p>
      * @param triggerQuantity value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class MultiBuyLineItemsTargetBuilder implements Builder<MultiBuyLineItems
     }
 
     /**
-     *  <p>Number of Line Items that are discounted per application of this Discount. It must be less than or equal to the <code>triggerQuantity</code>.</p>
+     *  <p>Quantity of Line Items discounted per application of this Discount. It must be less than or equal to the <code>triggerQuantity</code>.</p>
      * @param discountedQuantity value to be set
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class MultiBuyLineItemsTargetBuilder implements Builder<MultiBuyLineItems
     }
 
     /**
-     *  <p>Valid LineItem target predicate. The Discount will be applied to Line Items that are matched by the predicate.</p>
+     *  <p>Valid <span>LineItem target predicate</span>. The Discount will be applied to Line Items that are matched by the predicate.</p>
      * @return predicate
      */
 
@@ -103,7 +103,7 @@ public class MultiBuyLineItemsTargetBuilder implements Builder<MultiBuyLineItems
     }
 
     /**
-     *  <p>Number of Line Items to be present in order to trigger an application of this Discount.</p>
+     *  <p>Quantity of Line Items required to trigger an application of this Discount.</p>
      * @return triggerQuantity
      */
 
@@ -112,7 +112,7 @@ public class MultiBuyLineItemsTargetBuilder implements Builder<MultiBuyLineItems
     }
 
     /**
-     *  <p>Number of Line Items that are discounted per application of this Discount. It must be less than or equal to the <code>triggerQuantity</code>.</p>
+     *  <p>Quantity of Line Items discounted per application of this Discount. It must be less than or equal to the <code>triggerQuantity</code>.</p>
      * @return discountedQuantity
      */
 

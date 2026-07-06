@@ -24,7 +24,7 @@ public class CustomerPasswordTokenReferenceBuilder implements Builder<CustomerPa
     private String id;
 
     /**
-     *  <p>Unique identifier of the referenced CustomerToken.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerToken" rel="nofollow">CustomerToken</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class CustomerPasswordTokenReferenceBuilder implements Builder<CustomerPa
     }
 
     /**
-     *  <p>Unique identifier of the referenced CustomerToken.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerToken" rel="nofollow">CustomerToken</a>.</p>
      * @return id
      */
 

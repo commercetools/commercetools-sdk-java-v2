@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,12 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li>Add LocalizableEnumValue to AttributeDefinition on Product Types.</li>
- *   <li>Add LocalizedEnumValue to FieldDefinition on Types.</li>
- *  </ul>
+ * AddLocalizedEnumValueChange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddLocalizedEnumValueChangeImpl implements AddLocalizedEnumValueChange, ModelBase {
@@ -30,7 +27,7 @@ public class AddLocalizedEnumValueChangeImpl implements AddLocalizedEnumValueCha
 
     private String change;
 
-    private com.commercetools.history.models.common.AttributeLocalizedEnumValue nextValue;
+    private com.commercetools.history.models.common.CustomFieldLocalizedEnumValue nextValue;
 
     private String fieldName;
 
@@ -41,7 +38,7 @@ public class AddLocalizedEnumValueChangeImpl implements AddLocalizedEnumValueCha
      */
     @JsonCreator
     AddLocalizedEnumValueChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.AttributeLocalizedEnumValue nextValue,
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.CustomFieldLocalizedEnumValue nextValue,
             @JsonProperty("fieldName") final String fieldName,
             @JsonProperty("attributeName") final String attributeName) {
         this.change = change;
@@ -78,12 +75,12 @@ public class AddLocalizedEnumValueChangeImpl implements AddLocalizedEnumValueCha
      *  <p>Value after the change.</p>
      */
 
-    public com.commercetools.history.models.common.AttributeLocalizedEnumValue getNextValue() {
+    public com.commercetools.history.models.common.CustomFieldLocalizedEnumValue getNextValue() {
         return this.nextValue;
     }
 
     /**
-     *  <p>Name of the updated FieldDefinition; only present on changes to Types.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:FieldDefinition" rel="nofollow">FieldDefinition</a>; only present on changes to Types.</p>
      */
 
     public String getFieldName() {
@@ -91,7 +88,7 @@ public class AddLocalizedEnumValueChangeImpl implements AddLocalizedEnumValueCha
     }
 
     /**
-     *  <p>Name of the updated AttributeDefinition; only present on changes to Product Types.</p>
+     *  <p>Name of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>; only present on changes to Product Types.</p>
      */
 
     public String getAttributeName() {
@@ -102,7 +99,7 @@ public class AddLocalizedEnumValueChangeImpl implements AddLocalizedEnumValueCha
         this.change = change;
     }
 
-    public void setNextValue(final com.commercetools.history.models.common.AttributeLocalizedEnumValue nextValue) {
+    public void setNextValue(final com.commercetools.history.models.common.CustomFieldLocalizedEnumValue nextValue) {
         this.nextValue = nextValue;
     }
 

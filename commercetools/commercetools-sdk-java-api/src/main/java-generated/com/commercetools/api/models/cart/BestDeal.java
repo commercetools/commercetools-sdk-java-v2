@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Indicates the best deal logic applies to a Cart or Order and indicates the discount type that offers the best deal.</p>
+ *  <p>Indicates if a Product Discount or Cart Discount offers the best deal for a Cart or Order.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface BestDeal extends DiscountTypeCombination {
     String BEST_DEAL = "BestDeal";
 
     /**
-     *  <p>Discount type that offers the best deal; the value can be <code>product-discount</code> or <code>cart-discount</code>.</p>
+     *  <p>Discount type that offers the best deal; the value can be <code>ProductDiscount</code> or <code>CartDiscount</code>.</p>
      * @return chosenDiscountType
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface BestDeal extends DiscountTypeCombination {
     public String getChosenDiscountType();
 
     /**
-     *  <p>Discount type that offers the best deal; the value can be <code>product-discount</code> or <code>cart-discount</code>.</p>
+     *  <p>Discount type that offers the best deal; the value can be <code>ProductDiscount</code> or <code>CartDiscount</code>.</p>
      * @param chosenDiscountType value to be set
      */
 
@@ -119,8 +119,8 @@ public interface BestDeal extends DiscountTypeCombination {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BestDeal> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BestDeal>() {
+    public static tools.jackson.core.type.TypeReference<BestDeal> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BestDeal>() {
             @Override
             public String toString() {
                 return "TypeReference<BestDeal>";

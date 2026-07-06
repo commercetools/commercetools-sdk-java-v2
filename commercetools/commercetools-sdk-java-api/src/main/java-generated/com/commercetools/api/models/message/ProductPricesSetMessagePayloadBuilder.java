@@ -31,7 +31,7 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
     private Boolean staged;
 
     /**
-     *  <p>Unique identifier of the ProductVariant for which the Price was set.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which the Price was set.</p>
      * @param variantId value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
     }
 
     /**
-     *  <p>The Embedded Prices that were set on the ProductVariant.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param prices value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
     }
 
     /**
-     *  <p>The Embedded Prices that were set on the ProductVariant.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param prices value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
     }
 
     /**
-     *  <p>The Embedded Prices that were set on the ProductVariant.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param prices value to be set
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
     }
 
     /**
-     *  <p>The Embedded Prices that were set on the ProductVariant.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
     }
 
     /**
-     *  <p>The Embedded Prices that were set on the ProductVariant.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -107,7 +107,7 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
     }
 
     /**
-     *  <p>The Embedded Prices that were set on the ProductVariant.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -118,7 +118,7 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
     }
 
     /**
-     *  <p>The Embedded Prices that were set on the ProductVariant.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -129,7 +129,7 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -140,7 +140,7 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
     }
 
     /**
-     *  <p>Unique identifier of the ProductVariant for which the Price was set.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> for which the Price was set.</p>
      * @return variantId
      */
 
@@ -149,7 +149,7 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
     }
 
     /**
-     *  <p>The Embedded Prices that were set on the ProductVariant.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> that were set on the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return prices
      */
 
@@ -158,7 +158,7 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
     }
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @return staged
      */
 

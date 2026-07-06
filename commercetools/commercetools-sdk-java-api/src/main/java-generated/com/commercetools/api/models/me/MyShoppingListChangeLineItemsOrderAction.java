@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * MyShoppingListChangeLineItemsOrderAction
@@ -38,7 +38,7 @@ public interface MyShoppingListChangeLineItemsOrderAction extends MyShoppingList
     String CHANGE_LINE_ITEMS_ORDER = "changeLineItemsOrder";
 
     /**
-     *  <p>All existing ShoppingListLineItem <code>id</code>s of the ShoppingList in the desired new order.</p>
+     *  <p>All existing <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">ShoppingListLineItem</a> <code>id</code>s of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a> in the desired new order.</p>
      * @return lineItemOrder
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface MyShoppingListChangeLineItemsOrderAction extends MyShoppingList
     public List<String> getLineItemOrder();
 
     /**
-     *  <p>All existing ShoppingListLineItem <code>id</code>s of the ShoppingList in the desired new order.</p>
+     *  <p>All existing <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">ShoppingListLineItem</a> <code>id</code>s of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a> in the desired new order.</p>
      * @param lineItemOrder values to be set
      */
 
@@ -54,7 +54,7 @@ public interface MyShoppingListChangeLineItemsOrderAction extends MyShoppingList
     public void setLineItemOrder(final String... lineItemOrder);
 
     /**
-     *  <p>All existing ShoppingListLineItem <code>id</code>s of the ShoppingList in the desired new order.</p>
+     *  <p>All existing <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListLineItem" rel="nofollow">ShoppingListLineItem</a> <code>id</code>s of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a> in the desired new order.</p>
      * @param lineItemOrder values to be set
      */
 
@@ -130,8 +130,8 @@ public interface MyShoppingListChangeLineItemsOrderAction extends MyShoppingList
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyShoppingListChangeLineItemsOrderAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyShoppingListChangeLineItemsOrderAction>() {
+    public static tools.jackson.core.type.TypeReference<MyShoppingListChangeLineItemsOrderAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyShoppingListChangeLineItemsOrderAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyShoppingListChangeLineItemsOrderAction>";

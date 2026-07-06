@@ -8,16 +8,16 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Updates Approval Rules inheritance behavior between Business Units.</p>
+ *  <p>Updates <span>Approval Rules</span> inheritance behavior between Business Units.</p>
  *  <p>Only Business Units of type <code>Division</code> can be changed to <code>ExplicitAndFromParent</code>.</p>
- *  <p>This update action generates a BusinessUnitApprovalRuleModeChanged Message.</p>
+ *  <p>This update action generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitApprovalRuleModeChangedMessage" rel="nofollow">BusinessUnitApprovalRuleModeChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -124,8 +124,8 @@ public interface BusinessUnitChangeApprovalRuleModeAction extends BusinessUnitUp
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitChangeApprovalRuleModeAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitChangeApprovalRuleModeAction>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitChangeApprovalRuleModeAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitChangeApprovalRuleModeAction>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitChangeApprovalRuleModeAction>";

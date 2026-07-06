@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,23 +15,25 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Create RecurringOrder request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/recurring-orders:POST" rel="nofollow">Create RecurringOrder</a> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RecurringOrderCreatedMessagePayloadImpl implements RecurringOrderCreatedMessagePayload, ModelBase {
 
     private String type;
 
-    private com.commercetools.api.models.recurring_order.RecurringOrder order;
+    private com.commercetools.api.models.recurring_order.RecurringOrder recurringOrder;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     RecurringOrderCreatedMessagePayloadImpl(
-            @JsonProperty("order") final com.commercetools.api.models.recurring_order.RecurringOrder order) {
-        this.order = order;
+            @JsonProperty("recurringOrder") final com.commercetools.api.models.recurring_order.RecurringOrder recurringOrder) {
+        this.recurringOrder = recurringOrder;
         this.type = RECURRING_ORDER_CREATED;
     }
 
@@ -52,15 +53,15 @@ public class RecurringOrderCreatedMessagePayloadImpl implements RecurringOrderCr
     }
 
     /**
-     *  <p>RecurringOrder that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> that was created.</p>
      */
 
-    public com.commercetools.api.models.recurring_order.RecurringOrder getOrder() {
-        return this.order;
+    public com.commercetools.api.models.recurring_order.RecurringOrder getRecurringOrder() {
+        return this.recurringOrder;
     }
 
-    public void setOrder(final com.commercetools.api.models.recurring_order.RecurringOrder order) {
-        this.order = order;
+    public void setRecurringOrder(final com.commercetools.api.models.recurring_order.RecurringOrder recurringOrder) {
+        this.recurringOrder = recurringOrder;
     }
 
     @Override
@@ -74,21 +75,21 @@ public class RecurringOrderCreatedMessagePayloadImpl implements RecurringOrderCr
         RecurringOrderCreatedMessagePayloadImpl that = (RecurringOrderCreatedMessagePayloadImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
-                .append(order, that.order)
+                .append(recurringOrder, that.recurringOrder)
                 .append(type, that.type)
-                .append(order, that.order)
+                .append(recurringOrder, that.recurringOrder)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(order).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(recurringOrder).toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
-                .append("order", order)
+                .append("recurringOrder", recurringOrder)
                 .build();
     }
 

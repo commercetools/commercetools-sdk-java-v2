@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * MyTransactionDraft
@@ -32,6 +33,8 @@ public class MyTransactionDraftImpl implements MyTransactionDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    private String interfaceId;
+
     /**
      * create instance with all properties
      */
@@ -40,12 +43,14 @@ public class MyTransactionDraftImpl implements MyTransactionDraft, ModelBase {
             @JsonProperty("type") final com.commercetools.api.models.payment.TransactionType type,
             @JsonProperty("amount") final com.commercetools.api.models.common.Money amount,
             @JsonProperty("interactionId") final String interactionId,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
+            @JsonProperty("interfaceId") final String interfaceId) {
         this.timestamp = timestamp;
         this.type = type;
         this.amount = amount;
         this.interactionId = interactionId;
         this.custom = custom;
+        this.interfaceId = interfaceId;
     }
 
     /**
@@ -87,11 +92,19 @@ public class MyTransactionDraftImpl implements MyTransactionDraft, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields of the Transaction.</p>
+     *  <p>Custom Fields for the Transaction.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
+    }
+
+    /**
+     *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP) in the current transaction.</p>
+     */
+
+    public String getInterfaceId() {
+        return this.interfaceId;
     }
 
     public void setTimestamp(final java.time.ZonedDateTime timestamp) {
@@ -114,6 +127,10 @@ public class MyTransactionDraftImpl implements MyTransactionDraft, ModelBase {
         this.custom = custom;
     }
 
+    public void setInterfaceId(final String interfaceId) {
+        this.interfaceId = interfaceId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -129,11 +146,13 @@ public class MyTransactionDraftImpl implements MyTransactionDraft, ModelBase {
                 .append(amount, that.amount)
                 .append(interactionId, that.interactionId)
                 .append(custom, that.custom)
+                .append(interfaceId, that.interfaceId)
                 .append(timestamp, that.timestamp)
                 .append(type, that.type)
                 .append(amount, that.amount)
                 .append(interactionId, that.interactionId)
                 .append(custom, that.custom)
+                .append(interfaceId, that.interfaceId)
                 .isEquals();
     }
 
@@ -144,6 +163,7 @@ public class MyTransactionDraftImpl implements MyTransactionDraft, ModelBase {
                 .append(amount)
                 .append(interactionId)
                 .append(custom)
+                .append(interfaceId)
                 .toHashCode();
     }
 
@@ -154,6 +174,7 @@ public class MyTransactionDraftImpl implements MyTransactionDraft, ModelBase {
                 .append("amount", amount)
                 .append("interactionId", interactionId)
                 .append("custom", custom)
+                .append("interfaceId", interfaceId)
                 .build();
     }
 

@@ -26,7 +26,7 @@ public class CartSetLocaleActionBuilder implements Builder<CartSetLocaleAction> 
     private String locale;
 
     /**
-     *  <p>Value to set. Must be one of the Project's <code>languages</code>. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Must be one of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>'s <code>languages</code>. If empty, any existing value will be removed.</p>
      * @param locale value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class CartSetLocaleActionBuilder implements Builder<CartSetLocaleAction> 
     }
 
     /**
-     *  <p>Value to set. Must be one of the Project's <code>languages</code>. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Must be one of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>'s <code>languages</code>. If empty, any existing value will be removed.</p>
      * @return locale
      */
 

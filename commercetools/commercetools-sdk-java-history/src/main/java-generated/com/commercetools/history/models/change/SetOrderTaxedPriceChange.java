@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.TaxMode;
-import com.commercetools.history.models.common.TaxedItemPrice;
+import com.commercetools.history.models.common.TaxedPrice;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * SetOrderTaxedPriceChange
@@ -66,7 +66,7 @@ public interface SetOrderTaxedPriceChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("previousValue")
-    public TaxedItemPrice getPreviousValue();
+    public TaxedPrice getPreviousValue();
 
     /**
      *  <p>Value after the change.</p>
@@ -75,10 +75,10 @@ public interface SetOrderTaxedPriceChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("nextValue")
-    public TaxedItemPrice getNextValue();
+    public TaxedPrice getNextValue();
 
     /**
-     *
+     *  <p>Indicates how taxes are set on the Cart.</p>
      * @return taxMode
      */
     @NotNull
@@ -97,17 +97,17 @@ public interface SetOrderTaxedPriceChange extends Change {
      * @param previousValue value to be set
      */
 
-    public void setPreviousValue(final TaxedItemPrice previousValue);
+    public void setPreviousValue(final TaxedPrice previousValue);
 
     /**
      *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
-    public void setNextValue(final TaxedItemPrice nextValue);
+    public void setNextValue(final TaxedPrice nextValue);
 
     /**
-     * set taxMode
+     *  <p>Indicates how taxes are set on the Cart.</p>
      * @param taxMode value to be set
      */
 
@@ -150,8 +150,8 @@ public interface SetOrderTaxedPriceChange extends Change {
         SetOrderTaxedPriceChangeImpl instance = new SetOrderTaxedPriceChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(
-            com.commercetools.history.models.common.TaxedItemPrice.deepCopy(template.getPreviousValue()));
-        instance.setNextValue(com.commercetools.history.models.common.TaxedItemPrice.deepCopy(template.getNextValue()));
+            com.commercetools.history.models.common.TaxedPrice.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.TaxedPrice.deepCopy(template.getNextValue()));
         instance.setTaxMode(template.getTaxMode());
         return instance;
     }
@@ -187,8 +187,8 @@ public interface SetOrderTaxedPriceChange extends Change {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<SetOrderTaxedPriceChange> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<SetOrderTaxedPriceChange>() {
+    public static tools.jackson.core.type.TypeReference<SetOrderTaxedPriceChange> typeReference() {
+        return new tools.jackson.core.type.TypeReference<SetOrderTaxedPriceChange>() {
             @Override
             public String toString() {
                 return "TypeReference<SetOrderTaxedPriceChange>";

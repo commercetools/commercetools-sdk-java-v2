@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Adding a Custom Field to a PaymentMethodInfo generates the PaymentMethodInfoCustomFieldAdded Message, removing one generates the PaymentMethodInfoCustomFieldRemoved Message, and updating an existing one generates the PaymentMethodInfoCustomFieldChanged Message.</p>
+ *  <p>Adding a Custom Field to a PaymentMethodInfo generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoCustomFieldAddedMessage" rel="nofollow">PaymentMethodInfoCustomFieldAdded</a> Message, removing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoCustomFieldRemovedMessage" rel="nofollow">PaymentMethodInfoCustomFieldRemoved</a> Message, and updating an existing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoCustomFieldChangedMessage" rel="nofollow">PaymentMethodInfoCustomFieldChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface MyPaymentSetMethodInfoCustomFieldAction extends MyPaymentUpdate
     String SET_METHOD_INFO_CUSTOM_FIELD = "setMethodInfoCustomField";
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @return name
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface MyPaymentSetMethodInfoCustomFieldAction extends MyPaymentUpdate
     public String getName();
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. If <code>value</code> is provided, it is set for the field defined by <code>name</code>. Trying to remove a field that does not exist will fail with an InvalidOperation error.</p>
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. If <code>value</code> is provided, it is set for the field defined by <code>name</code>. Trying to remove a field that does not exist will fail with an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      * @return value
      */
 
@@ -54,14 +54,14 @@ public interface MyPaymentSetMethodInfoCustomFieldAction extends MyPaymentUpdate
     public Object getValue();
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the <span>Custom Field</span>.</p>
      * @param name value to be set
      */
 
     public void setName(final String name);
 
     /**
-     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. If <code>value</code> is provided, it is set for the field defined by <code>name</code>. Trying to remove a field that does not exist will fail with an InvalidOperation error.</p>
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. If <code>value</code> is provided, it is set for the field defined by <code>name</code>. Trying to remove a field that does not exist will fail with an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      * @param value value to be set
      */
 
@@ -139,8 +139,8 @@ public interface MyPaymentSetMethodInfoCustomFieldAction extends MyPaymentUpdate
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MyPaymentSetMethodInfoCustomFieldAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MyPaymentSetMethodInfoCustomFieldAction>() {
+    public static tools.jackson.core.type.TypeReference<MyPaymentSetMethodInfoCustomFieldAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MyPaymentSetMethodInfoCustomFieldAction>() {
             @Override
             public String toString() {
                 return "TypeReference<MyPaymentSetMethodInfoCustomFieldAction>";

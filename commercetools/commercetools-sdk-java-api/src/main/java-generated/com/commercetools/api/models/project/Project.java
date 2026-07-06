@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.message.MessagesConfiguration;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * Project
@@ -34,6 +34,8 @@ import jakarta.validation.constraints.NotNull;
  *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .messages(messagesBuilder -> messagesBuilder)
  *             .carts(cartsBuilder -> cartsBuilder)
+ *             .inventory(inventoryBuilder -> inventoryBuilder)
+ *             .discounts(discountsBuilder -> discountsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -107,7 +109,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
     public String getTrialUntil();
 
     /**
-     *  <p>Holds the configuration for the Messages Query feature.</p>
+     *  <p>Holds the configuration for the <span>Messages Query</span> feature.</p>
      * @return messages
      */
     @NotNull
@@ -116,7 +118,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
     public MessagesConfiguration getMessages();
 
     /**
-     *  <p>Holds the configuration for the Carts feature.</p>
+     *  <p>Holds the configuration for the <span>Carts</span> feature.</p>
      * @return carts
      */
     @NotNull
@@ -125,7 +127,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
     public CartsConfiguration getCarts();
 
     /**
-     *  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>
+     *  <p>Holds the configuration for the <span>Shopping Lists</span> feature.</p>
      * @return shoppingLists
      */
     @Valid
@@ -133,7 +135,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
     public ShoppingListsConfiguration getShoppingLists();
 
     /**
-     *  <p>Holds the configuration for the tiered shipping rates feature.</p>
+     *  <p>Holds the configuration for the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">tiered shipping rates</a> feature.</p>
      * @return shippingRateInputType
      */
     @Valid
@@ -141,7 +143,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
     public ShippingRateInputType getShippingRateInputType();
 
     /**
-     *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
+     *  <p>Represents a RFC 7662 compliant <span>OAuth 2.0 Token Introspection</span> endpoint.</p>
      * @return externalOAuth
      */
     @Valid
@@ -157,12 +159,38 @@ public interface Project extends com.commercetools.api.models.WithKey {
     public SearchIndexingConfiguration getSearchIndexing();
 
     /**
-     *  <p>Holds configuration specific to Business Units.</p>
+     *  <p>Holds configuration specific to <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Units</a>.</p>
      * @return businessUnits
      */
     @Valid
     @JsonProperty("businessUnits")
     public BusinessUnitConfiguration getBusinessUnits();
+
+    /**
+     *  <p>Holds configuration specific to inventory.</p>
+     * @return inventory
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("inventory")
+    public InventoryConfiguration getInventory();
+
+    /**
+     *  <p>Holds configuration specific to discounts, including how Product and Cart Discounts are combined in every Cart of the Project.</p>
+     * @return discounts
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("discounts")
+    public DiscountsConfiguration getDiscounts();
+
+    /**
+     *  <p>Determines how Product Variants are managed in the Project. If not set, defaults to <code>Classic</code> behavior.</p>
+     * @return productCatalogModel
+     */
+
+    @JsonProperty("productCatalogModel")
+    public ProductCatalogModel getProductCatalogModel();
 
     /**
      *  <p>Current version of the Project.</p>
@@ -245,35 +273,35 @@ public interface Project extends com.commercetools.api.models.WithKey {
     public void setTrialUntil(final String trialUntil);
 
     /**
-     *  <p>Holds the configuration for the Messages Query feature.</p>
+     *  <p>Holds the configuration for the <span>Messages Query</span> feature.</p>
      * @param messages value to be set
      */
 
     public void setMessages(final MessagesConfiguration messages);
 
     /**
-     *  <p>Holds the configuration for the Carts feature.</p>
+     *  <p>Holds the configuration for the <span>Carts</span> feature.</p>
      * @param carts value to be set
      */
 
     public void setCarts(final CartsConfiguration carts);
 
     /**
-     *  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>
+     *  <p>Holds the configuration for the <span>Shopping Lists</span> feature.</p>
      * @param shoppingLists value to be set
      */
 
     public void setShoppingLists(final ShoppingListsConfiguration shoppingLists);
 
     /**
-     *  <p>Holds the configuration for the tiered shipping rates feature.</p>
+     *  <p>Holds the configuration for the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">tiered shipping rates</a> feature.</p>
      * @param shippingRateInputType value to be set
      */
 
     public void setShippingRateInputType(final ShippingRateInputType shippingRateInputType);
 
     /**
-     *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
+     *  <p>Represents a RFC 7662 compliant <span>OAuth 2.0 Token Introspection</span> endpoint.</p>
      * @param externalOAuth value to be set
      */
 
@@ -287,11 +315,32 @@ public interface Project extends com.commercetools.api.models.WithKey {
     public void setSearchIndexing(final SearchIndexingConfiguration searchIndexing);
 
     /**
-     *  <p>Holds configuration specific to Business Units.</p>
+     *  <p>Holds configuration specific to <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Units</a>.</p>
      * @param businessUnits value to be set
      */
 
     public void setBusinessUnits(final BusinessUnitConfiguration businessUnits);
+
+    /**
+     *  <p>Holds configuration specific to inventory.</p>
+     * @param inventory value to be set
+     */
+
+    public void setInventory(final InventoryConfiguration inventory);
+
+    /**
+     *  <p>Holds configuration specific to discounts, including how Product and Cart Discounts are combined in every Cart of the Project.</p>
+     * @param discounts value to be set
+     */
+
+    public void setDiscounts(final DiscountsConfiguration discounts);
+
+    /**
+     *  <p>Determines how Product Variants are managed in the Project. If not set, defaults to <code>Classic</code> behavior.</p>
+     * @param productCatalogModel value to be set
+     */
+
+    public void setProductCatalogModel(final ProductCatalogModel productCatalogModel);
 
     /**
      * factory method
@@ -323,6 +372,9 @@ public interface Project extends com.commercetools.api.models.WithKey {
         instance.setExternalOAuth(template.getExternalOAuth());
         instance.setSearchIndexing(template.getSearchIndexing());
         instance.setBusinessUnits(template.getBusinessUnits());
+        instance.setInventory(template.getInventory());
+        instance.setDiscounts(template.getDiscounts());
+        instance.setProductCatalogModel(template.getProductCatalogModel());
         return instance;
     }
 
@@ -360,6 +412,11 @@ public interface Project extends com.commercetools.api.models.WithKey {
             com.commercetools.api.models.project.SearchIndexingConfiguration.deepCopy(template.getSearchIndexing()));
         instance.setBusinessUnits(
             com.commercetools.api.models.project.BusinessUnitConfiguration.deepCopy(template.getBusinessUnits()));
+        instance.setInventory(
+            com.commercetools.api.models.project.InventoryConfiguration.deepCopy(template.getInventory()));
+        instance.setDiscounts(
+            com.commercetools.api.models.project.DiscountsConfiguration.deepCopy(template.getDiscounts()));
+        instance.setProductCatalogModel(template.getProductCatalogModel());
         return instance;
     }
 
@@ -394,8 +451,8 @@ public interface Project extends com.commercetools.api.models.WithKey {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<Project> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<Project>() {
+    public static tools.jackson.core.type.TypeReference<Project> typeReference() {
+        return new tools.jackson.core.type.TypeReference<Project>() {
             @Override
             public String toString() {
                 return "TypeReference<Project>";

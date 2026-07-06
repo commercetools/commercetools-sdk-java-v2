@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ReturnItemDraft
@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ReturnItemDraft extends io.vrap.rmf.base.client.Draft<ReturnItemDraft> {
 
     /**
-     *  <p>Number of Line Items or Custom Line Items to return.</p>
+     *  <p>Quantity of Line Items or Custom Line Items to return.</p>
      * @return quantity
      */
     @NotNull
@@ -41,8 +41,8 @@ public interface ReturnItemDraft extends io.vrap.rmf.base.client.Draft<ReturnIte
     public Long getQuantity();
 
     /**
-     *  <p><code>id</code> of the LineItem to return.</p>
-     *  <p>Required if Line Items are returned, to create a LineItemReturnItem.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to return.</p>
+     *  <p>Required if Line Items are returned, to create a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemReturnItem" rel="nofollow">LineItemReturnItem</a>.</p>
      * @return lineItemId
      */
 
@@ -50,8 +50,8 @@ public interface ReturnItemDraft extends io.vrap.rmf.base.client.Draft<ReturnIte
     public String getLineItemId();
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to return.</p>
-     *  <p>Required if Custom Line Items are returned, to create a CustomLineItemReturnItem.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to return.</p>
+     *  <p>Required if Custom Line Items are returned, to create a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItemReturnItem" rel="nofollow">CustomLineItemReturnItem</a>.</p>
      * @return customLineItemId
      */
 
@@ -75,23 +75,23 @@ public interface ReturnItemDraft extends io.vrap.rmf.base.client.Draft<ReturnIte
     public ReturnShipmentState getShipmentState();
 
     /**
-     *  <p>Number of Line Items or Custom Line Items to return.</p>
+     *  <p>Quantity of Line Items or Custom Line Items to return.</p>
      * @param quantity value to be set
      */
 
     public void setQuantity(final Long quantity);
 
     /**
-     *  <p><code>id</code> of the LineItem to return.</p>
-     *  <p>Required if Line Items are returned, to create a LineItemReturnItem.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> to return.</p>
+     *  <p>Required if Line Items are returned, to create a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemReturnItem" rel="nofollow">LineItemReturnItem</a>.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to return.</p>
-     *  <p>Required if Custom Line Items are returned, to create a CustomLineItemReturnItem.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> to return.</p>
+     *  <p>Required if Custom Line Items are returned, to create a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItemReturnItem" rel="nofollow">CustomLineItemReturnItem</a>.</p>
      * @param customLineItemId value to be set
      */
 
@@ -186,8 +186,8 @@ public interface ReturnItemDraft extends io.vrap.rmf.base.client.Draft<ReturnIte
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ReturnItemDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ReturnItemDraft>() {
+    public static tools.jackson.core.type.TypeReference<ReturnItemDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ReturnItemDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ReturnItemDraft>";

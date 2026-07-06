@@ -7,18 +7,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>Use this method to reset a global Customer's password during their password reset process.</p>
- *  <p>Resetting the password of the Customer produces the CustomerPasswordUpdated Message with <code>reset=true</code>.</p>
- *  <p>After the password is reset, all password tokens issued previously through the password reset flow are invalidated. In addition, any access and refresh tokens issued previously through the password flow and refresh token flow are invalidated. This invalidation of tokens is eventually consistent.</p>
+ *  <p>Use this method to reset a global Customer's password during their <span>password reset process</span>.</p>
+ *  <p>Resetting the password of the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerPasswordUpdatedMessage" rel="nofollow">CustomerPasswordUpdated</a> Message with <code>reset=true</code>.</p>
+ *  <p>After the password is reset, all password tokens issued previously through the <span>password reset flow</span> are invalidated. In addition, any access and refresh tokens issued previously through the <span>password flow</span> and <span>refresh token flow</span> are invalidated. This invalidation of tokens is <span>eventually consistent</span>.</p>
  *
  * <hr>
  * <div class=code-example>

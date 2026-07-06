@@ -8,16 +8,17 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Reference to an AssociateRole.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to an <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +41,15 @@ public interface AssociateRoleReference extends Reference {
     String ASSOCIATE_ROLE = "associate-role";
 
     /**
-     *  <p>Contains the representation of the expanded AssociateRole. Only present in responses to requests with Reference Expansion for AssociateRole.</p>
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
+
+    /**
+     *  <p>Contains the representation of the expanded AssociateRole. Only present in responses to requests with <span>Reference Expansion</span> for AssociateRole.</p>
      * @return obj
      */
     @Valid
@@ -48,7 +57,7 @@ public interface AssociateRoleReference extends Reference {
     public AssociateRole getObj();
 
     /**
-     *  <p>Unique identifier of the referenced AssociateRole.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a>.</p>
      * @return id
      */
     @NotNull
@@ -56,14 +65,14 @@ public interface AssociateRoleReference extends Reference {
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded AssociateRole. Only present in responses to requests with Reference Expansion for AssociateRole.</p>
+     *  <p>Contains the representation of the expanded AssociateRole. Only present in responses to requests with <span>Reference Expansion</span> for AssociateRole.</p>
      * @param obj value to be set
      */
 
     public void setObj(final AssociateRole obj);
 
     /**
-     *  <p>Unique identifier of the referenced AssociateRole.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a>.</p>
      * @param id value to be set
      */
 
@@ -138,8 +147,8 @@ public interface AssociateRoleReference extends Reference {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AssociateRoleReference> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AssociateRoleReference>() {
+    public static tools.jackson.core.type.TypeReference<AssociateRoleReference> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AssociateRoleReference>() {
             @Override
             public String toString() {
                 return "TypeReference<AssociateRoleReference>";

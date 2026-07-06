@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * OrderSearchQueryExpressionValue
@@ -48,7 +48,7 @@ public interface OrderSearchQueryExpressionValue {
     public Integer getBoost();
 
     /**
-     *  <p>Possible values for the <code>customType</code> property on simple expressions indicating the data type of the <code>field</code>.</p>
+     *  <p>Possible values for the <code>customType</code> property on <span>simple expressions</span> indicating the data type of the <code>field</code>.</p>
      * @return customType
      */
 
@@ -70,7 +70,7 @@ public interface OrderSearchQueryExpressionValue {
     public void setBoost(final Integer boost);
 
     /**
-     *  <p>Possible values for the <code>customType</code> property on simple expressions indicating the data type of the <code>field</code>.</p>
+     *  <p>Possible values for the <code>customType</code> property on <span>simple expressions</span> indicating the data type of the <code>field</code>.</p>
      * @param customType value to be set
      */
 
@@ -151,8 +151,8 @@ public interface OrderSearchQueryExpressionValue {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderSearchQueryExpressionValue> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderSearchQueryExpressionValue>() {
+    public static tools.jackson.core.type.TypeReference<OrderSearchQueryExpressionValue> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderSearchQueryExpressionValue>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderSearchQueryExpressionValue>";

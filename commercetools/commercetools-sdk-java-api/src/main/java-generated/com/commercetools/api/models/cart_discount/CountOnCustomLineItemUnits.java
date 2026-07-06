@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * CountOnCustomLineItemUnits
@@ -38,7 +38,7 @@ public interface CountOnCustomLineItemUnits extends PatternComponent {
     String COUNT_ON_CUSTOM_LINE_ITEM_UNITS = "CountOnCustomLineItemUnits";
 
     /**
-     *  <p>Valid CustomLineItem predicate that determines the units participating in the Discount.</p>
+     *  <p>Valid <span>CustomLineItem predicate</span> that determines the units participating in the Discount.</p>
      * @return predicate
      */
     @NotNull
@@ -73,7 +73,7 @@ public interface CountOnCustomLineItemUnits extends PatternComponent {
     public Integer getExcludeCount();
 
     /**
-     *  <p>Valid CustomLineItem predicate that determines the units participating in the Discount.</p>
+     *  <p>Valid <span>CustomLineItem predicate</span> that determines the units participating in the Discount.</p>
      * @param predicate value to be set
      */
 
@@ -176,8 +176,8 @@ public interface CountOnCustomLineItemUnits extends PatternComponent {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CountOnCustomLineItemUnits> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CountOnCustomLineItemUnits>() {
+    public static tools.jackson.core.type.TypeReference<CountOnCustomLineItemUnits> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CountOnCustomLineItemUnits>() {
             @Override
             public String toString() {
                 return "TypeReference<CountOnCustomLineItemUnits>";

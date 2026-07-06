@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,12 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li>Add Asset on Categories.</li>
- *   <li>Add Asset on Products.</li>
- *  </ul>
+ * AddAssetChange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddAssetChangeImpl implements AddAssetChange, ModelBase {
@@ -34,16 +31,23 @@ public class AddAssetChangeImpl implements AddAssetChange, ModelBase {
 
     private com.commercetools.history.models.common.Asset nextValue;
 
+    private String catalogData;
+
+    private String variant;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     AddAssetChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.Asset previousValue,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.Asset nextValue) {
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.Asset nextValue,
+            @JsonProperty("catalogData") final String catalogData, @JsonProperty("variant") final String variant) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
+        this.catalogData = catalogData;
+        this.variant = variant;
         this.type = ADD_ASSET_CHANGE;
     }
 
@@ -86,6 +90,27 @@ public class AddAssetChangeImpl implements AddAssetChange, ModelBase {
         return this.nextValue;
     }
 
+    /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
@@ -96,6 +121,14 @@ public class AddAssetChangeImpl implements AddAssetChange, ModelBase {
 
     public void setNextValue(final com.commercetools.history.models.common.Asset nextValue) {
         this.nextValue = nextValue;
+    }
+
+    public void setCatalogData(final String catalogData) {
+        this.catalogData = catalogData;
+    }
+
+    public void setVariant(final String variant) {
+        this.variant = variant;
     }
 
     @Override
@@ -112,10 +145,14 @@ public class AddAssetChangeImpl implements AddAssetChange, ModelBase {
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(catalogData, that.catalogData)
+                .append(variant, that.variant)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(catalogData, that.catalogData)
+                .append(variant, that.variant)
                 .isEquals();
     }
 
@@ -125,6 +162,8 @@ public class AddAssetChangeImpl implements AddAssetChange, ModelBase {
                 .append(change)
                 .append(previousValue)
                 .append(nextValue)
+                .append(catalogData)
+                .append(variant)
                 .toHashCode();
     }
 
@@ -134,6 +173,8 @@ public class AddAssetChangeImpl implements AddAssetChange, ModelBase {
                 .append("change", change)
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
+                .append("catalogData", catalogData)
+                .append("variant", variant)
                 .build();
     }
 

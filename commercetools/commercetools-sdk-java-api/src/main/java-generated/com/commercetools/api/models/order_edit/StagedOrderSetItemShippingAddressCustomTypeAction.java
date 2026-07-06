@@ -11,12 +11,12 @@ import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * StagedOrderSetItemShippingAddressCustomTypeAction
@@ -42,7 +42,7 @@ public interface StagedOrderSetItemShippingAddressCustomTypeAction extends Stage
     String SET_ITEM_SHIPPING_ADDRESS_CUSTOM_TYPE = "setItemShippingAddressCustomType";
 
     /**
-     *  <p><code>key</code> of the Address in <code>itemShippingAddresses</code>.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> in <code>itemShippingAddresses</code>.</p>
      * @return addressKey
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface StagedOrderSetItemShippingAddressCustomTypeAction extends Stage
     public String getAddressKey();
 
     /**
-     *  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>itemShippingAddress</code> with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
      * @return type
      */
     @Valid
@@ -58,7 +58,8 @@ public interface StagedOrderSetItemShippingAddressCustomTypeAction extends Stage
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>
+     *  <p>Object containing the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the <code>itemShippingAddress</code>.</p>
+     *  <p>Required if at least one Custom Field is defined as required in the <code>fieldDefinitions</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @return fields
      */
     @Valid
@@ -66,21 +67,22 @@ public interface StagedOrderSetItemShippingAddressCustomTypeAction extends Stage
     public FieldContainer getFields();
 
     /**
-     *  <p><code>key</code> of the Address in <code>itemShippingAddresses</code>.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> in <code>itemShippingAddresses</code>.</p>
      * @param addressKey value to be set
      */
 
     public void setAddressKey(final String addressKey);
 
     /**
-     *  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
+     *  <p>Defines the <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a> that extends the <code>itemShippingAddress</code> with <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a>. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>
+     *  <p>Object containing the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> fields for the <code>itemShippingAddress</code>.</p>
+     *  <p>Required if at least one Custom Field is defined as required in the <code>fieldDefinitions</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p>
      * @param fields value to be set
      */
 
@@ -161,8 +163,8 @@ public interface StagedOrderSetItemShippingAddressCustomTypeAction extends Stage
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetItemShippingAddressCustomTypeAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetItemShippingAddressCustomTypeAction>() {
+    public static tools.jackson.core.type.TypeReference<StagedOrderSetItemShippingAddressCustomTypeAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedOrderSetItemShippingAddressCustomTypeAction>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedOrderSetItemShippingAddressCustomTypeAction>";

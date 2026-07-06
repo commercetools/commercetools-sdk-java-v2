@@ -14,12 +14,12 @@ import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * InventoryEntry
@@ -105,7 +105,7 @@ public interface InventoryEntry
     public String getKey();
 
     /**
-     *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> <code>sku</code> of the InventoryEntry.</p>
      * @return sku
      */
     @NotNull
@@ -113,7 +113,7 @@ public interface InventoryEntry
     public String getSku();
 
     /**
-     *  <p>Channel that supplies this InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> that supplies this InventoryEntry.</p>
      * @return supplyChannel
      */
     @Valid
@@ -121,7 +121,7 @@ public interface InventoryEntry
     public ChannelReference getSupplyChannel();
 
     /**
-     *  <p>Overall amount of stock (<code>availableQuantity</code> + reserved).</p>
+     *  <p>Overall amount of stock (<code>availableQuantity</code> + reserved). This value is eventually consistent with the internal SKU availability used for reservation logic, with a delay of up to 10 seconds. See <span>Inventory checks and consistency</span> for more information.</p>
      * @return quantityOnStock
      */
     @NotNull
@@ -129,7 +129,7 @@ public interface InventoryEntry
     public Long getQuantityOnStock();
 
     /**
-     *  <p>Available amount of stock (<code>quantityOnStock</code> - reserved).</p>
+     *  <p>Available amount of stock (<code>quantityOnStock</code> - reserved). This value is eventually consistent with the internal SKU availability used for reservation logic, with a delay of up to 10 seconds. See <span>Inventory checks and consistency</span> for more information.</p>
      * @return availableQuantity
      */
     @NotNull
@@ -137,7 +137,7 @@ public interface InventoryEntry
     public Long getAvailableQuantity();
 
     /**
-     *  <p>Minimum quantity that can be added to a Cart. See Quantity limits.</p>
+     *  <p>Minimum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
      * @return minCartQuantity
      */
 
@@ -145,7 +145,7 @@ public interface InventoryEntry
     public Integer getMinCartQuantity();
 
     /**
-     *  <p>Maximum quantity that can be added to a Cart. See Quantity limits.</p>
+     *  <p>Maximum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
      * @return maxCartQuantity
      */
 
@@ -167,6 +167,26 @@ public interface InventoryEntry
 
     @JsonProperty("expectedDelivery")
     public ZonedDateTime getExpectedDelivery();
+
+    /**
+     *  <p>Expiration time of <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">ReserveOnCart</a> reservations associated with this InventoryEntry.</p>
+     *  <ul>
+     *   <li>A Reservation is <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">ReserveOnCart</a> if it was created for a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> that is using the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">ReserveOnCart</a> inventory mode.</li>
+     *   <li>If this field is empty, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>-level reservation expiration time applies.</li>
+     *  </ul>
+     * @return reservationExpirationInMinutes
+     */
+
+    @JsonProperty("reservationExpirationInMinutes")
+    public Integer getReservationExpirationInMinutes();
+
+    /**
+     *  <p>Configuration of stock levels for the InventoryEntry. Corresponding <span>Messages</span> are triggered when the <code>quantityOnStock</code> reaches the configured levels.</p>
+     * @return stockLevels
+     */
+    @Valid
+    @JsonProperty("stockLevels")
+    public InventoryEntryStockLevels getStockLevels();
 
     /**
      *  <p>Custom Fields of the InventoryEntry.</p>
@@ -226,42 +246,42 @@ public interface InventoryEntry
     public void setKey(final String key);
 
     /**
-     *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> <code>sku</code> of the InventoryEntry.</p>
      * @param sku value to be set
      */
 
     public void setSku(final String sku);
 
     /**
-     *  <p>Channel that supplies this InventoryEntry.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> that supplies this InventoryEntry.</p>
      * @param supplyChannel value to be set
      */
 
     public void setSupplyChannel(final ChannelReference supplyChannel);
 
     /**
-     *  <p>Overall amount of stock (<code>availableQuantity</code> + reserved).</p>
+     *  <p>Overall amount of stock (<code>availableQuantity</code> + reserved). This value is eventually consistent with the internal SKU availability used for reservation logic, with a delay of up to 10 seconds. See <span>Inventory checks and consistency</span> for more information.</p>
      * @param quantityOnStock value to be set
      */
 
     public void setQuantityOnStock(final Long quantityOnStock);
 
     /**
-     *  <p>Available amount of stock (<code>quantityOnStock</code> - reserved).</p>
+     *  <p>Available amount of stock (<code>quantityOnStock</code> - reserved). This value is eventually consistent with the internal SKU availability used for reservation logic, with a delay of up to 10 seconds. See <span>Inventory checks and consistency</span> for more information.</p>
      * @param availableQuantity value to be set
      */
 
     public void setAvailableQuantity(final Long availableQuantity);
 
     /**
-     *  <p>Minimum quantity that can be added to a Cart. See Quantity limits.</p>
+     *  <p>Minimum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
      * @param minCartQuantity value to be set
      */
 
     public void setMinCartQuantity(final Integer minCartQuantity);
 
     /**
-     *  <p>Maximum quantity that can be added to a Cart. See Quantity limits.</p>
+     *  <p>Maximum quantity that can be added to a Cart. See <span>Quantity limits</span>.</p>
      * @param maxCartQuantity value to be set
      */
 
@@ -280,6 +300,24 @@ public interface InventoryEntry
      */
 
     public void setExpectedDelivery(final ZonedDateTime expectedDelivery);
+
+    /**
+     *  <p>Expiration time of <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">ReserveOnCart</a> reservations associated with this InventoryEntry.</p>
+     *  <ul>
+     *   <li>A Reservation is <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">ReserveOnCart</a> if it was created for a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> that is using the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">ReserveOnCart</a> inventory mode.</li>
+     *   <li>If this field is empty, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>-level reservation expiration time applies.</li>
+     *  </ul>
+     * @param reservationExpirationInMinutes value to be set
+     */
+
+    public void setReservationExpirationInMinutes(final Integer reservationExpirationInMinutes);
+
+    /**
+     *  <p>Configuration of stock levels for the InventoryEntry. Corresponding <span>Messages</span> are triggered when the <code>quantityOnStock</code> reaches the configured levels.</p>
+     * @param stockLevels value to be set
+     */
+
+    public void setStockLevels(final InventoryEntryStockLevels stockLevels);
 
     /**
      *  <p>Custom Fields of the InventoryEntry.</p>
@@ -318,6 +356,8 @@ public interface InventoryEntry
         instance.setMaxCartQuantity(template.getMaxCartQuantity());
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setExpectedDelivery(template.getExpectedDelivery());
+        instance.setReservationExpirationInMinutes(template.getReservationExpirationInMinutes());
+        instance.setStockLevels(template.getStockLevels());
         instance.setCustom(template.getCustom());
         return instance;
     }
@@ -352,6 +392,9 @@ public interface InventoryEntry
         instance.setMaxCartQuantity(template.getMaxCartQuantity());
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setExpectedDelivery(template.getExpectedDelivery());
+        instance.setReservationExpirationInMinutes(template.getReservationExpirationInMinutes());
+        instance.setStockLevels(
+            com.commercetools.api.models.inventory.InventoryEntryStockLevels.deepCopy(template.getStockLevels()));
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         return instance;
     }
@@ -391,8 +434,8 @@ public interface InventoryEntry
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntry> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntry>() {
+    public static tools.jackson.core.type.TypeReference<InventoryEntry> typeReference() {
+        return new tools.jackson.core.type.TypeReference<InventoryEntry>() {
             @Override
             public String toString() {
                 return "TypeReference<InventoryEntry>";

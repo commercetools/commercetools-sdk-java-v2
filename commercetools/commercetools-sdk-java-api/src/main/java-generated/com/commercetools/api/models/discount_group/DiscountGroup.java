@@ -13,12 +13,12 @@ import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * DiscountGroup
@@ -34,6 +34,7 @@ import jakarta.validation.constraints.NotNull;
  *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .key("{key}")
  *             .sortOrder("{sortOrder}")
+ *             .isActive(true)
  *             .build()
  * </code></pre>
  * </div>
@@ -90,6 +91,14 @@ public interface DiscountGroup extends BaseResource {
     @NotNull
     @JsonProperty("sortOrder")
     public String getSortOrder();
+
+    /**
+     *  <p>A DiscountGroup must be active for its CartDiscounts to be considered during discount application.</p>
+     * @return isActive
+     */
+    @NotNull
+    @JsonProperty("isActive")
+    public Boolean getIsActive();
 
     /**
      *  <p>Date and time (UTC) the DiscountGroup was initially created.</p>
@@ -167,6 +176,13 @@ public interface DiscountGroup extends BaseResource {
     public void setSortOrder(final String sortOrder);
 
     /**
+     *  <p>A DiscountGroup must be active for its CartDiscounts to be considered during discount application.</p>
+     * @param isActive value to be set
+     */
+
+    public void setIsActive(final Boolean isActive);
+
+    /**
      *  <p>Date and time (UTC) the DiscountGroup was initially created.</p>
      * @param createdAt value to be set
      */
@@ -217,6 +233,7 @@ public interface DiscountGroup extends BaseResource {
         instance.setKey(template.getKey());
         instance.setDescription(template.getDescription());
         instance.setSortOrder(template.getSortOrder());
+        instance.setIsActive(template.getIsActive());
         instance.setLastModifiedBy(template.getLastModifiedBy());
         instance.setCreatedBy(template.getCreatedBy());
         return instance;
@@ -244,6 +261,7 @@ public interface DiscountGroup extends BaseResource {
         instance.setDescription(
             com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         instance.setSortOrder(template.getSortOrder());
+        instance.setIsActive(template.getIsActive());
         instance.setLastModifiedBy(
             com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
@@ -281,8 +299,8 @@ public interface DiscountGroup extends BaseResource {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DiscountGroup> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DiscountGroup>() {
+    public static tools.jackson.core.type.TypeReference<DiscountGroup> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DiscountGroup>() {
             @Override
             public String toString() {
                 return "TypeReference<DiscountGroup>";

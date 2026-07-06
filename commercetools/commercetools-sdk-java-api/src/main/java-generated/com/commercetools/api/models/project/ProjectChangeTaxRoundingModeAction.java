@@ -9,11 +9,11 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.cart.RoundingMode;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProjectChangeTaxRoundingModeAction
@@ -39,7 +39,7 @@ public interface ProjectChangeTaxRoundingModeAction extends ProjectUpdateAction 
     String CHANGE_TAX_ROUNDING_MODE = "changeTaxRoundingMode";
 
     /**
-     *  <p>Project-level default rounding mode for tax calculation. See CartsConfiguration.</p>
+     *  <p>Project-level default rounding mode for tax calculation. See <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">CartsConfiguration</a>.</p>
      * @return taxRoundingMode
      */
     @NotNull
@@ -47,7 +47,7 @@ public interface ProjectChangeTaxRoundingModeAction extends ProjectUpdateAction 
     public RoundingMode getTaxRoundingMode();
 
     /**
-     *  <p>Project-level default rounding mode for tax calculation. See CartsConfiguration.</p>
+     *  <p>Project-level default rounding mode for tax calculation. See <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">CartsConfiguration</a>.</p>
      * @param taxRoundingMode value to be set
      */
 
@@ -121,8 +121,8 @@ public interface ProjectChangeTaxRoundingModeAction extends ProjectUpdateAction 
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeTaxRoundingModeAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeTaxRoundingModeAction>() {
+    public static tools.jackson.core.type.TypeReference<ProjectChangeTaxRoundingModeAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProjectChangeTaxRoundingModeAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProjectChangeTaxRoundingModeAction>";

@@ -24,7 +24,7 @@ public class RecurringOrderSetStartsAtActionBuilder implements Builder<Recurring
     private java.time.ZonedDateTime startsAt;
 
     /**
-     *  <p>Date and time (UTC) the Recurring Order should be started. The date and time must be in the future.</p>
+     *  <p>Date and time (UTC) the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a> should be started. The date and time must be in the future.</p>
      * @param startsAt value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class RecurringOrderSetStartsAtActionBuilder implements Builder<Recurring
     }
 
     /**
-     *  <p>Date and time (UTC) the Recurring Order should be started. The date and time must be in the future.</p>
+     *  <p>Date and time (UTC) the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a> should be started. The date and time must be in the future.</p>
      * @return startsAt
      */
 

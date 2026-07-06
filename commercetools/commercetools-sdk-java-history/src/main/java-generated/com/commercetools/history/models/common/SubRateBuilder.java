@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SubRate subRate = SubRate.builder()
  *             .name("{name}")
- *             .amount(1)
+ *             .amount(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -24,10 +24,10 @@ public class SubRateBuilder implements Builder<SubRate> {
 
     private String name;
 
-    private Integer amount;
+    private Double amount;
 
     /**
-     * set the value to the name
+     *  <p>Name of the SubRate.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -43,13 +43,13 @@ public class SubRateBuilder implements Builder<SubRate> {
      * @return Builder
      */
 
-    public SubRateBuilder amount(final Integer amount) {
+    public SubRateBuilder amount(final Double amount) {
         this.amount = amount;
         return this;
     }
 
     /**
-     * value of name}
+     *  <p>Name of the SubRate.</p>
      * @return name
      */
 
@@ -62,7 +62,7 @@ public class SubRateBuilder implements Builder<SubRate> {
      * @return amount
      */
 
-    public Integer getAmount() {
+    public Double getAmount() {
         return this.amount;
     }
 

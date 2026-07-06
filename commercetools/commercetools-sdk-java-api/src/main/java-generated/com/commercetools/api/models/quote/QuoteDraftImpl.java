@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * QuoteDraft
@@ -83,7 +84,7 @@ public class QuoteDraftImpl implements QuoteDraft, ModelBase {
     }
 
     /**
-     *  <p>If <code>true</code>, the <code>stagedQuoteState</code> of the referenced StagedQuote will be set to <code>Sent</code>.</p>
+     *  <p>If <code>true</code>, the <code>stagedQuoteState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a> will be set to <code>Sent</code>.</p>
      */
 
     public Boolean getStagedQuoteStateToSent() {
@@ -91,7 +92,7 @@ public class QuoteDraftImpl implements QuoteDraft, ModelBase {
     }
 
     /**
-     *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> of the Quote. This reference can point to a State in a custom workflow.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {
@@ -99,10 +100,10 @@ public class QuoteDraftImpl implements QuoteDraft, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields to be added to the Quote.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> to be added to the Quote.</p>
      *  <ul>
-     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced StagedQuote and added to the Quote.</li>
-     *   <li>If empty, the Custom Fields on the referenced StagedQuote are added to the Quote automatically.</li>
+     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a> and added to the Quote.</li>
+     *   <li>If empty, the Custom Fields on the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a> are added to the Quote automatically.</li>
      *  </ul>
      */
 

@@ -8,16 +8,17 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Reference to a PaymentMethod.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethod" rel="nofollow">PaymentMethod</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +41,15 @@ public interface PaymentMethodReference extends Reference {
     String PAYMENT_METHOD = "payment-method";
 
     /**
-     *  <p>Contains the representation of the expanded PaymentMethod. Only present in responses to requests with Reference Expansion for PaymentMethods.</p>
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
+
+    /**
+     *  <p>Contains the representation of the expanded PaymentMethod. Only present in responses to requests with <span>Reference Expansion</span> for PaymentMethods.</p>
      * @return obj
      */
     @Valid
@@ -48,7 +57,7 @@ public interface PaymentMethodReference extends Reference {
     public PaymentMethod getObj();
 
     /**
-     *  <p>Unique identifier of the referenced PaymentMethod.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethod" rel="nofollow">PaymentMethod</a>.</p>
      * @return id
      */
     @NotNull
@@ -56,14 +65,14 @@ public interface PaymentMethodReference extends Reference {
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded PaymentMethod. Only present in responses to requests with Reference Expansion for PaymentMethods.</p>
+     *  <p>Contains the representation of the expanded PaymentMethod. Only present in responses to requests with <span>Reference Expansion</span> for PaymentMethods.</p>
      * @param obj value to be set
      */
 
     public void setObj(final PaymentMethod obj);
 
     /**
-     *  <p>Unique identifier of the referenced PaymentMethod.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethod" rel="nofollow">PaymentMethod</a>.</p>
      * @param id value to be set
      */
 
@@ -138,8 +147,8 @@ public interface PaymentMethodReference extends Reference {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentMethodReference> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentMethodReference>() {
+    public static tools.jackson.core.type.TypeReference<PaymentMethodReference> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentMethodReference>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentMethodReference>";

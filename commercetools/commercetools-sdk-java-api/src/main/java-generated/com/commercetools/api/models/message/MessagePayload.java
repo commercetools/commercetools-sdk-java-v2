@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * MessagePayload
@@ -398,6 +398,31 @@ public interface MessagePayload extends MessagePayloadMixin {
     }
 
     /**
+     * builder for businessUnitCustomerGroupAssignmentAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentAddedMessagePayloadBuilder businessUnitCustomerGroupAssignmentAddedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentAddedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for businessUnitCustomerGroupAssignmentRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentRemovedMessagePayloadBuilder businessUnitCustomerGroupAssignmentRemovedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentRemovedMessagePayloadBuilder
+                .of();
+    }
+
+    /**
+     * builder for businessUnitCustomerGroupAssignmentsSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentsSetMessagePayloadBuilder businessUnitCustomerGroupAssignmentsSetBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomerGroupAssignmentsSetMessagePayloadBuilder.of();
+    }
+
+    /**
      * builder for businessUnitDefaultBillingAddressSet subtype
      * @return builder
      */
@@ -550,6 +575,46 @@ public interface MessagePayload extends MessagePayloadMixin {
     }
 
     /**
+     * builder for cartFrozen subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CartFrozenMessagePayloadBuilder cartFrozenBuilder() {
+        return com.commercetools.api.models.message.CartFrozenMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for cartLocked subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CartLockedMessagePayloadBuilder cartLockedBuilder() {
+        return com.commercetools.api.models.message.CartLockedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for cartPurchaseOrderNumberSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CartPurchaseOrderNumberSetMessagePayloadBuilder cartPurchaseOrderNumberSetBuilder() {
+        return com.commercetools.api.models.message.CartPurchaseOrderNumberSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for cartUnfrozen subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CartUnfrozenMessagePayloadBuilder cartUnfrozenBuilder() {
+        return com.commercetools.api.models.message.CartUnfrozenMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for cartUnlocked subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CartUnlockedMessagePayloadBuilder cartUnlockedBuilder() {
+        return com.commercetools.api.models.message.CartUnlockedMessagePayloadBuilder.of();
+    }
+
+    /**
      * builder for categoryCreated subtype
      * @return builder
      */
@@ -635,6 +700,22 @@ public interface MessagePayload extends MessagePayloadMixin {
      */
     public static com.commercetools.api.models.message.CustomerAddressRemovedMessagePayloadBuilder customerAddressRemovedBuilder() {
         return com.commercetools.api.models.message.CustomerAddressRemovedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for customerBillingAddressAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerBillingAddressAddedMessagePayloadBuilder customerBillingAddressAddedBuilder() {
+        return com.commercetools.api.models.message.CustomerBillingAddressAddedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for customerBillingAddressRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerBillingAddressRemovedMessagePayloadBuilder customerBillingAddressRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerBillingAddressRemovedMessagePayloadBuilder.of();
     }
 
     /**
@@ -750,6 +831,14 @@ public interface MessagePayload extends MessagePayloadMixin {
     }
 
     /**
+     * builder for customerExternalIdSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerExternalIdSetMessagePayloadBuilder customerExternalIdSetBuilder() {
+        return com.commercetools.api.models.message.CustomerExternalIdSetMessagePayloadBuilder.of();
+    }
+
+    /**
      * builder for customerFirstNameSet subtype
      * @return builder
      */
@@ -851,6 +940,22 @@ public interface MessagePayload extends MessagePayloadMixin {
      */
     public static com.commercetools.api.models.message.CustomerPasswordUpdatedMessagePayloadBuilder customerPasswordUpdatedBuilder() {
         return com.commercetools.api.models.message.CustomerPasswordUpdatedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for customerShippingAddressAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerShippingAddressAddedMessagePayloadBuilder customerShippingAddressAddedBuilder() {
+        return com.commercetools.api.models.message.CustomerShippingAddressAddedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for customerShippingAddressRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerShippingAddressRemovedMessagePayloadBuilder customerShippingAddressRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerShippingAddressRemovedMessagePayloadBuilder.of();
     }
 
     /**
@@ -982,6 +1087,14 @@ public interface MessagePayload extends MessagePayloadMixin {
     }
 
     /**
+     * builder for discountGroupIsActiveSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.DiscountGroupIsActiveSetMessagePayloadBuilder discountGroupIsActiveSetBuilder() {
+        return com.commercetools.api.models.message.DiscountGroupIsActiveSetMessagePayloadBuilder.of();
+    }
+
+    /**
      * builder for discountGroupKeySet subtype
      * @return builder
      */
@@ -1014,11 +1127,44 @@ public interface MessagePayload extends MessagePayloadMixin {
     }
 
     /**
+     * builder for inventoryEntryOutOfStock subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.InventoryEntryOutOfStockMessagePayloadBuilder inventoryEntryOutOfStockBuilder() {
+        return com.commercetools.api.models.message.InventoryEntryOutOfStockMessagePayloadBuilder.of();
+    }
+
+    /**
      * builder for inventoryEntryQuantitySet subtype
      * @return builder
      */
     public static com.commercetools.api.models.message.InventoryEntryQuantitySetMessagePayloadBuilder inventoryEntryQuantitySetBuilder() {
         return com.commercetools.api.models.message.InventoryEntryQuantitySetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for inventoryEntryReorderPoint subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.InventoryEntryReorderPointMessagePayloadBuilder inventoryEntryReorderPointBuilder() {
+        return com.commercetools.api.models.message.InventoryEntryReorderPointMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for inventoryEntryReservationExpirationInMinutesSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.InventoryEntryReservationExpirationInMinutesSetMessagePayloadBuilder inventoryEntryReservationExpirationInMinutesSetBuilder() {
+        return com.commercetools.api.models.message.InventoryEntryReservationExpirationInMinutesSetMessagePayloadBuilder
+                .of();
+    }
+
+    /**
+     * builder for inventoryEntrySafetyStock subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.InventoryEntrySafetyStockMessagePayloadBuilder inventoryEntrySafetyStockBuilder() {
+        return com.commercetools.api.models.message.InventoryEntrySafetyStockMessagePayloadBuilder.of();
     }
 
     /**
@@ -1243,6 +1389,14 @@ public interface MessagePayload extends MessagePayloadMixin {
      */
     public static com.commercetools.api.models.message.OrderPaymentAddedMessagePayloadBuilder orderPaymentAddedBuilder() {
         return com.commercetools.api.models.message.OrderPaymentAddedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for orderPaymentRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.OrderPaymentRemovedMessagePayloadBuilder orderPaymentRemovedBuilder() {
+        return com.commercetools.api.models.message.OrderPaymentRemovedMessagePayloadBuilder.of();
     }
 
     /**
@@ -1603,6 +1757,14 @@ public interface MessagePayload extends MessagePayloadMixin {
      */
     public static com.commercetools.api.models.message.PaymentTransactionAddedMessagePayloadBuilder paymentTransactionAddedBuilder() {
         return com.commercetools.api.models.message.PaymentTransactionAddedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for paymentTransactionInterfaceIdSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentTransactionInterfaceIdSetMessagePayloadBuilder paymentTransactionInterfaceIdSetBuilder() {
+        return com.commercetools.api.models.message.PaymentTransactionInterfaceIdSetMessagePayloadBuilder.of();
     }
 
     /**
@@ -2110,6 +2272,14 @@ public interface MessagePayload extends MessagePayloadMixin {
     }
 
     /**
+     * builder for recurringOrderFailed subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderFailedMessagePayloadBuilder recurringOrderFailedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderFailedMessagePayloadBuilder.of();
+    }
+
+    /**
      * builder for recurringOrderKeySet subtype
      * @return builder
      */
@@ -2446,6 +2616,78 @@ public interface MessagePayload extends MessagePayloadMixin {
     }
 
     /**
+     * builder for variantCreated subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantCreatedMessagePayloadBuilder variantCreatedBuilder() {
+        return com.commercetools.api.models.message.VariantCreatedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for variantDeleted subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantDeletedMessagePayloadBuilder variantDeletedBuilder() {
+        return com.commercetools.api.models.message.VariantDeletedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for variantImageAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantImageAddedMessagePayloadBuilder variantImageAddedBuilder() {
+        return com.commercetools.api.models.message.VariantImageAddedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for variantImagesSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantImagesSetMessagePayloadBuilder variantImagesSetBuilder() {
+        return com.commercetools.api.models.message.VariantImagesSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for variantKeySet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantKeySetMessagePayloadBuilder variantKeySetBuilder() {
+        return com.commercetools.api.models.message.VariantKeySetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for variantPublished subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantPublishedMessagePayloadBuilder variantPublishedBuilder() {
+        return com.commercetools.api.models.message.VariantPublishedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for variantSkuSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantSkuSetMessagePayloadBuilder variantSkuSetBuilder() {
+        return com.commercetools.api.models.message.VariantSkuSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for variantStagedChangesRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantStagedChangesRemovedMessagePayloadBuilder variantStagedChangesRemovedBuilder() {
+        return com.commercetools.api.models.message.VariantStagedChangesRemovedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for variantUnpublished subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.VariantUnpublishedMessagePayloadBuilder variantUnpublishedBuilder() {
+        return com.commercetools.api.models.message.VariantUnpublishedMessagePayloadBuilder.of();
+    }
+
+    /**
      * accessor map function
      * @param <T> mapped type
      * @param helper function to map the object
@@ -2459,8 +2701,8 @@ public interface MessagePayload extends MessagePayloadMixin {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<MessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<MessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<MessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<MessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<MessagePayload>";

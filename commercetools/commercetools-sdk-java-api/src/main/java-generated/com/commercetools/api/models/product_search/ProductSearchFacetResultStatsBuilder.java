@@ -84,7 +84,7 @@ public class ProductSearchFacetResultStatsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>The sum of values of the field that match the facet expression.</p>
+     *  <p>The sum of values of the field that match the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchFacetStatsExpression" rel="nofollow">facet expression</a>.</p>
      *  <p>Only returned for number fields.</p>
      * @param sum value to be set
      * @return Builder
@@ -145,7 +145,7 @@ public class ProductSearchFacetResultStatsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>The sum of values of the field that match the facet expression.</p>
+     *  <p>The sum of values of the field that match the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchFacetStatsExpression" rel="nofollow">facet expression</a>.</p>
      *  <p>Only returned for number fields.</p>
      * @return sum
      */

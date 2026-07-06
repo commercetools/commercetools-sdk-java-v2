@@ -9,12 +9,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.models.common.Reference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * QuoteLabel
@@ -59,7 +59,7 @@ public interface QuoteLabel extends Label {
     public String getKey();
 
     /**
-     *  <p>The Buyer who requested the Quote.</p>
+     *  <p>The <span>Buyer</span> who requested the Quote.</p>
      * @return customer
      */
     @NotNull
@@ -93,7 +93,7 @@ public interface QuoteLabel extends Label {
     public void setKey(final String key);
 
     /**
-     *  <p>The Buyer who requested the Quote.</p>
+     *  <p>The <span>Buyer</span> who requested the Quote.</p>
      * @param customer value to be set
      */
 
@@ -187,8 +187,8 @@ public interface QuoteLabel extends Label {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<QuoteLabel> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<QuoteLabel>() {
+    public static tools.jackson.core.type.TypeReference<QuoteLabel> typeReference() {
+        return new tools.jackson.core.type.TypeReference<QuoteLabel>() {
             @Override
             public String toString() {
                 return "TypeReference<QuoteLabel>";

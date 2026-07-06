@@ -20,7 +20,7 @@ public interface BusinessUnitType extends JsonEnum {
     <p>Top-level Business Unit. Must not have a <code>parentUnit</code> defined.</p> */
     BusinessUnitType COMPANY = BusinessUnitTypeEnum.COMPANY;
     /**
-    <p>Business Unit with a <code>parentUnit</code> reference to a Company or another Division.</p> */
+    <p>Business Unit with a <code>parentUnit</code> reference to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Division" rel="nofollow">Company</a> or another Division.</p> */
     BusinessUnitType DIVISION = BusinessUnitTypeEnum.DIVISION;
 
     /**

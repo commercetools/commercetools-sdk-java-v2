@@ -8,16 +8,17 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.common.AddressRole;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Remove Address update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitRemoveAddressAction" rel="nofollow">Remove Address</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -25,6 +26,7 @@ import jakarta.validation.constraints.NotNull;
  * <pre><code class='java'>
  *     BusinessUnitAddressRemovedMessagePayload businessUnitAddressRemovedMessagePayload = BusinessUnitAddressRemovedMessagePayload.builder()
  *             .address(addressBuilder -> addressBuilder)
+ *             .plusAddressRoles(addressRolesBuilder -> addressRolesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -40,7 +42,7 @@ public interface BusinessUnitAddressRemovedMessagePayload extends MessagePayload
     String BUSINESS_UNIT_ADDRESS_REMOVED = "BusinessUnitAddressRemoved";
 
     /**
-     *  <p>The address that was removed from the Business Unit.</p>
+     *  <p>The address that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @return address
      */
     @NotNull
@@ -49,11 +51,34 @@ public interface BusinessUnitAddressRemovedMessagePayload extends MessagePayload
     public Address getAddress();
 
     /**
-     *  <p>The address that was removed from the Business Unit.</p>
+     *  <p>Indicates if the address was used for shipping or billing purposes.</p>
+     * @return addressRoles
+     */
+    @NotNull
+    @JsonProperty("addressRoles")
+    public List<AddressRole> getAddressRoles();
+
+    /**
+     *  <p>The address that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">Business Unit</a>.</p>
      * @param address value to be set
      */
 
     public void setAddress(final Address address);
+
+    /**
+     *  <p>Indicates if the address was used for shipping or billing purposes.</p>
+     * @param addressRoles values to be set
+     */
+
+    @JsonIgnore
+    public void setAddressRoles(final AddressRole... addressRoles);
+
+    /**
+     *  <p>Indicates if the address was used for shipping or billing purposes.</p>
+     * @param addressRoles values to be set
+     */
+
+    public void setAddressRoles(final List<AddressRole> addressRoles);
 
     /**
      * factory method
@@ -71,6 +96,7 @@ public interface BusinessUnitAddressRemovedMessagePayload extends MessagePayload
     public static BusinessUnitAddressRemovedMessagePayload of(final BusinessUnitAddressRemovedMessagePayload template) {
         BusinessUnitAddressRemovedMessagePayloadImpl instance = new BusinessUnitAddressRemovedMessagePayloadImpl();
         instance.setAddress(template.getAddress());
+        instance.setAddressRoles(template.getAddressRoles());
         return instance;
     }
 
@@ -89,6 +115,7 @@ public interface BusinessUnitAddressRemovedMessagePayload extends MessagePayload
         }
         BusinessUnitAddressRemovedMessagePayloadImpl instance = new BusinessUnitAddressRemovedMessagePayloadImpl();
         instance.setAddress(com.commercetools.api.models.common.Address.deepCopy(template.getAddress()));
+        instance.setAddressRoles(Optional.ofNullable(template.getAddressRoles()).map(ArrayList::new).orElse(null));
         return instance;
     }
 
@@ -125,8 +152,8 @@ public interface BusinessUnitAddressRemovedMessagePayload extends MessagePayload
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAddressRemovedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAddressRemovedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitAddressRemovedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitAddressRemovedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitAddressRemovedMessagePayload>";

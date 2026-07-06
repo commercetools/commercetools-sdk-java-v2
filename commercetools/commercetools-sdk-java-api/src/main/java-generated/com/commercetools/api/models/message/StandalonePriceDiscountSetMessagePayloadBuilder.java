@@ -28,7 +28,7 @@ public class StandalonePriceDiscountSetMessagePayloadBuilder
     private com.commercetools.api.models.common.DiscountedPrice discounted;
 
     /**
-     *  <p>The new <code>discounted</code> value of the updated StandalonePrice.</p>
+     *  <p>The new <code>discounted</code> value of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param builder function to build the discounted value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class StandalonePriceDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>The new <code>discounted</code> value of the updated StandalonePrice.</p>
+     *  <p>The new <code>discounted</code> value of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param builder function to build the discounted value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class StandalonePriceDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>The new <code>discounted</code> value of the updated StandalonePrice.</p>
+     *  <p>The new <code>discounted</code> value of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param discounted value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class StandalonePriceDiscountSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>The new <code>discounted</code> value of the updated StandalonePrice.</p>
+     *  <p>The new <code>discounted</code> value of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @return discounted
      */
 

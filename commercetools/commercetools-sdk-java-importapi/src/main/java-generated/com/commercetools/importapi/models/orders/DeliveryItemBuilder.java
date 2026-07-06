@@ -27,7 +27,7 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
     private Long quantity;
 
     /**
-     *  <p><code>id</code> of the LineItem or CustomLineItem delivered.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> delivered.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
     }
 
     /**
-     *  <p>Number of Line Items or Custom Line Items delivered.</p>
+     *  <p>Quantity of Line Items or Custom Line Items delivered.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
     }
 
     /**
-     *  <p><code>id</code> of the LineItem or CustomLineItem delivered.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> delivered.</p>
      * @return id
      */
 
@@ -58,7 +58,7 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
     }
 
     /**
-     *  <p>Number of Line Items or Custom Line Items delivered.</p>
+     *  <p>Quantity of Line Items or Custom Line Items delivered.</p>
      * @return quantity
      */
 

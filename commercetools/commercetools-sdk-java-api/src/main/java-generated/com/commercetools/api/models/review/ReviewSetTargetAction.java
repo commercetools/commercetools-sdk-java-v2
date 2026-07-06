@@ -10,11 +10,11 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.product.ProductResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ReviewSetTargetAction
@@ -39,7 +39,7 @@ public interface ReviewSetTargetAction extends ReviewUpdateAction {
     String SET_TARGET = "setTarget";
 
     /**
-     *  <p>Value to set, specified as ProductResourceIdentifier or ChannelResourceIdentifier, respectively. If empty, any existing value will be removed.</p>
+     *  <p>Value to set, specified as <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductResourceIdentifier" rel="nofollow">ProductResourceIdentifier</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelResourceIdentifier" rel="nofollow">ChannelResourceIdentifier</a>, respectively. If empty, any existing value will be removed.</p>
      * @return target
      */
     @NotNull
@@ -47,21 +47,21 @@ public interface ReviewSetTargetAction extends ReviewUpdateAction {
     public Object getTarget();
 
     /**
-     *  <p>Value to set, specified as ProductResourceIdentifier or ChannelResourceIdentifier, respectively. If empty, any existing value will be removed.</p>
+     *  <p>Value to set, specified as <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductResourceIdentifier" rel="nofollow">ProductResourceIdentifier</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelResourceIdentifier" rel="nofollow">ChannelResourceIdentifier</a>, respectively. If empty, any existing value will be removed.</p>
      * @param target value to be set
      */
 
     public void setTarget(final ProductResourceIdentifier target);
 
     /**
-     *  <p>Value to set, specified as ProductResourceIdentifier or ChannelResourceIdentifier, respectively. If empty, any existing value will be removed.</p>
+     *  <p>Value to set, specified as <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductResourceIdentifier" rel="nofollow">ProductResourceIdentifier</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelResourceIdentifier" rel="nofollow">ChannelResourceIdentifier</a>, respectively. If empty, any existing value will be removed.</p>
      * @param target value to be set
      */
 
     public void setTarget(final ChannelResourceIdentifier target);
 
     /**
-     *  <p>Value to set, specified as ProductResourceIdentifier or ChannelResourceIdentifier, respectively. If empty, any existing value will be removed.</p>
+     *  <p>Value to set, specified as <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductResourceIdentifier" rel="nofollow">ProductResourceIdentifier</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelResourceIdentifier" rel="nofollow">ChannelResourceIdentifier</a>, respectively. If empty, any existing value will be removed.</p>
      * @param target value to be set
      */
 
@@ -134,8 +134,8 @@ public interface ReviewSetTargetAction extends ReviewUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ReviewSetTargetAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ReviewSetTargetAction>() {
+    public static tools.jackson.core.type.TypeReference<ReviewSetTargetAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ReviewSetTargetAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ReviewSetTargetAction>";

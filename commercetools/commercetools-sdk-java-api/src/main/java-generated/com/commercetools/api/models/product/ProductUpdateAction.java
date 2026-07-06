@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductUpdateAction
@@ -146,14 +146,6 @@ public interface ProductUpdateAction extends com.commercetools.api.models.Resour
      */
     public static com.commercetools.api.models.product.ProductChangeSlugActionBuilder changeSlugBuilder() {
         return com.commercetools.api.models.product.ProductChangeSlugActionBuilder.of();
-    }
-
-    /**
-     * builder for legacySetSku subtype
-     * @return builder
-     */
-    public static com.commercetools.api.models.product.ProductLegacySetSkuActionBuilder legacySetSkuBuilder() {
-        return com.commercetools.api.models.product.ProductLegacySetSkuActionBuilder.of();
     }
 
     /**
@@ -298,6 +290,14 @@ public interface ProductUpdateAction extends com.commercetools.api.models.Resour
      */
     public static com.commercetools.api.models.product.ProductSetCategoryOrderHintActionBuilder setCategoryOrderHintBuilder() {
         return com.commercetools.api.models.product.ProductSetCategoryOrderHintActionBuilder.of();
+    }
+
+    /**
+     * builder for setDefaultVariant subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.product.ProductSetDefaultVariantActionBuilder setDefaultVariantBuilder() {
+        return com.commercetools.api.models.product.ProductSetDefaultVariantActionBuilder.of();
     }
 
     /**
@@ -466,8 +466,8 @@ public interface ProductUpdateAction extends com.commercetools.api.models.Resour
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductUpdateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductUpdateAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductUpdateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductUpdateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductUpdateAction>";

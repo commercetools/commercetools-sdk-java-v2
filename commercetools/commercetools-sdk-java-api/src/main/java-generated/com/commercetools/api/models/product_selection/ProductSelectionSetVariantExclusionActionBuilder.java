@@ -68,7 +68,7 @@ public class ProductSelectionSetVariantExclusionActionBuilder
     }
 
     /**
-     *  <p>Determines which Variants of the previously excluded Product are to be included in the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode. Leave it empty to unset an existing Variant Exclusion.</p>
+     *  <p>Determines which Variants of the previously excluded Product are to be included in the Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. Leave it empty to unset an existing Variant Exclusion.</p>
      * @param builder function to build the variantExclusion value
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class ProductSelectionSetVariantExclusionActionBuilder
     }
 
     /**
-     *  <p>Determines which Variants of the previously excluded Product are to be included in the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode. Leave it empty to unset an existing Variant Exclusion.</p>
+     *  <p>Determines which Variants of the previously excluded Product are to be included in the Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. Leave it empty to unset an existing Variant Exclusion.</p>
      * @param builder function to build the variantExclusion value
      * @return Builder
      */
@@ -95,7 +95,7 @@ public class ProductSelectionSetVariantExclusionActionBuilder
     }
 
     /**
-     *  <p>Determines which Variants of the previously excluded Product are to be included in the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode. Leave it empty to unset an existing Variant Exclusion.</p>
+     *  <p>Determines which Variants of the previously excluded Product are to be included in the Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. Leave it empty to unset an existing Variant Exclusion.</p>
      * @param variantExclusion value to be set
      * @return Builder
      */
@@ -116,7 +116,7 @@ public class ProductSelectionSetVariantExclusionActionBuilder
     }
 
     /**
-     *  <p>Determines which Variants of the previously excluded Product are to be included in the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode. Leave it empty to unset an existing Variant Exclusion.</p>
+     *  <p>Determines which Variants of the previously excluded Product are to be included in the Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. Leave it empty to unset an existing Variant Exclusion.</p>
      * @return variantExclusion
      */
 

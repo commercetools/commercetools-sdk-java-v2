@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * StateDraft
@@ -86,7 +86,7 @@ public interface StateDraft extends com.commercetools.api.models.WithKey, io.vra
     /**
      *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
      *  <ul>
-     *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
+     *   <li>If, for example, the current State is the <em>Initial</em> State of <a href="https://docs.commercetools.com/apis/ctp:api:type:StateTypeEnum" rel="nofollow">StateType</a> <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the <a href="https://docs.commercetools.com/apis/ctp:api:type:StateResourceIdentifier" rel="nofollow">StateResourceIdentifier</a> to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
      *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
      *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
@@ -149,7 +149,7 @@ public interface StateDraft extends com.commercetools.api.models.WithKey, io.vra
     /**
      *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
      *  <ul>
-     *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
+     *   <li>If, for example, the current State is the <em>Initial</em> State of <a href="https://docs.commercetools.com/apis/ctp:api:type:StateTypeEnum" rel="nofollow">StateType</a> <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the <a href="https://docs.commercetools.com/apis/ctp:api:type:StateResourceIdentifier" rel="nofollow">StateResourceIdentifier</a> to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
      *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
      *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
@@ -162,7 +162,7 @@ public interface StateDraft extends com.commercetools.api.models.WithKey, io.vra
     /**
      *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
      *  <ul>
-     *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
+     *   <li>If, for example, the current State is the <em>Initial</em> State of <a href="https://docs.commercetools.com/apis/ctp:api:type:StateTypeEnum" rel="nofollow">StateType</a> <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the <a href="https://docs.commercetools.com/apis/ctp:api:type:StateResourceIdentifier" rel="nofollow">StateResourceIdentifier</a> to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
      *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
      *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
      *  </ul>
@@ -255,8 +255,8 @@ public interface StateDraft extends com.commercetools.api.models.WithKey, io.vra
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StateDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StateDraft>() {
+    public static tools.jackson.core.type.TypeReference<StateDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StateDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<StateDraft>";

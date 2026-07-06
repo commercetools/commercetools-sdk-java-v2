@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after adding a Custom Type to a Delivery using the Set Custom Type update action.</p>
+ *  <p>Generated after adding a Custom Type to a Delivery using the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetDeliveryCustomTypeAction" rel="nofollow">Set Custom Type</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -50,7 +50,7 @@ public interface DeliveryCustomTypeSetMessagePayload extends OrderMessagePayload
     public CustomFields getCustomFields();
 
     /**
-     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the previous <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a>. Absent if there was no previous Custom Type present.</p>
      * @return previousTypeId
      */
 
@@ -58,7 +58,7 @@ public interface DeliveryCustomTypeSetMessagePayload extends OrderMessagePayload
     public String getPreviousTypeId();
 
     /**
-     *  <p>Unique identifier of the Delivery.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @return deliveryId
      */
     @NotNull
@@ -73,14 +73,14 @@ public interface DeliveryCustomTypeSetMessagePayload extends OrderMessagePayload
     public void setCustomFields(final CustomFields customFields);
 
     /**
-     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the previous <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a>. Absent if there was no previous Custom Type present.</p>
      * @param previousTypeId value to be set
      */
 
     public void setPreviousTypeId(final String previousTypeId);
 
     /**
-     *  <p>Unique identifier of the Delivery.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param deliveryId value to be set
      */
 
@@ -159,8 +159,8 @@ public interface DeliveryCustomTypeSetMessagePayload extends OrderMessagePayload
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DeliveryCustomTypeSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DeliveryCustomTypeSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<DeliveryCustomTypeSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DeliveryCustomTypeSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<DeliveryCustomTypeSetMessagePayload>";

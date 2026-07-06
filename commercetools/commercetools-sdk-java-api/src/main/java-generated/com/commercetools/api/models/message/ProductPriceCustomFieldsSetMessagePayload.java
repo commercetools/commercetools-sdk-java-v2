@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Set Price Custom Type update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSetProductPriceCustomTypeAction" rel="nofollow">Set Price Custom Type</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -43,7 +43,7 @@ public interface ProductPriceCustomFieldsSetMessagePayload extends MessagePayloa
     String PRODUCT_PRICE_CUSTOM_FIELDS_SET = "ProductPriceCustomFieldsSet";
 
     /**
-     *  <p>Unique identifier of the Price on which the Custom Type was set.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> on which the Custom Type was set.</p>
      * @return priceId
      */
     @NotNull
@@ -51,7 +51,7 @@ public interface ProductPriceCustomFieldsSetMessagePayload extends MessagePayloa
     public String getPriceId();
 
     /**
-     *  <p>Unique identifier of the ProductVariant to which the Price belongs.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to which the Price belongs.</p>
      * @return variantId
      */
     @NotNull
@@ -59,7 +59,7 @@ public interface ProductPriceCustomFieldsSetMessagePayload extends MessagePayloa
     public Long getVariantId();
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @return staged
      */
     @NotNull
@@ -76,7 +76,7 @@ public interface ProductPriceCustomFieldsSetMessagePayload extends MessagePayloa
     public CustomFields getCustomField();
 
     /**
-     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the previous <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a>. Absent if there was no previous Custom Type present.</p>
      * @return oldTypeId
      */
 
@@ -84,21 +84,21 @@ public interface ProductPriceCustomFieldsSetMessagePayload extends MessagePayloa
     public String getOldTypeId();
 
     /**
-     *  <p>Unique identifier of the Price on which the Custom Type was set.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Price</a> on which the Custom Type was set.</p>
      * @param priceId value to be set
      */
 
     public void setPriceId(final String priceId);
 
     /**
-     *  <p>Unique identifier of the ProductVariant to which the Price belongs.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to which the Price belongs.</p>
      * @param variantId value to be set
      */
 
     public void setVariantId(final Long variantId);
 
     /**
-     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     *  <p>Whether the update was only applied to the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">Product Projection</a>.</p>
      * @param staged value to be set
      */
 
@@ -112,7 +112,7 @@ public interface ProductPriceCustomFieldsSetMessagePayload extends MessagePayloa
     public void setCustomField(final CustomFields customField);
 
     /**
-     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
+     *  <p><code>id</code> of the previous <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Custom Type</a>. Absent if there was no previous Custom Type present.</p>
      * @param oldTypeId value to be set
      */
 
@@ -197,8 +197,8 @@ public interface ProductPriceCustomFieldsSetMessagePayload extends MessagePayloa
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductPriceCustomFieldsSetMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductPriceCustomFieldsSetMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<ProductPriceCustomFieldsSetMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductPriceCustomFieldsSetMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductPriceCustomFieldsSetMessagePayload>";

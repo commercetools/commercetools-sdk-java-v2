@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * QueryPrice
@@ -99,7 +100,7 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
     }
 
     /**
-     *  <p>CustomerGroup for which the given Price is valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> for which the given Price is valid.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
@@ -107,7 +108,7 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
     }
 
     /**
-     *  <p><code>ProductDistribution</code> Channel for which the given Price is valid.</p>
+     *  <p><code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which the given Price is valid.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelReference getChannel() {
@@ -131,7 +132,7 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
     }
 
     /**
-     *  <p>DiscountedPrice you specify for the given Price.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountedPrice" rel="nofollow">DiscountedPrice</a> you specify for the given Price.</p>
      */
 
     public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {
@@ -139,7 +140,7 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields for the Price.</p>
+     *  <p>Custom Fields of the Price.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -147,7 +148,7 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
     }
 
     /**
-     *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     *  <p>Price tier applied when the minimum quantity for the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> of a ProductVariant with the related Price is reached in a Cart.</p>
      *  <p>If <code>discounted</code> is specified, the tiered Price is ignored for a Product Variant.</p>
      */
 

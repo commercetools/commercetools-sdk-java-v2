@@ -7,16 +7,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>If the initial indexing is in progress or the feature is inactive, A SearchNotReady error is returned. If inactive, you can reactivate it.</p>
+ *  <p>If the initial indexing is in progress or the feature is inactive, A <a href="https://docs.commercetools.com/apis/ctp:api:type:SearchNotReadyError" rel="nofollow">SearchNotReady</a> error is returned. If inactive, you can <span>reactivate</span> it.</p>
  *
  * <hr>
  * <div class=code-example>

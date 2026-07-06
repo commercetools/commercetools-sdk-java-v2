@@ -26,7 +26,7 @@ public class ProjectChangeShoppingListsConfigurationActionBuilder
     private com.commercetools.api.models.project.ShoppingListsConfiguration shoppingListsConfiguration;
 
     /**
-     *  <p>Configuration for the Shopping Lists feature.</p>
+     *  <p>Configuration for the <span>Shopping Lists</span> feature.</p>
      * @param builder function to build the shoppingListsConfiguration value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class ProjectChangeShoppingListsConfigurationActionBuilder
     }
 
     /**
-     *  <p>Configuration for the Shopping Lists feature.</p>
+     *  <p>Configuration for the <span>Shopping Lists</span> feature.</p>
      * @param builder function to build the shoppingListsConfiguration value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ProjectChangeShoppingListsConfigurationActionBuilder
     }
 
     /**
-     *  <p>Configuration for the Shopping Lists feature.</p>
+     *  <p>Configuration for the <span>Shopping Lists</span> feature.</p>
      * @param shoppingListsConfiguration value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class ProjectChangeShoppingListsConfigurationActionBuilder
     }
 
     /**
-     *  <p>Configuration for the Shopping Lists feature.</p>
+     *  <p>Configuration for the <span>Shopping Lists</span> feature.</p>
      * @return shoppingListsConfiguration
      */
 

@@ -348,7 +348,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     *  <p>Format in which the payload is delivered. When not provided, the PlatformFormat is selected by default.</p>
+     *  <p>Format in which the payload is delivered. When not provided, the <a href="https://docs.commercetools.com/apis/ctp:api:type:PlatformFormat" rel="nofollow">PlatformFormat</a> is selected by default.</p>
      * @param format value to be set
      * @return Builder
      */
@@ -360,7 +360,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     *  <p>Format in which the payload is delivered. When not provided, the PlatformFormat is selected by default.</p>
+     *  <p>Format in which the payload is delivered. When not provided, the <a href="https://docs.commercetools.com/apis/ctp:api:type:PlatformFormat" rel="nofollow">PlatformFormat</a> is selected by default.</p>
      * @param builder function to build the format value
      * @return Builder
      */
@@ -421,7 +421,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     *  <p>Format in which the payload is delivered. When not provided, the PlatformFormat is selected by default.</p>
+     *  <p>Format in which the payload is delivered. When not provided, the <a href="https://docs.commercetools.com/apis/ctp:api:type:PlatformFormat" rel="nofollow">PlatformFormat</a> is selected by default.</p>
      * @return format
      */
 

@@ -21,7 +21,7 @@ public class DiscountedLineItemPortionTest {
                         DiscountedLineItemPortion.builder()
                                 .discount(new com.commercetools.history.models.common.ReferenceImpl()) },
                 new Object[] { "discountedAmount", DiscountedLineItemPortion.builder()
-                        .discountedAmount(new com.commercetools.history.models.common.MoneyImpl()) } };
+                        .discountedAmount(new com.commercetools.history.models.common.TypedMoneyImpl()) } };
     }
 
     @Test
@@ -35,8 +35,8 @@ public class DiscountedLineItemPortionTest {
     @Test
     public void discountedAmount() {
         DiscountedLineItemPortion value = DiscountedLineItemPortion.of();
-        value.setDiscountedAmount(new com.commercetools.history.models.common.MoneyImpl());
+        value.setDiscountedAmount(new com.commercetools.history.models.common.TypedMoneyImpl());
         Assertions.assertThat(value.getDiscountedAmount())
-                .isEqualTo(new com.commercetools.history.models.common.MoneyImpl());
+                .isEqualTo(new com.commercetools.history.models.common.TypedMoneyImpl());
     }
 }

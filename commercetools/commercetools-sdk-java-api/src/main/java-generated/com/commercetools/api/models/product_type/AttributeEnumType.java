@@ -9,15 +9,15 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Attribute type for plain enum values. Useful for predefined language-agnostic values selectable in drop downs when only one value should be selected. Use AttributeSetType of AttributeEnumType instead if multiple values can be selected from the list.</p>
+ *  <p>Attribute type for plain enum values. Useful for predefined language-agnostic values selectable in drop downs when only one value should be selected. Use <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeSetType" rel="nofollow">AttributeSetType</a> of AttributeEnumType instead if multiple values can be selected from the list.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -134,8 +134,8 @@ public interface AttributeEnumType extends AttributeType {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AttributeEnumType> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AttributeEnumType>() {
+    public static tools.jackson.core.type.TypeReference<AttributeEnumType> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AttributeEnumType>() {
             @Override
             public String toString() {
                 return "TypeReference<AttributeEnumType>";

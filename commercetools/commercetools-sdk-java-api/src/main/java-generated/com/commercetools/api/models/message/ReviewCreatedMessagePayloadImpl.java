@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Create Review request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/reviews:POST" rel="nofollow">Create Review</a> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReviewCreatedMessagePayloadImpl implements ReviewCreatedMessagePayload, ModelBase {
@@ -51,7 +52,7 @@ public class ReviewCreatedMessagePayloadImpl implements ReviewCreatedMessagePayl
     }
 
     /**
-     *  <p>Review that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Review" rel="nofollow">Review</a> that was created.</p>
      */
 
     public com.commercetools.api.models.review.Review getReview() {

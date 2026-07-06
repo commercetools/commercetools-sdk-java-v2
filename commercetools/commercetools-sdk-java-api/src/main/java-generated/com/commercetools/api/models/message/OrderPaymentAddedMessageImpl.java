@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Add Payment update action or when a Payment is added via Order Edits.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderAddPaymentAction" rel="nofollow">Add Payment</a> update action or when a <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> is added via <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderAddPaymentAction" rel="nofollow">Order Edits</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, ModelBase {
@@ -44,7 +45,7 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
-    private com.commercetools.api.models.payment.PaymentReference payment;
+    private com.commercetools.api.models.payment.PaymentReference paymentRef;
 
     /**
      * create instance with all properties
@@ -59,7 +60,7 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("payment") final com.commercetools.api.models.payment.PaymentReference payment) {
+            @JsonProperty("paymentRef") final com.commercetools.api.models.payment.PaymentReference paymentRef) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -70,7 +71,7 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
         this.resource = resource;
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
-        this.payment = payment;
+        this.paymentRef = paymentRef;
         this.type = ORDER_PAYMENT_ADDED;
     }
 
@@ -138,7 +139,7 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -154,7 +155,7 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
     }
 
     /**
-     *  <p>Message Type of the Message.</p>
+     *  <p><span>Message Type</span> of the Message.</p>
      */
 
     public String getType() {
@@ -170,11 +171,11 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
     }
 
     /**
-     *  <p>Payment that was added to the Order.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
      */
 
-    public com.commercetools.api.models.payment.PaymentReference getPayment() {
-        return this.payment;
+    public com.commercetools.api.models.payment.PaymentReference getPaymentRef() {
+        return this.paymentRef;
     }
 
     public void setId(final String id) {
@@ -218,8 +219,8 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
     }
 
-    public void setPayment(final com.commercetools.api.models.payment.PaymentReference payment) {
-        this.payment = payment;
+    public void setPaymentRef(final com.commercetools.api.models.payment.PaymentReference paymentRef) {
+        this.paymentRef = paymentRef;
     }
 
     @Override
@@ -243,7 +244,7 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
-                .append(payment, that.payment)
+                .append(paymentRef, that.paymentRef)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -255,7 +256,7 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
-                .append(payment, that.payment)
+                .append(paymentRef, that.paymentRef)
                 .isEquals();
     }
 
@@ -272,7 +273,7 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
                 .append(resourceVersion)
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
-                .append(payment)
+                .append(paymentRef)
                 .toHashCode();
     }
 
@@ -289,7 +290,7 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
                 .append("resourceVersion", resourceVersion)
                 .append("type", type)
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
-                .append("payment", payment)
+                .append("paymentRef", paymentRef)
                 .build();
     }
 

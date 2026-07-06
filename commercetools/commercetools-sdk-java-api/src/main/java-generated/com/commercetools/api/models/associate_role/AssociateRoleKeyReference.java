@@ -8,15 +8,16 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.KeyReference;
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>KeyReference to an AssociateRole.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:KeyReference" rel="nofollow">KeyReference</a> to an <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +40,15 @@ public interface AssociateRoleKeyReference extends KeyReference {
     String ASSOCIATE_ROLE = "associate-role";
 
     /**
-     *  <p>Unique and immutable key of the referenced AssociateRole.</p>
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
+
+    /**
+     *  <p>Unique and immutable key of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a>.</p>
      * @return key
      */
     @NotNull
@@ -47,7 +56,7 @@ public interface AssociateRoleKeyReference extends KeyReference {
     public String getKey();
 
     /**
-     *  <p>Unique and immutable key of the referenced AssociateRole.</p>
+     *  <p>Unique and immutable key of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRole</a>.</p>
      * @param key value to be set
      */
 
@@ -120,8 +129,8 @@ public interface AssociateRoleKeyReference extends KeyReference {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AssociateRoleKeyReference> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AssociateRoleKeyReference>() {
+    public static tools.jackson.core.type.TypeReference<AssociateRoleKeyReference> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AssociateRoleKeyReference>() {
             @Override
             public String toString() {
                 return "TypeReference<AssociateRoleKeyReference>";

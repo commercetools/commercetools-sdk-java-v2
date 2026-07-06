@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>To set a ReturnPaymentState, the Order <code>returnInfo</code> must have at least one ReturnItem.</p>
+ *  <p>To set a <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnPaymentState" rel="nofollow">ReturnPaymentState</a>, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> <code>returnInfo</code> must have at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetReturnPaymentStateActionImpl implements OrderSetReturnPaymentStateAction, ModelBase {
@@ -59,7 +60,7 @@ public class OrderSetReturnPaymentStateActionImpl implements OrderSetReturnPayme
     }
 
     /**
-     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      */
 
     public String getReturnItemId() {
@@ -67,7 +68,7 @@ public class OrderSetReturnPaymentStateActionImpl implements OrderSetReturnPayme
     }
 
     /**
-     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      */
 
     public String getReturnItemKey() {
@@ -75,7 +76,7 @@ public class OrderSetReturnPaymentStateActionImpl implements OrderSetReturnPayme
     }
 
     /**
-     *  <p>New Payment status of the ReturnItem.</p>
+     *  <p>New Payment status of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a>.</p>
      */
 
     public com.commercetools.api.models.order.ReturnPaymentState getPaymentState() {

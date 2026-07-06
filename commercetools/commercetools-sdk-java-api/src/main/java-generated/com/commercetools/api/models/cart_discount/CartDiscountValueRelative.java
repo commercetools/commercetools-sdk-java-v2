@@ -8,14 +8,14 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Discounts the CartDiscountTarget relative to its price.</p>
+ *  <p>Discounts the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountTarget" rel="nofollow">CartDiscountTarget</a> relative to its price.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -46,11 +46,34 @@ public interface CartDiscountValueRelative extends CartDiscountValue, CartDiscou
     public Long getPermyriad();
 
     /**
+     *  <p>Indicates how the discount applies when using <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a>.</p>
+     *  <ul>
+     *   <li>If the mode is <code>IndividualApplication</code>, the discounted percentage is applied on each unit's price. The units matching the <code>triggerPattern</code> are not considered.</li>
+     *   <li>If the mode is <code>ProportionateDistribution</code> and <code>EvenDistribution</code> the discounted value is calculated from the total value of the units matching the <code>targetPattern</code> and distributed among the units matching the <code>targetPattern</code> or <code>triggerPattern</code>. These modes are allowed only if <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> <code>triggerPattern</code> is non-empty.</li>
+     *  </ul>
+     * @return applicationMode
+     */
+
+    @JsonProperty("applicationMode")
+    public DiscountApplicationMode getApplicationMode();
+
+    /**
      *  <p>Fraction (per ten thousand) the price is reduced by. For example, <code>1000</code> will result in a 10% price reduction.</p>
      * @param permyriad value to be set
      */
 
     public void setPermyriad(final Long permyriad);
+
+    /**
+     *  <p>Indicates how the discount applies when using <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a>.</p>
+     *  <ul>
+     *   <li>If the mode is <code>IndividualApplication</code>, the discounted percentage is applied on each unit's price. The units matching the <code>triggerPattern</code> are not considered.</li>
+     *   <li>If the mode is <code>ProportionateDistribution</code> and <code>EvenDistribution</code> the discounted value is calculated from the total value of the units matching the <code>targetPattern</code> and distributed among the units matching the <code>targetPattern</code> or <code>triggerPattern</code>. These modes are allowed only if <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> <code>triggerPattern</code> is non-empty.</li>
+     *  </ul>
+     * @param applicationMode value to be set
+     */
+
+    public void setApplicationMode(final DiscountApplicationMode applicationMode);
 
     /**
      * factory method
@@ -68,6 +91,7 @@ public interface CartDiscountValueRelative extends CartDiscountValue, CartDiscou
     public static CartDiscountValueRelative of(final CartDiscountValueRelative template) {
         CartDiscountValueRelativeImpl instance = new CartDiscountValueRelativeImpl();
         instance.setPermyriad(template.getPermyriad());
+        instance.setApplicationMode(template.getApplicationMode());
         return instance;
     }
 
@@ -85,6 +109,7 @@ public interface CartDiscountValueRelative extends CartDiscountValue, CartDiscou
         }
         CartDiscountValueRelativeImpl instance = new CartDiscountValueRelativeImpl();
         instance.setPermyriad(template.getPermyriad());
+        instance.setApplicationMode(template.getApplicationMode());
         return instance;
     }
 
@@ -119,8 +144,8 @@ public interface CartDiscountValueRelative extends CartDiscountValue, CartDiscou
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountValueRelative> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountValueRelative>() {
+    public static tools.jackson.core.type.TypeReference<CartDiscountValueRelative> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartDiscountValueRelative>() {
             @Override
             public String toString() {
                 return "TypeReference<CartDiscountValueRelative>";

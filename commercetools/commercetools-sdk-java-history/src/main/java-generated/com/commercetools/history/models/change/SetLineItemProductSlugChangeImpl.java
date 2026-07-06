@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Change triggered automatically due to a user-initiated change.</p>
@@ -34,6 +35,8 @@ public class SetLineItemProductSlugChangeImpl implements SetLineItemProductSlugC
 
     private String variant;
 
+    private String lineItemId;
+
     /**
      * create instance with all properties
      */
@@ -42,12 +45,13 @@ public class SetLineItemProductSlugChangeImpl implements SetLineItemProductSlugC
             @JsonProperty("previousValue") final com.commercetools.history.models.common.LocalizedString previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.LocalizedString nextValue,
             @JsonProperty("lineItem") final com.commercetools.history.models.common.LocalizedString lineItem,
-            @JsonProperty("variant") final String variant) {
+            @JsonProperty("variant") final String variant, @JsonProperty("lineItemId") final String lineItemId) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.lineItem = lineItem;
         this.variant = variant;
+        this.lineItemId = lineItemId;
         this.type = SET_LINE_ITEM_PRODUCT_SLUG_CHANGE;
     }
 
@@ -91,7 +95,7 @@ public class SetLineItemProductSlugChangeImpl implements SetLineItemProductSlugC
     }
 
     /**
-     *  <p>Name of the Product the updated Line Item is based on.</p>
+     *  <p>Name of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> the updated Line Item is based on.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getLineItem() {
@@ -99,11 +103,20 @@ public class SetLineItemProductSlugChangeImpl implements SetLineItemProductSlugC
     }
 
     /**
-     *  <p><code>sku</code> or <code>key</code> of the updated ProductVariant.</p>
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
      */
 
     public String getVariant() {
         return this.variant;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>.</p>
+     */
+
+    public String getLineItemId() {
+        return this.lineItemId;
     }
 
     public void setChange(final String change) {
@@ -126,6 +139,10 @@ public class SetLineItemProductSlugChangeImpl implements SetLineItemProductSlugC
         this.variant = variant;
     }
 
+    public void setLineItemId(final String lineItemId) {
+        this.lineItemId = lineItemId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -142,12 +159,14 @@ public class SetLineItemProductSlugChangeImpl implements SetLineItemProductSlugC
                 .append(nextValue, that.nextValue)
                 .append(lineItem, that.lineItem)
                 .append(variant, that.variant)
+                .append(lineItemId, that.lineItemId)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(lineItem, that.lineItem)
                 .append(variant, that.variant)
+                .append(lineItemId, that.lineItemId)
                 .isEquals();
     }
 
@@ -159,6 +178,7 @@ public class SetLineItemProductSlugChangeImpl implements SetLineItemProductSlugC
                 .append(nextValue)
                 .append(lineItem)
                 .append(variant)
+                .append(lineItemId)
                 .toHashCode();
     }
 
@@ -170,6 +190,7 @@ public class SetLineItemProductSlugChangeImpl implements SetLineItemProductSlugC
                 .append("nextValue", nextValue)
                 .append("lineItem", lineItem)
                 .append("variant", variant)
+                .append("lineItemId", lineItemId)
                 .build();
     }
 

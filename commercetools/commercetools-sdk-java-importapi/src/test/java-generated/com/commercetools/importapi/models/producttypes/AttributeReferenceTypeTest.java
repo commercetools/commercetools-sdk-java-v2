@@ -16,15 +16,17 @@ public class AttributeReferenceTypeTest {
     }
 
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { "referenceTypeId", AttributeReferenceType.builder()
-                .referenceTypeId(com.commercetools.importapi.models.common.ReferenceType.findEnum("cart")) } };
+        return new Object[][] { new Object[] { "referenceTypeId",
+                AttributeReferenceType.builder()
+                        .referenceTypeId(
+                            com.commercetools.importapi.models.common.ReferenceType.findEnum("associate-role")) } };
     }
 
     @Test
     public void referenceTypeId() {
         AttributeReferenceType value = AttributeReferenceType.of();
-        value.setReferenceTypeId(com.commercetools.importapi.models.common.ReferenceType.findEnum("cart"));
+        value.setReferenceTypeId(com.commercetools.importapi.models.common.ReferenceType.findEnum("associate-role"));
         Assertions.assertThat(value.getReferenceTypeId())
-                .isEqualTo(com.commercetools.importapi.models.common.ReferenceType.findEnum("cart"));
+                .isEqualTo(com.commercetools.importapi.models.common.ReferenceType.findEnum("associate-role"));
     }
 }

@@ -47,6 +47,12 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsRequestBuilder
             storeKey, customerId);
     }
 
+    public ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdMergeRequestBuilder customerIdWithCustomerIdValueMerge(
+            String customerId) {
+        return new ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdMergeRequestBuilder(apiHttpClient,
+            projectKey, storeKey, customerId);
+    }
+
     public ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyRequestBuilder withKey(String key) {
         return new ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyRequestBuilder(apiHttpClient, projectKey, storeKey,
             key);

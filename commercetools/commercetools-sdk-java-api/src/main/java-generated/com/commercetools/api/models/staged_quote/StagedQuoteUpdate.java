@@ -9,12 +9,12 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * StagedQuoteUpdate
@@ -36,7 +36,7 @@ public interface StagedQuoteUpdate extends
         com.commercetools.api.models.ResourceUpdate<StagedQuoteUpdate, StagedQuoteUpdateAction, StagedQuoteUpdateBuilder> {
 
     /**
-     *  <p>Expected version of the StagedQuote to which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a> to which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      * @return version
      */
     @NotNull
@@ -44,7 +44,7 @@ public interface StagedQuoteUpdate extends
     public Long getVersion();
 
     /**
-     *  <p>Update actions to be performed on the StagedQuote.</p>
+     *  <p>Update actions to be performed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a>.</p>
      * @return actions
      */
     @NotNull
@@ -53,14 +53,14 @@ public interface StagedQuoteUpdate extends
     public List<StagedQuoteUpdateAction> getActions();
 
     /**
-     *  <p>Expected version of the StagedQuote to which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a> to which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      * @param version value to be set
      */
 
     public void setVersion(final Long version);
 
     /**
-     *  <p>Update actions to be performed on the StagedQuote.</p>
+     *  <p>Update actions to be performed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a>.</p>
      * @param actions values to be set
      */
 
@@ -68,7 +68,7 @@ public interface StagedQuoteUpdate extends
     public void setActions(final StagedQuoteUpdateAction... actions);
 
     /**
-     *  <p>Update actions to be performed on the StagedQuote.</p>
+     *  <p>Update actions to be performed on the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a>.</p>
      * @param actions values to be set
      */
 
@@ -147,8 +147,8 @@ public interface StagedQuoteUpdate extends
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<StagedQuoteUpdate> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<StagedQuoteUpdate>() {
+    public static tools.jackson.core.type.TypeReference<StagedQuoteUpdate> typeReference() {
+        return new tools.jackson.core.type.TypeReference<StagedQuoteUpdate>() {
             @Override
             public String toString() {
                 return "TypeReference<StagedQuoteUpdate>";

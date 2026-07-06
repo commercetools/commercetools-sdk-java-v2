@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ApiClientDraft
@@ -41,7 +41,7 @@ public interface ApiClientDraft extends io.vrap.rmf.base.client.Draft<ApiClientD
     public String getName();
 
     /**
-     *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
+     *  <p>Whitespace-separated list of <span>OAuth scopes</span> that can be used when <span>obtaining an access token</span>.</p>
      * @return scope
      */
     @NotNull
@@ -80,7 +80,7 @@ public interface ApiClientDraft extends io.vrap.rmf.base.client.Draft<ApiClientD
     public void setName(final String name);
 
     /**
-     *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
+     *  <p>Whitespace-separated list of <span>OAuth scopes</span> that can be used when <span>obtaining an access token</span>.</p>
      * @param scope value to be set
      */
 
@@ -182,8 +182,8 @@ public interface ApiClientDraft extends io.vrap.rmf.base.client.Draft<ApiClientD
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ApiClientDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ApiClientDraft>() {
+    public static tools.jackson.core.type.TypeReference<ApiClientDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ApiClientDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<ApiClientDraft>";

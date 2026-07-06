@@ -1,6 +1,7 @@
 
 package com.commercetools.history.models.common;
 
+import java.time.ZonedDateTime;
 import java.util.Collections;
 
 import org.assertj.core.api.Assertions;
@@ -19,7 +20,8 @@ public class ParcelTest {
 
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { "id", Parcel.builder().id("id") },
-                new Object[] { "createdAt", Parcel.builder().createdAt("createdAt") },
+                new Object[] { "key", Parcel.builder().key("key") },
+                new Object[] { "createdAt", Parcel.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
                 new Object[] { "measurements",
                         Parcel.builder()
                                 .measurements(new com.commercetools.history.models.common.ParcelMeasurementsImpl()) },
@@ -28,7 +30,9 @@ public class ParcelTest {
                 new Object[] { "items",
                         Parcel.builder()
                                 .items(Collections.singletonList(
-                                    new com.commercetools.history.models.common.DeliveryItemImpl())) } };
+                                    new com.commercetools.history.models.common.DeliveryItemImpl())) },
+                new Object[] { "custom",
+                        Parcel.builder().custom(new com.commercetools.history.models.common.CustomFieldsImpl()) } };
     }
 
     @Test
@@ -39,10 +43,17 @@ public class ParcelTest {
     }
 
     @Test
+    public void key() {
+        Parcel value = Parcel.of();
+        value.setKey("key");
+        Assertions.assertThat(value.getKey()).isEqualTo("key");
+    }
+
+    @Test
     public void createdAt() {
         Parcel value = Parcel.of();
-        value.setCreatedAt("createdAt");
-        Assertions.assertThat(value.getCreatedAt()).isEqualTo("createdAt");
+        value.setCreatedAt(ZonedDateTime.parse("2023-06-01T12:00Z"));
+        Assertions.assertThat(value.getCreatedAt()).isEqualTo(ZonedDateTime.parse("2023-06-01T12:00Z"));
     }
 
     @Test
@@ -67,5 +78,13 @@ public class ParcelTest {
         value.setItems(Collections.singletonList(new com.commercetools.history.models.common.DeliveryItemImpl()));
         Assertions.assertThat(value.getItems())
                 .isEqualTo(Collections.singletonList(new com.commercetools.history.models.common.DeliveryItemImpl()));
+    }
+
+    @Test
+    public void custom() {
+        Parcel value = Parcel.of();
+        value.setCustom(new com.commercetools.history.models.common.CustomFieldsImpl());
+        Assertions.assertThat(value.getCustom())
+                .isEqualTo(new com.commercetools.history.models.common.CustomFieldsImpl());
     }
 }

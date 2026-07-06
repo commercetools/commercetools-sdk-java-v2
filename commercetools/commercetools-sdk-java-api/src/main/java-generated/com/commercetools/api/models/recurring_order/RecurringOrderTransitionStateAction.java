@@ -9,16 +9,16 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.state.StateResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>If the existing State has set <code>transitions</code>, there must be a direct transition to the new State. If <code>transitions</code> is not set, no validation is performed.</p>
- *  <p>This update action produces the Recurring Order State Transition Message.</p>
+ *  <p>If the existing <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a> has set <code>transitions</code>, there must be a direct transition to the new State. If <code>transitions</code> is not set, no validation is performed.</p>
+ *  <p>This update action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderStateTransitionMessage" rel="nofollow">Recurring Order State Transition</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -142,8 +142,8 @@ public interface RecurringOrderTransitionStateAction extends RecurringOrderUpdat
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<RecurringOrderTransitionStateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<RecurringOrderTransitionStateAction>() {
+    public static tools.jackson.core.type.TypeReference<RecurringOrderTransitionStateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<RecurringOrderTransitionStateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<RecurringOrderTransitionStateAction>";

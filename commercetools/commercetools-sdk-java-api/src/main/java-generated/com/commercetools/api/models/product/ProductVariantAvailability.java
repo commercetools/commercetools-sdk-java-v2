@@ -8,14 +8,15 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>The InventoryEntry information of the Product Variant. If there is a supply Channel for the InventoryEntry, then <code>channels</code> is returned. If not, then <code>isOnStock</code>, <code>restockableInDays</code>, and <code>availableQuantity</code> are returned.</p>
+ *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> information of the Product Variant. If there is a supply <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for the InventoryEntry, then <code>channels</code> is returned. If not, then <code>isOnStock</code>, <code>restockableInDays</code>, and <code>availableQuantity</code> are returned.</p>
+ *  <p>Only available for Projects with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Classic</code>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,7 +32,7 @@ import jakarta.validation.Valid;
 public interface ProductVariantAvailability {
 
     /**
-     *  <p>For each InventoryEntry with a supply Channel, an entry is added to <code>channels</code>.</p>
+     *  <p>For each <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> with a supply Channel, an entry is added to <code>channels</code>.</p>
      * @return channels
      */
     @Valid
@@ -39,7 +40,7 @@ public interface ProductVariantAvailability {
     public ProductVariantChannelAvailabilityMap getChannels();
 
     /**
-     *  <p>Indicates whether a Product Variant is in stock.</p>
+     *  <p><code>true</code> if the Product Variant is in stock, based on an <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> that has no assigned supply <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>. This value reflects global or default availability; it does not aggregate the channel-specific availabilities found in the <code>channels</code> field.</p>
      * @return isOnStock
      */
 
@@ -63,7 +64,7 @@ public interface ProductVariantAvailability {
     public Long getAvailableQuantity();
 
     /**
-     *  <p>Unique identifier of the InventoryEntry.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
      * @return id
      */
 
@@ -71,7 +72,7 @@ public interface ProductVariantAvailability {
     public String getId();
 
     /**
-     *  <p>Current version of the InventoryEntry.</p>
+     *  <p>Current version of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
      * @return version
      */
 
@@ -79,14 +80,14 @@ public interface ProductVariantAvailability {
     public Long getVersion();
 
     /**
-     *  <p>For each InventoryEntry with a supply Channel, an entry is added to <code>channels</code>.</p>
+     *  <p>For each <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> with a supply Channel, an entry is added to <code>channels</code>.</p>
      * @param channels value to be set
      */
 
     public void setChannels(final ProductVariantChannelAvailabilityMap channels);
 
     /**
-     *  <p>Indicates whether a Product Variant is in stock.</p>
+     *  <p><code>true</code> if the Product Variant is in stock, based on an <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> that has no assigned supply <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>. This value reflects global or default availability; it does not aggregate the channel-specific availabilities found in the <code>channels</code> field.</p>
      * @param isOnStock value to be set
      */
 
@@ -107,14 +108,14 @@ public interface ProductVariantAvailability {
     public void setAvailableQuantity(final Long availableQuantity);
 
     /**
-     *  <p>Unique identifier of the InventoryEntry.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     *  <p>Current version of the InventoryEntry.</p>
+     *  <p>Current version of the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
      * @param version value to be set
      */
 
@@ -198,8 +199,8 @@ public interface ProductVariantAvailability {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductVariantAvailability> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductVariantAvailability>() {
+    public static tools.jackson.core.type.TypeReference<ProductVariantAvailability> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductVariantAvailability>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductVariantAvailability>";

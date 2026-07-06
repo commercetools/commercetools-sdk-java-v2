@@ -90,4 +90,35 @@ public class ExtensionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, ExtensionQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<ExtensionQueryBuilderDsl> dependencies(
+            Function<com.commercetools.api.predicates.query.extension.ExtensionReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.extension.ExtensionReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("dependencies"))
+                    .inner(fn.apply(
+                        com.commercetools.api.predicates.query.extension.ExtensionReferenceQueryBuilderDsl.of())),
+            ExtensionQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<ExtensionQueryBuilderDsl> dependencies() {
+        return new CollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("dependencies")),
+            p -> new CombinationQueryPredicate<>(p, ExtensionQueryBuilderDsl::of));
+    }
+
+    public StringCollectionPredicateBuilder<ExtensionQueryBuilderDsl> expansionPaths() {
+        return new StringCollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("expansionPaths")),
+            p -> new CombinationQueryPredicate<>(p, ExtensionQueryBuilderDsl::of));
+    }
+
+    public CombinationQueryPredicate<ExtensionQueryBuilderDsl> additionalContext(
+            Function<com.commercetools.api.predicates.query.extension.ExtensionAdditionalContextQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.extension.ExtensionAdditionalContextQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("additionalContext"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.extension.ExtensionAdditionalContextQueryBuilderDsl.of())),
+            ExtensionQueryBuilderDsl::of);
+    }
+
 }

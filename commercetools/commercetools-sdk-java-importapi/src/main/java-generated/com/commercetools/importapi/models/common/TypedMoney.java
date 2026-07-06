@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * TypedMoney
@@ -63,7 +63,7 @@ public interface TypedMoney {
     public Long getCentAmount();
 
     /**
-     *  <p>The currency code compliant to ISO 4217.</p>
+     *  <p>The currency code compliant to <span>ISO 4217</span>.</p>
      * @return currencyCode
      */
     @NotNull
@@ -89,7 +89,7 @@ public interface TypedMoney {
     public void setCentAmount(final Long centAmount);
 
     /**
-     *  <p>The currency code compliant to ISO 4217.</p>
+     *  <p>The currency code compliant to <span>ISO 4217</span>.</p>
      * @param currencyCode value to be set
      */
 
@@ -148,8 +148,8 @@ public interface TypedMoney {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<TypedMoney> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<TypedMoney>() {
+    public static tools.jackson.core.type.TypeReference<TypedMoney> typeReference() {
+        return new tools.jackson.core.type.TypeReference<TypedMoney>() {
             @Override
             public String toString() {
                 return "TypeReference<TypedMoney>";

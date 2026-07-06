@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.approval_rule.ApproverHierarchy;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Set Approvers update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetApproversAction" rel="nofollow">Set Approvers</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -48,7 +48,7 @@ public interface ApprovalRuleApproversSetMessage extends Message {
     String APPROVAL_RULE_APPROVERS_SET = "ApprovalRuleApproversSet";
 
     /**
-     *  <p>Approver hierarchy of the ApprovalRule after the Set Approvers update action.</p>
+     *  <p>Approver hierarchy of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetApproversAction" rel="nofollow">Set Approvers</a> update action.</p>
      * @return approvers
      */
     @NotNull
@@ -57,7 +57,7 @@ public interface ApprovalRuleApproversSetMessage extends Message {
     public ApproverHierarchy getApprovers();
 
     /**
-     *  <p>Approver hierarchy of the ApprovalRule before the Set Approvers update action.</p>
+     *  <p>Approver hierarchy of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetApproversAction" rel="nofollow">Set Approvers</a> update action.</p>
      * @return oldApprovers
      */
     @NotNull
@@ -66,14 +66,14 @@ public interface ApprovalRuleApproversSetMessage extends Message {
     public ApproverHierarchy getOldApprovers();
 
     /**
-     *  <p>Approver hierarchy of the ApprovalRule after the Set Approvers update action.</p>
+     *  <p>Approver hierarchy of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetApproversAction" rel="nofollow">Set Approvers</a> update action.</p>
      * @param approvers value to be set
      */
 
     public void setApprovers(final ApproverHierarchy approvers);
 
     /**
-     *  <p>Approver hierarchy of the ApprovalRule before the Set Approvers update action.</p>
+     *  <p>Approver hierarchy of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetApproversAction" rel="nofollow">Set Approvers</a> update action.</p>
      * @param oldApprovers value to be set
      */
 
@@ -172,8 +172,8 @@ public interface ApprovalRuleApproversSetMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ApprovalRuleApproversSetMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ApprovalRuleApproversSetMessage>() {
+    public static tools.jackson.core.type.TypeReference<ApprovalRuleApproversSetMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ApprovalRuleApproversSetMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<ApprovalRuleApproversSetMessage>";

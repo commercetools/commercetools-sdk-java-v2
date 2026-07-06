@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.payment_method.PaymentMethod;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Delete PaymentMethod request.</p>
+ *  <p>Generated after a successful <span>Delete PaymentMethod</span> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface PaymentMethodDeletedMessage extends Message {
     String PAYMENT_METHOD_DELETED = "PaymentMethodDeleted";
 
     /**
-     *  <p>The PaymentMethod that was deleted.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethod" rel="nofollow">PaymentMethod</a> that was deleted.</p>
      * @return paymentMethod
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface PaymentMethodDeletedMessage extends Message {
     public PaymentMethod getPaymentMethod();
 
     /**
-     *  <p>The PaymentMethod that was deleted.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethod" rel="nofollow">PaymentMethod</a> that was deleted.</p>
      * @param paymentMethod value to be set
      */
 
@@ -152,8 +152,8 @@ public interface PaymentMethodDeletedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<PaymentMethodDeletedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<PaymentMethodDeletedMessage>() {
+    public static tools.jackson.core.type.TypeReference<PaymentMethodDeletedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<PaymentMethodDeletedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<PaymentMethodDeletedMessage>";

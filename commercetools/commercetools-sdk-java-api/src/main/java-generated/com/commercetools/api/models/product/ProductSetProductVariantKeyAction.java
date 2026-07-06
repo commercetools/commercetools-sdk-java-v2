@@ -8,9 +8,10 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Either <code>variantId</code> or <code>sku</code> is required.</p>
@@ -51,7 +52,7 @@ public interface ProductSetProductVariantKeyAction extends ProductUpdateAction {
     public String getSku();
 
     /**
-     *  <p>Value to set. Must be unique. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Must be unique among ProductVariants in the same Product. If empty, any existing value will be removed.</p>
      * @return key
      */
 
@@ -81,7 +82,7 @@ public interface ProductSetProductVariantKeyAction extends ProductUpdateAction {
     public void setSku(final String sku);
 
     /**
-     *  <p>Value to set. Must be unique. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Must be unique among ProductVariants in the same Product. If empty, any existing value will be removed.</p>
      * @param key value to be set
      */
 
@@ -168,8 +169,8 @@ public interface ProductSetProductVariantKeyAction extends ProductUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSetProductVariantKeyAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSetProductVariantKeyAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductSetProductVariantKeyAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSetProductVariantKeyAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSetProductVariantKeyAction>";

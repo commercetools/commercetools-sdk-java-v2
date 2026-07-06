@@ -11,17 +11,17 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import tools.jackson.core.type.TypeReference;
+
 /**
- *  <p>Updates a Cart in a Store using one or more update actions.</p>
- *  <p>If the Cart exists in the Project but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</p>
+ *  <p>Updates a Cart in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> using one or more <span>update actions</span>.</p>
+ *  <p>If the Cart exists in the Project but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store, this method returns a <a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a> error.</p>
  *
  * <hr>
  * <div class=code-example>

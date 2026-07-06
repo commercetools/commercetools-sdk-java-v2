@@ -31,7 +31,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     private java.util.List<com.commercetools.history.models.common.Parcel> parcels;
 
     /**
-     *  <p>Line Items or Custom Line Items shipped in the Delivery.</p>
+     *  <p>Line Items or Custom Line Items shipped in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     *  <p>Line Items or Custom Line Items shipped in the Delivery.</p>
+     *  <p>Line Items or Custom Line Items shipped in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     *  <p>Line Items or Custom Line Items shipped in the Delivery.</p>
+     *  <p>Line Items or Custom Line Items shipped in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     *  <p>Line Items or Custom Line Items shipped in the Delivery.</p>
+     *  <p>Line Items or Custom Line Items shipped in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     *  <p>Line Items or Custom Line Items shipped in the Delivery.</p>
+     *  <p>Line Items or Custom Line Items shipped in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -96,7 +96,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     *  <p>Line Items or Custom Line Items shipped in the Delivery.</p>
+     *  <p>Line Items or Custom Line Items shipped in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -107,7 +107,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     *  <p>Line Items or Custom Line Items shipped in the Delivery.</p>
+     *  <p>Line Items or Custom Line Items shipped in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -153,7 +153,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     *  <p>Parcels included in the Delivery.</p>
+     *  <p>Parcels included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param parcels value to be set
      * @return Builder
      */
@@ -164,7 +164,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     *  <p>Parcels included in the Delivery.</p>
+     *  <p>Parcels included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param parcels value to be set
      * @return Builder
      */
@@ -176,7 +176,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     *  <p>Parcels included in the Delivery.</p>
+     *  <p>Parcels included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param parcels value to be set
      * @return Builder
      */
@@ -190,7 +190,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     *  <p>Parcels included in the Delivery.</p>
+     *  <p>Parcels included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -205,7 +205,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     *  <p>Parcels included in the Delivery.</p>
+     *  <p>Parcels included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -218,7 +218,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     *  <p>Parcels included in the Delivery.</p>
+     *  <p>Parcels included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -229,7 +229,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     *  <p>Parcels included in the Delivery.</p>
+     *  <p>Parcels included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -240,7 +240,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     *  <p>Line Items or Custom Line Items shipped in the Delivery.</p>
+     *  <p>Line Items or Custom Line Items shipped in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @return items
      */
 
@@ -258,7 +258,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     *  <p>Parcels included in the Delivery.</p>
+     *  <p>Parcels included in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @return parcels
      */
 

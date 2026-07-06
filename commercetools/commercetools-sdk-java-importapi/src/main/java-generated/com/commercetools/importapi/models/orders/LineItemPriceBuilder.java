@@ -107,7 +107,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
     }
 
     /**
-     *  <p>Maps to <code>Price.customerGroup</code>. References a customer group by key. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
+     *  <p>Maps to <code>Price.customerGroup</code>. References a customer group by key. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -121,7 +121,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
     }
 
     /**
-     *  <p>Maps to <code>Price.customerGroup</code>. References a customer group by key. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
+     *  <p>Maps to <code>Price.customerGroup</code>. References a customer group by key. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -134,7 +134,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
     }
 
     /**
-     *  <p>Maps to <code>Price.customerGroup</code>. References a customer group by key. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
+     *  <p>Maps to <code>Price.customerGroup</code>. References a customer group by key. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -146,7 +146,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
     }
 
     /**
-     *  <p>Maps to <code>Price.channel</code>. References a channel by key. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
+     *  <p>Maps to <code>Price.channel</code>. References a channel by key. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -158,7 +158,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
     }
 
     /**
-     *  <p>Maps to <code>Price.channel</code>. References a channel by key. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
+     *  <p>Maps to <code>Price.channel</code>. References a channel by key. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -170,7 +170,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
     }
 
     /**
-     *  <p>Maps to <code>Price.channel</code>. References a channel by key. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
+     *  <p>Maps to <code>Price.channel</code>. References a channel by key. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @param channel value to be set
      * @return Builder
      */
@@ -380,7 +380,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
     }
 
     /**
-     *  <p>Maps to <code>Price.customerGroup</code>. References a customer group by key. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
+     *  <p>Maps to <code>Price.customerGroup</code>. References a customer group by key. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @return customerGroup
      */
 
@@ -390,7 +390,7 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
     }
 
     /**
-     *  <p>Maps to <code>Price.channel</code>. References a channel by key. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
+     *  <p>Maps to <code>Price.channel</code>. References a channel by key. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @return channel
      */
 

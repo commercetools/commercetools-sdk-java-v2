@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Removing an address from the Customer produces the CustomerAddressRemoved Message.</p>
+ *  <p>Removing an address from the Customer produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerAddressRemovedMessage" rel="nofollow">CustomerAddressRemoved</a> Message.</p>
  *  <p>Either <code>addressId</code> or <code>addressKey</code> is required.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -56,7 +57,7 @@ public class CustomerRemoveAddressActionImpl implements CustomerRemoveAddressAct
     }
 
     /**
-     *  <p><code>id</code> of the Address to remove.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove.</p>
      */
 
     public String getAddressId() {
@@ -64,7 +65,7 @@ public class CustomerRemoveAddressActionImpl implements CustomerRemoveAddressAct
     }
 
     /**
-     *  <p><code>key</code> of the Address to remove.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Address" rel="nofollow">Address</a> to remove.</p>
      */
 
     public String getAddressKey() {

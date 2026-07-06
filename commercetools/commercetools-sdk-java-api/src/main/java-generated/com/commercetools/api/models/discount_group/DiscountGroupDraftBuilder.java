@@ -35,6 +35,9 @@ public class DiscountGroupDraftBuilder implements Builder<DiscountGroupDraft> {
 
     private String sortOrder;
 
+    @Nullable
+    private Boolean isActive;
+
     /**
      *  <p>Name of the DiscountGroup.</p>
      * @param builder function to build the name value
@@ -130,6 +133,17 @@ public class DiscountGroupDraftBuilder implements Builder<DiscountGroupDraft> {
     }
 
     /**
+     *  <p>A DiscountGroup must be active for its CartDiscounts to be considered during discount application.</p>
+     * @param isActive value to be set
+     * @return Builder
+     */
+
+    public DiscountGroupDraftBuilder isActive(@Nullable final Boolean isActive) {
+        this.isActive = isActive;
+        return this;
+    }
+
+    /**
      *  <p>Name of the DiscountGroup.</p>
      * @return name
      */
@@ -169,13 +183,23 @@ public class DiscountGroupDraftBuilder implements Builder<DiscountGroupDraft> {
     }
 
     /**
+     *  <p>A DiscountGroup must be active for its CartDiscounts to be considered during discount application.</p>
+     * @return isActive
+     */
+
+    @Nullable
+    public Boolean getIsActive() {
+        return this.isActive;
+    }
+
+    /**
      * builds DiscountGroupDraft with checking for non-null required values
      * @return DiscountGroupDraft
      */
     public DiscountGroupDraft build() {
         Objects.requireNonNull(key, DiscountGroupDraft.class + ": key is missing");
         Objects.requireNonNull(sortOrder, DiscountGroupDraft.class + ": sortOrder is missing");
-        return new DiscountGroupDraftImpl(name, key, description, sortOrder);
+        return new DiscountGroupDraftImpl(name, key, description, sortOrder, isActive);
     }
 
     /**
@@ -183,7 +207,7 @@ public class DiscountGroupDraftBuilder implements Builder<DiscountGroupDraft> {
      * @return DiscountGroupDraft
      */
     public DiscountGroupDraft buildUnchecked() {
-        return new DiscountGroupDraftImpl(name, key, description, sortOrder);
+        return new DiscountGroupDraftImpl(name, key, description, sortOrder, isActive);
     }
 
     /**
@@ -205,6 +229,7 @@ public class DiscountGroupDraftBuilder implements Builder<DiscountGroupDraft> {
         builder.key = template.getKey();
         builder.description = template.getDescription();
         builder.sortOrder = template.getSortOrder();
+        builder.isActive = template.getIsActive();
         return builder;
     }
 

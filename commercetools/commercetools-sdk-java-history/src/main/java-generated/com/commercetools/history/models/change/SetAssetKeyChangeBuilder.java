@@ -18,6 +18,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .previousValue("{previousValue}")
  *             .nextValue("{nextValue}")
  *             .asset(assetBuilder -> assetBuilder)
+ *             .catalogData("{catalogData}")
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
@@ -32,6 +34,10 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
     private String nextValue;
 
     private com.commercetools.history.models.change_value.AssetChangeValue asset;
+
+    private String catalogData;
+
+    private String variant;
 
     /**
      * set the value to the change
@@ -102,6 +108,33 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
     }
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     * @return Builder
+     */
+
+    public SetAssetKeyChangeBuilder catalogData(final String catalogData) {
+        this.catalogData = catalogData;
+        return this;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @param variant value to be set
+     * @return Builder
+     */
+
+    public SetAssetKeyChangeBuilder variant(final String variant) {
+        this.variant = variant;
+        return this;
+    }
+
+    /**
      * value of change}
      * @return change
      */
@@ -138,6 +171,29 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
     }
 
     /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
+     *  <p>Identifier of the updated Product Variant.</p>
+     *  <p>This field holds the SKU, if defined; otherwise the key; otherwise the ID.</p>
+     * @return variant
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
+    /**
      * builds SetAssetKeyChange with checking for non-null required values
      * @return SetAssetKeyChange
      */
@@ -146,7 +202,9 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
         Objects.requireNonNull(previousValue, SetAssetKeyChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetAssetKeyChange.class + ": nextValue is missing");
         Objects.requireNonNull(asset, SetAssetKeyChange.class + ": asset is missing");
-        return new SetAssetKeyChangeImpl(change, previousValue, nextValue, asset);
+        Objects.requireNonNull(catalogData, SetAssetKeyChange.class + ": catalogData is missing");
+        Objects.requireNonNull(variant, SetAssetKeyChange.class + ": variant is missing");
+        return new SetAssetKeyChangeImpl(change, previousValue, nextValue, asset, catalogData, variant);
     }
 
     /**
@@ -154,7 +212,7 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
      * @return SetAssetKeyChange
      */
     public SetAssetKeyChange buildUnchecked() {
-        return new SetAssetKeyChangeImpl(change, previousValue, nextValue, asset);
+        return new SetAssetKeyChangeImpl(change, previousValue, nextValue, asset, catalogData, variant);
     }
 
     /**
@@ -176,6 +234,8 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
         builder.asset = template.getAsset();
+        builder.catalogData = template.getCatalogData();
+        builder.variant = template.getVariant();
         return builder;
     }
 

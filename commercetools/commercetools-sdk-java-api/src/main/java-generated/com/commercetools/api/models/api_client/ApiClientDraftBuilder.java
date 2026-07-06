@@ -49,7 +49,7 @@ public class ApiClientDraftBuilder implements Builder<ApiClientDraft> {
     }
 
     /**
-     *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
+     *  <p>Whitespace-separated list of <span>OAuth scopes</span> that can be used when <span>obtaining an access token</span>.</p>
      * @param scope value to be set
      * @return Builder
      */
@@ -102,7 +102,7 @@ public class ApiClientDraftBuilder implements Builder<ApiClientDraft> {
     }
 
     /**
-     *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
+     *  <p>Whitespace-separated list of <span>OAuth scopes</span> that can be used when <span>obtaining an access token</span>.</p>
      * @return scope
      */
 

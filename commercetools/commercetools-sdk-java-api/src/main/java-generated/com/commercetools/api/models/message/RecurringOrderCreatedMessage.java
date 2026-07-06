@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.recurring_order.RecurringOrder;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Create RecurringOrder request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/recurring-orders:POST" rel="nofollow">Create RecurringOrder</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,7 +31,7 @@ import jakarta.validation.constraints.NotNull;
  *             .sequenceNumber(0.3)
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
- *             .order(orderBuilder -> orderBuilder)
+ *             .recurringOrder(recurringOrderBuilder -> recurringOrderBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -47,20 +47,20 @@ public interface RecurringOrderCreatedMessage extends Message {
     String RECURRING_ORDER_CREATED = "RecurringOrderCreated";
 
     /**
-     *  <p>RecurringOrder that was created.</p>
-     * @return order
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> that was created.</p>
+     * @return recurringOrder
      */
     @NotNull
     @Valid
-    @JsonProperty("order")
-    public RecurringOrder getOrder();
+    @JsonProperty("recurringOrder")
+    public RecurringOrder getRecurringOrder();
 
     /**
-     *  <p>RecurringOrder that was created.</p>
-     * @param order value to be set
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a> that was created.</p>
+     * @param recurringOrder value to be set
      */
 
-    public void setOrder(final RecurringOrder order);
+    public void setRecurringOrder(final RecurringOrder recurringOrder);
 
     /**
      * factory method
@@ -87,7 +87,7 @@ public interface RecurringOrderCreatedMessage extends Message {
         instance.setResource(template.getResource());
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-        instance.setOrder(template.getOrder());
+        instance.setRecurringOrder(template.getRecurringOrder());
         return instance;
     }
 
@@ -116,7 +116,8 @@ public interface RecurringOrderCreatedMessage extends Message {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
                 .deepCopy(template.getResourceUserProvidedIdentifiers()));
-        instance.setOrder(com.commercetools.api.models.recurring_order.RecurringOrder.deepCopy(template.getOrder()));
+        instance.setRecurringOrder(
+            com.commercetools.api.models.recurring_order.RecurringOrder.deepCopy(template.getRecurringOrder()));
         return instance;
     }
 
@@ -151,8 +152,8 @@ public interface RecurringOrderCreatedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<RecurringOrderCreatedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<RecurringOrderCreatedMessage>() {
+    public static tools.jackson.core.type.TypeReference<RecurringOrderCreatedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<RecurringOrderCreatedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<RecurringOrderCreatedMessage>";

@@ -9,18 +9,19 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.BaseAddress;
+import com.commercetools.api.models.customer.CustomerGroupAssignmentDraft;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generic draft type to model those fields all Business Units have in common. The additional fields required for creating a Company or Division are represented on CompanyDraft and DivisionDraft.</p>
+ *  <p>Generic draft type to model those fields all Business Units have in common. The additional fields required for creating a <a href="https://docs.commercetools.com/apis/ctp:api:type:Company" rel="nofollow">Company</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Division" rel="nofollow">Division</a> are represented on <a href="https://docs.commercetools.com/apis/ctp:api:type:CompanyDraft" rel="nofollow">CompanyDraft</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:DivisionDraft" rel="nofollow">DivisionDraft</a>.</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern
@@ -36,7 +37,8 @@ import jakarta.validation.constraints.NotNull;
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "unitType", defaultImpl = BusinessUnitDraftImpl.class, visible = true)
 @JsonDeserialize(as = BusinessUnitDraftImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey {
+public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey,
+        com.commercetools.api.models.CustomizableDraft<BusinessUnitDraft> {
 
     /**
      *  <p>User-defined unique and immutable identifier for the Business Unit.</p>
@@ -47,7 +49,7 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
     public String getKey();
 
     /**
-     *  <p>Indicates whether the Business Unit can be edited and used in Orders.</p>
+     *  <p>Indicates whether the Business Unit can be edited and used in <span>Orders</span>.</p>
      * @return status
      */
 
@@ -55,9 +57,9 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
     public BusinessUnitStatus getStatus();
 
     /**
-     *  <p>Sets the Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. Defaults to empty for Companies and not set for Divisions.</p>
-     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Recurring Orders, Quotes, Quote Requests, or Shopping Lists must belong to one of the Business Unit's Stores.</p>
-     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Recurring Orders, Quotes, Quote Requests, or Shopping Lists must not belong to any Store.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. Defaults to empty for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Companies</a> and not set for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Divisions</a>.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must not belong to any Store.</p>
      * @return stores
      */
     @Valid
@@ -65,7 +67,7 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
     public List<StoreResourceIdentifier> getStores();
 
     /**
-     *  <p>Defines whether the Stores of the Business Unit are set directly on the Business Unit or are inherited from a parent. <code>storeMode</code> is always <code>Explicit</code> for Companies and defaults to <code>FromParent</code> for Divisions.</p>
+     *  <p>Defines whether the Stores of the Business Unit are set directly on the Business Unit or are inherited from a parent. <code>storeMode</code> is always <code>Explicit</code> for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Companies</a> and defaults to <code>FromParent</code> for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Divisions</a>.</p>
      * @return storeMode
      */
 
@@ -97,7 +99,7 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
     public String getContactEmail();
 
     /**
-     *  <p>Determines whether the Business Unit can inherit Associates from a parent. Always <code>Explicit</code> for Companies and defaults to <code>ExplicitAndFromParent</code> for Divisions.</p>
+     *  <p>Determines whether the Business Unit can inherit Associates from a parent. Always <code>Explicit</code> for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Companies</a> and defaults to <code>ExplicitAndFromParent</code> for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Divisions</a>.</p>
      * @return associateMode
      */
 
@@ -105,7 +107,7 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
     public BusinessUnitAssociateMode getAssociateMode();
 
     /**
-     *  <p>List of members that are part of the Business Unit in specific roles.</p>
+     *  <p>List of members that are part of the Business Unit in specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">roles</a>.</p>
      * @return associates
      */
     @Valid
@@ -113,7 +115,7 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
     public List<AssociateDraft> getAssociates();
 
     /**
-     *  <p>Determines whether the Business Unit can inherit Approval Rules from a parent. For Companies, the value of this field is always <code>Explicit</code>. For Divisions, the default value is <code>ExplicitAndFromParent</code>.</p>
+     *  <p>Determines whether the Business Unit can inherit Approval Rules from a parent. For <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Companies</a>, the value of this field is always <code>Explicit</code>. For <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Divisions</a>, the default value is <code>ExplicitAndFromParent</code>.</p>
      * @return approvalRuleMode
      */
 
@@ -129,7 +131,7 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
     public List<BaseAddress> getAddresses();
 
     /**
-     *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p>
      * @return shippingAddresses
      */
 
@@ -145,7 +147,7 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
     public Integer getDefaultShippingAddress();
 
     /**
-     *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p>
      * @return billingAddresses
      */
 
@@ -169,6 +171,15 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
     public CustomFieldsDraft getCustom();
 
     /**
+     *  <p>Customer Groups to assign the Business Unit to.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @return customerGroupAssignments
+     */
+    @Valid
+    @JsonProperty("customerGroupAssignments")
+    public List<CustomerGroupAssignmentDraft> getCustomerGroupAssignments();
+
+    /**
      *  <p>User-defined unique and immutable identifier for the Business Unit.</p>
      * @param key value to be set
      */
@@ -176,16 +187,16 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
     public void setKey(final String key);
 
     /**
-     *  <p>Indicates whether the Business Unit can be edited and used in Orders.</p>
+     *  <p>Indicates whether the Business Unit can be edited and used in <span>Orders</span>.</p>
      * @param status value to be set
      */
 
     public void setStatus(final BusinessUnitStatus status);
 
     /**
-     *  <p>Sets the Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. Defaults to empty for Companies and not set for Divisions.</p>
-     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Recurring Orders, Quotes, Quote Requests, or Shopping Lists must belong to one of the Business Unit's Stores.</p>
-     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Recurring Orders, Quotes, Quote Requests, or Shopping Lists must not belong to any Store.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. Defaults to empty for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Companies</a> and not set for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Divisions</a>.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must not belong to any Store.</p>
      * @param stores values to be set
      */
 
@@ -193,16 +204,16 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
     public void setStores(final StoreResourceIdentifier... stores);
 
     /**
-     *  <p>Sets the Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. Defaults to empty for Companies and not set for Divisions.</p>
-     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Recurring Orders, Quotes, Quote Requests, or Shopping Lists must belong to one of the Business Unit's Stores.</p>
-     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Recurring Orders, Quotes, Quote Requests, or Shopping Lists must not belong to any Store.</p>
+     *  <p>Sets the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. Defaults to empty for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Companies</a> and not set for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Divisions</a>.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Carts</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Orders</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quotes</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Requests</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">Shopping Lists</a> must not belong to any Store.</p>
      * @param stores values to be set
      */
 
     public void setStores(final List<StoreResourceIdentifier> stores);
 
     /**
-     *  <p>Defines whether the Stores of the Business Unit are set directly on the Business Unit or are inherited from a parent. <code>storeMode</code> is always <code>Explicit</code> for Companies and defaults to <code>FromParent</code> for Divisions.</p>
+     *  <p>Defines whether the Stores of the Business Unit are set directly on the Business Unit or are inherited from a parent. <code>storeMode</code> is always <code>Explicit</code> for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Companies</a> and defaults to <code>FromParent</code> for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Divisions</a>.</p>
      * @param storeMode value to be set
      */
 
@@ -223,14 +234,14 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
     public void setContactEmail(final String contactEmail);
 
     /**
-     *  <p>Determines whether the Business Unit can inherit Associates from a parent. Always <code>Explicit</code> for Companies and defaults to <code>ExplicitAndFromParent</code> for Divisions.</p>
+     *  <p>Determines whether the Business Unit can inherit Associates from a parent. Always <code>Explicit</code> for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Companies</a> and defaults to <code>ExplicitAndFromParent</code> for <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Divisions</a>.</p>
      * @param associateMode value to be set
      */
 
     public void setAssociateMode(final BusinessUnitAssociateMode associateMode);
 
     /**
-     *  <p>List of members that are part of the Business Unit in specific roles.</p>
+     *  <p>List of members that are part of the Business Unit in specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">roles</a>.</p>
      * @param associates values to be set
      */
 
@@ -238,14 +249,14 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
     public void setAssociates(final AssociateDraft... associates);
 
     /**
-     *  <p>List of members that are part of the Business Unit in specific roles.</p>
+     *  <p>List of members that are part of the Business Unit in specific <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">roles</a>.</p>
      * @param associates values to be set
      */
 
     public void setAssociates(final List<AssociateDraft> associates);
 
     /**
-     *  <p>Determines whether the Business Unit can inherit Approval Rules from a parent. For Companies, the value of this field is always <code>Explicit</code>. For Divisions, the default value is <code>ExplicitAndFromParent</code>.</p>
+     *  <p>Determines whether the Business Unit can inherit Approval Rules from a parent. For <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Companies</a>, the value of this field is always <code>Explicit</code>. For <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnitType" rel="nofollow">Divisions</a>, the default value is <code>ExplicitAndFromParent</code>.</p>
      * @param approvalRuleMode value to be set
      */
 
@@ -267,7 +278,7 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
     public void setAddresses(final List<BaseAddress> addresses);
 
     /**
-     *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p>
      * @param shippingAddresses values to be set
      */
 
@@ -275,7 +286,7 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
     public void setShippingAddresses(final Integer... shippingAddresses);
 
     /**
-     *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     *  <p>Indexes of entries in <code>addresses</code> to set as shipping addresses. The <code>shippingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p>
      * @param shippingAddresses values to be set
      */
 
@@ -289,7 +300,7 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
     public void setDefaultShippingAddress(final Integer defaultShippingAddress);
 
     /**
-     *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p>
      * @param billingAddresses values to be set
      */
 
@@ -297,7 +308,7 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
     public void setBillingAddresses(final Integer... billingAddresses);
 
     /**
-     *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the Customer will be replaced by these addresses.</p>
+     *  <p>Indexes of entries in <code>addresses</code> to set as billing addresses. The <code>billingAddressIds</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> will be replaced by these addresses.</p>
      * @param billingAddresses values to be set
      */
 
@@ -316,6 +327,23 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
      */
 
     public void setCustom(final CustomFieldsDraft custom);
+
+    /**
+     *  <p>Customer Groups to assign the Business Unit to.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @param customerGroupAssignments values to be set
+     */
+
+    @JsonIgnore
+    public void setCustomerGroupAssignments(final CustomerGroupAssignmentDraft... customerGroupAssignments);
+
+    /**
+     *  <p>Customer Groups to assign the Business Unit to.</p>
+     *  <p>They are considered during <span>line Item price selection</span>, if provided (non-null).</p>
+     * @param customerGroupAssignments values to be set
+     */
+
+    public void setCustomerGroupAssignments(final List<CustomerGroupAssignmentDraft> customerGroupAssignments);
 
     public BusinessUnitDraft copyDeep();
 
@@ -363,6 +391,11 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
             Optional.ofNullable(template.getBillingAddresses()).map(ArrayList::new).orElse(null));
         instance.setDefaultBillingAddress(template.getDefaultBillingAddress());
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setCustomerGroupAssignments(Optional.ofNullable(template.getCustomerGroupAssignments())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.customer.CustomerGroupAssignmentDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 
@@ -396,8 +429,8 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitDraft> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitDraft>() {
+    public static tools.jackson.core.type.TypeReference<BusinessUnitDraft> typeReference() {
+        return new tools.jackson.core.type.TypeReference<BusinessUnitDraft>() {
             @Override
             public String toString() {
                 return "TypeReference<BusinessUnitDraft>";

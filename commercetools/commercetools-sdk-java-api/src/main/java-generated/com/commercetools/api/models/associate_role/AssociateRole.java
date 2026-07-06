@@ -13,12 +13,12 @@ import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * AssociateRole
@@ -100,7 +100,7 @@ public interface AssociateRole extends BaseResource, com.commercetools.api.model
     public String getKey();
 
     /**
-     *  <p>Whether the AssociateRole can be assigned to an Associate by a buyer. If false, the AssociateRole can only be assigned using the general endpoint.</p>
+     *  <p>Whether the AssociateRole can be assigned to an Associate by a <span>buyer</span>. If false, the AssociateRole can only be assigned using the <span>general endpoint</span>.</p>
      * @return buyerAssignable
      */
     @NotNull
@@ -124,7 +124,7 @@ public interface AssociateRole extends BaseResource, com.commercetools.api.model
     public List<Permission> getPermissions();
 
     /**
-     *  <p>Custom Fields for the AssociateRole.</p>
+     *  <p>Custom Fields of the AssociateRole.</p>
      * @return custom
      */
     @Valid
@@ -181,7 +181,7 @@ public interface AssociateRole extends BaseResource, com.commercetools.api.model
     public void setKey(final String key);
 
     /**
-     *  <p>Whether the AssociateRole can be assigned to an Associate by a buyer. If false, the AssociateRole can only be assigned using the general endpoint.</p>
+     *  <p>Whether the AssociateRole can be assigned to an Associate by a <span>buyer</span>. If false, the AssociateRole can only be assigned using the <span>general endpoint</span>.</p>
      * @param buyerAssignable value to be set
      */
 
@@ -210,7 +210,7 @@ public interface AssociateRole extends BaseResource, com.commercetools.api.model
     public void setPermissions(final List<Permission> permissions);
 
     /**
-     *  <p>Custom Fields for the AssociateRole.</p>
+     *  <p>Custom Fields of the AssociateRole.</p>
      * @param custom value to be set
      */
 
@@ -304,8 +304,8 @@ public interface AssociateRole extends BaseResource, com.commercetools.api.model
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AssociateRole> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AssociateRole>() {
+    public static tools.jackson.core.type.TypeReference<AssociateRole> typeReference() {
+        return new tools.jackson.core.type.TypeReference<AssociateRole>() {
             @Override
             public String toString() {
                 return "TypeReference<AssociateRole>";

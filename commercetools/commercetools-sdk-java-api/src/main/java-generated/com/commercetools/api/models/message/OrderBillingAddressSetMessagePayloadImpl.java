@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,8 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Generated after a successful Set Billing Address update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetBillingAddressAction" rel="nofollow">Set Billing Address</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderBillingAddressSetMessagePayloadImpl implements OrderBillingAddressSetMessagePayload, ModelBase {
@@ -56,7 +57,7 @@ public class OrderBillingAddressSetMessagePayloadImpl implements OrderBillingAdd
     }
 
     /**
-     *  <p>Billing address on the Order after the Set Billing Address update action.</p>
+     *  <p>Billing address on the Order after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetBillingAddressAction" rel="nofollow">Set Billing Address</a> update action.</p>
      */
 
     public com.commercetools.api.models.common.Address getAddress() {
@@ -64,7 +65,7 @@ public class OrderBillingAddressSetMessagePayloadImpl implements OrderBillingAdd
     }
 
     /**
-     *  <p>Billing address on the Order before the Set Billing Address update action.</p>
+     *  <p>Billing address on the Order before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetBillingAddressAction" rel="nofollow">Set Billing Address</a> update action.</p>
      */
 
     public com.commercetools.api.models.common.Address getOldAddress() {

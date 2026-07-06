@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,6 +14,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
+import tools.jackson.databind.annotation.*;
 
 /**
  * MyBusinessUnitAssociateDraft
@@ -47,7 +48,7 @@ public class MyBusinessUnitAssociateDraftImpl implements MyBusinessUnitAssociate
     }
 
     /**
-     *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      */
 
     public Long getVersion() {
@@ -55,7 +56,7 @@ public class MyBusinessUnitAssociateDraftImpl implements MyBusinessUnitAssociate
     }
 
     /**
-     *  <p>Customer to create and assign to the Business Unit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> to create and assign to the Business Unit.</p>
      */
 
     public com.commercetools.api.models.me.MyCustomerDraft getCustomer() {
@@ -63,7 +64,7 @@ public class MyBusinessUnitAssociateDraftImpl implements MyBusinessUnitAssociate
     }
 
     /**
-     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain AssociateRoles with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
+     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRoles</a> with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft> getAssociateRoleAssignments() {

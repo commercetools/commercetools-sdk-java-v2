@@ -25,7 +25,7 @@ public class OrderCreatedMessagePayloadBuilder implements Builder<OrderCreatedMe
     private com.commercetools.api.models.order.Order order;
 
     /**
-     *  <p>Order that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that was created.</p>
      * @param builder function to build the order value
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class OrderCreatedMessagePayloadBuilder implements Builder<OrderCreatedMe
     }
 
     /**
-     *  <p>Order that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that was created.</p>
      * @param builder function to build the order value
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class OrderCreatedMessagePayloadBuilder implements Builder<OrderCreatedMe
     }
 
     /**
-     *  <p>Order that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that was created.</p>
      * @param order value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class OrderCreatedMessagePayloadBuilder implements Builder<OrderCreatedMe
     }
 
     /**
-     *  <p>Order that was created.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> that was created.</p>
      * @return order
      */
 

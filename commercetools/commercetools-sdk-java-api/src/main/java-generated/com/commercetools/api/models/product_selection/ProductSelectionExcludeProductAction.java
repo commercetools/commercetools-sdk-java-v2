@@ -9,16 +9,16 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.product.ProductResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Excludes a Product from a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
- *  <p>If the specified Product is already assigned to the Product Selection, but the existing Product Selection has a different Product Variant Exclusion, a ProductPresentWithDifferentVariantSelection error is returned.</p>
+ *  <p>Excludes a Product from a Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</p>
+ *  <p>If the specified Product is already assigned to the Product Selection, but the existing Product Selection has a different Product Variant Exclusion, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductPresentWithDifferentVariantSelectionError" rel="nofollow">ProductPresentWithDifferentVariantSelection</a> error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -144,8 +144,8 @@ public interface ProductSelectionExcludeProductAction extends ProductSelectionUp
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionExcludeProductAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionExcludeProductAction>() {
+    public static tools.jackson.core.type.TypeReference<ProductSelectionExcludeProductAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSelectionExcludeProductAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSelectionExcludeProductAction>";

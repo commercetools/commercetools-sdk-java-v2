@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,12 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li>Set Store on Orders.</li>
- *   <li>Set Store on Shopping Lists.</li>
- *  </ul>
+ * SetStoreChange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetStoreChangeImpl implements SetStoreChange, ModelBase {
@@ -30,17 +27,17 @@ public class SetStoreChangeImpl implements SetStoreChange, ModelBase {
 
     private String change;
 
-    private com.commercetools.history.models.common.Reference previousValue;
+    private com.commercetools.history.models.common.KeyReference previousValue;
 
-    private com.commercetools.history.models.common.Reference nextValue;
+    private com.commercetools.history.models.common.KeyReference nextValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetStoreChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.Reference previousValue,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.Reference nextValue) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.KeyReference previousValue,
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.KeyReference nextValue) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
@@ -74,7 +71,7 @@ public class SetStoreChangeImpl implements SetStoreChange, ModelBase {
      *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.common.Reference getPreviousValue() {
+    public com.commercetools.history.models.common.KeyReference getPreviousValue() {
         return this.previousValue;
     }
 
@@ -82,7 +79,7 @@ public class SetStoreChangeImpl implements SetStoreChange, ModelBase {
      *  <p>Value after the change.</p>
      */
 
-    public com.commercetools.history.models.common.Reference getNextValue() {
+    public com.commercetools.history.models.common.KeyReference getNextValue() {
         return this.nextValue;
     }
 
@@ -90,11 +87,11 @@ public class SetStoreChangeImpl implements SetStoreChange, ModelBase {
         this.change = change;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.Reference previousValue) {
+    public void setPreviousValue(final com.commercetools.history.models.common.KeyReference previousValue) {
         this.previousValue = previousValue;
     }
 
-    public void setNextValue(final com.commercetools.history.models.common.Reference nextValue) {
+    public void setNextValue(final com.commercetools.history.models.common.KeyReference nextValue) {
         this.nextValue = nextValue;
     }
 

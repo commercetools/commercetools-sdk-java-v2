@@ -10,12 +10,12 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.search.SearchFieldType;
 import com.commercetools.api.models.search.SearchQuery;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProductSearchFacetStatsValue
@@ -36,7 +36,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ProductSearchFacetStatsValue {
 
     /**
-     *  <p>Name of the stats facet to appear in the ProductSearchFacetResultStats.</p>
+     *  <p>Name of the stats facet to appear in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchFacetResultStats" rel="nofollow">ProductSearchFacetResultStats</a>.</p>
      * @return name
      */
     @NotNull
@@ -60,7 +60,7 @@ public interface ProductSearchFacetStatsValue {
     public SearchQuery getFilter();
 
     /**
-     *  <p>The searchable Product field to facet on.</p>
+     *  <p>The <span>searchable Product field</span> to facet on.</p>
      * @return field
      */
     @NotNull
@@ -76,7 +76,7 @@ public interface ProductSearchFacetStatsValue {
     public SearchFieldType getFieldType();
 
     /**
-     *  <p>Name of the stats facet to appear in the ProductSearchFacetResultStats.</p>
+     *  <p>Name of the stats facet to appear in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchFacetResultStats" rel="nofollow">ProductSearchFacetResultStats</a>.</p>
      * @param name value to be set
      */
 
@@ -97,7 +97,7 @@ public interface ProductSearchFacetStatsValue {
     public void setFilter(final SearchQuery filter);
 
     /**
-     *  <p>The searchable Product field to facet on.</p>
+     *  <p>The <span>searchable Product field</span> to facet on.</p>
      * @param field value to be set
      */
 
@@ -185,8 +185,8 @@ public interface ProductSearchFacetStatsValue {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProductSearchFacetStatsValue> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProductSearchFacetStatsValue>() {
+    public static tools.jackson.core.type.TypeReference<ProductSearchFacetStatsValue> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProductSearchFacetStatsValue>() {
             @Override
             public String toString() {
                 return "TypeReference<ProductSearchFacetStatsValue>";

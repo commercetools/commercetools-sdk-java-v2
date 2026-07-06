@@ -190,7 +190,7 @@ public class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDis
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -202,7 +202,7 @@ public class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDis
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -264,7 +264,7 @@ public class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDis
     }
 
     /**
-     *  <p>DiscountCode that changed due to the recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> that changed due to the recalculation.</p>
      * @param builder function to build the discountCode value
      * @return Builder
      */
@@ -277,7 +277,7 @@ public class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDis
     }
 
     /**
-     *  <p>DiscountCode that changed due to the recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> that changed due to the recalculation.</p>
      * @param builder function to build the discountCode value
      * @return Builder
      */
@@ -289,7 +289,7 @@ public class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDis
     }
 
     /**
-     *  <p>DiscountCode that changed due to the recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> that changed due to the recalculation.</p>
      * @param discountCode value to be set
      * @return Builder
      */
@@ -301,7 +301,7 @@ public class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDis
     }
 
     /**
-     *  <p>DiscountCodeState after the recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeState" rel="nofollow">DiscountCodeState</a> after the recalculation.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -313,7 +313,7 @@ public class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDis
     }
 
     /**
-     *  <p>DiscountCodeState before the recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeState" rel="nofollow">DiscountCodeState</a> before the recalculation.</p>
      * @param oldState value to be set
      * @return Builder
      */
@@ -390,7 +390,7 @@ public class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDis
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -418,7 +418,7 @@ public class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDis
     }
 
     /**
-     *  <p>DiscountCode that changed due to the recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> that changed due to the recalculation.</p>
      * @return discountCode
      */
 
@@ -427,7 +427,7 @@ public class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDis
     }
 
     /**
-     *  <p>DiscountCodeState after the recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeState" rel="nofollow">DiscountCodeState</a> after the recalculation.</p>
      * @return state
      */
 
@@ -436,7 +436,7 @@ public class OrderDiscountCodeStateSetMessageBuilder implements Builder<OrderDis
     }
 
     /**
-     *  <p>DiscountCodeState before the recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeState" rel="nofollow">DiscountCodeState</a> before the recalculation.</p>
      * @return oldState
      */
 

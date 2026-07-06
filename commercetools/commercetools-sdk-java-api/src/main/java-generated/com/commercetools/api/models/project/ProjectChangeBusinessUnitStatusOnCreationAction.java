@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * ProjectChangeBusinessUnitStatusOnCreationAction
@@ -38,7 +38,7 @@ public interface ProjectChangeBusinessUnitStatusOnCreationAction extends Project
     String CHANGE_MY_BUSINESS_UNIT_STATUS_ON_CREATION = "changeMyBusinessUnitStatusOnCreation";
 
     /**
-     *  <p>Status for Business Units created using the My Business Unit endpoint.</p>
+     *  <p>Status for Business Units created using the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/business-units:POST" rel="nofollow">My Business Unit endpoint</a>.</p>
      * @return status
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface ProjectChangeBusinessUnitStatusOnCreationAction extends Project
     public BusinessUnitConfigurationStatus getStatus();
 
     /**
-     *  <p>Status for Business Units created using the My Business Unit endpoint.</p>
+     *  <p>Status for Business Units created using the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/me/business-units:POST" rel="nofollow">My Business Unit endpoint</a>.</p>
      * @param status value to be set
      */
 
@@ -123,8 +123,8 @@ public interface ProjectChangeBusinessUnitStatusOnCreationAction extends Project
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeBusinessUnitStatusOnCreationAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeBusinessUnitStatusOnCreationAction>() {
+    public static tools.jackson.core.type.TypeReference<ProjectChangeBusinessUnitStatusOnCreationAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ProjectChangeBusinessUnitStatusOnCreationAction>() {
             @Override
             public String toString() {
                 return "TypeReference<ProjectChangeBusinessUnitStatusOnCreationAction>";

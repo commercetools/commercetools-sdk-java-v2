@@ -63,6 +63,21 @@ public class InventoryEntryDraftQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, InventoryEntryDraftQueryBuilderDsl::of));
     }
 
+    public LongComparisonPredicateBuilder<InventoryEntryDraftQueryBuilderDsl> reservationExpirationInMinutes() {
+        return new LongComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("reservationExpirationInMinutes")),
+            p -> new CombinationQueryPredicate<>(p, InventoryEntryDraftQueryBuilderDsl::of));
+    }
+
+    public CombinationQueryPredicate<InventoryEntryDraftQueryBuilderDsl> stockLevels(
+            Function<com.commercetools.api.predicates.query.inventory.InventoryEntryStockLevelsQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.inventory.InventoryEntryStockLevelsQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("stockLevels"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.inventory.InventoryEntryStockLevelsQueryBuilderDsl.of())),
+            InventoryEntryDraftQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<InventoryEntryDraftQueryBuilderDsl> custom(
             Function<com.commercetools.api.predicates.query.type.CustomFieldsDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.type.CustomFieldsDraftQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

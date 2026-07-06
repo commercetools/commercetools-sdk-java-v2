@@ -9,16 +9,16 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>If a referenced Store does not exist, a ReferencedResourceNotFound error is returned.</p>
- *  <p>This action generates a CartDiscountStoreRemoved Message.</p>
+ *  <p>If a referenced Store does not exist, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ReferencedResourceNotFoundError" rel="nofollow">ReferencedResourceNotFound</a> error is returned.</p>
+ *  <p>This action generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountStoreRemovedMessage" rel="nofollow">CartDiscountStoreRemoved</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface CartDiscountRemoveStoreAction extends CartDiscountUpdateAction 
     String REMOVE_STORE = "removeStore";
 
     /**
-     *  <p>Store to remove.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to remove.</p>
      * @return store
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface CartDiscountRemoveStoreAction extends CartDiscountUpdateAction 
     public StoreResourceIdentifier getStore();
 
     /**
-     *  <p>Store to remove.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to remove.</p>
      * @param store value to be set
      */
 
@@ -123,8 +123,8 @@ public interface CartDiscountRemoveStoreAction extends CartDiscountUpdateAction 
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountRemoveStoreAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountRemoveStoreAction>() {
+    public static tools.jackson.core.type.TypeReference<CartDiscountRemoveStoreAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartDiscountRemoveStoreAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartDiscountRemoveStoreAction>";

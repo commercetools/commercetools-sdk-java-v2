@@ -57,7 +57,7 @@ public class ProductSearchFacetDistinctValueBuilder implements Builder<ProductSe
     private String missing;
 
     /**
-     *  <p>Name of the distinct facet to appear in the ProductSearchFacetResultBucket.</p>
+     *  <p>Name of the distinct facet to appear in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchFacetResultBucket" rel="nofollow">ProductSearchFacetResultBucket</a>.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -128,7 +128,7 @@ public class ProductSearchFacetDistinctValueBuilder implements Builder<ProductSe
     }
 
     /**
-     *  <p>The searchable Product field to facet on.</p>
+     *  <p>The <span>searchable Product field</span> to facet on.</p>
      * @param field value to be set
      * @return Builder
      */
@@ -226,7 +226,7 @@ public class ProductSearchFacetDistinctValueBuilder implements Builder<ProductSe
     }
 
     /**
-     *  <p>String value specifying linguistic and regional preferences using the IETF language tag format, as described in BCP 47. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
+     *  <p>String value specifying linguistic and regional preferences using the <span>IETF language tag format</span>, as described in <span>BCP 47</span>. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
      * @param language value to be set
      * @return Builder
      */
@@ -260,7 +260,7 @@ public class ProductSearchFacetDistinctValueBuilder implements Builder<ProductSe
     }
 
     /**
-     *  <p>Name of the distinct facet to appear in the ProductSearchFacetResultBucket.</p>
+     *  <p>Name of the distinct facet to appear in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSearchFacetResultBucket" rel="nofollow">ProductSearchFacetResultBucket</a>.</p>
      * @return name
      */
 
@@ -299,7 +299,7 @@ public class ProductSearchFacetDistinctValueBuilder implements Builder<ProductSe
     }
 
     /**
-     *  <p>The searchable Product field to facet on.</p>
+     *  <p>The <span>searchable Product field</span> to facet on.</p>
      * @return field
      */
 
@@ -338,7 +338,7 @@ public class ProductSearchFacetDistinctValueBuilder implements Builder<ProductSe
     }
 
     /**
-     *  <p>String value specifying linguistic and regional preferences using the IETF language tag format, as described in BCP 47. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
+     *  <p>String value specifying linguistic and regional preferences using the <span>IETF language tag format</span>, as described in <span>BCP 47</span>. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
      * @return language
      */
 

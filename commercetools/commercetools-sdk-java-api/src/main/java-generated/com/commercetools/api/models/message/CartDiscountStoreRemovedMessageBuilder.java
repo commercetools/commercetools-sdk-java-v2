@@ -184,7 +184,7 @@ public class CartDiscountStoreRemovedMessageBuilder implements Builder<CartDisco
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -196,7 +196,7 @@ public class CartDiscountStoreRemovedMessageBuilder implements Builder<CartDisco
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -258,7 +258,7 @@ public class CartDiscountStoreRemovedMessageBuilder implements Builder<CartDisco
     }
 
     /**
-     *  <p>The Store that was removed from the Cart Discount.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discount</a>.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -270,7 +270,7 @@ public class CartDiscountStoreRemovedMessageBuilder implements Builder<CartDisco
     }
 
     /**
-     *  <p>The Store that was removed from the Cart Discount.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discount</a>.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -282,7 +282,7 @@ public class CartDiscountStoreRemovedMessageBuilder implements Builder<CartDisco
     }
 
     /**
-     *  <p>The Store that was removed from the Cart Discount.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discount</a>.</p>
      * @param store value to be set
      * @return Builder
      */
@@ -359,7 +359,7 @@ public class CartDiscountStoreRemovedMessageBuilder implements Builder<CartDisco
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -387,7 +387,7 @@ public class CartDiscountStoreRemovedMessageBuilder implements Builder<CartDisco
     }
 
     /**
-     *  <p>The Store that was removed from the Cart Discount.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was removed from the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discount</a>.</p>
      * @return store
      */
 

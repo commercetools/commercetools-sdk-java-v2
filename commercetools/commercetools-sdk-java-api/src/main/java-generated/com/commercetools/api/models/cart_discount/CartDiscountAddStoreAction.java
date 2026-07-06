@@ -9,16 +9,16 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>If a referenced Store does not exist, a ReferencedResourceNotFound error is returned.</p>
- *  <p>This action generates a CartDiscountStoreAdded Message.</p>
+ *  <p>If a referenced Store does not exist, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ReferencedResourceNotFoundError" rel="nofollow">ReferencedResourceNotFound</a> error is returned.</p>
+ *  <p>This action generates a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountStoreAddedMessage" rel="nofollow">CartDiscountStoreAdded</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,11 +41,11 @@ public interface CartDiscountAddStoreAction extends CartDiscountUpdateAction {
     String ADD_STORE = "addStore";
 
     /**
-     *  <p>Store to add.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to add.</p>
      *  <p>A failed update can return the following errors:</p>
      *  <ul>
-     *   <li>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</li>
-     *   <li>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</li>
+     *   <li>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</li>
+     *   <li>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</li>
      *  </ul>
      * @return store
      */
@@ -55,11 +55,11 @@ public interface CartDiscountAddStoreAction extends CartDiscountUpdateAction {
     public StoreResourceIdentifier getStore();
 
     /**
-     *  <p>Store to add.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to add.</p>
      *  <p>A failed update can return the following errors:</p>
      *  <ul>
-     *   <li>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</li>
-     *   <li>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</li>
+     *   <li>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</li>
+     *   <li>If the referenced Stores exceed the <span>limit</span> for Cart Discounts that do not require a Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreCartDiscountsLimitReachedError" rel="nofollow">StoreCartDiscountsLimitReached</a> error is returned.</li>
      *  </ul>
      * @param store value to be set
      */
@@ -133,8 +133,8 @@ public interface CartDiscountAddStoreAction extends CartDiscountUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountAddStoreAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountAddStoreAction>() {
+    public static tools.jackson.core.type.TypeReference<CartDiscountAddStoreAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CartDiscountAddStoreAction>() {
             @Override
             public String toString() {
                 return "TypeReference<CartDiscountAddStoreAction>";

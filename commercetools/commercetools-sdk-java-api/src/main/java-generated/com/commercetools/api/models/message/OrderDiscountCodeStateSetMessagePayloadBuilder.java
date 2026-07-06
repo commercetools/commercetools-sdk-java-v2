@@ -34,7 +34,7 @@ public class OrderDiscountCodeStateSetMessagePayloadBuilder
     private com.commercetools.api.models.cart.DiscountCodeState oldState;
 
     /**
-     *  <p>DiscountCode that changed due to the recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> that changed due to the recalculation.</p>
      * @param builder function to build the discountCode value
      * @return Builder
      */
@@ -47,7 +47,7 @@ public class OrderDiscountCodeStateSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>DiscountCode that changed due to the recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> that changed due to the recalculation.</p>
      * @param builder function to build the discountCode value
      * @return Builder
      */
@@ -59,7 +59,7 @@ public class OrderDiscountCodeStateSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>DiscountCode that changed due to the recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> that changed due to the recalculation.</p>
      * @param discountCode value to be set
      * @return Builder
      */
@@ -71,7 +71,7 @@ public class OrderDiscountCodeStateSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>DiscountCodeState after the recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeState" rel="nofollow">DiscountCodeState</a> after the recalculation.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class OrderDiscountCodeStateSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>DiscountCodeState before the recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeState" rel="nofollow">DiscountCodeState</a> before the recalculation.</p>
      * @param oldState value to be set
      * @return Builder
      */
@@ -95,7 +95,7 @@ public class OrderDiscountCodeStateSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>DiscountCode that changed due to the recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> that changed due to the recalculation.</p>
      * @return discountCode
      */
 
@@ -104,7 +104,7 @@ public class OrderDiscountCodeStateSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>DiscountCodeState after the recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeState" rel="nofollow">DiscountCodeState</a> after the recalculation.</p>
      * @return state
      */
 
@@ -113,7 +113,7 @@ public class OrderDiscountCodeStateSetMessagePayloadBuilder
     }
 
     /**
-     *  <p>DiscountCodeState before the recalculation.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeState" rel="nofollow">DiscountCodeState</a> before the recalculation.</p>
      * @return oldState
      */
 

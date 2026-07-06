@@ -10,15 +10,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.zone.ZoneReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Defines shipping rates in different currencies for a specific Zone.</p>
+ *  <p>Defines shipping rates in different currencies for a specific <a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,7 +36,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ZoneRate {
 
     /**
-     *  <p>Zone for which the shipping rates are valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> for which the shipping rates are valid.</p>
      * @return zone
      */
     @NotNull
@@ -54,7 +54,7 @@ public interface ZoneRate {
     public List<ShippingRate> getShippingRates();
 
     /**
-     *  <p>Zone for which the shipping rates are valid.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a> for which the shipping rates are valid.</p>
      * @param zone value to be set
      */
 
@@ -148,8 +148,8 @@ public interface ZoneRate {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<ZoneRate> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<ZoneRate>() {
+    public static tools.jackson.core.type.TypeReference<ZoneRate> typeReference() {
+        return new tools.jackson.core.type.TypeReference<ZoneRate>() {
             @Override
             public String toString() {
                 return "TypeReference<ZoneRate>";

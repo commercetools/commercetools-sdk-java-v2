@@ -31,7 +31,7 @@ public class MyBusinessUnitAssociateDraftBuilder implements Builder<MyBusinessUn
     private java.util.List<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft> associateRoleAssignments;
 
     /**
-     *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      * @param version value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class MyBusinessUnitAssociateDraftBuilder implements Builder<MyBusinessUn
     }
 
     /**
-     *  <p>Customer to create and assign to the Business Unit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> to create and assign to the Business Unit.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class MyBusinessUnitAssociateDraftBuilder implements Builder<MyBusinessUn
     }
 
     /**
-     *  <p>Customer to create and assign to the Business Unit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> to create and assign to the Business Unit.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class MyBusinessUnitAssociateDraftBuilder implements Builder<MyBusinessUn
     }
 
     /**
-     *  <p>Customer to create and assign to the Business Unit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> to create and assign to the Business Unit.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class MyBusinessUnitAssociateDraftBuilder implements Builder<MyBusinessUn
     }
 
     /**
-     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain AssociateRoles with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
+     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRoles</a> with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
      * @param associateRoleAssignments value to be set
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class MyBusinessUnitAssociateDraftBuilder implements Builder<MyBusinessUn
     }
 
     /**
-     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain AssociateRoles with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
+     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRoles</a> with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
      * @param associateRoleAssignments value to be set
      * @return Builder
      */
@@ -102,7 +102,7 @@ public class MyBusinessUnitAssociateDraftBuilder implements Builder<MyBusinessUn
     }
 
     /**
-     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain AssociateRoles with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
+     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRoles</a> with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
      * @param associateRoleAssignments value to be set
      * @return Builder
      */
@@ -117,7 +117,7 @@ public class MyBusinessUnitAssociateDraftBuilder implements Builder<MyBusinessUn
     }
 
     /**
-     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain AssociateRoles with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
+     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRoles</a> with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
      * @param builder function to build the associateRoleAssignments value
      * @return Builder
      */
@@ -133,7 +133,7 @@ public class MyBusinessUnitAssociateDraftBuilder implements Builder<MyBusinessUn
     }
 
     /**
-     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain AssociateRoles with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
+     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRoles</a> with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
      * @param builder function to build the associateRoleAssignments value
      * @return Builder
      */
@@ -147,7 +147,7 @@ public class MyBusinessUnitAssociateDraftBuilder implements Builder<MyBusinessUn
     }
 
     /**
-     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain AssociateRoles with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
+     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRoles</a> with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
      * @param builder function to build the associateRoleAssignments value
      * @return Builder
      */
@@ -159,7 +159,7 @@ public class MyBusinessUnitAssociateDraftBuilder implements Builder<MyBusinessUn
     }
 
     /**
-     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain AssociateRoles with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
+     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRoles</a> with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
      * @param builder function to build the associateRoleAssignments value
      * @return Builder
      */
@@ -171,7 +171,7 @@ public class MyBusinessUnitAssociateDraftBuilder implements Builder<MyBusinessUn
     }
 
     /**
-     *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
+     *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
      * @return version
      */
 
@@ -180,7 +180,7 @@ public class MyBusinessUnitAssociateDraftBuilder implements Builder<MyBusinessUn
     }
 
     /**
-     *  <p>Customer to create and assign to the Business Unit.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> to create and assign to the Business Unit.</p>
      * @return customer
      */
 
@@ -189,7 +189,7 @@ public class MyBusinessUnitAssociateDraftBuilder implements Builder<MyBusinessUn
     }
 
     /**
-     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain AssociateRoles with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
+     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateRole" rel="nofollow">AssociateRoles</a> with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
      * @return associateRoleAssignments
      */
 

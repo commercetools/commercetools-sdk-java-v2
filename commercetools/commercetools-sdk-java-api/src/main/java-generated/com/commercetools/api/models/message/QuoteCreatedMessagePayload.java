@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.quote.Quote;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Create Quote request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/quotes:POST" rel="nofollow">Create Quote</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface QuoteCreatedMessagePayload extends MessagePayload {
     String QUOTE_CREATED = "QuoteCreated";
 
     /**
-     *  <p>Quote that was created.</p>
+     *  <p><span>Quote</span> that was created.</p>
      * @return quote
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface QuoteCreatedMessagePayload extends MessagePayload {
     public Quote getQuote();
 
     /**
-     *  <p>Quote that was created.</p>
+     *  <p><span>Quote</span> that was created.</p>
      * @param quote value to be set
      */
 
@@ -122,8 +122,8 @@ public interface QuoteCreatedMessagePayload extends MessagePayload {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<QuoteCreatedMessagePayload> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<QuoteCreatedMessagePayload>() {
+    public static tools.jackson.core.type.TypeReference<QuoteCreatedMessagePayload> typeReference() {
+        return new tools.jackson.core.type.TypeReference<QuoteCreatedMessagePayload>() {
             @Override
             public String toString() {
                 return "TypeReference<QuoteCreatedMessagePayload>";

@@ -196,7 +196,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -207,7 +207,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -269,7 +269,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>Unique identifier of the Parcel.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @param parcelId value to be set
      * @return Builder
      */
@@ -280,7 +280,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>Unique identifier of the Delivery.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @param deliveryId value to be set
      * @return Builder
      */
@@ -291,7 +291,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>Delivery Items after the Set Parcel Items update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DeliveryItem" rel="nofollow">Delivery Items</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetParcelItemsAction" rel="nofollow">Set Parcel Items</a> update action.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -302,7 +302,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>Delivery Items after the Set Parcel Items update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DeliveryItem" rel="nofollow">Delivery Items</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetParcelItemsAction" rel="nofollow">Set Parcel Items</a> update action.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -314,7 +314,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>Delivery Items after the Set Parcel Items update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DeliveryItem" rel="nofollow">Delivery Items</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetParcelItemsAction" rel="nofollow">Set Parcel Items</a> update action.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -328,7 +328,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>Delivery Items after the Set Parcel Items update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DeliveryItem" rel="nofollow">Delivery Items</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetParcelItemsAction" rel="nofollow">Set Parcel Items</a> update action.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -343,7 +343,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>Delivery Items after the Set Parcel Items update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DeliveryItem" rel="nofollow">Delivery Items</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetParcelItemsAction" rel="nofollow">Set Parcel Items</a> update action.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -356,7 +356,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>Delivery Items after the Set Parcel Items update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DeliveryItem" rel="nofollow">Delivery Items</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetParcelItemsAction" rel="nofollow">Set Parcel Items</a> update action.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -367,7 +367,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>Delivery Items after the Set Parcel Items update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DeliveryItem" rel="nofollow">Delivery Items</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetParcelItemsAction" rel="nofollow">Set Parcel Items</a> update action.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -378,7 +378,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>Delivery Items before the Set Parcel Items update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DeliveryItem" rel="nofollow">Delivery Items</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetParcelItemsAction" rel="nofollow">Set Parcel Items</a> update action.</p>
      * @param oldItems value to be set
      * @return Builder
      */
@@ -390,7 +390,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>Delivery Items before the Set Parcel Items update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DeliveryItem" rel="nofollow">Delivery Items</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetParcelItemsAction" rel="nofollow">Set Parcel Items</a> update action.</p>
      * @param oldItems value to be set
      * @return Builder
      */
@@ -402,7 +402,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>Delivery Items before the Set Parcel Items update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DeliveryItem" rel="nofollow">Delivery Items</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetParcelItemsAction" rel="nofollow">Set Parcel Items</a> update action.</p>
      * @param oldItems value to be set
      * @return Builder
      */
@@ -417,7 +417,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>Delivery Items before the Set Parcel Items update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DeliveryItem" rel="nofollow">Delivery Items</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetParcelItemsAction" rel="nofollow">Set Parcel Items</a> update action.</p>
      * @param builder function to build the oldItems value
      * @return Builder
      */
@@ -432,7 +432,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>Delivery Items before the Set Parcel Items update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DeliveryItem" rel="nofollow">Delivery Items</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetParcelItemsAction" rel="nofollow">Set Parcel Items</a> update action.</p>
      * @param builder function to build the oldItems value
      * @return Builder
      */
@@ -445,7 +445,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>Delivery Items before the Set Parcel Items update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DeliveryItem" rel="nofollow">Delivery Items</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetParcelItemsAction" rel="nofollow">Set Parcel Items</a> update action.</p>
      * @param builder function to build the oldItems value
      * @return Builder
      */
@@ -456,7 +456,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>Delivery Items before the Set Parcel Items update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DeliveryItem" rel="nofollow">Delivery Items</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetParcelItemsAction" rel="nofollow">Set Parcel Items</a> update action.</p>
      * @param builder function to build the oldItems value
      * @return Builder
      */
@@ -467,7 +467,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingKey value to be set
      * @return Builder
      */
@@ -543,7 +543,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -571,7 +571,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>Unique identifier of the Parcel.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a>.</p>
      * @return parcelId
      */
 
@@ -580,7 +580,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>Unique identifier of the Delivery.</p>
+     *  <p>Unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</p>
      * @return deliveryId
      */
 
@@ -589,7 +589,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>Delivery Items after the Set Parcel Items update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DeliveryItem" rel="nofollow">Delivery Items</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetParcelItemsAction" rel="nofollow">Set Parcel Items</a> update action.</p>
      * @return items
      */
 
@@ -598,7 +598,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>Delivery Items before the Set Parcel Items update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DeliveryItem" rel="nofollow">Delivery Items</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderSetParcelItemsAction" rel="nofollow">Set Parcel Items</a> update action.</p>
      * @return oldItems
      */
 
@@ -607,7 +607,7 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shippingKey
      */
 

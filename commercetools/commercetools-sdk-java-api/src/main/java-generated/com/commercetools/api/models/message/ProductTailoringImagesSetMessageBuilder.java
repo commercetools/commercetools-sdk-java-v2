@@ -199,7 +199,7 @@ public class ProductTailoringImagesSetMessageBuilder implements Builder<ProductT
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -211,7 +211,7 @@ public class ProductTailoringImagesSetMessageBuilder implements Builder<ProductT
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -367,7 +367,7 @@ public class ProductTailoringImagesSetMessageBuilder implements Builder<ProductT
     }
 
     /**
-     *  <p>Images on the tailored Product Variant before the Set Images update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> on the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">Product Variant</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
      * @param oldImages value to be set
      * @return Builder
      */
@@ -379,7 +379,7 @@ public class ProductTailoringImagesSetMessageBuilder implements Builder<ProductT
     }
 
     /**
-     *  <p>Images on the tailored Product Variant before the Set Images update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> on the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">Product Variant</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
      * @param oldImages value to be set
      * @return Builder
      */
@@ -391,7 +391,7 @@ public class ProductTailoringImagesSetMessageBuilder implements Builder<ProductT
     }
 
     /**
-     *  <p>Images on the tailored Product Variant before the Set Images update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> on the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">Product Variant</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
      * @param oldImages value to be set
      * @return Builder
      */
@@ -406,7 +406,7 @@ public class ProductTailoringImagesSetMessageBuilder implements Builder<ProductT
     }
 
     /**
-     *  <p>Images on the tailored Product Variant before the Set Images update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> on the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">Product Variant</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
      * @param builder function to build the oldImages value
      * @return Builder
      */
@@ -421,7 +421,7 @@ public class ProductTailoringImagesSetMessageBuilder implements Builder<ProductT
     }
 
     /**
-     *  <p>Images on the tailored Product Variant before the Set Images update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> on the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">Product Variant</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
      * @param builder function to build the oldImages value
      * @return Builder
      */
@@ -434,7 +434,7 @@ public class ProductTailoringImagesSetMessageBuilder implements Builder<ProductT
     }
 
     /**
-     *  <p>Images on the tailored Product Variant before the Set Images update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> on the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">Product Variant</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
      * @param builder function to build the oldImages value
      * @return Builder
      */
@@ -445,7 +445,7 @@ public class ProductTailoringImagesSetMessageBuilder implements Builder<ProductT
     }
 
     /**
-     *  <p>Images on the tailored Product Variant before the Set Images update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> on the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">Product Variant</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
      * @param builder function to build the oldImages value
      * @return Builder
      */
@@ -456,7 +456,7 @@ public class ProductTailoringImagesSetMessageBuilder implements Builder<ProductT
     }
 
     /**
-     *  <p>Images on the tailored Product Variant after the Set Images update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> on the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">Product Variant</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
      * @param images value to be set
      * @return Builder
      */
@@ -468,7 +468,7 @@ public class ProductTailoringImagesSetMessageBuilder implements Builder<ProductT
     }
 
     /**
-     *  <p>Images on the tailored Product Variant after the Set Images update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> on the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">Product Variant</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
      * @param images value to be set
      * @return Builder
      */
@@ -480,7 +480,7 @@ public class ProductTailoringImagesSetMessageBuilder implements Builder<ProductT
     }
 
     /**
-     *  <p>Images on the tailored Product Variant after the Set Images update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> on the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">Product Variant</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
      * @param images value to be set
      * @return Builder
      */
@@ -495,7 +495,7 @@ public class ProductTailoringImagesSetMessageBuilder implements Builder<ProductT
     }
 
     /**
-     *  <p>Images on the tailored Product Variant after the Set Images update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> on the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">Product Variant</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
      * @param builder function to build the images value
      * @return Builder
      */
@@ -510,7 +510,7 @@ public class ProductTailoringImagesSetMessageBuilder implements Builder<ProductT
     }
 
     /**
-     *  <p>Images on the tailored Product Variant after the Set Images update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> on the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">Product Variant</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
      * @param builder function to build the images value
      * @return Builder
      */
@@ -523,7 +523,7 @@ public class ProductTailoringImagesSetMessageBuilder implements Builder<ProductT
     }
 
     /**
-     *  <p>Images on the tailored Product Variant after the Set Images update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> on the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">Product Variant</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
      * @param builder function to build the images value
      * @return Builder
      */
@@ -534,7 +534,7 @@ public class ProductTailoringImagesSetMessageBuilder implements Builder<ProductT
     }
 
     /**
-     *  <p>Images on the tailored Product Variant after the Set Images update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> on the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">Product Variant</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
      * @param builder function to build the images value
      * @return Builder
      */
@@ -610,7 +610,7 @@ public class ProductTailoringImagesSetMessageBuilder implements Builder<ProductT
     }
 
     /**
-     *  <p>Reference to the resource on which the change or action was performed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to the resource on which the change or action was performed.</p>
      * @return resource
      */
 
@@ -675,7 +675,7 @@ public class ProductTailoringImagesSetMessageBuilder implements Builder<ProductT
     }
 
     /**
-     *  <p>Images on the tailored Product Variant before the Set Images update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> on the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">Product Variant</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
      * @return oldImages
      */
 
@@ -685,7 +685,7 @@ public class ProductTailoringImagesSetMessageBuilder implements Builder<ProductT
     }
 
     /**
-     *  <p>Images on the tailored Product Variant after the Set Images update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Images</a> on the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoring" rel="nofollow">Product Variant</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetExternalImagesAction" rel="nofollow">Set Images</a> update action.</p>
      * @return images
      */
 

@@ -8,11 +8,11 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
  * DiscountGroupUpdateAction
@@ -68,6 +68,14 @@ public interface DiscountGroupUpdateAction {
     }
 
     /**
+     * builder for setIsActive subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.discount_group.DiscountGroupSetIsActiveActionBuilder setIsActiveBuilder() {
+        return com.commercetools.api.models.discount_group.DiscountGroupSetIsActiveActionBuilder.of();
+    }
+
+    /**
      * builder for setKey subtype
      * @return builder
      */
@@ -105,8 +113,8 @@ public interface DiscountGroupUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DiscountGroupUpdateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DiscountGroupUpdateAction>() {
+    public static tools.jackson.core.type.TypeReference<DiscountGroupUpdateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<DiscountGroupUpdateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<DiscountGroupUpdateAction>";

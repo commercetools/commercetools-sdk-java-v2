@@ -8,15 +8,15 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>To set a <code>ReturnShipmentState</code>, the Order <code>returnInfo</code> must have at least one ReturnItem.</p>
- *  <p>Produces the Order Return Shipment State Changed Message.</p>
+ *  <p>To set a <code>ReturnShipmentState</code>, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> <code>returnInfo</code> must have at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a>.</p>
+ *  <p>Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderReturnShipmentStateChangedMessage" rel="nofollow">Order Return Shipment State Changed</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ public interface OrderSetReturnShipmentStateAction extends OrderUpdateAction {
     String SET_RETURN_SHIPMENT_STATE = "setReturnShipmentState";
 
     /**
-     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @return returnItemId
      */
 
@@ -47,7 +47,7 @@ public interface OrderSetReturnShipmentStateAction extends OrderUpdateAction {
     public String getReturnItemId();
 
     /**
-     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @return returnItemKey
      */
 
@@ -55,7 +55,8 @@ public interface OrderSetReturnShipmentStateAction extends OrderUpdateAction {
     public String getReturnItemKey();
 
     /**
-     *  <p>New shipment state of the ReturnItem.</p>
+     *  <p>New shipment state of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a>.</p>
+     *  <p>This update action can only transition Return Items from the <code>Returned</code> state to <code>BackInStock</code> or <code>Unusable</code>. The initial <code>Advised</code> and <code>Returned</code> states can only be set at creation time on <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItemDraft" rel="nofollow">ReturnItemDraft</a>.</p>
      * @return shipmentState
      */
     @NotNull
@@ -63,21 +64,22 @@ public interface OrderSetReturnShipmentStateAction extends OrderUpdateAction {
     public ReturnShipmentState getShipmentState();
 
     /**
-     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @param returnItemId value to be set
      */
 
     public void setReturnItemId(final String returnItemId);
 
     /**
-     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a> to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @param returnItemKey value to be set
      */
 
     public void setReturnItemKey(final String returnItemKey);
 
     /**
-     *  <p>New shipment state of the ReturnItem.</p>
+     *  <p>New shipment state of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItem" rel="nofollow">ReturnItem</a>.</p>
+     *  <p>This update action can only transition Return Items from the <code>Returned</code> state to <code>BackInStock</code> or <code>Unusable</code>. The initial <code>Advised</code> and <code>Returned</code> states can only be set at creation time on <a href="https://docs.commercetools.com/apis/ctp:api:type:ReturnItemDraft" rel="nofollow">ReturnItemDraft</a>.</p>
      * @param shipmentState value to be set
      */
 
@@ -155,8 +157,8 @@ public interface OrderSetReturnShipmentStateAction extends OrderUpdateAction {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderSetReturnShipmentStateAction> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderSetReturnShipmentStateAction>() {
+    public static tools.jackson.core.type.TypeReference<OrderSetReturnShipmentStateAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderSetReturnShipmentStateAction>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderSetReturnShipmentStateAction>";

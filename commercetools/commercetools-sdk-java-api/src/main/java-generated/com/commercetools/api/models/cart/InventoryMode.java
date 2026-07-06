@@ -17,17 +17,20 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface InventoryMode extends JsonEnum {
 
     /**
-    <p>Adding and ordering items from a Cart are independent of the Inventory with no inventory checks or modifications.</p>
-    <p>This is the default mode.</p> */
+    <p>Adding and ordering items from a Cart are independent of the Inventory with no inventory checks or modifications. This is the default mode.</p> */
     InventoryMode NONE = InventoryModeEnum.NONE;
     /**
-    <p>Orders are tracked on the Inventory, and ordering a LineItem deducts the available quantity on the respective InventoryEntry.</p>
-    <p>An Order can be created even if the Line Item quantity is zero or negative, but if no matching Inventory Entry exists for the Line Item, an OutOfStock error is returned.</p> */
+    <p>Orders are tracked on the Inventory, and ordering a <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> deducts the available quantity on the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a>.</p>
+    <p>An <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders:POST" rel="nofollow">Order can be created</a> even if the Inventory Entry quantity is zero or negative. However, if no matching Inventory Entry exists for the Line Item, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OutOfStockError" rel="nofollow">OutOfStock</a> error is returned.</p> */
     InventoryMode TRACK_ONLY = InventoryModeEnum.TRACK_ONLY;
     /**
-    <p>Line Items in a Cart are only reserved for the duration of the ordering transaction. If a Line Item is not available when creating an Order, an OutOfStock error is returned. This is because the InventoryEntry <code>availableQuantity</code> is insufficient (but is still updated) for the ordered Line Item quantity.</p>
-    <p>However, an Order can be created if the InventoryEntry <code>restockableInDays</code> is set (including <code>0</code>).</p> */
+    <p>Line Items in a Cart are only reserved for the duration of the ordering transaction. If a Line Item is not available when <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/orders:POST" rel="nofollow">creating an Order</a>, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OutOfStockError" rel="nofollow">OutOfStock</a> error is returned. This is because the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> <code>availableQuantity</code> is insufficient (but is still updated) for the ordered Line Item quantity.</p>
+    <p>However, an Order can be created if the <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> <code>restockableInDays</code> is set (including <code>0</code>).</p> */
     InventoryMode RESERVE_ON_ORDER = InventoryModeEnum.RESERVE_ON_ORDER;
+    /**
+    <p>When Line Items are added to a Cart, they are automatically reserved. The reservation can be released by <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRemoveLineItemAction" rel="nofollow">removing</a> the Line Item from the Cart or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetLineItemInventoryModeAction" rel="nofollow">changing</a> their inventory mode to something other than <code>ReserveOnCart</code>. Reservations expire after the time specified in the Project's <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryConfiguration" rel="nofollow"><code>reservationExpirationInMinutes</code></a> setting.</p>
+    <p>To use this inventory mode, you must set the reservation expiration time on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> using the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectSetReservationExpirationInMinutesAction" rel="nofollow">Set Reservation Expiration In Minutes</a> update action.</p> */
+    InventoryMode RESERVE_ON_CART = InventoryModeEnum.RESERVE_ON_CART;
 
     /**
      * possible values of InventoryMode
@@ -46,7 +49,12 @@ public interface InventoryMode extends JsonEnum {
         /**
          * ReserveOnOrder
          */
-        RESERVE_ON_ORDER("ReserveOnOrder");
+        RESERVE_ON_ORDER("ReserveOnOrder"),
+
+        /**
+         * ReserveOnCart
+         */
+        RESERVE_ON_CART("ReserveOnCart");
         private final String jsonName;
 
         private InventoryModeEnum(final String jsonName) {

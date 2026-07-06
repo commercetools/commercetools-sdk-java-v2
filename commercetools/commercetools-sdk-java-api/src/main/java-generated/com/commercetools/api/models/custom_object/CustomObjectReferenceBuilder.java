@@ -30,7 +30,7 @@ public class CustomObjectReferenceBuilder implements Builder<CustomObjectReferen
     private com.commercetools.api.models.custom_object.CustomObject obj;
 
     /**
-     *  <p>Unique identifier of the referenced CustomObject.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomObject" rel="nofollow">CustomObject</a>.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class CustomObjectReferenceBuilder implements Builder<CustomObjectReferen
     }
 
     /**
-     *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>
+     *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with <span>Reference Expansion</span> for CustomObjects.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class CustomObjectReferenceBuilder implements Builder<CustomObjectReferen
     }
 
     /**
-     *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>
+     *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with <span>Reference Expansion</span> for CustomObjects.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class CustomObjectReferenceBuilder implements Builder<CustomObjectReferen
     }
 
     /**
-     *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>
+     *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with <span>Reference Expansion</span> for CustomObjects.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class CustomObjectReferenceBuilder implements Builder<CustomObjectReferen
     }
 
     /**
-     *  <p>Unique identifier of the referenced CustomObject.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomObject" rel="nofollow">CustomObject</a>.</p>
      * @return id
      */
 
@@ -86,7 +86,7 @@ public class CustomObjectReferenceBuilder implements Builder<CustomObjectReferen
     }
 
     /**
-     *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>
+     *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with <span>Reference Expansion</span> for CustomObjects.</p>
      * @return obj
      */
 

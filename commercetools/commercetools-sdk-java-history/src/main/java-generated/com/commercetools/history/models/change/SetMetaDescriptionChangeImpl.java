@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -16,12 +15,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import tools.jackson.databind.annotation.*;
+
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li>Set Meta Description on Categories.</li>
- *   <li>Set Meta Description on Products.</li>
- *  </ul>
+ * SetMetaDescriptionChange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetMetaDescriptionChangeImpl implements SetMetaDescriptionChange, ModelBase {
@@ -34,16 +31,20 @@ public class SetMetaDescriptionChangeImpl implements SetMetaDescriptionChange, M
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
+    private String catalogData;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetMetaDescriptionChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.LocalizedString previousValue,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.LocalizedString nextValue) {
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.LocalizedString nextValue,
+            @JsonProperty("catalogData") final String catalogData) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
+        this.catalogData = catalogData;
         this.type = SET_META_DESCRIPTION_CHANGE;
     }
 
@@ -86,6 +87,18 @@ public class SetMetaDescriptionChangeImpl implements SetMetaDescriptionChange, M
         return this.nextValue;
     }
 
+    /**
+     *  <p>Product data that was updated.</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *   <li><code>current</code>, if the current <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> was updated.</li>
+     *  </ul>
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
@@ -96,6 +109,10 @@ public class SetMetaDescriptionChangeImpl implements SetMetaDescriptionChange, M
 
     public void setNextValue(final com.commercetools.history.models.common.LocalizedString nextValue) {
         this.nextValue = nextValue;
+    }
+
+    public void setCatalogData(final String catalogData) {
+        this.catalogData = catalogData;
     }
 
     @Override
@@ -112,10 +129,12 @@ public class SetMetaDescriptionChangeImpl implements SetMetaDescriptionChange, M
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(catalogData, that.catalogData)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(catalogData, that.catalogData)
                 .isEquals();
     }
 
@@ -125,6 +144,7 @@ public class SetMetaDescriptionChangeImpl implements SetMetaDescriptionChange, M
                 .append(change)
                 .append(previousValue)
                 .append(nextValue)
+                .append(catalogData)
                 .toHashCode();
     }
 
@@ -134,6 +154,7 @@ public class SetMetaDescriptionChangeImpl implements SetMetaDescriptionChange, M
                 .append("change", change)
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
+                .append("catalogData", catalogData)
                 .build();
     }
 

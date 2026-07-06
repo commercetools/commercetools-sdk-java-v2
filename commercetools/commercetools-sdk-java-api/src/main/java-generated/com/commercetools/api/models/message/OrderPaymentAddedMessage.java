@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.payment.PaymentReference;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful Add Payment update action or when a Payment is added via Order Edits.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderAddPaymentAction" rel="nofollow">Add Payment</a> update action or when a <a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> is added via <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderAddPaymentAction" rel="nofollow">Order Edits</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,7 +31,7 @@ import jakarta.validation.constraints.NotNull;
  *             .sequenceNumber(0.3)
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
- *             .payment(paymentBuilder -> paymentBuilder)
+ *             .paymentRef(paymentRefBuilder -> paymentRefBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -47,20 +47,20 @@ public interface OrderPaymentAddedMessage extends Message {
     String ORDER_PAYMENT_ADDED = "OrderPaymentAdded";
 
     /**
-     *  <p>Payment that was added to the Order.</p>
-     * @return payment
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
+     * @return paymentRef
      */
     @NotNull
     @Valid
-    @JsonProperty("payment")
-    public PaymentReference getPayment();
+    @JsonProperty("paymentRef")
+    public PaymentReference getPaymentRef();
 
     /**
-     *  <p>Payment that was added to the Order.</p>
-     * @param payment value to be set
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Payment" rel="nofollow">Payment</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p>
+     * @param paymentRef value to be set
      */
 
-    public void setPayment(final PaymentReference payment);
+    public void setPaymentRef(final PaymentReference paymentRef);
 
     /**
      * factory method
@@ -87,7 +87,7 @@ public interface OrderPaymentAddedMessage extends Message {
         instance.setResource(template.getResource());
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-        instance.setPayment(template.getPayment());
+        instance.setPaymentRef(template.getPaymentRef());
         return instance;
     }
 
@@ -116,7 +116,8 @@ public interface OrderPaymentAddedMessage extends Message {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
                 .deepCopy(template.getResourceUserProvidedIdentifiers()));
-        instance.setPayment(com.commercetools.api.models.payment.PaymentReference.deepCopy(template.getPayment()));
+        instance.setPaymentRef(
+            com.commercetools.api.models.payment.PaymentReference.deepCopy(template.getPaymentRef()));
         return instance;
     }
 
@@ -151,8 +152,8 @@ public interface OrderPaymentAddedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<OrderPaymentAddedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<OrderPaymentAddedMessage>() {
+    public static tools.jackson.core.type.TypeReference<OrderPaymentAddedMessage> typeReference() {
+        return new tools.jackson.core.type.TypeReference<OrderPaymentAddedMessage>() {
             @Override
             public String toString() {
                 return "TypeReference<OrderPaymentAddedMessage>";

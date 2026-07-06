@@ -33,6 +33,20 @@ public final class LocalizedStringEntry {
         return of(locale, value);
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (o instanceof LocalizedStringEntry) {
+            var e = (LocalizedStringEntry) o;
+            return locale.equals(e.locale) && value.equals(e.value);
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return locale.hashCode() + value.hashCode();
+    }
+
     public Locale getLocale() {
         return locale;
     }

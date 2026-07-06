@@ -30,7 +30,7 @@ public class RecurringOrderStateChangedMessagePayloadBuilder
     private com.commercetools.api.models.recurring_order.RecurringOrderState oldState;
 
     /**
-     *  <p>RecurringOrderState after the Set RecurringOrderState update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderState" rel="nofollow">RecurringOrderState</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetStateAction" rel="nofollow">Set RecurringOrderState</a> update action.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class RecurringOrderStateChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>RecurringOrderState before the Set RecurringOrderState update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderState" rel="nofollow">RecurringOrderState</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetStateAction" rel="nofollow">Set RecurringOrderState</a> update action.</p>
      * @param oldState value to be set
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class RecurringOrderStateChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>RecurringOrderState after the Set RecurringOrderState update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderState" rel="nofollow">RecurringOrderState</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetStateAction" rel="nofollow">Set RecurringOrderState</a> update action.</p>
      * @return state
      */
 
@@ -63,7 +63,7 @@ public class RecurringOrderStateChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>RecurringOrderState before the Set RecurringOrderState update action.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderState" rel="nofollow">RecurringOrderState</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderSetStateAction" rel="nofollow">Set RecurringOrderState</a> update action.</p>
      * @return oldState
      */
 

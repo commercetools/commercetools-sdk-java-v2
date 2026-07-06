@@ -8,16 +8,17 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Reference to a Customer.</p>
+ *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Reference" rel="nofollow">Reference</a> to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +42,15 @@ public interface CustomerReference extends Reference, com.commercetools.api.mode
     String CUSTOMER = "customer";
 
     /**
-     *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with Reference Expansion for Customers.</p>
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
+
+    /**
+     *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with <a href="https://docs.commercetools.com/apis/ctp:api:type:Expansion" rel="nofollow">Reference Expansion</a> for Customers.</p>
      * @return obj
      */
     @Valid
@@ -49,7 +58,7 @@ public interface CustomerReference extends Reference, com.commercetools.api.mode
     public Customer getObj();
 
     /**
-     *  <p>Unique identifier of the referenced Customer.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>.</p>
      * @return id
      */
     @NotNull
@@ -57,14 +66,14 @@ public interface CustomerReference extends Reference, com.commercetools.api.mode
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with Reference Expansion for Customers.</p>
+     *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with <a href="https://docs.commercetools.com/apis/ctp:api:type:Expansion" rel="nofollow">Reference Expansion</a> for Customers.</p>
      * @param obj value to be set
      */
 
     public void setObj(final Customer obj);
 
     /**
-     *  <p>Unique identifier of the referenced Customer.</p>
+     *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>.</p>
      * @param id value to be set
      */
 
@@ -139,8 +148,8 @@ public interface CustomerReference extends Reference, com.commercetools.api.mode
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<CustomerReference> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<CustomerReference>() {
+    public static tools.jackson.core.type.TypeReference<CustomerReference> typeReference() {
+        return new tools.jackson.core.type.TypeReference<CustomerReference>() {
             @Override
             public String toString() {
                 return "TypeReference<CustomerReference>";

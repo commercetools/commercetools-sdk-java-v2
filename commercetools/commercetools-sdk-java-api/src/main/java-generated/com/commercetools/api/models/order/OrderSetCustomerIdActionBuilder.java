@@ -26,7 +26,7 @@ public class OrderSetCustomerIdActionBuilder implements Builder<OrderSetCustomer
     private String customerId;
 
     /**
-     *  <p><code>id</code> of an existing Customer. If empty, any existing value is removed.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>. If empty, any existing value is removed.</p>
      * @param customerId value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class OrderSetCustomerIdActionBuilder implements Builder<OrderSetCustomer
     }
 
     /**
-     *  <p><code>id</code> of an existing Customer. If empty, any existing value is removed.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>. If empty, any existing value is removed.</p>
      * @return customerId
      */
 

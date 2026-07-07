@@ -25,6 +25,10 @@
                     "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
                 },
                 {
+                    "moduleLicense": "Eclipse Public License - v 2.0",
+                    "moduleLicenseUrl": "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
+                },
+                {
                     "moduleLicense": "MIT License",
                     "moduleLicenseUrl": "https://opensource.org/licenses/MIT"
                 }
@@ -111,6 +115,9 @@
         {
             "moduleName": "com.github.jnr:jnr-a64asm",
             "moduleVersion": "1.0.0",
+            "moduleUrls": [
+                
+            ],
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -160,14 +167,21 @@
         {
             "moduleName": "com.github.jnr:jnr-posix",
             "moduleVersion": "3.0.61",
+            "moduleUrls": [
+                
+            ],
             "moduleLicenses": [
                 {
                     "moduleLicense": "Eclipse Public License - v 2.0",
                     "moduleLicenseUrl": "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
                 },
                 {
-                    "moduleLicense": "GNU General Public License Version 2",
-                    "moduleLicenseUrl": "http://www.gnu.org/copyleft/gpl.html"
+                    "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2",
+                    "moduleLicenseUrl": "https://www.gnu.org/licenses/gpl-2.0"
+                },
+                {
+                    "moduleLicense": "GNU LESSER GENERAL PUBLIC LICENSE, Version 2.1",
+                    "moduleLicenseUrl": "https://www.gnu.org/licenses/lgpl-2.1"
                 },
                 {
                     "moduleLicense": "GNU LESSER GENERAL PUBLIC LICENSE, Version 3",
@@ -204,6 +218,9 @@
         {
             "moduleName": "com.github.scribejava:scribejava-core",
             "moduleVersion": "8.3.1",
+            "moduleUrls": [
+                
+            ],
             "moduleLicenses": [
                 {
                     "moduleLicense": null,
@@ -218,6 +235,9 @@
         {
             "moduleName": "com.github.scribejava:scribejava-java8",
             "moduleVersion": "8.3.1",
+            "moduleUrls": [
+                
+            ],
             "moduleLicenses": [
                 {
                     "moduleLicense": null,
@@ -263,16 +283,20 @@
             ],
             "moduleLicenses": [
                 {
-                    "moduleLicense": "Eclipse Distribution License - v 1.0",
-                    "moduleLicenseUrl": "https://www.eclipse.org/org/documents/edl-v10.html"
-                },
-                {
                     "moduleLicense": "Eclipse Public License - v 2.0",
                     "moduleLicenseUrl": "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
                 },
                 {
+                    "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2",
+                    "moduleLicenseUrl": "https://www.gnu.org/licenses/gpl-2.0"
+                },
+                {
                     "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
                     "moduleLicenseUrl": "https://openjdk.java.net/legal/gplv2+ce.html"
+                },
+                {
+                    "moduleLicense": "The 3-Clause BSD License",
+                    "moduleLicenseUrl": "http://www.eclipse.org/org/documents/edl-v10.php"
                 }
             ]
         },
@@ -292,6 +316,9 @@
         {
             "moduleName": "dev.failsafe:failsafe",
             "moduleVersion": "3.3.2",
+            "moduleUrls": [
+                
+            ],
             "moduleLicenses": [
                 {
                     "moduleLicense": null,
@@ -316,6 +343,10 @@
                     "moduleLicenseUrl": "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
                 },
                 {
+                    "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2",
+                    "moduleLicenseUrl": "https://www.gnu.org/licenses/gpl-2.0"
+                },
+                {
                     "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
                     "moduleLicenseUrl": "https://openjdk.java.net/legal/gplv2+ce.html"
                 }
@@ -338,6 +369,10 @@
                     "moduleLicenseUrl": "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
                 },
                 {
+                    "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2",
+                    "moduleLicenseUrl": "https://www.gnu.org/licenses/gpl-2.0"
+                },
+                {
                     "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
                     "moduleLicenseUrl": "https://openjdk.java.net/legal/gplv2+ce.html"
                 }
@@ -356,12 +391,12 @@
                     "moduleLicenseUrl": "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
                 },
                 {
-                    "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
-                    "moduleLicenseUrl": "https://openjdk.java.net/legal/gplv2+ce.html"
+                    "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2",
+                    "moduleLicenseUrl": "https://www.gnu.org/licenses/gpl-2.0"
                 },
                 {
-                    "moduleLicense": "GPL-2.0-with-classpath-exception",
-                    "moduleLicenseUrl": "https://www.gnu.org/software/classpath/license.html"
+                    "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
+                    "moduleLicenseUrl": "https://openjdk.java.net/legal/gplv2+ce.html"
                 }
             ]
         },
@@ -373,16 +408,20 @@
             ],
             "moduleLicenses": [
                 {
-                    "moduleLicense": "Eclipse Distribution License - v 1.0",
-                    "moduleLicenseUrl": "https://www.eclipse.org/org/documents/edl-v10.html"
-                },
-                {
                     "moduleLicense": "Eclipse Public License - v 2.0",
                     "moduleLicenseUrl": "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
                 },
                 {
+                    "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2",
+                    "moduleLicenseUrl": "https://www.gnu.org/licenses/gpl-2.0"
+                },
+                {
                     "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
                     "moduleLicenseUrl": "https://openjdk.java.net/legal/gplv2+ce.html"
+                },
+                {
+                    "moduleLicense": "The 3-Clause BSD License",
+                    "moduleLicenseUrl": "http://www.eclipse.org/org/documents/edl-v10.php"
                 }
             ]
         },
@@ -437,6 +476,10 @@
                     "moduleLicenseUrl": "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
                 },
                 {
+                    "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2",
+                    "moduleLicenseUrl": "https://www.gnu.org/licenses/gpl-2.0"
+                },
+                {
                     "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
                     "moduleLicenseUrl": "https://openjdk.java.net/legal/gplv2+ce.html"
                 }
@@ -452,6 +495,10 @@
                 {
                     "moduleLicense": "Eclipse Public License - v 2.0",
                     "moduleLicenseUrl": "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
+                },
+                {
+                    "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2",
+                    "moduleLicenseUrl": "https://www.gnu.org/licenses/gpl-2.0"
                 },
                 {
                     "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
@@ -471,6 +518,10 @@
                     "moduleLicenseUrl": "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
                 },
                 {
+                    "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2",
+                    "moduleLicenseUrl": "https://www.gnu.org/licenses/gpl-2.0"
+                },
+                {
                     "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
                     "moduleLicenseUrl": "https://openjdk.java.net/legal/gplv2+ce.html"
                 }
@@ -488,6 +539,10 @@
                     "moduleLicenseUrl": "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
                 },
                 {
+                    "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2",
+                    "moduleLicenseUrl": "https://www.gnu.org/licenses/gpl-2.0"
+                },
+                {
                     "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
                     "moduleLicenseUrl": "https://openjdk.java.net/legal/gplv2+ce.html"
                 }
@@ -503,6 +558,10 @@
                 {
                     "moduleLicense": "Eclipse Public License - v 2.0",
                     "moduleLicenseUrl": "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
+                },
+                {
+                    "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2",
+                    "moduleLicenseUrl": "https://www.gnu.org/licenses/gpl-2.0"
                 },
                 {
                     "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
@@ -526,12 +585,12 @@
                     "moduleLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/legalcode"
                 },
                 {
-                    "moduleLicense": "Eclipse Distribution License - v 1.0",
-                    "moduleLicenseUrl": "https://www.eclipse.org/org/documents/edl-v10.html"
-                },
-                {
                     "moduleLicense": "Eclipse Public License - v 2.0",
                     "moduleLicenseUrl": "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
+                },
+                {
+                    "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2",
+                    "moduleLicenseUrl": "https://www.gnu.org/licenses/gpl-2.0"
                 },
                 {
                     "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
@@ -554,12 +613,20 @@
                     "moduleLicenseUrl": "https://opensource.org/licenses/BSD-2-Clause"
                 },
                 {
+                    "moduleLicense": "The 3-Clause BSD License",
+                    "moduleLicenseUrl": "http://www.eclipse.org/org/documents/edl-v10.php"
+                },
+                {
                     "moduleLicense": "W3C license",
                     "moduleLicenseUrl": "https://www.w3.org/Consortium/Legal/copyright-documents-19990405"
                 },
                 {
                     "moduleLicense": "jQuery license",
                     "moduleLicenseUrl": "jquery.org/license"
+                },
+                {
+                    "moduleLicense": "jquery.org/license",
+                    "moduleLicenseUrl": null
                 }
             ]
         },
@@ -579,12 +646,12 @@
                     "moduleLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/legalcode"
                 },
                 {
-                    "moduleLicense": "Eclipse Distribution License - v 1.0",
-                    "moduleLicenseUrl": "https://www.eclipse.org/org/documents/edl-v10.html"
-                },
-                {
                     "moduleLicense": "Eclipse Public License - v 2.0",
                     "moduleLicenseUrl": "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
+                },
+                {
+                    "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2",
+                    "moduleLicenseUrl": "https://www.gnu.org/licenses/gpl-2.0"
                 },
                 {
                     "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
@@ -607,12 +674,20 @@
                     "moduleLicenseUrl": "https://opensource.org/licenses/BSD-2-Clause"
                 },
                 {
+                    "moduleLicense": "The 3-Clause BSD License",
+                    "moduleLicenseUrl": "http://www.eclipse.org/org/documents/edl-v10.php"
+                },
+                {
                     "moduleLicense": "W3C license",
                     "moduleLicenseUrl": "https://www.w3.org/Consortium/Legal/copyright-documents-19990405"
                 },
                 {
                     "moduleLicense": "jQuery license",
                     "moduleLicenseUrl": "jquery.org/license"
+                },
+                {
+                    "moduleLicense": "jquery.org/license",
+                    "moduleLicenseUrl": null
                 }
             ]
         },
@@ -632,12 +707,12 @@
                     "moduleLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/legalcode"
                 },
                 {
-                    "moduleLicense": "Eclipse Distribution License - v 1.0",
-                    "moduleLicenseUrl": "https://www.eclipse.org/org/documents/edl-v10.html"
-                },
-                {
                     "moduleLicense": "Eclipse Public License - v 2.0",
                     "moduleLicenseUrl": "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
+                },
+                {
+                    "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2",
+                    "moduleLicenseUrl": "https://www.gnu.org/licenses/gpl-2.0"
                 },
                 {
                     "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
@@ -660,8 +735,8 @@
                     "moduleLicenseUrl": "https://opensource.org/licenses/BSD-2-Clause"
                 },
                 {
-                    "moduleLicense": "The GNU General Public License (GPL), Version 2, With Classpath Exception",
-                    "moduleLicenseUrl": "https://www.gnu.org/software/classpath/license.html"
+                    "moduleLicense": "The 3-Clause BSD License",
+                    "moduleLicenseUrl": "http://www.eclipse.org/org/documents/edl-v10.php"
                 },
                 {
                     "moduleLicense": "W3C license",
@@ -689,12 +764,12 @@
                     "moduleLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/legalcode"
                 },
                 {
-                    "moduleLicense": "Eclipse Distribution License - v 1.0",
-                    "moduleLicenseUrl": "https://www.eclipse.org/org/documents/edl-v10.html"
-                },
-                {
                     "moduleLicense": "Eclipse Public License - v 2.0",
                     "moduleLicenseUrl": "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
+                },
+                {
+                    "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2",
+                    "moduleLicenseUrl": "https://www.gnu.org/licenses/gpl-2.0"
                 },
                 {
                     "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
@@ -717,12 +792,20 @@
                     "moduleLicenseUrl": "https://opensource.org/licenses/BSD-2-Clause"
                 },
                 {
+                    "moduleLicense": "The 3-Clause BSD License",
+                    "moduleLicenseUrl": "http://www.eclipse.org/org/documents/edl-v10.php"
+                },
+                {
                     "moduleLicense": "W3C license",
                     "moduleLicenseUrl": "https://www.w3.org/Consortium/Legal/copyright-documents-19990405"
                 },
                 {
                     "moduleLicense": "jQuery license",
                     "moduleLicenseUrl": "jquery.org/license"
+                },
+                {
+                    "moduleLicense": "jquery.org/license",
+                    "moduleLicenseUrl": null
                 }
             ]
         },
@@ -742,12 +825,12 @@
                     "moduleLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/legalcode"
                 },
                 {
-                    "moduleLicense": "Eclipse Distribution License - v 1.0",
-                    "moduleLicenseUrl": "https://www.eclipse.org/org/documents/edl-v10.html"
-                },
-                {
                     "moduleLicense": "Eclipse Public License - v 2.0",
                     "moduleLicenseUrl": "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
+                },
+                {
+                    "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2",
+                    "moduleLicenseUrl": "https://www.gnu.org/licenses/gpl-2.0"
                 },
                 {
                     "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
@@ -770,12 +853,20 @@
                     "moduleLicenseUrl": "https://opensource.org/licenses/BSD-2-Clause"
                 },
                 {
+                    "moduleLicense": "The 3-Clause BSD License",
+                    "moduleLicenseUrl": "http://www.eclipse.org/org/documents/edl-v10.php"
+                },
+                {
                     "moduleLicense": "W3C license",
                     "moduleLicenseUrl": "https://www.w3.org/Consortium/Legal/copyright-documents-19990405"
                 },
                 {
                     "moduleLicense": "jQuery license",
                     "moduleLicenseUrl": "jquery.org/license"
+                },
+                {
+                    "moduleLicense": "jquery.org/license",
+                    "moduleLicenseUrl": null
                 }
             ]
         },
@@ -795,12 +886,12 @@
                     "moduleLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/legalcode"
                 },
                 {
-                    "moduleLicense": "Eclipse Distribution License - v 1.0",
-                    "moduleLicenseUrl": "https://www.eclipse.org/org/documents/edl-v10.html"
-                },
-                {
                     "moduleLicense": "Eclipse Public License - v 2.0",
                     "moduleLicenseUrl": "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
+                },
+                {
+                    "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2",
+                    "moduleLicenseUrl": "https://www.gnu.org/licenses/gpl-2.0"
                 },
                 {
                     "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
@@ -823,8 +914,8 @@
                     "moduleLicenseUrl": "https://opensource.org/licenses/BSD-2-Clause"
                 },
                 {
-                    "moduleLicense": "The GNU General Public License (GPL), Version 2, With Classpath Exception",
-                    "moduleLicenseUrl": "https://www.gnu.org/software/classpath/license.html"
+                    "moduleLicense": "The 3-Clause BSD License",
+                    "moduleLicenseUrl": "http://www.eclipse.org/org/documents/edl-v10.php"
                 },
                 {
                     "moduleLicense": "W3C license",
@@ -852,12 +943,12 @@
                     "moduleLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/legalcode"
                 },
                 {
-                    "moduleLicense": "Eclipse Distribution License - v 1.0",
-                    "moduleLicenseUrl": "https://www.eclipse.org/org/documents/edl-v10.html"
-                },
-                {
                     "moduleLicense": "Eclipse Public License - v 2.0",
                     "moduleLicenseUrl": "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
+                },
+                {
+                    "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2",
+                    "moduleLicenseUrl": "https://www.gnu.org/licenses/gpl-2.0"
                 },
                 {
                     "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
@@ -880,12 +971,20 @@
                     "moduleLicenseUrl": "https://opensource.org/licenses/BSD-2-Clause"
                 },
                 {
+                    "moduleLicense": "The 3-Clause BSD License",
+                    "moduleLicenseUrl": "http://www.eclipse.org/org/documents/edl-v10.php"
+                },
+                {
                     "moduleLicense": "W3C license",
                     "moduleLicenseUrl": "https://www.w3.org/Consortium/Legal/copyright-documents-19990405"
                 },
                 {
                     "moduleLicense": "jQuery license",
                     "moduleLicenseUrl": "jquery.org/license"
+                },
+                {
+                    "moduleLicense": "jquery.org/license",
+                    "moduleLicenseUrl": null
                 }
             ]
         },
@@ -898,7 +997,7 @@
             "moduleLicenses": [
                 {
                     "moduleLicense": null,
-                    "moduleLicenseUrl": "http://www.mozilla.org/MPL/MPL-1.1.html, http://www.gnu.org/licenses/lgpl-2.1.html, http://www.apache.org/licenses/"
+                    "moduleLicenseUrl": "http://www.mozilla.org/MPL/MPL-1.1.html"
                 },
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -923,12 +1022,12 @@
             ],
             "moduleLicenses": [
                 {
-                    "moduleLicense": "Eclipse Distribution License - v 1.0",
-                    "moduleLicenseUrl": "https://www.eclipse.org/org/documents/edl-v10.html"
-                },
-                {
                     "moduleLicense": "Eclipse Public License - v 2.0",
                     "moduleLicenseUrl": "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
+                },
+                {
+                    "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2",
+                    "moduleLicenseUrl": "https://www.gnu.org/licenses/gpl-2.0"
                 },
                 {
                     "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
@@ -937,6 +1036,10 @@
                 {
                     "moduleLicense": "PUBLIC DOMAIN",
                     "moduleLicenseUrl": null
+                },
+                {
+                    "moduleLicense": "The 3-Clause BSD License",
+                    "moduleLicenseUrl": "http://www.eclipse.org/org/documents/edl-v10.php"
                 }
             ]
         },
@@ -1103,5 +1206,8 @@
                 }
             ]
         }
+    ],
+    "importedModules": [
+        
     ]
 }

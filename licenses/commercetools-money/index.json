@@ -13,6 +13,10 @@
                     "moduleLicenseUrl": "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
                 },
                 {
+                    "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2",
+                    "moduleLicenseUrl": "https://www.gnu.org/licenses/gpl-2.0"
+                },
+                {
                     "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
                     "moduleLicenseUrl": "https://openjdk.java.net/legal/gplv2+ce.html"
                 }
@@ -50,5 +54,8 @@
                 }
             ]
         }
+    ],
+    "importedModules": [
+        
     ]
 }

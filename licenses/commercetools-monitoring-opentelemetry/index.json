@@ -42,6 +42,9 @@
         {
             "moduleName": "dev.failsafe:failsafe",
             "moduleVersion": "3.3.2",
+            "moduleUrls": [
+                
+            ],
             "moduleLicenses": [
                 {
                     "moduleLicense": null,
@@ -114,7 +117,7 @@
             "moduleLicenses": [
                 {
                     "moduleLicense": null,
-                    "moduleLicenseUrl": "http://www.mozilla.org/MPL/MPL-1.1.html, http://www.gnu.org/licenses/lgpl-2.1.html, http://www.apache.org/licenses/"
+                    "moduleLicenseUrl": "http://www.mozilla.org/MPL/MPL-1.1.html"
                 },
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -190,5 +193,8 @@
                 }
             ]
         }
+    ],
+    "importedModules": [
+        
     ]
 }

@@ -15,7 +15,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-core",
-            "moduleVersion": "2.21.4",
+            "moduleVersion": "2.21.5",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-core"
             ],
@@ -28,7 +28,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-databind",
-            "moduleVersion": "2.21.4",
+            "moduleVersion": "2.21.5",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],

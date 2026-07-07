@@ -49,7 +49,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-core",
-            "moduleVersion": "2.21.4",
+            "moduleVersion": "2.21.5",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-core"
             ],
@@ -62,7 +62,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-databind",
-            "moduleVersion": "2.21.4",
+            "moduleVersion": "2.21.5",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -75,7 +75,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
-            "moduleVersion": "2.21.4",
+            "moduleVersion": "2.21.5",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jsr310"
             ],
@@ -88,7 +88,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.module:jackson-module-jakarta-xmlbind-annotations",
-            "moduleVersion": "2.21.4",
+            "moduleVersion": "2.21.5",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-base"
             ],

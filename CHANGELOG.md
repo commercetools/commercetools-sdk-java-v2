@@ -1,4 +1,58 @@
 
+# 20.0.0 (2026-07-07)
+
+## Important notes
+
+The SDK has been updated to provider improved support for Spring Boot 4
+
+- SDK now requires Java 17
+- Updated Jackson JSON library to version 3
+  Please see the details for this in the [jackson migration guide](https://github.com/FasterXML/jackson/blob/main/jackson3/MIGRATING_TO_JACKSON_3.md) and the [Spring Boot documentation](https://spring.io/blog/2025/10/07/introducing-jackson-3-support-in-spring)
+
+## What's Changed
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1073
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1072
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1074
+* Bump net.sourceforge.plantuml:plantuml from 1.2025.4 to 1.2026.0 by @dependabot[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1016
+* Bump io.opentelemetry:opentelemetry-api from 1.51.0 to 1.62.0 by @dependabot[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1063
+* Update dependency io.netty:netty-handler-proxy to v4.2.13.Final [SECURITY] by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1076
+* Update dependency io.netty:netty-codec-http to v4.2.13.Final [SECURITY] by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1075
+* Bump org.asynchttpclient:async-http-client from 2.12.4 to 2.15.0 by @dependabot[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1070
+* Update all dependencies by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1077
+* add mapping for JsonPrimitive values by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1081
+* Devx 796 spring boot supportability version 4 by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1068
+* DEVX-796: Adding parameter for codegen by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1087
+* fix mixin.raml by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1088
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1089
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1090
+* Devx 813 product search stats facet by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1092
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1093
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1096
+* Devx 640 helper method from coco product to import api product by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1099
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1101
+* fix(deps): update all dependencies by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1095
+* fix docs links by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1106
+* fix(deps): update dependency io.netty:netty-handler to v4.2.15.final [security] by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1105
+* fix(deps): update dependency io.netty:netty-codec-http to v4.2.15.final [security] by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1104
+* Drop okhttp3 by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1107
+* fix docs links by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1108
+* revert kotlin to 2.3.21 for codeql support by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1109
+* chore(deps): update codecov/codecov-action action to v7 by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1103
+* chore(deps): update actions/setup-java action to v5 by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1102
+* chore(deps): update actions/create-github-app-token action to v3 by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1098
+* chore(deps): update actions/checkout action to v7 by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1097
+* chore(deps): update actions/setup-java digest to 1bcf9fb by @renovate[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1094
+* fix internal docs build and license file generation by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1110
+* bump shadow plugin by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1111
+* bump jackson transitive dependencies by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1113
+* bump jackson transitive dependencies by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1114
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1112
+* Bump com.fasterxml.jackson.core:jackson-databind from 2.21.4 to 2.21.5 by @dependabot[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1115
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1116
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.11.0...20.0.0
+
 # 19.11.0 (2026-05-28)
 
 ## What's Changed

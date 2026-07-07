@@ -101,7 +101,7 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-first even-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color"><code><a href="#SET_SHIPPING_METHOD" class="member-name-link">SET_SHIPPING_METHOD</a></code></div>
 <div class="col-last even-row-color">
 <div class="block">discriminator value for CartSetShippingMethodAction</div>
@@ -168,13 +168,13 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Value to set.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CartSetShippingMethodAction.html" title="interface in com.commercetools.api.models.cart">CartSetShippingMethodAction</a>&gt;</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static tools.jackson.core.type.TypeReference&lt;<a href="CartSetShippingMethodAction.html" title="interface in com.commercetools.api.models.cart">CartSetShippingMethodAction</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withCartSetShippingMethodAction(java.util.function.Function)" class="member-name-link">withCartSetShippingMethodAction</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartSetShippingMethodAction.html" title="interface in com.commercetools.api.models.cart">CartSetShippingMethodAction</a>,<wbr>T&gt;&nbsp;helper)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withCartSetShippingMethodAction(java.util.function.Function)" class="member-name-link">withCartSetShippingMethodAction</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartSetShippingMethodAction.html" title="interface in com.commercetools.api.models.cart">CartSetShippingMethodAction</a>,<wbr>T&gt;&nbsp;helper)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">accessor map function</div>
 </div>
@@ -201,7 +201,7 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="SET_SHIPPING_METHOD">
 <h3>SET_SHIPPING_METHOD</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">SET_SHIPPING_METHOD</span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">SET_SHIPPING_METHOD</span></div>
 <div class="block">discriminator value for CartSetShippingMethodAction</div>
 <dl class="notes">
 <dt>See Also:</dt>
@@ -227,7 +227,13 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../shipping_method/ShippingMethodResourceIdentifier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifier</a></span>&nbsp;<span class="element-name">getShippingMethod</span>()</div>
 <div class="block"><p>Value to set. If empty, any existing value is removed.</p>
-  <p>If the referenced Shipping Method is inactive, or has a predicate that does not match the Cart, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p></div>
+  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned in one of the following cases:</p>
+  <ol>
+   <li>If the referenced Shipping Method has a predicate that does not match the Cart.</li>
+   <li>If the referenced Shipping Method is not active.</li>
+   <li>If the referenced Shipping Method is associated with a Store that is different from the Cart's Store.</li>
+   <li>If the referenced Shipping Method is associated with a Store and the Cart is not associated with any Store.</li>
+  </ol></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>shippingMethod</dd>
@@ -251,7 +257,13 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <h3>setShippingMethod</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setShippingMethod</span><wbr><span class="parameters">(<a href="../shipping_method/ShippingMethodResourceIdentifier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifier</a>&nbsp;shippingMethod)</span></div>
 <div class="block"><p>Value to set. If empty, any existing value is removed.</p>
-  <p>If the referenced Shipping Method is inactive, or has a predicate that does not match the Cart, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p></div>
+  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned in one of the following cases:</p>
+  <ol>
+   <li>If the referenced Shipping Method has a predicate that does not match the Cart.</li>
+   <li>If the referenced Shipping Method is not active.</li>
+   <li>If the referenced Shipping Method is associated with a Store that is different from the Cart's Store.</li>
+   <li>If the referenced Shipping Method is associated with a Store and the Cart is not associated with any Store.</li>
+  </ol></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>shippingMethod</code> - value to be set</dd>
@@ -345,7 +357,7 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="withCartSetShippingMethodAction(java.util.function.Function)">
 <h3>withCartSetShippingMethodAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">withCartSetShippingMethodAction</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartSetShippingMethodAction.html" title="interface in com.commercetools.api.models.cart">CartSetShippingMethodAction</a>,<wbr>T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">withCartSetShippingMethodAction</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartSetShippingMethodAction.html" title="interface in com.commercetools.api.models.cart">CartSetShippingMethodAction</a>,<wbr>T&gt;&nbsp;helper)</span></div>
 <div class="block">accessor map function</div>
 <dl class="notes">
 <dt>Type Parameters:</dt>
@@ -360,7 +372,7 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CartSetShippingMethodAction.html" title="interface in com.commercetools.api.models.cart">CartSetShippingMethodAction</a>&gt;</span>&nbsp;<span class="element-name">typeReference</span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">tools.jackson.core.type.TypeReference&lt;<a href="CartSetShippingMethodAction.html" title="interface in com.commercetools.api.models.cart">CartSetShippingMethodAction</a>&gt;</span>&nbsp;<span class="element-name">typeReference</span>()</div>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 <dl class="notes">
 <dt>Returns:</dt>

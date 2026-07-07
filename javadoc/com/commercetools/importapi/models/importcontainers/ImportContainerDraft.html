@@ -78,7 +78,8 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">ImportContainerDraft</span><span class="extends-implements">
 extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="interface in io.vrap.rmf.base.client">Draft</a>&lt;<a href="ImportContainerDraft.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerDraft</a>&gt;</span></div>
-<div class="block"><p>The representation sent to the server to create an <span>ImportContainer</span>.</p>
+<div class="block"><p>The representation sent to the server to create an <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportContainer" rel="nofollow">ImportContainer</a>.</p>
+  <p>If you <strong>omit</strong> <code>retentionPolicy</code>, the new ImportContainer uses the default <strong>72-hour</strong> time to live. Set a <a href="https://docs.commercetools.com/apis/ctp:import:type:TimeToLiveRetentionPolicy" rel="nofollow">TimeToLiveRetentionPolicy</a> to use a custom duration (within the allowed minimum and maximum).</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -121,7 +122,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a deep copy of ImportContainerDraft</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getKey()" class="member-name-link">getKey</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">User-defined unique identifier of the ImportContainer.</div>
@@ -134,7 +135,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="RetentionPolicy.html" title="interface in com.commercetools.importapi.models.importcontainers">RetentionPolicy</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getRetentionPolicy()" class="member-name-link">getRetentionPolicy</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Set a retention policy to automatically delete the ImportContainer after a defined period.</div>
+<div class="block">Optional.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ImportContainerDraft.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerDraft</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -147,7 +148,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <div class="block">factory method to create a shallow copy ImportContainerDraft</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setKey(java.lang.String)" class="member-name-link">setKey</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setKey(java.lang.String)" class="member-name-link">setKey</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">User-defined unique identifier of the ImportContainer.</div>
 </div>
@@ -159,15 +160,15 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setRetentionPolicy(com.commercetools.importapi.models.importcontainers.RetentionPolicy)" class="member-name-link">setRetentionPolicy</a><wbr>(<a href="RetentionPolicy.html" title="interface in com.commercetools.importapi.models.importcontainers">RetentionPolicy</a>&nbsp;retentionPolicy)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Set a retention policy to automatically delete the ImportContainer after a defined period.</div>
+<div class="block">Optional.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ImportContainerDraft.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerDraft</a>&gt;</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static tools.jackson.core.type.TypeReference&lt;<a href="ImportContainerDraft.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerDraft</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withImportContainerDraft(java.util.function.Function)" class="member-name-link">withImportContainerDraft</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ImportContainerDraft.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerDraft</a>,<wbr>T&gt;&nbsp;helper)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withImportContainerDraft(java.util.function.Function)" class="member-name-link">withImportContainerDraft</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ImportContainerDraft.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerDraft</a>,<wbr>T&gt;&nbsp;helper)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">accessor map function</div>
 </div>
@@ -189,7 +190,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
 <div class="block"><p>User-defined unique identifier of the ImportContainer.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -213,7 +214,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <h3>getRetentionPolicy</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="RetentionPolicy.html" title="interface in com.commercetools.importapi.models.importcontainers">RetentionPolicy</a></span>&nbsp;<span class="element-name">getRetentionPolicy</span>()</div>
-<div class="block"><p>Set a retention policy to automatically delete the ImportContainer after a defined period.</p></div>
+<div class="block"><p>Optional. When set, defines how long the ImportContainer is kept before automatic deletion. When omitted, the ImportContainer receives the default <strong>72-hour</strong> lifetime.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>retentionPolicy</dd>
@@ -223,7 +224,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <li>
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 <div class="block"><p>User-defined unique identifier of the ImportContainer.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -246,7 +247,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="setRetentionPolicy(com.commercetools.importapi.models.importcontainers.RetentionPolicy)">
 <h3>setRetentionPolicy</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setRetentionPolicy</span><wbr><span class="parameters">(<a href="RetentionPolicy.html" title="interface in com.commercetools.importapi.models.importcontainers">RetentionPolicy</a>&nbsp;retentionPolicy)</span></div>
-<div class="block"><p>Set a retention policy to automatically delete the ImportContainer after a defined period.</p></div>
+<div class="block"><p>Optional. When set, defines how long the ImportContainer is kept before automatic deletion. When omitted, the ImportContainer receives the default <strong>72-hour</strong> lifetime.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>retentionPolicy</code> - value to be set</dd>
@@ -325,7 +326,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <li>
 <section class="detail" id="withImportContainerDraft(java.util.function.Function)">
 <h3>withImportContainerDraft</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">withImportContainerDraft</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ImportContainerDraft.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerDraft</a>,<wbr>T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">withImportContainerDraft</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ImportContainerDraft.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerDraft</a>,<wbr>T&gt;&nbsp;helper)</span></div>
 <div class="block">accessor map function</div>
 <dl class="notes">
 <dt>Type Parameters:</dt>
@@ -340,7 +341,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ImportContainerDraft.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerDraft</a>&gt;</span>&nbsp;<span class="element-name">typeReference</span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">tools.jackson.core.type.TypeReference&lt;<a href="ImportContainerDraft.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerDraft</a>&gt;</span>&nbsp;<span class="element-name">typeReference</span>()</div>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 <dl class="notes">
 <dt>Returns:</dt>

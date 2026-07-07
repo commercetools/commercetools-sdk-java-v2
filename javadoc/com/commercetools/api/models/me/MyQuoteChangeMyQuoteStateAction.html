@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">MyQuoteChangeMyQuoteStateAction</span><span class="extends-implements">
 extends <a href="MyQuoteUpdateAction.html" title="interface in com.commercetools.api.models.me">MyQuoteUpdateAction</a></span></div>
-<div class="block"><p>When accepting, declining, or renegotiating <span>B2B Quotes</span>, the Customer must have the <code>AcceptMyQuotes</code>, <code>DeclineMyQuotes</code>, or <code>RenegotiateMyQuotes</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Permission" rel="nofollow">Permission</a>, respectively. If the required <span>Permission</span> is missing, an <span>AssociateMissingPermission</span> error is returned.</p>
+<div class="block"><p>When accepting, declining, or renegotiating <span>B2B Quotes</span>, the Customer must have the <code>AcceptMyQuotes</code>, <code>DeclineMyQuotes</code>, or <code>RenegotiateMyQuotes</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:Permission" rel="nofollow">Permission</a>, respectively. If the required <a href="https://docs.commercetools.com/apis/ctp:api:type:Permission" rel="nofollow">Permission</a> is missing, an <a href="https://docs.commercetools.com/apis/ctp:api:type:AssociateMissingPermissionError" rel="nofollow">AssociateMissingPermission</a> error is returned.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -101,7 +101,7 @@ extends <a href="MyQuoteUpdateAction.html" title="interface in com.commercetools
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-first even-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color"><code><a href="#CHANGE_MY_QUOTE_STATE" class="member-name-link">CHANGE_MY_QUOTE_STATE</a></code></div>
 <div class="col-last even-row-color">
 <div class="block">discriminator value for MyQuoteChangeMyQuoteStateAction</div>
@@ -158,13 +158,13 @@ extends <a href="MyQuoteUpdateAction.html" title="interface in com.commercetools
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">New state to be set for the Quote.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="MyQuoteChangeMyQuoteStateAction.html" title="interface in com.commercetools.api.models.me">MyQuoteChangeMyQuoteStateAction</a>&gt;</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static tools.jackson.core.type.TypeReference&lt;<a href="MyQuoteChangeMyQuoteStateAction.html" title="interface in com.commercetools.api.models.me">MyQuoteChangeMyQuoteStateAction</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withMyQuoteChangeMyQuoteStateAction(java.util.function.Function)" class="member-name-link">withMyQuoteChangeMyQuoteStateAction</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MyQuoteChangeMyQuoteStateAction.html" title="interface in com.commercetools.api.models.me">MyQuoteChangeMyQuoteStateAction</a>,<wbr>T&gt;&nbsp;helper)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withMyQuoteChangeMyQuoteStateAction(java.util.function.Function)" class="member-name-link">withMyQuoteChangeMyQuoteStateAction</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MyQuoteChangeMyQuoteStateAction.html" title="interface in com.commercetools.api.models.me">MyQuoteChangeMyQuoteStateAction</a>,<wbr>T&gt;&nbsp;helper)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">accessor map function</div>
 </div>
@@ -191,7 +191,7 @@ extends <a href="MyQuoteUpdateAction.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="CHANGE_MY_QUOTE_STATE">
 <h3>CHANGE_MY_QUOTE_STATE</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">CHANGE_MY_QUOTE_STATE</span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">CHANGE_MY_QUOTE_STATE</span></div>
 <div class="block">discriminator value for MyQuoteChangeMyQuoteStateAction</div>
 <dl class="notes">
 <dt>See Also:</dt>
@@ -310,7 +310,7 @@ extends <a href="MyQuoteUpdateAction.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="withMyQuoteChangeMyQuoteStateAction(java.util.function.Function)">
 <h3>withMyQuoteChangeMyQuoteStateAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">withMyQuoteChangeMyQuoteStateAction</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MyQuoteChangeMyQuoteStateAction.html" title="interface in com.commercetools.api.models.me">MyQuoteChangeMyQuoteStateAction</a>,<wbr>T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">withMyQuoteChangeMyQuoteStateAction</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MyQuoteChangeMyQuoteStateAction.html" title="interface in com.commercetools.api.models.me">MyQuoteChangeMyQuoteStateAction</a>,<wbr>T&gt;&nbsp;helper)</span></div>
 <div class="block">accessor map function</div>
 <dl class="notes">
 <dt>Type Parameters:</dt>
@@ -325,7 +325,7 @@ extends <a href="MyQuoteUpdateAction.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="MyQuoteChangeMyQuoteStateAction.html" title="interface in com.commercetools.api.models.me">MyQuoteChangeMyQuoteStateAction</a>&gt;</span>&nbsp;<span class="element-name">typeReference</span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">tools.jackson.core.type.TypeReference&lt;<a href="MyQuoteChangeMyQuoteStateAction.html" title="interface in com.commercetools.api.models.me">MyQuoteChangeMyQuoteStateAction</a>&gt;</span>&nbsp;<span class="element-name">typeReference</span>()</div>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 <dl class="notes">
 <dt>Returns:</dt>

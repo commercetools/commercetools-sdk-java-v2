@@ -79,6 +79,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">ProductTypeRemoveAttributeDefinitionAction</span><span class="extends-implements">
 extends <a href="ProductTypeUpdateAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeUpdateAction</a></span></div>
 <div class="block"><p>Removes an AttributeDefinition and also deletes all corresponding Attributes on all <span>Products</span> with this ProductType. The removal of the Attributes is <span>eventually consistent</span>.</p>
+  <p>Do not remove an AttributeDefinition and add a new AttributeDefinition with the same <code>name</code> in the same update request. Because the removal is eventually consistent, wait until it is complete before sending another update request for the ProductType.</p>
   <p>The <code>CombinationUnique</code> constraint is not checked when an Attribute is removed, and uniqueness violations may occur when you remove an Attribute with a <code>CombinationUnique</code> constraint.</p>
 
  <hr>
@@ -102,7 +103,7 @@ extends <a href="ProductTypeUpdateAction.html" title="interface in com.commercet
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-first even-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color"><code><a href="#REMOVE_ATTRIBUTE_DEFINITION" class="member-name-link">REMOVE_ATTRIBUTE_DEFINITION</a></code></div>
 <div class="col-last even-row-color">
 <div class="block">discriminator value for ProductTypeRemoveAttributeDefinitionAction</div>
@@ -139,7 +140,7 @@ extends <a href="ProductTypeUpdateAction.html" title="interface in com.commercet
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a deep copy of ProductTypeRemoveAttributeDefinitionAction</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Name of the Attribute to remove.</div>
@@ -155,17 +156,17 @@ extends <a href="ProductTypeUpdateAction.html" title="interface in com.commercet
 <div class="block">factory method to create a shallow copy ProductTypeRemoveAttributeDefinitionAction</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setName(java.lang.String)" class="member-name-link">setName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setName(java.lang.String)" class="member-name-link">setName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Name of the Attribute to remove.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductTypeRemoveAttributeDefinitionAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeRemoveAttributeDefinitionAction</a>&gt;</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static tools.jackson.core.type.TypeReference&lt;<a href="ProductTypeRemoveAttributeDefinitionAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeRemoveAttributeDefinitionAction</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withProductTypeRemoveAttributeDefinitionAction(java.util.function.Function)" class="member-name-link">withProductTypeRemoveAttributeDefinitionAction</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductTypeRemoveAttributeDefinitionAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeRemoveAttributeDefinitionAction</a>,<wbr>T&gt;&nbsp;helper)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withProductTypeRemoveAttributeDefinitionAction(java.util.function.Function)" class="member-name-link">withProductTypeRemoveAttributeDefinitionAction</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductTypeRemoveAttributeDefinitionAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeRemoveAttributeDefinitionAction</a>,<wbr>T&gt;&nbsp;helper)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">accessor map function</div>
 </div>
@@ -192,7 +193,7 @@ extends <a href="ProductTypeUpdateAction.html" title="interface in com.commercet
 <li>
 <section class="detail" id="REMOVE_ATTRIBUTE_DEFINITION">
 <h3>REMOVE_ATTRIBUTE_DEFINITION</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">REMOVE_ATTRIBUTE_DEFINITION</span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">REMOVE_ATTRIBUTE_DEFINITION</span></div>
 <div class="block">discriminator value for ProductTypeRemoveAttributeDefinitionAction</div>
 <dl class="notes">
 <dt>See Also:</dt>
@@ -216,7 +217,7 @@ extends <a href="ProductTypeUpdateAction.html" title="interface in com.commercet
 <section class="detail" id="getName()">
 <h3>getName</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getName</span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getName</span>()</div>
 <div class="block"><p>Name of the Attribute to remove.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -227,7 +228,7 @@ extends <a href="ProductTypeUpdateAction.html" title="interface in com.commercet
 <li>
 <section class="detail" id="setName(java.lang.String)">
 <h3>setName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setName</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setName</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 <div class="block"><p>Name of the Attribute to remove.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -311,7 +312,7 @@ extends <a href="ProductTypeUpdateAction.html" title="interface in com.commercet
 <li>
 <section class="detail" id="withProductTypeRemoveAttributeDefinitionAction(java.util.function.Function)">
 <h3>withProductTypeRemoveAttributeDefinitionAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">withProductTypeRemoveAttributeDefinitionAction</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductTypeRemoveAttributeDefinitionAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeRemoveAttributeDefinitionAction</a>,<wbr>T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">withProductTypeRemoveAttributeDefinitionAction</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductTypeRemoveAttributeDefinitionAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeRemoveAttributeDefinitionAction</a>,<wbr>T&gt;&nbsp;helper)</span></div>
 <div class="block">accessor map function</div>
 <dl class="notes">
 <dt>Type Parameters:</dt>
@@ -326,7 +327,7 @@ extends <a href="ProductTypeUpdateAction.html" title="interface in com.commercet
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductTypeRemoveAttributeDefinitionAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeRemoveAttributeDefinitionAction</a>&gt;</span>&nbsp;<span class="element-name">typeReference</span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">tools.jackson.core.type.TypeReference&lt;<a href="ProductTypeRemoveAttributeDefinitionAction.html" title="interface in com.commercetools.api.models.product_type">ProductTypeRemoveAttributeDefinitionAction</a>&gt;</span>&nbsp;<span class="element-name">typeReference</span>()</div>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 <dl class="notes">
 <dt>Returns:</dt>

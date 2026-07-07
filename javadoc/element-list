@@ -57,6 +57,8 @@ com.commercetools.api.models.store_country
 com.commercetools.api.models.subscription
 com.commercetools.api.models.tax_category
 com.commercetools.api.models.type
+com.commercetools.api.models.variant
+com.commercetools.api.models.variant_attributes
 com.commercetools.api.models.warning
 com.commercetools.api.models.zone
 com.commercetools.api.predicates
@@ -104,13 +106,13 @@ com.commercetools.api.predicates.expansion.store
 com.commercetools.api.predicates.expansion.subscription
 com.commercetools.api.predicates.expansion.tax_category
 com.commercetools.api.predicates.expansion.type
+com.commercetools.api.predicates.expansion.variant
 com.commercetools.api.predicates.expansion.zone
 com.commercetools.api.predicates.query
 com.commercetools.api.predicates.query.product
 com.commercetools.api.predicates.query.type
 com.commercetools.api.product
 com.commercetools.api.search.products
-com.commercetools.compat
 com.commercetools.docs.meta
 com.commercetools.graphql.api
 com.commercetools.history.client
@@ -127,8 +129,8 @@ com.commercetools.http.apachehttp
 com.commercetools.http.asynchttp
 com.commercetools.http.javanet
 com.commercetools.http.netty
-com.commercetools.http.okhttp3
 com.commercetools.http.okhttp4
+com.commercetools.http.okhttp5
 com.commercetools.importapi.client
 com.commercetools.importapi.defaultconfig
 com.commercetools.importapi.json
@@ -155,12 +157,12 @@ com.commercetools.importapi.models.producttypes
 com.commercetools.importapi.models.productvariants
 com.commercetools.importapi.models.standalone_prices
 com.commercetools.importapi.models.types
+com.commercetools.importapi.models.variants
 com.commercetools.money
 com.commercetools.monitoring.datadog
 com.commercetools.monitoring.datadog.statsd
 com.commercetools.monitoring.newrelic
 com.commercetools.monitoring.opentelemetry
-io.sphere.sdk.client
 io.vrap.rmf.base.client
 io.vrap.rmf.base.client.error
 io.vrap.rmf.base.client.http

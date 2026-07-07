@@ -70,13 +70,13 @@ loadScripts(document, 'script');</script>
 <div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">com.commercetools.api.models.message</a></div>
 <h1 title="Class MessagePayloadBuilder" class="title">Class MessagePayloadBuilder</h1>
 </div>
-<div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
+<div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
 <div class="inheritance">com.commercetools.api.models.message.MessagePayloadBuilder</div>
 </div>
 <section class="class-description" id="class-description">
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">MessagePayloadBuilder</span>
-<span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
 <div class="block">MessagePayloadBuilder</div>
 </section>
 <section class="summary">
@@ -300,11 +300,17 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartFrozenMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CartFrozenMessagePayloadBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#cartFrozenBuilder()" class="member-name-link">cartFrozenBuilder</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartPurchaseOrderNumberSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CartPurchaseOrderNumberSetMessagePayloadBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#cartPurchaseOrderNumberSetBuilder()" class="member-name-link">cartPurchaseOrderNumberSetBuilder</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartLockedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CartLockedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#cartLockedBuilder()" class="member-name-link">cartLockedBuilder</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartUnfrozenMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CartUnfrozenMessagePayloadBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#cartUnfrozenBuilder()" class="member-name-link">cartUnfrozenBuilder</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartPurchaseOrderNumberSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CartPurchaseOrderNumberSetMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#cartPurchaseOrderNumberSetBuilder()" class="member-name-link">cartPurchaseOrderNumberSetBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartUnfrozenMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CartUnfrozenMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#cartUnfrozenBuilder()" class="member-name-link">cartUnfrozenBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartUnlockedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CartUnlockedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#cartUnlockedBuilder()" class="member-name-link">cartUnlockedBuilder</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CategoryCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CategoryCreatedMessagePayloadBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#categoryCreatedBuilder()" class="member-name-link">categoryCreatedBuilder</a>()</code></div>
@@ -1061,12 +1067,39 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="StoreSupplyChannelsChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StoreSupplyChannelsChangedMessagePayloadBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#storeSupplyChannelsChangedBuilder()" class="member-name-link">storeSupplyChannelsChangedBuilder</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VariantCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#variantCreatedBuilder()" class="member-name-link">variantCreatedBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VariantDeletedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantDeletedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#variantDeletedBuilder()" class="member-name-link">variantDeletedBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VariantImageAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantImageAddedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#variantImageAddedBuilder()" class="member-name-link">variantImageAddedBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VariantImagesSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantImagesSetMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#variantImagesSetBuilder()" class="member-name-link">variantImagesSetBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VariantKeySetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantKeySetMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#variantKeySetBuilder()" class="member-name-link">variantKeySetBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VariantPublishedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantPublishedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#variantPublishedBuilder()" class="member-name-link">variantPublishedBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VariantSkuSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantSkuSetMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#variantSkuSetBuilder()" class="member-name-link">variantSkuSetBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VariantStagedChangesRemovedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantStagedChangesRemovedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#variantStagedChangesRemovedBuilder()" class="member-name-link">variantStagedChangesRemovedBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VariantUnpublishedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantUnpublishedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#variantUnpublishedBuilder()" class="member-name-link">variantUnpublishedBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
 <div class="inherited-list">
-<h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
-<code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
+<h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
+<code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 </section>
 </li>
 </ul>
@@ -1483,6 +1516,12 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="cartLockedBuilder()">
+<h3>cartLockedBuilder</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartLockedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CartLockedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name">cartLockedBuilder</span>()</div>
+</section>
+</li>
+<li>
 <section class="detail" id="cartPurchaseOrderNumberSetBuilder()">
 <h3>cartPurchaseOrderNumberSetBuilder</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartPurchaseOrderNumberSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CartPurchaseOrderNumberSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name">cartPurchaseOrderNumberSetBuilder</span>()</div>
@@ -1492,6 +1531,12 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="cartUnfrozenBuilder()">
 <h3>cartUnfrozenBuilder</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartUnfrozenMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CartUnfrozenMessagePayloadBuilder</a></span>&nbsp;<span class="element-name">cartUnfrozenBuilder</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="cartUnlockedBuilder()">
+<h3>cartUnlockedBuilder</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartUnlockedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CartUnlockedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name">cartUnlockedBuilder</span>()</div>
 </section>
 </li>
 <li>
@@ -2992,6 +3037,60 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="storeSupplyChannelsChangedBuilder()">
 <h3>storeSupplyChannelsChangedBuilder</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StoreSupplyChannelsChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StoreSupplyChannelsChangedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name">storeSupplyChannelsChangedBuilder</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="variantCreatedBuilder()">
+<h3>variantCreatedBuilder</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name">variantCreatedBuilder</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="variantDeletedBuilder()">
+<h3>variantDeletedBuilder</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantDeletedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantDeletedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name">variantDeletedBuilder</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="variantImageAddedBuilder()">
+<h3>variantImageAddedBuilder</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantImageAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantImageAddedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name">variantImageAddedBuilder</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="variantImagesSetBuilder()">
+<h3>variantImagesSetBuilder</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantImagesSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantImagesSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name">variantImagesSetBuilder</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="variantKeySetBuilder()">
+<h3>variantKeySetBuilder</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantKeySetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantKeySetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name">variantKeySetBuilder</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="variantPublishedBuilder()">
+<h3>variantPublishedBuilder</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantPublishedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantPublishedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name">variantPublishedBuilder</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="variantSkuSetBuilder()">
+<h3>variantSkuSetBuilder</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantSkuSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantSkuSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name">variantSkuSetBuilder</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="variantStagedChangesRemovedBuilder()">
+<h3>variantStagedChangesRemovedBuilder</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantStagedChangesRemovedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantStagedChangesRemovedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name">variantStagedChangesRemovedBuilder</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="variantUnpublishedBuilder()">
+<h3>variantUnpublishedBuilder</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantUnpublishedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantUnpublishedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name">variantUnpublishedBuilder</span>()</div>
 </section>
 </li>
 <li>

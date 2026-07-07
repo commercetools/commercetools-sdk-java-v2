@@ -2,7 +2,7 @@
     "dependencies": [
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-annotations",
-            "moduleVersion": "2.21",
+            "moduleVersion": "2.22",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -84,7 +84,7 @@
         },
         {
             "moduleName": "com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core",
-            "moduleVersion": "8.5.0",
+            "moduleVersion": "8.6.0",
             "moduleUrls": [
                 "https://github.com/Netflix/dgs-codegen"
             ],
@@ -329,7 +329,7 @@
         },
         {
             "moduleName": "tools.jackson.core:jackson-core",
-            "moduleVersion": "3.1.0",
+            "moduleVersion": "3.1.4",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-core"
             ],
@@ -342,7 +342,7 @@
         },
         {
             "moduleName": "tools.jackson.core:jackson-databind",
-            "moduleVersion": "3.1.0",
+            "moduleVersion": "3.1.4",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],

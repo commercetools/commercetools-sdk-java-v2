@@ -55,7 +55,7 @@
         },
         {
             "moduleName": "io.opentelemetry:opentelemetry-api",
-            "moduleVersion": "1.62.0",
+            "moduleVersion": "1.63.0",
             "moduleUrls": [
                 "https://github.com/open-telemetry/opentelemetry-java"
             ],
@@ -68,7 +68,7 @@
         },
         {
             "moduleName": "io.opentelemetry:opentelemetry-common",
-            "moduleVersion": "1.62.0",
+            "moduleVersion": "1.63.0",
             "moduleUrls": [
                 "https://github.com/open-telemetry/opentelemetry-java"
             ],
@@ -81,7 +81,7 @@
         },
         {
             "moduleName": "io.opentelemetry:opentelemetry-context",
-            "moduleVersion": "1.62.0",
+            "moduleVersion": "1.63.0",
             "moduleUrls": [
                 "https://github.com/open-telemetry/opentelemetry-java"
             ],
@@ -166,7 +166,7 @@
         },
         {
             "moduleName": "tools.jackson.core:jackson-core",
-            "moduleVersion": "3.1.0",
+            "moduleVersion": "3.1.4",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-core"
             ],
@@ -179,7 +179,7 @@
         },
         {
             "moduleName": "tools.jackson.core:jackson-databind",
-            "moduleVersion": "3.1.0",
+            "moduleVersion": "3.1.4",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],

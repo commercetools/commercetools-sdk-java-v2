@@ -231,7 +231,7 @@
         },
         {
             "moduleName": "tools.jackson.core:jackson-core",
-            "moduleVersion": "3.1.0",
+            "moduleVersion": "3.1.4",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-core"
             ],
@@ -244,7 +244,7 @@
         },
         {
             "moduleName": "tools.jackson.core:jackson-databind",
-            "moduleVersion": "3.1.0",
+            "moduleVersion": "3.1.4",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],

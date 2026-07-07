@@ -41,7 +41,16 @@
         },
         {
             "moduleName": "com.squareup.okhttp3:okhttp",
-            "moduleVersion": "5.4.0"
+            "moduleVersion": "5.4.0",
+            "moduleUrls": [
+                "https://square.github.io/okhttp/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
         },
         {
             "moduleName": "com.squareup.okhttp3:okhttp-jvm",
@@ -58,7 +67,16 @@
         },
         {
             "moduleName": "com.squareup.okio:okio",
-            "moduleVersion": "3.17.0"
+            "moduleVersion": "3.17.0",
+            "moduleUrls": [
+                "https://github.com/square/okio/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
         },
         {
             "moduleName": "com.squareup.okio:okio-jvm",
@@ -76,6 +94,9 @@
         {
             "moduleName": "dev.failsafe:failsafe",
             "moduleVersion": "3.3.2",
+            "moduleUrls": [
+                
+            ],
             "moduleLicenses": [
                 {
                     "moduleLicense": null,
@@ -102,6 +123,10 @@
                 {
                     "moduleLicense": "Eclipse Public License - v 2.0",
                     "moduleLicenseUrl": "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
+                },
+                {
+                    "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2",
+                    "moduleLicenseUrl": "https://www.gnu.org/licenses/gpl-2.0"
                 },
                 {
                     "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
@@ -131,7 +156,7 @@
             "moduleLicenses": [
                 {
                     "moduleLicense": null,
-                    "moduleLicenseUrl": "http://www.mozilla.org/MPL/MPL-1.1.html, http://www.gnu.org/licenses/lgpl-2.1.html, http://www.apache.org/licenses/"
+                    "moduleLicenseUrl": "http://www.mozilla.org/MPL/MPL-1.1.html"
                 },
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -233,5 +258,8 @@
                 }
             ]
         }
+    ],
+    "importedModules": [
+        
     ]
 }

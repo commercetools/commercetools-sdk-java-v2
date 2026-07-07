@@ -279,6 +279,10 @@ public class ErrorObjectBuilder {
         return com.commercetools.api.models.error.OverCapacityErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.OverlappingPriceValidityErrorBuilder overlappingPriceValidityBuilder() {
+        return com.commercetools.api.models.error.OverlappingPriceValidityErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.OverlappingStandalonePriceValidityErrorBuilder overlappingStandalonePriceValidityBuilder() {
         return com.commercetools.api.models.error.OverlappingStandalonePriceValidityErrorBuilder.of();
     }

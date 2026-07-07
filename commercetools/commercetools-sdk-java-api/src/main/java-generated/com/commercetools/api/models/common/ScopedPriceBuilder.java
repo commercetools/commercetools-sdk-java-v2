@@ -219,7 +219,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>Is set when a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> exists. If set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> uses the discounted value for the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddLineItemAction" rel="nofollow">Cart Price calculation</a>.</p>
-     *  <p>When a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueRelative" rel="nofollow">relative Product Discount</a> is applied and the fractional part of the discounted Price is 0.5, the discounted Price is <span>rounded half down</span> in favor of the Customer.</p>
+     *  <p>When a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueRelative" rel="nofollow">relative Product Discount</a> is applied and the fractional part of the discounted Price is 0.5, the discounted Price is <span>rounded half down</span>.</p>
      * @param builder function to build the discounted value
      * @return Builder
      */
@@ -232,7 +232,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>Is set when a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> exists. If set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> uses the discounted value for the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddLineItemAction" rel="nofollow">Cart Price calculation</a>.</p>
-     *  <p>When a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueRelative" rel="nofollow">relative Product Discount</a> is applied and the fractional part of the discounted Price is 0.5, the discounted Price is <span>rounded half down</span> in favor of the Customer.</p>
+     *  <p>When a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueRelative" rel="nofollow">relative Product Discount</a> is applied and the fractional part of the discounted Price is 0.5, the discounted Price is <span>rounded half down</span>.</p>
      * @param builder function to build the discounted value
      * @return Builder
      */
@@ -245,7 +245,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>Is set when a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> exists. If set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> uses the discounted value for the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddLineItemAction" rel="nofollow">Cart Price calculation</a>.</p>
-     *  <p>When a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueRelative" rel="nofollow">relative Product Discount</a> is applied and the fractional part of the discounted Price is 0.5, the discounted Price is <span>rounded half down</span> in favor of the Customer.</p>
+     *  <p>When a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueRelative" rel="nofollow">relative Product Discount</a> is applied and the fractional part of the discounted Price is 0.5, the discounted Price is <span>rounded half down</span>.</p>
      * @param discounted value to be set
      * @return Builder
      */
@@ -370,7 +370,7 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>Is set when a matching <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> exists. If set, the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> uses the discounted value for the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartAddLineItemAction" rel="nofollow">Cart Price calculation</a>.</p>
-     *  <p>When a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueRelative" rel="nofollow">relative Product Discount</a> is applied and the fractional part of the discounted Price is 0.5, the discounted Price is <span>rounded half down</span> in favor of the Customer.</p>
+     *  <p>When a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueRelative" rel="nofollow">relative Product Discount</a> is applied and the fractional part of the discounted Price is 0.5, the discounted Price is <span>rounded half down</span>.</p>
      * @return discounted
      */
 

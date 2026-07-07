@@ -22,6 +22,7 @@ import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>To create a new Product, send a representation that is going to become the initial <em>staged</em> and <em>current</em> representation of the new Product in the catalog. If <span>Product price selection query parameters</span> are provided, selected Prices will be added to the response. Produces the <span>ProductCreated</span> Message.</p>
+ *  <p>A failed response can return an <a href="https://docs.commercetools.com/apis/ctp:api:type:OverlappingPriceValidityError" rel="nofollow">OverlappingPriceValidity</a> error.</p>
  *
  * <hr>
  * <div class=code-example>

@@ -614,6 +614,14 @@ public interface GraphQLErrorObject {
     }
 
     /**
+     * builder for overlappingPriceValidity subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLOverlappingPriceValidityErrorBuilder overlappingPriceValidityBuilder() {
+        return com.commercetools.api.models.error.GraphQLOverlappingPriceValidityErrorBuilder.of();
+    }
+
+    /**
      * builder for overlappingStandalonePriceValidity subtype
      * @return builder
      */

@@ -52,7 +52,7 @@ public interface DirectDiscount {
 
     /**
      *  <p>Segment of the Cart that is discounted.</p>
-     *  <p>Empty when the <code>value</code> is set to <code>giftLineItem</code>.</p>
+     *  <p>Absent if the <code>value</code> is <code>giftLineItem</code>.</p>
      * @return target
      */
     @Valid
@@ -75,7 +75,7 @@ public interface DirectDiscount {
 
     /**
      *  <p>Segment of the Cart that is discounted.</p>
-     *  <p>Empty when the <code>value</code> is set to <code>giftLineItem</code>.</p>
+     *  <p>Absent if the <code>value</code> is <code>giftLineItem</code>.</p>
      * @param target value to be set
      */
 

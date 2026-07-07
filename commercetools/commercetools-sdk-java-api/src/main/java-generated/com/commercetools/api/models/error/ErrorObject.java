@@ -632,6 +632,14 @@ public interface ErrorObject {
     }
 
     /**
+     * builder for overlappingPriceValidity subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.OverlappingPriceValidityErrorBuilder overlappingPriceValidityBuilder() {
+        return com.commercetools.api.models.error.OverlappingPriceValidityErrorBuilder.of();
+    }
+
+    /**
      * builder for overlappingStandalonePriceValidity subtype
      * @return builder
      */

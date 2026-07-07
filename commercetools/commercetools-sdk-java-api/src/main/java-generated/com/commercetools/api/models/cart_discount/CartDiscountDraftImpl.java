@@ -221,6 +221,7 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
 
     /**
      *  <p>Reference to a DiscountGroup that the CartDiscount must belong to.</p>
+     *  <p>A CartDiscount can only be added to a DiscountGroup if its <code>target.type</code> is <code>lineItems</code>, <code>customLineItems</code>, <code>multiBuyLineItems</code>, <code>multiBuyCustomLineItems</code>, or <code>pattern</code>; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p>
      */
 
     public com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifier getDiscountGroup() {

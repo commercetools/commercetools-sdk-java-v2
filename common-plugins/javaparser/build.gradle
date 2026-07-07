@@ -16,4 +16,5 @@ shadowJar {
 
 dependencies {
     implementation 'com.github.javaparser:javaparser-core:3.28.2'
+    implementation 'org.codehaus.plexus:plexus-utils:4.0.3'
 }

@@ -216,7 +216,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
 
     /**
      *  <p>Segment of the Cart that is discounted.</p>
-     *  <p>Empty, if the <code>value</code> is <code>giftLineItem</code>.</p>
+     *  <p>Absent if the <code>value</code> is <code>giftLineItem</code>.</p>
      */
 
     public com.commercetools.api.models.cart_discount.CartDiscountTarget getTarget() {

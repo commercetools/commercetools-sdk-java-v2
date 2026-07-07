@@ -511,6 +511,14 @@ public class GraphQLErrorObjectQueryBuilderDsl {
             GraphQLErrorObjectQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asOverlappingPriceValidity(
+            Function<com.commercetools.api.predicates.query.error.GraphQLOverlappingPriceValidityErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLOverlappingPriceValidityErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.error.GraphQLOverlappingPriceValidityErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asOverlappingStandalonePriceValidity(
             Function<com.commercetools.api.predicates.query.error.GraphQLOverlappingStandalonePriceValidityErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLOverlappingStandalonePriceValidityErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(

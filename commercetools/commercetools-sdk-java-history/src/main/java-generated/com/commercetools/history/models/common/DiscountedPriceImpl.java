@@ -45,6 +45,10 @@ public class DiscountedPriceImpl implements DiscountedPrice, ModelBase {
 
     /**
      *  <p>Money value of the discounted price.</p>
+     *  <ul>
+     *   <li>When a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueRelative" rel="nofollow">relative Product Discount</a> applies and the fractional part of the resulting discounted price is 0.5, the discounted price is <span>rounded half down</span>.</li>
+     *   <li>When an <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueAbsolute" rel="nofollow">absolute Product Discount</a> exceeds the price of the Product Variant, the resulting discounted price is set to <code>0</code>.</li>
+     *  </ul>
      */
 
     public com.commercetools.history.models.common.TypedMoney getValue() {

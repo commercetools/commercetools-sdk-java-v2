@@ -325,7 +325,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>Segment of the Cart that is discounted.</p>
-     *  <p>Empty, if the <code>value</code> is <code>giftLineItem</code>.</p>
+     *  <p>Absent if the <code>value</code> is <code>giftLineItem</code>.</p>
      * @param target value to be set
      * @return Builder
      */
@@ -338,7 +338,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>Segment of the Cart that is discounted.</p>
-     *  <p>Empty, if the <code>value</code> is <code>giftLineItem</code>.</p>
+     *  <p>Absent if the <code>value</code> is <code>giftLineItem</code>.</p>
      * @param builder function to build the target value
      * @return Builder
      */
@@ -798,7 +798,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
 
     /**
      *  <p>Segment of the Cart that is discounted.</p>
-     *  <p>Empty, if the <code>value</code> is <code>giftLineItem</code>.</p>
+     *  <p>Absent if the <code>value</code> is <code>giftLineItem</code>.</p>
      * @return target
      */
 

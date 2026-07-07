@@ -99,7 +99,9 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Number of times the DiscountCode can be applied.</p>
-     *  <p>If not set, the DiscountCode can be applied any number of times. This field does not limit discount applications for Orders created from a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
+     *  <p>If not set, the DiscountCode can be applied any number of times.</p>
+     *  <p>If <code>maxApplicationsPerCustomer</code> is set, each application also counts toward this limit.</p>
+     *  <p>This field does not limit discount applications for Orders created from a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @return maxApplications
      */
 
@@ -108,7 +110,9 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Number of times the DiscountCode can be applied per Customer.</p>
-     *  <p>If not set, the DiscountCode can be applied any number of times. This field does not limit discount applications for Orders created from a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
+     *  <p>If not set, the DiscountCode can be applied any number of times.</p>
+     *  <p>Each use also counts toward the <code>maxApplications</code> limit.</p>
+     *  <p>This field does not limit discount applications for Orders created from a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @return maxApplicationsPerCustomer
      */
 
@@ -207,7 +211,9 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Number of times the DiscountCode can be applied.</p>
-     *  <p>If not set, the DiscountCode can be applied any number of times. This field does not limit discount applications for Orders created from a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
+     *  <p>If not set, the DiscountCode can be applied any number of times.</p>
+     *  <p>If <code>maxApplicationsPerCustomer</code> is set, each application also counts toward this limit.</p>
+     *  <p>This field does not limit discount applications for Orders created from a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @param maxApplications value to be set
      */
 
@@ -215,7 +221,9 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Number of times the DiscountCode can be applied per Customer.</p>
-     *  <p>If not set, the DiscountCode can be applied any number of times. This field does not limit discount applications for Orders created from a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
+     *  <p>If not set, the DiscountCode can be applied any number of times.</p>
+     *  <p>Each use also counts toward the <code>maxApplications</code> limit.</p>
+     *  <p>This field does not limit discount applications for Orders created from a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @param maxApplicationsPerCustomer value to be set
      */
 

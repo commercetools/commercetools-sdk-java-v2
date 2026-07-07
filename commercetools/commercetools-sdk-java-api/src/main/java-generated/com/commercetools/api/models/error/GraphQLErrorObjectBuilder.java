@@ -279,6 +279,10 @@ public class GraphQLErrorObjectBuilder {
         return com.commercetools.api.models.error.GraphQLOverCapacityErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.GraphQLOverlappingPriceValidityErrorBuilder overlappingPriceValidityBuilder() {
+        return com.commercetools.api.models.error.GraphQLOverlappingPriceValidityErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.GraphQLOverlappingStandalonePriceValidityErrorBuilder overlappingStandalonePriceValidityBuilder() {
         return com.commercetools.api.models.error.GraphQLOverlappingStandalonePriceValidityErrorBuilder.of();
     }

@@ -68,7 +68,7 @@ public class DirectDiscountBuilder implements Builder<DirectDiscount> {
 
     /**
      *  <p>Segment of the Cart that is discounted.</p>
-     *  <p>Empty when the <code>value</code> is set to <code>giftLineItem</code>.</p>
+     *  <p>Absent if the <code>value</code> is <code>giftLineItem</code>.</p>
      * @param target value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class DirectDiscountBuilder implements Builder<DirectDiscount> {
 
     /**
      *  <p>Segment of the Cart that is discounted.</p>
-     *  <p>Empty when the <code>value</code> is set to <code>giftLineItem</code>.</p>
+     *  <p>Absent if the <code>value</code> is <code>giftLineItem</code>.</p>
      * @param builder function to build the target value
      * @return Builder
      */
@@ -112,7 +112,7 @@ public class DirectDiscountBuilder implements Builder<DirectDiscount> {
 
     /**
      *  <p>Segment of the Cart that is discounted.</p>
-     *  <p>Empty when the <code>value</code> is set to <code>giftLineItem</code>.</p>
+     *  <p>Absent if the <code>value</code> is <code>giftLineItem</code>.</p>
      * @return target
      */
 

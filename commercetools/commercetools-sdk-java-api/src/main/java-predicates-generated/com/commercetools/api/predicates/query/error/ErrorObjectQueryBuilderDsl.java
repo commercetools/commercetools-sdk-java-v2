@@ -502,6 +502,13 @@ public class ErrorObjectQueryBuilderDsl {
             ErrorObjectQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asOverlappingPriceValidity(
+            Function<com.commercetools.api.predicates.query.error.OverlappingPriceValidityErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.OverlappingPriceValidityErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.error.OverlappingPriceValidityErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asOverlappingStandalonePriceValidity(
             Function<com.commercetools.api.predicates.query.error.OverlappingStandalonePriceValidityErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.OverlappingStandalonePriceValidityErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(

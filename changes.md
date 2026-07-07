@@ -4,7 +4,9 @@
 <summary>Added Type(s)</summary>
 
 - added type `BulkOperationMaxItemsExceededError`
+- added type `OverlappingPriceValidityError`
 - added type `GraphQLBulkOperationMaxItemsExceededError`
+- added type `GraphQLOverlappingPriceValidityError`
 - added type `CartLockedMessage`
 - added type `CartUnlockedMessage`
 - added type `VariantCreatedMessage`

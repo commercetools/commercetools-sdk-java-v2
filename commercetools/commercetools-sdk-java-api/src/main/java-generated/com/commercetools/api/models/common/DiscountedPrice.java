@@ -36,6 +36,10 @@ public interface DiscountedPrice {
 
     /**
      *  <p>Money value of the discounted price.</p>
+     *  <ul>
+     *   <li><p>When a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueRelative" rel="nofollow">relative Product Discount</a> applies and the fractional part of the resulting discounted price is 0.5, the discounted price is <span>rounded half down</span>.</p><p>For example, a price of &euro;1.01 (<code>centAmount: 101</code>) with a 50% discount (<code>permyriad: 5000</code>) calculates to &euro;0.505. Since the fractional half-cent is exactly 0.5, it rounds down to &euro;0.50 (<code>centAmount: 50</code>).</p></li>
+     *   <li><p>When an <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueAbsolute" rel="nofollow">absolute Product Discount</a> exceeds the price of the Product Variant, the resulting discounted price is set to <code>0</code>.</p></li>
+     *  </ul>
      * @return value
      */
     @NotNull
@@ -54,6 +58,10 @@ public interface DiscountedPrice {
 
     /**
      *  <p>Money value of the discounted price.</p>
+     *  <ul>
+     *   <li><p>When a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueRelative" rel="nofollow">relative Product Discount</a> applies and the fractional part of the resulting discounted price is 0.5, the discounted price is <span>rounded half down</span>.</p><p>For example, a price of &euro;1.01 (<code>centAmount: 101</code>) with a 50% discount (<code>permyriad: 5000</code>) calculates to &euro;0.505. Since the fractional half-cent is exactly 0.5, it rounds down to &euro;0.50 (<code>centAmount: 50</code>).</p></li>
+     *   <li><p>When an <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscountValueAbsolute" rel="nofollow">absolute Product Discount</a> exceeds the price of the Product Variant, the resulting discounted price is set to <code>0</code>.</p></li>
+     *  </ul>
      * @param value value to be set
      */
 

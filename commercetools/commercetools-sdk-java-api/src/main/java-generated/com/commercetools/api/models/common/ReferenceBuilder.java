@@ -171,6 +171,10 @@ public class ReferenceBuilder {
         return com.commercetools.api.models.type.TypeReferenceBuilder.of();
     }
 
+    public com.commercetools.api.models.variant.VariantReferenceBuilder variantBuilder() {
+        return com.commercetools.api.models.variant.VariantReferenceBuilder.of();
+    }
+
     public com.commercetools.api.models.zone.ZoneReferenceBuilder zoneBuilder() {
         return com.commercetools.api.models.zone.ZoneReferenceBuilder.of();
     }

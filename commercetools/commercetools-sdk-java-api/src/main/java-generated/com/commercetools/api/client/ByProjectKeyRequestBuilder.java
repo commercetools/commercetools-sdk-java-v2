@@ -185,6 +185,14 @@ public class ByProjectKeyRequestBuilder {
         return new ByProjectKeyTypesRequestBuilder(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyVariantProjectionsRequestBuilder variantProjections() {
+        return new ByProjectKeyVariantProjectionsRequestBuilder(apiHttpClient, projectKey);
+    }
+
+    public ByProjectKeyVariantsRequestBuilder variants() {
+        return new ByProjectKeyVariantsRequestBuilder(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyZonesRequestBuilder zones() {
         return new ByProjectKeyZonesRequestBuilder(apiHttpClient, projectKey);
     }

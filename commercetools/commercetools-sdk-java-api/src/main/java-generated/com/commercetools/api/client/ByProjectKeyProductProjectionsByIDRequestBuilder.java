@@ -26,4 +26,8 @@ public class ByProjectKeyProductProjectionsByIDRequestBuilder {
         return new ByProjectKeyProductProjectionsByIDHead(apiHttpClient, projectKey, ID);
     }
 
+    public ByProjectKeyProductProjectionsByIDVariantAttributesRequestBuilder variantAttributes() {
+        return new ByProjectKeyProductProjectionsByIDVariantAttributesRequestBuilder(apiHttpClient, projectKey, ID);
+    }
+
 }

@@ -79,6 +79,10 @@ public class ImportRequestBuilder {
         return com.commercetools.importapi.models.importrequests.TypeImportRequestBuilder.of();
     }
 
+    public com.commercetools.importapi.models.importrequests.VariantImportRequestBuilder variantBuilder() {
+        return com.commercetools.importapi.models.importrequests.VariantImportRequestBuilder.of();
+    }
+
     /**
      * factory method for an instance of ImportRequestBuilder
      * @return builder

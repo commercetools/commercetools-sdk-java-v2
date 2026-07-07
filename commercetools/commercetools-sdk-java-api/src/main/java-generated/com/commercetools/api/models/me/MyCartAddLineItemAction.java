@@ -81,7 +81,7 @@ public interface MyCartAddLineItemAction
     public String getSku();
 
     /**
-     *  <p>Number of Line Items to add to the Cart.</p>
+     *  <p>Quantity of Line Items to add to the Cart.</p>
      * @return quantity
      */
 
@@ -170,7 +170,7 @@ public interface MyCartAddLineItemAction
     public void setSku(final String sku);
 
     /**
-     *  <p>Number of Line Items to add to the Cart.</p>
+     *  <p>Quantity of Line Items to add to the Cart.</p>
      * @param quantity value to be set
      */
 

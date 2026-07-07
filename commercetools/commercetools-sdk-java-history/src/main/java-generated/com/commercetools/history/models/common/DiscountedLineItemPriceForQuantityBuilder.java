@@ -28,7 +28,7 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
     private com.commercetools.history.models.common.DiscountedLineItemPrice discountedPrice;
 
     /**
-     *  <p>Number of Line Items or Custom Line Items in the Cart.</p>
+     *  <p>Quantity of Line Items or Custom Line Items in the Cart.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
     }
 
     /**
-     *  <p>Number of Line Items or Custom Line Items in the Cart.</p>
+     *  <p>Quantity of Line Items or Custom Line Items in the Cart.</p>
      * @return quantity
      */
 

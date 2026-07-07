@@ -44,7 +44,7 @@ public class ItemStateImpl implements ItemState, ModelBase {
     }
 
     /**
-     *  <p>Number of Line Items or Custom Line Items in this State.</p>
+     *  <p>Quantity of Line Items or Custom Line Items in this State.</p>
      */
 
     public Long getQuantity() {

@@ -346,4 +346,14 @@ public class ProjectApiRoot implements Closeable, ProjectScopedApiRoot {
         catch (final Throwable ignored) {
         }
     }
+
+    @Override
+    public ByProjectKeyVariantProjectionsRequestBuilder variantProjections() {
+        return with().variantProjections();
+    }
+
+    @Override
+    public ByProjectKeyVariantsRequestBuilder variants() {
+        return with().variants();
+    }
 }

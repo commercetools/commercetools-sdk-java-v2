@@ -71,7 +71,7 @@ public interface CustomLineItemImportDraft
     public String getSlug();
 
     /**
-     *  <p>The number of items in the Custom Line Item. Can be a negative value.</p>
+     *  <p>Quantity of items in the Custom Line Item. Can be a negative value.</p>
      * @return quantity
      */
     @NotNull
@@ -161,7 +161,7 @@ public interface CustomLineItemImportDraft
     public void setSlug(final String slug);
 
     /**
-     *  <p>The number of items in the Custom Line Item. Can be a negative value.</p>
+     *  <p>Quantity of items in the Custom Line Item. Can be a negative value.</p>
      * @param quantity value to be set
      */
 

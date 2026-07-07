@@ -47,6 +47,8 @@ public class ProductDataImpl implements ProductData, ModelBase {
 
     private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
 
+    private com.commercetools.api.models.variant.VariantReference defaultVariant;
+
     /**
      * create instance with all properties
      */
@@ -62,7 +64,8 @@ public class ProductDataImpl implements ProductData, ModelBase {
             @JsonProperty("masterVariant") final com.commercetools.api.models.product.ProductVariant masterVariant,
             @JsonProperty("variants") final java.util.List<com.commercetools.api.models.product.ProductVariant> variants,
             @JsonProperty("searchKeywords") final com.commercetools.api.models.product.SearchKeywords searchKeywords,
-            @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
+            @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product.Attribute> attributes,
+            @JsonProperty("defaultVariant") final com.commercetools.api.models.variant.VariantReference defaultVariant) {
         this.name = name;
         this.categories = categories;
         this.categoryOrderHints = categoryOrderHints;
@@ -75,6 +78,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
         this.variants = variants;
         this.searchKeywords = searchKeywords;
         this.attributes = attributes;
+        this.defaultVariant = defaultVariant;
     }
 
     /**
@@ -149,6 +153,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
 
     /**
      *  <p>The Master Variant of the Product.</p>
+     *  <p>Omitted when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> instead.</p>
      */
 
     public com.commercetools.api.models.product.ProductVariant getMasterVariant() {
@@ -157,6 +162,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
 
     /**
      *  <p>Additional Product Variants.</p>
+     *  <p>Empty when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> instead.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product.ProductVariant> getVariants() {
@@ -177,6 +183,14 @@ public class ProductDataImpl implements ProductData, ModelBase {
 
     public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
         return this.attributes;
+    }
+
+    /**
+     *  <p>Reference to the default <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> of the Product. Only available for Projects with <span>productCatalogModel</span> set to <code>Modular</code>. The reference is automatically cleared when the referenced Variant is deleted; in that case, the response of the <span>Delete Variant</span> request includes a <code>DefaultVariantDeleted</code> warning.</p>
+     */
+
+    public com.commercetools.api.models.variant.VariantReference getDefaultVariant() {
+        return this.defaultVariant;
     }
 
     public void setName(final com.commercetools.api.models.common.LocalizedString name) {
@@ -241,6 +255,10 @@ public class ProductDataImpl implements ProductData, ModelBase {
         this.attributes = attributes;
     }
 
+    public void setDefaultVariant(final com.commercetools.api.models.variant.VariantReference defaultVariant) {
+        this.defaultVariant = defaultVariant;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -263,6 +281,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
                 .append(variants, that.variants)
                 .append(searchKeywords, that.searchKeywords)
                 .append(attributes, that.attributes)
+                .append(defaultVariant, that.defaultVariant)
                 .append(name, that.name)
                 .append(categories, that.categories)
                 .append(categoryOrderHints, that.categoryOrderHints)
@@ -275,6 +294,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
                 .append(variants, that.variants)
                 .append(searchKeywords, that.searchKeywords)
                 .append(attributes, that.attributes)
+                .append(defaultVariant, that.defaultVariant)
                 .isEquals();
     }
 
@@ -292,6 +312,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
                 .append(variants)
                 .append(searchKeywords)
                 .append(attributes)
+                .append(defaultVariant)
                 .toHashCode();
     }
 
@@ -309,6 +330,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
                 .append("variants", variants)
                 .append("searchKeywords", searchKeywords)
                 .append("attributes", attributes)
+                .append("defaultVariant", defaultVariant)
                 .build();
     }
 

@@ -87,6 +87,10 @@ public class ByProjectKeyRequestBuilder {
         return new ByProjectKeyStandalonePricesRequestBuilder(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyVariantsRequestBuilder variants() {
+        return new ByProjectKeyVariantsRequestBuilder(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyTypesRequestBuilder types() {
         return new ByProjectKeyTypesRequestBuilder(apiHttpClient, projectKey);
     }

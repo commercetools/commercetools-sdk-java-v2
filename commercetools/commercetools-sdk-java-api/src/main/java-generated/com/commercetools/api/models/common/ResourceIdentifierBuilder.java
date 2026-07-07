@@ -143,6 +143,10 @@ public class ResourceIdentifierBuilder implements ResourceIdentifierBuilderMixin
         return com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of();
     }
 
+    public com.commercetools.api.models.variant.VariantResourceIdentifierBuilder variantBuilder() {
+        return com.commercetools.api.models.variant.VariantResourceIdentifierBuilder.of();
+    }
+
     public com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder zoneBuilder() {
         return com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder.of();
     }

@@ -1,0 +1,167 @@
+
+package com.commercetools.api.models.variant;
+
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.common.AssetDraft;
+import com.fasterxml.jackson.annotation.*;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import tools.jackson.databind.annotation.*;
+
+/**
+ *  <p>Adds an asset to existing variant's assets.</p>
+ *
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     VariantAddAssetAction variantAddAssetAction = VariantAddAssetAction.builder()
+ *             .asset(assetBuilder -> assetBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@io.vrap.rmf.base.client.utils.json.SubType("addAsset")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@JsonDeserialize(as = VariantAddAssetActionImpl.class)
+public interface VariantAddAssetAction extends VariantUpdateAction {
+
+    /**
+     * discriminator value for VariantAddAssetAction
+     */
+    String ADD_ASSET = "addAsset";
+
+    /**
+     *  <p>If <code>true</code>, only the staged <code>assets</code> are updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
+     * @return staged
+     */
+
+    @JsonProperty("staged")
+    public Boolean getStaged();
+
+    /**
+     *  <p>Value to append.</p>
+     * @return asset
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("asset")
+    public AssetDraft getAsset();
+
+    /**
+     *  <p>Position in <code>assets</code> where the Asset should be put. When specified, the value must be between <code>0</code> and the total number of Assets minus <code>1</code>.</p>
+     * @return position
+     */
+
+    @JsonProperty("position")
+    public Integer getPosition();
+
+    /**
+     *  <p>If <code>true</code>, only the staged <code>assets</code> are updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
+     * @param staged value to be set
+     */
+
+    public void setStaged(final Boolean staged);
+
+    /**
+     *  <p>Value to append.</p>
+     * @param asset value to be set
+     */
+
+    public void setAsset(final AssetDraft asset);
+
+    /**
+     *  <p>Position in <code>assets</code> where the Asset should be put. When specified, the value must be between <code>0</code> and the total number of Assets minus <code>1</code>.</p>
+     * @param position value to be set
+     */
+
+    public void setPosition(final Integer position);
+
+    /**
+     * factory method
+     * @return instance of VariantAddAssetAction
+     */
+    public static VariantAddAssetAction of() {
+        return new VariantAddAssetActionImpl();
+    }
+
+    /**
+     * factory method to create a shallow copy VariantAddAssetAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    public static VariantAddAssetAction of(final VariantAddAssetAction template) {
+        VariantAddAssetActionImpl instance = new VariantAddAssetActionImpl();
+        instance.setStaged(template.getStaged());
+        instance.setAsset(template.getAsset());
+        instance.setPosition(template.getPosition());
+        return instance;
+    }
+
+    public VariantAddAssetAction copyDeep();
+
+    /**
+     * factory method to create a deep copy of VariantAddAssetAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static VariantAddAssetAction deepCopy(@Nullable final VariantAddAssetAction template) {
+        if (template == null) {
+            return null;
+        }
+        VariantAddAssetActionImpl instance = new VariantAddAssetActionImpl();
+        instance.setStaged(template.getStaged());
+        instance.setAsset(com.commercetools.api.models.common.AssetDraft.deepCopy(template.getAsset()));
+        instance.setPosition(template.getPosition());
+        return instance;
+    }
+
+    /**
+     * builder factory method for VariantAddAssetAction
+     * @return builder
+     */
+    public static VariantAddAssetActionBuilder builder() {
+        return VariantAddAssetActionBuilder.of();
+    }
+
+    /**
+     * create builder for VariantAddAssetAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
+    public static VariantAddAssetActionBuilder builder(final VariantAddAssetAction template) {
+        return VariantAddAssetActionBuilder.of(template);
+    }
+
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
+    default <T> T withVariantAddAssetAction(Function<VariantAddAssetAction, T> helper) {
+        return helper.apply(this);
+    }
+
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
+    public static tools.jackson.core.type.TypeReference<VariantAddAssetAction> typeReference() {
+        return new tools.jackson.core.type.TypeReference<VariantAddAssetAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<VariantAddAssetAction>";
+            }
+        };
+    }
+}

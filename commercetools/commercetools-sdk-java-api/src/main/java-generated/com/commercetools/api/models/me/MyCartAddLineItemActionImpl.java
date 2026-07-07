@@ -128,7 +128,7 @@ public class MyCartAddLineItemActionImpl implements MyCartAddLineItemAction, Mod
     }
 
     /**
-     *  <p>Number of Line Items to add to the Cart.</p>
+     *  <p>Quantity of Line Items to add to the Cart.</p>
      */
 
     public Long getQuantity() {

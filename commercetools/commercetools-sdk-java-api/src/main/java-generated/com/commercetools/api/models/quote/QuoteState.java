@@ -18,7 +18,7 @@ public interface QuoteState extends JsonEnum {
 
     /**
     <p>A state indicating that the <span>Seller</span> submitted the Quote to the <span>Buyer</span>, but the <span>Buyer</span> has not replied yet.</p>
-    <p>This is the default state.</p> */
+    <p>This is the initial state of a Quote. It is assigned when a Quote is created.</p> */
     QuoteState PENDING = QuoteStateEnum.PENDING;
     /**
     <p>A state indicating that the <span>Buyer</span> has declined the Quote.</p> */

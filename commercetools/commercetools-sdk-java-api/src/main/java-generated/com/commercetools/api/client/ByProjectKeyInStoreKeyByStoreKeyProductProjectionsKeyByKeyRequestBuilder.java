@@ -30,4 +30,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyRequestBu
             key);
     }
 
+    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyVariantAttributesRequestBuilder variantAttributes() {
+        return new ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyVariantAttributesRequestBuilder(
+            apiHttpClient, projectKey, storeKey, key);
+    }
+
 }

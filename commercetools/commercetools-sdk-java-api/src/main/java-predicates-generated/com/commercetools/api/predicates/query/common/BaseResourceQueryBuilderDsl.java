@@ -330,6 +330,13 @@ public class BaseResourceQueryBuilderDsl {
             BaseResourceQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> asVariant(
+            Function<com.commercetools.api.predicates.query.variant.VariantQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.variant.VariantQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.variant.VariantQueryBuilderDsl.of()),
+            BaseResourceQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> asZone(
             Function<com.commercetools.api.predicates.query.zone.ZoneQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.zone.ZoneQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

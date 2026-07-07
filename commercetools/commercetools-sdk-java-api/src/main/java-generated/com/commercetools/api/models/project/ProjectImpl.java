@@ -57,6 +57,8 @@ public class ProjectImpl implements Project, ModelBase {
 
     private com.commercetools.api.models.project.DiscountsConfiguration discounts;
 
+    private com.commercetools.api.models.project.ProductCatalogModel productCatalogModel;
+
     /**
      * create instance with all properties
      */
@@ -75,7 +77,8 @@ public class ProjectImpl implements Project, ModelBase {
             @JsonProperty("searchIndexing") final com.commercetools.api.models.project.SearchIndexingConfiguration searchIndexing,
             @JsonProperty("businessUnits") final com.commercetools.api.models.project.BusinessUnitConfiguration businessUnits,
             @JsonProperty("inventory") final com.commercetools.api.models.project.InventoryConfiguration inventory,
-            @JsonProperty("discounts") final com.commercetools.api.models.project.DiscountsConfiguration discounts) {
+            @JsonProperty("discounts") final com.commercetools.api.models.project.DiscountsConfiguration discounts,
+            @JsonProperty("productCatalogModel") final com.commercetools.api.models.project.ProductCatalogModel productCatalogModel) {
         this.version = version;
         this.key = key;
         this.name = name;
@@ -93,6 +96,7 @@ public class ProjectImpl implements Project, ModelBase {
         this.businessUnits = businessUnits;
         this.inventory = inventory;
         this.discounts = discounts;
+        this.productCatalogModel = productCatalogModel;
     }
 
     /**
@@ -237,6 +241,14 @@ public class ProjectImpl implements Project, ModelBase {
         return this.discounts;
     }
 
+    /**
+     *  <p>Determines how Product Variants are managed in the Project. If not set, defaults to <code>Classic</code> behavior.</p>
+     */
+
+    public com.commercetools.api.models.project.ProductCatalogModel getProductCatalogModel() {
+        return this.productCatalogModel;
+    }
+
     public void setVersion(final Long version) {
         this.version = version;
     }
@@ -319,6 +331,11 @@ public class ProjectImpl implements Project, ModelBase {
         this.discounts = discounts;
     }
 
+    public void setProductCatalogModel(
+            final com.commercetools.api.models.project.ProductCatalogModel productCatalogModel) {
+        this.productCatalogModel = productCatalogModel;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -346,6 +363,7 @@ public class ProjectImpl implements Project, ModelBase {
                 .append(businessUnits, that.businessUnits)
                 .append(inventory, that.inventory)
                 .append(discounts, that.discounts)
+                .append(productCatalogModel, that.productCatalogModel)
                 .append(version, that.version)
                 .append(key, that.key)
                 .append(name, that.name)
@@ -363,6 +381,7 @@ public class ProjectImpl implements Project, ModelBase {
                 .append(businessUnits, that.businessUnits)
                 .append(inventory, that.inventory)
                 .append(discounts, that.discounts)
+                .append(productCatalogModel, that.productCatalogModel)
                 .isEquals();
     }
 
@@ -385,6 +404,7 @@ public class ProjectImpl implements Project, ModelBase {
                 .append(businessUnits)
                 .append(inventory)
                 .append(discounts)
+                .append(productCatalogModel)
                 .toHashCode();
     }
 
@@ -407,6 +427,7 @@ public class ProjectImpl implements Project, ModelBase {
                 .append("businessUnits", businessUnits)
                 .append("inventory", inventory)
                 .append("discounts", discounts)
+                .append("productCatalogModel", productCatalogModel)
                 .build();
     }
 

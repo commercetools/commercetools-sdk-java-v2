@@ -89,7 +89,7 @@ public class OrderTransitionCustomLineItemStateActionImpl
     }
 
     /**
-     *  <p>Number of Custom Line Items that should transition <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
+     *  <p>Quantity of Custom Line Items that should transition <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      */
 
     public Long getQuantity() {

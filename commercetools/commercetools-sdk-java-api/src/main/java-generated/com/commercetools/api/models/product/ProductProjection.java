@@ -194,6 +194,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
 
     /**
      *  <p>The Master Variant of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
+     *  <p>Omitted when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variant Projections API</span> instead.</p>
      * @return masterVariant
      */
     @NotNull
@@ -203,6 +204,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
 
     /**
      *  <p>Additional Product Variants.</p>
+     *  <p>Empty when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variant Projections API</span> instead.</p>
      * @return variants
      */
     @NotNull
@@ -381,6 +383,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
 
     /**
      *  <p>The Master Variant of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
+     *  <p>Omitted when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variant Projections API</span> instead.</p>
      * @param masterVariant value to be set
      */
 
@@ -388,6 +391,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
 
     /**
      *  <p>Additional Product Variants.</p>
+     *  <p>Empty when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variant Projections API</span> instead.</p>
      * @param variants values to be set
      */
 
@@ -396,6 +400,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
 
     /**
      *  <p>Additional Product Variants.</p>
+     *  <p>Empty when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variant Projections API</span> instead.</p>
      * @param variants values to be set
      */
 

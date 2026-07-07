@@ -293,6 +293,14 @@ public interface ProductUpdateAction extends com.commercetools.api.models.Resour
     }
 
     /**
+     * builder for setDefaultVariant subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.product.ProductSetDefaultVariantActionBuilder setDefaultVariantBuilder() {
+        return com.commercetools.api.models.product.ProductSetDefaultVariantActionBuilder.of();
+    }
+
+    /**
      * builder for setDescription subtype
      * @return builder
      */

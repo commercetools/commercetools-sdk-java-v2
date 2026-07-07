@@ -356,6 +356,14 @@ public interface ResourceIdentifier extends com.commercetools.api.models.WithKey
     }
 
     /**
+     * builder for variant subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.variant.VariantResourceIdentifierBuilder variantBuilder() {
+        return com.commercetools.api.models.variant.VariantResourceIdentifierBuilder.of();
+    }
+
+    /**
      * builder for zone subtype
      * @return builder
      */

@@ -80,7 +80,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     public String getProductId();
 
     /**
-     *  <p>The number of Product Variants in the LineItem. Can be a negative value.</p>
+     *  <p>Quantity of the Product Variant. Can be a negative value.</p>
      * @return quantity
      */
     @NotNull
@@ -182,7 +182,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     public void setProductId(final String productId);
 
     /**
-     *  <p>The number of Product Variants in the LineItem. Can be a negative value.</p>
+     *  <p>Quantity of the Product Variant. Can be a negative value.</p>
      * @param quantity value to be set
      */
 

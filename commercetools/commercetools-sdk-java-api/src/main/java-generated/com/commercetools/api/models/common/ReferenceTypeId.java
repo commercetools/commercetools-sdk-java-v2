@@ -149,6 +149,9 @@ public interface ReferenceTypeId extends JsonEnum {
     <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</p> */
     ReferenceTypeId TYPE = ReferenceTypeIdEnum.TYPE;
     /**
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a>.</p> */
+    ReferenceTypeId VARIANT = ReferenceTypeIdEnum.VARIANT;
+    /**
     <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a>.</p> */
     ReferenceTypeId ZONE = ReferenceTypeIdEnum.ZONE;
 
@@ -375,6 +378,11 @@ public interface ReferenceTypeId extends JsonEnum {
          * type
          */
         TYPE("type"),
+
+        /**
+         * variant
+         */
+        VARIANT("variant"),
 
         /**
          * zone

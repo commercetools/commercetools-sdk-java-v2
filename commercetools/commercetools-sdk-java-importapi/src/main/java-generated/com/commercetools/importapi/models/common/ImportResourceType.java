@@ -65,6 +65,9 @@ public interface ImportResourceType extends JsonEnum {
     <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:StandalonePriceImport" rel="nofollow">Standalone Price import</a> resource type.</p> */
     ImportResourceType STANDALONE_PRICE = ImportResourceTypeEnum.STANDALONE_PRICE;
     /**
+    <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:VariantImport" rel="nofollow">Variant import</a> resource type.</p> */
+    ImportResourceType VARIANT = ImportResourceTypeEnum.VARIANT;
+    /**
     <p>The <a href="https://docs.commercetools.com/apis/ctp:import:type:TypeImport" rel="nofollow">Type import</a> resource type.</p> */
     ImportResourceType TYPE = ImportResourceTypeEnum.TYPE;
 
@@ -151,6 +154,11 @@ public interface ImportResourceType extends JsonEnum {
          * standalone-price
          */
         STANDALONE_PRICE("standalone-price"),
+
+        /**
+         * variant
+         */
+        VARIANT("variant"),
 
         /**
          * type

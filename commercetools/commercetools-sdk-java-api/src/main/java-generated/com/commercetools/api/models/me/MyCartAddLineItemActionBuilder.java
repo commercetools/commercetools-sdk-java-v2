@@ -105,7 +105,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     /**
-     *  <p>Number of Line Items to add to the Cart.</p>
+     *  <p>Quantity of Line Items to add to the Cart.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -360,7 +360,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     /**
-     *  <p>Number of Line Items to add to the Cart.</p>
+     *  <p>Quantity of Line Items to add to the Cart.</p>
      * @return quantity
      */
 

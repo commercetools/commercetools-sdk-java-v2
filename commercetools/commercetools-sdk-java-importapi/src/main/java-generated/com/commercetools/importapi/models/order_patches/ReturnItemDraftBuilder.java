@@ -38,7 +38,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     private com.commercetools.importapi.models.order_patches.ReturnShipmentState shipmentState;
 
     /**
-     *  <p>Number of Line Items or Custom Line Items to return.</p>
+     *  <p>Quantity of Line Items or Custom Line Items to return.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -96,7 +96,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     *  <p>Number of Line Items or Custom Line Items to return.</p>
+     *  <p>Quantity of Line Items or Custom Line Items to return.</p>
      * @return quantity
      */
 

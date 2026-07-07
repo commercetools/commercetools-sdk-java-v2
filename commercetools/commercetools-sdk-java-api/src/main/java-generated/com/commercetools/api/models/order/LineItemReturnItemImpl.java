@@ -94,7 +94,7 @@ public class LineItemReturnItemImpl implements LineItemReturnItem, ModelBase {
     }
 
     /**
-     *  <p>Number of Line Items returned.</p>
+     *  <p>Quantity of Line Items returned.</p>
      */
 
     public Long getQuantity() {

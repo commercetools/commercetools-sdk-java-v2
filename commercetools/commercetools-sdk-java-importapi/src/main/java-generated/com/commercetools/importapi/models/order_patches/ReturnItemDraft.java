@@ -33,7 +33,7 @@ import tools.jackson.databind.annotation.*;
 public interface ReturnItemDraft extends io.vrap.rmf.base.client.Draft<ReturnItemDraft> {
 
     /**
-     *  <p>Number of Line Items or Custom Line Items to return.</p>
+     *  <p>Quantity of Line Items or Custom Line Items to return.</p>
      * @return quantity
      */
     @NotNull
@@ -75,7 +75,7 @@ public interface ReturnItemDraft extends io.vrap.rmf.base.client.Draft<ReturnIte
     public ReturnShipmentState getShipmentState();
 
     /**
-     *  <p>Number of Line Items or Custom Line Items to return.</p>
+     *  <p>Quantity of Line Items or Custom Line Items to return.</p>
      * @param quantity value to be set
      */
 

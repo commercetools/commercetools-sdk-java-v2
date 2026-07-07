@@ -128,6 +128,11 @@ public class ProjectApiRoot implements Closeable, ProjectScopedApiRoot {
     }
 
     @Override
+    public ByProjectKeyVariantsRequestBuilder variants() {
+        return with().variants();
+    }
+
+    @Override
     public void close() {
         if (apiHttpClient == null) {
             return;

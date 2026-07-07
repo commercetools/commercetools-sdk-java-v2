@@ -1289,6 +1289,42 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.StoreSupplyChannelsChangedMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.VariantCreatedMessagePayloadBuilder variantCreatedBuilder() {
+        return com.commercetools.api.models.message.VariantCreatedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.VariantDeletedMessagePayloadBuilder variantDeletedBuilder() {
+        return com.commercetools.api.models.message.VariantDeletedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.VariantImageAddedMessagePayloadBuilder variantImageAddedBuilder() {
+        return com.commercetools.api.models.message.VariantImageAddedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.VariantImagesSetMessagePayloadBuilder variantImagesSetBuilder() {
+        return com.commercetools.api.models.message.VariantImagesSetMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.VariantKeySetMessagePayloadBuilder variantKeySetBuilder() {
+        return com.commercetools.api.models.message.VariantKeySetMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.VariantPublishedMessagePayloadBuilder variantPublishedBuilder() {
+        return com.commercetools.api.models.message.VariantPublishedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.VariantSkuSetMessagePayloadBuilder variantSkuSetBuilder() {
+        return com.commercetools.api.models.message.VariantSkuSetMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.VariantStagedChangesRemovedMessagePayloadBuilder variantStagedChangesRemovedBuilder() {
+        return com.commercetools.api.models.message.VariantStagedChangesRemovedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.VariantUnpublishedMessagePayloadBuilder variantUnpublishedBuilder() {
+        return com.commercetools.api.models.message.VariantUnpublishedMessagePayloadBuilder.of();
+    }
+
     /**
      * factory method for an instance of MessagePayloadBuilder
      * @return builder

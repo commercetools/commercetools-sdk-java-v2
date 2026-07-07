@@ -80,6 +80,11 @@ public class ByProjectKeyInStoreKeyByStoreKeyRequestBuilder {
         return new ByProjectKeyInStoreKeyByStoreKeyStagedQuotesRequestBuilder(apiHttpClient, projectKey, storeKey);
     }
 
+    public ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsRequestBuilder variantProjections() {
+        return new ByProjectKeyInStoreKeyByStoreKeyVariantProjectionsRequestBuilder(apiHttpClient, projectKey,
+            storeKey);
+    }
+
     public ByProjectKeyInStoreKeyByStoreKeyLoginRequestBuilder login() {
         return new ByProjectKeyInStoreKeyByStoreKeyLoginRequestBuilder(apiHttpClient, projectKey, storeKey);
     }

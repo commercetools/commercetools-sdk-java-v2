@@ -587,6 +587,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>The Master Variant of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
+     *  <p>Omitted when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variant Projections API</span> instead.</p>
      * @param builder function to build the masterVariant value
      * @return Builder
      */
@@ -599,6 +600,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>The Master Variant of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
+     *  <p>Omitted when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variant Projections API</span> instead.</p>
      * @param builder function to build the masterVariant value
      * @return Builder
      */
@@ -611,6 +613,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>The Master Variant of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
+     *  <p>Omitted when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variant Projections API</span> instead.</p>
      * @param masterVariant value to be set
      * @return Builder
      */
@@ -623,6 +626,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Additional Product Variants.</p>
+     *  <p>Empty when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variant Projections API</span> instead.</p>
      * @param variants value to be set
      * @return Builder
      */
@@ -634,6 +638,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Additional Product Variants.</p>
+     *  <p>Empty when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variant Projections API</span> instead.</p>
      * @param variants value to be set
      * @return Builder
      */
@@ -646,6 +651,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Additional Product Variants.</p>
+     *  <p>Empty when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variant Projections API</span> instead.</p>
      * @param variants value to be set
      * @return Builder
      */
@@ -661,6 +667,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Additional Product Variants.</p>
+     *  <p>Empty when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variant Projections API</span> instead.</p>
      * @param builder function to build the variants value
      * @return Builder
      */
@@ -676,6 +683,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Additional Product Variants.</p>
+     *  <p>Empty when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variant Projections API</span> instead.</p>
      * @param builder function to build the variants value
      * @return Builder
      */
@@ -689,6 +697,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Additional Product Variants.</p>
+     *  <p>Empty when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variant Projections API</span> instead.</p>
      * @param builder function to build the variants value
      * @return Builder
      */
@@ -700,6 +709,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Additional Product Variants.</p>
+     *  <p>Empty when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variant Projections API</span> instead.</p>
      * @param builder function to build the variants value
      * @return Builder
      */
@@ -1084,6 +1094,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>The Master Variant of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
+     *  <p>Omitted when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variant Projections API</span> instead.</p>
      * @return masterVariant
      */
 
@@ -1093,6 +1104,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Additional Product Variants.</p>
+     *  <p>Empty when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variant Projections API</span> instead.</p>
      * @return variants
      */
 

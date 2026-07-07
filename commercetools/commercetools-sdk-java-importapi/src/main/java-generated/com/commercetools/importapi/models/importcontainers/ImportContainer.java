@@ -19,6 +19,7 @@ import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Contains the resources to be imported. Unless <code>resourceType</code> is specified, the ImportContainer can import all of the supported <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportResourceType" rel="nofollow">ImportResourceTypes</a>.</p>
+ *  <p>If the container was created <strong>without</strong> a <code>retentionPolicy</code>, it <strong>expires 72 hours</strong> after <code>createdAt</code>. If a <code>TimeToLiveRetentionPolicy</code> was set, expiry follows the configured <code>timeToLive</code> (between the minimum and maximum allowed values). The <code>expiresAt</code> field holds the calculated deletion time.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -62,7 +63,7 @@ public interface ImportContainer {
     public Long getVersion();
 
     /**
-     *  <p>The retention policy of the ImportContainer.</p>
+     *  <p>Retention policy for this ImportContainer. If not set, the ImportContainer will expire <strong>72 hours</strong> after creation.</p>
      * @return retentionPolicy
      */
     @Valid
@@ -86,7 +87,7 @@ public interface ImportContainer {
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     *  <p>Date and time (UTC) the ImportContainer is automatically deleted. Only present if a <code>retentionPolicy</code> is set. ImportContainers without <code>expiresAt</code> are permanent until <span>manually deleted</span>.</p>
+     *  <p>Date and time (UTC) when the ImportContainer is automatically deleted. If no <code>retentionPolicy</code> was set at creation, this is <strong>72 hours</strong> after <code>createdAt</code>. If a <code>TimeToLiveRetentionPolicy</code> was set, it is derived from <code>timeToLive</code>.</p>
      * @return expiresAt
      */
 
@@ -115,7 +116,7 @@ public interface ImportContainer {
     public void setVersion(final Long version);
 
     /**
-     *  <p>The retention policy of the ImportContainer.</p>
+     *  <p>Retention policy for this ImportContainer. If not set, the ImportContainer will expire <strong>72 hours</strong> after creation.</p>
      * @param retentionPolicy value to be set
      */
 
@@ -136,7 +137,7 @@ public interface ImportContainer {
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
     /**
-     *  <p>Date and time (UTC) the ImportContainer is automatically deleted. Only present if a <code>retentionPolicy</code> is set. ImportContainers without <code>expiresAt</code> are permanent until <span>manually deleted</span>.</p>
+     *  <p>Date and time (UTC) when the ImportContainer is automatically deleted. If no <code>retentionPolicy</code> was set at creation, this is <strong>72 hours</strong> after <code>createdAt</code>. If a <code>TimeToLiveRetentionPolicy</code> was set, it is derived from <code>timeToLive</code>.</p>
      * @param expiresAt value to be set
      */
 

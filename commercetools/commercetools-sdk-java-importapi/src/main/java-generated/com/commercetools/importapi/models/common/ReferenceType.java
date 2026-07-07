@@ -68,6 +68,9 @@ public interface ReferenceType extends JsonEnum {
     <p>References a product variant.</p> */
     ReferenceType PRODUCT_VARIANT = ReferenceTypeEnum.PRODUCT_VARIANT;
     /**
+    <p>References a variant.</p> */
+    ReferenceType VARIANT = ReferenceTypeEnum.VARIANT;
+    /**
     <p>References a shipping method.</p> */
     ReferenceType SHIPPING_METHOD = ReferenceTypeEnum.SHIPPING_METHOD;
     /**
@@ -171,6 +174,11 @@ public interface ReferenceType extends JsonEnum {
          * product-variant
          */
         PRODUCT_VARIANT("product-variant"),
+
+        /**
+         * variant
+         */
+        VARIANT("variant"),
 
         /**
          * shipping-method

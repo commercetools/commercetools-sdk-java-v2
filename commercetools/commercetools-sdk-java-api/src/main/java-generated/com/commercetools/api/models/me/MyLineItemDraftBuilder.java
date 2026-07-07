@@ -101,7 +101,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>Number of Product Variants to add to the Cart.</p>
+     *  <p>Quantity of Product Variants to add to the Cart.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -112,7 +112,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>Date and time (UTC) the Product Variant is added to the Cart. If not set, it defaults to the current date and time.</p>
+     *  <p>Date and time (UTC) the Product Variant was added to the Cart. If not set, it defaults to the current date and time.</p>
      *  <p>Optional for backwards compatibility reasons.</p>
      * @param addedAt value to be set
      * @return Builder
@@ -354,7 +354,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>Number of Product Variants to add to the Cart.</p>
+     *  <p>Quantity of Product Variants to add to the Cart.</p>
      * @return quantity
      */
 
@@ -364,7 +364,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
-     *  <p>Date and time (UTC) the Product Variant is added to the Cart. If not set, it defaults to the current date and time.</p>
+     *  <p>Date and time (UTC) the Product Variant was added to the Cart. If not set, it defaults to the current date and time.</p>
      *  <p>Optional for backwards compatibility reasons.</p>
      * @return addedAt
      */

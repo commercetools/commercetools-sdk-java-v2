@@ -76,7 +76,7 @@ public class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarget, Mod
     }
 
     /**
-     *  <p>Number of Line Items to be present in order to trigger an application of this Discount.</p>
+     *  <p>Quantity of Line Items required to trigger an application of this Discount.</p>
      */
 
     public Integer getTriggerQuantity() {
@@ -84,7 +84,7 @@ public class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarget, Mod
     }
 
     /**
-     *  <p>Number of Line Items that are discounted per application of this Discount. It must be less than or equal to the <code>triggerQuantity</code>.</p>
+     *  <p>Quantity of Line Items discounted per application of this Discount. It must be less than or equal to the <code>triggerQuantity</code>.</p>
      */
 
     public Integer getDiscountedQuantity() {

@@ -88,7 +88,7 @@ public class StagedOrderTransitionLineItemStateActionImpl
     }
 
     /**
-     *  <p>Number of Line Items that should transition <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
+     *  <p>Quantity of Line Items that should transition <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p>
      */
 
     public Long getQuantity() {

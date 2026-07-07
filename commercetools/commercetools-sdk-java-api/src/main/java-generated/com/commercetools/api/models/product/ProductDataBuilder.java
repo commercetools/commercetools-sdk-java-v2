@@ -59,6 +59,9 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
 
+    @Nullable
+    private com.commercetools.api.models.variant.VariantReference defaultVariant;
+
     /**
      *  <p>Name of the Product.</p>
      * @param builder function to build the name value
@@ -399,6 +402,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>The Master Variant of the Product.</p>
+     *  <p>Omitted when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> instead.</p>
      * @param builder function to build the masterVariant value
      * @return Builder
      */
@@ -411,6 +415,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>The Master Variant of the Product.</p>
+     *  <p>Omitted when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> instead.</p>
      * @param builder function to build the masterVariant value
      * @return Builder
      */
@@ -423,6 +428,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>The Master Variant of the Product.</p>
+     *  <p>Omitted when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> instead.</p>
      * @param masterVariant value to be set
      * @return Builder
      */
@@ -434,6 +440,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Additional Product Variants.</p>
+     *  <p>Empty when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> instead.</p>
      * @param variants value to be set
      * @return Builder
      */
@@ -445,6 +452,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Additional Product Variants.</p>
+     *  <p>Empty when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> instead.</p>
      * @param variants value to be set
      * @return Builder
      */
@@ -457,6 +465,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Additional Product Variants.</p>
+     *  <p>Empty when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> instead.</p>
      * @param variants value to be set
      * @return Builder
      */
@@ -471,6 +480,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Additional Product Variants.</p>
+     *  <p>Empty when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> instead.</p>
      * @param builder function to build the variants value
      * @return Builder
      */
@@ -486,6 +496,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Additional Product Variants.</p>
+     *  <p>Empty when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> instead.</p>
      * @param builder function to build the variants value
      * @return Builder
      */
@@ -499,6 +510,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Additional Product Variants.</p>
+     *  <p>Empty when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> instead.</p>
      * @param builder function to build the variants value
      * @return Builder
      */
@@ -510,6 +522,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Additional Product Variants.</p>
+     *  <p>Empty when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> instead.</p>
      * @param builder function to build the variants value
      * @return Builder
      */
@@ -642,6 +655,42 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
+     *  <p>Reference to the default <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> of the Product. Only available for Projects with <span>productCatalogModel</span> set to <code>Modular</code>. The reference is automatically cleared when the referenced Variant is deleted; in that case, the response of the <span>Delete Variant</span> request includes a <code>DefaultVariantDeleted</code> warning.</p>
+     * @param builder function to build the defaultVariant value
+     * @return Builder
+     */
+
+    public ProductDataBuilder defaultVariant(
+            Function<com.commercetools.api.models.variant.VariantReferenceBuilder, com.commercetools.api.models.variant.VariantReferenceBuilder> builder) {
+        this.defaultVariant = builder.apply(com.commercetools.api.models.variant.VariantReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the default <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> of the Product. Only available for Projects with <span>productCatalogModel</span> set to <code>Modular</code>. The reference is automatically cleared when the referenced Variant is deleted; in that case, the response of the <span>Delete Variant</span> request includes a <code>DefaultVariantDeleted</code> warning.</p>
+     * @param builder function to build the defaultVariant value
+     * @return Builder
+     */
+
+    public ProductDataBuilder withDefaultVariant(
+            Function<com.commercetools.api.models.variant.VariantReferenceBuilder, com.commercetools.api.models.variant.VariantReference> builder) {
+        this.defaultVariant = builder.apply(com.commercetools.api.models.variant.VariantReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the default <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> of the Product. Only available for Projects with <span>productCatalogModel</span> set to <code>Modular</code>. The reference is automatically cleared when the referenced Variant is deleted; in that case, the response of the <span>Delete Variant</span> request includes a <code>DefaultVariantDeleted</code> warning.</p>
+     * @param defaultVariant value to be set
+     * @return Builder
+     */
+
+    public ProductDataBuilder defaultVariant(
+            @Nullable final com.commercetools.api.models.variant.VariantReference defaultVariant) {
+        this.defaultVariant = defaultVariant;
+        return this;
+    }
+
+    /**
      *  <p>Name of the Product.</p>
      * @return name
      */
@@ -720,6 +769,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>The Master Variant of the Product.</p>
+     *  <p>Omitted when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> instead.</p>
      * @return masterVariant
      */
 
@@ -729,6 +779,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Additional Product Variants.</p>
+     *  <p>Empty when the Project has the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogModel" rel="nofollow">ProductCatalogModel</a> <code>Modular</code>. Use the <span>Variants API</span> instead.</p>
      * @return variants
      */
 
@@ -755,6 +806,16 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
+     *  <p>Reference to the default <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> of the Product. Only available for Projects with <span>productCatalogModel</span> set to <code>Modular</code>. The reference is automatically cleared when the referenced Variant is deleted; in that case, the response of the <span>Delete Variant</span> request includes a <code>DefaultVariantDeleted</code> warning.</p>
+     * @return defaultVariant
+     */
+
+    @Nullable
+    public com.commercetools.api.models.variant.VariantReference getDefaultVariant() {
+        return this.defaultVariant;
+    }
+
+    /**
      * builds ProductData with checking for non-null required values
      * @return ProductData
      */
@@ -767,7 +828,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
         Objects.requireNonNull(searchKeywords, ProductData.class + ": searchKeywords is missing");
         Objects.requireNonNull(attributes, ProductData.class + ": attributes is missing");
         return new ProductDataImpl(name, categories, categoryOrderHints, description, slug, metaTitle, metaDescription,
-            metaKeywords, masterVariant, variants, searchKeywords, attributes);
+            metaKeywords, masterVariant, variants, searchKeywords, attributes, defaultVariant);
     }
 
     /**
@@ -776,7 +837,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
      */
     public ProductData buildUnchecked() {
         return new ProductDataImpl(name, categories, categoryOrderHints, description, slug, metaTitle, metaDescription,
-            metaKeywords, masterVariant, variants, searchKeywords, attributes);
+            metaKeywords, masterVariant, variants, searchKeywords, attributes, defaultVariant);
     }
 
     /**
@@ -806,6 +867,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
         builder.variants = template.getVariants();
         builder.searchKeywords = template.getSearchKeywords();
         builder.attributes = template.getAttributes();
+        builder.defaultVariant = template.getDefaultVariant();
         return builder;
     }
 

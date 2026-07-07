@@ -38,7 +38,7 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
     }
 
     /**
-     *  <p>Number of Line Items or Custom Line Items delivered.</p>
+     *  <p>Quantity of Line Items or Custom Line Items delivered.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -58,7 +58,7 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
     }
 
     /**
-     *  <p>Number of Line Items or Custom Line Items delivered.</p>
+     *  <p>Quantity of Line Items or Custom Line Items delivered.</p>
      * @return quantity
      */
 

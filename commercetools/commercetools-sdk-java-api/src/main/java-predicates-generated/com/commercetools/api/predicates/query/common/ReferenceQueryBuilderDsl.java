@@ -313,6 +313,13 @@ public class ReferenceQueryBuilderDsl {
             ReferenceQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ReferenceQueryBuilderDsl> asVariant(
+            Function<com.commercetools.api.predicates.query.variant.VariantReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.variant.VariantReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.variant.VariantReferenceQueryBuilderDsl.of()),
+            ReferenceQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ReferenceQueryBuilderDsl> asZone(
             Function<com.commercetools.api.predicates.query.zone.ZoneReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.zone.ZoneReferenceQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

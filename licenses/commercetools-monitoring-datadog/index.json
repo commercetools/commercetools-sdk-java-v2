@@ -2,7 +2,7 @@
     "dependencies": [
         {
             "moduleName": "com.datadoghq:datadog-api-client",
-            "moduleVersion": "2.55.0",
+            "moduleVersion": "2.56.0",
             "moduleUrls": [
                 "https://github.com/DataDog/datadog-api-client-java"
             ],
@@ -1079,7 +1079,7 @@
         },
         {
             "moduleName": "tools.jackson.core:jackson-core",
-            "moduleVersion": "3.1.0",
+            "moduleVersion": "3.1.4",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-core"
             ],
@@ -1092,7 +1092,7 @@
         },
         {
             "moduleName": "tools.jackson.core:jackson-databind",
-            "moduleVersion": "3.1.0",
+            "moduleVersion": "3.1.4",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],

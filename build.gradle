@@ -222,8 +222,8 @@ def documentationProjects= [
         ":commercetools:commercetools-monitoring-newrelic",
         ":commercetools:commercetools-monitoring-opentelemetry",
         ":commercetools:commercetools-monitoring-datadog",
-        ":commercetools:commercetools-okhttp-client3",
         ":commercetools:commercetools-okhttp-client4",
+        ":commercetools:commercetools-okhttp-client5",
         ":commercetools:commercetools-reactornetty-client",
         //":commercetools:commercetools-sdk-compat-v1",
         ":commercetools:commercetools-sdk-java-api",
@@ -384,7 +384,6 @@ tasks.register("writeVersionToExamples") {
         }
         ant.replaceregexp(match: '<commercetools.version>.+</commercetools.version>', replace: "<commercetools.version>${globalVersion}</commercetools.version>", flags:'g', byline:true) {
             fileset(dir: projectDir) {
-                include(name: 'examples/maven-okhttp3/pom.xml')
                 include(name: 'examples/maven-okhttp4/pom.xml')
                 include(name: 'examples/split-packages/pom.xml')
             }

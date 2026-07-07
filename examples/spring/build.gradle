@@ -41,7 +41,7 @@ ext {
 
 dependencies {
     implementation "com.commercetools.sdk:commercetools-sdk-java-api:${versions.commercetools}"
-    implementation "com.commercetools.sdk:commercetools-okhttp-client3:${versions.commercetools}"
+    implementation "com.commercetools.sdk:commercetools-okhttp-client4:${versions.commercetools}"
     implementation 'jakarta.inject:jakarta.inject-api:2.0.1'
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-security'

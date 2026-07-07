@@ -152,7 +152,7 @@ public class CtOkHttp5Client extends HttpClientBase {
         }
         catch (NoSuchMethodError error) {
             throw new IllegalStateException(
-                "Request class is not compatible with this HTTP client implementation. Probably a wrong http client package is used. Please try \"commercetools-okhttp-client3\" instead");
+                "Request class is not compatible with this HTTP client implementation. Probably a wrong http client package is used. Please try \"commercetools-okhttp-client4\" instead");
         }
         return httpRequestBuilder.build();
     }

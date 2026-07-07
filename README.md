@@ -66,8 +66,8 @@ dependencies {
 ### Modules
 
 * `commercetools-http-client`: alias for commercetools-async-http-client
-* `commercetools-okhttp-client3`: uses OkHttp client 3.0
-* `commercetools-okhttp-client4`: uses OkHttp client 4.0
+* `commercetools-okhttp-client4`: uses OkHttp client 4.x
+* `commercetools-okhttp-client5`: uses OkHttp client 5.x
 * `commercetools-apachehttp-client`: uses Apache HTTP async client 5.1
 * `commercetools-async-http-client`: uses Async HTTP client 2.12
 * `commercetools-reactornetty-client`: uses Reactor Netty HTTP Client

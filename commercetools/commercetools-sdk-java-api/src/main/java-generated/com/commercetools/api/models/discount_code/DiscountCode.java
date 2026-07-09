@@ -15,6 +15,7 @@ import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
 
@@ -38,6 +39,7 @@ import tools.jackson.databind.annotation.*;
  *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .code("{code}")
  *             .plusCartDiscounts(cartDiscountsBuilder -> cartDiscountsBuilder)
+ *             .plusStores(storesBuilder -> storesBuilder)
  *             .isActive(true)
  *             .plusReferences(referencesBuilder -> referencesBuilder)
  *             .plusGroups(groupsBuilder -> groupsBuilder)
@@ -141,6 +143,16 @@ public interface DiscountCode
     @Valid
     @JsonProperty("cartDiscounts")
     public List<CartDiscountReference> getCartDiscounts();
+
+    /**
+     *  <p>Reference to the Stores the DiscountCode is associated with, derived from the <code>stores</code> field of each referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a>.</p>
+     *  <p>The value of this field is <span>eventually consistent</span>.</p>
+     * @return stores
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("stores")
+    public List<StoreKeyReference> getStores();
 
     /**
      *  <p>DiscountCode can only be applied to Carts that match this predicate.</p>
@@ -315,6 +327,23 @@ public interface DiscountCode
     public void setCartDiscounts(final List<CartDiscountReference> cartDiscounts);
 
     /**
+     *  <p>Reference to the Stores the DiscountCode is associated with, derived from the <code>stores</code> field of each referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a>.</p>
+     *  <p>The value of this field is <span>eventually consistent</span>.</p>
+     * @param stores values to be set
+     */
+
+    @JsonIgnore
+    public void setStores(final StoreKeyReference... stores);
+
+    /**
+     *  <p>Reference to the Stores the DiscountCode is associated with, derived from the <code>stores</code> field of each referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a>.</p>
+     *  <p>The value of this field is <span>eventually consistent</span>.</p>
+     * @param stores values to be set
+     */
+
+    public void setStores(final List<StoreKeyReference> stores);
+
+    /**
      *  <p>DiscountCode can only be applied to Carts that match this predicate.</p>
      * @param cartPredicate value to be set
      */
@@ -432,6 +461,7 @@ public interface DiscountCode
         instance.setDescription(template.getDescription());
         instance.setCode(template.getCode());
         instance.setCartDiscounts(template.getCartDiscounts());
+        instance.setStores(template.getStores());
         instance.setCartPredicate(template.getCartPredicate());
         instance.setIsActive(template.getIsActive());
         instance.setReferences(template.getReferences());
@@ -473,6 +503,11 @@ public interface DiscountCode
         instance.setCartDiscounts(Optional.ofNullable(template.getCartDiscounts())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.cart_discount.CartDiscountReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setStores(Optional.ofNullable(template.getStores())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.store.StoreKeyReference::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setCartPredicate(template.getCartPredicate());

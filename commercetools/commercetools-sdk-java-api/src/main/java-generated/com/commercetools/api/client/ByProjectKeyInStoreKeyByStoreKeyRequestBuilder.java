@@ -34,6 +34,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyRequestBuilder {
         return new ByProjectKeyInStoreKeyByStoreKeyCustomersRequestBuilder(apiHttpClient, projectKey, storeKey);
     }
 
+    public ByProjectKeyInStoreKeyByStoreKeyDiscountCodesRequestBuilder discountCodes() {
+        return new ByProjectKeyInStoreKeyByStoreKeyDiscountCodesRequestBuilder(apiHttpClient, projectKey, storeKey);
+    }
+
     public ByProjectKeyInStoreKeyByStoreKeyMeRequestBuilder me() {
         return new ByProjectKeyInStoreKeyByStoreKeyMeRequestBuilder(apiHttpClient, projectKey, storeKey);
     }

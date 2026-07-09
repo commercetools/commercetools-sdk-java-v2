@@ -45,6 +45,8 @@ public class DiscountCodeImpl implements DiscountCode, ModelBase {
 
     private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> cartDiscounts;
 
+    private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
+
     private String cartPredicate;
 
     private Boolean isActive;
@@ -79,6 +81,7 @@ public class DiscountCodeImpl implements DiscountCode, ModelBase {
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,
             @JsonProperty("code") final String code,
             @JsonProperty("cartDiscounts") final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> cartDiscounts,
+            @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores,
             @JsonProperty("cartPredicate") final String cartPredicate, @JsonProperty("isActive") final Boolean isActive,
             @JsonProperty("references") final java.util.List<com.commercetools.api.models.common.Reference> references,
             @JsonProperty("maxApplications") final Long maxApplications,
@@ -99,6 +102,7 @@ public class DiscountCodeImpl implements DiscountCode, ModelBase {
         this.description = description;
         this.code = code;
         this.cartDiscounts = cartDiscounts;
+        this.stores = stores;
         this.cartPredicate = cartPredicate;
         this.isActive = isActive;
         this.references = references;
@@ -203,6 +207,15 @@ public class DiscountCodeImpl implements DiscountCode, ModelBase {
 
     public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> getCartDiscounts() {
         return this.cartDiscounts;
+    }
+
+    /**
+     *  <p>Reference to the Stores the DiscountCode is associated with, derived from the <code>stores</code> field of each referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a>.</p>
+     *  <p>The value of this field is <span>eventually consistent</span>.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {
+        return this.stores;
     }
 
     /**
@@ -341,6 +354,14 @@ public class DiscountCodeImpl implements DiscountCode, ModelBase {
         this.cartDiscounts = cartDiscounts;
     }
 
+    public void setStores(final com.commercetools.api.models.store.StoreKeyReference... stores) {
+        this.stores = new ArrayList<>(Arrays.asList(stores));
+    }
+
+    public void setStores(final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores) {
+        this.stores = stores;
+    }
+
     public void setCartPredicate(final String cartPredicate) {
         this.cartPredicate = cartPredicate;
     }
@@ -410,6 +431,7 @@ public class DiscountCodeImpl implements DiscountCode, ModelBase {
                 .append(description, that.description)
                 .append(code, that.code)
                 .append(cartDiscounts, that.cartDiscounts)
+                .append(stores, that.stores)
                 .append(cartPredicate, that.cartPredicate)
                 .append(isActive, that.isActive)
                 .append(references, that.references)
@@ -431,6 +453,7 @@ public class DiscountCodeImpl implements DiscountCode, ModelBase {
                 .append(description, that.description)
                 .append(code, that.code)
                 .append(cartDiscounts, that.cartDiscounts)
+                .append(stores, that.stores)
                 .append(cartPredicate, that.cartPredicate)
                 .append(isActive, that.isActive)
                 .append(references, that.references)
@@ -457,6 +480,7 @@ public class DiscountCodeImpl implements DiscountCode, ModelBase {
                 .append(description)
                 .append(code)
                 .append(cartDiscounts)
+                .append(stores)
                 .append(cartPredicate)
                 .append(isActive)
                 .append(references)
@@ -483,6 +507,7 @@ public class DiscountCodeImpl implements DiscountCode, ModelBase {
                 .append("description", description)
                 .append("code", code)
                 .append("cartDiscounts", cartDiscounts)
+                .append("stores", stores)
                 .append("cartPredicate", cartPredicate)
                 .append("isActive", isActive)
                 .append("references", references)

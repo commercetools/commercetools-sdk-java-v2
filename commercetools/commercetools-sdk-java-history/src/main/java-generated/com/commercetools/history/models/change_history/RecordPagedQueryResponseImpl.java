@@ -70,7 +70,7 @@ public class RecordPagedQueryResponseImpl implements RecordPagedQueryResponse, M
     }
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation and not <span>strongly consistent</span>.</p>
+     *  <p>Total number of results matching the query. This number is an estimation and not <span>strongly consistent</span>. Returned only when <code>withTotal</code> is set to <code>true</code> on the query.</p>
      */
 
     public Integer getTotal() {

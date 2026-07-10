@@ -4,6 +4,8 @@ package com.commercetools.history.models.change_history;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,7 +18,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     RecordPagedQueryResponse recordPagedQueryResponse = RecordPagedQueryResponse.builder()
  *             .limit(1)
  *             .count(1)
- *             .total(1)
  *             .offset(1)
  *             .plusResults(resultsBuilder -> resultsBuilder)
  *             .build()
@@ -30,6 +31,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
 
     private Integer count;
 
+    @Nullable
     private Integer total;
 
     private Integer offset;
@@ -59,12 +61,12 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation and not <span>strongly consistent</span>.</p>
+     *  <p>Total number of results matching the query. This number is an estimation and not <span>strongly consistent</span>. Returned only when <code>withTotal</code> is set to <code>true</code> on the query.</p>
      * @param total value to be set
      * @return Builder
      */
 
-    public RecordPagedQueryResponseBuilder total(final Integer total) {
+    public RecordPagedQueryResponseBuilder total(@Nullable final Integer total) {
         this.total = total;
         return this;
     }
@@ -188,10 +190,11 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation and not <span>strongly consistent</span>.</p>
+     *  <p>Total number of results matching the query. This number is an estimation and not <span>strongly consistent</span>. Returned only when <code>withTotal</code> is set to <code>true</code> on the query.</p>
      * @return total
      */
 
+    @Nullable
     public Integer getTotal() {
         return this.total;
     }
@@ -221,7 +224,6 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     public RecordPagedQueryResponse build() {
         Objects.requireNonNull(limit, RecordPagedQueryResponse.class + ": limit is missing");
         Objects.requireNonNull(count, RecordPagedQueryResponse.class + ": count is missing");
-        Objects.requireNonNull(total, RecordPagedQueryResponse.class + ": total is missing");
         Objects.requireNonNull(offset, RecordPagedQueryResponse.class + ": offset is missing");
         Objects.requireNonNull(results, RecordPagedQueryResponse.class + ": results is missing");
         return new RecordPagedQueryResponseImpl(limit, count, total, offset, results);

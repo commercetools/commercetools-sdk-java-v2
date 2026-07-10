@@ -124,6 +124,9 @@ public class ByProjectKeyTest {
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey").get().withExpand(true).createHttpRequest(),
                         "get", "test_projectKey?expand=true", },
+                new Object[] {
+                        apiRoot.withProjectKeyValue("test_projectKey").get().withWithTotal(true).createHttpRequest(),
+                        "get", "test_projectKey?withTotal=true", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().createHttpRequest(), "get",
                         "test_projectKey", } };
     }
@@ -157,6 +160,7 @@ public class ByProjectKeyTest {
                             com.commercetools.history.models.change_history.PlatformInitiatedChange
                                     .findEnum("excludePlatformInitiatedChanges")), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withExpand(true), },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withWithTotal(true), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get(), } };
     }
 }

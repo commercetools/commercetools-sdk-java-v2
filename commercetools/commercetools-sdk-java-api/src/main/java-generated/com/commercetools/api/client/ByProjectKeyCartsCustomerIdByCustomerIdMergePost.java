@@ -17,6 +17,14 @@ import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Merges items from an anonymous Cart into the most recently modified active Cart of a Customer. If no active Cart exists, the anonymous Cart becomes the Customer's active Cart. For more information about merge mode behaviors, merge rules, and tax recalculation, see <span>Merge a Cart</span>.</p>
+ *  <ul>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> is returned in several cases, including the following:
+ *    <ul>
+ *     <li>The referenced Shipping Method is not active.</li>
+ *     <li>The referenced Shipping Method is scoped to a Store that differs from the Cart's Store.</li>
+ *     <li>The referenced Shipping Method is scoped to a Store, but the Cart does not belong to a Store.</li>
+ *    </ul></li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>

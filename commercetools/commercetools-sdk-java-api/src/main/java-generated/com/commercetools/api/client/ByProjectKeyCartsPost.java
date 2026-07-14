@@ -21,13 +21,6 @@ import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Creates a Cart in the Project.</p>
- *  <p>An <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned in one of the following cases:</p>
- *  <ol>
- *   <li>If the referenced Shipping Method has a predicate that does not match the Cart.</li>
- *   <li>If the referenced Shipping Method is not active.</li>
- *   <li>If the referenced Shipping Method is associated with a Store that is different from the Cart's Store.</li>
- *   <li>If the referenced Shipping Method is associated with a Store and the Cart is not associated with any Store.</li>
- *  </ol>
  *  <p>When using <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryMode" rel="nofollow">InventoryMode</a> <code>ReserveOnCart</code>:</p>
  *  <ul>
  *   <li>If only some Line Items can be reserved, the Cart creation succeeds, however, the items that could not be reserved are removed and reservation warnings are returned in the response.</li>
@@ -39,6 +32,13 @@ import tools.jackson.core.type.TypeReference;
  *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidItemShippingDetailsError" rel="nofollow">InvalidItemShippingDetails</a></li>
  *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a></li>
  *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> is returned in several cases, including the following:
+ *    <ul>
+ *     <li>The referenced Shipping Method has a predicate that does not match the Cart.</li>
+ *     <li>The referenced Shipping Method is not active.</li>
+ *     <li>The referenced Shipping Method is scoped to a Store that differs from the Cart's Store.</li>
+ *     <li>The referenced Shipping Method is scoped to a Store, but the Cart does not belong to a Store.</li>
+ *    </ul></li>
  *  </ul>
  *
  * <hr>

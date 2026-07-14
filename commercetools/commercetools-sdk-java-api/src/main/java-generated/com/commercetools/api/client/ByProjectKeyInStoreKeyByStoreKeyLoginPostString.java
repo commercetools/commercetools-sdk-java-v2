@@ -19,6 +19,12 @@ import tools.jackson.core.type.TypeReference;
 /**
  *  <p>Authenticates a Customer associated with a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
  *  <p>Allows <span>merging</span> items from an anonymous Cart into the most recently modified active Cart of a Customer. If no active Cart exists, the anonymous Cart becomes the Customer's active Cart. If the Customer has multiple active Carts, the anonymous Cart is merged into the most recently modified active Cart.</p>
+ *  <p>The anonymous Cart is not merged in any of the following cases:</p>
+ *  <ul>
+ *   <li>The referenced Shipping Method is not active.</li>
+ *   <li>The referenced Shipping Method is scoped to a Store that differs from the Cart's Store.</li>
+ *   <li>The referenced Shipping Method is scoped to a Store, but the Cart does not belong to a Store.</li>
+ *  </ul>
  *  <p>If the Customer exists in the Project but the <code>stores</code> field references a different <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>, this method returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidCredentialsError" rel="nofollow">InvalidCredentials</a> error.</p>
  *
  * <hr>

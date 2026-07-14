@@ -68,6 +68,9 @@ public interface CustomFieldReferenceValue extends JsonEnum {
     <p><a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a></p> */
     CustomFieldReferenceValue SHIPPING_METHOD = CustomFieldReferenceValueEnum.SHIPPING_METHOD;
     /**
+    <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> - Only available for Projects with <code>productCatalogModel</code> set to <code>Modular</code> (<span>BETA</span>).</p> */
+    CustomFieldReferenceValue VARIANT = CustomFieldReferenceValueEnum.VARIANT;
+    /**
     <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a></p> */
     CustomFieldReferenceValue ZONE = CustomFieldReferenceValueEnum.ZONE;
 
@@ -159,6 +162,11 @@ public interface CustomFieldReferenceValue extends JsonEnum {
          * shipping-method
          */
         SHIPPING_METHOD("shipping-method"),
+
+        /**
+         * variant
+         */
+        VARIANT("variant"),
 
         /**
          * zone

@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Either <code>variantId</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> that exists. Produces the <span>ProductTailoringImagesSet</span> Message.</p>
+ *  <p>Either <code>variantId</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> (<span>BETA</span>) that exists. Produces the <span>ProductTailoringImagesSet</span> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTailoringSetExternalImagesActionImpl implements ProductTailoringSetExternalImagesAction, ModelBase {
@@ -64,7 +64,7 @@ public class ProductTailoringSetExternalImagesActionImpl implements ProductTailo
     }
 
     /**
-     *  <p>The <code>id</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>id</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      */
 
     public Long getVariantId() {
@@ -72,7 +72,7 @@ public class ProductTailoringSetExternalImagesActionImpl implements ProductTailo
     }
 
     /**
-     *  <p>The <code>sku</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>sku</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      */
 
     public String getSku() {
@@ -80,8 +80,8 @@ public class ProductTailoringSetExternalImagesActionImpl implements ProductTailo
     }
 
     /**
-     *  <p>Images of the tailored ProductVariant.</p>
-     *  <p>Don't provide this field if you want to remove all images from the tailored Product Variant. Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant on the tailored ProductVariant.</p>
+     *  <p>Images of the tailored ProductVariant or Variant (<span>BETA</span>).</p>
+     *  <p>Don't provide this field if you want to remove all images from the tailored ProductVariant or Variant (<span>BETA</span>). Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant or Variant (<span>BETA</span>) on the tailored ProductVariant or Variant (<span>BETA</span>).</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Image> getImages() {

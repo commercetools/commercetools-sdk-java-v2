@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>The tailoring of a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+ *  <p>The tailoring of a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> (<span>BETA</span>).</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantTailoringImpl implements ProductVariantTailoring, ModelBase {
@@ -52,7 +52,7 @@ public class ProductVariantTailoringImpl implements ProductVariantTailoring, Mod
     }
 
     /**
-     *  <p>The <code>id</code> of the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+     *  <p>The <code>id</code> of the tailored <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> (<span>BETA</span>).</p>
      */
 
     public Long getId() {
@@ -60,7 +60,7 @@ public class ProductVariantTailoringImpl implements ProductVariantTailoring, Mod
     }
 
     /**
-     *  <p>Images of the tailored Product Variant. If present, these images will override the images of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in total.</p>
+     *  <p>Images of the tailored Product Variant. If present, these images will override the images of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> (<span>BETA</span>) in total.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Image> getImages() {
@@ -68,7 +68,7 @@ public class ProductVariantTailoringImpl implements ProductVariantTailoring, Mod
     }
 
     /**
-     *  <p>Media assets of the tailored Product Variant. If present, these assets will override the assets of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in total.</p>
+     *  <p>Media assets of the tailored Product Variant. If present, these assets will override the assets of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> (<span>BETA</span>) in total.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Asset> getAssets() {
@@ -76,10 +76,9 @@ public class ProductVariantTailoringImpl implements ProductVariantTailoring, Mod
     }
 
     /**
-     *  <p>Attributes of the tailored Product Variant. If present, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>:</p>
+     *  <p>Attributes of the tailored Product Variant. If present, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> (<span>BETA</span>):</p>
      *  <ul>
-     *   <li>If the ProductVariant contains an Attribute with the same <code>name</code>, its <code>value</code> is overwritten,</li>
-     *   <li>otherwise the Attribute and its value are added to the ProductVariant.</li>
+     *   <li>If the ProductVariant or Variant (<span>BETA</span>) contains an Attribute with the same <code>name</code>, its <code>value</code> is overwritten. Otherwise, the Attribute and its value are added to the ProductVariant or Variant (<span>BETA</span>).</li>
      *  </ul>
      */
 

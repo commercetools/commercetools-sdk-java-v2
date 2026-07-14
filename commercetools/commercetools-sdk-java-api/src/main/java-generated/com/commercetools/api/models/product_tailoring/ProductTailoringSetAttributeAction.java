@@ -38,7 +38,7 @@ public interface ProductTailoringSetAttributeAction extends ProductTailoringUpda
     String SET_ATTRIBUTE = "setAttribute";
 
     /**
-     *  <p>The <code>id</code> of the ProductVariant to update. Required if <code>sku</code> is absent.</p>
+     *  <p>The <code>id</code> of the ProductVariant or Variant (<span>BETA</span>) to update. Required if <code>sku</code> is absent.</p>
      * @return variantId
      */
 
@@ -46,7 +46,7 @@ public interface ProductTailoringSetAttributeAction extends ProductTailoringUpda
     public Long getVariantId();
 
     /**
-     *  <p>The <code>sku</code> of the ProductVariant to update. Required if <code>variantId</code> is absent.</p>
+     *  <p>The <code>sku</code> of the ProductVariant or Variant (<span>BETA</span>) to update. Required if <code>variantId</code> is absent.</p>
      * @return sku
      */
 
@@ -87,14 +87,14 @@ public interface ProductTailoringSetAttributeAction extends ProductTailoringUpda
     public Boolean getStaged();
 
     /**
-     *  <p>The <code>id</code> of the ProductVariant to update. Required if <code>sku</code> is absent.</p>
+     *  <p>The <code>id</code> of the ProductVariant or Variant (<span>BETA</span>) to update. Required if <code>sku</code> is absent.</p>
      * @param variantId value to be set
      */
 
     public void setVariantId(final Long variantId);
 
     /**
-     *  <p>The <code>sku</code> of the ProductVariant to update. Required if <code>variantId</code> is absent.</p>
+     *  <p>The <code>sku</code> of the ProductVariant or Variant (<span>BETA</span>) to update. Required if <code>variantId</code> is absent.</p>
      * @param sku value to be set
      */
 

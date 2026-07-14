@@ -22,6 +22,7 @@ import tools.jackson.core.type.TypeReference;
 /**
  *  <p>Queries Variant Projections in the specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
  *  <p>Only Variants belonging to Products distributed through the Store's configured channels are returned. By default, this endpoint returns the <code>current</code> representation of Variants where the <code>published</code> flag is <code>true</code>.</p>
+ *  <p>If a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoring" rel="nofollow">ProductTailoring</a> exists for a Product and the given Store, the returned Variant Projections include the tailored Product name, slug, and description, along with the tailored Variant images, assets, and attributes. The <code>staged</code> query parameter selects either the current or staged tailored data. When no Product Tailoring exists for a Product and Store, the Variant Projection is returned without Product Tailoring data.</p>
  *  <p>Required access scopes:</p>
  *  <ul>
  *   <li><p>To retrieve the current representation of published Variants, the <code>view_published_products:{projectKey}</code> scope is required.</p></li>

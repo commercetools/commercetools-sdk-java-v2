@@ -32,7 +32,7 @@ public class ProductTailoringRemoveVariantActionBuilder implements Builder<Produ
     private Boolean staged;
 
     /**
-     *  <p>The <code>id</code> of the ProductVariant to remove from the Tailoring.</p>
+     *  <p>The <code>id</code> of the ProductVariant or Variant (<span>BETA</span>) to remove from the Tailoring.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -43,7 +43,7 @@ public class ProductTailoringRemoveVariantActionBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>The <code>sku</code> of the ProductVariant to remove from the Tailoring.</p>
+     *  <p>The <code>sku</code> of the ProductVariant or Variant (<span>BETA</span>) to remove from the Tailoring.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class ProductTailoringRemoveVariantActionBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>The <code>id</code> of the ProductVariant to remove from the Tailoring.</p>
+     *  <p>The <code>id</code> of the ProductVariant or Variant (<span>BETA</span>) to remove from the Tailoring.</p>
      * @return id
      */
 
@@ -75,7 +75,7 @@ public class ProductTailoringRemoveVariantActionBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>The <code>sku</code> of the ProductVariant to remove from the Tailoring.</p>
+     *  <p>The <code>sku</code> of the ProductVariant or Variant (<span>BETA</span>) to remove from the Tailoring.</p>
      * @return sku
      */
 

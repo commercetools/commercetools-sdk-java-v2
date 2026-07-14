@@ -42,7 +42,7 @@ public class ProductTailoringAddVariantActionBuilder implements Builder<ProductT
     private Boolean staged;
 
     /**
-     *  <p>The <code>id</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>id</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ProductTailoringAddVariantActionBuilder implements Builder<ProductT
     }
 
     /**
-     *  <p>The <code>sku</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>sku</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -348,7 +348,7 @@ public class ProductTailoringAddVariantActionBuilder implements Builder<ProductT
     }
 
     /**
-     *  <p>The <code>id</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>id</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @return id
      */
 
@@ -358,7 +358,7 @@ public class ProductTailoringAddVariantActionBuilder implements Builder<ProductT
     }
 
     /**
-     *  <p>The <code>sku</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>sku</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @return sku
      */
 

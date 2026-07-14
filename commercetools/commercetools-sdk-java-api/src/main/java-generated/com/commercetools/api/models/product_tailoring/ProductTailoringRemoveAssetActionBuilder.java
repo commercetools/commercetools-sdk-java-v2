@@ -38,7 +38,7 @@ public class ProductTailoringRemoveAssetActionBuilder implements Builder<Product
     private String assetKey;
 
     /**
-     *  <p>The <code>id</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>id</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @param variantId value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class ProductTailoringRemoveAssetActionBuilder implements Builder<Product
     }
 
     /**
-     *  <p>The <code>sku</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>sku</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -93,7 +93,7 @@ public class ProductTailoringRemoveAssetActionBuilder implements Builder<Product
     }
 
     /**
-     *  <p>The <code>id</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>id</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @return variantId
      */
 
@@ -103,7 +103,7 @@ public class ProductTailoringRemoveAssetActionBuilder implements Builder<Product
     }
 
     /**
-     *  <p>The <code>sku</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>sku</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @return sku
      */
 

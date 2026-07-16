@@ -231,4 +231,8 @@ public class ByProjectKeyRequestBuilder {
         return new ByProjectKeyAttributeGroupsRequestBuilder(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyMcpServersRequestBuilder mcpServers() {
+        return new ByProjectKeyMcpServersRequestBuilder(apiHttpClient, projectKey);
+    }
+
 }

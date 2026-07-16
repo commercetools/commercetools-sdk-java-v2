@@ -38,7 +38,7 @@ public interface CartRecalculateAction extends CartUpdateAction {
 
     /**
      *  <ul>
-     *   <li>Leave empty or set as <code>false</code> to update only the Prices and TaxRates of the Line Items.</li>
+     *   <li>Leave empty or set as <code>false</code> to update only the Prices and TaxRates of the Line Items. Prices inside the <code>variant</code> are only updated if <code>updateProductData</code> is <code>true</code>.</li>
      *   <li>Set as <code>true</code> to update the Product data (such as <code>name</code>, <code>variant</code>, <code>productType</code>, and Product Attributes) of the Line Items.</li>
      *  </ul>
      * @return updateProductData
@@ -49,7 +49,7 @@ public interface CartRecalculateAction extends CartUpdateAction {
 
     /**
      *  <ul>
-     *   <li>Leave empty or set as <code>false</code> to update only the Prices and TaxRates of the Line Items.</li>
+     *   <li>Leave empty or set as <code>false</code> to update only the Prices and TaxRates of the Line Items. Prices inside the <code>variant</code> are only updated if <code>updateProductData</code> is <code>true</code>.</li>
      *   <li>Set as <code>true</code> to update the Product data (such as <code>name</code>, <code>variant</code>, <code>productType</code>, and Product Attributes) of the Line Items.</li>
      *  </ul>
      * @param updateProductData value to be set

@@ -4,10 +4,10 @@ Example to show how the ME endpoints can be used with the Java SDK in a Spring B
 
 ## Requirements
 
-- A Composable Commerce Project with a configured [API Client](https://docs.commercetools.com/tutorials/getting-started#creating-an-api-client).
+- A Composable Commerce Project with a configured [API Client](https://docs.commercetools.com/api/getting-started/create-api-client).
   Necessary scopes: `view_published_products`, `view_categories`, `manage_my_profile`, `manage_my_shopping_lists`, `manage_my_payments`, `manage_my_orders`
 - Your Project must have existing products containing variants with SKUs, and at least one customer, the storefront search endpoint must be active.
-- If your Project is currently empty, you can install the [SUNRISE sample data](https://docs.commercetools.com/sdk/sunrise-data).
+- If your Project is currently empty, you can install the [SUNRISE sample data](https://github.com/commercetools/commercetools-sunrise-data).
 
 ## Installation
 
@@ -16,7 +16,7 @@ Example to show how the ME endpoints can be used with the Java SDK in a Spring B
 3. Register the client credentials in environment variables:
    `CTP_CLIENT_ID`, `CTP_CLIENT_SECRET` and `CTP_PROJECT_KEY`
 4. If your [project region](https://docs.commercetools.com/api/general-concepts#regions) is not GCP Europe, then register
-   [API URL](https://docs.commercetools.com/api/general-concepts#hosts) and [Auth URL](https://docs.commercetools.com/api/authorization#requesting-an-access-token-using-the-composable-commerce-oauth-20-service)
+   [API URL](https://docs.commercetools.com/api/general-concepts#hosts) and [Auth URL](https://docs.commercetools.com/api/authorization#request-an-access-token-using-the-internal-oauth-20-service)
    in environment variables: `CTP_PROJECT_API_BASE_URL`, `CTP_PROJECT_AUTH_URL`
    **or**
    register the service region in the environment variable `CTP_SERVICE_REGION`

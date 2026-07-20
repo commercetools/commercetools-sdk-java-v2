@@ -35,7 +35,7 @@ as to ensure the customer do have all the latest features
 offered by the SDK including security and vulnerability fixes.
 
 ### Documentation
-Ensure to read the [documentation](https://docs.commercetools.com/sdk/jvm-sdk#java-sdk-v2) carefully in order
+Ensure to read the [documentation](https://docs.commercetools.com/dev-tooling/jvm-sdk) carefully in order
 to correctly and properly implement and/or integrate the SDK.
 
 ### Issues
@@ -145,7 +145,7 @@ ApiRootBuilder.of().withInternalLoggerMiddleware(InternalLoggerMiddleware.of(Api
 ```
 
 #### ConcurrentModificationMiddleware
-In case of concurrent modification errors this middleware will update the request with the actual resource version and retry the request itself. Please see also the [documentation](https://docs.commercetools.com/api/errors#409-conflict-1)
+In case of concurrent modification errors this middleware will update the request with the actual resource version and retry the request itself. Please see also the [documentation](https://docs.commercetools.com/api/errors#concurrentmodification)
 
 The example shows the configuration to retry 3 times upon concurrent modification
 ```java

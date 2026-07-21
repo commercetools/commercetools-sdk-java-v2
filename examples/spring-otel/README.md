@@ -6,10 +6,10 @@ OpenTelemetry auto instrumentation.
 
 ## Requirements
 
-- A Composable Commerce Project with a configured [API Client](https://docs.commercetools.com/tutorials/getting-started#creating-an-api-client).
+- A Composable Commerce Project with a configured [API Client](https://docs.commercetools.com/api/getting-started/create-api-client).
   Necessary scopes: `view_published_products`, `manage_orders`
 - Your Project must have existing products containing variants with SKUs, and at least one customer, the storefront search endpoint must be active.
-- If your Project is currently empty, you can install the [SUNRISE sample data](https://docs.commercetools.com/sdk/sunrise-data).
+- If your Project is currently empty, you can install the [SUNRISE sample data](https://github.com/commercetools/commercetools-sunrise-data).
 
 ### OpenTelemetry collector
 

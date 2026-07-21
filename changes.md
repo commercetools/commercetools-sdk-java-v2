@@ -32,6 +32,8 @@
 <details>
 <summary>Added Type(s)</summary>
 
+- added type `UnauthorizedError`
+- added type `GraphQLUnauthorizedError`
 - added type `CommerceMcpServerConfig`
 - added type `CommerceMcpServerConfigDraft`
 - added type `McpServer`

@@ -675,6 +675,13 @@ public class ErrorObjectQueryBuilderDsl {
             ErrorObjectQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asUnauthorized(
+            Function<com.commercetools.api.predicates.query.error.UnauthorizedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.UnauthorizedErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.error.UnauthorizedErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asValidityLockConflict(
             Function<com.commercetools.api.predicates.query.error.ValidityLockConflictErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.ValidityLockConflictErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

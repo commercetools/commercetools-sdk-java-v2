@@ -806,6 +806,14 @@ public interface GraphQLErrorObject {
     }
 
     /**
+     * builder for unauthorized subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLUnauthorizedErrorBuilder unauthorizedBuilder() {
+        return com.commercetools.api.models.error.GraphQLUnauthorizedErrorBuilder.of();
+    }
+
+    /**
      * builder for validityLockConflict subtype
      * @return builder
      */

@@ -691,6 +691,13 @@ public class GraphQLErrorObjectQueryBuilderDsl {
             GraphQLErrorObjectQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asUnauthorized(
+            Function<com.commercetools.api.predicates.query.error.GraphQLUnauthorizedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLUnauthorizedErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.error.GraphQLUnauthorizedErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asValidityLockConflict(
             Function<com.commercetools.api.predicates.query.error.GraphQLValidityLockConflictErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLValidityLockConflictErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

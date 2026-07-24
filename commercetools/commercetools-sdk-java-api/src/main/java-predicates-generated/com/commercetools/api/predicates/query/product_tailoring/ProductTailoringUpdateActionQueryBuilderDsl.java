@@ -186,6 +186,13 @@ public class ProductTailoringUpdateActionQueryBuilderDsl {
             ProductTailoringUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ProductTailoringUpdateActionQueryBuilderDsl> asSetKey(
+            Function<com.commercetools.api.predicates.query.product_tailoring.ProductTailoringSetKeyActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_tailoring.ProductTailoringSetKeyActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.product_tailoring.ProductTailoringSetKeyActionQueryBuilderDsl.of()),
+            ProductTailoringUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ProductTailoringUpdateActionQueryBuilderDsl> asSetMetaAttributes(
             Function<com.commercetools.api.predicates.query.product_tailoring.ProductTailoringSetMetaAttributesActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_tailoring.ProductTailoringSetMetaAttributesActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(

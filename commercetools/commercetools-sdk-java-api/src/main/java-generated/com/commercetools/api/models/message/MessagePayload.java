@@ -2048,6 +2048,14 @@ public interface MessagePayload extends MessagePayloadMixin {
     }
 
     /**
+     * builder for productTailoringKeySet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ProductTailoringKeySetMessagePayloadBuilder productTailoringKeySetBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringKeySetMessagePayloadBuilder.of();
+    }
+
+    /**
      * builder for productTailoringNameSet subtype
      * @return builder
      */

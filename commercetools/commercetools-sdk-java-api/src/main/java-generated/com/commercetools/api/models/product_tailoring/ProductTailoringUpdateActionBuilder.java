@@ -96,6 +96,10 @@ public class ProductTailoringUpdateActionBuilder {
         return com.commercetools.api.models.product_tailoring.ProductTailoringSetImageLabelActionBuilder.of();
     }
 
+    public com.commercetools.api.models.product_tailoring.ProductTailoringSetKeyActionBuilder setKeyBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringSetKeyActionBuilder.of();
+    }
+
     public com.commercetools.api.models.product_tailoring.ProductTailoringSetMetaAttributesActionBuilder setMetaAttributesBuilder() {
         return com.commercetools.api.models.product_tailoring.ProductTailoringSetMetaAttributesActionBuilder.of();
     }

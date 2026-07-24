@@ -230,6 +230,14 @@ public interface ProductTailoringUpdateAction {
     }
 
     /**
+     * builder for setKey subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.product_tailoring.ProductTailoringSetKeyActionBuilder setKeyBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringSetKeyActionBuilder.of();
+    }
+
+    /**
      * builder for setMetaAttributes subtype
      * @return builder
      */

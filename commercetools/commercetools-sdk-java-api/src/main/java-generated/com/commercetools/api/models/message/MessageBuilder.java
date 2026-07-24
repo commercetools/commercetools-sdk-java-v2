@@ -1003,6 +1003,10 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.ProductTailoringImagesSetMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.ProductTailoringKeySetMessageBuilder productTailoringKeySetBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringKeySetMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.ProductTailoringNameSetMessageBuilder productTailoringNameSetBuilder() {
         return com.commercetools.api.models.message.ProductTailoringNameSetMessageBuilder.of();
     }

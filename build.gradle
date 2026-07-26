@@ -68,7 +68,7 @@ class Version {
 
 allprojects {
     apply from: "$rootDir/gradle-scripts/repositories.gradle"
-    description = "The e-commerce SDK from commercetools Composable Commerce for Java"
+    description = "The e-commerce SDK from commercetools for Java"
 
     configurations {
         taglet {

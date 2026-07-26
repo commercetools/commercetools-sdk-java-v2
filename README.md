@@ -1,5 +1,4 @@
-# commercetools Composable Commerce Java SDK
-
+# commercetools Java SDK
 
 [![][maven img]][maven]
 [![][snyk img]][snyk]

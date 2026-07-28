@@ -47,6 +47,14 @@ public class VariantUpdateActionQueryBuilderDsl {
             VariantUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<VariantUpdateActionQueryBuilderDsl> asMoveImageToPosition(
+            Function<com.commercetools.api.predicates.query.variant.VariantMoveImageToPositionActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.variant.VariantMoveImageToPositionActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.variant.VariantMoveImageToPositionActionQueryBuilderDsl.of()),
+            VariantUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<VariantUpdateActionQueryBuilderDsl> asPublish(
             Function<com.commercetools.api.predicates.query.variant.VariantPublishActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.variant.VariantPublishActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -139,6 +147,13 @@ public class VariantUpdateActionQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.variant.VariantSetAttributesActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.variant.VariantSetAttributesActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             fn.apply(com.commercetools.api.predicates.query.variant.VariantSetAttributesActionQueryBuilderDsl.of()),
+            VariantUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<VariantUpdateActionQueryBuilderDsl> asSetImageLabel(
+            Function<com.commercetools.api.predicates.query.variant.VariantSetImageLabelActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.variant.VariantSetImageLabelActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.variant.VariantSetImageLabelActionQueryBuilderDsl.of()),
             VariantUpdateActionQueryBuilderDsl::of);
     }
 

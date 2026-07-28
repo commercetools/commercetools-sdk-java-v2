@@ -59,6 +59,9 @@ public class VariantBuilder implements Builder<Variant> {
     @Nullable
     private com.commercetools.api.models.variant.VariantData staged;
 
+    @Nullable
+    private java.util.List<com.commercetools.api.models.warning.WarningObject> warnings;
+
     /**
      *  <p>Unique identifier of the Variant.</p>
      * @param id value to be set
@@ -313,6 +316,71 @@ public class VariantBuilder implements Builder<Variant> {
     }
 
     /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param warnings value to be set
+     * @return Builder
+     */
+
+    public VariantBuilder warnings(@Nullable final com.commercetools.api.models.warning.WarningObject... warnings) {
+        this.warnings = new ArrayList<>(Arrays.asList(warnings));
+        return this;
+    }
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param warnings value to be set
+     * @return Builder
+     */
+
+    public VariantBuilder warnings(
+            @Nullable final java.util.List<com.commercetools.api.models.warning.WarningObject> warnings) {
+        this.warnings = warnings;
+        return this;
+    }
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param warnings value to be set
+     * @return Builder
+     */
+
+    public VariantBuilder plusWarnings(@Nullable final com.commercetools.api.models.warning.WarningObject... warnings) {
+        if (this.warnings == null) {
+            this.warnings = new ArrayList<>();
+        }
+        this.warnings.addAll(Arrays.asList(warnings));
+        return this;
+    }
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param builder function to build the warnings value
+     * @return Builder
+     */
+
+    public VariantBuilder plusWarnings(
+            Function<com.commercetools.api.models.warning.WarningObjectBuilder, Builder<? extends com.commercetools.api.models.warning.WarningObject>> builder) {
+        if (this.warnings == null) {
+            this.warnings = new ArrayList<>();
+        }
+        this.warnings.add(builder.apply(com.commercetools.api.models.warning.WarningObjectBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param builder function to build the warnings value
+     * @return Builder
+     */
+
+    public VariantBuilder withWarnings(
+            Function<com.commercetools.api.models.warning.WarningObjectBuilder, Builder<? extends com.commercetools.api.models.warning.WarningObject>> builder) {
+        this.warnings = new ArrayList<>();
+        this.warnings.add(builder.apply(com.commercetools.api.models.warning.WarningObjectBuilder.of()).build());
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the Variant.</p>
      * @return id
      */
@@ -425,6 +493,16 @@ public class VariantBuilder implements Builder<Variant> {
     }
 
     /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @return warnings
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.warning.WarningObject> getWarnings() {
+        return this.warnings;
+    }
+
+    /**
      * builds Variant with checking for non-null required values
      * @return Variant
      */
@@ -438,7 +516,7 @@ public class VariantBuilder implements Builder<Variant> {
         Objects.requireNonNull(published, Variant.class + ": published is missing");
         Objects.requireNonNull(current, Variant.class + ": current is missing");
         return new VariantImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, variantId,
-            product, published, current, staged);
+            product, published, current, staged, warnings);
     }
 
     /**
@@ -447,7 +525,7 @@ public class VariantBuilder implements Builder<Variant> {
      */
     public Variant buildUnchecked() {
         return new VariantImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, variantId,
-            product, published, current, staged);
+            product, published, current, staged, warnings);
     }
 
     /**
@@ -477,6 +555,7 @@ public class VariantBuilder implements Builder<Variant> {
         builder.published = template.getPublished();
         builder.current = template.getCurrent();
         builder.staged = template.getStaged();
+        builder.warnings = template.getWarnings();
         return builder;
     }
 

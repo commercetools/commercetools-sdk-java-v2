@@ -97,4 +97,18 @@ public class VariantQueryBuilderDsl {
             VariantQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<VariantQueryBuilderDsl> warnings(
+            Function<com.commercetools.api.predicates.query.warning.WarningObjectQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.warning.WarningObjectQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("warnings"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.warning.WarningObjectQueryBuilderDsl.of())),
+            VariantQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<VariantQueryBuilderDsl> warnings() {
+        return new CollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("warnings")),
+            p -> new CombinationQueryPredicate<>(p, VariantQueryBuilderDsl::of));
+    }
+
 }

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.variant;
 
 import java.time.ZonedDateTime;
+import java.util.Collections;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -36,7 +37,11 @@ public class VariantTest {
                 new Object[] { "current",
                         Variant.builder().current(new com.commercetools.api.models.variant.VariantDataImpl()) },
                 new Object[] { "staged",
-                        Variant.builder().staged(new com.commercetools.api.models.variant.VariantDataImpl()) } };
+                        Variant.builder().staged(new com.commercetools.api.models.variant.VariantDataImpl()) },
+                new Object[] { "warnings",
+                        Variant.builder()
+                                .warnings(Collections.singletonList(
+                                    new com.commercetools.api.models.warning.WarningObjectImpl())) } };
     }
 
     @Test
@@ -123,5 +128,13 @@ public class VariantTest {
         Variant value = Variant.of();
         value.setStaged(new com.commercetools.api.models.variant.VariantDataImpl());
         Assertions.assertThat(value.getStaged()).isEqualTo(new com.commercetools.api.models.variant.VariantDataImpl());
+    }
+
+    @Test
+    public void warnings() {
+        Variant value = Variant.of();
+        value.setWarnings(Collections.singletonList(new com.commercetools.api.models.warning.WarningObjectImpl()));
+        Assertions.assertThat(value.getWarnings())
+                .isEqualTo(Collections.singletonList(new com.commercetools.api.models.warning.WarningObjectImpl()));
     }
 }

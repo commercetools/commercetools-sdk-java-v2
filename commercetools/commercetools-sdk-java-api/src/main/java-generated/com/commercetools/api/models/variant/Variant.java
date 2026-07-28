@@ -5,6 +5,7 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
@@ -12,6 +13,7 @@ import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.product.ProductReference;
+import com.commercetools.api.models.warning.WarningObject;
 import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
@@ -143,6 +145,14 @@ public interface Variant extends BaseResource {
     public VariantData getStaged();
 
     /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @return warnings
+     */
+    @Valid
+    @JsonProperty("warnings")
+    public List<WarningObject> getWarnings();
+
+    /**
      *  <p>Unique identifier of the Variant.</p>
      * @param id value to be set
      */
@@ -227,6 +237,21 @@ public interface Variant extends BaseResource {
     public void setStaged(final VariantData staged);
 
     /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param warnings values to be set
+     */
+
+    @JsonIgnore
+    public void setWarnings(final WarningObject... warnings);
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param warnings values to be set
+     */
+
+    public void setWarnings(final List<WarningObject> warnings);
+
+    /**
      * factory method
      * @return instance of Variant
      */
@@ -253,6 +278,7 @@ public interface Variant extends BaseResource {
         instance.setPublished(template.getPublished());
         instance.setCurrent(template.getCurrent());
         instance.setStaged(template.getStaged());
+        instance.setWarnings(template.getWarnings());
         return instance;
     }
 
@@ -282,6 +308,11 @@ public interface Variant extends BaseResource {
         instance.setPublished(template.getPublished());
         instance.setCurrent(com.commercetools.api.models.variant.VariantData.deepCopy(template.getCurrent()));
         instance.setStaged(com.commercetools.api.models.variant.VariantData.deepCopy(template.getStaged()));
+        instance.setWarnings(Optional.ofNullable(template.getWarnings())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.warning.WarningObject::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

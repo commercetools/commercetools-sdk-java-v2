@@ -66,7 +66,7 @@ public class ProductTailoringSetMetaDescriptionActionImpl
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>metaDescription</code> is updated. If <code>false</code>, both the current and staged <code>metaDescription</code> are updated.</p>
+     *  <p>Whether only the staged <code>metaDescription</code> is updated. If <code>false</code>, both the current and staged <code>metaDescription</code> are updated.</p>
      */
 
     public Boolean getStaged() {

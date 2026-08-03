@@ -55,7 +55,7 @@ public interface ProductTailoringSetAssetCustomTypeAction extends ProductTailori
     public String getSku();
 
     /**
-     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
+     *  <p>Whether only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
      * @return staged
      */
 
@@ -110,7 +110,7 @@ public interface ProductTailoringSetAssetCustomTypeAction extends ProductTailori
     public void setSku(final String sku);
 
     /**
-     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
+     *  <p>Whether only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
      * @param staged value to be set
      */
 

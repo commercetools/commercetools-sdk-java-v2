@@ -162,7 +162,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a <span>Product Projection Search</span> request.</p>
+     *  <p>Whether the Product Variant matches the search query. Only available in response to a <span>Product Projection Search</span> request.</p>
      */
 
     public Boolean getIsMatchingVariant() {

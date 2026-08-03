@@ -76,7 +76,7 @@ public class ProductAddToCategoryActionImpl implements ProductAddToCategoryActio
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>categories</code> and <code>categoryOrderHints</code> are updated. If <code>false</code>, both the current and staged <code>categories</code> and <code>categoryOrderHints</code> are updated.</p>
+     *  <p>Whether only staged <code>categories</code> and <code>categoryOrderHints</code> are updated. If <code>false</code>, both current and staged <code>categories</code> and <code>categoryOrderHints</code> are updated.</p>
      */
 
     public Boolean getStaged() {

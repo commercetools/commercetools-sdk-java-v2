@@ -93,7 +93,7 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>prices</code> is updated. If <code>false</code>, both the current and staged <code>prices</code> are updated.</p>
+     *  <p>Whether only staged <code>prices</code> are updated. If <code>false</code>, both current and staged <code>prices</code> are updated.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -133,7 +133,7 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>prices</code> is updated. If <code>false</code>, both the current and staged <code>prices</code> are updated.</p>
+     *  <p>Whether only staged <code>prices</code> are updated. If <code>false</code>, both current and staged <code>prices</code> are updated.</p>
      * @return staged
      */
 

@@ -46,7 +46,7 @@ public interface ProductSetDefaultVariantAction extends ProductUpdateAction {
     public VariantResourceIdentifier getVariant();
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>defaultVariant</code> is updated. If <code>false</code>, both the current and staged <code>defaultVariant</code> are updated.</p>
+     *  <p>Whether only the staged <code>defaultVariant</code> is updated. If <code>false</code>, both the current and staged <code>defaultVariant</code> are updated.</p>
      * @return staged
      */
 
@@ -61,7 +61,7 @@ public interface ProductSetDefaultVariantAction extends ProductUpdateAction {
     public void setVariant(final VariantResourceIdentifier variant);
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>defaultVariant</code> is updated. If <code>false</code>, both the current and staged <code>defaultVariant</code> are updated.</p>
+     *  <p>Whether only the staged <code>defaultVariant</code> is updated. If <code>false</code>, both the current and staged <code>defaultVariant</code> are updated.</p>
      * @param staged value to be set
      */
 

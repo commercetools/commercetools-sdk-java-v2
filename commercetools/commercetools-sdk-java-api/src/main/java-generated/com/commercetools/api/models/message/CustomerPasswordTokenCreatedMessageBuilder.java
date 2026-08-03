@@ -300,7 +300,7 @@ public class CustomerPasswordTokenCreatedMessageBuilder implements Builder<Custo
     }
 
     /**
-     *  <p>If <code>true</code>, all password tokens issued previously for the Customer are invalidated.</p>
+     *  <p>Whether all password tokens issued previously for the Customer are invalidated.</p>
      * @param invalidateOlderTokens value to be set
      * @return Builder
      */
@@ -432,7 +432,7 @@ public class CustomerPasswordTokenCreatedMessageBuilder implements Builder<Custo
     }
 
     /**
-     *  <p>If <code>true</code>, all password tokens issued previously for the Customer are invalidated.</p>
+     *  <p>Whether all password tokens issued previously for the Customer are invalidated.</p>
      * @return invalidateOlderTokens
      */
 

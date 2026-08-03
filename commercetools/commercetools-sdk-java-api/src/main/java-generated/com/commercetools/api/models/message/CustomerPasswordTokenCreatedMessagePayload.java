@@ -65,7 +65,7 @@ public interface CustomerPasswordTokenCreatedMessagePayload extends MessagePaylo
     public String getValue();
 
     /**
-     *  <p>If <code>true</code>, all password tokens issued previously for the Customer are invalidated.</p>
+     *  <p>Whether all password tokens issued previously for the Customer are invalidated.</p>
      * @return invalidateOlderTokens
      */
     @NotNull
@@ -94,7 +94,7 @@ public interface CustomerPasswordTokenCreatedMessagePayload extends MessagePaylo
     public void setValue(final String value);
 
     /**
-     *  <p>If <code>true</code>, all password tokens issued previously for the Customer are invalidated.</p>
+     *  <p>Whether all password tokens issued previously for the Customer are invalidated.</p>
      * @param invalidateOlderTokens value to be set
      */
 

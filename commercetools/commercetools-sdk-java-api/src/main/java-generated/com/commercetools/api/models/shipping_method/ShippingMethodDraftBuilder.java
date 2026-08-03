@@ -297,7 +297,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
-     *  <p>If set to <code>true</code>, the ShippingMethod can be used during the creation or update of a Cart or Order.</p>
+     *  <p>Whether the ShippingMethod can be used during the creation or update of a Cart or Order.</p>
      * @param active value to be set
      * @return Builder
      */
@@ -308,7 +308,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
-     *  <p>If set to <code>true</code>, the ShippingMethod will be the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>'s default ShippingMethod. When retrieving <span>matching Shipping Methods</span>, it is returned as the first item in the array. This flag does not automatically apply the Shipping Method to Carts.</p>
+     *  <p>Whether the ShippingMethod will be the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>'s default ShippingMethod. When retrieving <span>matching Shipping Methods</span>, it is returned as the first item in the array. This flag does not automatically apply the Shipping Method to Carts.</p>
      * @param isDefault value to be set
      * @return Builder
      */
@@ -550,7 +550,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
-     *  <p>If set to <code>true</code>, the ShippingMethod can be used during the creation or update of a Cart or Order.</p>
+     *  <p>Whether the ShippingMethod can be used during the creation or update of a Cart or Order.</p>
      * @return active
      */
 
@@ -560,7 +560,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
-     *  <p>If set to <code>true</code>, the ShippingMethod will be the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>'s default ShippingMethod. When retrieving <span>matching Shipping Methods</span>, it is returned as the first item in the array. This flag does not automatically apply the Shipping Method to Carts.</p>
+     *  <p>Whether the ShippingMethod will be the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>'s default ShippingMethod. When retrieving <span>matching Shipping Methods</span>, it is returned as the first item in the array. This flag does not automatically apply the Shipping Method to Carts.</p>
      * @return isDefault
      */
 

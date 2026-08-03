@@ -81,7 +81,7 @@ public class ProductAddToCategoryActionBuilder implements Builder<ProductAddToCa
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>categories</code> and <code>categoryOrderHints</code> are updated. If <code>false</code>, both the current and staged <code>categories</code> and <code>categoryOrderHints</code> are updated.</p>
+     *  <p>Whether only staged <code>categories</code> and <code>categoryOrderHints</code> are updated. If <code>false</code>, both current and staged <code>categories</code> and <code>categoryOrderHints</code> are updated.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -111,7 +111,7 @@ public class ProductAddToCategoryActionBuilder implements Builder<ProductAddToCa
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>categories</code> and <code>categoryOrderHints</code> are updated. If <code>false</code>, both the current and staged <code>categories</code> and <code>categoryOrderHints</code> are updated.</p>
+     *  <p>Whether only staged <code>categories</code> and <code>categoryOrderHints</code> are updated. If <code>false</code>, both current and staged <code>categories</code> and <code>categoryOrderHints</code> are updated.</p>
      * @return staged
      */
 

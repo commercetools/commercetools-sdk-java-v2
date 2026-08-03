@@ -65,7 +65,7 @@ public class ProductTransitionStateActionImpl implements ProductTransitionStateA
     }
 
     /**
-     *  <p>If <code>true</code>, validations are disabled.</p>
+     *  <p>Whether validations are disabled.</p>
      */
 
     public Boolean getForce() {

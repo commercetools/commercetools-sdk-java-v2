@@ -49,7 +49,7 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
     public String getPriceId();
 
     /**
-     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price is updated.</p>
+     *  <p>Whether only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price is updated.</p>
      * @return staged
      */
 
@@ -81,7 +81,7 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
     public void setPriceId(final String priceId);
 
     /**
-     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price is updated.</p>
+     *  <p>Whether only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price is updated.</p>
      * @param staged value to be set
      */
 

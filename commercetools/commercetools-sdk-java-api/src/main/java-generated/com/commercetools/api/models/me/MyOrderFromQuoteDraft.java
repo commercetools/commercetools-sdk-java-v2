@@ -49,7 +49,7 @@ public interface MyOrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<MyO
     public Long getVersion();
 
     /**
-     *  <p>Set to <code>true</code>, if the <code>quoteState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> should be set to <code>Accepted</code>.</p>
+     *  <p>Whether the <code>quoteState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> should be set to <code>Accepted</code>.</p>
      * @return quoteStateToAccepted
      */
 
@@ -71,7 +71,7 @@ public interface MyOrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<MyO
     public void setVersion(final Long version);
 
     /**
-     *  <p>Set to <code>true</code>, if the <code>quoteState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> should be set to <code>Accepted</code>.</p>
+     *  <p>Whether the <code>quoteState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> should be set to <code>Accepted</code>.</p>
      * @param quoteStateToAccepted value to be set
      */
 

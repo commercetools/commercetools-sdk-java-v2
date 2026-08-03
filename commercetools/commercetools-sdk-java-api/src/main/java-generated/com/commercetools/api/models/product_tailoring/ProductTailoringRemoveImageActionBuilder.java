@@ -68,7 +68,7 @@ public class ProductTailoringRemoveImageActionBuilder implements Builder<Product
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged image is removed. If <code>false</code>, both the current and staged image is removed.</p>
+     *  <p>Whether only the staged image is removed. If <code>false</code>, both the current and staged image is removed.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class ProductTailoringRemoveImageActionBuilder implements Builder<Product
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged image is removed. If <code>false</code>, both the current and staged image is removed.</p>
+     *  <p>Whether only the staged image is removed. If <code>false</code>, both the current and staged image is removed.</p>
      * @return staged
      */
 

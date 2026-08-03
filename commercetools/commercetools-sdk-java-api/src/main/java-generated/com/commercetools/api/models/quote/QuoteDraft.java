@@ -63,7 +63,7 @@ public interface QuoteDraft extends com.commercetools.api.models.CustomizableDra
     public Long getStagedQuoteVersion();
 
     /**
-     *  <p>If <code>true</code>, the <code>stagedQuoteState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a> will be set to <code>Sent</code>.</p>
+     *  <p>Whether the <code>stagedQuoteState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a> will be set to <code>Sent</code>.</p>
      * @return stagedQuoteStateToSent
      */
 
@@ -112,7 +112,7 @@ public interface QuoteDraft extends com.commercetools.api.models.CustomizableDra
     public void setStagedQuoteVersion(final Long stagedQuoteVersion);
 
     /**
-     *  <p>If <code>true</code>, the <code>stagedQuoteState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a> will be set to <code>Sent</code>.</p>
+     *  <p>Whether the <code>stagedQuoteState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a> will be set to <code>Sent</code>.</p>
      * @param stagedQuoteStateToSent value to be set
      */
 

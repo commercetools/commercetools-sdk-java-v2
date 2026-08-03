@@ -32,7 +32,7 @@ public class VariantRemoveAssetActionBuilder implements Builder<VariantRemoveAss
     private String assetKey;
 
     /**
-     *  <p>If <code>true</code>, only the staged Asset is removed. If <code>false</code>, both the current and staged Asset is removed.</p>
+     *  <p>Whether only the staged Asset is removed. If <code>false</code>, both the current and staged Asset is removed.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class VariantRemoveAssetActionBuilder implements Builder<VariantRemoveAss
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged Asset is removed. If <code>false</code>, both the current and staged Asset is removed.</p>
+     *  <p>Whether only the staged Asset is removed. If <code>false</code>, both the current and staged Asset is removed.</p>
      * @return staged
      */
 

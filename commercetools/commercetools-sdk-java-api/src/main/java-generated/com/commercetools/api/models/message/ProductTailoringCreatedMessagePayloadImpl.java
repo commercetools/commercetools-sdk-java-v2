@@ -196,7 +196,7 @@ public class ProductTailoringCreatedMessagePayloadImpl implements ProductTailori
     }
 
     /**
-     *  <p><code>true</code> if the ProductTailoring is published.</p>
+     *  <p>Whether the ProductTailoring is published.</p>
      */
 
     public Boolean getPublished() {

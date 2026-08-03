@@ -36,7 +36,7 @@ public interface VariantRemoveAssetAction extends VariantUpdateAction {
     String REMOVE_ASSET = "removeAsset";
 
     /**
-     *  <p>If <code>true</code>, only the staged Asset is removed. If <code>false</code>, both the current and staged Asset is removed.</p>
+     *  <p>Whether only the staged Asset is removed. If <code>false</code>, both the current and staged Asset is removed.</p>
      * @return staged
      */
 
@@ -60,7 +60,7 @@ public interface VariantRemoveAssetAction extends VariantUpdateAction {
     public String getAssetKey();
 
     /**
-     *  <p>If <code>true</code>, only the staged Asset is removed. If <code>false</code>, both the current and staged Asset is removed.</p>
+     *  <p>Whether only the staged Asset is removed. If <code>false</code>, both the current and staged Asset is removed.</p>
      * @param staged value to be set
      */
 

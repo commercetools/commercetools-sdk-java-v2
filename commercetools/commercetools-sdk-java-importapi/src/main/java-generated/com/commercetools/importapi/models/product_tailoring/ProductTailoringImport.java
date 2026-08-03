@@ -115,7 +115,7 @@ public interface ProductTailoringImport extends ImportResource {
     public LocalizedString getSlug();
 
     /**
-     *  <p>Set to <code>true</code> to publish the ProductTailoring immediately. Otherwise, the tailored product information is just staged.</p>
+     *  <p>Whether to publish the ProductTailoring immediately. Otherwise, the tailored product information is just staged.</p>
      * @return publish
      */
 
@@ -202,7 +202,7 @@ public interface ProductTailoringImport extends ImportResource {
     public void setSlug(final LocalizedString slug);
 
     /**
-     *  <p>Set to <code>true</code> to publish the ProductTailoring immediately. Otherwise, the tailored product information is just staged.</p>
+     *  <p>Whether to publish the ProductTailoring immediately. Otherwise, the tailored product information is just staged.</p>
      * @param publish value to be set
      */
 

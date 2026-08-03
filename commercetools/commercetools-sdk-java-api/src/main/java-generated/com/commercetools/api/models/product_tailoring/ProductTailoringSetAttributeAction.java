@@ -79,7 +79,7 @@ public interface ProductTailoringSetAttributeAction extends ProductTailoringUpda
     public Object getValue();
 
     /**
-     *  <p>If <code>true</code>, only the staged Attribute is set. If <code>false</code>, both current and staged Attribute is set.</p>
+     *  <p>Whether only the staged Attribute is set. If <code>false</code>, both current and staged Attribute is set.</p>
      * @return staged
      */
 
@@ -124,7 +124,7 @@ public interface ProductTailoringSetAttributeAction extends ProductTailoringUpda
     public void setValue(final Object value);
 
     /**
-     *  <p>If <code>true</code>, only the staged Attribute is set. If <code>false</code>, both current and staged Attribute is set.</p>
+     *  <p>Whether only the staged Attribute is set. If <code>false</code>, both current and staged Attribute is set.</p>
      * @param staged value to be set
      */
 

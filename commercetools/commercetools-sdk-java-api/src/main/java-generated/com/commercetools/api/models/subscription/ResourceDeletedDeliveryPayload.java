@@ -58,7 +58,7 @@ public interface ResourceDeletedDeliveryPayload extends DeliveryPayload {
     public ZonedDateTime getModifiedAt();
 
     /**
-     *  <p><code>true</code> if the <code>dataErasure</code> <span>parameter</span> on the <code>DELETE</code> request was set to <code>true</code>.</p>
+     *  <p>Whether the <code>dataErasure</code> <span>parameter</span> on the <code>DELETE</code> request was set to <code>true</code>.</p>
      * @return dataErasure
      */
 
@@ -80,7 +80,7 @@ public interface ResourceDeletedDeliveryPayload extends DeliveryPayload {
     public void setModifiedAt(final ZonedDateTime modifiedAt);
 
     /**
-     *  <p><code>true</code> if the <code>dataErasure</code> <span>parameter</span> on the <code>DELETE</code> request was set to <code>true</code>.</p>
+     *  <p>Whether the <code>dataErasure</code> <span>parameter</span> on the <code>DELETE</code> request was set to <code>true</code>.</p>
      * @param dataErasure value to be set
      */
 

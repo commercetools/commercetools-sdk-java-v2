@@ -62,7 +62,7 @@ public interface ProductTailoringRemoveImageAction extends ProductTailoringUpdat
     public String getImageUrl();
 
     /**
-     *  <p>If <code>true</code>, only the staged image is removed. If <code>false</code>, both the current and staged image is removed.</p>
+     *  <p>Whether only the staged image is removed. If <code>false</code>, both the current and staged image is removed.</p>
      * @return staged
      */
 
@@ -91,7 +91,7 @@ public interface ProductTailoringRemoveImageAction extends ProductTailoringUpdat
     public void setImageUrl(final String imageUrl);
 
     /**
-     *  <p>If <code>true</code>, only the staged image is removed. If <code>false</code>, both the current and staged image is removed.</p>
+     *  <p>Whether only the staged image is removed. If <code>false</code>, both the current and staged image is removed.</p>
      * @param staged value to be set
      */
 

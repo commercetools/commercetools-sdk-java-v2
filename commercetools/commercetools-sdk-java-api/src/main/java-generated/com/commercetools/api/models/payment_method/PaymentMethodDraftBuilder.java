@@ -266,7 +266,7 @@ public class PaymentMethodDraftBuilder implements Builder<PaymentMethodDraft> {
     }
 
     /**
-     *  <p>Set to <code>true</code> if the PaymentMethod should be the default.</p>
+     *  <p>Whether the PaymentMethod should be the default.</p>
      *  <p>The default applies per Customer, Business Unit, or the combination of both (Associate).</p>
      * @param _default value to be set
      * @return Builder
@@ -406,7 +406,7 @@ public class PaymentMethodDraftBuilder implements Builder<PaymentMethodDraft> {
     }
 
     /**
-     *  <p>Set to <code>true</code> if the PaymentMethod should be the default.</p>
+     *  <p>Whether the PaymentMethod should be the default.</p>
      *  <p>The default applies per Customer, Business Unit, or the combination of both (Associate).</p>
      * @return default
      */

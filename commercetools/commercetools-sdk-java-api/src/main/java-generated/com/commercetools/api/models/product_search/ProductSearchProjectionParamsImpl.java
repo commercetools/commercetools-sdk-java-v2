@@ -80,7 +80,7 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
     }
 
     /**
-     *  <p>Set to <code>true</code> to retrieve the <span>staged</span> Product Projection</p>
+     *  <p>Whether to retrieve the <span>staged</span> Product Projection</p>
      */
 
     public Boolean getStaged() {

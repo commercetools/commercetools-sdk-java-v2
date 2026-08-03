@@ -46,7 +46,7 @@ public interface ProductSetMetaTitleAction extends ProductUpdateAction {
     public LocalizedString getMetaTitle();
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>metaTitle</code> is updated. If <code>false</code>, both the current and staged <code>metaTitle</code> are updated.</p>
+     *  <p>Whether only the staged <code>metaTitle</code> is updated. If <code>false</code>, both the current and staged <code>metaTitle</code> are updated.</p>
      * @return staged
      */
 
@@ -61,7 +61,7 @@ public interface ProductSetMetaTitleAction extends ProductUpdateAction {
     public void setMetaTitle(final LocalizedString metaTitle);
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>metaTitle</code> is updated. If <code>false</code>, both the current and staged <code>metaTitle</code> are updated.</p>
+     *  <p>Whether only the staged <code>metaTitle</code> is updated. If <code>false</code>, both the current and staged <code>metaTitle</code> are updated.</p>
      * @param staged value to be set
      */
 

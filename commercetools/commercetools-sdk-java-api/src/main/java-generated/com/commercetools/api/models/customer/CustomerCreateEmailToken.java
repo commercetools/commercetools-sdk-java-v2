@@ -57,7 +57,7 @@ public interface CustomerCreateEmailToken {
     public Long getTtlMinutes();
 
     /**
-     *  <p>If set to <code>true</code>, all email tokens issued previously for the Customer will be invalidated.</p>
+     *  <p>Whether all email tokens issued previously for the Customer will be invalidated.</p>
      * @return invalidateOlderTokens
      */
 
@@ -86,7 +86,7 @@ public interface CustomerCreateEmailToken {
     public void setTtlMinutes(final Long ttlMinutes);
 
     /**
-     *  <p>If set to <code>true</code>, all email tokens issued previously for the Customer will be invalidated.</p>
+     *  <p>Whether all email tokens issued previously for the Customer will be invalidated.</p>
      * @param invalidateOlderTokens value to be set
      */
 

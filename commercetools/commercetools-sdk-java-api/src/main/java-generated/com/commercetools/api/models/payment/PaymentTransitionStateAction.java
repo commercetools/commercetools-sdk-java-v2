@@ -50,7 +50,7 @@ public interface PaymentTransitionStateAction extends PaymentUpdateAction {
     public StateResourceIdentifier getState();
 
     /**
-     *  <p>Set to <code>true</code> to skip validations when transitioning to the new State.</p>
+     *  <p>Whether to skip validations when transitioning to the new State.</p>
      * @return force
      */
 
@@ -65,7 +65,7 @@ public interface PaymentTransitionStateAction extends PaymentUpdateAction {
     public void setState(final StateResourceIdentifier state);
 
     /**
-     *  <p>Set to <code>true</code> to skip validations when transitioning to the new State.</p>
+     *  <p>Whether to skip validations when transitioning to the new State.</p>
      * @param force value to be set
      */
 

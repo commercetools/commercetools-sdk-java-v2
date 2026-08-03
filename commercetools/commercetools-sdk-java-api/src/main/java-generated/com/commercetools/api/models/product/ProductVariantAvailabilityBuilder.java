@@ -81,7 +81,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     }
 
     /**
-     *  <p><code>true</code> if the Product Variant is in stock, based on an <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> that has no assigned supply <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>. This value reflects global or default availability; it does not aggregate the channel-specific availabilities found in the <code>channels</code> field.</p>
+     *  <p>Whether the Product Variant is in stock, based on an <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> that has no assigned supply <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>. This value reflects global or default availability; it does not aggregate the channel-specific availabilities found in the <code>channels</code> field.</p>
      * @param isOnStock value to be set
      * @return Builder
      */
@@ -146,7 +146,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     }
 
     /**
-     *  <p><code>true</code> if the Product Variant is in stock, based on an <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> that has no assigned supply <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>. This value reflects global or default availability; it does not aggregate the channel-specific availabilities found in the <code>channels</code> field.</p>
+     *  <p>Whether the Product Variant is in stock, based on an <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> that has no assigned supply <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>. This value reflects global or default availability; it does not aggregate the channel-specific availabilities found in the <code>channels</code> field.</p>
      * @return isOnStock
      */
 

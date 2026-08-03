@@ -208,7 +208,7 @@ public class CustomerPasswordTokenCreatedMessageImpl implements CustomerPassword
     }
 
     /**
-     *  <p>If <code>true</code>, all password tokens issued previously for the Customer are invalidated.</p>
+     *  <p>Whether all password tokens issued previously for the Customer are invalidated.</p>
      */
 
     public Boolean getInvalidateOlderTokens() {

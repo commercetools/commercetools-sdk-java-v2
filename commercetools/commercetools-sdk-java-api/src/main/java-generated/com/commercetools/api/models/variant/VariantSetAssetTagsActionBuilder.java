@@ -35,7 +35,7 @@ public class VariantSetAssetTagsActionBuilder implements Builder<VariantSetAsset
     private java.util.List<String> tags;
 
     /**
-     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
+     *  <p>Whether only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -104,7 +104,7 @@ public class VariantSetAssetTagsActionBuilder implements Builder<VariantSetAsset
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
+     *  <p>Whether only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
      * @return staged
      */
 

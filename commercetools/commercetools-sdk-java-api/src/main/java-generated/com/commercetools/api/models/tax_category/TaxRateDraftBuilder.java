@@ -67,7 +67,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
-     *  <p>If <code>true</code>, tax is included in <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Prices</a>, and the <code>taxedPrice</code> is present on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>. In this case, the <code>totalNet</code> price on <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedPrice" rel="nofollow">TaxedPrice</a> includes the TaxRate.</p>
+     *  <p>Whether tax is included in <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Prices</a>, and the <code>taxedPrice</code> is present on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>. In this case, the <code>totalNet</code> price on <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedPrice" rel="nofollow">TaxedPrice</a> includes the TaxRate.</p>
      * @param includedInPrice value to be set
      * @return Builder
      */
@@ -218,7 +218,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
-     *  <p>If <code>true</code>, tax is included in <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Prices</a>, and the <code>taxedPrice</code> is present on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>. In this case, the <code>totalNet</code> price on <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedPrice" rel="nofollow">TaxedPrice</a> includes the TaxRate.</p>
+     *  <p>Whether tax is included in <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">Standalone Prices</a>, and the <code>taxedPrice</code> is present on <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>. In this case, the <code>totalNet</code> price on <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxedPrice" rel="nofollow">TaxedPrice</a> includes the TaxRate.</p>
      * @return includedInPrice
      */
 

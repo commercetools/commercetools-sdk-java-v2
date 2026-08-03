@@ -194,7 +194,7 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
     }
 
     /**
-     *  <p>If <code>true</code> the Product Discount is applied to Products matching the <code>predicate</code>.</p>
+     *  <p>Whether the Product Discount is applied to Products matching the <code>predicate</code>.</p>
      */
 
     public Boolean getIsActive() {

@@ -91,7 +91,7 @@ public class GraphQLPriceChangedErrorBuilder implements Builder<GraphQLPriceChan
     }
 
     /**
-     *  <p><code>true</code> if the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> has changed.</p>
+     *  <p>Whether the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> has changed.</p>
      * @param shipping value to be set
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class GraphQLPriceChangedErrorBuilder implements Builder<GraphQLPriceChan
     }
 
     /**
-     *  <p><code>true</code> if the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> has changed.</p>
+     *  <p>Whether the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> has changed.</p>
      * @return shipping
      */
 

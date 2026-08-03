@@ -65,7 +65,7 @@ public class ProductSetSearchKeywordsActionImpl implements ProductSetSearchKeywo
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>searchKeywords</code> is updated. If <code>false</code>, both the current and staged <code>searchKeywords</code> are updated.</p>
+     *  <p>Whether only the staged <code>searchKeywords</code> is updated. If <code>false</code>, both the current and staged <code>searchKeywords</code> are updated.</p>
      */
 
     public Boolean getStaged() {

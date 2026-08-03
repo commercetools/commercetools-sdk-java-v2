@@ -98,7 +98,7 @@ public class ProductTailoringSetImageLabelActionImpl implements ProductTailoring
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged image is updated. If <code>false</code>, both the current and staged image is updated.</p>
+     *  <p>Whether only the staged image is updated. If <code>false</code>, both the current and staged image is updated.</p>
      */
 
     public Boolean getStaged() {

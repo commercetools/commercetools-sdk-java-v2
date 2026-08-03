@@ -111,7 +111,7 @@ public class ProductTailoringAddVariantActionImpl implements ProductTailoringAdd
     }
 
     /**
-     *  <p>If <code>true</code> the new Product Variant Tailoring is only staged. If <code>false</code> the new Product Variant Tailoring is both current and staged.</p>
+     *  <p>Whether the new Product Variant Tailoring is only staged. If <code>false</code> the new Product Variant Tailoring is both current and staged.</p>
      */
 
     public Boolean getStaged() {

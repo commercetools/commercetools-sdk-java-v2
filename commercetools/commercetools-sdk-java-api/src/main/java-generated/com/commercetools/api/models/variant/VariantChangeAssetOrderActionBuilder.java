@@ -29,7 +29,7 @@ public class VariantChangeAssetOrderActionBuilder implements Builder<VariantChan
     private java.util.List<String> assetOrder;
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>assets</code> is updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
+     *  <p>Whether only the staged <code>assets</code> is updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class VariantChangeAssetOrderActionBuilder implements Builder<VariantChan
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>assets</code> is updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
+     *  <p>Whether only the staged <code>assets</code> is updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
      * @return staged
      */
 

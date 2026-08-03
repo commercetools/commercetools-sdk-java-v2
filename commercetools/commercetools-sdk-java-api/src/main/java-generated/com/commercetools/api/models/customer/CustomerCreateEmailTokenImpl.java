@@ -75,7 +75,7 @@ public class CustomerCreateEmailTokenImpl implements CustomerCreateEmailToken, M
     }
 
     /**
-     *  <p>If set to <code>true</code>, all email tokens issued previously for the Customer will be invalidated.</p>
+     *  <p>Whether all email tokens issued previously for the Customer will be invalidated.</p>
      */
 
     public Boolean getInvalidateOlderTokens() {

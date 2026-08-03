@@ -44,10 +44,7 @@ public interface ItemShippingDetails {
     public List<ItemShippingTarget> getTargets();
 
     /**
-     *  <ul>
-     *   <li><code>true</code> if the quantity of Line Items or Custom Line Items is equal to the sum of sub-quantities defined in <code>targets</code>.</li>
-     *   <li><code>false</code> if the quantity of Line Items or Custom Line Items is not equal to the sum of sub-quantities defined in <code>targets</code>. Ordering a Cart when the value is <code>false</code> returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidItemShippingDetailsError" rel="nofollow">InvalidItemShippingDetails</a> error.</li>
-     *  </ul>
+     *  <p>Whether the quantity of Line Items or Custom Line Items is equal to the sum of sub-quantities defined in <code>targets</code>. Ordering a Cart when the value is <code>false</code> returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidItemShippingDetailsError" rel="nofollow">InvalidItemShippingDetails</a> error.</p>
      * @return valid
      */
     @NotNull
@@ -70,10 +67,7 @@ public interface ItemShippingDetails {
     public void setTargets(final List<ItemShippingTarget> targets);
 
     /**
-     *  <ul>
-     *   <li><code>true</code> if the quantity of Line Items or Custom Line Items is equal to the sum of sub-quantities defined in <code>targets</code>.</li>
-     *   <li><code>false</code> if the quantity of Line Items or Custom Line Items is not equal to the sum of sub-quantities defined in <code>targets</code>. Ordering a Cart when the value is <code>false</code> returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidItemShippingDetailsError" rel="nofollow">InvalidItemShippingDetails</a> error.</li>
-     *  </ul>
+     *  <p>Whether the quantity of Line Items or Custom Line Items is equal to the sum of sub-quantities defined in <code>targets</code>. Ordering a Cart when the value is <code>false</code> returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidItemShippingDetailsError" rel="nofollow">InvalidItemShippingDetails</a> error.</p>
      * @param valid value to be set
      */
 

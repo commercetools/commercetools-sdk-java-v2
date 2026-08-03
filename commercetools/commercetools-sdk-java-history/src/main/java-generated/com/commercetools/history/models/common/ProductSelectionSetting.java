@@ -43,7 +43,7 @@ public interface ProductSelectionSetting {
     public ProductSelectionReference getProductSelection();
 
     /**
-     *  <p>If <code>true</code>, all Products assigned to this Product Selection are part of the Store's assortment.</p>
+     *  <p>Whether all Products assigned to this Product Selection are part of the Store's assortment.</p>
      * @return active
      */
     @NotNull
@@ -58,7 +58,7 @@ public interface ProductSelectionSetting {
     public void setProductSelection(final ProductSelectionReference productSelection);
 
     /**
-     *  <p>If <code>true</code>, all Products assigned to this Product Selection are part of the Store's assortment.</p>
+     *  <p>Whether all Products assigned to this Product Selection are part of the Store's assortment.</p>
      * @param active value to be set
      */
 

@@ -91,7 +91,7 @@ public class ProductTailoringSetAttributeActionBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged Attribute is set. If <code>false</code>, both current and staged Attribute is set.</p>
+     *  <p>Whether only the staged Attribute is set. If <code>false</code>, both current and staged Attribute is set.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -150,7 +150,7 @@ public class ProductTailoringSetAttributeActionBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged Attribute is set. If <code>false</code>, both current and staged Attribute is set.</p>
+     *  <p>Whether only the staged Attribute is set. If <code>false</code>, both current and staged Attribute is set.</p>
      * @return staged
      */
 

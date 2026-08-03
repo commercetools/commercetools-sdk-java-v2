@@ -67,7 +67,7 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
     }
 
     /**
-     *  <p>If <code>true</code>, all Products assigned to this Product Selection are part of the Store's assortment.</p>
+     *  <p>Whether all Products assigned to this Product Selection are part of the Store's assortment.</p>
      * @param active value to be set
      * @return Builder
      */
@@ -87,7 +87,7 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
     }
 
     /**
-     *  <p>If <code>true</code>, all Products assigned to this Product Selection are part of the Store's assortment.</p>
+     *  <p>Whether all Products assigned to this Product Selection are part of the Store's assortment.</p>
      * @return active
      */
 

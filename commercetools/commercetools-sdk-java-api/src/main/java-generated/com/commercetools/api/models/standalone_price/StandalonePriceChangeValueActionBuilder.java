@@ -68,7 +68,7 @@ public class StandalonePriceChangeValueActionBuilder implements Builder<Standalo
     }
 
     /**
-     *  <p>If set to <code>true</code> the update action applies to the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedStandalonePrice" rel="nofollow">StagedStandalonePrice</a>. If set to <code>false</code>, the update action applies to the current <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
+     *  <p>Whether the update action applies to the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedStandalonePrice" rel="nofollow">StagedStandalonePrice</a>. If set to <code>false</code>, the update action applies to the current <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -89,7 +89,7 @@ public class StandalonePriceChangeValueActionBuilder implements Builder<Standalo
     }
 
     /**
-     *  <p>If set to <code>true</code> the update action applies to the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedStandalonePrice" rel="nofollow">StagedStandalonePrice</a>. If set to <code>false</code>, the update action applies to the current <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
+     *  <p>Whether the update action applies to the <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedStandalonePrice" rel="nofollow">StagedStandalonePrice</a>. If set to <code>false</code>, the update action applies to the current <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrice</a>.</p>
      * @return staged
      */
 

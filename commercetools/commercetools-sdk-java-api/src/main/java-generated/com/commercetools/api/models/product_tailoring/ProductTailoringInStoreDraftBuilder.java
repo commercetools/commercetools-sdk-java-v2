@@ -321,7 +321,7 @@ public class ProductTailoringInStoreDraftBuilder implements Builder<ProductTailo
     }
 
     /**
-     *  <p>If <code>true</code>, the ProductTailoring is published immediately.</p>
+     *  <p>Whether the ProductTailoring is published immediately.</p>
      * @param publish value to be set
      * @return Builder
      */
@@ -601,7 +601,7 @@ public class ProductTailoringInStoreDraftBuilder implements Builder<ProductTailo
     }
 
     /**
-     *  <p>If <code>true</code>, the ProductTailoring is published immediately.</p>
+     *  <p>Whether the ProductTailoring is published immediately.</p>
      * @return publish
      */
 

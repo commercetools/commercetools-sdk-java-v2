@@ -241,7 +241,7 @@ public class VariantProjectionImpl implements VariantProjection, ModelBase {
     }
 
     /**
-     *  <p><code>true</code> if this Variant is the default Variant of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> (see <span>Product.defaultVariant</span>). <code>false</code> otherwise.</p>
+     *  <p>Whether this Variant is the default Variant of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> (see <span>Product.defaultVariant</span>).</p>
      */
 
     public Boolean getDefault() {

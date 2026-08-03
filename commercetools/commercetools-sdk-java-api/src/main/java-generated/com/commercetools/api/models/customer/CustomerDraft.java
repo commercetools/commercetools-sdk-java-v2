@@ -204,7 +204,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     public List<Integer> getBillingAddresses();
 
     /**
-     *  <p>Set to <code>true</code> if the email address of the Customer has been verified already. The intended use is to leave this field unset upon sign-up of the Customer and initiate the <span>email verification</span> afterwards.</p>
+     *  <p>Whether the email address of the Customer has been verified already. The intended use is to leave this field unset upon sign-up of the Customer and initiate the <span>email verification</span> afterwards.</p>
      * @return isEmailVerified
      */
 
@@ -444,7 +444,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     public void setBillingAddresses(final List<Integer> billingAddresses);
 
     /**
-     *  <p>Set to <code>true</code> if the email address of the Customer has been verified already. The intended use is to leave this field unset upon sign-up of the Customer and initiate the <span>email verification</span> afterwards.</p>
+     *  <p>Whether the email address of the Customer has been verified already. The intended use is to leave this field unset upon sign-up of the Customer and initiate the <span>email verification</span> afterwards.</p>
      * @param isEmailVerified value to be set
      */
 

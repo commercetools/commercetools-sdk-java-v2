@@ -46,7 +46,7 @@ public interface ProductTailoringSetSlugAction extends ProductTailoringUpdateAct
     public LocalizedString getSlug();
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>slug</code> is updated. If <code>false</code>, both the current and staged <code>slug</code> are updated.</p>
+     *  <p>Whether only the staged <code>slug</code> is updated. If <code>false</code>, both the current and staged <code>slug</code> are updated.</p>
      * @return staged
      */
 
@@ -61,7 +61,7 @@ public interface ProductTailoringSetSlugAction extends ProductTailoringUpdateAct
     public void setSlug(final LocalizedString slug);
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>slug</code> is updated. If <code>false</code>, both the current and staged <code>slug</code> are updated.</p>
+     *  <p>Whether only the staged <code>slug</code> is updated. If <code>false</code>, both the current and staged <code>slug</code> are updated.</p>
      * @param staged value to be set
      */
 

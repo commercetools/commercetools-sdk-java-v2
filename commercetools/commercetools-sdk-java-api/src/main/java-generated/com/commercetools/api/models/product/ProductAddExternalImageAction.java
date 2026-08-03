@@ -65,7 +65,7 @@ public interface ProductAddExternalImageAction extends ProductUpdateAction {
     public Image getImage();
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> is updated.</p>
+     *  <p>Whether only staged <code>images</code> are updated. If <code>false</code>, both current and staged <code>images</code> are updated.</p>
      * @return staged
      */
 
@@ -94,7 +94,7 @@ public interface ProductAddExternalImageAction extends ProductUpdateAction {
     public void setImage(final Image image);
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> is updated.</p>
+     *  <p>Whether only staged <code>images</code> are updated. If <code>false</code>, both current and staged <code>images</code> are updated.</p>
      * @param staged value to be set
      */
 

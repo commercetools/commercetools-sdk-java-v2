@@ -235,7 +235,7 @@ public class VariantBuilder implements Builder<Variant> {
     }
 
     /**
-     *  <p><code>true</code> if the Variant is published, <code>false</code> if it is unpublished.</p>
+     *  <p>Whether the Variant is published, <code>false</code> if it is unpublished.</p>
      * @param published value to be set
      * @return Builder
      */
@@ -465,7 +465,7 @@ public class VariantBuilder implements Builder<Variant> {
     }
 
     /**
-     *  <p><code>true</code> if the Variant is published, <code>false</code> if it is unpublished.</p>
+     *  <p>Whether the Variant is published, <code>false</code> if it is unpublished.</p>
      * @return published
      */
 

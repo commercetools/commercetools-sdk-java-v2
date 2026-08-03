@@ -66,7 +66,7 @@ public class ProductSetDescriptionActionBuilder implements Builder<ProductSetDes
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>description</code> is updated. If <code>false</code>, both the current and staged <code>description</code> are updated.</p>
+     *  <p>Whether only the staged <code>description</code> is updated. If <code>false</code>, both the current and staged <code>description</code> are updated.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -87,7 +87,7 @@ public class ProductSetDescriptionActionBuilder implements Builder<ProductSetDes
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>description</code> is updated. If <code>false</code>, both the current and staged <code>description</code> are updated.</p>
+     *  <p>Whether only the staged <code>description</code> is updated. If <code>false</code>, both the current and staged <code>description</code> are updated.</p>
      * @return staged
      */
 

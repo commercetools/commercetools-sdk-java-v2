@@ -177,7 +177,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public SearchKeywords getSearchKeywords();
 
     /**
-     *  <p><code>true</code> if the staged data is different from the current data.</p>
+     *  <p>Whether the staged data is different from the current data.</p>
      * @return hasStagedChanges
      */
 
@@ -185,7 +185,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public Boolean getHasStagedChanges();
 
     /**
-     *  <p><code>true</code> if the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:CurrentStaged" rel="nofollow">published</a>.</p>
+     *  <p>Whether the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:CurrentStaged" rel="nofollow">published</a>.</p>
      * @return published
      */
 
@@ -368,14 +368,14 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public void setSearchKeywords(final SearchKeywords searchKeywords);
 
     /**
-     *  <p><code>true</code> if the staged data is different from the current data.</p>
+     *  <p>Whether the staged data is different from the current data.</p>
      * @param hasStagedChanges value to be set
      */
 
     public void setHasStagedChanges(final Boolean hasStagedChanges);
 
     /**
-     *  <p><code>true</code> if the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:CurrentStaged" rel="nofollow">published</a>.</p>
+     *  <p>Whether the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:CurrentStaged" rel="nofollow">published</a>.</p>
      * @param published value to be set
      */
 

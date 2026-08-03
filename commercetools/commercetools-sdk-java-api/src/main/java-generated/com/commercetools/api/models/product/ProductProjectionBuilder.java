@@ -564,7 +564,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p><code>true</code> if the staged data is different from the current data.</p>
+     *  <p>Whether the staged data is different from the current data.</p>
      * @param hasStagedChanges value to be set
      * @return Builder
      */
@@ -575,7 +575,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p><code>true</code> if the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:CurrentStaged" rel="nofollow">published</a>.</p>
+     *  <p>Whether the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:CurrentStaged" rel="nofollow">published</a>.</p>
      * @param published value to be set
      * @return Builder
      */
@@ -1073,7 +1073,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p><code>true</code> if the staged data is different from the current data.</p>
+     *  <p>Whether the staged data is different from the current data.</p>
      * @return hasStagedChanges
      */
 
@@ -1083,7 +1083,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
-     *  <p><code>true</code> if the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:CurrentStaged" rel="nofollow">published</a>.</p>
+     *  <p>Whether the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:CurrentStaged" rel="nofollow">published</a>.</p>
      * @return published
      */
 

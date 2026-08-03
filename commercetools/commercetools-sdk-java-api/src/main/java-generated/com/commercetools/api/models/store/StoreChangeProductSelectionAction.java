@@ -49,7 +49,7 @@ public interface StoreChangeProductSelectionAction extends StoreUpdateAction {
     public ProductSelectionResourceIdentifier getProductSelection();
 
     /**
-     *  <p>Set to <code>true</code> if all Products assigned to the Product Selection should become part of the Store's assortment.</p>
+     *  <p>Whether all Products assigned to the Product Selection should become part of the Store's assortment.</p>
      * @return active
      */
 
@@ -64,7 +64,7 @@ public interface StoreChangeProductSelectionAction extends StoreUpdateAction {
     public void setProductSelection(final ProductSelectionResourceIdentifier productSelection);
 
     /**
-     *  <p>Set to <code>true</code> if all Products assigned to the Product Selection should become part of the Store's assortment.</p>
+     *  <p>Whether all Products assigned to the Product Selection should become part of the Store's assortment.</p>
      * @param active value to be set
      */
 

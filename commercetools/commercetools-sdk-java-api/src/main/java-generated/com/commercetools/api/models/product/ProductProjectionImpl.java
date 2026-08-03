@@ -251,7 +251,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *  <p><code>true</code> if the staged data is different from the current data.</p>
+     *  <p>Whether the staged data is different from the current data.</p>
      */
 
     public Boolean getHasStagedChanges() {
@@ -259,7 +259,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
     }
 
     /**
-     *  <p><code>true</code> if the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:CurrentStaged" rel="nofollow">published</a>.</p>
+     *  <p>Whether the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:CurrentStaged" rel="nofollow">published</a>.</p>
      */
 
     public Boolean getPublished() {

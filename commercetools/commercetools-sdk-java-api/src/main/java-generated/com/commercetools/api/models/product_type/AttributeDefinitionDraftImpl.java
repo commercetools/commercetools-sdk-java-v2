@@ -99,7 +99,7 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
     }
 
     /**
-     *  <p>Set to <code>true</code> if the Attribute is required to have a value on a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+     *  <p>Whether the Attribute is required to have a value on a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      */
 
     public Boolean getIsRequired() {

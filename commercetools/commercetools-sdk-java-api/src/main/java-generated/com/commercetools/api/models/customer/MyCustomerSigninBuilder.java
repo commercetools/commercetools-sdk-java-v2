@@ -72,10 +72,7 @@ public class MyCustomerSigninBuilder implements Builder<MyCustomerSignin> {
     }
 
     /**
-     *  <ul>
-     *   <li>If <code>true</code>, the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart is updated.</li>
-     *   <li>If <code>false</code>, only the prices, discounts, and tax rates are updated.</li>
-     *  </ul>
+     *  <p>Whether the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart is updated. If <code>false</code>, only the prices, discounts, and tax rates are updated.</p>
      * @param updateProductData value to be set
      * @return Builder
      */
@@ -117,10 +114,7 @@ public class MyCustomerSigninBuilder implements Builder<MyCustomerSignin> {
     }
 
     /**
-     *  <ul>
-     *   <li>If <code>true</code>, the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart is updated.</li>
-     *   <li>If <code>false</code>, only the prices, discounts, and tax rates are updated.</li>
-     *  </ul>
+     *  <p>Whether the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart is updated. If <code>false</code>, only the prices, discounts, and tax rates are updated.</p>
      * @return updateProductData
      */
 

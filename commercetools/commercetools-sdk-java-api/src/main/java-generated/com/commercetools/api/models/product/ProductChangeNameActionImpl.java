@@ -64,7 +64,7 @@ public class ProductChangeNameActionImpl implements ProductChangeNameAction, Mod
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>name</code> is updated. If <code>false</code>, both the current and staged <code>name</code> are updated.</p>
+     *  <p>Whether only the staged <code>name</code> is updated. If <code>false</code>, both the current and staged <code>name</code> are updated.</p>
      */
 
     public Boolean getStaged() {

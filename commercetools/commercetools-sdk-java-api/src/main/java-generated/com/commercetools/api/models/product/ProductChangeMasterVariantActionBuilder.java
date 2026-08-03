@@ -54,7 +54,7 @@ public class ProductChangeMasterVariantActionBuilder implements Builder<ProductC
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged Master Variant is changed. If <code>false</code>, both the current and staged Master Variant are changed.</p>
+     *  <p>Whether only the staged Master Variant is changed. If <code>false</code>, both the current and staged Master Variant are changed.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -85,7 +85,7 @@ public class ProductChangeMasterVariantActionBuilder implements Builder<ProductC
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged Master Variant is changed. If <code>false</code>, both the current and staged Master Variant are changed.</p>
+     *  <p>Whether only the staged Master Variant is changed. If <code>false</code>, both the current and staged Master Variant are changed.</p>
      * @return staged
      */
 

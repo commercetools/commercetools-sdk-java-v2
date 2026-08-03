@@ -84,7 +84,7 @@ public class ProductSetAttributeInAllVariantsActionImpl implements ProductSetAtt
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged Attributes are set. If <code>false</code>, both the current and staged Attributes are set.</p>
+     *  <p>Whether only the staged Attributes are set. If <code>false</code>, both the current and staged Attributes are set.</p>
      */
 
     public Boolean getStaged() {

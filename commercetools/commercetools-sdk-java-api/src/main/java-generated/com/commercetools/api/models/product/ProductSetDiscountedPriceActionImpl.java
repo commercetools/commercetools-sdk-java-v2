@@ -68,7 +68,7 @@ public class ProductSetDiscountedPriceActionImpl implements ProductSetDiscounted
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
+     *  <p>Whether only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      */
 
     public Boolean getStaged() {

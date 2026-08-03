@@ -66,7 +66,7 @@ public class RecurringOrderTransitionStateActionImpl implements RecurringOrderTr
     }
 
     /**
-     *  <p>Set to <code>true</code> to turn off validation.</p>
+     *  <p>Whether to turn off validation.</p>
      */
 
     public Boolean getForce() {

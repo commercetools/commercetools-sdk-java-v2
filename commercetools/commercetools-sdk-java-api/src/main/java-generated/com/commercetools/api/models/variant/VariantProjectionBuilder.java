@@ -716,7 +716,7 @@ public class VariantProjectionBuilder implements Builder<VariantProjection> {
     }
 
     /**
-     *  <p><code>true</code> if this Variant is the default Variant of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> (see <span>Product.defaultVariant</span>). <code>false</code> otherwise.</p>
+     *  <p>Whether this Variant is the default Variant of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> (see <span>Product.defaultVariant</span>).</p>
      * @param _default value to be set
      * @return Builder
      */
@@ -885,7 +885,7 @@ public class VariantProjectionBuilder implements Builder<VariantProjection> {
     }
 
     /**
-     *  <p><code>true</code> if this Variant is the default Variant of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> (see <span>Product.defaultVariant</span>). <code>false</code> otherwise.</p>
+     *  <p>Whether this Variant is the default Variant of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> (see <span>Product.defaultVariant</span>).</p>
      * @return default
      */
 

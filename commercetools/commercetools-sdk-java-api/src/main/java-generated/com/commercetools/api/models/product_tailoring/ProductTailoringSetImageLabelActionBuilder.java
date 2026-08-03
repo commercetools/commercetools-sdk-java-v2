@@ -82,7 +82,7 @@ public class ProductTailoringSetImageLabelActionBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged image is updated. If <code>false</code>, both the current and staged image is updated.</p>
+     *  <p>Whether only the staged image is updated. If <code>false</code>, both the current and staged image is updated.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -132,7 +132,7 @@ public class ProductTailoringSetImageLabelActionBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged image is updated. If <code>false</code>, both the current and staged image is updated.</p>
+     *  <p>Whether only the staged image is updated. If <code>false</code>, both the current and staged image is updated.</p>
      * @return staged
      */
 

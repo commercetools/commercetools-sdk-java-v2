@@ -38,7 +38,7 @@ public interface VariantSetAssetDescriptionAction extends VariantUpdateAction {
     String SET_ASSET_DESCRIPTION = "setAssetDescription";
 
     /**
-     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
+     *  <p>Whether only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
      * @return staged
      */
 
@@ -70,7 +70,7 @@ public interface VariantSetAssetDescriptionAction extends VariantUpdateAction {
     public LocalizedString getDescription();
 
     /**
-     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
+     *  <p>Whether only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
      * @param staged value to be set
      */
 

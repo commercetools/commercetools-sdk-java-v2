@@ -89,7 +89,7 @@ public class ProductTailoringSetMetaAttributesActionImpl implements ProductTailo
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged attributes are updated. If <code>false</code>, both the current and staged attributes are updated.</p>
+     *  <p>Whether only the staged attributes are updated. If <code>false</code>, both the current and staged attributes are updated.</p>
      */
 
     public Boolean getStaged() {

@@ -48,7 +48,7 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
     public String getPriceId();
 
     /**
-     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
+     *  <p>Whether only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      * @return staged
      */
 
@@ -71,7 +71,7 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
     public void setPriceId(final String priceId);
 
     /**
-     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
+     *  <p>Whether only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      * @param staged value to be set
      */
 

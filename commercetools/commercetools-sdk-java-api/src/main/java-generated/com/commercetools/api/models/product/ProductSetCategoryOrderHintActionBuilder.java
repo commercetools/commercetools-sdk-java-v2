@@ -54,7 +54,7 @@ public class ProductSetCategoryOrderHintActionBuilder implements Builder<Product
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>categoryOrderHints</code> is updated. If <code>false</code>, both the current and staged <code>categoryOrderHints</code> are updated.</p>
+     *  <p>Whether only the staged <code>categoryOrderHints</code> is updated. If <code>false</code>, both the current and staged <code>categoryOrderHints</code> are updated.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -84,7 +84,7 @@ public class ProductSetCategoryOrderHintActionBuilder implements Builder<Product
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>categoryOrderHints</code> is updated. If <code>false</code>, both the current and staged <code>categoryOrderHints</code> are updated.</p>
+     *  <p>Whether only the staged <code>categoryOrderHints</code> is updated. If <code>false</code>, both the current and staged <code>categoryOrderHints</code> are updated.</p>
      * @return staged
      */
 

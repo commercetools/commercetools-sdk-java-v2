@@ -46,7 +46,7 @@ public interface ProductTransitionStateAction extends ProductUpdateAction {
     public StateResourceIdentifier getState();
 
     /**
-     *  <p>If <code>true</code>, validations are disabled.</p>
+     *  <p>Whether validations are disabled.</p>
      * @return force
      */
 
@@ -61,7 +61,7 @@ public interface ProductTransitionStateAction extends ProductUpdateAction {
     public void setState(final StateResourceIdentifier state);
 
     /**
-     *  <p>If <code>true</code>, validations are disabled.</p>
+     *  <p>Whether validations are disabled.</p>
      * @param force value to be set
      */
 

@@ -56,7 +56,7 @@ public interface ProductChangeAssetNameAction extends ProductUpdateAction {
     public String getSku();
 
     /**
-     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
+     *  <p>Whether only the staged Asset is updated. If <code>false</code>, both the current and staged Asset are updated.</p>
      * @return staged
      */
 
@@ -103,7 +103,7 @@ public interface ProductChangeAssetNameAction extends ProductUpdateAction {
     public void setSku(final String sku);
 
     /**
-     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
+     *  <p>Whether only the staged Asset is updated. If <code>false</code>, both the current and staged Asset are updated.</p>
      * @param staged value to be set
      */
 

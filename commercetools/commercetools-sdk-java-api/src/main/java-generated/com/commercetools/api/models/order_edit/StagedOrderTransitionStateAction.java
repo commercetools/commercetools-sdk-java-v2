@@ -51,7 +51,7 @@ public interface StagedOrderTransitionStateAction extends StagedOrderUpdateActio
     public StateResourceIdentifier getState();
 
     /**
-     *  <p>Set to <code>true</code> to turn off validation.</p>
+     *  <p>Whether to turn off validation.</p>
      * @return force
      */
 
@@ -66,7 +66,7 @@ public interface StagedOrderTransitionStateAction extends StagedOrderUpdateActio
     public void setState(final StateResourceIdentifier state);
 
     /**
-     *  <p>Set to <code>true</code> to turn off validation.</p>
+     *  <p>Whether to turn off validation.</p>
      * @param force value to be set
      */
 

@@ -232,7 +232,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
     }
 
     /**
-     *  <p>If <code>true</code>, the platform sets the <code>published</code> flag on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> to <code>true</code>. This makes the current representation retrievable in <span>Product Projection</span> endpoints and indexes it for <span>Product Search</span>. You can also set this flag later using the <span>Publish</span> update action.</p>
+     *  <p>Whether the platform sets the <code>published</code> flag on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> to <code>true</code>. This makes the current representation retrievable in <span>Product Projection</span> endpoints and indexes it for <span>Product Search</span>. You can also set this flag later using the <span>Publish</span> update action.</p>
      */
 
     public Boolean getPublish() {

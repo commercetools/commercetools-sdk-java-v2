@@ -316,7 +316,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
     }
 
     /**
-     *  <p>If <code>true</code> the Product Discount is applied to Products matching the <code>predicate</code>.</p>
+     *  <p>Whether the Product Discount is applied to Products matching the <code>predicate</code>.</p>
      * @param isActive value to be set
      * @return Builder
      */
@@ -526,7 +526,7 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
     }
 
     /**
-     *  <p>If <code>true</code> the Product Discount is applied to Products matching the <code>predicate</code>.</p>
+     *  <p>Whether the Product Discount is applied to Products matching the <code>predicate</code>.</p>
      * @return isActive
      */
 

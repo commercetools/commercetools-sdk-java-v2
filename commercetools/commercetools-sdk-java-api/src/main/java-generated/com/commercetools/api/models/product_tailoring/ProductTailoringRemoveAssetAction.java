@@ -52,7 +52,7 @@ public interface ProductTailoringRemoveAssetAction extends ProductTailoringUpdat
     public String getSku();
 
     /**
-     *  <p>If <code>true</code>, only the staged Asset is removed. If <code>false</code>, both the current and staged Asset is removed.</p>
+     *  <p>Whether only the staged Asset is removed. If <code>false</code>, both the current and staged Asset is removed.</p>
      * @return staged
      */
 
@@ -90,7 +90,7 @@ public interface ProductTailoringRemoveAssetAction extends ProductTailoringUpdat
     public void setSku(final String sku);
 
     /**
-     *  <p>If <code>true</code>, only the staged Asset is removed. If <code>false</code>, both the current and staged Asset is removed.</p>
+     *  <p>Whether only the staged Asset is removed. If <code>false</code>, both the current and staged Asset is removed.</p>
      * @param staged value to be set
      */
 

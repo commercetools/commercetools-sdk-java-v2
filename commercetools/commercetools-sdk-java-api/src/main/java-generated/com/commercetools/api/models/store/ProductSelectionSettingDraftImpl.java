@@ -53,7 +53,7 @@ public class ProductSelectionSettingDraftImpl implements ProductSelectionSetting
     }
 
     /**
-     *  <p>Set to <code>true</code> if all Products assigned to the Product Selection should become part of the Store's assortment.</p>
+     *  <p>Whether all Products assigned to the Product Selection should become part of the Store's assortment.</p>
      */
 
     public Boolean getActive() {

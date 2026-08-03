@@ -792,7 +792,7 @@ public class ProductTailoringCreatedMessageBuilder implements Builder<ProductTai
     }
 
     /**
-     *  <p><code>true</code> if the ProductTailoring is published.</p>
+     *  <p>Whether the ProductTailoring is published.</p>
      * @param published value to be set
      * @return Builder
      */
@@ -1014,7 +1014,7 @@ public class ProductTailoringCreatedMessageBuilder implements Builder<ProductTai
     }
 
     /**
-     *  <p><code>true</code> if the ProductTailoring is published.</p>
+     *  <p>Whether the ProductTailoring is published.</p>
      * @return published
      */
 

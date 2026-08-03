@@ -67,7 +67,7 @@ public class ProductSetPriceKeyActionImpl implements ProductSetPriceKeyAction, M
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Price</a> is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
+     *  <p>Whether only the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Price</a> is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      */
 
     public Boolean getStaged() {

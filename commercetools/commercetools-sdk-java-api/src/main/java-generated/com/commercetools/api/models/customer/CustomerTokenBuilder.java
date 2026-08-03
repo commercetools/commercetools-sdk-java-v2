@@ -88,7 +88,7 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
     }
 
     /**
-     *  <p>If <code>true</code>, all tokens issued previously for the Customer will be invalidated.</p>
+     *  <p>Whether all tokens issued previously for the Customer will be invalidated.</p>
      * @param invalidateOlderTokens value to be set
      * @return Builder
      */
@@ -157,7 +157,7 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
     }
 
     /**
-     *  <p>If <code>true</code>, all tokens issued previously for the Customer will be invalidated.</p>
+     *  <p>Whether all tokens issued previously for the Customer will be invalidated.</p>
      * @return invalidateOlderTokens
      */
 

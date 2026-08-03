@@ -52,7 +52,7 @@ public interface ProductTailoringRemoveVariantAction extends ProductTailoringUpd
     public String getSku();
 
     /**
-     *  <p>If <code>true</code>, only the staged Product Variant Tailoring is removed. If <code>false</code>, both the current and staged Product Variant Tailoring is removed.</p>
+     *  <p>Whether only the staged Product Variant Tailoring is removed. If <code>false</code>, both the current and staged Product Variant Tailoring is removed.</p>
      * @return staged
      */
 
@@ -74,7 +74,7 @@ public interface ProductTailoringRemoveVariantAction extends ProductTailoringUpd
     public void setSku(final String sku);
 
     /**
-     *  <p>If <code>true</code>, only the staged Product Variant Tailoring is removed. If <code>false</code>, both the current and staged Product Variant Tailoring is removed.</p>
+     *  <p>Whether only the staged Product Variant Tailoring is removed. If <code>false</code>, both the current and staged Product Variant Tailoring is removed.</p>
      * @param staged value to be set
      */
 

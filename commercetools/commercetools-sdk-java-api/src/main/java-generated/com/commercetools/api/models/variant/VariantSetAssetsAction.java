@@ -50,7 +50,7 @@ public interface VariantSetAssetsAction extends VariantUpdateAction {
     public List<AssetDraft> getAssets();
 
     /**
-     *  <p>If <code>true</code>, only the staged assets are set. If <code>false</code>, both the current and staged assets are updated.</p>
+     *  <p>Whether only the staged assets are set. If <code>false</code>, both the current and staged assets are updated.</p>
      * @return staged
      */
 
@@ -73,7 +73,7 @@ public interface VariantSetAssetsAction extends VariantUpdateAction {
     public void setAssets(final List<AssetDraft> assets);
 
     /**
-     *  <p>If <code>true</code>, only the staged assets are set. If <code>false</code>, both the current and staged assets are updated.</p>
+     *  <p>Whether only the staged assets are set. If <code>false</code>, both the current and staged assets are updated.</p>
      * @param staged value to be set
      */
 

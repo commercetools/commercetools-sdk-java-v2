@@ -86,7 +86,7 @@ public class OrderFromQuoteDraftImpl implements OrderFromQuoteDraft, ModelBase {
     }
 
     /**
-     *  <p>If <code>true</code>, the <code>quoteState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> will be set to <code>Accepted</code>.</p>
+     *  <p>Whether the <code>quoteState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Quote" rel="nofollow">Quote</a> will be set to <code>Accepted</code>.</p>
      */
 
     public Boolean getQuoteStateToAccepted() {

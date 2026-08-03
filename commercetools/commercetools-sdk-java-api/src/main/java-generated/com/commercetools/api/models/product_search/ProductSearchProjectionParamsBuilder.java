@@ -87,7 +87,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>Set to <code>true</code> to retrieve the <span>staged</span> Product Projection</p>
+     *  <p>Whether to retrieve the <span>staged</span> Product Projection</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -241,7 +241,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>Set to <code>true</code> to retrieve the <span>staged</span> Product Projection</p>
+     *  <p>Whether to retrieve the <span>staged</span> Product Projection</p>
      * @return staged
      */
 

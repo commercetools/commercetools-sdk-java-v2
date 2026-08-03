@@ -120,7 +120,7 @@ public interface Variant extends BaseResource {
     public ProductReference getProduct();
 
     /**
-     *  <p><code>true</code> if the Variant is published, <code>false</code> if it is unpublished.</p>
+     *  <p>Whether the Variant is published, <code>false</code> if it is unpublished.</p>
      * @return published
      */
     @NotNull
@@ -216,7 +216,7 @@ public interface Variant extends BaseResource {
     public void setProduct(final ProductReference product);
 
     /**
-     *  <p><code>true</code> if the Variant is published, <code>false</code> if it is unpublished.</p>
+     *  <p>Whether the Variant is published, <code>false</code> if it is unpublished.</p>
      * @param published value to be set
      */
 

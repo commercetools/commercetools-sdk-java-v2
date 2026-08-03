@@ -93,7 +93,7 @@ public class ProductTailoringAddExternalImageActionBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> is updated.</p>
+     *  <p>Whether only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> are updated.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -133,7 +133,7 @@ public class ProductTailoringAddExternalImageActionBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> is updated.</p>
+     *  <p>Whether only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> are updated.</p>
      * @return staged
      */
 

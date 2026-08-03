@@ -521,7 +521,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a <span>Product Projection Search</span> request.</p>
+     *  <p>Whether the Product Variant matches the search query. Only available in response to a <span>Product Projection Search</span> request.</p>
      * @param isMatchingVariant value to be set
      * @return Builder
      */
@@ -758,7 +758,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a <span>Product Projection Search</span> request.</p>
+     *  <p>Whether the Product Variant matches the search query. Only available in response to a <span>Product Projection Search</span> request.</p>
      * @return isMatchingVariant
      */
 

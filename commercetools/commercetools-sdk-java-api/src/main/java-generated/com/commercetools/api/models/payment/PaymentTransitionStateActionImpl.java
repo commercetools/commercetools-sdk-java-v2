@@ -66,7 +66,7 @@ public class PaymentTransitionStateActionImpl implements PaymentTransitionStateA
     }
 
     /**
-     *  <p>Set to <code>true</code> to skip validations when transitioning to the new State.</p>
+     *  <p>Whether to skip validations when transitioning to the new State.</p>
      */
 
     public Boolean getForce() {

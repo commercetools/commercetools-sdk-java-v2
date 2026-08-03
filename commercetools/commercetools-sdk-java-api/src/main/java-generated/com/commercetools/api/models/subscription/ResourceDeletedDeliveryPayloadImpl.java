@@ -112,7 +112,7 @@ public class ResourceDeletedDeliveryPayloadImpl implements ResourceDeletedDelive
     }
 
     /**
-     *  <p><code>true</code> if the <code>dataErasure</code> <span>parameter</span> on the <code>DELETE</code> request was set to <code>true</code>.</p>
+     *  <p>Whether the <code>dataErasure</code> <span>parameter</span> on the <code>DELETE</code> request was set to <code>true</code>.</p>
      */
 
     public Boolean getDataErasure() {

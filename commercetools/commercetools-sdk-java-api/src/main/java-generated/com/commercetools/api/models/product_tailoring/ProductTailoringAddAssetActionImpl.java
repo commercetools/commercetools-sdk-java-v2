@@ -83,7 +83,7 @@ public class ProductTailoringAddAssetActionImpl implements ProductTailoringAddAs
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>assets</code> are updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
+     *  <p>Whether only the staged <code>assets</code> are updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
      */
 
     public Boolean getStaged() {

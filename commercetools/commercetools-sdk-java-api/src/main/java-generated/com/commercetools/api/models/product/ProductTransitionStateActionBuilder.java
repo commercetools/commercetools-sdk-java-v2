@@ -66,7 +66,7 @@ public class ProductTransitionStateActionBuilder implements Builder<ProductTrans
     }
 
     /**
-     *  <p>If <code>true</code>, validations are disabled.</p>
+     *  <p>Whether validations are disabled.</p>
      * @param force value to be set
      * @return Builder
      */
@@ -87,7 +87,7 @@ public class ProductTransitionStateActionBuilder implements Builder<ProductTrans
     }
 
     /**
-     *  <p>If <code>true</code>, validations are disabled.</p>
+     *  <p>Whether validations are disabled.</p>
      * @return force
      */
 

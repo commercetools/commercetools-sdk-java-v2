@@ -48,7 +48,7 @@ public interface CustomerCreatePasswordResetToken {
     public Long getTtlMinutes();
 
     /**
-     *  <p>If set to <code>true</code>, all password tokens issued previously for the Customer will be invalidated.</p>
+     *  <p>Whether all password tokens issued previously for the Customer will be invalidated.</p>
      * @return invalidateOlderTokens
      */
 
@@ -70,7 +70,7 @@ public interface CustomerCreatePasswordResetToken {
     public void setTtlMinutes(final Long ttlMinutes);
 
     /**
-     *  <p>If set to <code>true</code>, all password tokens issued previously for the Customer will be invalidated.</p>
+     *  <p>Whether all password tokens issued previously for the Customer will be invalidated.</p>
      * @param invalidateOlderTokens value to be set
      */
 

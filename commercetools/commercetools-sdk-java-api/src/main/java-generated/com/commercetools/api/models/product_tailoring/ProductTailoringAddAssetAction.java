@@ -56,7 +56,7 @@ public interface ProductTailoringAddAssetAction extends ProductTailoringUpdateAc
     public String getSku();
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>assets</code> are updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
+     *  <p>Whether only the staged <code>assets</code> are updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
      * @return staged
      */
 
@@ -95,7 +95,7 @@ public interface ProductTailoringAddAssetAction extends ProductTailoringUpdateAc
     public void setSku(final String sku);
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>assets</code> are updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
+     *  <p>Whether only the staged <code>assets</code> are updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
      * @param staged value to be set
      */
 

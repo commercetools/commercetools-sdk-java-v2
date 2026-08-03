@@ -115,7 +115,7 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
     }
 
     /**
-     *  <p>If <code>true</code> the new Product Variant is only staged. If <code>false</code> the new Product Variant is both current and staged.</p>
+     *  <p>Whether the new Product Variant is only staged. If <code>false</code> the new Product Variant is both current and staged.</p>
      */
 
     public Boolean getStaged() {

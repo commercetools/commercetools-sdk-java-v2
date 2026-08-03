@@ -84,7 +84,7 @@ public class GraphQLPriceChangedErrorImpl implements GraphQLPriceChangedError, M
     }
 
     /**
-     *  <p><code>true</code> if the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> has changed.</p>
+     *  <p>Whether the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> has changed.</p>
      */
 
     public Boolean getShipping() {

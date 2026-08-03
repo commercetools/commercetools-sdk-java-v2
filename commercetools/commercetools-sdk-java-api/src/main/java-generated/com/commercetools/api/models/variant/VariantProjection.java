@@ -198,7 +198,7 @@ public interface VariantProjection {
     public Price getPrice();
 
     /**
-     *  <p><code>true</code> if this Variant is the default Variant of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> (see <span>Product.defaultVariant</span>). <code>false</code> otherwise.</p>
+     *  <p>Whether this Variant is the default Variant of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> (see <span>Product.defaultVariant</span>).</p>
      * @return default
      */
     @NotNull
@@ -357,7 +357,7 @@ public interface VariantProjection {
     public void setPrice(final Price price);
 
     /**
-     *  <p><code>true</code> if this Variant is the default Variant of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> (see <span>Product.defaultVariant</span>). <code>false</code> otherwise.</p>
+     *  <p>Whether this Variant is the default Variant of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> (see <span>Product.defaultVariant</span>).</p>
      * @param _default value to be set
      */
 

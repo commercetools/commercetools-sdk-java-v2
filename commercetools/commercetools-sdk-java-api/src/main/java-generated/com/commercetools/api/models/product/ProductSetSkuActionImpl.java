@@ -75,7 +75,7 @@ public class ProductSetSkuActionImpl implements ProductSetSkuAction, ModelBase {
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>sku</code> is updated. If <code>false</code>, both the current and staged <code>sku</code> are updated.</p>
+     *  <p>Whether only the staged <code>sku</code> is updated. If <code>false</code>, both the current and staged <code>sku</code> are updated.</p>
      */
 
     public Boolean getStaged() {

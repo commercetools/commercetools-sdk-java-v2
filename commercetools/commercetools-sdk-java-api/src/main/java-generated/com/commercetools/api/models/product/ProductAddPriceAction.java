@@ -65,7 +65,7 @@ public interface ProductAddPriceAction extends ProductUpdateAction {
     public PriceDraft getPrice();
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>prices</code> is updated. If <code>false</code>, both the current and staged <code>prices</code> are updated.</p>
+     *  <p>Whether only staged <code>prices</code> are updated. If <code>false</code>, both current and staged <code>prices</code> are updated.</p>
      * @return staged
      */
 
@@ -94,7 +94,7 @@ public interface ProductAddPriceAction extends ProductUpdateAction {
     public void setPrice(final PriceDraft price);
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>prices</code> is updated. If <code>false</code>, both the current and staged <code>prices</code> are updated.</p>
+     *  <p>Whether only staged <code>prices</code> are updated. If <code>false</code>, both current and staged <code>prices</code> are updated.</p>
      * @param staged value to be set
      */
 

@@ -92,7 +92,7 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
     }
 
     /**
-     *  <p>If <code>true</code>, the <code>quoteRequestState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> will be set to <code>Accepted</code>.</p>
+     *  <p>Whether the <code>quoteRequestState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> will be set to <code>Accepted</code>.</p>
      * @param quoteRequestStateToAccepted value to be set
      * @return Builder
      */
@@ -214,7 +214,7 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
     }
 
     /**
-     *  <p>If <code>true</code>, the <code>quoteRequestState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> will be set to <code>Accepted</code>.</p>
+     *  <p>Whether the <code>quoteRequestState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> will be set to <code>Accepted</code>.</p>
      * @return quoteRequestStateToAccepted
      */
 

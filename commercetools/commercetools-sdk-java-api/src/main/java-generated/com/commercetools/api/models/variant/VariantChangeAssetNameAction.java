@@ -40,7 +40,7 @@ public interface VariantChangeAssetNameAction extends VariantUpdateAction {
     String CHANGE_ASSET_NAME = "changeAssetName";
 
     /**
-     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
+     *  <p>Whether only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
      * @return staged
      */
 
@@ -73,7 +73,7 @@ public interface VariantChangeAssetNameAction extends VariantUpdateAction {
     public LocalizedString getName();
 
     /**
-     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
+     *  <p>Whether only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
      * @param staged value to be set
      */
 

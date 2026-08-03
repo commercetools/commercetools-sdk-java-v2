@@ -242,7 +242,8 @@ To avoid the escaping issues while building a predicate string we advice to use 
 
 The ApiHttpResponse is the abstraction atop the HTTP transfer and doesn't know about the internal semantics of the HTTP body. The ApiHttpResponse::getMessage() method in this case returns the HTTP header message like OK, CONTINUE, BAD REQUEST. In case of an error the ErrorMiddleware will throw an exception. The HTTP body will be added as exception message string.
 
-As the thrown exceptions are derived from the ApiHttpException class which has a getBodyAs helper method which is capable of deserializing the body string to the given specified class. For the Composable Commerce API this would be the ErrorResponse class. In case of a BadRequestException or ConcurrentModification the error response will be automatically deserialized.
+As the thrown exceptions are derived from the ApiHttpException class which has a getBodyAs helper method which is capable of deserializing the body string to the given specified class. For commercetools APIs, this would be the ErrorResponse class. In case of a BadRequestException or ConcurrentModification the error response will be automatically deserialized.
+
 ```java
 apiRoot.products().post(draft).execute()
         .exceptionally(throwable -> {

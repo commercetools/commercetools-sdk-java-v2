@@ -9,11 +9,13 @@ import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
+import com.commercetools.api.models.category.CategoryReference;
 import com.commercetools.api.models.common.Asset;
 import com.commercetools.api.models.common.Image;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.Price;
 import com.commercetools.api.models.product.Attribute;
+import com.commercetools.api.models.product.CategoryOrderHints;
 import com.commercetools.api.models.product.ProductReference;
 import com.fasterxml.jackson.annotation.*;
 
@@ -39,6 +41,7 @@ import tools.jackson.databind.annotation.*;
  *             .product(productBuilder -> productBuilder)
  *             .name(nameBuilder -> nameBuilder)
  *             .slug(slugBuilder -> slugBuilder)
+ *             .plusCategories(categoriesBuilder -> categoriesBuilder)
  *             .plusImages(imagesBuilder -> imagesBuilder)
  *             .plusAssets(assetsBuilder -> assetsBuilder)
  *             .plusAttributes(attributesBuilder -> attributesBuilder)
@@ -125,6 +128,23 @@ public interface VariantProjection {
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the parent <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
+     * @return categories
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("categories")
+    public List<CategoryReference> getCategories();
+
+    /**
+     *  <p>Order of the parent <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> in <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a>.</p>
+     * @return categoryOrderHints
+     */
+    @Valid
+    @JsonProperty("categoryOrderHints")
+    public CategoryOrderHints getCategoryOrderHints();
 
     /**
      *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a>.</p>
@@ -249,6 +269,28 @@ public interface VariantProjection {
     public void setDescription(final LocalizedString description);
 
     /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the parent <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
+     * @param categories values to be set
+     */
+
+    @JsonIgnore
+    public void setCategories(final CategoryReference... categories);
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the parent <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
+     * @param categories values to be set
+     */
+
+    public void setCategories(final List<CategoryReference> categories);
+
+    /**
+     *  <p>Order of the parent <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> in <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a>.</p>
+     * @param categoryOrderHints value to be set
+     */
+
+    public void setCategoryOrderHints(final CategoryOrderHints categoryOrderHints);
+
+    /**
      *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a>.</p>
      * @param key value to be set
      */
@@ -345,6 +387,8 @@ public interface VariantProjection {
         instance.setName(template.getName());
         instance.setSlug(template.getSlug());
         instance.setDescription(template.getDescription());
+        instance.setCategories(template.getCategories());
+        instance.setCategoryOrderHints(template.getCategoryOrderHints());
         instance.setKey(template.getKey());
         instance.setSku(template.getSku());
         instance.setImages(template.getImages());
@@ -378,6 +422,13 @@ public interface VariantProjection {
         instance.setSlug(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getSlug()));
         instance.setDescription(
             com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setCategories(Optional.ofNullable(template.getCategories())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.category.CategoryReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setCategoryOrderHints(
+            com.commercetools.api.models.product.CategoryOrderHints.deepCopy(template.getCategoryOrderHints()));
         instance.setKey(template.getKey());
         instance.setSku(template.getSku());
         instance.setImages(Optional.ofNullable(template.getImages())

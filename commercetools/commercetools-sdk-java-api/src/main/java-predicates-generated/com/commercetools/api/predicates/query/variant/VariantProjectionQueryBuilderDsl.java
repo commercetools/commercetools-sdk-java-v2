@@ -77,6 +77,32 @@ public class VariantProjectionQueryBuilderDsl {
             VariantProjectionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<VariantProjectionQueryBuilderDsl> categories(
+            Function<com.commercetools.api.predicates.query.category.CategoryReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.category.CategoryReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("categories"))
+                    .inner(fn.apply(
+                        com.commercetools.api.predicates.query.category.CategoryReferenceQueryBuilderDsl.of())),
+            VariantProjectionQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<VariantProjectionQueryBuilderDsl> categories() {
+        return new CollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("categories")),
+            p -> new CombinationQueryPredicate<>(p, VariantProjectionQueryBuilderDsl::of));
+    }
+
+    public CombinationQueryPredicate<VariantProjectionQueryBuilderDsl> categoryOrderHints(
+            Function<com.commercetools.api.predicates.query.product.CategoryOrderHintsQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product.CategoryOrderHintsQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("categoryOrderHints"))
+                    .inner(fn.apply(
+                        com.commercetools.api.predicates.query.product.CategoryOrderHintsQueryBuilderDsl.of())),
+            VariantProjectionQueryBuilderDsl::of);
+    }
+
     public StringComparisonPredicateBuilder<VariantProjectionQueryBuilderDsl> key() {
         return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
             p -> new CombinationQueryPredicate<>(p, VariantProjectionQueryBuilderDsl::of));

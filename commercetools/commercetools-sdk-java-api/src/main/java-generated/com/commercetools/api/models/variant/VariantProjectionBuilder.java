@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .product(productBuilder -> productBuilder)
  *             .name(nameBuilder -> nameBuilder)
  *             .slug(slugBuilder -> slugBuilder)
+ *             .plusCategories(categoriesBuilder -> categoriesBuilder)
  *             .plusImages(imagesBuilder -> imagesBuilder)
  *             .plusAssets(assetsBuilder -> assetsBuilder)
  *             .plusAttributes(attributesBuilder -> attributesBuilder)
@@ -53,6 +54,11 @@ public class VariantProjectionBuilder implements Builder<VariantProjection> {
 
     @Nullable
     private com.commercetools.api.models.common.LocalizedString description;
+
+    private java.util.List<com.commercetools.api.models.category.CategoryReference> categories;
+
+    @Nullable
+    private com.commercetools.api.models.product.CategoryOrderHints categoryOrderHints;
 
     @Nullable
     private String key;
@@ -264,6 +270,132 @@ public class VariantProjectionBuilder implements Builder<VariantProjection> {
     public VariantProjectionBuilder description(
             @Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the parent <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
+     * @param categories value to be set
+     * @return Builder
+     */
+
+    public VariantProjectionBuilder categories(
+            final com.commercetools.api.models.category.CategoryReference... categories) {
+        this.categories = new ArrayList<>(Arrays.asList(categories));
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the parent <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
+     * @param categories value to be set
+     * @return Builder
+     */
+
+    public VariantProjectionBuilder categories(
+            final java.util.List<com.commercetools.api.models.category.CategoryReference> categories) {
+        this.categories = categories;
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the parent <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
+     * @param categories value to be set
+     * @return Builder
+     */
+
+    public VariantProjectionBuilder plusCategories(
+            final com.commercetools.api.models.category.CategoryReference... categories) {
+        if (this.categories == null) {
+            this.categories = new ArrayList<>();
+        }
+        this.categories.addAll(Arrays.asList(categories));
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the parent <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
+     * @param builder function to build the categories value
+     * @return Builder
+     */
+
+    public VariantProjectionBuilder plusCategories(
+            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
+        if (this.categories == null) {
+            this.categories = new ArrayList<>();
+        }
+        this.categories.add(builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the parent <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
+     * @param builder function to build the categories value
+     * @return Builder
+     */
+
+    public VariantProjectionBuilder withCategories(
+            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
+        this.categories = new ArrayList<>();
+        this.categories.add(builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the parent <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
+     * @param builder function to build the categories value
+     * @return Builder
+     */
+
+    public VariantProjectionBuilder addCategories(
+            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReference> builder) {
+        return plusCategories(builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the parent <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
+     * @param builder function to build the categories value
+     * @return Builder
+     */
+
+    public VariantProjectionBuilder setCategories(
+            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReference> builder) {
+        return categories(builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Order of the parent <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> in <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a>.</p>
+     * @param builder function to build the categoryOrderHints value
+     * @return Builder
+     */
+
+    public VariantProjectionBuilder categoryOrderHints(
+            Function<com.commercetools.api.models.product.CategoryOrderHintsBuilder, com.commercetools.api.models.product.CategoryOrderHintsBuilder> builder) {
+        this.categoryOrderHints = builder.apply(com.commercetools.api.models.product.CategoryOrderHintsBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Order of the parent <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> in <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a>.</p>
+     * @param builder function to build the categoryOrderHints value
+     * @return Builder
+     */
+
+    public VariantProjectionBuilder withCategoryOrderHints(
+            Function<com.commercetools.api.models.product.CategoryOrderHintsBuilder, com.commercetools.api.models.product.CategoryOrderHints> builder) {
+        this.categoryOrderHints = builder.apply(com.commercetools.api.models.product.CategoryOrderHintsBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Order of the parent <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> in <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a>.</p>
+     * @param categoryOrderHints value to be set
+     * @return Builder
+     */
+
+    public VariantProjectionBuilder categoryOrderHints(
+            @Nullable final com.commercetools.api.models.product.CategoryOrderHints categoryOrderHints) {
+        this.categoryOrderHints = categoryOrderHints;
         return this;
     }
 
@@ -677,6 +809,25 @@ public class VariantProjectionBuilder implements Builder<VariantProjection> {
     }
 
     /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the parent <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
+     * @return categories
+     */
+
+    public java.util.List<com.commercetools.api.models.category.CategoryReference> getCategories() {
+        return this.categories;
+    }
+
+    /**
+     *  <p>Order of the parent <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> in <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a>.</p>
+     * @return categoryOrderHints
+     */
+
+    @Nullable
+    public com.commercetools.api.models.product.CategoryOrderHints getCategoryOrderHints() {
+        return this.categoryOrderHints;
+    }
+
+    /**
      *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a>.</p>
      * @return key
      */
@@ -755,12 +906,13 @@ public class VariantProjectionBuilder implements Builder<VariantProjection> {
         Objects.requireNonNull(product, VariantProjection.class + ": product is missing");
         Objects.requireNonNull(name, VariantProjection.class + ": name is missing");
         Objects.requireNonNull(slug, VariantProjection.class + ": slug is missing");
+        Objects.requireNonNull(categories, VariantProjection.class + ": categories is missing");
         Objects.requireNonNull(images, VariantProjection.class + ": images is missing");
         Objects.requireNonNull(assets, VariantProjection.class + ": assets is missing");
         Objects.requireNonNull(attributes, VariantProjection.class + ": attributes is missing");
         Objects.requireNonNull(_default, VariantProjection.class + ": default is missing");
         return new VariantProjectionImpl(id, version, createdAt, staged, variantId, product, name, slug, description,
-            key, sku, images, assets, attributes, price, _default);
+            categories, categoryOrderHints, key, sku, images, assets, attributes, price, _default);
     }
 
     /**
@@ -769,7 +921,7 @@ public class VariantProjectionBuilder implements Builder<VariantProjection> {
      */
     public VariantProjection buildUnchecked() {
         return new VariantProjectionImpl(id, version, createdAt, staged, variantId, product, name, slug, description,
-            key, sku, images, assets, attributes, price, _default);
+            categories, categoryOrderHints, key, sku, images, assets, attributes, price, _default);
     }
 
     /**
@@ -796,6 +948,8 @@ public class VariantProjectionBuilder implements Builder<VariantProjection> {
         builder.name = template.getName();
         builder.slug = template.getSlug();
         builder.description = template.getDescription();
+        builder.categories = template.getCategories();
+        builder.categoryOrderHints = template.getCategoryOrderHints();
         builder.key = template.getKey();
         builder.sku = template.getSku();
         builder.images = template.getImages();

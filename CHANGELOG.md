@@ -1,4 +1,16 @@
 
+# 20.1.0 (2026-08-03)
+
+## What's Changed
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1117
+* Update docs links by @industrian in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1128
+* Remove Composable Commerce branding by @industrian in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1129
+
+## New Contributors
+* @industrian made their first contribution in https://github.com/commercetools/commercetools-sdk-java-v2/pull/1128
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/20.0.0...20.1.0
+
 # 20.0.0 (2026-07-07)
 
 ## Important notes

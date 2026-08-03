@@ -20,7 +20,7 @@ The latest stable SDK release can be retrieved from [Maven Central](https://sear
 ```gradle
 ext {
     versions = [
-        commercetools: "20.0.0"
+        commercetools: "20.1.0"
     ]
 }
 
@@ -41,7 +41,7 @@ dependencies {
 
 ```maven
 <properties>
-    <commercetools.version>20.0.0</commercetools.version>
+    <commercetools.version>20.1.0</commercetools.version>
 </properties>
 <dependencies>
     <dependency>

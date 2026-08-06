@@ -36,6 +36,12 @@ public class McpServerDraftQueryBuilderDsl {
             McpServerDraftQueryBuilderDsl::of);
     }
 
+    public StringComparisonPredicateBuilder<McpServerDraftQueryBuilderDsl> authenticationMode() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("authenticationMode")),
+            p -> new CombinationQueryPredicate<>(p, McpServerDraftQueryBuilderDsl::of));
+    }
+
     public StringComparisonPredicateBuilder<McpServerDraftQueryBuilderDsl> state() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("state")),

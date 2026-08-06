@@ -33,6 +33,7 @@ import tools.jackson.databind.annotation.*;
  *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .key("{key}")
+ *             .authenticationMode(McpServerAuthenticationMode.CLIENT_CREDENTIALS)
  *             .state(McpServerState.ENABLED)
  *             .mcpServer(mcpServerBuilder -> mcpServerBuilder)
  *             .build()
@@ -116,6 +117,14 @@ public interface McpServer extends BaseResource {
     public LocalizedString getDescription();
 
     /**
+     *  <p>Determines how AI agents authenticate when connecting to the MCP Server.</p>
+     * @return authenticationMode
+     */
+    @NotNull
+    @JsonProperty("authenticationMode")
+    public McpServerAuthenticationMode getAuthenticationMode();
+
+    /**
      *  <p>State of the MCP Server. A <code>Disabled</code> MCP Server rejects all AI agent tool requests.</p>
      * @return state
      */
@@ -196,6 +205,13 @@ public interface McpServer extends BaseResource {
     public void setDescription(final LocalizedString description);
 
     /**
+     *  <p>Determines how AI agents authenticate when connecting to the MCP Server.</p>
+     * @param authenticationMode value to be set
+     */
+
+    public void setAuthenticationMode(final McpServerAuthenticationMode authenticationMode);
+
+    /**
      *  <p>State of the MCP Server. A <code>Disabled</code> MCP Server rejects all AI agent tool requests.</p>
      * @param state value to be set
      */
@@ -233,6 +249,7 @@ public interface McpServer extends BaseResource {
         instance.setKey(template.getKey());
         instance.setName(template.getName());
         instance.setDescription(template.getDescription());
+        instance.setAuthenticationMode(template.getAuthenticationMode());
         instance.setState(template.getState());
         instance.setMcpServer(template.getMcpServer());
         return instance;
@@ -262,6 +279,7 @@ public interface McpServer extends BaseResource {
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setDescription(
             com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setAuthenticationMode(template.getAuthenticationMode());
         instance.setState(template.getState());
         instance.setMcpServer(
             com.commercetools.api.models.mcp_server.McpServerConfig.deepCopy(template.getMcpServer()));

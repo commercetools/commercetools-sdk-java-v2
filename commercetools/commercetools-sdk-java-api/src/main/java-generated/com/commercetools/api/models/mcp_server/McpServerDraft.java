@@ -59,6 +59,14 @@ public interface McpServerDraft extends io.vrap.rmf.base.client.Draft<McpServerD
     public LocalizedString getDescription();
 
     /**
+     *  <p>Determines how AI agents authenticate when connecting to the MCP Server.</p>
+     * @return authenticationMode
+     */
+
+    @JsonProperty("authenticationMode")
+    public McpServerAuthenticationMode getAuthenticationMode();
+
+    /**
      *  <p>State of the MCP Server.</p>
      * @return state
      */
@@ -97,6 +105,13 @@ public interface McpServerDraft extends io.vrap.rmf.base.client.Draft<McpServerD
     public void setDescription(final LocalizedString description);
 
     /**
+     *  <p>Determines how AI agents authenticate when connecting to the MCP Server.</p>
+     * @param authenticationMode value to be set
+     */
+
+    public void setAuthenticationMode(final McpServerAuthenticationMode authenticationMode);
+
+    /**
      *  <p>State of the MCP Server.</p>
      * @param state value to be set
      */
@@ -128,6 +143,7 @@ public interface McpServerDraft extends io.vrap.rmf.base.client.Draft<McpServerD
         instance.setKey(template.getKey());
         instance.setName(template.getName());
         instance.setDescription(template.getDescription());
+        instance.setAuthenticationMode(template.getAuthenticationMode());
         instance.setState(template.getState());
         instance.setMcpServer(template.getMcpServer());
         return instance;
@@ -150,6 +166,7 @@ public interface McpServerDraft extends io.vrap.rmf.base.client.Draft<McpServerD
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setDescription(
             com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setAuthenticationMode(template.getAuthenticationMode());
         instance.setState(template.getState());
         instance.setMcpServer(
             com.commercetools.api.models.mcp_server.McpServerConfigDraft.deepCopy(template.getMcpServer()));

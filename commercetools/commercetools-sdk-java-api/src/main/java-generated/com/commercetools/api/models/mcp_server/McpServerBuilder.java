@@ -21,6 +21,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .key("{key}")
+ *             .authenticationMode(McpServerAuthenticationMode.CLIENT_CREDENTIALS)
  *             .state(McpServerState.ENABLED)
  *             .mcpServer(mcpServerBuilder -> mcpServerBuilder)
  *             .build()
@@ -51,6 +52,8 @@ public class McpServerBuilder implements Builder<McpServer> {
 
     @Nullable
     private com.commercetools.api.models.common.LocalizedString description;
+
+    private com.commercetools.api.models.mcp_server.McpServerAuthenticationMode authenticationMode;
 
     private com.commercetools.api.models.mcp_server.McpServerState state;
 
@@ -254,6 +257,18 @@ public class McpServerBuilder implements Builder<McpServer> {
     }
 
     /**
+     *  <p>Determines how AI agents authenticate when connecting to the MCP Server.</p>
+     * @param authenticationMode value to be set
+     * @return Builder
+     */
+
+    public McpServerBuilder authenticationMode(
+            final com.commercetools.api.models.mcp_server.McpServerAuthenticationMode authenticationMode) {
+        this.authenticationMode = authenticationMode;
+        return this;
+    }
+
+    /**
      *  <p>State of the MCP Server. A <code>Disabled</code> MCP Server rejects all AI agent tool requests.</p>
      * @param state value to be set
      * @return Builder
@@ -373,6 +388,15 @@ public class McpServerBuilder implements Builder<McpServer> {
     }
 
     /**
+     *  <p>Determines how AI agents authenticate when connecting to the MCP Server.</p>
+     * @return authenticationMode
+     */
+
+    public com.commercetools.api.models.mcp_server.McpServerAuthenticationMode getAuthenticationMode() {
+        return this.authenticationMode;
+    }
+
+    /**
      *  <p>State of the MCP Server. A <code>Disabled</code> MCP Server rejects all AI agent tool requests.</p>
      * @return state
      */
@@ -400,10 +424,11 @@ public class McpServerBuilder implements Builder<McpServer> {
         Objects.requireNonNull(createdAt, McpServer.class + ": createdAt is missing");
         Objects.requireNonNull(lastModifiedAt, McpServer.class + ": lastModifiedAt is missing");
         Objects.requireNonNull(key, McpServer.class + ": key is missing");
+        Objects.requireNonNull(authenticationMode, McpServer.class + ": authenticationMode is missing");
         Objects.requireNonNull(state, McpServer.class + ": state is missing");
         Objects.requireNonNull(mcpServer, McpServer.class + ": mcpServer is missing");
         return new McpServerImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
-            description, state, mcpServer);
+            description, authenticationMode, state, mcpServer);
     }
 
     /**
@@ -412,7 +437,7 @@ public class McpServerBuilder implements Builder<McpServer> {
      */
     public McpServer buildUnchecked() {
         return new McpServerImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
-            description, state, mcpServer);
+            description, authenticationMode, state, mcpServer);
     }
 
     /**
@@ -439,6 +464,7 @@ public class McpServerBuilder implements Builder<McpServer> {
         builder.key = template.getKey();
         builder.name = template.getName();
         builder.description = template.getDescription();
+        builder.authenticationMode = template.getAuthenticationMode();
         builder.state = template.getState();
         builder.mcpServer = template.getMcpServer();
         return builder;

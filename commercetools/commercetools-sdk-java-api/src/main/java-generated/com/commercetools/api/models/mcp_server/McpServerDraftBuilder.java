@@ -34,6 +34,9 @@ public class McpServerDraftBuilder implements Builder<McpServerDraft> {
     private com.commercetools.api.models.common.LocalizedString description;
 
     @Nullable
+    private com.commercetools.api.models.mcp_server.McpServerAuthenticationMode authenticationMode;
+
+    @Nullable
     private com.commercetools.api.models.mcp_server.McpServerState state;
 
     private com.commercetools.api.models.mcp_server.McpServerConfigDraft mcpServer;
@@ -121,6 +124,18 @@ public class McpServerDraftBuilder implements Builder<McpServerDraft> {
     }
 
     /**
+     *  <p>Determines how AI agents authenticate when connecting to the MCP Server.</p>
+     * @param authenticationMode value to be set
+     * @return Builder
+     */
+
+    public McpServerDraftBuilder authenticationMode(
+            @Nullable final com.commercetools.api.models.mcp_server.McpServerAuthenticationMode authenticationMode) {
+        this.authenticationMode = authenticationMode;
+        return this;
+    }
+
+    /**
      *  <p>State of the MCP Server.</p>
      * @param state value to be set
      * @return Builder
@@ -186,6 +201,16 @@ public class McpServerDraftBuilder implements Builder<McpServerDraft> {
     }
 
     /**
+     *  <p>Determines how AI agents authenticate when connecting to the MCP Server.</p>
+     * @return authenticationMode
+     */
+
+    @Nullable
+    public com.commercetools.api.models.mcp_server.McpServerAuthenticationMode getAuthenticationMode() {
+        return this.authenticationMode;
+    }
+
+    /**
      *  <p>State of the MCP Server.</p>
      * @return state
      */
@@ -211,7 +236,7 @@ public class McpServerDraftBuilder implements Builder<McpServerDraft> {
     public McpServerDraft build() {
         Objects.requireNonNull(key, McpServerDraft.class + ": key is missing");
         Objects.requireNonNull(mcpServer, McpServerDraft.class + ": mcpServer is missing");
-        return new McpServerDraftImpl(key, name, description, state, mcpServer);
+        return new McpServerDraftImpl(key, name, description, authenticationMode, state, mcpServer);
     }
 
     /**
@@ -219,7 +244,7 @@ public class McpServerDraftBuilder implements Builder<McpServerDraft> {
      * @return McpServerDraft
      */
     public McpServerDraft buildUnchecked() {
-        return new McpServerDraftImpl(key, name, description, state, mcpServer);
+        return new McpServerDraftImpl(key, name, description, authenticationMode, state, mcpServer);
     }
 
     /**
@@ -240,6 +265,7 @@ public class McpServerDraftBuilder implements Builder<McpServerDraft> {
         builder.key = template.getKey();
         builder.name = template.getName();
         builder.description = template.getDescription();
+        builder.authenticationMode = template.getAuthenticationMode();
         builder.state = template.getState();
         builder.mcpServer = template.getMcpServer();
         return builder;

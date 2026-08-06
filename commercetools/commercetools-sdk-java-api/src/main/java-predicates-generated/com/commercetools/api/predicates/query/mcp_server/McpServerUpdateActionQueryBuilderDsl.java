@@ -48,6 +48,13 @@ public class McpServerUpdateActionQueryBuilderDsl {
             McpServerUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<McpServerUpdateActionQueryBuilderDsl> asSetAuthenticationMode(
+            Function<com.commercetools.api.predicates.query.mcp_server.McpServerSetAuthenticationModeActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.mcp_server.McpServerSetAuthenticationModeActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.mcp_server.McpServerSetAuthenticationModeActionQueryBuilderDsl.of()),
+            McpServerUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<McpServerUpdateActionQueryBuilderDsl> asSetDescription(
             Function<com.commercetools.api.predicates.query.mcp_server.McpServerSetDescriptionActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.mcp_server.McpServerSetDescriptionActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

@@ -22,6 +22,10 @@ public class McpServerDraftTest {
                 new Object[] { "description",
                         McpServerDraft.builder()
                                 .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "authenticationMode",
+                        McpServerDraft.builder()
+                                .authenticationMode(com.commercetools.api.models.mcp_server.McpServerAuthenticationMode
+                                        .findEnum("ClientCredentials")) },
                 new Object[] { "state",
                         McpServerDraft.builder()
                                 .state(com.commercetools.api.models.mcp_server.McpServerState.findEnum("Enabled")) },
@@ -49,6 +53,16 @@ public class McpServerDraftTest {
         value.setDescription(new com.commercetools.api.models.common.LocalizedStringImpl());
         Assertions.assertThat(value.getDescription())
                 .isEqualTo(new com.commercetools.api.models.common.LocalizedStringImpl());
+    }
+
+    @Test
+    public void authenticationMode() {
+        McpServerDraft value = McpServerDraft.of();
+        value.setAuthenticationMode(
+            com.commercetools.api.models.mcp_server.McpServerAuthenticationMode.findEnum("ClientCredentials"));
+        Assertions.assertThat(value.getAuthenticationMode())
+                .isEqualTo(
+                    com.commercetools.api.models.mcp_server.McpServerAuthenticationMode.findEnum("ClientCredentials"));
     }
 
     @Test

@@ -93,6 +93,14 @@ public interface McpServerUpdateAction {
     }
 
     /**
+     * builder for setAuthenticationMode subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.mcp_server.McpServerSetAuthenticationModeActionBuilder setAuthenticationModeBuilder() {
+        return com.commercetools.api.models.mcp_server.McpServerSetAuthenticationModeActionBuilder.of();
+    }
+
+    /**
      * builder for setDescription subtype
      * @return builder
      */

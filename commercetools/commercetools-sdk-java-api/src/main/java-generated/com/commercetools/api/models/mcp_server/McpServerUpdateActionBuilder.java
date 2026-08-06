@@ -27,6 +27,10 @@ public class McpServerUpdateActionBuilder {
         return com.commercetools.api.models.mcp_server.McpServerRemoveToolCustomizationActionBuilder.of();
     }
 
+    public com.commercetools.api.models.mcp_server.McpServerSetAuthenticationModeActionBuilder setAuthenticationModeBuilder() {
+        return com.commercetools.api.models.mcp_server.McpServerSetAuthenticationModeActionBuilder.of();
+    }
+
     public com.commercetools.api.models.mcp_server.McpServerSetDescriptionActionBuilder setDescriptionBuilder() {
         return com.commercetools.api.models.mcp_server.McpServerSetDescriptionActionBuilder.of();
     }

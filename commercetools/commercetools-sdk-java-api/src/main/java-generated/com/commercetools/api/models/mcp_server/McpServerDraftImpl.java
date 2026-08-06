@@ -29,6 +29,8 @@ public class McpServerDraftImpl implements McpServerDraft, ModelBase {
 
     private com.commercetools.api.models.common.LocalizedString description;
 
+    private com.commercetools.api.models.mcp_server.McpServerAuthenticationMode authenticationMode;
+
     private com.commercetools.api.models.mcp_server.McpServerState state;
 
     private com.commercetools.api.models.mcp_server.McpServerConfigDraft mcpServer;
@@ -40,11 +42,13 @@ public class McpServerDraftImpl implements McpServerDraft, ModelBase {
     McpServerDraftImpl(@JsonProperty("key") final String key,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,
+            @JsonProperty("authenticationMode") final com.commercetools.api.models.mcp_server.McpServerAuthenticationMode authenticationMode,
             @JsonProperty("state") final com.commercetools.api.models.mcp_server.McpServerState state,
             @JsonProperty("mcpServer") final com.commercetools.api.models.mcp_server.McpServerConfigDraft mcpServer) {
         this.key = key;
         this.name = name;
         this.description = description;
+        this.authenticationMode = authenticationMode;
         this.state = state;
         this.mcpServer = mcpServer;
     }
@@ -80,6 +84,14 @@ public class McpServerDraftImpl implements McpServerDraft, ModelBase {
     }
 
     /**
+     *  <p>Determines how AI agents authenticate when connecting to the MCP Server.</p>
+     */
+
+    public com.commercetools.api.models.mcp_server.McpServerAuthenticationMode getAuthenticationMode() {
+        return this.authenticationMode;
+    }
+
+    /**
      *  <p>State of the MCP Server.</p>
      */
 
@@ -107,6 +119,11 @@ public class McpServerDraftImpl implements McpServerDraft, ModelBase {
         this.description = description;
     }
 
+    public void setAuthenticationMode(
+            final com.commercetools.api.models.mcp_server.McpServerAuthenticationMode authenticationMode) {
+        this.authenticationMode = authenticationMode;
+    }
+
     public void setState(final com.commercetools.api.models.mcp_server.McpServerState state) {
         this.state = state;
     }
@@ -128,11 +145,13 @@ public class McpServerDraftImpl implements McpServerDraft, ModelBase {
         return new EqualsBuilder().append(key, that.key)
                 .append(name, that.name)
                 .append(description, that.description)
+                .append(authenticationMode, that.authenticationMode)
                 .append(state, that.state)
                 .append(mcpServer, that.mcpServer)
                 .append(key, that.key)
                 .append(name, that.name)
                 .append(description, that.description)
+                .append(authenticationMode, that.authenticationMode)
                 .append(state, that.state)
                 .append(mcpServer, that.mcpServer)
                 .isEquals();
@@ -143,6 +162,7 @@ public class McpServerDraftImpl implements McpServerDraft, ModelBase {
         return new HashCodeBuilder(17, 37).append(key)
                 .append(name)
                 .append(description)
+                .append(authenticationMode)
                 .append(state)
                 .append(mcpServer)
                 .toHashCode();
@@ -153,6 +173,7 @@ public class McpServerDraftImpl implements McpServerDraft, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
                 .append("name", name)
                 .append("description", description)
+                .append("authenticationMode", authenticationMode)
                 .append("state", state)
                 .append("mcpServer", mcpServer)
                 .build();

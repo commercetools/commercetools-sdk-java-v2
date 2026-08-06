@@ -11,34 +11,34 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>State of the MCP Server. A <code>Disabled</code> MCP Server rejects all AI agent tool requests while keeping its configuration editable.</p>
+ *  <p>Determines how AI agents authenticate when connecting to the MCP Server.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface McpServerState extends JsonEnum {
+public interface McpServerAuthenticationMode extends JsonEnum {
 
     /**
-    <p>The MCP Server is active and accepts AI agent tool requests.</p> */
-    McpServerState ENABLED = McpServerStateEnum.ENABLED;
+    <p>AI agents authenticate with an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> using the client credentials flow. The MCP Server exposes every configured tool. Use this mode for machine-to-machine scenarios.</p> */
+    McpServerAuthenticationMode CLIENT_CREDENTIALS = McpServerAuthenticationModeEnum.CLIENT_CREDENTIALS;
     /**
-    <p>The MCP Server rejects all AI agent tool requests while keeping its configuration editable.</p> */
-    McpServerState DISABLED = McpServerStateEnum.DISABLED;
+    <p>Users sign in with an <span>Identity account</span>, the same account that is used for the Merchant Center. The MCP Server exposes only the configured tools that the Merchant Center permissions of the user who signs in allow. Use this mode for human-in-the-loop scenarios.</p> */
+    McpServerAuthenticationMode COMMERCETOOLS_IDENTITY = McpServerAuthenticationModeEnum.COMMERCETOOLS_IDENTITY;
 
     /**
-     * possible values of McpServerState
+     * possible values of McpServerAuthenticationMode
      */
-    enum McpServerStateEnum implements McpServerState {
+    enum McpServerAuthenticationModeEnum implements McpServerAuthenticationMode {
         /**
-         * Enabled
+         * ClientCredentials
          */
-        ENABLED("Enabled"),
+        CLIENT_CREDENTIALS("ClientCredentials"),
 
         /**
-         * Disabled
+         * CommercetoolsIdentity
          */
-        DISABLED("Disabled");
+        COMMERCETOOLS_IDENTITY("CommercetoolsIdentity");
         private final String jsonName;
 
-        private McpServerStateEnum(final String jsonName) {
+        private McpServerAuthenticationModeEnum(final String jsonName) {
             this.jsonName = jsonName;
         }
 
@@ -71,14 +71,14 @@ public interface McpServerState extends JsonEnum {
     String toString();
 
     /**
-     * factory method for a enum value of McpServerState
+     * factory method for a enum value of McpServerAuthenticationMode
      * if no enum has been found an anonymous instance will be created
      * @param value the enum value to be wrapped
      * @return enum instance
      */
     @JsonCreator
-    public static McpServerState findEnum(String value) {
-        return findEnumViaJsonName(value).orElse(new McpServerState() {
+    public static McpServerAuthenticationMode findEnum(String value) {
+        return findEnumViaJsonName(value).orElse(new McpServerAuthenticationMode() {
             @Override
             public String getJsonName() {
                 return value;
@@ -100,7 +100,7 @@ public interface McpServerState extends JsonEnum {
      * @param jsonName the json value to be wrapped
      * @return optional of enum instance
      */
-    public static Optional<McpServerState> findEnumViaJsonName(String jsonName) {
+    public static Optional<McpServerAuthenticationMode> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
@@ -108,8 +108,8 @@ public interface McpServerState extends JsonEnum {
      * possible enum values
      * @return array of possible enum values
      */
-    public static McpServerState[] values() {
-        return McpServerStateEnum.values();
+    public static McpServerAuthenticationMode[] values() {
+        return McpServerAuthenticationModeEnum.values();
     }
 
 }

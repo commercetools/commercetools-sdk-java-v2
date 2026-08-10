@@ -35,7 +35,7 @@ java {
 }
 ext {
     versions = [
-        commercetools: "20.0.0"
+        commercetools: "20.1.0"
     ]
 }
 

@@ -47,6 +47,8 @@ public class VariantImpl implements Variant, ModelBase {
 
     private com.commercetools.api.models.variant.VariantData staged;
 
+    private java.util.List<com.commercetools.api.models.warning.WarningObject> warnings;
+
     /**
      * create instance with all properties
      */
@@ -60,7 +62,8 @@ public class VariantImpl implements Variant, ModelBase {
             @JsonProperty("product") final com.commercetools.api.models.product.ProductReference product,
             @JsonProperty("published") final Boolean published,
             @JsonProperty("current") final com.commercetools.api.models.variant.VariantData current,
-            @JsonProperty("staged") final com.commercetools.api.models.variant.VariantData staged) {
+            @JsonProperty("staged") final com.commercetools.api.models.variant.VariantData staged,
+            @JsonProperty("warnings") final java.util.List<com.commercetools.api.models.warning.WarningObject> warnings) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -73,6 +76,7 @@ public class VariantImpl implements Variant, ModelBase {
         this.published = published;
         this.current = current;
         this.staged = staged;
+        this.warnings = warnings;
     }
 
     /**
@@ -154,7 +158,7 @@ public class VariantImpl implements Variant, ModelBase {
     }
 
     /**
-     *  <p><code>true</code> if the Variant is published, <code>false</code> if it is unpublished.</p>
+     *  <p>Whether the Variant is published, <code>false</code> if it is unpublished.</p>
      */
 
     public Boolean getPublished() {
@@ -175,6 +179,14 @@ public class VariantImpl implements Variant, ModelBase {
 
     public com.commercetools.api.models.variant.VariantData getStaged() {
         return this.staged;
+    }
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.warning.WarningObject> getWarnings() {
+        return this.warnings;
     }
 
     public void setId(final String id) {
@@ -225,6 +237,14 @@ public class VariantImpl implements Variant, ModelBase {
         this.staged = staged;
     }
 
+    public void setWarnings(final com.commercetools.api.models.warning.WarningObject... warnings) {
+        this.warnings = new ArrayList<>(Arrays.asList(warnings));
+    }
+
+    public void setWarnings(final java.util.List<com.commercetools.api.models.warning.WarningObject> warnings) {
+        this.warnings = warnings;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -247,6 +267,7 @@ public class VariantImpl implements Variant, ModelBase {
                 .append(published, that.published)
                 .append(current, that.current)
                 .append(staged, that.staged)
+                .append(warnings, that.warnings)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -259,6 +280,7 @@ public class VariantImpl implements Variant, ModelBase {
                 .append(published, that.published)
                 .append(current, that.current)
                 .append(staged, that.staged)
+                .append(warnings, that.warnings)
                 .isEquals();
     }
 
@@ -276,6 +298,7 @@ public class VariantImpl implements Variant, ModelBase {
                 .append(published)
                 .append(current)
                 .append(staged)
+                .append(warnings)
                 .toHashCode();
     }
 
@@ -293,6 +316,7 @@ public class VariantImpl implements Variant, ModelBase {
                 .append("published", published)
                 .append("current", current)
                 .append("staged", staged)
+                .append("warnings", warnings)
                 .build();
     }
 

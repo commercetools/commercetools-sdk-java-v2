@@ -66,7 +66,7 @@ public class PaymentTransitionStateActionBuilder implements Builder<PaymentTrans
     }
 
     /**
-     *  <p>Set to <code>true</code> to skip validations when transitioning to the new State.</p>
+     *  <p>Whether to skip validations when transitioning to the new State.</p>
      * @param force value to be set
      * @return Builder
      */
@@ -86,7 +86,7 @@ public class PaymentTransitionStateActionBuilder implements Builder<PaymentTrans
     }
 
     /**
-     *  <p>Set to <code>true</code> to skip validations when transitioning to the new State.</p>
+     *  <p>Whether to skip validations when transitioning to the new State.</p>
      * @return force
      */
 

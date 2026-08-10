@@ -150,7 +150,7 @@ public interface ProductDiscount
     public String getSortOrder();
 
     /**
-     *  <p>If <code>true</code> the Product Discount is applied to Products matching the <code>predicate</code>.</p>
+     *  <p>Whether the Product Discount is applied to Products matching the <code>predicate</code>.</p>
      * @return isActive
      */
     @NotNull
@@ -267,7 +267,7 @@ public interface ProductDiscount
     public void setSortOrder(final String sortOrder);
 
     /**
-     *  <p>If <code>true</code> the Product Discount is applied to Products matching the <code>predicate</code>.</p>
+     *  <p>Whether the Product Discount is applied to Products matching the <code>predicate</code>.</p>
      * @param isActive value to be set
      */
 

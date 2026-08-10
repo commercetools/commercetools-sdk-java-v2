@@ -144,7 +144,7 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
     }
 
     /**
-     *  <p>If <code>true</code>, the ProductTailoring is published immediately.</p>
+     *  <p>Whether the ProductTailoring is published immediately.</p>
      */
 
     public Boolean getPublish() {

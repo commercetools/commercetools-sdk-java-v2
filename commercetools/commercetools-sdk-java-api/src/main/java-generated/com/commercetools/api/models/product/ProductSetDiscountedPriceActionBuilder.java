@@ -44,7 +44,7 @@ public class ProductSetDiscountedPriceActionBuilder implements Builder<ProductSe
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
+     *  <p>Whether only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -100,7 +100,7 @@ public class ProductSetDiscountedPriceActionBuilder implements Builder<ProductSe
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
+     *  <p>Whether only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      * @return staged
      */
 

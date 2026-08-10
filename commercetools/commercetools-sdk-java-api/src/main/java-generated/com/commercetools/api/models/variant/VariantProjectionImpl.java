@@ -41,6 +41,10 @@ public class VariantProjectionImpl implements VariantProjection, ModelBase {
 
     private com.commercetools.api.models.common.LocalizedString description;
 
+    private java.util.List<com.commercetools.api.models.category.CategoryReference> categories;
+
+    private com.commercetools.api.models.product.CategoryOrderHints categoryOrderHints;
+
     private String key;
 
     private String sku;
@@ -66,6 +70,8 @@ public class VariantProjectionImpl implements VariantProjection, ModelBase {
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug,
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,
+            @JsonProperty("categories") final java.util.List<com.commercetools.api.models.category.CategoryReference> categories,
+            @JsonProperty("categoryOrderHints") final com.commercetools.api.models.product.CategoryOrderHints categoryOrderHints,
             @JsonProperty("key") final String key, @JsonProperty("sku") final String sku,
             @JsonProperty("images") final java.util.List<com.commercetools.api.models.common.Image> images,
             @JsonProperty("assets") final java.util.List<com.commercetools.api.models.common.Asset> assets,
@@ -81,6 +87,8 @@ public class VariantProjectionImpl implements VariantProjection, ModelBase {
         this.name = name;
         this.slug = slug;
         this.description = description;
+        this.categories = categories;
+        this.categoryOrderHints = categoryOrderHints;
         this.key = key;
         this.sku = sku;
         this.images = images;
@@ -169,6 +177,22 @@ public class VariantProjectionImpl implements VariantProjection, ModelBase {
     }
 
     /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the parent <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.category.CategoryReference> getCategories() {
+        return this.categories;
+    }
+
+    /**
+     *  <p>Order of the parent <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> in <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a>.</p>
+     */
+
+    public com.commercetools.api.models.product.CategoryOrderHints getCategoryOrderHints() {
+        return this.categoryOrderHints;
+    }
+
+    /**
      *  <p>User-defined unique identifier of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a>.</p>
      */
 
@@ -217,7 +241,7 @@ public class VariantProjectionImpl implements VariantProjection, ModelBase {
     }
 
     /**
-     *  <p><code>true</code> if this Variant is the default Variant of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> (see <span>Product.defaultVariant</span>). <code>false</code> otherwise.</p>
+     *  <p>Whether this Variant is the default Variant of its <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> (see <span>Product.defaultVariant</span>).</p>
      */
 
     public Boolean getDefault() {
@@ -258,6 +282,20 @@ public class VariantProjectionImpl implements VariantProjection, ModelBase {
 
     public void setDescription(final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
+    }
+
+    public void setCategories(final com.commercetools.api.models.category.CategoryReference... categories) {
+        this.categories = new ArrayList<>(Arrays.asList(categories));
+    }
+
+    public void setCategories(
+            final java.util.List<com.commercetools.api.models.category.CategoryReference> categories) {
+        this.categories = categories;
+    }
+
+    public void setCategoryOrderHints(
+            final com.commercetools.api.models.product.CategoryOrderHints categoryOrderHints) {
+        this.categoryOrderHints = categoryOrderHints;
     }
 
     public void setKey(final String key) {
@@ -319,6 +357,8 @@ public class VariantProjectionImpl implements VariantProjection, ModelBase {
                 .append(name, that.name)
                 .append(slug, that.slug)
                 .append(description, that.description)
+                .append(categories, that.categories)
+                .append(categoryOrderHints, that.categoryOrderHints)
                 .append(key, that.key)
                 .append(sku, that.sku)
                 .append(images, that.images)
@@ -335,6 +375,8 @@ public class VariantProjectionImpl implements VariantProjection, ModelBase {
                 .append(name, that.name)
                 .append(slug, that.slug)
                 .append(description, that.description)
+                .append(categories, that.categories)
+                .append(categoryOrderHints, that.categoryOrderHints)
                 .append(key, that.key)
                 .append(sku, that.sku)
                 .append(images, that.images)
@@ -356,6 +398,8 @@ public class VariantProjectionImpl implements VariantProjection, ModelBase {
                 .append(name)
                 .append(slug)
                 .append(description)
+                .append(categories)
+                .append(categoryOrderHints)
                 .append(key)
                 .append(sku)
                 .append(images)
@@ -377,6 +421,8 @@ public class VariantProjectionImpl implements VariantProjection, ModelBase {
                 .append("name", name)
                 .append("slug", slug)
                 .append("description", description)
+                .append("categories", categories)
+                .append("categoryOrderHints", categoryOrderHints)
                 .append("key", key)
                 .append("sku", sku)
                 .append("images", images)

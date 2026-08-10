@@ -35,7 +35,7 @@ import tools.jackson.databind.annotation.*;
 public interface ModifiedBy {
 
     /**
-     *  <p><code>true</code> if the change was made using the Merchant Center.</p>
+     *  <p>Whether the change was made using the Merchant Center.</p>
      * @return isPlatformClient
      */
     @NotNull
@@ -99,7 +99,7 @@ public interface ModifiedBy {
     public Reference getAssociate();
 
     /**
-     *  <p><code>true</code> if the change was made using the Merchant Center.</p>
+     *  <p>Whether the change was made using the Merchant Center.</p>
      * @param isPlatformClient value to be set
      */
 

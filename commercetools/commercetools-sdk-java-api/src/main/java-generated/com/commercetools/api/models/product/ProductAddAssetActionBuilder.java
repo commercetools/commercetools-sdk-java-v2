@@ -61,7 +61,7 @@ public class ProductAddAssetActionBuilder implements Builder<ProductAddAssetActi
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>assets</code> are updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
+     *  <p>Whether only staged <code>assets</code> are updated. If <code>false</code>, both current and staged <code>assets</code> are updated.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -138,7 +138,7 @@ public class ProductAddAssetActionBuilder implements Builder<ProductAddAssetActi
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>assets</code> are updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
+     *  <p>Whether only staged <code>assets</code> are updated. If <code>false</code>, both current and staged <code>assets</code> are updated.</p>
      * @return staged
      */
 

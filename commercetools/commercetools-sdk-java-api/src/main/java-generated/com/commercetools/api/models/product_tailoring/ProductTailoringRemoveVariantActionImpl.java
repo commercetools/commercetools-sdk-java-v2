@@ -59,7 +59,7 @@ public class ProductTailoringRemoveVariantActionImpl implements ProductTailoring
     }
 
     /**
-     *  <p>The <code>id</code> of the ProductVariant to remove from the Tailoring.</p>
+     *  <p>The <code>id</code> of the ProductVariant or Variant (<span>BETA</span>) to remove from the Tailoring.</p>
      */
 
     public Long getId() {
@@ -67,7 +67,7 @@ public class ProductTailoringRemoveVariantActionImpl implements ProductTailoring
     }
 
     /**
-     *  <p>The <code>sku</code> of the ProductVariant to remove from the Tailoring.</p>
+     *  <p>The <code>sku</code> of the ProductVariant or Variant (<span>BETA</span>) to remove from the Tailoring.</p>
      */
 
     public String getSku() {
@@ -75,7 +75,7 @@ public class ProductTailoringRemoveVariantActionImpl implements ProductTailoring
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged Product Variant Tailoring is removed. If <code>false</code>, both the current and staged Product Variant Tailoring is removed.</p>
+     *  <p>Whether only the staged Product Variant Tailoring is removed. If <code>false</code>, both the current and staged Product Variant Tailoring is removed.</p>
      */
 
     public Boolean getStaged() {

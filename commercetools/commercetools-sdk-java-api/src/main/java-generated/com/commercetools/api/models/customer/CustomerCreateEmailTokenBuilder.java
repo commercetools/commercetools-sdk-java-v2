@@ -68,7 +68,7 @@ public class CustomerCreateEmailTokenBuilder implements Builder<CustomerCreateEm
     }
 
     /**
-     *  <p>If set to <code>true</code>, all email tokens issued previously for the Customer will be invalidated.</p>
+     *  <p>Whether all email tokens issued previously for the Customer will be invalidated.</p>
      * @param invalidateOlderTokens value to be set
      * @return Builder
      */
@@ -107,7 +107,7 @@ public class CustomerCreateEmailTokenBuilder implements Builder<CustomerCreateEm
     }
 
     /**
-     *  <p>If set to <code>true</code>, all email tokens issued previously for the Customer will be invalidated.</p>
+     *  <p>Whether all email tokens issued previously for the Customer will be invalidated.</p>
      * @return invalidateOlderTokens
      */
 

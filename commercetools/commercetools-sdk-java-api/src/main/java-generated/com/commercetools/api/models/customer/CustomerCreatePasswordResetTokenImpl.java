@@ -64,7 +64,7 @@ public class CustomerCreatePasswordResetTokenImpl implements CustomerCreatePassw
     }
 
     /**
-     *  <p>If set to <code>true</code>, all password tokens issued previously for the Customer will be invalidated.</p>
+     *  <p>Whether all password tokens issued previously for the Customer will be invalidated.</p>
      */
 
     public Boolean getInvalidateOlderTokens() {

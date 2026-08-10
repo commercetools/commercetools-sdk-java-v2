@@ -77,7 +77,7 @@ public class StagedQuoteDraftImpl implements StagedQuoteDraft, ModelBase {
     }
 
     /**
-     *  <p>If <code>true</code>, the <code>quoteRequestState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> will be set to <code>Accepted</code>.</p>
+     *  <p>Whether the <code>quoteRequestState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> will be set to <code>Accepted</code>.</p>
      */
 
     public Boolean getQuoteRequestStateToAccepted() {

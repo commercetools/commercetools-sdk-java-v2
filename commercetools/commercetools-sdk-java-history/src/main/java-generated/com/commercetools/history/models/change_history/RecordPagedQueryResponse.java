@@ -26,7 +26,6 @@ import tools.jackson.databind.annotation.*;
  *     RecordPagedQueryResponse recordPagedQueryResponse = RecordPagedQueryResponse.builder()
  *             .limit(1)
  *             .count(1)
- *             .total(1)
  *             .offset(1)
  *             .plusResults(resultsBuilder -> resultsBuilder)
  *             .build()
@@ -54,10 +53,10 @@ public interface RecordPagedQueryResponse {
     public Integer getCount();
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation and not <span>strongly consistent</span>.</p>
+     *  <p>Total number of results matching the query. This number is an estimation and not <span>strongly consistent</span>. Returned only when <code>withTotal</code> is set to <code>true</code> on the query.</p>
      * @return total
      */
-    @NotNull
+
     @JsonProperty("total")
     public Integer getTotal();
 
@@ -93,7 +92,7 @@ public interface RecordPagedQueryResponse {
     public void setCount(final Integer count);
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation and not <span>strongly consistent</span>.</p>
+     *  <p>Total number of results matching the query. This number is an estimation and not <span>strongly consistent</span>. Returned only when <code>withTotal</code> is set to <code>true</code> on the query.</p>
      * @param total value to be set
      */
 

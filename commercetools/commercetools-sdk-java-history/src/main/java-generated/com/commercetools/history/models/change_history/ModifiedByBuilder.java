@@ -45,7 +45,7 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     private com.commercetools.history.models.common.Reference associate;
 
     /**
-     *  <p><code>true</code> if the change was made using the Merchant Center.</p>
+     *  <p>Whether the change was made using the Merchant Center.</p>
      * @param isPlatformClient value to be set
      * @return Builder
      */
@@ -155,7 +155,7 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-     *  <p><code>true</code> if the change was made using the Merchant Center.</p>
+     *  <p>Whether the change was made using the Merchant Center.</p>
      * @return isPlatformClient
      */
 

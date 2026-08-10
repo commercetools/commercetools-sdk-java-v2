@@ -65,7 +65,7 @@ public class ProductChangeSlugActionBuilder implements Builder<ProductChangeSlug
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>slug</code> is updated. If <code>false</code>, both the current and staged <code>slug</code> are updated.</p>
+     *  <p>Whether only the staged <code>slug</code> is updated. If <code>false</code>, both the current and staged <code>slug</code> are updated.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -85,7 +85,7 @@ public class ProductChangeSlugActionBuilder implements Builder<ProductChangeSlug
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>slug</code> is updated. If <code>false</code>, both the current and staged <code>slug</code> are updated.</p>
+     *  <p>Whether only the staged <code>slug</code> is updated. If <code>false</code>, both the current and staged <code>slug</code> are updated.</p>
      * @return staged
      */
 

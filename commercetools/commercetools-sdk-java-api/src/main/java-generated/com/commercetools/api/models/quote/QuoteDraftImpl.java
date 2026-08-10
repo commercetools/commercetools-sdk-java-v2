@@ -84,7 +84,7 @@ public class QuoteDraftImpl implements QuoteDraft, ModelBase {
     }
 
     /**
-     *  <p>If <code>true</code>, the <code>stagedQuoteState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a> will be set to <code>Sent</code>.</p>
+     *  <p>Whether the <code>stagedQuoteState</code> of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedQuote" rel="nofollow">StagedQuote</a> will be set to <code>Sent</code>.</p>
      */
 
     public Boolean getStagedQuoteStateToSent() {

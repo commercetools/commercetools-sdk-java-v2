@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Either <code>id</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> that exists. Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoringAddedMessage" rel="nofollow">ProductVariantTailoringAdded</a> Message.</p>
+ *  <p>Either <code>id</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> (<span>BETA</span>) that exists. Produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariantTailoringAddedMessage" rel="nofollow">ProductVariantTailoringAdded</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface ProductTailoringAddVariantAction extends ProductTailoringUpdate
     String ADD_VARIANT = "addVariant";
 
     /**
-     *  <p>The <code>id</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>id</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @return id
      */
 
@@ -48,7 +48,7 @@ public interface ProductTailoringAddVariantAction extends ProductTailoringUpdate
     public Long getId();
 
     /**
-     *  <p>The <code>sku</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>sku</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @return sku
      */
 
@@ -80,7 +80,7 @@ public interface ProductTailoringAddVariantAction extends ProductTailoringUpdate
     public List<ProductTailoringAttribute> getAttributes();
 
     /**
-     *  <p>If <code>true</code> the new Product Variant Tailoring is only staged. If <code>false</code> the new Product Variant Tailoring is both current and staged.</p>
+     *  <p>Whether the new Product Variant Tailoring is only staged. If <code>false</code> the new Product Variant Tailoring is both current and staged.</p>
      * @return staged
      */
 
@@ -88,14 +88,14 @@ public interface ProductTailoringAddVariantAction extends ProductTailoringUpdate
     public Boolean getStaged();
 
     /**
-     *  <p>The <code>id</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>id</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @param id value to be set
      */
 
     public void setId(final Long id);
 
     /**
-     *  <p>The <code>sku</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>sku</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @param sku value to be set
      */
 
@@ -147,7 +147,7 @@ public interface ProductTailoringAddVariantAction extends ProductTailoringUpdate
     public void setAttributes(final List<ProductTailoringAttribute> attributes);
 
     /**
-     *  <p>If <code>true</code> the new Product Variant Tailoring is only staged. If <code>false</code> the new Product Variant Tailoring is both current and staged.</p>
+     *  <p>Whether the new Product Variant Tailoring is only staged. If <code>false</code> the new Product Variant Tailoring is both current and staged.</p>
      * @param staged value to be set
      */
 

@@ -60,7 +60,7 @@ public interface ProductSetProductVariantKeyAction extends ProductUpdateAction {
     public String getKey();
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>key</code> is set. If <code>false</code>, both the current and staged <code>key</code> are set.</p>
+     *  <p>Whether only the staged <code>key</code> is set. If <code>false</code>, both the current and staged <code>key</code> are set.</p>
      * @return staged
      */
 
@@ -89,7 +89,7 @@ public interface ProductSetProductVariantKeyAction extends ProductUpdateAction {
     public void setKey(final String key);
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>key</code> is set. If <code>false</code>, both the current and staged <code>key</code> are set.</p>
+     *  <p>Whether only the staged <code>key</code> is set. If <code>false</code>, both the current and staged <code>key</code> are set.</p>
      * @param staged value to be set
      */
 

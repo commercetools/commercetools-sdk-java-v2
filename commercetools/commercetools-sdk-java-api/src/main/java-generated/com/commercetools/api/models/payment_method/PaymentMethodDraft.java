@@ -109,7 +109,7 @@ public interface PaymentMethodDraft extends io.vrap.rmf.base.client.Draft<Paymen
     public PaymentMethodStatus getPaymentMethodStatus();
 
     /**
-     *  <p>Set to <code>true</code> if the PaymentMethod should be the default.</p>
+     *  <p>Whether the PaymentMethod should be the default.</p>
      *  <p>The default applies per Customer, Business Unit, or the combination of both (Associate).</p>
      * @return default
      */
@@ -191,7 +191,7 @@ public interface PaymentMethodDraft extends io.vrap.rmf.base.client.Draft<Paymen
     public void setPaymentMethodStatus(final PaymentMethodStatus paymentMethodStatus);
 
     /**
-     *  <p>Set to <code>true</code> if the PaymentMethod should be the default.</p>
+     *  <p>Whether the PaymentMethod should be the default.</p>
      *  <p>The default applies per Customer, Business Unit, or the combination of both (Associate).</p>
      * @param _default value to be set
      */

@@ -43,7 +43,7 @@ public interface ProductSelectionSettingDraft extends io.vrap.rmf.base.client.Dr
     public ProductSelectionResourceIdentifier getProductSelection();
 
     /**
-     *  <p>Set to <code>true</code> if all Products assigned to the Product Selection should become part of the Store's assortment.</p>
+     *  <p>Whether all Products assigned to the Product Selection should become part of the Store's assortment.</p>
      * @return active
      */
 
@@ -58,7 +58,7 @@ public interface ProductSelectionSettingDraft extends io.vrap.rmf.base.client.Dr
     public void setProductSelection(final ProductSelectionResourceIdentifier productSelection);
 
     /**
-     *  <p>Set to <code>true</code> if all Products assigned to the Product Selection should become part of the Store's assortment.</p>
+     *  <p>Whether all Products assigned to the Product Selection should become part of the Store's assortment.</p>
      * @param active value to be set
      */
 

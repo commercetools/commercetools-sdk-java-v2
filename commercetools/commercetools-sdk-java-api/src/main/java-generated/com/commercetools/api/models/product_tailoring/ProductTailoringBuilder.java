@@ -262,7 +262,7 @@ public class ProductTailoringBuilder implements Builder<ProductTailoring> {
     }
 
     /**
-     *  <p>If <code>true</code>, the tailored information contained in the <code>current</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringData" rel="nofollow">ProductTailoringData</a> is provided when <span>retrieving the ProductProjection in Store</span>. For information not part of the ProductTailoringData, the original information contained in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductData" rel="nofollow">ProductData</a> is provided. If <code>false</code>, only the original information contained in the ProductData is provided.</p>
+     *  <p>Whether the tailored information contained in the <code>current</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringData" rel="nofollow">ProductTailoringData</a> is provided when <span>retrieving the ProductProjection in Store</span>. For information not part of the ProductTailoringData, the original information contained in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductData" rel="nofollow">ProductData</a> is provided. If <code>false</code>, only the original information contained in the ProductData is provided.</p>
      * @param published value to be set
      * @return Builder
      */
@@ -347,7 +347,7 @@ public class ProductTailoringBuilder implements Builder<ProductTailoring> {
     }
 
     /**
-     *  <p><code>true</code> if the <code>staged</code> data is different from the <code>current</code> data.</p>
+     *  <p>Whether the <code>staged</code> data is different from the <code>current</code> data.</p>
      * @param hasStagedChanges value to be set
      * @return Builder
      */
@@ -509,7 +509,7 @@ public class ProductTailoringBuilder implements Builder<ProductTailoring> {
     }
 
     /**
-     *  <p>If <code>true</code>, the tailored information contained in the <code>current</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringData" rel="nofollow">ProductTailoringData</a> is provided when <span>retrieving the ProductProjection in Store</span>. For information not part of the ProductTailoringData, the original information contained in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductData" rel="nofollow">ProductData</a> is provided. If <code>false</code>, only the original information contained in the ProductData is provided.</p>
+     *  <p>Whether the tailored information contained in the <code>current</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringData" rel="nofollow">ProductTailoringData</a> is provided when <span>retrieving the ProductProjection in Store</span>. For information not part of the ProductTailoringData, the original information contained in the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductData" rel="nofollow">ProductData</a> is provided. If <code>false</code>, only the original information contained in the ProductData is provided.</p>
      * @return published
      */
 
@@ -536,7 +536,7 @@ public class ProductTailoringBuilder implements Builder<ProductTailoring> {
     }
 
     /**
-     *  <p><code>true</code> if the <code>staged</code> data is different from the <code>current</code> data.</p>
+     *  <p>Whether the <code>staged</code> data is different from the <code>current</code> data.</p>
      * @return hasStagedChanges
      */
 

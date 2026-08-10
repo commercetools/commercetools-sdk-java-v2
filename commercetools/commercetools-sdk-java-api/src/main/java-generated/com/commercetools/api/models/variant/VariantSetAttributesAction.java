@@ -50,7 +50,7 @@ public interface VariantSetAttributesAction extends VariantUpdateAction {
     public List<Attribute> getAttributes();
 
     /**
-     *  <p>If <code>true</code>, only the staged attributes are updated. If <code>false</code>, both the current and staged attributes are updated.</p>
+     *  <p>Whether only the staged attributes are updated. If <code>false</code>, both the current and staged attributes are updated.</p>
      * @return staged
      */
 
@@ -73,7 +73,7 @@ public interface VariantSetAttributesAction extends VariantUpdateAction {
     public void setAttributes(final List<Attribute> attributes);
 
     /**
-     *  <p>If <code>true</code>, only the staged attributes are updated. If <code>false</code>, both the current and staged attributes are updated.</p>
+     *  <p>Whether only the staged attributes are updated. If <code>false</code>, both the current and staged attributes are updated.</p>
      * @param staged value to be set
      */
 

@@ -148,6 +148,13 @@ public class BaseResourceQueryBuilderDsl {
             BaseResourceQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> asMcpServer(
+            Function<com.commercetools.api.predicates.query.mcp_server.McpServerQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.mcp_server.McpServerQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.mcp_server.McpServerQueryBuilderDsl.of()),
+            BaseResourceQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> asMessage(
             Function<com.commercetools.api.predicates.query.message.MessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.MessageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

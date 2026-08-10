@@ -21,12 +21,6 @@ import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Creates a Cart in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
- *  <p>An <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned in one of the following cases:</p>
- *  <ol>
- *   <li>If the referenced Shipping Method has a predicate that does not match the Cart.</li>
- *   <li>If the referenced Shipping Method is not active.</li>
- *   <li>If the referenced Shipping Method is associated with a Store that is different from the Cart's Store.</li>
- *  </ol>
  *  <p>Specific Error Codes:</p>
  *  <ul>
  *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeNonApplicableError" rel="nofollow">DiscountCodeNonApplicable</a></li>
@@ -34,6 +28,12 @@ import tools.jackson.core.type.TypeReference;
  *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a></li>
  *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a></li>
  *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:CountryNotConfiguredInStoreError" rel="nofollow">CountryNotConfiguredInStore</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> is returned in several cases, including the following:
+ *    <ul>
+ *     <li>The referenced Shipping Method has a predicate that does not match the Cart.</li>
+ *     <li>The referenced Shipping Method is not active.</li>
+ *     <li>The referenced Shipping Method is scoped to a Store that differs from the Cart's Store.</li>
+ *    </ul></li>
  *  </ul>
  *
  * <hr>

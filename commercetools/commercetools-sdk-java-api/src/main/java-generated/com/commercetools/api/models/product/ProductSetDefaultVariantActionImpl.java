@@ -65,7 +65,7 @@ public class ProductSetDefaultVariantActionImpl implements ProductSetDefaultVari
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>defaultVariant</code> is updated. If <code>false</code>, both the current and staged <code>defaultVariant</code> are updated.</p>
+     *  <p>Whether only the staged <code>defaultVariant</code> is updated. If <code>false</code>, both the current and staged <code>defaultVariant</code> are updated.</p>
      */
 
     public Boolean getStaged() {

@@ -36,7 +36,7 @@ public class VariantSetAssetSourcesActionBuilder implements Builder<VariantSetAs
     private java.util.List<com.commercetools.api.models.common.AssetSource> sources;
 
     /**
-     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
+     *  <p>Whether only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -158,7 +158,7 @@ public class VariantSetAssetSourcesActionBuilder implements Builder<VariantSetAs
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
+     *  <p>Whether only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
      * @return staged
      */
 

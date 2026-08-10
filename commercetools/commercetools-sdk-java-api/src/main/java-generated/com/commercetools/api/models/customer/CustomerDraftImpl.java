@@ -306,7 +306,7 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
     }
 
     /**
-     *  <p>Set to <code>true</code> if the email address of the Customer has been verified already. The intended use is to leave this field unset upon sign-up of the Customer and initiate the <span>email verification</span> afterwards.</p>
+     *  <p>Whether the email address of the Customer has been verified already. The intended use is to leave this field unset upon sign-up of the Customer and initiate the <span>email verification</span> afterwards.</p>
      */
 
     public Boolean getIsEmailVerified() {

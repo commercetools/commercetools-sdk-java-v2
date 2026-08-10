@@ -27,6 +27,10 @@ public class VariantUpdateActionBuilder {
         return com.commercetools.api.models.variant.VariantChangeAssetOrderActionBuilder.of();
     }
 
+    public com.commercetools.api.models.variant.VariantMoveImageToPositionActionBuilder moveImageToPositionBuilder() {
+        return com.commercetools.api.models.variant.VariantMoveImageToPositionActionBuilder.of();
+    }
+
     public com.commercetools.api.models.variant.VariantPublishActionBuilder publishBuilder() {
         return com.commercetools.api.models.variant.VariantPublishActionBuilder.of();
     }
@@ -77,6 +81,10 @@ public class VariantUpdateActionBuilder {
 
     public com.commercetools.api.models.variant.VariantSetAttributesActionBuilder setAttributesBuilder() {
         return com.commercetools.api.models.variant.VariantSetAttributesActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.variant.VariantSetImageLabelActionBuilder setImageLabelBuilder() {
+        return com.commercetools.api.models.variant.VariantSetImageLabelActionBuilder.of();
     }
 
     public com.commercetools.api.models.variant.VariantSetImagesActionBuilder setImagesBuilder() {

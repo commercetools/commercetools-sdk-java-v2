@@ -54,7 +54,7 @@ public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
     public String getOrderHint();
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>categoryOrderHints</code> is updated. If <code>false</code>, both the current and staged <code>categoryOrderHints</code> are updated.</p>
+     *  <p>Whether only the staged <code>categoryOrderHints</code> is updated. If <code>false</code>, both the current and staged <code>categoryOrderHints</code> are updated.</p>
      * @return staged
      */
 
@@ -76,7 +76,7 @@ public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
     public void setOrderHint(final String orderHint);
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>categoryOrderHints</code> is updated. If <code>false</code>, both the current and staged <code>categoryOrderHints</code> are updated.</p>
+     *  <p>Whether only the staged <code>categoryOrderHints</code> is updated. If <code>false</code>, both the current and staged <code>categoryOrderHints</code> are updated.</p>
      * @param staged value to be set
      */
 

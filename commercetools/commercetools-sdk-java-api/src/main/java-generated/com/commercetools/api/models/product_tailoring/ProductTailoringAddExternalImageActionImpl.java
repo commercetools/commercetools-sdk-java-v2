@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Either <code>variantId</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> that exists. Produces the <span>ProductTailoringImageAdded</span> Message.</p>
+ *  <p>Either <code>variantId</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> (<span>BETA</span>) that exists. Produces the <span>ProductTailoringImageAdded</span> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTailoringAddExternalImageActionImpl implements ProductTailoringAddExternalImageAction, ModelBase {
@@ -64,7 +64,7 @@ public class ProductTailoringAddExternalImageActionImpl implements ProductTailor
     }
 
     /**
-     *  <p>The <code>id</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>id</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      */
 
     public Long getVariantId() {
@@ -72,7 +72,7 @@ public class ProductTailoringAddExternalImageActionImpl implements ProductTailor
     }
 
     /**
-     *  <p>The <code>sku</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>sku</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      */
 
     public String getSku() {
@@ -88,7 +88,7 @@ public class ProductTailoringAddExternalImageActionImpl implements ProductTailor
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> is updated.</p>
+     *  <p>Whether only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> are updated.</p>
      */
 
     public Boolean getStaged() {

@@ -67,7 +67,7 @@ public class ProductTailoringSetMetaDescriptionActionBuilder
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>metaDescription</code> is updated. If <code>false</code>, both the current and staged <code>metaDescription</code> are updated.</p>
+     *  <p>Whether only the staged <code>metaDescription</code> is updated. If <code>false</code>, both the current and staged <code>metaDescription</code> are updated.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -88,7 +88,7 @@ public class ProductTailoringSetMetaDescriptionActionBuilder
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>metaDescription</code> is updated. If <code>false</code>, both the current and staged <code>metaDescription</code> are updated.</p>
+     *  <p>Whether only the staged <code>metaDescription</code> is updated. If <code>false</code>, both the current and staged <code>metaDescription</code> are updated.</p>
      * @return staged
      */
 

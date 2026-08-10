@@ -35,7 +35,7 @@ public class ProductTailoringRemoveImageActionBuilder implements Builder<Product
     private Boolean staged;
 
     /**
-     *  <p>The <code>id</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>id</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @param variantId value to be set
      * @return Builder
      */
@@ -46,7 +46,7 @@ public class ProductTailoringRemoveImageActionBuilder implements Builder<Product
     }
 
     /**
-     *  <p>The <code>sku</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>sku</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class ProductTailoringRemoveImageActionBuilder implements Builder<Product
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged image is removed. If <code>false</code>, both the current and staged image is removed.</p>
+     *  <p>Whether only the staged image is removed. If <code>false</code>, both the current and staged image is removed.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class ProductTailoringRemoveImageActionBuilder implements Builder<Product
     }
 
     /**
-     *  <p>The <code>id</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>id</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @return variantId
      */
 
@@ -89,7 +89,7 @@ public class ProductTailoringRemoveImageActionBuilder implements Builder<Product
     }
 
     /**
-     *  <p>The <code>sku</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>sku</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @return sku
      */
 
@@ -108,7 +108,7 @@ public class ProductTailoringRemoveImageActionBuilder implements Builder<Product
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged image is removed. If <code>false</code>, both the current and staged image is removed.</p>
+     *  <p>Whether only the staged image is removed. If <code>false</code>, both the current and staged image is removed.</p>
      * @return staged
      */
 

@@ -1211,6 +1211,14 @@ type Mutation {
     """Queries with specified key"""
     key: String
   ): OrderEdit
+    applyOrderEdit(
+    """The id of the OrderEdit to apply."""
+    id: String!
+    """Current version of the OrderEdit."""
+    editVersion: Long!
+    """Current version of the referenced Order."""
+    resourceVersion: Long!
+  ): OrderEdit
     createShoppingList(
     draft: ShoppingListDraft!
     """
@@ -1788,6 +1796,20 @@ type CommerceMcpServerConfig implements McpServerConfig {
 }
 
 """
+Skeleton shopper-facing MCP server config. Carries only the shared
+`McpServerConfig` fields — no response-shaping (`jsonOutputFiltering`,
+`toolOutputFormatting`) yet, as the skeleton exposes a single demo tool.
+Those fields can be added later without breaking existing clients.
+"""
+type UcpShopperMcpServerConfig implements McpServerConfig {
+    type: McpServerType!
+    majorVersion: String!
+    url: String!
+    tools: [String!]!
+    toolCustomizations: [ToolCustomization!]!
+}
+
+"""
 Customization applied to a single tool at `tools/list` and `tools/call`
 time. At least one of `description` or a non-empty `parameters` list MUST
 be present; a customization with neither has no effect and is rejected at
@@ -1830,8 +1852,8 @@ type McpServerTypeCatalogEntry {
 type McpServerCatalogTool {
     name: String!
     description: String
-    operationType: McpToolOperationType!
-    groups: [String!]!
+    operationType: McpToolOperationType
+    groups: [String!]
 }
 
 type Product implements Versioned & ReviewTarget & ReferenceExpandable {
@@ -3178,6 +3200,12 @@ type CartDiscountVisualizationSearchConfiguration {
     lastModifiedAt: DateTime!
 }
 
+type CartEstimatedDeliverySet implements MessagePayload {
+    estimatedDelivery: EstimatedDelivery
+    shippingKey: String
+    type: String!
+}
+
 type CartFrozen implements MessagePayload {
     type: String!
 }
@@ -4494,6 +4522,11 @@ type EnumValue {
     label: String!
 }
 
+type EstimatedDelivery {
+    from: DateTime
+    until: DateTime
+}
+
 type EventBridgeDestination implements Destination {
     source: String!
     region: String!
@@ -5139,7 +5172,10 @@ type LineItem {
   ): String
     productSlugAllLocales: [LocalizedString!]
     productType: ProductTypeDefinition
-    productTypeRef: Reference
+    """
+  Reference to the product type of the line item, carrying the snapshot `version` captured when the line item was added.
+  """
+  productTypeRef: VersionedReference
     variant: ProductVariant
     price: ProductPrice!
     taxedPrice: TaxedItemPrice
@@ -5158,6 +5194,8 @@ type LineItem {
     priceMode: LineItemPriceMode!
     custom: CustomFieldsType
     inventoryMode: InventoryMode
+    reservation: Reservation
+    reservationRef: Reference
     shippingDetails: ItemShippingDetails
     perMethodTaxRate: [MethodTaxRate!]!
     taxedPricePortions: [MethodTaxedPrice!]!
@@ -5838,6 +5876,12 @@ type OrderEditQueryResult {
     total: Long!
     exists: Boolean!
     results: [OrderEdit!]!
+}
+
+type OrderEstimatedDeliverySet implements MessagePayload & OrderMessagePayload {
+    estimatedDelivery: EstimatedDelivery
+    shippingKey: String
+    type: String!
 }
 
 type OrderExcerpt {
@@ -7518,6 +7562,15 @@ type ProductTailoringImagesSet implements MessagePayload {
     type: String!
 }
 
+type ProductTailoringKeySet implements MessagePayload {
+    key: String
+    oldKey: String
+    storeRef: KeyReference!
+    productRef: Reference!
+    productKey: String
+    type: String!
+}
+
 type ProductTailoringNameSet implements MessagePayload {
     storeRef: KeyReference!
     productRef: Reference!
@@ -8417,6 +8470,26 @@ type RemoveStagedOrderPaymentOutput implements StagedOrderUpdateActionOutput {
     paymentResId: ResourceIdentifier!
 }
 
+"""
+A Reservation holds inventory of an InventoryEntry for a Cart line item until the reservation expires or the Cart is ordered.
+"""
+type Reservation implements Versioned {
+    inventoryEntry: InventoryEntry
+    inventoryEntryRef: Reference!
+    lineItemId: String!
+    quantity: Long!
+    ownerRef: Reference!
+    state: ReservationState!
+    inventoryMode: String!
+    expiresAt: DateTime
+    id: String!
+    version: Long!
+    createdAt: DateTime!
+    lastModifiedAt: DateTime!
+    createdBy: Initiator
+    lastModifiedBy: Initiator
+}
+
 type ResourceIdentifier {
     typeId: String!
     key: String
@@ -8711,6 +8784,7 @@ type SetStagedOrderCustomShippingMethodOutput implements StagedOrderUpdateAction
     taxCategoryResId: ResourceIdentifier
     externalTaxRate: ExternalTaxRateDraftOutput
     custom: CustomFieldsCommand
+    estimatedDelivery: EstimatedDelivery
 }
 
 type SetStagedOrderCustomTypeOutput implements StagedOrderUpdateActionOutput {
@@ -8780,6 +8854,12 @@ type SetStagedOrderDeliveryItemsOutput implements StagedOrderUpdateActionOutput 
 type SetStagedOrderDirectDiscountsOutput implements StagedOrderUpdateActionOutput {
     type: String!
     discounts: [DirectDiscountDraftOutput!]!
+}
+
+type SetStagedOrderEstimatedDeliveryOutput implements StagedOrderUpdateActionOutput {
+    type: String!
+    estimatedDelivery: EstimatedDelivery
+    shippingKey: String
 }
 
 type SetStagedOrderItemShippingAddressCustomFieldOutput implements StagedOrderUpdateActionOutput {
@@ -8995,6 +9075,7 @@ type SetStagedOrderShippingMethodOutput implements StagedOrderUpdateActionOutput
     type: String!
     shippingMethodResId: ResourceIdentifier
     externalTaxRate: ExternalTaxRateDraftOutput
+    estimatedDelivery: EstimatedDelivery
 }
 
 type SetStagedOrderShippingMethodTaxAmountOutput implements StagedOrderUpdateActionOutput {
@@ -9046,6 +9127,7 @@ type ShippingInfo {
     deliveries: [Delivery!]!
     discountedPrice: DiscountedLineItemPrice
     shippingMethodState: ShippingMethodState!
+    estimatedDelivery: EstimatedDelivery
     shippingMethod: ShippingMethod
     shippingMethodRef: Reference
     taxCategory: TaxCategory
@@ -9060,6 +9142,7 @@ type ShippingMethod implements Versioned & ReferenceExpandable {
     isDefault: Boolean!
     predicate: String
     key: String
+    carrier: String
     taxCategoryRef: Reference
     localizedDescriptionAllLocales: [LocalizedString!]
     localizedNameAllLocales: [LocalizedString!]
@@ -9599,11 +9682,27 @@ type Store implements Versioned & ReferenceExpandable {
     distributionChannels: [Channel!]!
     supplyChannelsRef: [Reference!]!
     supplyChannels: [Channel!]!
+    storefront: Storefront
     createdAt: DateTime!
     lastModifiedAt: DateTime!
     custom: CustomFieldsType
     createdBy: Initiator
     lastModifiedBy: Initiator
+}
+
+type StoreCheckoutUrlTemplateSet implements MessagePayload {
+    checkoutUrlTemplate: String
+    type: String!
+}
+
+type StoreContactUrlSet implements MessagePayload {
+    contactUrl: String
+    type: String!
+}
+
+type StoreCookiePolicyUrlSet implements MessagePayload {
+    cookiePolicyUrl: String
+    type: String!
 }
 
 type StoreCountriesChanged implements MessagePayload {
@@ -9633,6 +9732,7 @@ type StoreCreated implements MessagePayload {
     distributionChannels: [Channel!]!
     supplyChannels: [Channel!]!
     countries: [StoreCountry!]
+    storefront: Storefront
     distributionChannelsRef: [Reference!]!
     supplyChannelsRef: [Reference!]!
     productSelectionsRef: [Reference!]!
@@ -9649,6 +9749,16 @@ type StoreDistributionChannelsChanged implements MessagePayload {
     removedDistributionChannels: [Channel!]
     addedDistributionChannelsRef: [Reference!]
     removedDistributionChannelsRef: [Reference!]
+    type: String!
+}
+
+type StoreFaqUrlSet implements MessagePayload {
+    faqUrl: String
+    type: String!
+}
+
+type StoreImprintUrlSet implements MessagePayload {
+    imprintUrl: String
     type: String!
 }
 
@@ -9686,6 +9796,16 @@ type StoreNameSet implements MessagePayload {
     type: String!
 }
 
+type StoreOrderUrlTemplateSet implements MessagePayload {
+    orderUrlTemplate: String
+    type: String!
+}
+
+type StorePrivacyPolicyUrlSet implements MessagePayload {
+    privacyPolicyUrl: String
+    type: String!
+}
+
 type StoreProductSelectionsChanged implements MessagePayload {
     addedProductSelections: [ProductSelectionSetting!]
     removedProductSelections: [ProductSelectionSetting!]
@@ -9701,12 +9821,40 @@ type StoreQueryResult {
     results: [Store!]!
 }
 
+type StoreRefundPolicyUrlSet implements MessagePayload {
+    refundPolicyUrl: String
+    type: String!
+}
+
+type StoreShippingPolicyUrlSet implements MessagePayload {
+    shippingPolicyUrl: String
+    type: String!
+}
+
 type StoreSupplyChannelsChanged implements MessagePayload {
     addedSupplyChannels: [Channel!]
     removedSupplyChannels: [Channel!]
     addedSupplyChannelsRef: [Reference!]
     removedSupplyChannelsRef: [Reference!]
     type: String!
+}
+
+type StoreTermsOfServiceUrlSet implements MessagePayload {
+    termsOfServiceUrl: String
+    type: String!
+}
+
+type Storefront {
+    checkoutUrlTemplate: String
+    orderUrlTemplate: String
+    termsOfServiceUrl: String
+    privacyPolicyUrl: String
+    refundPolicyUrl: String
+    shippingPolicyUrl: String
+    cookiePolicyUrl: String
+    imprintUrl: String
+    faqUrl: String
+    contactUrl: String
 }
 
 type StringAttribute implements Attribute {
@@ -10042,6 +10190,7 @@ BETA: This feature can be subject to change and should be used carefully in prod
 """
 type Variant implements Versioned {
     productRef: Reference!
+    product: Product
     variantId: Int!
     key: String
     current: VariantData!
@@ -10317,6 +10466,12 @@ BETA: This feature can be subject to change and should be used carefully in prod
 type VariantUnpublished implements MessagePayload {
     productRef: Reference!
     type: String!
+}
+
+type VersionedReference {
+    typeId: String!
+    id: String!
+    version: Long
 }
 
 type WhitespaceSuggestTokenizer implements SuggestTokenizer {
@@ -10763,9 +10918,11 @@ interface ShippingRatePriceTier {
 enum AttributionSource {
   Export
   Import
+  ManagedCommerceMCP
 }
 enum McpServerType {
   CommerceMCP
+  UCPShopperMCP
 }
 enum McpServerAuthenticationMode {
   CommercetoolsIdentity
@@ -11445,6 +11602,16 @@ enum RecurringOrderState {
   Failed
   Paused
 }
+enum ReservationState {
+  CommitInProgress
+  Committed
+  Created
+  CreationInProgress
+  Expired
+  Released
+  UpdateInProgress
+  Updated
+}
 enum SearchIndexingStatus {
   Activated
   Indexing
@@ -11493,6 +11660,7 @@ input McpServerDraft {
 
 input McpServerConfigDraft {
     commerce: CommerceMcpServerConfigDraft
+    ucpShopper: UcpShopperMcpServerConfigDraft
 }
 
 input CommerceMcpServerConfigDraft {
@@ -11501,6 +11669,17 @@ input CommerceMcpServerConfigDraft {
     toolCustomizations: [ToolCustomizationDraft!]
     jsonOutputFiltering: McpServerJsonOutputFilteringInput
     toolOutputFormatting: McpServerToolOutputFormatting
+}
+
+"""
+Draft for a shopper-facing UCP MCP server. Mirrors the shared fields of
+`CommerceMcpServerConfigDraft` without the response-shaping options the
+skeleton does not yet support.
+"""
+input UcpShopperMcpServerConfigDraft {
+    majorVersion: String!
+    tools: [String!]!
+    toolCustomizations: [ToolCustomizationDraft!]
 }
 
 """
@@ -11963,6 +12142,7 @@ input AddCartShippingMethod {
     shippingRateInput: ShippingRateInputDraft
     custom: CustomFieldsDraft
     deliveries: [DeliveryDraft!] = []
+    estimatedDelivery: EstimatedDeliveryDraft
 }
 
 input AddCartShoppingList {
@@ -12852,6 +13032,7 @@ input CartUpdateAction {
     setCustomerId: SetCartCustomerId
     setDeleteDaysAfterLastModification: SetCartDeleteDaysAfterLastModification
     setDirectDiscounts: SetCartDirectDiscounts
+    setEstimatedDelivery: SetCartEstimatedDelivery
     setItemShippingAddressCustomField: SetCartItemShippingAddressCustomField
     setItemShippingAddressCustomType: SetCartItemShippingAddressCustomType
     setLineItemCustomField: SetCartLineItemCustomField
@@ -13682,6 +13863,7 @@ input CreateStore {
     supplyChannels: [ResourceIdentifierInput!]
     productSelections: [ProductSelectionSettingDraft!]
     custom: CustomFieldsDraft
+    storefront: StorefrontInput
 }
 
 input CreateZone {
@@ -14099,6 +14281,11 @@ input EnumValueInput {
     label: String!
 }
 
+input EstimatedDeliveryDraft {
+    from: DateTime
+    until: DateTime
+}
+
 input EventBridgeDestinationInput {
     region: String!
     accountId: String!
@@ -14341,6 +14528,8 @@ input ImportOrderDraft {
     inventoryMode: InventoryMode = None
     shippingDetails: ItemShippingDetailsDraft
     taxCalculationMode: TaxCalculationMode = LineItemLevel
+    priceRoundingMode: RoundingMode = HalfEven
+    taxRoundingMode: RoundingMode = HalfEven
     origin: CartOrigin = Customer
     itemShippingAddresses: [AddressInput!] = []
     state: ReferenceInput
@@ -14467,6 +14656,7 @@ input LineItemImportDraft {
     distributionChannel: ResourceIdentifierInput
     taxRate: TaxRateInput
     variant: ProductVariantImportDraft!
+    inventoryMode: InventoryMode
     state: [ItemStateDraftType!]
     custom: CustomFieldsDraft
     shippingDetails: ItemShippingDetailsDraft
@@ -14534,6 +14724,15 @@ input MoneyDraft {
 input MoneyInput {
     currencyCode: Currency!
     centAmount: Long!
+}
+
+"""
+BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
+"""
+input MoveImageToPosition {
+    imageUrl: String!
+    position: Int!
+    staged: Boolean = true
 }
 
 input MoveProductImageToPosition {
@@ -15320,6 +15519,7 @@ input ProductTailoringUpdateAction {
     setAttributeInAllVariants: SetProductTailoringAttributeInAllVariants
     setDescription: SetProductTailoringDescription
     setImageLabel: SetProductTailoringImageLabel
+    setKey: SetProductTailoringKey
     setMetaAttributes: SetProductTailoringMetaAttributes
     setMetaDescription: SetProductTailoringMetaDescription
     setMetaKeywords: SetProductTailoringMetaKeywords
@@ -16336,6 +16536,7 @@ input SetCartCustomShippingMethod {
     taxCategory: ResourceIdentifierInput
     externalTaxRate: ExternalTaxRateDraft
     custom: CustomFieldsDraft
+    estimatedDelivery: EstimatedDeliveryDraft
 }
 
 input SetCartCustomType {
@@ -16409,6 +16610,11 @@ input SetCartDiscountValidFromAndUntil {
 
 input SetCartDiscountValidUntil {
     validUntil: DateTime
+}
+
+input SetCartEstimatedDelivery {
+    estimatedDelivery: EstimatedDeliveryDraft
+    shippingKey: String
 }
 
 input SetCartItemShippingAddressCustomField {
@@ -16543,6 +16749,7 @@ input SetCartShippingCustomType {
 input SetCartShippingMethod {
     shippingMethod: ResourceIdentifierInput
     externalTaxRate: ExternalTaxRateDraft
+    estimatedDelivery: EstimatedDeliveryDraft
 }
 
 input SetCartShippingMethodTaxAmount {
@@ -17758,6 +17965,10 @@ input SetProductTailoringImages {
     staged: Boolean = true
 }
 
+input SetProductTailoringKey {
+    key: String
+}
+
 input SetProductTailoringMetaAttributes {
     metaDescription: [LocalizedStringItemInputType!]
     metaKeywords: [LocalizedStringItemInputType!]
@@ -17996,6 +18207,10 @@ input SetSearchKeywords {
     staged: Boolean
 }
 
+input SetShippingMethodCarrier {
+    carrier: String
+}
+
 input SetShippingMethodCustomField {
     name: String!
     value: String
@@ -18185,6 +18400,7 @@ input SetStagedOrderCustomShippingMethod {
     taxCategory: ResourceIdentifierInput
     externalTaxRate: ExternalTaxRateDraft
     custom: CustomFieldsDraft
+    estimatedDelivery: EstimatedDeliveryDraft
 }
 
 input SetStagedOrderCustomType {
@@ -18252,6 +18468,11 @@ input SetStagedOrderDeliveryItems {
 
 input SetStagedOrderDirectDiscounts {
     discounts: [DirectDiscountDraft!]!
+}
+
+input SetStagedOrderEstimatedDelivery {
+    estimatedDelivery: EstimatedDeliveryDraft
+    shippingKey: String
 }
 
 input SetStagedOrderItemShippingAddressCustomField {
@@ -18453,6 +18674,7 @@ input SetStagedOrderShippingCustomType {
 input SetStagedOrderShippingMethod {
     shippingMethod: ResourceIdentifierInput
     externalTaxRate: ExternalTaxRateDraft
+    estimatedDelivery: EstimatedDeliveryDraft
 }
 
 input SetStagedOrderShippingMethodTaxAmount {
@@ -18539,6 +18761,18 @@ input SetStateTransitions {
     transitions: [ResourceIdentifierInput!]
 }
 
+input SetStoreCheckoutUrlTemplate {
+    checkoutUrlTemplate: String
+}
+
+input SetStoreContactUrl {
+    contactUrl: String
+}
+
+input SetStoreCookiePolicyUrl {
+    cookiePolicyUrl: String
+}
+
 input SetStoreCountries {
     countries: [StoreCountryInput!]
 }
@@ -18559,6 +18793,14 @@ input SetStoreDistributionChannels {
     distributionChannels: [ResourceIdentifierInput!]
 }
 
+input SetStoreFaqUrl {
+    faqUrl: String
+}
+
+input SetStoreImprintUrl {
+    imprintUrl: String
+}
+
 input SetStoreLanguages {
     languages: [Locale!]
 }
@@ -18567,12 +18809,32 @@ input SetStoreName {
     name: [LocalizedStringItemInputType!]
 }
 
+input SetStoreOrderUrlTemplate {
+    orderUrlTemplate: String
+}
+
+input SetStorePrivacyPolicyUrl {
+    privacyPolicyUrl: String
+}
+
 input SetStoreProductSelections {
     productSelections: [ProductSelectionSettingInActionInput!]
 }
 
+input SetStoreRefundPolicyUrl {
+    refundPolicyUrl: String
+}
+
+input SetStoreShippingPolicyUrl {
+    shippingPolicyUrl: String
+}
+
 input SetStoreSupplyChannels {
     supplyChannels: [ResourceIdentifierInput!]
+}
+
+input SetStoreTermsOfServiceUrl {
+    termsOfServiceUrl: String
 }
 
 input SetSubscriptionChanges {
@@ -18690,6 +18952,15 @@ input SetVariantAttributes {
 """
 BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
 """
+input SetVariantImageLabel {
+    imageUrl: String!
+    label: String
+    staged: Boolean = true
+}
+
+"""
+BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta
+"""
 input SetVariantImages {
     images: [ImageInput!] = []
     staged: Boolean = true
@@ -18756,6 +19027,7 @@ input ShippingMethodDraft {
     key: String
     custom: CustomFieldsDraft
     stores: [ResourceIdentifierInput!]
+    carrier: String
 }
 
 input ShippingMethodTargetDraft {
@@ -18779,6 +19051,7 @@ input ShippingMethodUpdateAction {
     removeStore: RemoveShippingMethodStore
     removeShippingRate: RemoveShippingMethodShippingRate
     removeZone: RemoveShippingMethodZone
+    setCarrier: SetShippingMethodCarrier
     setCustomField: SetShippingMethodCustomField
     setCustomType: SetShippingMethodCustomType
     """This action is deprecated in favor of using 'setLocalizedDescription'"""
@@ -18970,6 +19243,7 @@ input StagedOrderUpdateAction {
     setDeliveryCustomType: SetStagedOrderDeliveryCustomType
     setDeliveryItems: SetStagedOrderDeliveryItems
     setDirectDiscounts: SetStagedOrderDirectDiscounts
+    setEstimatedDelivery: SetStagedOrderEstimatedDelivery
     setItemShippingAddressCustomField: SetStagedOrderItemShippingAddressCustomField
     setItemShippingAddressCustomType: SetStagedOrderItemShippingAddressCustomType
     setLineItemCustomField: SetStagedOrderLineItemCustomField
@@ -19105,13 +19379,36 @@ input StoreUpdateAction {
     removeDistributionChannel: RemoveStoreDistributionChannel
     removeSupplyChannel: RemoveStoreSupplyChannel
     setProductSelections: SetStoreProductSelections
+    setCheckoutUrlTemplate: SetStoreCheckoutUrlTemplate
+    setContactUrl: SetStoreContactUrl
+    setCookiePolicyUrl: SetStoreCookiePolicyUrl
     setCountries: SetStoreCountries
     setCustomField: SetStoreCustomField
     setCustomType: SetStoreCustomType
     setDistributionChannels: SetStoreDistributionChannels
+    setFaqUrl: SetStoreFaqUrl
+    setImprintUrl: SetStoreImprintUrl
     setLanguages: SetStoreLanguages
     setName: SetStoreName
+    setOrderUrlTemplate: SetStoreOrderUrlTemplate
+    setPrivacyPolicyUrl: SetStorePrivacyPolicyUrl
+    setRefundPolicyUrl: SetStoreRefundPolicyUrl
+    setShippingPolicyUrl: SetStoreShippingPolicyUrl
     setSupplyChannels: SetStoreSupplyChannels
+    setTermsOfServiceUrl: SetStoreTermsOfServiceUrl
+}
+
+input StorefrontInput {
+    checkoutUrlTemplate: String
+    orderUrlTemplate: String
+    termsOfServiceUrl: String
+    privacyPolicyUrl: String
+    refundPolicyUrl: String
+    shippingPolicyUrl: String
+    cookiePolicyUrl: String
+    imprintUrl: String
+    faqUrl: String
+    contactUrl: String
 }
 
 input SubRateDraft {
@@ -19452,6 +19749,7 @@ input VariantUpdateAction {
     unpublish: UnpublishVariant
     removeStagedChanges: RemoveStagedChanges
     removeAsset: RemoveVariantAsset
+    moveImageToPosition: MoveImageToPosition
     addExternalImage: AddVariantExternalImage
     addAsset: AddVariantAsset
     changeAssetName: ChangeVariantAssetName
@@ -19460,6 +19758,7 @@ input VariantUpdateAction {
     setAssets: SetVariantAssets
     setAttribute: SetVariantAttribute
     setAttributes: SetVariantAttributes
+    setImageLabel: SetVariantImageLabel
     setImages: SetVariantImages
     setKey: SetVariantKey
     setSku: SetVariantSku

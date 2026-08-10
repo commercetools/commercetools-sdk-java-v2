@@ -375,6 +375,10 @@ public class ErrorObjectBuilder {
         return com.commercetools.api.models.error.SyntaxErrorErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.UnauthorizedErrorBuilder unauthorizedBuilder() {
+        return com.commercetools.api.models.error.UnauthorizedErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.ValidityLockConflictErrorBuilder validityLockConflictBuilder() {
         return com.commercetools.api.models.error.ValidityLockConflictErrorBuilder.of();
     }

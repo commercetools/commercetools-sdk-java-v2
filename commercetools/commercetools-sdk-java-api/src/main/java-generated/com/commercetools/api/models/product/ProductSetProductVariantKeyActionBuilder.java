@@ -68,7 +68,7 @@ public class ProductSetProductVariantKeyActionBuilder implements Builder<Product
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>key</code> is set. If <code>false</code>, both the current and staged <code>key</code> are set.</p>
+     *  <p>Whether only the staged <code>key</code> is set. If <code>false</code>, both the current and staged <code>key</code> are set.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -109,7 +109,7 @@ public class ProductSetProductVariantKeyActionBuilder implements Builder<Product
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>key</code> is set. If <code>false</code>, both the current and staged <code>key</code> are set.</p>
+     *  <p>Whether only the staged <code>key</code> is set. If <code>false</code>, both the current and staged <code>key</code> are set.</p>
      * @return staged
      */
 

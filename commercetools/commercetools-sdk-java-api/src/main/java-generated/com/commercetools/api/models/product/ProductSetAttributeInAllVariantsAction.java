@@ -63,7 +63,7 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
     public Object getValue();
 
     /**
-     *  <p>If <code>true</code>, only the staged Attributes are set. If <code>false</code>, both the current and staged Attributes are set.</p>
+     *  <p>Whether only the staged Attributes are set. If <code>false</code>, both the current and staged Attributes are set.</p>
      * @return staged
      */
 
@@ -94,7 +94,7 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
     public void setValue(final Object value);
 
     /**
-     *  <p>If <code>true</code>, only the staged Attributes are set. If <code>false</code>, both the current and staged Attributes are set.</p>
+     *  <p>Whether only the staged Attributes are set. If <code>false</code>, both the current and staged Attributes are set.</p>
      * @param staged value to be set
      */
 

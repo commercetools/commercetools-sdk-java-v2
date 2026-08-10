@@ -65,7 +65,7 @@ public class VariantSetAssetsActionImpl implements VariantSetAssetsAction, Model
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged assets are set. If <code>false</code>, both the current and staged assets are updated.</p>
+     *  <p>Whether only the staged assets are set. If <code>false</code>, both the current and staged assets are updated.</p>
      */
 
     public Boolean getStaged() {

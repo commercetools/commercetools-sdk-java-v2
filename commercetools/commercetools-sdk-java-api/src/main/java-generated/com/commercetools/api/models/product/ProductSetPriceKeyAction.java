@@ -46,7 +46,7 @@ public interface ProductSetPriceKeyAction extends ProductUpdateAction {
     public String getPriceId();
 
     /**
-     *  <p>If <code>true</code>, only the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Price</a> is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
+     *  <p>Whether only the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Price</a> is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      * @return staged
      */
 
@@ -69,7 +69,7 @@ public interface ProductSetPriceKeyAction extends ProductUpdateAction {
     public void setPriceId(final String priceId);
 
     /**
-     *  <p>If <code>true</code>, only the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Price</a> is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
+     *  <p>Whether only the staged <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Price</a> is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
      * @param staged value to be set
      */
 

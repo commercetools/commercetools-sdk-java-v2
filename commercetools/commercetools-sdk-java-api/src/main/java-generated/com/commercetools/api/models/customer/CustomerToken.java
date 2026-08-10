@@ -70,7 +70,7 @@ public interface CustomerToken {
     public ZonedDateTime getExpiresAt();
 
     /**
-     *  <p>If <code>true</code>, all tokens issued previously for the Customer will be invalidated.</p>
+     *  <p>Whether all tokens issued previously for the Customer will be invalidated.</p>
      * @return invalidateOlderTokens
      */
     @NotNull
@@ -122,7 +122,7 @@ public interface CustomerToken {
     public void setExpiresAt(final ZonedDateTime expiresAt);
 
     /**
-     *  <p>If <code>true</code>, all tokens issued previously for the Customer will be invalidated.</p>
+     *  <p>Whether all tokens issued previously for the Customer will be invalidated.</p>
      * @param invalidateOlderTokens value to be set
      */
 

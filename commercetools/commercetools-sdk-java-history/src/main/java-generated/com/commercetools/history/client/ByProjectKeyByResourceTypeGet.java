@@ -158,6 +158,10 @@ public class ByProjectKeyByResourceTypeGet extends
         return this.getQueryParam("expand");
     }
 
+    public List<String> getWithTotal() {
+        return this.getQueryParam("withTotal");
+    }
+
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
     }
@@ -1445,6 +1449,86 @@ public class ByProjectKeyByResourceTypeGet extends
     public <TValue> ByProjectKeyByResourceTypeGet addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * set withTotal with the specified value
+     * @param withTotal value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeGet withWithTotal(final TValue withTotal) {
+        return copy().withQueryParam("withTotal", withTotal);
+    }
+
+    /**
+     * add additional withTotal query parameter
+     * @param withTotal value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeGet addWithTotal(final TValue withTotal) {
+        return copy().addQueryParam("withTotal", withTotal);
+    }
+
+    /**
+     * set withTotal with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public ByProjectKeyByResourceTypeGet withWithTotal(final Supplier<Boolean> supplier) {
+        return copy().withQueryParam("withTotal", supplier.get());
+    }
+
+    /**
+     * add additional withTotal query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public ByProjectKeyByResourceTypeGet addWithTotal(final Supplier<Boolean> supplier) {
+        return copy().addQueryParam("withTotal", supplier.get());
+    }
+
+    /**
+     * set withTotal with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public ByProjectKeyByResourceTypeGet withWithTotal(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("withTotal", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional withTotal query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public ByProjectKeyByResourceTypeGet addWithTotal(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("withTotal", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set withTotal with the specified values
+     * @param withTotal values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeGet withWithTotal(final Collection<TValue> withTotal) {
+        return copy().withoutQueryParam("withTotal")
+                .addQueryParams(withTotal.stream()
+                        .map(s -> new ParamEntry<>("withTotal", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional withTotal query parameters
+     * @param withTotal values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeGet addWithTotal(final Collection<TValue> withTotal) {
+        return copy().addQueryParams(
+            withTotal.stream().map(s -> new ParamEntry<>("withTotal", s.toString())).collect(Collectors.toList()));
     }
 
     @Override

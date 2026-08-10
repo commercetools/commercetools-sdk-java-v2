@@ -259,7 +259,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     *  <p>If set to <code>true</code>, the StandalonePrice is considered during <span>Product price selection</span>. If set to <code>false</code>, the StandalonePrice is not considered during <span>Product price selection</span> and any associated Line Items in a Cart cannot be ordered.</p>
+     *  <p>Whether the StandalonePrice is considered during <span>Product price selection</span>. If set to <code>false</code>, the StandalonePrice is not considered during <span>Product price selection</span> and any associated Line Items in a Cart cannot be ordered.</p>
      */
 
     public Boolean getActive() {

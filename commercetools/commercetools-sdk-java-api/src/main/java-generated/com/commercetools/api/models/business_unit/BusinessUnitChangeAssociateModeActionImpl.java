@@ -65,7 +65,7 @@ public class BusinessUnitChangeAssociateModeActionImpl implements BusinessUnitCh
     }
 
     /**
-     *  <p>If set to <code>true</code> during a change to <code>associateMode="Explicit"</code>, all inherited Associates will be converted to explicit Associates.</p>
+     *  <p>Whether all inherited Associates are converted to explicit Associates during a change to <code>associateMode="Explicit"</code>.</p>
      */
 
     public Boolean getMakeInheritedAssociatesExplicit() {

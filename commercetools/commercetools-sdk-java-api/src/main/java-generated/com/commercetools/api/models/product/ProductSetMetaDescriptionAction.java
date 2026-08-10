@@ -46,7 +46,7 @@ public interface ProductSetMetaDescriptionAction extends ProductUpdateAction {
     public LocalizedString getMetaDescription();
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>metaDescription</code> is updated. If <code>false</code>, both the current and staged <code>metaDescription</code> are updated.</p>
+     *  <p>Whether only the staged <code>metaDescription</code> is updated. If <code>false</code>, both the current and staged <code>metaDescription</code> are updated.</p>
      * @return staged
      */
 
@@ -61,7 +61,7 @@ public interface ProductSetMetaDescriptionAction extends ProductUpdateAction {
     public void setMetaDescription(final LocalizedString metaDescription);
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>metaDescription</code> is updated. If <code>false</code>, both the current and staged <code>metaDescription</code> are updated.</p>
+     *  <p>Whether only the staged <code>metaDescription</code> is updated. If <code>false</code>, both the current and staged <code>metaDescription</code> are updated.</p>
      * @param staged value to be set
      */
 

@@ -52,7 +52,7 @@ public class ProductCatalogDataImpl implements ProductCatalogData, ModelBase {
     }
 
     /**
-     *  <p>If <code>true</code>, the <code>current</code> representation of the Product is retrievable in the <span>Product Projection</span> endpoints and indexed for <span>Product Search</span>.</p>
+     *  <p>Whether the <code>current</code> representation of the Product is retrievable in the <span>Product Projection</span> endpoints and indexed for <span>Product Search</span>.</p>
      */
 
     public Boolean getPublished() {
@@ -76,7 +76,7 @@ public class ProductCatalogDataImpl implements ProductCatalogData, ModelBase {
     }
 
     /**
-     *  <p><code>true</code> if the <code>staged</code> data is different from the <code>current</code> data.</p>
+     *  <p>Whether the <code>staged</code> data is different from the <code>current</code> data.</p>
      */
 
     public Boolean getHasStagedChanges() {

@@ -62,7 +62,7 @@ public interface GraphQLPriceChangedError extends GraphQLErrorObject {
     public List<String> getLineItems();
 
     /**
-     *  <p><code>true</code> if the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> has changed.</p>
+     *  <p>Whether the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> has changed.</p>
      * @return shipping
      */
     @NotNull
@@ -85,7 +85,7 @@ public interface GraphQLPriceChangedError extends GraphQLErrorObject {
     public void setLineItems(final List<String> lineItems);
 
     /**
-     *  <p><code>true</code> if the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> has changed.</p>
+     *  <p>Whether the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRate" rel="nofollow">ShippingRate</a> has changed.</p>
      * @param shipping value to be set
      */
 

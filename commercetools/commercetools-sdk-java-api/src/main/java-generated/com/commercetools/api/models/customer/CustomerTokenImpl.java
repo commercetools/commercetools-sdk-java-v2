@@ -95,7 +95,7 @@ public class CustomerTokenImpl implements CustomerToken, ModelBase {
     }
 
     /**
-     *  <p>If <code>true</code>, all tokens issued previously for the Customer will be invalidated.</p>
+     *  <p>Whether all tokens issued previously for the Customer will be invalidated.</p>
      */
 
     public Boolean getInvalidateOlderTokens() {

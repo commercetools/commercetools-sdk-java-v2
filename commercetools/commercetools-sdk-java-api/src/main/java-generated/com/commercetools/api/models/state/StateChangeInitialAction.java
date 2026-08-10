@@ -38,7 +38,7 @@ public interface StateChangeInitialAction extends StateUpdateAction {
     String CHANGE_INITIAL = "changeInitial";
 
     /**
-     *  <p>Set to <code>true</code> for defining the State as initial State in a state machine and making it the first step in a workflow.</p>
+     *  <p>Whether to define the State as the initial State in a state machine and make it the first step in a workflow.</p>
      * @return initial
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface StateChangeInitialAction extends StateUpdateAction {
     public Boolean getInitial();
 
     /**
-     *  <p>Set to <code>true</code> for defining the State as initial State in a state machine and making it the first step in a workflow.</p>
+     *  <p>Whether to define the State as the initial State in a state machine and make it the first step in a workflow.</p>
      * @param initial value to be set
      */
 

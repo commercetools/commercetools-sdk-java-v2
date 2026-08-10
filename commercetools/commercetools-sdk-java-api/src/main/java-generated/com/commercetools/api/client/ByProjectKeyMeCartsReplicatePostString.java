@@ -25,6 +25,12 @@ import tools.jackson.core.type.TypeReference;
  *  <ul>
  *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:MatchingPriceNotFoundError" rel="nofollow">MatchingPriceNotFound</a></li>
  *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:MissingTaxRateForCountryError" rel="nofollow">MissingTaxRateForCountry</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> is returned in several cases, including the following:
+ *    <ul>
+ *     <li>The referenced Shipping Method is not active.</li>
+ *     <li>The referenced Shipping Method is scoped to a Store that differs from the Cart's Store.</li>
+ *     <li>The referenced Shipping Method is scoped to a Store, but the Cart does not belong to a Store.</li>
+ *    </ul></li>
  *  </ul>
  *
  * <hr>

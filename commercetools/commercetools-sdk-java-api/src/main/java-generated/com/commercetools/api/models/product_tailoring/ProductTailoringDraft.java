@@ -112,7 +112,7 @@ public interface ProductTailoringDraft extends io.vrap.rmf.base.client.Draft<Pro
     public LocalizedString getSlug();
 
     /**
-     *  <p>Set to <code>true</code> to <span>publish</span> the ProductTailoring immediately. Otherwise, the tailored product information is just staged.</p>
+     *  <p>Whether to <span>publish</span> the ProductTailoring immediately. Otherwise, the tailored product information is just staged.</p>
      * @return publish
      */
 
@@ -199,7 +199,7 @@ public interface ProductTailoringDraft extends io.vrap.rmf.base.client.Draft<Pro
     public void setSlug(final LocalizedString slug);
 
     /**
-     *  <p>Set to <code>true</code> to <span>publish</span> the ProductTailoring immediately. Otherwise, the tailored product information is just staged.</p>
+     *  <p>Whether to <span>publish</span> the ProductTailoring immediately. Otherwise, the tailored product information is just staged.</p>
      * @param publish value to be set
      */
 

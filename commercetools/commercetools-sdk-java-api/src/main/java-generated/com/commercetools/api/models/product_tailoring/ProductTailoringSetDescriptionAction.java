@@ -46,7 +46,7 @@ public interface ProductTailoringSetDescriptionAction extends ProductTailoringUp
     public LocalizedString getDescription();
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>description</code> is updated. If <code>false</code>, both the current and staged <code>description</code> are updated.</p>
+     *  <p>Whether only the staged <code>description</code> is updated. If <code>false</code>, both the current and staged <code>description</code> are updated.</p>
      * @return staged
      */
 
@@ -61,7 +61,7 @@ public interface ProductTailoringSetDescriptionAction extends ProductTailoringUp
     public void setDescription(final LocalizedString description);
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>description</code> is updated. If <code>false</code>, both the current and staged <code>description</code> are updated.</p>
+     *  <p>Whether only the staged <code>description</code> is updated. If <code>false</code>, both the current and staged <code>description</code> are updated.</p>
      * @param staged value to be set
      */
 

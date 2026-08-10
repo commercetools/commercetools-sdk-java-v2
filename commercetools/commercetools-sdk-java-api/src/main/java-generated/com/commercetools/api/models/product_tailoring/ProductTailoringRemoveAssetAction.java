@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Either <code>variantId</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> that exists. The Asset to remove must be specified using either <code>assetId</code> or <code>assetKey</code>.</p>
+ *  <p>Either <code>variantId</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> (<span>BETA</span>) that exists. The Asset to remove must be specified using either <code>assetId</code> or <code>assetKey</code>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,7 +36,7 @@ public interface ProductTailoringRemoveAssetAction extends ProductTailoringUpdat
     String REMOVE_ASSET = "removeAsset";
 
     /**
-     *  <p>The <code>id</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>id</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @return variantId
      */
 
@@ -44,7 +44,7 @@ public interface ProductTailoringRemoveAssetAction extends ProductTailoringUpdat
     public Long getVariantId();
 
     /**
-     *  <p>The <code>sku</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>sku</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @return sku
      */
 
@@ -52,7 +52,7 @@ public interface ProductTailoringRemoveAssetAction extends ProductTailoringUpdat
     public String getSku();
 
     /**
-     *  <p>If <code>true</code>, only the staged Asset is removed. If <code>false</code>, both the current and staged Asset is removed.</p>
+     *  <p>Whether only the staged Asset is removed. If <code>false</code>, both the current and staged Asset is removed.</p>
      * @return staged
      */
 
@@ -76,21 +76,21 @@ public interface ProductTailoringRemoveAssetAction extends ProductTailoringUpdat
     public String getAssetKey();
 
     /**
-     *  <p>The <code>id</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>id</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @param variantId value to be set
      */
 
     public void setVariantId(final Long variantId);
 
     /**
-     *  <p>The <code>sku</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>sku</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @param sku value to be set
      */
 
     public void setSku(final String sku);
 
     /**
-     *  <p>If <code>true</code>, only the staged Asset is removed. If <code>false</code>, both the current and staged Asset is removed.</p>
+     *  <p>Whether only the staged Asset is removed. If <code>false</code>, both the current and staged Asset is removed.</p>
      * @param staged value to be set
      */
 

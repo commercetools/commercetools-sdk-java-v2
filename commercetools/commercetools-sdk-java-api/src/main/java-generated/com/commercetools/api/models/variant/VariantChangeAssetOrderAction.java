@@ -38,7 +38,7 @@ public interface VariantChangeAssetOrderAction extends VariantUpdateAction {
     String CHANGE_ASSET_ORDER = "changeAssetOrder";
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>assets</code> is updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
+     *  <p>Whether only the staged <code>assets</code> is updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
      * @return staged
      */
 
@@ -54,7 +54,7 @@ public interface VariantChangeAssetOrderAction extends VariantUpdateAction {
     public List<String> getAssetOrder();
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>assets</code> is updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
+     *  <p>Whether only the staged <code>assets</code> is updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
      * @param staged value to be set
      */
 

@@ -36,7 +36,7 @@ public interface ProductTailoringRemoveVariantAction extends ProductTailoringUpd
     String REMOVE_VARIANT = "removeVariant";
 
     /**
-     *  <p>The <code>id</code> of the ProductVariant to remove from the Tailoring.</p>
+     *  <p>The <code>id</code> of the ProductVariant or Variant (<span>BETA</span>) to remove from the Tailoring.</p>
      * @return id
      */
 
@@ -44,7 +44,7 @@ public interface ProductTailoringRemoveVariantAction extends ProductTailoringUpd
     public Long getId();
 
     /**
-     *  <p>The <code>sku</code> of the ProductVariant to remove from the Tailoring.</p>
+     *  <p>The <code>sku</code> of the ProductVariant or Variant (<span>BETA</span>) to remove from the Tailoring.</p>
      * @return sku
      */
 
@@ -52,7 +52,7 @@ public interface ProductTailoringRemoveVariantAction extends ProductTailoringUpd
     public String getSku();
 
     /**
-     *  <p>If <code>true</code>, only the staged Product Variant Tailoring is removed. If <code>false</code>, both the current and staged Product Variant Tailoring is removed.</p>
+     *  <p>Whether only the staged Product Variant Tailoring is removed. If <code>false</code>, both the current and staged Product Variant Tailoring is removed.</p>
      * @return staged
      */
 
@@ -60,21 +60,21 @@ public interface ProductTailoringRemoveVariantAction extends ProductTailoringUpd
     public Boolean getStaged();
 
     /**
-     *  <p>The <code>id</code> of the ProductVariant to remove from the Tailoring.</p>
+     *  <p>The <code>id</code> of the ProductVariant or Variant (<span>BETA</span>) to remove from the Tailoring.</p>
      * @param id value to be set
      */
 
     public void setId(final Long id);
 
     /**
-     *  <p>The <code>sku</code> of the ProductVariant to remove from the Tailoring.</p>
+     *  <p>The <code>sku</code> of the ProductVariant or Variant (<span>BETA</span>) to remove from the Tailoring.</p>
      * @param sku value to be set
      */
 
     public void setSku(final String sku);
 
     /**
-     *  <p>If <code>true</code>, only the staged Product Variant Tailoring is removed. If <code>false</code>, both the current and staged Product Variant Tailoring is removed.</p>
+     *  <p>Whether only the staged Product Variant Tailoring is removed. If <code>false</code>, both the current and staged Product Variant Tailoring is removed.</p>
      * @param staged value to be set
      */
 

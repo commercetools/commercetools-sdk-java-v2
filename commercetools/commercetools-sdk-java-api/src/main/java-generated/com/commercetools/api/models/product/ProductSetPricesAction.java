@@ -66,7 +66,7 @@ public interface ProductSetPricesAction extends ProductUpdateAction {
     public List<PriceDraft> getPrices();
 
     /**
-     *  <p>If <code>true</code>, only the staged ProductVariant is updated. If <code>false</code>, both the current and staged ProductVariant are updated.</p>
+     *  <p>Whether only the staged ProductVariant is updated. If <code>false</code>, both the current and staged ProductVariant are updated.</p>
      * @return staged
      */
 
@@ -103,7 +103,7 @@ public interface ProductSetPricesAction extends ProductUpdateAction {
     public void setPrices(final List<PriceDraft> prices);
 
     /**
-     *  <p>If <code>true</code>, only the staged ProductVariant is updated. If <code>false</code>, both the current and staged ProductVariant are updated.</p>
+     *  <p>Whether only the staged ProductVariant is updated. If <code>false</code>, both the current and staged ProductVariant are updated.</p>
      * @param staged value to be set
      */
 

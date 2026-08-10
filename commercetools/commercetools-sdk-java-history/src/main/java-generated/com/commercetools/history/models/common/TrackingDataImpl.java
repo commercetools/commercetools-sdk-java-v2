@@ -87,10 +87,7 @@ public class TrackingDataImpl implements TrackingData, ModelBase {
     }
 
     /**
-     *  <ul>
-     *   <li>If <code>true</code>, the Parcel is being returned.</li>
-     *   <li>If <code>false</code>, the Parcel is being delivered to the customer.</li>
-     *  </ul>
+     *  <p>Whether the Parcel is being returned. If <code>false</code>, the Parcel is being delivered to the customer.</p>
      */
 
     public Boolean getIsReturn() {

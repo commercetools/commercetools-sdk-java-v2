@@ -152,7 +152,7 @@ public interface ProductTailoringCreatedMessage extends Message {
     public List<ProductTailoringAttribute> getAttributes();
 
     /**
-     *  <p><code>true</code> if the ProductTailoring is published.</p>
+     *  <p>Whether the ProductTailoring is published.</p>
      * @return published
      */
     @NotNull
@@ -260,7 +260,7 @@ public interface ProductTailoringCreatedMessage extends Message {
     public void setAttributes(final List<ProductTailoringAttribute> attributes);
 
     /**
-     *  <p><code>true</code> if the ProductTailoring is published.</p>
+     *  <p>Whether the ProductTailoring is published.</p>
      * @param published value to be set
      */
 

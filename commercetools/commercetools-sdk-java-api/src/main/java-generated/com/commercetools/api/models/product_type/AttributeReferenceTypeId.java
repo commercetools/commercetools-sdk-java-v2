@@ -62,6 +62,9 @@ public interface AttributeReferenceTypeId extends JsonEnum {
     <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:State" rel="nofollow">State</a>.</p> */
     AttributeReferenceTypeId STATE = AttributeReferenceTypeIdEnum.STATE;
     /**
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a>. Only available for Projects with <code>productCatalogModel</code> set to <code>Modular</code> (<span>BETA</span>).</p> */
+    AttributeReferenceTypeId VARIANT = AttributeReferenceTypeIdEnum.VARIANT;
+    /**
     <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a>.</p> */
     AttributeReferenceTypeId ZONE = AttributeReferenceTypeIdEnum.ZONE;
 
@@ -143,6 +146,11 @@ public interface AttributeReferenceTypeId extends JsonEnum {
          * state
          */
         STATE("state"),
+
+        /**
+         * variant
+         */
+        VARIANT("variant"),
 
         /**
          * zone

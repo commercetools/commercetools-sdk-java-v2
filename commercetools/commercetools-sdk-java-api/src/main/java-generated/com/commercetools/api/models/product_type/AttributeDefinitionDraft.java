@@ -65,7 +65,7 @@ public interface AttributeDefinitionDraft extends io.vrap.rmf.base.client.Draft<
     public LocalizedString getLabel();
 
     /**
-     *  <p>Set to <code>true</code> if the Attribute is required to have a value on a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+     *  <p>Whether the Attribute is required to have a value on a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @return isRequired
      */
     @NotNull
@@ -137,7 +137,7 @@ public interface AttributeDefinitionDraft extends io.vrap.rmf.base.client.Draft<
     public void setLabel(final LocalizedString label);
 
     /**
-     *  <p>Set to <code>true</code> if the Attribute is required to have a value on a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+     *  <p>Whether the Attribute is required to have a value on a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
      * @param isRequired value to be set
      */
 

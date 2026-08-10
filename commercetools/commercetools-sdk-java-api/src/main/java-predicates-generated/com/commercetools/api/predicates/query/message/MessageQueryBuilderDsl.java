@@ -1549,6 +1549,13 @@ public class MessageQueryBuilderDsl {
             MessageQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asProductTailoringKeySet(
+            Function<com.commercetools.api.predicates.query.message.ProductTailoringKeySetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.ProductTailoringKeySetMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.message.ProductTailoringKeySetMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MessageQueryBuilderDsl> asProductTailoringNameSet(
             Function<com.commercetools.api.predicates.query.message.ProductTailoringNameSetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.ProductTailoringNameSetMessageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

@@ -70,7 +70,7 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
     public String getLabel();
 
     /**
-     *  <p>If <code>true</code>, only the staged image is updated. If <code>false</code>, both the current and staged image is updated.</p>
+     *  <p>Whether only the staged image is updated. If <code>false</code>, both the current and staged image is updated.</p>
      * @return staged
      */
 
@@ -106,7 +106,7 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
     public void setLabel(final String label);
 
     /**
-     *  <p>If <code>true</code>, only the staged image is updated. If <code>false</code>, both the current and staged image is updated.</p>
+     *  <p>Whether only the staged image is updated. If <code>false</code>, both the current and staged image is updated.</p>
      * @param staged value to be set
      */
 

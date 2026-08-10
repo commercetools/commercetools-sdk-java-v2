@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Either <code>variantId</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> that exists. Produces the <span>ProductTailoringImagesSet</span> Message.</p>
+ *  <p>Either <code>variantId</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> (<span>BETA</span>) that exists. Produces the <span>ProductTailoringImagesSet</span> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ public interface ProductTailoringSetExternalImagesAction extends ProductTailorin
     String SET_IMAGES = "setImages";
 
     /**
-     *  <p>The <code>id</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>id</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @return variantId
      */
 
@@ -47,7 +47,7 @@ public interface ProductTailoringSetExternalImagesAction extends ProductTailorin
     public Long getVariantId();
 
     /**
-     *  <p>The <code>sku</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>sku</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @return sku
      */
 
@@ -55,8 +55,8 @@ public interface ProductTailoringSetExternalImagesAction extends ProductTailorin
     public String getSku();
 
     /**
-     *  <p>Images of the tailored ProductVariant.</p>
-     *  <p>Don't provide this field if you want to remove all images from the tailored Product Variant. Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant on the tailored ProductVariant.</p>
+     *  <p>Images of the tailored ProductVariant or Variant (<span>BETA</span>).</p>
+     *  <p>Don't provide this field if you want to remove all images from the tailored ProductVariant or Variant (<span>BETA</span>). Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant or Variant (<span>BETA</span>) on the tailored ProductVariant or Variant (<span>BETA</span>).</p>
      * @return images
      */
     @Valid
@@ -64,7 +64,7 @@ public interface ProductTailoringSetExternalImagesAction extends ProductTailorin
     public List<Image> getImages();
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> is updated.</p>
+     *  <p>Whether only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> are updated.</p>
      * @return staged
      */
 
@@ -72,22 +72,22 @@ public interface ProductTailoringSetExternalImagesAction extends ProductTailorin
     public Boolean getStaged();
 
     /**
-     *  <p>The <code>id</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>id</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @param variantId value to be set
      */
 
     public void setVariantId(final Long variantId);
 
     /**
-     *  <p>The <code>sku</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>sku</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @param sku value to be set
      */
 
     public void setSku(final String sku);
 
     /**
-     *  <p>Images of the tailored ProductVariant.</p>
-     *  <p>Don't provide this field if you want to remove all images from the tailored Product Variant. Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant on the tailored ProductVariant.</p>
+     *  <p>Images of the tailored ProductVariant or Variant (<span>BETA</span>).</p>
+     *  <p>Don't provide this field if you want to remove all images from the tailored ProductVariant or Variant (<span>BETA</span>). Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant or Variant (<span>BETA</span>) on the tailored ProductVariant or Variant (<span>BETA</span>).</p>
      * @param images values to be set
      */
 
@@ -95,15 +95,15 @@ public interface ProductTailoringSetExternalImagesAction extends ProductTailorin
     public void setImages(final Image... images);
 
     /**
-     *  <p>Images of the tailored ProductVariant.</p>
-     *  <p>Don't provide this field if you want to remove all images from the tailored Product Variant. Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant on the tailored ProductVariant.</p>
+     *  <p>Images of the tailored ProductVariant or Variant (<span>BETA</span>).</p>
+     *  <p>Don't provide this field if you want to remove all images from the tailored ProductVariant or Variant (<span>BETA</span>). Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant or Variant (<span>BETA</span>) on the tailored ProductVariant or Variant (<span>BETA</span>).</p>
      * @param images values to be set
      */
 
     public void setImages(final List<Image> images);
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> is updated.</p>
+     *  <p>Whether only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> are updated.</p>
      * @param staged value to be set
      */
 

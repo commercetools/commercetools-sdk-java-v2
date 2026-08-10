@@ -49,4 +49,8 @@ public class ByProjectKeyVariantsByIDRequestBuilder {
         return delete().withVersion(version);
     }
 
+    public ByProjectKeyVariantsByIDImagesRequestBuilder images() {
+        return new ByProjectKeyVariantsByIDImagesRequestBuilder(apiHttpClient, projectKey, ID);
+    }
+
 }

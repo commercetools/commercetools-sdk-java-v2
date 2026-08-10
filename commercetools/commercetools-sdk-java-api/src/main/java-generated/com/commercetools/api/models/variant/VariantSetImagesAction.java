@@ -50,7 +50,7 @@ public interface VariantSetImagesAction extends VariantUpdateAction {
     public List<Image> getImages();
 
     /**
-     *  <p>If <code>true</code>, only the staged images are updated. If <code>false</code>, both the current and staged images are updated.</p>
+     *  <p>Whether only the staged images are updated. If <code>false</code>, both the current and staged images are updated.</p>
      * @return staged
      */
 
@@ -73,7 +73,7 @@ public interface VariantSetImagesAction extends VariantUpdateAction {
     public void setImages(final List<Image> images);
 
     /**
-     *  <p>If <code>true</code>, only the staged images are updated. If <code>false</code>, both the current and staged images are updated.</p>
+     *  <p>Whether only the staged images are updated. If <code>false</code>, both the current and staged images are updated.</p>
      * @param staged value to be set
      */
 

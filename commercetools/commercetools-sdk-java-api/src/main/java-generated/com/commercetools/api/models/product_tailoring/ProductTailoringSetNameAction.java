@@ -46,7 +46,7 @@ public interface ProductTailoringSetNameAction extends ProductTailoringUpdateAct
     public LocalizedString getName();
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>name</code> is updated. If <code>false</code>, both the current and staged <code>name</code> are updated.</p>
+     *  <p>Whether only the staged <code>name</code> is updated. If <code>false</code>, both the current and staged <code>name</code> are updated.</p>
      * @return staged
      */
 
@@ -61,7 +61,7 @@ public interface ProductTailoringSetNameAction extends ProductTailoringUpdateAct
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>name</code> is updated. If <code>false</code>, both the current and staged <code>name</code> are updated.</p>
+     *  <p>Whether only the staged <code>name</code> is updated. If <code>false</code>, both the current and staged <code>name</code> are updated.</p>
      * @param staged value to be set
      */
 

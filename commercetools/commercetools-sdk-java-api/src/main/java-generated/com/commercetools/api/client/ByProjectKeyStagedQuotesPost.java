@@ -21,6 +21,14 @@ import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Creates a StagedQuote in the Project.</p>
+ *  <ul>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> is returned in several cases, including the following:
+ *    <ul>
+ *     <li>The referenced Shipping Method is not active.</li>
+ *     <li>The referenced Shipping Method is scoped to a Store that differs from the Store referenced by the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Request</a>.</li>
+ *     <li>The referenced Shipping Method is scoped to a Store, but the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Request</a> does not belong to a Store.</li>
+ *    </ul></li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>

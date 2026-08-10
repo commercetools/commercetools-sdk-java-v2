@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Either <code>id</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> that exists.</p>
+ *  <p>Either <code>id</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> (<span>BETA</span>) that exists.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantTailoringDraftImpl implements ProductVariantTailoringDraft, ModelBase {
@@ -55,7 +55,7 @@ public class ProductVariantTailoringDraftImpl implements ProductVariantTailoring
     }
 
     /**
-     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to be tailored.</p>
+     *  <p>The <code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> (<span>BETA</span>) to be tailored.</p>
      */
 
     public Long getId() {
@@ -63,7 +63,7 @@ public class ProductVariantTailoringDraftImpl implements ProductVariantTailoring
     }
 
     /**
-     *  <p>The <code>sku</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> to be tailored.</p>
+     *  <p>The <code>sku</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> (<span>BETA</span>) to be tailored.</p>
      */
 
     public String getSku() {
@@ -87,10 +87,9 @@ public class ProductVariantTailoringDraftImpl implements ProductVariantTailoring
     }
 
     /**
-     *  <p>Attributes of the tailored Product Variant according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>. If provided, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>:</p>
+     *  <p>Attributes of the tailored Product Variant according to the respective <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinition" rel="nofollow">AttributeDefinition</a>. If provided, these Attributes are selectively merged into the <code>attributes</code> of the corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> (<span>BETA</span>):</p>
      *  <ul>
-     *   <li>If the ProductVariant contains an Attribute with the same <code>name</code>, its <code>value</code> is overwritten,</li>
-     *   <li>otherwise the Attribute and its value are added to the ProductVariant.</li>
+     *   <li>If the ProductVariant or Variant (<span>BETA</span>) contains an Attribute with the same <code>name</code>, its <code>value</code> is overwritten. Otherwise, the Attribute and its value are added to the ProductVariant or Variant (<span>BETA</span>).</li>
      *  </ul>
      */
 

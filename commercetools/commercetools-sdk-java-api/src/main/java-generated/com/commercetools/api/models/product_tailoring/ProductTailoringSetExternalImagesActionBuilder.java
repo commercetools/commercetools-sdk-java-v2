@@ -37,7 +37,7 @@ public class ProductTailoringSetExternalImagesActionBuilder
     private Boolean staged;
 
     /**
-     *  <p>The <code>id</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>id</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @param variantId value to be set
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class ProductTailoringSetExternalImagesActionBuilder
     }
 
     /**
-     *  <p>The <code>sku</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>sku</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -59,8 +59,8 @@ public class ProductTailoringSetExternalImagesActionBuilder
     }
 
     /**
-     *  <p>Images of the tailored ProductVariant.</p>
-     *  <p>Don't provide this field if you want to remove all images from the tailored Product Variant. Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant on the tailored ProductVariant.</p>
+     *  <p>Images of the tailored ProductVariant or Variant (<span>BETA</span>).</p>
+     *  <p>Don't provide this field if you want to remove all images from the tailored ProductVariant or Variant (<span>BETA</span>). Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant or Variant (<span>BETA</span>) on the tailored ProductVariant or Variant (<span>BETA</span>).</p>
      * @param images value to be set
      * @return Builder
      */
@@ -72,8 +72,8 @@ public class ProductTailoringSetExternalImagesActionBuilder
     }
 
     /**
-     *  <p>Images of the tailored ProductVariant.</p>
-     *  <p>Don't provide this field if you want to remove all images from the tailored Product Variant. Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant on the tailored ProductVariant.</p>
+     *  <p>Images of the tailored ProductVariant or Variant (<span>BETA</span>).</p>
+     *  <p>Don't provide this field if you want to remove all images from the tailored ProductVariant or Variant (<span>BETA</span>). Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant or Variant (<span>BETA</span>) on the tailored ProductVariant or Variant (<span>BETA</span>).</p>
      * @param images value to be set
      * @return Builder
      */
@@ -85,8 +85,8 @@ public class ProductTailoringSetExternalImagesActionBuilder
     }
 
     /**
-     *  <p>Images of the tailored ProductVariant.</p>
-     *  <p>Don't provide this field if you want to remove all images from the tailored Product Variant. Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant on the tailored ProductVariant.</p>
+     *  <p>Images of the tailored ProductVariant or Variant (<span>BETA</span>).</p>
+     *  <p>Don't provide this field if you want to remove all images from the tailored ProductVariant or Variant (<span>BETA</span>). Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant or Variant (<span>BETA</span>) on the tailored ProductVariant or Variant (<span>BETA</span>).</p>
      * @param images value to be set
      * @return Builder
      */
@@ -101,8 +101,8 @@ public class ProductTailoringSetExternalImagesActionBuilder
     }
 
     /**
-     *  <p>Images of the tailored ProductVariant.</p>
-     *  <p>Don't provide this field if you want to remove all images from the tailored Product Variant. Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant on the tailored ProductVariant.</p>
+     *  <p>Images of the tailored ProductVariant or Variant (<span>BETA</span>).</p>
+     *  <p>Don't provide this field if you want to remove all images from the tailored ProductVariant or Variant (<span>BETA</span>). Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant or Variant (<span>BETA</span>) on the tailored ProductVariant or Variant (<span>BETA</span>).</p>
      * @param builder function to build the images value
      * @return Builder
      */
@@ -117,8 +117,8 @@ public class ProductTailoringSetExternalImagesActionBuilder
     }
 
     /**
-     *  <p>Images of the tailored ProductVariant.</p>
-     *  <p>Don't provide this field if you want to remove all images from the tailored Product Variant. Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant on the tailored ProductVariant.</p>
+     *  <p>Images of the tailored ProductVariant or Variant (<span>BETA</span>).</p>
+     *  <p>Don't provide this field if you want to remove all images from the tailored ProductVariant or Variant (<span>BETA</span>). Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant or Variant (<span>BETA</span>) on the tailored ProductVariant or Variant (<span>BETA</span>).</p>
      * @param builder function to build the images value
      * @return Builder
      */
@@ -131,8 +131,8 @@ public class ProductTailoringSetExternalImagesActionBuilder
     }
 
     /**
-     *  <p>Images of the tailored ProductVariant.</p>
-     *  <p>Don't provide this field if you want to remove all images from the tailored Product Variant. Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant on the tailored ProductVariant.</p>
+     *  <p>Images of the tailored ProductVariant or Variant (<span>BETA</span>).</p>
+     *  <p>Don't provide this field if you want to remove all images from the tailored ProductVariant or Variant (<span>BETA</span>). Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant or Variant (<span>BETA</span>) on the tailored ProductVariant or Variant (<span>BETA</span>).</p>
      * @param builder function to build the images value
      * @return Builder
      */
@@ -143,8 +143,8 @@ public class ProductTailoringSetExternalImagesActionBuilder
     }
 
     /**
-     *  <p>Images of the tailored ProductVariant.</p>
-     *  <p>Don't provide this field if you want to remove all images from the tailored Product Variant. Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant on the tailored ProductVariant.</p>
+     *  <p>Images of the tailored ProductVariant or Variant (<span>BETA</span>).</p>
+     *  <p>Don't provide this field if you want to remove all images from the tailored ProductVariant or Variant (<span>BETA</span>). Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant or Variant (<span>BETA</span>) on the tailored ProductVariant or Variant (<span>BETA</span>).</p>
      * @param builder function to build the images value
      * @return Builder
      */
@@ -155,7 +155,7 @@ public class ProductTailoringSetExternalImagesActionBuilder
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> is updated.</p>
+     *  <p>Whether only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> are updated.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -166,7 +166,7 @@ public class ProductTailoringSetExternalImagesActionBuilder
     }
 
     /**
-     *  <p>The <code>id</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>id</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @return variantId
      */
 
@@ -176,7 +176,7 @@ public class ProductTailoringSetExternalImagesActionBuilder
     }
 
     /**
-     *  <p>The <code>sku</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>sku</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @return sku
      */
 
@@ -186,8 +186,8 @@ public class ProductTailoringSetExternalImagesActionBuilder
     }
 
     /**
-     *  <p>Images of the tailored ProductVariant.</p>
-     *  <p>Don't provide this field if you want to remove all images from the tailored Product Variant. Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant on the tailored ProductVariant.</p>
+     *  <p>Images of the tailored ProductVariant or Variant (<span>BETA</span>).</p>
+     *  <p>Don't provide this field if you want to remove all images from the tailored ProductVariant or Variant (<span>BETA</span>). Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant or Variant (<span>BETA</span>) on the tailored ProductVariant or Variant (<span>BETA</span>).</p>
      * @return images
      */
 
@@ -197,7 +197,7 @@ public class ProductTailoringSetExternalImagesActionBuilder
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> is updated.</p>
+     *  <p>Whether only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> are updated.</p>
      * @return staged
      */
 

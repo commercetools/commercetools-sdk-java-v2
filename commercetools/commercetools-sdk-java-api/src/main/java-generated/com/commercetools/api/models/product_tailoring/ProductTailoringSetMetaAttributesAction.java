@@ -62,7 +62,7 @@ public interface ProductTailoringSetMetaAttributesAction extends ProductTailorin
     public LocalizedString getMetaKeywords();
 
     /**
-     *  <p>If <code>true</code>, only the staged attributes are updated. If <code>false</code>, both the current and staged attributes are updated.</p>
+     *  <p>Whether only the staged attributes are updated. If <code>false</code>, both the current and staged attributes are updated.</p>
      * @return staged
      */
 
@@ -91,7 +91,7 @@ public interface ProductTailoringSetMetaAttributesAction extends ProductTailorin
     public void setMetaKeywords(final LocalizedString metaKeywords);
 
     /**
-     *  <p>If <code>true</code>, only the staged attributes are updated. If <code>false</code>, both the current and staged attributes are updated.</p>
+     *  <p>Whether only the staged attributes are updated. If <code>false</code>, both the current and staged attributes are updated.</p>
      * @param staged value to be set
      */
 

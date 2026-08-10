@@ -40,7 +40,7 @@ public interface VariantAddAssetAction extends VariantUpdateAction {
     String ADD_ASSET = "addAsset";
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>assets</code> are updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
+     *  <p>Whether only the staged <code>assets</code> are updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
      * @return staged
      */
 
@@ -65,7 +65,7 @@ public interface VariantAddAssetAction extends VariantUpdateAction {
     public Integer getPosition();
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>assets</code> are updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
+     *  <p>Whether only the staged <code>assets</code> are updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
      * @param staged value to be set
      */
 

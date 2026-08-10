@@ -335,7 +335,7 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
-     *  <p>If <code>true</code>, this message informs that only the staged ProductVariant has been removed by the update action. If <code>false</code>, both the current and staged ProductVariant have been removed.</p>
+     *  <p>Whether this message informs that only the staged ProductVariant has been removed by the update action. If <code>false</code>, both the current and staged ProductVariant have been removed.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -458,7 +458,7 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
-     *  <p>If <code>true</code>, this message informs that only the staged ProductVariant has been removed by the update action. If <code>false</code>, both the current and staged ProductVariant have been removed.</p>
+     *  <p>Whether this message informs that only the staged ProductVariant has been removed by the update action. If <code>false</code>, both the current and staged ProductVariant have been removed.</p>
      * @return staged
      */
 

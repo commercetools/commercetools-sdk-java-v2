@@ -2222,6 +2222,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for productTailoringKeySet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ProductTailoringKeySetMessageBuilder productTailoringKeySetBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringKeySetMessageBuilder.of();
+    }
+
+    /**
      * builder for productTailoringNameSet subtype
      * @return builder
      */

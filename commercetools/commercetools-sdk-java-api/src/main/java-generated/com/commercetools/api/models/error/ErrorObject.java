@@ -824,6 +824,14 @@ public interface ErrorObject {
     }
 
     /**
+     * builder for unauthorized subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.UnauthorizedErrorBuilder unauthorizedBuilder() {
+        return com.commercetools.api.models.error.UnauthorizedErrorBuilder.of();
+    }
+
+    /**
      * builder for validityLockConflict subtype
      * @return builder
      */

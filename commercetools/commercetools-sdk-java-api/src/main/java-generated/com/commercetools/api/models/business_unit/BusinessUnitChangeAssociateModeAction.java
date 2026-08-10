@@ -47,7 +47,7 @@ public interface BusinessUnitChangeAssociateModeAction extends BusinessUnitUpdat
     public BusinessUnitAssociateMode getAssociateMode();
 
     /**
-     *  <p>If set to <code>true</code> during a change to <code>associateMode="Explicit"</code>, all inherited Associates will be converted to explicit Associates.</p>
+     *  <p>Whether all inherited Associates are converted to explicit Associates during a change to <code>associateMode="Explicit"</code>.</p>
      * @return makeInheritedAssociatesExplicit
      */
     @NotNull
@@ -62,7 +62,7 @@ public interface BusinessUnitChangeAssociateModeAction extends BusinessUnitUpdat
     public void setAssociateMode(final BusinessUnitAssociateMode associateMode);
 
     /**
-     *  <p>If set to <code>true</code> during a change to <code>associateMode="Explicit"</code>, all inherited Associates will be converted to explicit Associates.</p>
+     *  <p>Whether all inherited Associates are converted to explicit Associates during a change to <code>associateMode="Explicit"</code>.</p>
      * @param makeInheritedAssociatesExplicit value to be set
      */
 

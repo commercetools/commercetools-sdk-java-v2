@@ -36,7 +36,7 @@ public class ProductTailoringAddExternalImageActionBuilder implements Builder<Pr
     private Boolean staged;
 
     /**
-     *  <p>The <code>id</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>id</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @param variantId value to be set
      * @return Builder
      */
@@ -47,7 +47,7 @@ public class ProductTailoringAddExternalImageActionBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>The <code>sku</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>sku</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -93,7 +93,7 @@ public class ProductTailoringAddExternalImageActionBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> is updated.</p>
+     *  <p>Whether only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> are updated.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -104,7 +104,7 @@ public class ProductTailoringAddExternalImageActionBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>The <code>id</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>id</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @return variantId
      */
 
@@ -114,7 +114,7 @@ public class ProductTailoringAddExternalImageActionBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>The <code>sku</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>sku</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @return sku
      */
 
@@ -133,7 +133,7 @@ public class ProductTailoringAddExternalImageActionBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> is updated.</p>
+     *  <p>Whether only the staged <code>images</code> is updated. If <code>false</code>, both the current and staged <code>images</code> are updated.</p>
      * @return staged
      */
 

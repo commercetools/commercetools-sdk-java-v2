@@ -154,7 +154,7 @@ public class PaymentMethodDraftImpl implements PaymentMethodDraft, ModelBase {
     }
 
     /**
-     *  <p>Set to <code>true</code> if the PaymentMethod should be the default.</p>
+     *  <p>Whether the PaymentMethod should be the default.</p>
      *  <p>The default applies per Customer, Business Unit, or the combination of both (Associate).</p>
      */
 

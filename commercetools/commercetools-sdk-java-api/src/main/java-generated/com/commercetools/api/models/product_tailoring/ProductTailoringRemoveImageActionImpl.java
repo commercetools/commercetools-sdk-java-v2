@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Either <code>variantId</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> that exists.</p>
+ *  <p>Either <code>variantId</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> (<span>BETA</span>) that exists.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTailoringRemoveImageActionImpl implements ProductTailoringRemoveImageAction, ModelBase {
@@ -63,7 +63,7 @@ public class ProductTailoringRemoveImageActionImpl implements ProductTailoringRe
     }
 
     /**
-     *  <p>The <code>id</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>id</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      */
 
     public Long getVariantId() {
@@ -71,7 +71,7 @@ public class ProductTailoringRemoveImageActionImpl implements ProductTailoringRe
     }
 
     /**
-     *  <p>The <code>sku</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>sku</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      */
 
     public String getSku() {
@@ -87,7 +87,7 @@ public class ProductTailoringRemoveImageActionImpl implements ProductTailoringRe
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged image is removed. If <code>false</code>, both the current and staged image is removed.</p>
+     *  <p>Whether only the staged image is removed. If <code>false</code>, both the current and staged image is removed.</p>
      */
 
     public Boolean getStaged() {

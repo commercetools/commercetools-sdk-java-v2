@@ -47,7 +47,7 @@ public class ProductSetProductPriceCustomFieldActionBuilder
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged Embedded Price Custom Field is updated. If <code>false</code>, both the current and staged Embedded Price Custom Field are updated.</p>
+     *  <p>Whether only the staged Embedded Price Custom Field is updated. If <code>false</code>, both the current and staged Embedded Price Custom Field are updated.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -89,7 +89,7 @@ public class ProductSetProductPriceCustomFieldActionBuilder
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged Embedded Price Custom Field is updated. If <code>false</code>, both the current and staged Embedded Price Custom Field are updated.</p>
+     *  <p>Whether only the staged Embedded Price Custom Field is updated. If <code>false</code>, both the current and staged Embedded Price Custom Field are updated.</p>
      * @return staged
      */
 

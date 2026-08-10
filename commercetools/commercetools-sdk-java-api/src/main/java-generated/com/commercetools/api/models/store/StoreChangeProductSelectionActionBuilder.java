@@ -69,7 +69,7 @@ public class StoreChangeProductSelectionActionBuilder implements Builder<StoreCh
     }
 
     /**
-     *  <p>Set to <code>true</code> if all Products assigned to the Product Selection should become part of the Store's assortment.</p>
+     *  <p>Whether all Products assigned to the Product Selection should become part of the Store's assortment.</p>
      * @param active value to be set
      * @return Builder
      */
@@ -89,7 +89,7 @@ public class StoreChangeProductSelectionActionBuilder implements Builder<StoreCh
     }
 
     /**
-     *  <p>Set to <code>true</code> if all Products assigned to the Product Selection should become part of the Store's assortment.</p>
+     *  <p>Whether all Products assigned to the Product Selection should become part of the Store's assortment.</p>
      * @return active
      */
 

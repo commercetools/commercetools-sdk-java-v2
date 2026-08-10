@@ -38,7 +38,7 @@ public interface VariantSetAssetKeyAction extends VariantUpdateAction {
     String SET_ASSET_KEY = "setAssetKey";
 
     /**
-     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
+     *  <p>Whether only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
      * @return staged
      */
 
@@ -62,7 +62,7 @@ public interface VariantSetAssetKeyAction extends VariantUpdateAction {
     public String getAssetKey();
 
     /**
-     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
+     *  <p>Whether only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
      * @param staged value to be set
      */
 

@@ -15,7 +15,7 @@ import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Contained in responses to an <span>Upload Product image</span> or an <span>Upload Product Tailoring image</span> request with response status code <code>202 Accepted</code>. Indicates that the API is still creating the remaining sizes of the uploaded image. They will be available on the Content Delivery Network (CDN) soon.</p>
+ *  <p>Contained in responses to an <span>Upload Product image</span>, <span>Upload Variant image</span> (BETA), or an <span>Upload Product Tailoring image</span> request with response status code <code>202 Accepted</code>. Indicates that the API is still creating the remaining sizes of the uploaded image. They will be available on the Content Delivery Network (CDN) soon.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

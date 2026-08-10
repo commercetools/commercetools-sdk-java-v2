@@ -203,7 +203,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>Set to <code>true</code> if you want to <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEditPreviewSuccess" rel="nofollow">preview</a> the edited Order first without persisting it (dry run). A dry run allows checking for potential <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEditPreviewFailure" rel="nofollow">errors</a> when trying to apply the <code>stagedActions</code>.</p>
+     *  <p>Whether to <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEditPreviewSuccess" rel="nofollow">preview</a> the edited Order first without persisting it (dry run). A dry run allows checking for potential <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEditPreviewFailure" rel="nofollow">errors</a> when trying to apply the <code>stagedActions</code>.</p>
      *  <p>Order <span>API Extensions</span>, if any, are also called in dry runs.</p>
      * @param dryRun value to be set
      * @return Builder
@@ -264,7 +264,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>Set to <code>true</code> if you want to <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEditPreviewSuccess" rel="nofollow">preview</a> the edited Order first without persisting it (dry run). A dry run allows checking for potential <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEditPreviewFailure" rel="nofollow">errors</a> when trying to apply the <code>stagedActions</code>.</p>
+     *  <p>Whether to <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEditPreviewSuccess" rel="nofollow">preview</a> the edited Order first without persisting it (dry run). A dry run allows checking for potential <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEditPreviewFailure" rel="nofollow">errors</a> when trying to apply the <code>stagedActions</code>.</p>
      *  <p>Order <span>API Extensions</span>, if any, are also called in dry runs.</p>
      * @return dryRun
      */

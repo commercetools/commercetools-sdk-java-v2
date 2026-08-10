@@ -38,7 +38,7 @@ public class ProductTailoringSetAttributeActionBuilder implements Builder<Produc
     private Boolean staged;
 
     /**
-     *  <p>The <code>id</code> of the ProductVariant to update. Required if <code>sku</code> is absent.</p>
+     *  <p>The <code>id</code> of the ProductVariant or Variant (<span>BETA</span>) to update. Required if <code>sku</code> is absent.</p>
      * @param variantId value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class ProductTailoringSetAttributeActionBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>The <code>sku</code> of the ProductVariant to update. Required if <code>variantId</code> is absent.</p>
+     *  <p>The <code>sku</code> of the ProductVariant or Variant (<span>BETA</span>) to update. Required if <code>variantId</code> is absent.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -91,7 +91,7 @@ public class ProductTailoringSetAttributeActionBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged Attribute is set. If <code>false</code>, both current and staged Attribute is set.</p>
+     *  <p>Whether only the staged Attribute is set. If <code>false</code>, both current and staged Attribute is set.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -102,7 +102,7 @@ public class ProductTailoringSetAttributeActionBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>The <code>id</code> of the ProductVariant to update. Required if <code>sku</code> is absent.</p>
+     *  <p>The <code>id</code> of the ProductVariant or Variant (<span>BETA</span>) to update. Required if <code>sku</code> is absent.</p>
      * @return variantId
      */
 
@@ -112,7 +112,7 @@ public class ProductTailoringSetAttributeActionBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>The <code>sku</code> of the ProductVariant to update. Required if <code>variantId</code> is absent.</p>
+     *  <p>The <code>sku</code> of the ProductVariant or Variant (<span>BETA</span>) to update. Required if <code>variantId</code> is absent.</p>
      * @return sku
      */
 
@@ -150,7 +150,7 @@ public class ProductTailoringSetAttributeActionBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged Attribute is set. If <code>false</code>, both current and staged Attribute is set.</p>
+     *  <p>Whether only the staged Attribute is set. If <code>false</code>, both current and staged Attribute is set.</p>
      * @return staged
      */
 

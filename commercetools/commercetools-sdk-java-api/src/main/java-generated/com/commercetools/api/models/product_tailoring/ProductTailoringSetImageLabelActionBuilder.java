@@ -38,7 +38,7 @@ public class ProductTailoringSetImageLabelActionBuilder implements Builder<Produ
     private Boolean staged;
 
     /**
-     *  <p>The <code>sku</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>sku</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class ProductTailoringSetImageLabelActionBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>The <code>id</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>id</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @param variantId value to be set
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class ProductTailoringSetImageLabelActionBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged image is updated. If <code>false</code>, both the current and staged image is updated.</p>
+     *  <p>Whether only the staged image is updated. If <code>false</code>, both the current and staged image is updated.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -93,7 +93,7 @@ public class ProductTailoringSetImageLabelActionBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>The <code>sku</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>sku</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @return sku
      */
 
@@ -103,7 +103,7 @@ public class ProductTailoringSetImageLabelActionBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>The <code>id</code> of the tailored ProductVariant to update.</p>
+     *  <p>The <code>id</code> of the tailored ProductVariant or Variant (<span>BETA</span>) to update.</p>
      * @return variantId
      */
 
@@ -132,7 +132,7 @@ public class ProductTailoringSetImageLabelActionBuilder implements Builder<Produ
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged image is updated. If <code>false</code>, both the current and staged image is updated.</p>
+     *  <p>Whether only the staged image is updated. If <code>false</code>, both the current and staged image is updated.</p>
      * @return staged
      */
 

@@ -52,7 +52,7 @@ public interface ProductRemoveVariantAction extends ProductUpdateAction {
     public String getSku();
 
     /**
-     *  <p>If <code>true</code>, only the staged ProductVariant is removed. If <code>false</code>, both the current and staged ProductVariant is removed.</p>
+     *  <p>Whether only the staged ProductVariant is removed. If <code>false</code>, both the current and staged ProductVariant is removed.</p>
      * @return staged
      */
 
@@ -74,7 +74,7 @@ public interface ProductRemoveVariantAction extends ProductUpdateAction {
     public void setSku(final String sku);
 
     /**
-     *  <p>If <code>true</code>, only the staged ProductVariant is removed. If <code>false</code>, both the current and staged ProductVariant is removed.</p>
+     *  <p>Whether only the staged ProductVariant is removed. If <code>false</code>, both the current and staged ProductVariant is removed.</p>
      * @param staged value to be set
      */
 

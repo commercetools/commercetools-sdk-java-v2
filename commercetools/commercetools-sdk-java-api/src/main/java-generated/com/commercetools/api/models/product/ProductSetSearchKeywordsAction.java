@@ -48,7 +48,7 @@ public interface ProductSetSearchKeywordsAction extends ProductUpdateAction {
     public SearchKeywords getSearchKeywords();
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>searchKeywords</code> is updated. If <code>false</code>, both the current and staged <code>searchKeywords</code> are updated.</p>
+     *  <p>Whether only the staged <code>searchKeywords</code> is updated. If <code>false</code>, both the current and staged <code>searchKeywords</code> are updated.</p>
      * @return staged
      */
 
@@ -63,7 +63,7 @@ public interface ProductSetSearchKeywordsAction extends ProductUpdateAction {
     public void setSearchKeywords(final SearchKeywords searchKeywords);
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>searchKeywords</code> is updated. If <code>false</code>, both the current and staged <code>searchKeywords</code> are updated.</p>
+     *  <p>Whether only the staged <code>searchKeywords</code> is updated. If <code>false</code>, both the current and staged <code>searchKeywords</code> are updated.</p>
      * @param staged value to be set
      */
 

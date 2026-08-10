@@ -65,7 +65,7 @@ public interface CustomerEmailTokenCreatedMessagePayload extends MessagePayload 
     public String getValue();
 
     /**
-     *  <p>If <code>true</code>, all email tokens issued previously for the Customer are invalidated.</p>
+     *  <p>Whether all email tokens issued previously for the Customer are invalidated.</p>
      * @return invalidateOlderTokens
      */
     @NotNull
@@ -94,7 +94,7 @@ public interface CustomerEmailTokenCreatedMessagePayload extends MessagePayload 
     public void setValue(final String value);
 
     /**
-     *  <p>If <code>true</code>, all email tokens issued previously for the Customer are invalidated.</p>
+     *  <p>Whether all email tokens issued previously for the Customer are invalidated.</p>
      * @param invalidateOlderTokens value to be set
      */
 

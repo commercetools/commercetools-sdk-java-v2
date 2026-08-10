@@ -98,6 +98,19 @@ public class DiscountCodeQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, DiscountCodeQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<DiscountCodeQueryBuilderDsl> stores(
+            Function<com.commercetools.api.predicates.query.store.StoreKeyReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.store.StoreKeyReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("stores"))
+                .inner(fn.apply(com.commercetools.api.predicates.query.store.StoreKeyReferenceQueryBuilderDsl.of())),
+            DiscountCodeQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<DiscountCodeQueryBuilderDsl> stores() {
+        return new CollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("stores")),
+            p -> new CombinationQueryPredicate<>(p, DiscountCodeQueryBuilderDsl::of));
+    }
+
     public StringComparisonPredicateBuilder<DiscountCodeQueryBuilderDsl> cartPredicate() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("cartPredicate")),

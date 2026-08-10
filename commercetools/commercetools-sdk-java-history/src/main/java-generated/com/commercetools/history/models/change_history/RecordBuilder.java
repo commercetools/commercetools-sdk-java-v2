@@ -378,7 +378,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p><code>true</code> if no change was detected.</p>
+     *  <p>Whether no change was detected.</p>
      *  <p>The version number of the resource can be increased even without any change in the resource.</p>
      * @param withoutChanges value to be set
      * @return Builder
@@ -492,7 +492,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p><code>true</code> if no change was detected.</p>
+     *  <p>Whether no change was detected.</p>
      *  <p>The version number of the resource can be increased even without any change in the resource.</p>
      * @return withoutChanges
      */

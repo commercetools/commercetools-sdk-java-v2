@@ -93,6 +93,14 @@ public interface VariantUpdateAction {
     }
 
     /**
+     * builder for moveImageToPosition subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.variant.VariantMoveImageToPositionActionBuilder moveImageToPositionBuilder() {
+        return com.commercetools.api.models.variant.VariantMoveImageToPositionActionBuilder.of();
+    }
+
+    /**
      * builder for publish subtype
      * @return builder
      */
@@ -194,6 +202,14 @@ public interface VariantUpdateAction {
      */
     public static com.commercetools.api.models.variant.VariantSetAttributesActionBuilder setAttributesBuilder() {
         return com.commercetools.api.models.variant.VariantSetAttributesActionBuilder.of();
+    }
+
+    /**
+     * builder for setImageLabel subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.variant.VariantSetImageLabelActionBuilder setImageLabelBuilder() {
+        return com.commercetools.api.models.variant.VariantSetImageLabelActionBuilder.of();
     }
 
     /**

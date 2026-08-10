@@ -62,7 +62,7 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
     }
 
     /**
-     *  <p><code>true</code> if the change was made using the Merchant Center.</p>
+     *  <p>Whether the change was made using the Merchant Center.</p>
      */
 
     public Boolean getIsPlatformClient() {

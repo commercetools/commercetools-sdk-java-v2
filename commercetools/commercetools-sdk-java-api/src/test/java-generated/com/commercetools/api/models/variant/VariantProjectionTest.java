@@ -37,6 +37,12 @@ public class VariantProjectionTest {
                 new Object[] { "description",
                         VariantProjection.builder()
                                 .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "categories",
+                        VariantProjection.builder()
+                                .categories(Collections.singletonList(
+                                    new com.commercetools.api.models.category.CategoryReferenceImpl())) },
+                new Object[] { "categoryOrderHints", VariantProjection.builder()
+                        .categoryOrderHints(new com.commercetools.api.models.product.CategoryOrderHintsImpl()) },
                 new Object[] { "key", VariantProjection.builder().key("key") },
                 new Object[] { "sku", VariantProjection.builder().sku("sku") },
                 new Object[] { "images", VariantProjection.builder()
@@ -115,6 +121,24 @@ public class VariantProjectionTest {
         value.setDescription(new com.commercetools.api.models.common.LocalizedStringImpl());
         Assertions.assertThat(value.getDescription())
                 .isEqualTo(new com.commercetools.api.models.common.LocalizedStringImpl());
+    }
+
+    @Test
+    public void categories() {
+        VariantProjection value = VariantProjection.of();
+        value.setCategories(
+            Collections.singletonList(new com.commercetools.api.models.category.CategoryReferenceImpl()));
+        Assertions.assertThat(value.getCategories())
+                .isEqualTo(
+                    Collections.singletonList(new com.commercetools.api.models.category.CategoryReferenceImpl()));
+    }
+
+    @Test
+    public void categoryOrderHints() {
+        VariantProjection value = VariantProjection.of();
+        value.setCategoryOrderHints(new com.commercetools.api.models.product.CategoryOrderHintsImpl());
+        Assertions.assertThat(value.getCategoryOrderHints())
+                .isEqualTo(new com.commercetools.api.models.product.CategoryOrderHintsImpl());
     }
 
     @Test

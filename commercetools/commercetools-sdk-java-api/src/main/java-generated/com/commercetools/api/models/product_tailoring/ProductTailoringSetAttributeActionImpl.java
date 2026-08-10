@@ -66,7 +66,7 @@ public class ProductTailoringSetAttributeActionImpl implements ProductTailoringS
     }
 
     /**
-     *  <p>The <code>id</code> of the ProductVariant to update. Required if <code>sku</code> is absent.</p>
+     *  <p>The <code>id</code> of the ProductVariant or Variant (<span>BETA</span>) to update. Required if <code>sku</code> is absent.</p>
      */
 
     public Long getVariantId() {
@@ -74,7 +74,7 @@ public class ProductTailoringSetAttributeActionImpl implements ProductTailoringS
     }
 
     /**
-     *  <p>The <code>sku</code> of the ProductVariant to update. Required if <code>variantId</code> is absent.</p>
+     *  <p>The <code>sku</code> of the ProductVariant or Variant (<span>BETA</span>) to update. Required if <code>variantId</code> is absent.</p>
      */
 
     public String getSku() {
@@ -107,7 +107,7 @@ public class ProductTailoringSetAttributeActionImpl implements ProductTailoringS
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged Attribute is set. If <code>false</code>, both current and staged Attribute is set.</p>
+     *  <p>Whether only the staged Attribute is set. If <code>false</code>, both current and staged Attribute is set.</p>
      */
 
     public Boolean getStaged() {

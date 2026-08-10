@@ -67,7 +67,7 @@ public class ProductSelectionSetVariantExclusionActionImpl
     }
 
     /**
-     *  <p>Determines which Variants of the previously excluded Product are to be included in the Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. Leave it empty to unset an existing Variant Exclusion.</p>
+     *  <p>Determines which Variants of the previously excluded Product are to be excluded from the Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. Leave it empty to unset an existing Variant Exclusion.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion() {

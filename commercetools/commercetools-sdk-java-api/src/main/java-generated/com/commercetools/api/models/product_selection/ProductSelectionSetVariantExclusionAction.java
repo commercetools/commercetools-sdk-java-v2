@@ -50,7 +50,7 @@ public interface ProductSelectionSetVariantExclusionAction extends ProductSelect
     public ProductResourceIdentifier getProduct();
 
     /**
-     *  <p>Determines which Variants of the previously excluded Product are to be included in the Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. Leave it empty to unset an existing Variant Exclusion.</p>
+     *  <p>Determines which Variants of the previously excluded Product are to be excluded from the Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. Leave it empty to unset an existing Variant Exclusion.</p>
      * @return variantExclusion
      */
     @Valid
@@ -65,7 +65,7 @@ public interface ProductSelectionSetVariantExclusionAction extends ProductSelect
     public void setProduct(final ProductResourceIdentifier product);
 
     /**
-     *  <p>Determines which Variants of the previously excluded Product are to be included in the Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. Leave it empty to unset an existing Variant Exclusion.</p>
+     *  <p>Determines which Variants of the previously excluded Product are to be excluded from the Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>. Leave it empty to unset an existing Variant Exclusion.</p>
      * @param variantExclusion value to be set
      */
 

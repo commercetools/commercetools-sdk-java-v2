@@ -39,7 +39,7 @@ public interface ProductSearchProjectionParams {
     public List<String> getExpand();
 
     /**
-     *  <p>Set to <code>true</code> to retrieve the <span>staged</span> Product Projection</p>
+     *  <p>Whether to retrieve the <span>staged</span> Product Projection</p>
      * @return staged
      */
 
@@ -120,7 +120,7 @@ public interface ProductSearchProjectionParams {
     public void setExpand(final List<String> expand);
 
     /**
-     *  <p>Set to <code>true</code> to retrieve the <span>staged</span> Product Projection</p>
+     *  <p>Whether to retrieve the <span>staged</span> Product Projection</p>
      * @param staged value to be set
      */
 

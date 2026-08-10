@@ -87,10 +87,7 @@ public interface CustomerSignin {
     public String getAnonymousId();
 
     /**
-     *  <ul>
-     *   <li>If <code>true</code>, the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart will be updated.</li>
-     *   <li>If <code>false</code>, only the prices, discounts, and tax rates will be updated.</li>
-     *  </ul>
+     *  <p>Whether the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart will be updated. If <code>false</code>, only the prices, discounts, and tax rates will be updated.</p>
      * @return updateProductData
      */
 
@@ -144,10 +141,7 @@ public interface CustomerSignin {
     public void setAnonymousId(final String anonymousId);
 
     /**
-     *  <ul>
-     *   <li>If <code>true</code>, the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart will be updated.</li>
-     *   <li>If <code>false</code>, only the prices, discounts, and tax rates will be updated.</li>
-     *  </ul>
+     *  <p>Whether the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> Product data (<code>name</code>, <code>variant</code>, and <code>productType</code>) of the returned Cart will be updated. If <code>false</code>, only the prices, discounts, and tax rates will be updated.</p>
      * @param updateProductData value to be set
      */
 

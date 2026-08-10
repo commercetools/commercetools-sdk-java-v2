@@ -145,7 +145,7 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged ProductVariant is updated. If <code>false</code>, both the current and staged ProductVariant are updated.</p>
+     *  <p>Whether only the staged ProductVariant is updated. If <code>false</code>, both the current and staged ProductVariant are updated.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -185,7 +185,7 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged ProductVariant is updated. If <code>false</code>, both the current and staged ProductVariant are updated.</p>
+     *  <p>Whether only the staged ProductVariant is updated. If <code>false</code>, both the current and staged ProductVariant are updated.</p>
      * @return staged
      */
 

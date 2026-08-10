@@ -69,7 +69,7 @@ public class CustomerEmailTokenCreatedMessagePayloadBuilder
     }
 
     /**
-     *  <p>If <code>true</code>, all email tokens issued previously for the Customer are invalidated.</p>
+     *  <p>Whether all email tokens issued previously for the Customer are invalidated.</p>
      * @param invalidateOlderTokens value to be set
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class CustomerEmailTokenCreatedMessagePayloadBuilder
     }
 
     /**
-     *  <p>If <code>true</code>, all email tokens issued previously for the Customer are invalidated.</p>
+     *  <p>Whether all email tokens issued previously for the Customer are invalidated.</p>
      * @return invalidateOlderTokens
      */
 

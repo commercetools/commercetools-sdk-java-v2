@@ -41,6 +41,10 @@ public class DiscountCodeTest {
                         DiscountCode.builder()
                                 .cartDiscounts(Collections.singletonList(
                                     new com.commercetools.api.models.cart_discount.CartDiscountReferenceImpl())) },
+                new Object[] { "stores",
+                        DiscountCode.builder()
+                                .stores(Collections.singletonList(
+                                    new com.commercetools.api.models.store.StoreKeyReferenceImpl())) },
                 new Object[] { "cartPredicate", DiscountCode.builder().cartPredicate("cartPredicate") },
                 new Object[] { "isActive", DiscountCode.builder().isActive(true) },
                 new Object[] { "references",
@@ -139,6 +143,14 @@ public class DiscountCodeTest {
         Assertions.assertThat(value.getCartDiscounts())
                 .isEqualTo(Collections
                         .singletonList(new com.commercetools.api.models.cart_discount.CartDiscountReferenceImpl()));
+    }
+
+    @Test
+    public void stores() {
+        DiscountCode value = DiscountCode.of();
+        value.setStores(Collections.singletonList(new com.commercetools.api.models.store.StoreKeyReferenceImpl()));
+        Assertions.assertThat(value.getStores())
+                .isEqualTo(Collections.singletonList(new com.commercetools.api.models.store.StoreKeyReferenceImpl()));
     }
 
     @Test

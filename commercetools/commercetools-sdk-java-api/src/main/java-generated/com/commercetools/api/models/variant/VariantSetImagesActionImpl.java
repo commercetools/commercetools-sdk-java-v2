@@ -65,7 +65,7 @@ public class VariantSetImagesActionImpl implements VariantSetImagesAction, Model
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged images are updated. If <code>false</code>, both the current and staged images are updated.</p>
+     *  <p>Whether only the staged images are updated. If <code>false</code>, both the current and staged images are updated.</p>
      */
 
     public Boolean getStaged() {

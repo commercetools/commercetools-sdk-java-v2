@@ -65,7 +65,7 @@ public class ProductSetMetaTitleActionImpl implements ProductSetMetaTitleAction,
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged <code>metaTitle</code> is updated. If <code>false</code>, both the current and staged <code>metaTitle</code> are updated.</p>
+     *  <p>Whether only the staged <code>metaTitle</code> is updated. If <code>false</code>, both the current and staged <code>metaTitle</code> are updated.</p>
      */
 
     public Boolean getStaged() {

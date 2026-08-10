@@ -35,7 +35,7 @@ as to ensure the customer do have all the latest features
 offered by the SDK including security and vulnerability fixes.
 
 ### Documentation
-Ensure to read the [documentation](https://docs.commercetools.com/sdk/jvm-sdk#java-sdk-v2) carefully in order
+Ensure to read the [documentation](https://docs.commercetools.com/dev-tooling/jvm-sdk) carefully in order
 to correctly and properly implement and/or integrate the SDK.
 
 ### Issues
@@ -145,7 +145,7 @@ ApiRootBuilder.of().withInternalLoggerMiddleware(InternalLoggerMiddleware.of(Api
 ```
 
 #### ConcurrentModificationMiddleware
-In case of concurrent modification errors this middleware will update the request with the actual resource version and retry the request itself. Please see also the [documentation](https://docs.commercetools.com/api/errors#409-conflict-1)
+In case of concurrent modification errors this middleware will update the request with the actual resource version and retry the request itself. Please see also the [documentation](https://docs.commercetools.com/api/errors#concurrentmodification)
 
 The example shows the configuration to retry 3 times upon concurrent modification
 ```java
@@ -242,7 +242,8 @@ To avoid the escaping issues while building a predicate string we advice to use 
 
 The ApiHttpResponse is the abstraction atop the HTTP transfer and doesn't know about the internal semantics of the HTTP body. The ApiHttpResponse::getMessage() method in this case returns the HTTP header message like OK, CONTINUE, BAD REQUEST. In case of an error the ErrorMiddleware will throw an exception. The HTTP body will be added as exception message string.
 
-As the thrown exceptions are derived from the ApiHttpException class which has a getBodyAs helper method which is capable of deserializing the body string to the given specified class. For the Composable Commerce API this would be the ErrorResponse class. In case of a BadRequestException or ConcurrentModification the error response will be automatically deserialized.
+As the thrown exceptions are derived from the ApiHttpException class which has a getBodyAs helper method which is capable of deserializing the body string to the given specified class. For commercetools APIs, this would be the ErrorResponse class. In case of a BadRequestException or ConcurrentModification the error response will be automatically deserialized.
+
 ```java
 apiRoot.products().post(draft).execute()
         .exceptionally(throwable -> {

@@ -3,10 +3,10 @@ dependencies {
     implementation "com.datadoghq:java-dogstatsd-client:4.4.5"
     implementation "com.datadoghq:datadog-api-client:2.56.0"
     constraints {
-        implementation("com.fasterxml.jackson.core:jackson-core:2.21.5") {
+        implementation("com.fasterxml.jackson.core:jackson-core:2.22.1") {
             because("security update")
         }
-        implementation("com.fasterxml.jackson.core:jackson-databind:2.21.5") {
+        implementation("com.fasterxml.jackson.core:jackson-databind:2.22.1") {
             because("security update")
         }
     }

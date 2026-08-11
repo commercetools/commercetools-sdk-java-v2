@@ -30,11 +30,11 @@ artifacts {
 dependencies {
     api project(':commercetools:commercetools-sdk-java-api')
     testImplementation project(':commercetools:commercetools-http-client')
-    implementation google.findbugs
-    implementation javax.validation
-    api graphql.java
-    api jackson_core.databind
-    api jackson_core.core
+    implementation 'com.google.code.findbugs:jsr305:3.0.2'
+    implementation 'jakarta.validation:jakarta.validation-api:3.1.1'
+    api 'com.graphql-java:graphql-java:19.11'
+    api 'tools.jackson.core:jackson-databind:3.1.5'
+    api 'tools.jackson.core:jackson-core:3.2.1'
     //api jackson_core.datatype
     api 'com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core:8.6.0'
     constraints {

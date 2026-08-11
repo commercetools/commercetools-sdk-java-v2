@@ -306,19 +306,6 @@
             ]
         },
         {
-            "moduleName": "com.netflix.graphql.dgs:graphql-dgs-platform",
-            "moduleVersion": "10.0.4",
-            "moduleUrls": [
-                "https://github.com/Netflix/dgs-framework"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
             "moduleName": "com.netflix.graphql.dgs:graphql-dgs-platform-dependencies",
             "moduleVersion": "10.0.4",
             "moduleUrls": [
@@ -487,7 +474,7 @@
         },
         {
             "moduleName": "commons-io:commons-io",
-            "moduleVersion": "2.16.1",
+            "moduleVersion": "2.22.0",
             "moduleUrls": [
                 "https://commons.apache.org/proper/commons-io/"
             ],

@@ -1,5 +1,5 @@
 dependencies {
     implementation(project(":commercetools:commercetools-sdk-java-api"))
     implementation(project(":commercetools:commercetools-sdk-java-importapi"))
-    implementation javax.validation
+    implementation 'jakarta.validation:jakarta.validation-api:3.1.1'
 }

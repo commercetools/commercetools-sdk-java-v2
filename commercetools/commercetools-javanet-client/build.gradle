@@ -2,7 +2,10 @@
 dependencies {
     api project(":rmf:rmf-java-base")
 
-    api commons.io version commons.io_version
+    api 'commons-io:commons-io:2.22.0' version {
+        strictly '[2.8.0,)'
+        prefer '2.22.0'
+    }
 
 }
 

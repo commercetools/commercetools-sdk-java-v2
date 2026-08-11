@@ -70,11 +70,11 @@ tasks.register('integrationTest', Test) {
 
     testLogging {
         events "failed"
-        exceptionFormat "full"
+        exceptionFormat = "full"
 
         info {
             events "failed"
-            exceptionFormat "full"
+            exceptionFormat = "full"
         }
     }
 }

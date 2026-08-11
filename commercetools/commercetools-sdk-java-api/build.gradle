@@ -2,19 +2,23 @@
 dependencies {
     api project(':rmf:rmf-java-base')
     api project(':commercetools:commercetools-money')
-    api jackson_core.annotations
-    api jackson_core.databind
-    implementation google.findbugs
-    implementation javax.validation
-    api slf4j.api
-    api commons.lang3
+    api 'com.fasterxml.jackson.core:jackson-annotations:2.22'
+    api 'tools.jackson.core:jackson-databind:3.1.5'
+    implementation 'com.google.code.findbugs:jsr305:3.0.2'
+    implementation 'jakarta.validation:jakarta.validation-api:3.1.1'
+    api 'org.apache.commons:commons-lang3:3.20.0'
+    api 'org.slf4j:slf4j-api:2.0.18'
+    api 'org.apache.commons:commons-lang3:3.20.0'
 
     testImplementation project(':commercetools:commercetools-http-client')
     testImplementation project(':commercetools:commercetools-okhttp-client4')
     testImplementation project(':commercetools:commercetools-apachehttp-client')
-    testImplementation commons.io version commons.io_version
+    testImplementation 'commons-io:commons-io:2.22.0' version {
+        strictly '[2.8.0,)'
+        prefer '2.22.0'
+    }
 
-    testImplementation google.gson
+    testImplementation 'com.google.code.gson:gson:2.14.0'
 }
 
 sourceSets.main.java.srcDirs += "src/main/java-generated"
@@ -62,9 +66,9 @@ projectDir.toPath().resolve("src/main/java-generated/com/commercetools/api/model
                 artifact modelTask
                 artifact javadocsTask
                 artifact modelSourcesTask
-                groupId group
-                artifactId project.name + "-models_$dirname"
-                version version
+                groupId = group
+                artifactId = project.name + "-models_$dirname"
+                version = version
 
                 pom {
                     name = project.name + "-models_$dirname"
@@ -76,7 +80,7 @@ projectDir.toPath().resolve("src/main/java-generated/com/commercetools/api/model
                             email = "jens.schulze@commercetools.com"
                         }
                     }
-                    url = scmHttpsUrl
+                    url = rootProject.ext.scmHttpsUrl
                     licenses {
                         license {
                             name = "The Apache Software License, Version 2.0"
@@ -85,9 +89,9 @@ projectDir.toPath().resolve("src/main/java-generated/com/commercetools/api/model
                         }
                     }
                     scm {
-                        connection = "scm:git:$scmHttpsUrl"
-                        developerConnection = "scm:git:$scmSshUrl"
-                        url = "$scmProjectUrl"
+                        connection = "scm:git:${rootProject.ext.scmHttpsUrl}"
+                        developerConnection = "scm:git:${rootProject.ext.scmSshUrl}"
+                        url = "${rootProject.ext.scmProjectUrl}"
                     }
                 }
                 pom.withXml {
@@ -194,9 +198,9 @@ publishing {
             artifact modelsBaseJar
             artifact javadocModelsBaseJar
             artifact sourcesModelsBaseJar
-            groupId group
-            artifactId project.name + "-models-base"
-            version version
+            groupId = group
+            artifactId = project.name + "-models-base"
+            version = version
 
             pom {
                 name = project.name + "-models_base"
@@ -208,7 +212,7 @@ publishing {
                         email = "jens.schulze@commercetools.com"
                     }
                 }
-                url = scmHttpsUrl
+                url = rootProject.ext.scmHttpsUrl
                 licenses {
                     license {
                         name = "The Apache Software License, Version 2.0"
@@ -217,9 +221,9 @@ publishing {
                     }
                 }
                 scm {
-                    connection = "scm:git:$scmHttpsUrl"
-                    developerConnection = "scm:git:$scmSshUrl"
-                    url = "$scmProjectUrl"
+                    connection = "scm:git:${rootProject.ext.scmHttpsUrl}"
+                    developerConnection = "scm:git:${rootProject.ext.scmSshUrl}"
+                    url = "${rootProject.ext.scmProjectUrl}"
                 }
             }
             pom.withXml {
@@ -235,9 +239,9 @@ publishing {
             artifact baseJar
             artifact javadocBaseJar
             artifact sourcesBaseJar
-            groupId group
-            artifactId project.name + "-base"
-            version version
+            groupId = group
+            artifactId = project.name + "-base"
+            version = version
 
             pom {
                 name = project.name + "-base"
@@ -249,7 +253,7 @@ publishing {
                         email = "jens.schulze@commercetools.com"
                     }
                 }
-                url = scmHttpsUrl
+                url = rootProject.ext.scmHttpsUrl
                 licenses {
                     license {
                         name = "The Apache Software License, Version 2.0"
@@ -258,9 +262,9 @@ publishing {
                     }
                 }
                 scm {
-                    connection = "scm:git:$scmHttpsUrl"
-                    developerConnection = "scm:git:$scmSshUrl"
-                    url = "$scmProjectUrl"
+                    connection = "scm:git:${rootProject.ext.scmHttpsUrl}"
+                    developerConnection = "scm:git:${rootProject.ext.scmSshUrl}"
+                    url = "${rootProject.ext.scmHttpsUrl}"
                 }
             }
             pom.withXml {
@@ -311,9 +315,9 @@ publishing {
             artifact predicatesJar
             artifact javadocPredicatesJar
             artifact sourcesPredicatesJar
-            groupId group
-            artifactId project.name + "-predicates"
-            version version
+            groupId = group
+            artifactId = project.name + "-predicates"
+            version = version
 
             pom {
                 name = project.name + "-predicates"
@@ -325,7 +329,7 @@ publishing {
                         email = "jens.schulze@commercetools.com"
                     }
                 }
-                url = scmHttpsUrl
+                url = rootProject.ext.scmHttpsUrl
                 licenses {
                     license {
                         name = "The Apache Software License, Version 2.0"
@@ -334,9 +338,9 @@ publishing {
                     }
                 }
                 scm {
-                    connection = "scm:git:$scmHttpsUrl"
-                    developerConnection = "scm:git:$scmSshUrl"
-                    url = "$scmProjectUrl"
+                    connection = "scm:git:${rootProject.ext.scmHttpsUrl}"
+                    developerConnection = "scm:git:${rootProject.ext.scmSshUrl}"
+                    url = "${rootProject.ext.scmProjectUrl}"
                 }
             }
             pom.withXml {

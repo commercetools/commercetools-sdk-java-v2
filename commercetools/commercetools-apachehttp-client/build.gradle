@@ -6,7 +6,10 @@ dependencies {
         prefer "5.6.2"
     }
 
-    api commons.io version commons.io_version
+    api 'commons-io:commons-io:2.22.0' version {
+        strictly '[2.8.0,)'
+        prefer '2.22.0'
+    }
 
-    implementation javax.validation
+    implementation 'jakarta.validation:jakarta.validation-api:3.1.1'
 }

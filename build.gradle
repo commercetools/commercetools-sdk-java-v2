@@ -136,6 +136,7 @@ subprojects { project ->
         javaLauncher = javaToolchains.launcherFor {
             languageVersion = JavaLanguageVersion.of(17)
         }
+        failOnNoDiscoveredTests = false
         jvmArgs '-Djdk.tracePinnedThreads=full'
     }
 }

@@ -50,9 +50,9 @@ subprojects { project ->
                     from components.java
                     artifact sourcesJar
                     artifact javadocJar
-                    groupId group
-                    artifactId project.name
-                    version version
+                    groupId = group
+                    artifactId = project.name
+                    version = version
 
                     pom {
                         name = project.name
@@ -64,7 +64,7 @@ subprojects { project ->
                                 email = "jens.schulze@commercetools.com"
                             }
                         }
-                        url = scmHttpsUrl
+                        url = rootProject.ext.scmHttpsUrl
                     }
                     pom.withXml {
                         def root = asNode()

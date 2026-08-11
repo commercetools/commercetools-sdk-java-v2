@@ -1,13 +1,13 @@
 
 dependencies {
-    implementation google.findbugs
-    api jackson_core.databind
-    api jackson_core.core
+    implementation 'com.google.code.findbugs:jsr305:3.0.2'
+    api 'tools.jackson.core:jackson-databind:3.1.5'
+    api 'tools.jackson.core:jackson-core:3.2.1'
 //    api jackson_core.datatype
-    api commons.lang3
-    api slf4j.api
-    api failsafe.failsafe
-    api spotify.completableFutures
+    api 'org.apache.commons:commons-lang3:3.20.0'
+    api 'org.slf4j:slf4j-api:2.0.18'
+    api 'dev.failsafe:failsafe:3.3.2'
+    api "com.spotify:completable-futures:0.3.6"
     api "org.reflections:reflections:0.10.2"
 }
 

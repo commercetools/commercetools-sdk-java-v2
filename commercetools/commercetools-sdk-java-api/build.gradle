@@ -8,7 +8,6 @@ dependencies {
     implementation 'jakarta.validation:jakarta.validation-api:3.1.1'
     api 'org.apache.commons:commons-lang3:3.20.0'
     api 'org.slf4j:slf4j-api:2.0.18'
-    api 'org.apache.commons:commons-lang3:3.20.0'
 
     testImplementation project(':commercetools:commercetools-http-client')
     testImplementation project(':commercetools:commercetools-okhttp-client4')
@@ -282,32 +281,32 @@ publishing {
                 def jacksonAnno = dependenciesNode.appendNode('dependency')
                 jacksonAnno.appendNode('groupId', 'com.fasterxml.jackson.core')
                 jacksonAnno.appendNode('artifactId', 'jackson-annotations')
-                jacksonAnno.appendNode('version', 2.22)
+                jacksonAnno.appendNode('version', '2.22')
                 jacksonAnno.appendNode('scope', 'compile')
                 def jacksonDB = dependenciesNode.appendNode('dependency')
                 jacksonDB.appendNode('groupId', 'tools.jackson.core')
                 jacksonDB.appendNode('artifactId', 'jackson-databind')
-                jacksonDB.appendNode('version', jackson_core.version)
+                jacksonDB.appendNode('version', '3.1.5')
                 jacksonDB.appendNode('scope', 'compile')
                 def slf4jDep = dependenciesNode.appendNode('dependency')
                 slf4jDep.appendNode('groupId', 'org.slf4j')
                 slf4jDep.appendNode('artifactId', 'slf4j-api')
-                slf4jDep.appendNode('version', slf4j.version)
+                slf4jDep.appendNode('version', '2.0.18')
                 slf4jDep.appendNode('scope', 'compile')
                 def commonsDep = dependenciesNode.appendNode('dependency')
                 commonsDep.appendNode('groupId', 'org.apache.commons')
                 commonsDep.appendNode('artifactId', 'commons-lang3')
-                commonsDep.appendNode('version', commons.lang3version)
+                commonsDep.appendNode('version', '3.20.0')
                 commonsDep.appendNode('scope', 'compile')
                 def findBugs = dependenciesNode.appendNode('dependency')
                 findBugs.appendNode('groupId', 'com.google.code.findbugs')
                 findBugs.appendNode('artifactId', 'jsr305')
-                findBugs.appendNode('version', google.findbugsversion)
+                findBugs.appendNode('version', '3.0.2')
                 findBugs.appendNode('scope', 'runtime')
                 def validation = dependenciesNode.appendNode('dependency')
                 validation.appendNode('groupId', 'jakarta.validation')
                 validation.appendNode('artifactId', 'jakarta.validation-api')
-                validation.appendNode('version', javax.validationVersion)
+                validation.appendNode('version', '3.1.1')
                 validation.appendNode('scope', 'runtime')
             }
         }

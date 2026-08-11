@@ -36,19 +36,6 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-annotations",
-            "moduleVersion": "2.21",
-            "moduleUrls": [
-                "https://github.com/FasterXML/jackson"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "com.fasterxml.jackson.core:jackson-annotations",
             "moduleVersion": "2.22",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
@@ -62,7 +49,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-core",
-            "moduleVersion": "2.21.5",
+            "moduleVersion": "2.22.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-core"
             ],
@@ -75,7 +62,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-databind",
-            "moduleVersion": "2.21.5",
+            "moduleVersion": "2.22.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -88,7 +75,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
-            "moduleVersion": "2.21.5",
+            "moduleVersion": "2.22.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jsr310"
             ],
@@ -101,7 +88,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.module:jackson-module-jakarta-xmlbind-annotations",
-            "moduleVersion": "2.21.5",
+            "moduleVersion": "2.22.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-base"
             ],
@@ -411,9 +398,9 @@
         },
         {
             "moduleName": "com.squareup.okio:okio",
-            "moduleVersion": "3.17.0",
+            "moduleVersion": "3.18.1",
             "moduleUrls": [
-                "https://github.com/square/okio/"
+                "https://github.com/lysine-dev/okio/"
             ],
             "moduleLicenses": [
                 {
@@ -424,9 +411,9 @@
         },
         {
             "moduleName": "com.squareup.okio:okio-jvm",
-            "moduleVersion": "3.17.0",
+            "moduleVersion": "3.18.1",
             "moduleUrls": [
-                "https://github.com/square/okio/"
+                "https://github.com/lysine-dev/okio/"
             ],
             "moduleLicenses": [
                 {
@@ -556,7 +543,7 @@
         },
         {
             "moduleName": "io.netty:netty-buffer",
-            "moduleVersion": "4.2.16.Final",
+            "moduleVersion": "4.2.17.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -569,7 +556,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec",
-            "moduleVersion": "4.2.16.Final",
+            "moduleVersion": "4.2.17.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -595,7 +582,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-base",
-            "moduleVersion": "4.2.16.Final",
+            "moduleVersion": "4.2.17.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -634,7 +621,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-compression",
-            "moduleVersion": "4.2.16.Final",
+            "moduleVersion": "4.2.17.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -673,7 +660,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-http",
-            "moduleVersion": "4.2.16.Final",
+            "moduleVersion": "4.2.17.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -713,7 +700,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-marshalling",
-            "moduleVersion": "4.2.16.Final",
+            "moduleVersion": "4.2.17.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -743,7 +730,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-protobuf",
-            "moduleVersion": "4.2.16.Final",
+            "moduleVersion": "4.2.17.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -769,7 +756,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-socks",
-            "moduleVersion": "4.2.16.Final",
+            "moduleVersion": "4.2.17.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -795,7 +782,7 @@
         },
         {
             "moduleName": "io.netty:netty-common",
-            "moduleVersion": "4.2.16.Final",
+            "moduleVersion": "4.2.17.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -821,7 +808,7 @@
         },
         {
             "moduleName": "io.netty:netty-handler",
-            "moduleVersion": "4.2.16.Final",
+            "moduleVersion": "4.2.17.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -847,7 +834,7 @@
         },
         {
             "moduleName": "io.netty:netty-handler-proxy",
-            "moduleVersion": "4.2.16.Final",
+            "moduleVersion": "4.2.17.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -873,7 +860,7 @@
         },
         {
             "moduleName": "io.netty:netty-resolver",
-            "moduleVersion": "4.2.16.Final",
+            "moduleVersion": "4.2.17.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -938,7 +925,7 @@
         },
         {
             "moduleName": "io.netty:netty-transport",
-            "moduleVersion": "4.2.16.Final",
+            "moduleVersion": "4.2.17.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -951,7 +938,7 @@
         },
         {
             "moduleName": "io.netty:netty-transport-classes-epoll",
-            "moduleVersion": "4.1.133.Final",
+            "moduleVersion": "4.1.136.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -977,7 +964,7 @@
         },
         {
             "moduleName": "io.netty:netty-transport-classes-kqueue",
-            "moduleVersion": "4.1.133.Final",
+            "moduleVersion": "4.1.136.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -990,7 +977,7 @@
         },
         {
             "moduleName": "io.netty:netty-transport-native-epoll",
-            "moduleVersion": "4.1.133.Final",
+            "moduleVersion": "4.1.136.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -1016,7 +1003,7 @@
         },
         {
             "moduleName": "io.netty:netty-transport-native-kqueue",
-            "moduleVersion": "4.1.133.Final",
+            "moduleVersion": "4.1.136.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -1042,7 +1029,7 @@
         },
         {
             "moduleName": "io.netty:netty-transport-native-unix-common",
-            "moduleVersion": "4.2.16.Final",
+            "moduleVersion": "4.2.17.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -1055,7 +1042,7 @@
         },
         {
             "moduleName": "io.opentelemetry:opentelemetry-api",
-            "moduleVersion": "1.63.0",
+            "moduleVersion": "1.65.0",
             "moduleUrls": [
                 "https://github.com/open-telemetry/opentelemetry-java"
             ],
@@ -1068,7 +1055,7 @@
         },
         {
             "moduleName": "io.opentelemetry:opentelemetry-common",
-            "moduleVersion": "1.63.0",
+            "moduleVersion": "1.65.0",
             "moduleUrls": [
                 "https://github.com/open-telemetry/opentelemetry-java"
             ],
@@ -1081,7 +1068,7 @@
         },
         {
             "moduleName": "io.opentelemetry:opentelemetry-context",
-            "moduleVersion": "1.63.0",
+            "moduleVersion": "1.65.0",
             "moduleUrls": [
                 "https://github.com/open-telemetry/opentelemetry-java"
             ],
@@ -1372,7 +1359,7 @@
         },
         {
             "moduleName": "org.asynchttpclient:async-http-client",
-            "moduleVersion": "2.16.0",
+            "moduleVersion": "2.16.1",
             "moduleUrls": [
                 
             ],
@@ -1385,7 +1372,7 @@
         },
         {
             "moduleName": "org.asynchttpclient:async-http-client-netty-utils",
-            "moduleVersion": "2.16.0",
+            "moduleVersion": "2.16.1",
             "moduleUrls": [
                 
             ],
@@ -2287,7 +2274,7 @@
         },
         {
             "moduleName": "tools.jackson.core:jackson-core",
-            "moduleVersion": "3.1.4",
+            "moduleVersion": "3.2.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-core"
             ],
@@ -2300,7 +2287,7 @@
         },
         {
             "moduleName": "tools.jackson.core:jackson-databind",
-            "moduleVersion": "3.1.4",
+            "moduleVersion": "3.2.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],

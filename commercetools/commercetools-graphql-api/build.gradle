@@ -62,7 +62,7 @@ generateJava {
     typeMapping = [
             "Country": "String",
             "Locale": "String",
-            "CountryCode": "String",
+            "CurrencyCode": "String",
             "Long": "Long",
             "Json": "tools.jackson.databind.JsonNode",
             "JsonPrimitive": "tools.jackson.databind.node.ValueNode",

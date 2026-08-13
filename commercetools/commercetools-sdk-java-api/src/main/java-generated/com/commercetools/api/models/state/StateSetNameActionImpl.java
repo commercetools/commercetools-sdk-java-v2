@@ -52,7 +52,7 @@ public class StateSetNameActionImpl implements StateSetNameAction, ModelBase {
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Set to an empty object to remove any existing value.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {

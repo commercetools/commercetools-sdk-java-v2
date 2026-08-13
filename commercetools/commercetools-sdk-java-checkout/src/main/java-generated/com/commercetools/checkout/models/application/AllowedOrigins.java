@@ -40,7 +40,7 @@ public interface AllowedOrigins {
     public Boolean getAllowAll();
 
     /**
-     *  <p>Value of the URL to set. If empty, any existing value will be removed.</p>
+     *  <p>Origins to allow. Set to an empty array to remove any existing origins.</p>
      * @return origins
      */
 
@@ -55,7 +55,7 @@ public interface AllowedOrigins {
     public void setAllowAll(final Boolean allowAll);
 
     /**
-     *  <p>Value of the URL to set. If empty, any existing value will be removed.</p>
+     *  <p>Origins to allow. Set to an empty array to remove any existing origins.</p>
      * @param origins values to be set
      */
 
@@ -63,7 +63,7 @@ public interface AllowedOrigins {
     public void setOrigins(final String... origins);
 
     /**
-     *  <p>Value of the URL to set. If empty, any existing value will be removed.</p>
+     *  <p>Origins to allow. Set to an empty array to remove any existing origins.</p>
      * @param origins values to be set
      */
 

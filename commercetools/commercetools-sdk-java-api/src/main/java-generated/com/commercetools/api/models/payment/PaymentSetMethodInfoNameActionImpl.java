@@ -53,7 +53,7 @@ public class PaymentSetMethodInfoNameActionImpl implements PaymentSetMethodInfoN
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {

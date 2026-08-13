@@ -65,7 +65,7 @@ public class ProductTailoringSetMetaAttributesActionImpl implements ProductTailo
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
@@ -73,7 +73,7 @@ public class ProductTailoringSetMetaAttributesActionImpl implements ProductTailo
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaDescription() {
@@ -81,7 +81,7 @@ public class ProductTailoringSetMetaAttributesActionImpl implements ProductTailo
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {

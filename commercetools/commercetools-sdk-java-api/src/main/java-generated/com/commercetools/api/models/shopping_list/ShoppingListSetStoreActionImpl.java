@@ -53,7 +53,7 @@ public class ShoppingListSetStoreActionImpl implements ShoppingListSetStoreActio
     }
 
     /**
-     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> the ShoppingList should be assigned to. If empty, any existing value will be removed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> the ShoppingList should be assigned to. If omitted, any existing value is removed.</p>
      */
 
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {

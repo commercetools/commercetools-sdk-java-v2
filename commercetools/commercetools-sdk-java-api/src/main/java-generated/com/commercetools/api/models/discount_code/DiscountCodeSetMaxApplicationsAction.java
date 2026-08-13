@@ -37,7 +37,7 @@ public interface DiscountCodeSetMaxApplicationsAction extends DiscountCodeUpdate
 
     /**
      *  <p>Value to set.</p>
-     *  <p>If empty, any existing value will be removed and the DiscountCode can be applied any number of times.</p>
+     *  <p>If omitted, any existing value is removed and the DiscountCode can be applied any number of times.</p>
      *  <p>If <code>maxApplicationsPerCustomer</code> is set, each application also counts toward this limit.</p>
      *  <p>This field does not limit discount applications for Orders created from a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @return maxApplications
@@ -48,7 +48,7 @@ public interface DiscountCodeSetMaxApplicationsAction extends DiscountCodeUpdate
 
     /**
      *  <p>Value to set.</p>
-     *  <p>If empty, any existing value will be removed and the DiscountCode can be applied any number of times.</p>
+     *  <p>If omitted, any existing value is removed and the DiscountCode can be applied any number of times.</p>
      *  <p>If <code>maxApplicationsPerCustomer</code> is set, each application also counts toward this limit.</p>
      *  <p>This field does not limit discount applications for Orders created from a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a>.</p>
      * @param maxApplications value to be set

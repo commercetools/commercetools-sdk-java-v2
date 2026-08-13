@@ -38,7 +38,7 @@ public interface ProductTailoringSetMetaAttributesAction extends ProductTailorin
     String SET_META_ATTRIBUTES = "setMetaAttributes";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return metaTitle
      */
     @Valid
@@ -46,7 +46,7 @@ public interface ProductTailoringSetMetaAttributesAction extends ProductTailorin
     public LocalizedString getMetaTitle();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return metaDescription
      */
     @Valid
@@ -54,7 +54,7 @@ public interface ProductTailoringSetMetaAttributesAction extends ProductTailorin
     public LocalizedString getMetaDescription();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return metaKeywords
      */
     @Valid
@@ -70,21 +70,21 @@ public interface ProductTailoringSetMetaAttributesAction extends ProductTailorin
     public Boolean getStaged();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param metaTitle value to be set
      */
 
     public void setMetaTitle(final LocalizedString metaTitle);
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param metaDescription value to be set
      */
 
     public void setMetaDescription(final LocalizedString metaDescription);
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param metaKeywords value to be set
      */
 

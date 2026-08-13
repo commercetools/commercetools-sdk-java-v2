@@ -36,7 +36,7 @@ public interface CustomerSetSalutationAction extends CustomerUpdateAction {
     String SET_SALUTATION = "setSalutation";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return salutation
      */
 
@@ -44,7 +44,7 @@ public interface CustomerSetSalutationAction extends CustomerUpdateAction {
     public String getSalutation();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param salutation value to be set
      */
 

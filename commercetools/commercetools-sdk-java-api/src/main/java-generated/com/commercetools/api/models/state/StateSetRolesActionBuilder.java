@@ -24,7 +24,7 @@ public class StateSetRolesActionBuilder implements Builder<StateSetRolesAction> 
     private java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles;
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Set to an empty array to remove any existing value.</p>
      * @param roles value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class StateSetRolesActionBuilder implements Builder<StateSetRolesAction> 
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Set to an empty array to remove any existing value.</p>
      * @param roles value to be set
      * @return Builder
      */
@@ -47,7 +47,7 @@ public class StateSetRolesActionBuilder implements Builder<StateSetRolesAction> 
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Set to an empty array to remove any existing value.</p>
      * @param roles value to be set
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class StateSetRolesActionBuilder implements Builder<StateSetRolesAction> 
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Set to an empty array to remove any existing value.</p>
      * @return roles
      */
 

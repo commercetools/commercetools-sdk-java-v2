@@ -36,7 +36,7 @@ public interface MyShoppingListSetDeleteDaysAfterLastModificationAction extends 
     String SET_DELETE_DAYS_AFTER_LAST_MODIFICATION = "setDeleteDaysAfterLastModification";
 
     /**
-     *  <p>Value to set. If not provided, the default value for this field configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListsConfiguration" rel="nofollow">Project settings</a> is assigned.</p>
+     *  <p>Value to set. If omitted, the default value for this field configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListsConfiguration" rel="nofollow">Project settings</a> is assigned.</p>
      * @return deleteDaysAfterLastModification
      */
 
@@ -44,7 +44,7 @@ public interface MyShoppingListSetDeleteDaysAfterLastModificationAction extends 
     public Long getDeleteDaysAfterLastModification();
 
     /**
-     *  <p>Value to set. If not provided, the default value for this field configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListsConfiguration" rel="nofollow">Project settings</a> is assigned.</p>
+     *  <p>Value to set. If omitted, the default value for this field configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingListsConfiguration" rel="nofollow">Project settings</a> is assigned.</p>
      * @param deleteDaysAfterLastModification value to be set
      */
 

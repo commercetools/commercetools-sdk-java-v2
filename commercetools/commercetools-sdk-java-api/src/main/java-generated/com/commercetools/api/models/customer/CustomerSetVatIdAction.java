@@ -36,7 +36,7 @@ public interface CustomerSetVatIdAction extends CustomerUpdateAction {
     String SET_VAT_ID = "setVatId";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return vatId
      */
 
@@ -44,7 +44,7 @@ public interface CustomerSetVatIdAction extends CustomerUpdateAction {
     public String getVatId();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param vatId value to be set
      */
 

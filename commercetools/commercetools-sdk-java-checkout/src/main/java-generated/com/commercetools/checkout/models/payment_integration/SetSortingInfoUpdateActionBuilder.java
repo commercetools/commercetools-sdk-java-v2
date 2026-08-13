@@ -27,7 +27,7 @@ public class SetSortingInfoUpdateActionBuilder implements Builder<SetSortingInfo
     private com.commercetools.checkout.models.payment_integration.SortingInfo sortingInfo;
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @param builder function to build the sortingInfo value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class SetSortingInfoUpdateActionBuilder implements Builder<SetSortingInfo
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @param builder function to build the sortingInfo value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class SetSortingInfoUpdateActionBuilder implements Builder<SetSortingInfo
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @param sortingInfo value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class SetSortingInfoUpdateActionBuilder implements Builder<SetSortingInfo
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @return sortingInfo
      */
 

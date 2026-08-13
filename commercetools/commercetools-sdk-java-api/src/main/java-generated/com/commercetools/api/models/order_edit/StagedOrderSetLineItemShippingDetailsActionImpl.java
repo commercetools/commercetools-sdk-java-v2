@@ -77,7 +77,7 @@ public class StagedOrderSetLineItemShippingDetailsActionImpl
     }
 
     /**
-     *  <p>Value to set. If empty, the existing value is removed.</p>
+     *  <p>Value to set. If omitted, the existing value is removed.</p>
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {

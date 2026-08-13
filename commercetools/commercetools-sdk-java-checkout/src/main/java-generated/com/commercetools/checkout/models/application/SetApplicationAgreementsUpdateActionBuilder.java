@@ -27,7 +27,7 @@ public class SetApplicationAgreementsUpdateActionBuilder implements Builder<SetA
     private java.util.List<com.commercetools.checkout.models.application.ApplicationAgreementDraft> agreements;
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @param agreements value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class SetApplicationAgreementsUpdateActionBuilder implements Builder<SetA
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @param agreements value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class SetApplicationAgreementsUpdateActionBuilder implements Builder<SetA
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @param agreements value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class SetApplicationAgreementsUpdateActionBuilder implements Builder<SetA
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @param builder function to build the agreements value
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class SetApplicationAgreementsUpdateActionBuilder implements Builder<SetA
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @param builder function to build the agreements value
      * @return Builder
      */
@@ -96,7 +96,7 @@ public class SetApplicationAgreementsUpdateActionBuilder implements Builder<SetA
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @param builder function to build the agreements value
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class SetApplicationAgreementsUpdateActionBuilder implements Builder<SetA
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @param builder function to build the agreements value
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class SetApplicationAgreementsUpdateActionBuilder implements Builder<SetA
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @return agreements
      */
 

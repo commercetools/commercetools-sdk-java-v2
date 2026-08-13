@@ -70,7 +70,7 @@ public class ProductAddToCategoryActionBuilder implements Builder<ProductAddToCa
     }
 
     /**
-     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If empty, any existing value will be removed.</p>
+     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If omitted, any existing value is removed.</p>
      * @param orderHint value to be set
      * @return Builder
      */
@@ -101,7 +101,7 @@ public class ProductAddToCategoryActionBuilder implements Builder<ProductAddToCa
     }
 
     /**
-     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If empty, any existing value will be removed.</p>
+     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If omitted, any existing value is removed.</p>
      * @return orderHint
      */
 

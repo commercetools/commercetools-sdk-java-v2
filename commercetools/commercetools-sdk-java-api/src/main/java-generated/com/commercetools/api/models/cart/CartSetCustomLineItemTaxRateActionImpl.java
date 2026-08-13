@@ -80,7 +80,7 @@ public class CartSetCustomLineItemTaxRateActionImpl implements CartSetCustomLine
     }
 
     /**
-     *  <p>Value to set. If empty, an existing value is removed.</p>
+     *  <p>Value to set. If omitted, an existing value is removed.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {

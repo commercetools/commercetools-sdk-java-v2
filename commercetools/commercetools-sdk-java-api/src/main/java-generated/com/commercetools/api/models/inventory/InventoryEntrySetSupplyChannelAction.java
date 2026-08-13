@@ -38,7 +38,7 @@ public interface InventoryEntrySetSupplyChannelAction extends InventoryEntryUpda
     String SET_SUPPLY_CHANNEL = "setSupplyChannel";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return supplyChannel
      */
     @Valid
@@ -46,7 +46,7 @@ public interface InventoryEntrySetSupplyChannelAction extends InventoryEntryUpda
     public ChannelResourceIdentifier getSupplyChannel();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param supplyChannel value to be set
      */
 

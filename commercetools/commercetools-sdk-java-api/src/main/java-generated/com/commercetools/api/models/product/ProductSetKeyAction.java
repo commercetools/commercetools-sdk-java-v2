@@ -36,7 +36,7 @@ public interface ProductSetKeyAction extends ProductUpdateAction {
     String SET_KEY = "setKey";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      *  <p>To update a Product using the <span>Import API</span> and the <span>Merchant Center</span>, the Product <code>key</code> must match the pattern <code>^[A-Za-z0-9_-]{2,256}$</code>.</p>
      * @return key
      */
@@ -45,7 +45,7 @@ public interface ProductSetKeyAction extends ProductUpdateAction {
     public String getKey();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      *  <p>To update a Product using the <span>Import API</span> and the <span>Merchant Center</span>, the Product <code>key</code> must match the pattern <code>^[A-Za-z0-9_-]{2,256}$</code>.</p>
      * @param key value to be set
      */

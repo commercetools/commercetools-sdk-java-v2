@@ -38,7 +38,7 @@ public interface ProductTailoringSetMetaKeywordsAction extends ProductTailoringU
     String SET_META_KEYWORDS = "setMetaKeywords";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return metaKeywords
      */
     @Valid
@@ -54,7 +54,7 @@ public interface ProductTailoringSetMetaKeywordsAction extends ProductTailoringU
     public Boolean getStaged();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param metaKeywords value to be set
      */
 

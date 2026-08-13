@@ -36,7 +36,7 @@ public interface PaymentMethodSetPaymentInterfaceAction extends PaymentMethodUpd
     String SET_PAYMENT_INTERFACE = "setPaymentInterface";
 
     /**
-     *  <p>New payment service that processes the Payment—for example, a PSP. If empty, any existing value will be removed.</p>
+     *  <p>New payment service that processes the Payment—for example, a PSP. If omitted, any existing value is removed.</p>
      * @return paymentInterface
      */
 
@@ -44,7 +44,7 @@ public interface PaymentMethodSetPaymentInterfaceAction extends PaymentMethodUpd
     public String getPaymentInterface();
 
     /**
-     *  <p>New payment service that processes the Payment—for example, a PSP. If empty, any existing value will be removed.</p>
+     *  <p>New payment service that processes the Payment—for example, a PSP. If omitted, any existing value is removed.</p>
      * @param paymentInterface value to be set
      */
 

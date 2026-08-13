@@ -38,7 +38,7 @@ public interface McpServerSetNameAction extends McpServerUpdateAction {
     String SET_NAME = "setName";
 
     /**
-     *  <p>Value to set. If empty or absent, the existing name is removed.</p>
+     *  <p>Value to set. If omitted, the existing name is removed.</p>
      * @return name
      */
     @Valid
@@ -46,7 +46,7 @@ public interface McpServerSetNameAction extends McpServerUpdateAction {
     public LocalizedString getName();
 
     /**
-     *  <p>Value to set. If empty or absent, the existing name is removed.</p>
+     *  <p>Value to set. If omitted, the existing name is removed.</p>
      * @param name value to be set
      */
 

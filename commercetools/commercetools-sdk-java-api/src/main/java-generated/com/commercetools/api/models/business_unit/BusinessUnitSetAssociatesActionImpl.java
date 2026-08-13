@@ -53,7 +53,7 @@ public class BusinessUnitSetAssociatesActionImpl implements BusinessUnitSetAssoc
     }
 
     /**
-     *  <p>The new list of Associates. If empty, existing values will be removed.</p>
+     *  <p>The new list of Associates. Set to an empty array to remove all existing values.</p>
      */
 
     public java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> getAssociates() {

@@ -40,7 +40,7 @@ public class AllowedOriginsBuilder implements Builder<AllowedOrigins> {
     }
 
     /**
-     *  <p>Value of the URL to set. If empty, any existing value will be removed.</p>
+     *  <p>Origins to allow. Set to an empty array to remove any existing origins.</p>
      * @param origins value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class AllowedOriginsBuilder implements Builder<AllowedOrigins> {
     }
 
     /**
-     *  <p>Value of the URL to set. If empty, any existing value will be removed.</p>
+     *  <p>Origins to allow. Set to an empty array to remove any existing origins.</p>
      * @param origins value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class AllowedOriginsBuilder implements Builder<AllowedOrigins> {
     }
 
     /**
-     *  <p>Value of the URL to set. If empty, any existing value will be removed.</p>
+     *  <p>Origins to allow. Set to an empty array to remove any existing origins.</p>
      * @param origins value to be set
      * @return Builder
      */
@@ -85,7 +85,7 @@ public class AllowedOriginsBuilder implements Builder<AllowedOrigins> {
     }
 
     /**
-     *  <p>Value of the URL to set. If empty, any existing value will be removed.</p>
+     *  <p>Origins to allow. Set to an empty array to remove any existing origins.</p>
      * @return origins
      */
 

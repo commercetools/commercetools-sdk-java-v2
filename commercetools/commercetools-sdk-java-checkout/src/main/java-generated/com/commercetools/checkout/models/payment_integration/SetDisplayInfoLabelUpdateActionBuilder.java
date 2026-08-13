@@ -27,7 +27,7 @@ public class SetDisplayInfoLabelUpdateActionBuilder implements Builder<SetDispla
     private com.commercetools.checkout.models.common.LocalizedString label;
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @param builder function to build the label value
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class SetDisplayInfoLabelUpdateActionBuilder implements Builder<SetDispla
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @param builder function to build the label value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class SetDisplayInfoLabelUpdateActionBuilder implements Builder<SetDispla
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @param label value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class SetDisplayInfoLabelUpdateActionBuilder implements Builder<SetDispla
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @return label
      */
 

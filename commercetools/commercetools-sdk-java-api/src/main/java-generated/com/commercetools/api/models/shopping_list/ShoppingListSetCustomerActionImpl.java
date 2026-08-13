@@ -53,7 +53,7 @@ public class ShoppingListSetCustomerActionImpl implements ShoppingListSetCustome
     }
 
     /**
-     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> the ShoppingList should be associated to. If empty, any existing value will be removed.</p>
+     *  <p>The <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a> the ShoppingList should be associated to. If omitted, any existing value is removed.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer() {

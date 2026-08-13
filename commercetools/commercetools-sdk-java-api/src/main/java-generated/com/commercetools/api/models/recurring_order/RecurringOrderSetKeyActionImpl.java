@@ -52,7 +52,7 @@ public class RecurringOrderSetKeyActionImpl implements RecurringOrderSetKeyActio
     }
 
     /**
-     *  <p>Value to set. If empty, any existing key will be removed.</p>
+     *  <p>Value to set. If omitted, any existing key is removed.</p>
      */
 
     public String getKey() {

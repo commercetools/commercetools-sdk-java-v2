@@ -38,7 +38,7 @@ public interface PaymentSetStatusInterfaceTextAction extends PaymentUpdateAction
     String SET_STATUS_INTERFACE_TEXT = "setStatusInterfaceText";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Set to an empty string to remove any existing value.</p>
      * @return interfaceText
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface PaymentSetStatusInterfaceTextAction extends PaymentUpdateAction
     public String getInterfaceText();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Set to an empty string to remove any existing value.</p>
      * @param interfaceText value to be set
      */
 

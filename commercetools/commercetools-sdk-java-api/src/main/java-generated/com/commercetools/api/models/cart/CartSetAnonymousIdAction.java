@@ -36,7 +36,7 @@ public interface CartSetAnonymousIdAction extends CartUpdateAction {
     String SET_ANONYMOUS_ID = "setAnonymousId";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return anonymousId
      */
 
@@ -44,7 +44,7 @@ public interface CartSetAnonymousIdAction extends CartUpdateAction {
     public String getAnonymousId();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param anonymousId value to be set
      */
 

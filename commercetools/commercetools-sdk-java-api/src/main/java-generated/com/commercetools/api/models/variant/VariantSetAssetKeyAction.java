@@ -54,7 +54,7 @@ public interface VariantSetAssetKeyAction extends VariantUpdateAction {
     public String getAssetId();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return assetKey
      */
 
@@ -76,7 +76,7 @@ public interface VariantSetAssetKeyAction extends VariantUpdateAction {
     public void setAssetId(final String assetId);
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param assetKey value to be set
      */
 

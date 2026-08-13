@@ -54,7 +54,7 @@ public interface CartSetCustomLineItemRecurrenceInfoAction extends CartUpdateAct
     public String getCustomLineItemKey();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return recurrenceInfo
      */
     @Valid
@@ -76,7 +76,7 @@ public interface CartSetCustomLineItemRecurrenceInfoAction extends CartUpdateAct
     public void setCustomLineItemKey(final String customLineItemKey);
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param recurrenceInfo value to be set
      */
 

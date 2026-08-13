@@ -18,7 +18,7 @@ import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Sets the Stores the ShippingMethod is associated with. If empty, the ShippingMethod becomes a global ShippingMethod.</p>
+ *  <p>Sets the Stores the ShippingMethod is associated with. Set <code>stores</code> to an empty array to make the ShippingMethod a global ShippingMethod.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface ShippingMethodSetStoresAction extends ShippingMethodUpdateActio
     String SET_STORES = "setStores";
 
     /**
-     *  <p>ResourceIdentifiers of the Stores to set. Overrides the current list of Stores. If empty, any existing values are removed.</p>
+     *  <p>ResourceIdentifiers of the Stores to set. Overrides the current list of Stores. Set to an empty array to remove all existing values.</p>
      * @return stores
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface ShippingMethodSetStoresAction extends ShippingMethodUpdateActio
     public List<StoreResourceIdentifier> getStores();
 
     /**
-     *  <p>ResourceIdentifiers of the Stores to set. Overrides the current list of Stores. If empty, any existing values are removed.</p>
+     *  <p>ResourceIdentifiers of the Stores to set. Overrides the current list of Stores. Set to an empty array to remove all existing values.</p>
      * @param stores values to be set
      */
 
@@ -58,7 +58,7 @@ public interface ShippingMethodSetStoresAction extends ShippingMethodUpdateActio
     public void setStores(final StoreResourceIdentifier... stores);
 
     /**
-     *  <p>ResourceIdentifiers of the Stores to set. Overrides the current list of Stores. If empty, any existing values are removed.</p>
+     *  <p>ResourceIdentifiers of the Stores to set. Overrides the current list of Stores. Set to an empty array to remove all existing values.</p>
      * @param stores values to be set
      */
 

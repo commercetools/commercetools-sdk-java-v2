@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Sets the Stores the ShippingMethod is associated with. If empty, the ShippingMethod becomes a global ShippingMethod.</p>
+ *  <p>Sets the Stores the ShippingMethod is associated with. Set <code>stores</code> to an empty array to make the ShippingMethod a global ShippingMethod.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingMethodSetStoresActionImpl implements ShippingMethodSetStoresAction, ModelBase {
@@ -53,7 +53,7 @@ public class ShippingMethodSetStoresActionImpl implements ShippingMethodSetStore
     }
 
     /**
-     *  <p>ResourceIdentifiers of the Stores to set. Overrides the current list of Stores. If empty, any existing values are removed.</p>
+     *  <p>ResourceIdentifiers of the Stores to set. Overrides the current list of Stores. Set to an empty array to remove all existing values.</p>
      */
 
     public java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> getStores() {

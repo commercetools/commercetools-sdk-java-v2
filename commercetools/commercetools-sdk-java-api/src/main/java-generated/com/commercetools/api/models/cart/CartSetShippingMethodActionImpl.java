@@ -58,7 +58,7 @@ public class CartSetShippingMethodActionImpl implements CartSetShippingMethodAct
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned in one of the following cases:</p>
      *  <ol>
      *   <li>If the referenced Shipping Method has a predicate that does not match the Cart.</li>

@@ -92,7 +92,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in the Product. If not provided, the Master Variant is used.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in the Product. If omitted, the Master Variant is used.</p>
      *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
      * @param variantId value to be set
      * @return Builder
@@ -475,7 +475,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in the Product. If not provided, the Master Variant is used.</p>
+     *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> in the Product. If omitted, the Master Variant is used.</p>
      *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
      * @return variantId
      */

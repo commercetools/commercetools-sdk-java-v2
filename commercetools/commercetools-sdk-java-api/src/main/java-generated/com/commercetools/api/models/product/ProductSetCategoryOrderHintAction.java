@@ -46,7 +46,7 @@ public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
     public String getCategoryId();
 
     /**
-     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If empty, any existing value will be removed.</p>
+     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If omitted, any existing value is removed.</p>
      * @return orderHint
      */
 
@@ -69,7 +69,7 @@ public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
     public void setCategoryId(final String categoryId);
 
     /**
-     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If empty, any existing value will be removed.</p>
+     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If omitted, any existing value is removed.</p>
      * @param orderHint value to be set
      */
 

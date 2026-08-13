@@ -36,7 +36,7 @@ public interface RecurringOrderSetKeyAction extends RecurringOrderUpdateAction {
     String SET_KEY = "setKey";
 
     /**
-     *  <p>Value to set. If empty, any existing key will be removed.</p>
+     *  <p>Value to set. If omitted, any existing key is removed.</p>
      * @return key
      */
 
@@ -44,7 +44,7 @@ public interface RecurringOrderSetKeyAction extends RecurringOrderUpdateAction {
     public String getKey();
 
     /**
-     *  <p>Value to set. If empty, any existing key will be removed.</p>
+     *  <p>Value to set. If omitted, any existing key is removed.</p>
      * @param key value to be set
      */
 

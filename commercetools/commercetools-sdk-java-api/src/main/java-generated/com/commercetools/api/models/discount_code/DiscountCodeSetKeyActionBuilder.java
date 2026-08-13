@@ -26,7 +26,7 @@ public class DiscountCodeSetKeyActionBuilder implements Builder<DiscountCodeSetK
     private String key;
 
     /**
-     *  <p>Unique value to set. If empty, any existing value will be removed.</p>
+     *  <p>Unique value to set. If omitted, any existing value is removed.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class DiscountCodeSetKeyActionBuilder implements Builder<DiscountCodeSetK
     }
 
     /**
-     *  <p>Unique value to set. If empty, any existing value will be removed.</p>
+     *  <p>Unique value to set. If omitted, any existing value is removed.</p>
      * @return key
      */
 

@@ -78,7 +78,7 @@ public class OrderSetDeliveryItemsActionImpl implements OrderSetDeliveryItemsAct
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. Set to an empty array to remove any existing value.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {

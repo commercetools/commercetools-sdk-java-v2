@@ -26,7 +26,7 @@ public class ReviewSetTextActionBuilder implements Builder<ReviewSetTextAction> 
     private String text;
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param text value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class ReviewSetTextActionBuilder implements Builder<ReviewSetTextAction> 
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return text
      */
 

@@ -38,7 +38,7 @@ public interface McpServerSetDescriptionAction extends McpServerUpdateAction {
     String SET_DESCRIPTION = "setDescription";
 
     /**
-     *  <p>Value to set. If empty or absent, the existing description is removed.</p>
+     *  <p>Value to set. If omitted, the existing description is removed.</p>
      * @return description
      */
     @Valid
@@ -46,7 +46,7 @@ public interface McpServerSetDescriptionAction extends McpServerUpdateAction {
     public LocalizedString getDescription();
 
     /**
-     *  <p>Value to set. If empty or absent, the existing description is removed.</p>
+     *  <p>Value to set. If omitted, the existing description is removed.</p>
      * @param description value to be set
      */
 

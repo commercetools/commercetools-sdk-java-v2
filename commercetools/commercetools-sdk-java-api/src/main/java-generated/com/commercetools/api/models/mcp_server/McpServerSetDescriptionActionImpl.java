@@ -53,7 +53,7 @@ public class McpServerSetDescriptionActionImpl implements McpServerSetDescriptio
     }
 
     /**
-     *  <p>Value to set. If empty or absent, the existing description is removed.</p>
+     *  <p>Value to set. If omitted, the existing description is removed.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {

@@ -52,7 +52,7 @@ public class PaymentMethodSetPaymentInterfaceActionImpl implements PaymentMethod
     }
 
     /**
-     *  <p>New payment service that processes the Payment—for example, a PSP. If empty, any existing value will be removed.</p>
+     *  <p>New payment service that processes the Payment—for example, a PSP. If omitted, any existing value is removed.</p>
      */
 
     public String getPaymentInterface() {

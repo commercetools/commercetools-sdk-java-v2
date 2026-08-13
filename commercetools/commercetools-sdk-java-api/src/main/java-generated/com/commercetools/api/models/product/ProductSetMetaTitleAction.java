@@ -38,7 +38,7 @@ public interface ProductSetMetaTitleAction extends ProductUpdateAction {
     String SET_META_TITLE = "setMetaTitle";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return metaTitle
      */
     @Valid
@@ -54,7 +54,7 @@ public interface ProductSetMetaTitleAction extends ProductUpdateAction {
     public Boolean getStaged();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param metaTitle value to be set
      */
 

@@ -26,7 +26,7 @@ public class RecurringOrderSetKeyActionBuilder implements Builder<RecurringOrder
     private String key;
 
     /**
-     *  <p>Value to set. If empty, any existing key will be removed.</p>
+     *  <p>Value to set. If omitted, any existing key is removed.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class RecurringOrderSetKeyActionBuilder implements Builder<RecurringOrder
     }
 
     /**
-     *  <p>Value to set. If empty, any existing key will be removed.</p>
+     *  <p>Value to set. If omitted, any existing key is removed.</p>
      * @return key
      */
 

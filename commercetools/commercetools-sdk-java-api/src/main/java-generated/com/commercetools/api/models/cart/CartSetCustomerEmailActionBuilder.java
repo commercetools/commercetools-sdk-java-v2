@@ -26,7 +26,7 @@ public class CartSetCustomerEmailActionBuilder implements Builder<CartSetCustome
     private String email;
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param email value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class CartSetCustomerEmailActionBuilder implements Builder<CartSetCustome
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return email
      */
 

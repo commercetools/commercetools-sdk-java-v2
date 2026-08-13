@@ -25,7 +25,7 @@ public class ShippingMethodSetStoresActionBuilder implements Builder<ShippingMet
     private java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores;
 
     /**
-     *  <p>ResourceIdentifiers of the Stores to set. Overrides the current list of Stores. If empty, any existing values are removed.</p>
+     *  <p>ResourceIdentifiers of the Stores to set. Overrides the current list of Stores. Set to an empty array to remove all existing values.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class ShippingMethodSetStoresActionBuilder implements Builder<ShippingMet
     }
 
     /**
-     *  <p>ResourceIdentifiers of the Stores to set. Overrides the current list of Stores. If empty, any existing values are removed.</p>
+     *  <p>ResourceIdentifiers of the Stores to set. Overrides the current list of Stores. Set to an empty array to remove all existing values.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class ShippingMethodSetStoresActionBuilder implements Builder<ShippingMet
     }
 
     /**
-     *  <p>ResourceIdentifiers of the Stores to set. Overrides the current list of Stores. If empty, any existing values are removed.</p>
+     *  <p>ResourceIdentifiers of the Stores to set. Overrides the current list of Stores. Set to an empty array to remove all existing values.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class ShippingMethodSetStoresActionBuilder implements Builder<ShippingMet
     }
 
     /**
-     *  <p>ResourceIdentifiers of the Stores to set. Overrides the current list of Stores. If empty, any existing values are removed.</p>
+     *  <p>ResourceIdentifiers of the Stores to set. Overrides the current list of Stores. Set to an empty array to remove all existing values.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class ShippingMethodSetStoresActionBuilder implements Builder<ShippingMet
     }
 
     /**
-     *  <p>ResourceIdentifiers of the Stores to set. Overrides the current list of Stores. If empty, any existing values are removed.</p>
+     *  <p>ResourceIdentifiers of the Stores to set. Overrides the current list of Stores. Set to an empty array to remove all existing values.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class ShippingMethodSetStoresActionBuilder implements Builder<ShippingMet
     }
 
     /**
-     *  <p>ResourceIdentifiers of the Stores to set. Overrides the current list of Stores. If empty, any existing values are removed.</p>
+     *  <p>ResourceIdentifiers of the Stores to set. Overrides the current list of Stores. Set to an empty array to remove all existing values.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -103,7 +103,7 @@ public class ShippingMethodSetStoresActionBuilder implements Builder<ShippingMet
     }
 
     /**
-     *  <p>ResourceIdentifiers of the Stores to set. Overrides the current list of Stores. If empty, any existing values are removed.</p>
+     *  <p>ResourceIdentifiers of the Stores to set. Overrides the current list of Stores. Set to an empty array to remove all existing values.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -114,7 +114,7 @@ public class ShippingMethodSetStoresActionBuilder implements Builder<ShippingMet
     }
 
     /**
-     *  <p>ResourceIdentifiers of the Stores to set. Overrides the current list of Stores. If empty, any existing values are removed.</p>
+     *  <p>ResourceIdentifiers of the Stores to set. Overrides the current list of Stores. Set to an empty array to remove all existing values.</p>
      * @return stores
      */
 

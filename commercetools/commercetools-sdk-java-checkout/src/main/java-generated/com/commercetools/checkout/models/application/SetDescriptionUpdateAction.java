@@ -48,7 +48,7 @@ public interface SetDescriptionUpdateAction extends ApplicationUpdateAction {
     public String getAction();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Set to an empty object to remove any existing value.</p>
      * @return description
      */
     @NotNull
@@ -57,7 +57,7 @@ public interface SetDescriptionUpdateAction extends ApplicationUpdateAction {
     public LocalizedString getDescription();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Set to an empty object to remove any existing value.</p>
      * @param description value to be set
      */
 

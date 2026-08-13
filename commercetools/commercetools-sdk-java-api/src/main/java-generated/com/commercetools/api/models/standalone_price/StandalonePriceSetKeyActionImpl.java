@@ -52,7 +52,7 @@ public class StandalonePriceSetKeyActionImpl implements StandalonePriceSetKeyAct
     }
 
     /**
-     *  <p>Value to set. Must be unique. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Must be unique. If omitted, any existing value is removed.</p>
      */
 
     public String getKey() {

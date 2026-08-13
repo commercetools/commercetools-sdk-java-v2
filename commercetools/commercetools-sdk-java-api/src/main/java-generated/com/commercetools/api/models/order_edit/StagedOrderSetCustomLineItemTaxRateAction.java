@@ -55,7 +55,7 @@ public interface StagedOrderSetCustomLineItemTaxRateAction extends StagedOrderUp
     public String getCustomLineItemKey();
 
     /**
-     *  <p>Value to set. If empty, an existing value is removed.</p>
+     *  <p>Value to set. If omitted, an existing value is removed.</p>
      * @return externalTaxRate
      */
     @Valid
@@ -85,7 +85,7 @@ public interface StagedOrderSetCustomLineItemTaxRateAction extends StagedOrderUp
     public void setCustomLineItemKey(final String customLineItemKey);
 
     /**
-     *  <p>Value to set. If empty, an existing value is removed.</p>
+     *  <p>Value to set. If omitted, an existing value is removed.</p>
      * @param externalTaxRate value to be set
      */
 

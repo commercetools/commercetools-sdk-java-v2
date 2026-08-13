@@ -57,7 +57,7 @@ public class ProductSetDefaultVariantActionImpl implements ProductSetDefaultVari
     }
 
     /**
-     *  <p>The Variant to set as default. If empty, any existing value will be removed.</p>
+     *  <p>The Variant to set as default. If omitted, any existing value is removed.</p>
      */
 
     public com.commercetools.api.models.variant.VariantResourceIdentifier getVariant() {

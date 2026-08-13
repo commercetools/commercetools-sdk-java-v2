@@ -53,7 +53,7 @@ public class StateSetRolesActionImpl implements StateSetRolesAction, ModelBase {
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Set to an empty array to remove any existing value.</p>
      */
 
     public java.util.List<com.commercetools.api.models.state.StateRoleEnum> getRoles() {

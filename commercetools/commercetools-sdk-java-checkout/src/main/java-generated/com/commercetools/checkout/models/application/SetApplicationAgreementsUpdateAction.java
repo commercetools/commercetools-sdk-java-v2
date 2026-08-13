@@ -47,7 +47,7 @@ public interface SetApplicationAgreementsUpdateAction extends ApplicationUpdateA
     public String getAction();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @return agreements
      */
     @Valid
@@ -55,7 +55,7 @@ public interface SetApplicationAgreementsUpdateAction extends ApplicationUpdateA
     public List<ApplicationAgreementDraft> getAgreements();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @param agreements values to be set
      */
 
@@ -63,7 +63,7 @@ public interface SetApplicationAgreementsUpdateAction extends ApplicationUpdateA
     public void setAgreements(final ApplicationAgreementDraft... agreements);
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @param agreements values to be set
      */
 

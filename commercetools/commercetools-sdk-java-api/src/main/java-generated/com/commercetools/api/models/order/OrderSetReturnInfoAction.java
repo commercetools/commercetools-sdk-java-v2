@@ -38,7 +38,7 @@ public interface OrderSetReturnInfoAction extends OrderUpdateAction {
     String SET_RETURN_INFO = "setReturnInfo";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return items
      */
     @Valid
@@ -46,7 +46,7 @@ public interface OrderSetReturnInfoAction extends OrderUpdateAction {
     public List<ReturnInfoDraft> getItems();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param items values to be set
      */
 
@@ -54,7 +54,7 @@ public interface OrderSetReturnInfoAction extends OrderUpdateAction {
     public void setItems(final ReturnInfoDraft... items);
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param items values to be set
      */
 

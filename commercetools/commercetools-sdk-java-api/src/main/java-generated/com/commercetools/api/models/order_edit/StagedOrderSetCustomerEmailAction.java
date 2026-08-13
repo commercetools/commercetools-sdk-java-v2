@@ -38,7 +38,7 @@ public interface StagedOrderSetCustomerEmailAction extends StagedOrderUpdateActi
     String SET_CUSTOMER_EMAIL = "setCustomerEmail";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return email
      */
 
@@ -46,7 +46,7 @@ public interface StagedOrderSetCustomerEmailAction extends StagedOrderUpdateActi
     public String getEmail();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param email value to be set
      */
 

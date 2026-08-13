@@ -37,7 +37,7 @@ public interface OrderSetCustomerIdAction extends OrderUpdateAction {
     String SET_CUSTOMER_ID = "setCustomerId";
 
     /**
-     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>. If empty, any existing value is removed.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>. If omitted, any existing value is removed.</p>
      * @return customerId
      */
 
@@ -45,7 +45,7 @@ public interface OrderSetCustomerIdAction extends OrderUpdateAction {
     public String getCustomerId();
 
     /**
-     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>. If empty, any existing value is removed.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>. If omitted, any existing value is removed.</p>
      * @param customerId value to be set
      */
 

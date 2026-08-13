@@ -52,7 +52,7 @@ public class SetKeyUpdateActionImpl implements SetKeyUpdateAction, ModelBase {
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      */
 
     public String getKey() {

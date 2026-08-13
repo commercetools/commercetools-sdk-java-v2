@@ -68,7 +68,7 @@ public class ProductAddToCategoryActionImpl implements ProductAddToCategoryActio
     }
 
     /**
-     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If empty, any existing value will be removed.</p>
+     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If omitted, any existing value is removed.</p>
      */
 
     public String getOrderHint() {

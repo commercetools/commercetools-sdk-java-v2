@@ -27,7 +27,7 @@ public class OrderSetShippingAddressActionBuilder implements Builder<OrderSetShi
     private com.commercetools.api.models.common.BaseAddress address;
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class OrderSetShippingAddressActionBuilder implements Builder<OrderSetShi
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class OrderSetShippingAddressActionBuilder implements Builder<OrderSetShi
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param address value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class OrderSetShippingAddressActionBuilder implements Builder<OrderSetShi
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return address
      */
 

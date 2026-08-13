@@ -36,7 +36,7 @@ public interface MyCustomerSetFirstNameAction extends MyCustomerUpdateAction {
     String SET_FIRST_NAME = "setFirstName";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return firstName
      */
 
@@ -44,7 +44,7 @@ public interface MyCustomerSetFirstNameAction extends MyCustomerUpdateAction {
     public String getFirstName();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param firstName value to be set
      */
 

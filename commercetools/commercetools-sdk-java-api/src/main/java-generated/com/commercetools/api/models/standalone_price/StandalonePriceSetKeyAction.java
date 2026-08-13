@@ -36,7 +36,7 @@ public interface StandalonePriceSetKeyAction extends StandalonePriceUpdateAction
     String SET_KEY = "setKey";
 
     /**
-     *  <p>Value to set. Must be unique. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Must be unique. If omitted, any existing value is removed.</p>
      * @return key
      */
 
@@ -44,7 +44,7 @@ public interface StandalonePriceSetKeyAction extends StandalonePriceUpdateAction
     public String getKey();
 
     /**
-     *  <p>Value to set. Must be unique. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Must be unique. If omitted, any existing value is removed.</p>
      * @param key value to be set
      */
 

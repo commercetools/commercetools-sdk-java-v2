@@ -26,7 +26,7 @@ public class CustomerSetSalutationActionBuilder implements Builder<CustomerSetSa
     private String salutation;
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param salutation value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class CustomerSetSalutationActionBuilder implements Builder<CustomerSetSa
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return salutation
      */
 

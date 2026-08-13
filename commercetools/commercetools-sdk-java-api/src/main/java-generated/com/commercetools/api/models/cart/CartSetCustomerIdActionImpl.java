@@ -53,7 +53,7 @@ public class CartSetCustomerIdActionImpl implements CartSetCustomerIdAction, Mod
     }
 
     /**
-     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>. If the Customer is assigned to a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a>, this update action also sets the value for the <code>customerGroup</code> field. If empty, the update action removes the value for both <code>customerId</code> and <code>customerGroup</code>.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>. If the Customer is assigned to a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a>, this update action also sets the value for the <code>customerGroup</code> field. If omitted, the update action removes the value for both <code>customerId</code> and <code>customerGroup</code>.</p>
      */
 
     public String getCustomerId() {

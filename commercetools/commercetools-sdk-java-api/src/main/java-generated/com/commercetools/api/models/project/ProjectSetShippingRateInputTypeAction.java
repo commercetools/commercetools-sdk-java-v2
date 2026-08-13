@@ -37,7 +37,7 @@ public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateActi
     String SET_SHIPPING_RATE_INPUT_TYPE = "setShippingRateInputType";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return shippingRateInputType
      */
     @Valid
@@ -45,7 +45,7 @@ public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateActi
     public ShippingRateInputType getShippingRateInputType();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param shippingRateInputType value to be set
      */
 

@@ -36,7 +36,7 @@ public interface DiscountCodeSetKeyAction extends DiscountCodeUpdateAction {
     String SET_KEY = "setKey";
 
     /**
-     *  <p>Unique value to set. If empty, any existing value will be removed.</p>
+     *  <p>Unique value to set. If omitted, any existing value is removed.</p>
      * @return key
      */
 
@@ -44,7 +44,7 @@ public interface DiscountCodeSetKeyAction extends DiscountCodeUpdateAction {
     public String getKey();
 
     /**
-     *  <p>Unique value to set. If empty, any existing value will be removed.</p>
+     *  <p>Unique value to set. If omitted, any existing value is removed.</p>
      * @param key value to be set
      */
 

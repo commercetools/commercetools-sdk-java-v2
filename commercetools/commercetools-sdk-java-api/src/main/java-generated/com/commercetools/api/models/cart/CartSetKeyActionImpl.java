@@ -52,7 +52,7 @@ public class CartSetKeyActionImpl implements CartSetKeyAction, ModelBase {
     }
 
     /**
-     *  <p>Value to set. If empty, any existing key will be removed.</p>
+     *  <p>Value to set. If omitted, any existing key is removed.</p>
      */
 
     public String getKey() {

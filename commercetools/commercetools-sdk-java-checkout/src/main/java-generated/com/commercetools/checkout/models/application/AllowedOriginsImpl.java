@@ -52,7 +52,7 @@ public class AllowedOriginsImpl implements AllowedOrigins, ModelBase {
     }
 
     /**
-     *  <p>Value of the URL to set. If empty, any existing value will be removed.</p>
+     *  <p>Origins to allow. Set to an empty array to remove any existing origins.</p>
      */
 
     public java.util.List<String> getOrigins() {

@@ -36,7 +36,7 @@ public interface PaymentSetMethodInfoMethodAction extends PaymentUpdateAction {
     String SET_METHOD_INFO_METHOD = "setMethodInfoMethod";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return method
      */
 
@@ -44,7 +44,7 @@ public interface PaymentSetMethodInfoMethodAction extends PaymentUpdateAction {
     public String getMethod();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param method value to be set
      */
 

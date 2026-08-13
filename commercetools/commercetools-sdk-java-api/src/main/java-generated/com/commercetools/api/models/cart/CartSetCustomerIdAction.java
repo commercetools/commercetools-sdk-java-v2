@@ -37,7 +37,7 @@ public interface CartSetCustomerIdAction extends CartUpdateAction {
     String SET_CUSTOMER_ID = "setCustomerId";
 
     /**
-     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>. If the Customer is assigned to a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a>, this update action also sets the value for the <code>customerGroup</code> field. If empty, the update action removes the value for both <code>customerId</code> and <code>customerGroup</code>.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>. If the Customer is assigned to a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a>, this update action also sets the value for the <code>customerGroup</code> field. If omitted, the update action removes the value for both <code>customerId</code> and <code>customerGroup</code>.</p>
      * @return customerId
      */
 
@@ -45,7 +45,7 @@ public interface CartSetCustomerIdAction extends CartUpdateAction {
     public String getCustomerId();
 
     /**
-     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>. If the Customer is assigned to a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a>, this update action also sets the value for the <code>customerGroup</code> field. If empty, the update action removes the value for both <code>customerId</code> and <code>customerGroup</code>.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>. If the Customer is assigned to a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomerGroup" rel="nofollow">CustomerGroup</a>, this update action also sets the value for the <code>customerGroup</code> field. If omitted, the update action removes the value for both <code>customerId</code> and <code>customerGroup</code>.</p>
      * @param customerId value to be set
      */
 

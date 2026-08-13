@@ -49,7 +49,7 @@ public interface PaymentSetMethodInfoAction extends PaymentUpdateAction {
     public String getPaymentInterface();
 
     /**
-     *  <p>Payment method to use—for example, a credit card or direct debit. If empty, any existing value will be removed.</p>
+     *  <p>Payment method to use—for example, a credit card or direct debit. If omitted, any existing value is removed.</p>
      *  <p>Setting this field is equivalent to the <code>setMethodInfoMethod</code> action and will generate the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoMethodSetMessage" rel="nofollow">PaymentMethodInfoMethodSet</a> Message.</p>
      * @return method
      */
@@ -58,7 +58,7 @@ public interface PaymentSetMethodInfoAction extends PaymentUpdateAction {
     public String getMethod();
 
     /**
-     *  <p>Name of the Payment Method. If empty, any existing value will be removed.</p>
+     *  <p>Name of the Payment Method. If omitted, any existing value is removed.</p>
      *  <p>Setting this field is equivalent to the <code>setMethodInfoName</code> action and will generate the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoNameSetMessage" rel="nofollow">PaymentMethodInfoNameSet</a> Message.</p>
      * @return name
      */
@@ -67,7 +67,7 @@ public interface PaymentSetMethodInfoAction extends PaymentUpdateAction {
     public LocalizedString getName();
 
     /**
-     *  <p>Tokenized payment method information of the Payment Method. If empty, any existing value will be removed.</p>
+     *  <p>Tokenized payment method information of the Payment Method. If omitted, any existing value is removed.</p>
      *  <p>Setting this field is equivalent to the <code>setMethodInfoToken</code> action and will generate the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoTokenSetMessage" rel="nofollow">PaymentMethodInfoTokenSet</a> Message.</p>
      * @return token
      */
@@ -76,7 +76,7 @@ public interface PaymentSetMethodInfoAction extends PaymentUpdateAction {
     public PaymentMethodToken getToken();
 
     /**
-     *  <p>Account or instance of the payment interface when multiple accounts are used (per interface). If empty, any existing value will be removed.</p>
+     *  <p>Account or instance of the payment interface when multiple accounts are used (per interface). If omitted, any existing value is removed.</p>
      *  <p>Setting this field is equivalent to the <code>setMethodInfoInterfaceAccount</code> action and will generate the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoInterfaceAccountSetMessage" rel="nofollow">PaymentMethodInfoInterfaceAccountSet</a> Message.</p>
      * @return interfaceAccount
      */
@@ -85,7 +85,7 @@ public interface PaymentSetMethodInfoAction extends PaymentUpdateAction {
     public String getInterfaceAccount();
 
     /**
-     *  <p>Custom Fields for the PaymentMethodInfo. If not provided, any existing Custom Fields will be removed, including the Custom Type.</p>
+     *  <p>Custom Fields for the PaymentMethodInfo. If omitted, any existing Custom Fields are removed, including the Custom Type.</p>
      *  <p>Setting this field is equivalent to the <code>setMethodInfoCustomType</code> and <code>setMethodInfoCustomField</code> actions, and will generate the following Messages:</p>
      *  <ul>
      *   <li>Adding or updating a Custom Type on a Payment Method Info generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoCustomTypeSetMessage" rel="nofollow">PaymentMethodInfoCustomTypeSet</a> Message, removing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoCustomTypeRemovedMessage" rel="nofollow">PaymentMethodInfoCustomTypeRemoved</a> Message.</li>
@@ -106,7 +106,7 @@ public interface PaymentSetMethodInfoAction extends PaymentUpdateAction {
     public void setPaymentInterface(final String paymentInterface);
 
     /**
-     *  <p>Payment method to use—for example, a credit card or direct debit. If empty, any existing value will be removed.</p>
+     *  <p>Payment method to use—for example, a credit card or direct debit. If omitted, any existing value is removed.</p>
      *  <p>Setting this field is equivalent to the <code>setMethodInfoMethod</code> action and will generate the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoMethodSetMessage" rel="nofollow">PaymentMethodInfoMethodSet</a> Message.</p>
      * @param method value to be set
      */
@@ -114,7 +114,7 @@ public interface PaymentSetMethodInfoAction extends PaymentUpdateAction {
     public void setMethod(final String method);
 
     /**
-     *  <p>Name of the Payment Method. If empty, any existing value will be removed.</p>
+     *  <p>Name of the Payment Method. If omitted, any existing value is removed.</p>
      *  <p>Setting this field is equivalent to the <code>setMethodInfoName</code> action and will generate the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoNameSetMessage" rel="nofollow">PaymentMethodInfoNameSet</a> Message.</p>
      * @param name value to be set
      */
@@ -122,7 +122,7 @@ public interface PaymentSetMethodInfoAction extends PaymentUpdateAction {
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>Tokenized payment method information of the Payment Method. If empty, any existing value will be removed.</p>
+     *  <p>Tokenized payment method information of the Payment Method. If omitted, any existing value is removed.</p>
      *  <p>Setting this field is equivalent to the <code>setMethodInfoToken</code> action and will generate the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoTokenSetMessage" rel="nofollow">PaymentMethodInfoTokenSet</a> Message.</p>
      * @param token value to be set
      */
@@ -130,7 +130,7 @@ public interface PaymentSetMethodInfoAction extends PaymentUpdateAction {
     public void setToken(final PaymentMethodToken token);
 
     /**
-     *  <p>Account or instance of the payment interface when multiple accounts are used (per interface). If empty, any existing value will be removed.</p>
+     *  <p>Account or instance of the payment interface when multiple accounts are used (per interface). If omitted, any existing value is removed.</p>
      *  <p>Setting this field is equivalent to the <code>setMethodInfoInterfaceAccount</code> action and will generate the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoInterfaceAccountSetMessage" rel="nofollow">PaymentMethodInfoInterfaceAccountSet</a> Message.</p>
      * @param interfaceAccount value to be set
      */
@@ -138,7 +138,7 @@ public interface PaymentSetMethodInfoAction extends PaymentUpdateAction {
     public void setInterfaceAccount(final String interfaceAccount);
 
     /**
-     *  <p>Custom Fields for the PaymentMethodInfo. If not provided, any existing Custom Fields will be removed, including the Custom Type.</p>
+     *  <p>Custom Fields for the PaymentMethodInfo. If omitted, any existing Custom Fields are removed, including the Custom Type.</p>
      *  <p>Setting this field is equivalent to the <code>setMethodInfoCustomType</code> and <code>setMethodInfoCustomField</code> actions, and will generate the following Messages:</p>
      *  <ul>
      *   <li>Adding or updating a Custom Type on a Payment Method Info generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoCustomTypeSetMessage" rel="nofollow">PaymentMethodInfoCustomTypeSet</a> Message, removing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoCustomTypeRemovedMessage" rel="nofollow">PaymentMethodInfoCustomTypeRemoved</a> Message.</li>

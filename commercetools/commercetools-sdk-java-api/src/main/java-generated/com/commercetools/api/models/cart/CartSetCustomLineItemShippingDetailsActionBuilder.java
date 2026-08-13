@@ -57,7 +57,7 @@ public class CartSetCustomLineItemShippingDetailsActionBuilder
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param builder function to build the shippingDetails value
      * @return Builder
      */
@@ -70,7 +70,7 @@ public class CartSetCustomLineItemShippingDetailsActionBuilder
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param builder function to build the shippingDetails value
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class CartSetCustomLineItemShippingDetailsActionBuilder
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param shippingDetails value to be set
      * @return Builder
      */
@@ -114,7 +114,7 @@ public class CartSetCustomLineItemShippingDetailsActionBuilder
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return shippingDetails
      */
 

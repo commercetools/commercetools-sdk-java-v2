@@ -38,7 +38,7 @@ public interface ShoppingListSetSlugAction extends ShoppingListUpdateAction {
     String SET_SLUG = "setSlug";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code></p>
+     *  <p>Value to set. If omitted, any existing value is removed. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code></p>
      * @return slug
      */
     @Valid
@@ -46,7 +46,7 @@ public interface ShoppingListSetSlugAction extends ShoppingListUpdateAction {
     public LocalizedString getSlug();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code></p>
+     *  <p>Value to set. If omitted, any existing value is removed. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code></p>
      * @param slug value to be set
      */
 

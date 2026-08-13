@@ -60,7 +60,7 @@ public interface StagedOrderSetParcelItemsAction extends StagedOrderUpdateAction
     public String getParcelKey();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Set to an empty array to remove any existing value.</p>
      * @return items
      */
     @NotNull
@@ -85,7 +85,7 @@ public interface StagedOrderSetParcelItemsAction extends StagedOrderUpdateAction
     public void setParcelKey(final String parcelKey);
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Set to an empty array to remove any existing value.</p>
      * @param items values to be set
      */
 
@@ -93,7 +93,7 @@ public interface StagedOrderSetParcelItemsAction extends StagedOrderUpdateAction
     public void setItems(final DeliveryItem... items);
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Set to an empty array to remove any existing value.</p>
      * @param items values to be set
      */
 

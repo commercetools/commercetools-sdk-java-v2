@@ -26,7 +26,7 @@ public class SetPaymentReturnUrlUpdateActionBuilder implements Builder<SetPaymen
     private String paymentReturnUrl;
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @param paymentReturnUrl value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class SetPaymentReturnUrlUpdateActionBuilder implements Builder<SetPaymen
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @return paymentReturnUrl
      */
 

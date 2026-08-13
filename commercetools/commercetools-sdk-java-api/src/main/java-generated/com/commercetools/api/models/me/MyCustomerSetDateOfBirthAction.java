@@ -37,7 +37,7 @@ public interface MyCustomerSetDateOfBirthAction extends MyCustomerUpdateAction {
     String SET_DATE_OF_BIRTH = "setDateOfBirth";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return dateOfBirth
      */
 
@@ -45,7 +45,7 @@ public interface MyCustomerSetDateOfBirthAction extends MyCustomerUpdateAction {
     public LocalDate getDateOfBirth();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param dateOfBirth value to be set
      */
 

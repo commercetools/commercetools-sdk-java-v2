@@ -57,7 +57,7 @@ public interface StagedOrderSetParcelTrackingDataAction extends StagedOrderUpdat
     public String getParcelKey();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return trackingData
      */
     @Valid
@@ -81,7 +81,7 @@ public interface StagedOrderSetParcelTrackingDataAction extends StagedOrderUpdat
     public void setParcelKey(final String parcelKey);
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param trackingData value to be set
      */
 

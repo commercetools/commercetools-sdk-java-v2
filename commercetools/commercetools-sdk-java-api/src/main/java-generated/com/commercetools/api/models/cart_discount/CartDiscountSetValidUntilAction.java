@@ -37,7 +37,7 @@ public interface CartDiscountSetValidUntilAction extends CartDiscountUpdateActio
     String SET_VALID_UNTIL = "setValidUntil";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return validUntil
      */
 
@@ -45,7 +45,7 @@ public interface CartDiscountSetValidUntilAction extends CartDiscountUpdateActio
     public ZonedDateTime getValidUntil();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param validUntil value to be set
      */
 

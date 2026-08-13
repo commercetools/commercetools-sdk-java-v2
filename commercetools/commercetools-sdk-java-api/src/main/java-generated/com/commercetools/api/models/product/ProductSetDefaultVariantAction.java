@@ -38,7 +38,7 @@ public interface ProductSetDefaultVariantAction extends ProductUpdateAction {
     String SET_DEFAULT_VARIANT = "setDefaultVariant";
 
     /**
-     *  <p>The Variant to set as default. If empty, any existing value will be removed.</p>
+     *  <p>The Variant to set as default. If omitted, any existing value is removed.</p>
      * @return variant
      */
     @Valid
@@ -54,7 +54,7 @@ public interface ProductSetDefaultVariantAction extends ProductUpdateAction {
     public Boolean getStaged();
 
     /**
-     *  <p>The Variant to set as default. If empty, any existing value will be removed.</p>
+     *  <p>The Variant to set as default. If omitted, any existing value is removed.</p>
      * @param variant value to be set
      */
 

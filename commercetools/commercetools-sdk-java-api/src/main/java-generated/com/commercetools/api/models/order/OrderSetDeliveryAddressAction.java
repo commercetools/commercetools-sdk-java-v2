@@ -56,7 +56,7 @@ public interface OrderSetDeliveryAddressAction extends OrderUpdateAction {
     public String getDeliveryKey();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return address
      */
     @Valid
@@ -80,7 +80,7 @@ public interface OrderSetDeliveryAddressAction extends OrderUpdateAction {
     public void setDeliveryKey(final String deliveryKey);
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param address value to be set
      */
 

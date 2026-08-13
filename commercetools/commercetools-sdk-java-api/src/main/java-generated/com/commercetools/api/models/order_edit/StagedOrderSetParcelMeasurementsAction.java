@@ -57,7 +57,7 @@ public interface StagedOrderSetParcelMeasurementsAction extends StagedOrderUpdat
     public String getParcelKey();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return measurements
      */
     @Valid
@@ -81,7 +81,7 @@ public interface StagedOrderSetParcelMeasurementsAction extends StagedOrderUpdat
     public void setParcelKey(final String parcelKey);
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param measurements value to be set
      */
 

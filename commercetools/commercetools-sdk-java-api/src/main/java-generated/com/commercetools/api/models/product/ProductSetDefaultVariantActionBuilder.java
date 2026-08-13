@@ -30,7 +30,7 @@ public class ProductSetDefaultVariantActionBuilder implements Builder<ProductSet
     private Boolean staged;
 
     /**
-     *  <p>The Variant to set as default. If empty, any existing value will be removed.</p>
+     *  <p>The Variant to set as default. If omitted, any existing value is removed.</p>
      * @param builder function to build the variant value
      * @return Builder
      */
@@ -43,7 +43,7 @@ public class ProductSetDefaultVariantActionBuilder implements Builder<ProductSet
     }
 
     /**
-     *  <p>The Variant to set as default. If empty, any existing value will be removed.</p>
+     *  <p>The Variant to set as default. If omitted, any existing value is removed.</p>
      * @param builder function to build the variant value
      * @return Builder
      */
@@ -55,7 +55,7 @@ public class ProductSetDefaultVariantActionBuilder implements Builder<ProductSet
     }
 
     /**
-     *  <p>The Variant to set as default. If empty, any existing value will be removed.</p>
+     *  <p>The Variant to set as default. If omitted, any existing value is removed.</p>
      * @param variant value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class ProductSetDefaultVariantActionBuilder implements Builder<ProductSet
     }
 
     /**
-     *  <p>The Variant to set as default. If empty, any existing value will be removed.</p>
+     *  <p>The Variant to set as default. If omitted, any existing value is removed.</p>
      * @return variant
      */
 

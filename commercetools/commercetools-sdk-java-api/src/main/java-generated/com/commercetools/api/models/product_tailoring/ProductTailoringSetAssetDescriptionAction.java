@@ -78,7 +78,7 @@ public interface ProductTailoringSetAssetDescriptionAction extends ProductTailor
     public String getAssetKey();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return description
      */
     @Valid
@@ -121,7 +121,7 @@ public interface ProductTailoringSetAssetDescriptionAction extends ProductTailor
     public void setAssetKey(final String assetKey);
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param description value to be set
      */
 

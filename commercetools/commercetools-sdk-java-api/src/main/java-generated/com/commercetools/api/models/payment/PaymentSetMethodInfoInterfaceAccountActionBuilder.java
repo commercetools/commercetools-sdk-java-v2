@@ -27,7 +27,7 @@ public class PaymentSetMethodInfoInterfaceAccountActionBuilder
     private String interfaceAccount;
 
     /**
-     *  <p>New account or instance of the payment interface. If empty, any existing value will be removed.</p>
+     *  <p>New account or instance of the payment interface. If omitted, any existing value is removed.</p>
      * @param interfaceAccount value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class PaymentSetMethodInfoInterfaceAccountActionBuilder
     }
 
     /**
-     *  <p>New account or instance of the payment interface. If empty, any existing value will be removed.</p>
+     *  <p>New account or instance of the payment interface. If omitted, any existing value is removed.</p>
      * @return interfaceAccount
      */
 

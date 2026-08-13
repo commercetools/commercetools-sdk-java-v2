@@ -53,7 +53,7 @@ public interface CartSetLineItemShippingDetailsAction extends CartUpdateAction {
     public String getLineItemKey();
 
     /**
-     *  <p>Value to set. If empty, the existing value is removed.</p>
+     *  <p>Value to set. If omitted, the existing value is removed.</p>
      * @return shippingDetails
      */
     @Valid
@@ -75,7 +75,7 @@ public interface CartSetLineItemShippingDetailsAction extends CartUpdateAction {
     public void setLineItemKey(final String lineItemKey);
 
     /**
-     *  <p>Value to set. If empty, the existing value is removed.</p>
+     *  <p>Value to set. If omitted, the existing value is removed.</p>
      * @param shippingDetails value to be set
      */
 

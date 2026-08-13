@@ -26,7 +26,7 @@ public class MyCustomerSetDateOfBirthActionBuilder implements Builder<MyCustomer
     private java.time.LocalDate dateOfBirth;
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param dateOfBirth value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class MyCustomerSetDateOfBirthActionBuilder implements Builder<MyCustomer
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return dateOfBirth
      */
 

@@ -58,7 +58,7 @@ public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
     public String getDeliveryKey();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. Set to an empty array to remove any existing value.</p>
      * @return items
      */
     @NotNull
@@ -83,7 +83,7 @@ public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
     public void setDeliveryKey(final String deliveryKey);
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. Set to an empty array to remove any existing value.</p>
      * @param items values to be set
      */
 
@@ -91,7 +91,7 @@ public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
     public void setItems(final DeliveryItem... items);
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. Set to an empty array to remove any existing value.</p>
      * @param items values to be set
      */
 

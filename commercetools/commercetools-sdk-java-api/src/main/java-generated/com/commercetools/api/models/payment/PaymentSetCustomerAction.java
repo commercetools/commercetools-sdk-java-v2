@@ -38,7 +38,7 @@ public interface PaymentSetCustomerAction extends PaymentUpdateAction {
     String SET_CUSTOMER = "setCustomer";
 
     /**
-     *  <p>Value to set. If empty, any existing reference is removed.</p>
+     *  <p>Value to set. If omitted, any existing reference is removed.</p>
      * @return customer
      */
     @Valid
@@ -46,7 +46,7 @@ public interface PaymentSetCustomerAction extends PaymentUpdateAction {
     public CustomerResourceIdentifier getCustomer();
 
     /**
-     *  <p>Value to set. If empty, any existing reference is removed.</p>
+     *  <p>Value to set. If omitted, any existing reference is removed.</p>
      * @param customer value to be set
      */
 

@@ -53,7 +53,7 @@ public interface CartSetLineItemTaxRateAction extends CartUpdateAction {
     public String getLineItemKey();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return externalTaxRate
      */
     @Valid
@@ -83,7 +83,7 @@ public interface CartSetLineItemTaxRateAction extends CartUpdateAction {
     public void setLineItemKey(final String lineItemKey);
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param externalTaxRate value to be set
      */
 

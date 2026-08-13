@@ -54,7 +54,7 @@ public interface CartSetLineItemRecurrenceInfoAction extends CartUpdateAction {
     public String getLineItemKey();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return recurrenceInfo
      */
     @Valid
@@ -76,7 +76,7 @@ public interface CartSetLineItemRecurrenceInfoAction extends CartUpdateAction {
     public void setLineItemKey(final String lineItemKey);
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param recurrenceInfo value to be set
      */
 

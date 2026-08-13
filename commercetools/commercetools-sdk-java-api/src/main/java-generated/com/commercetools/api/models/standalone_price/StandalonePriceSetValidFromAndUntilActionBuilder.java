@@ -30,7 +30,7 @@ public class StandalonePriceSetValidFromAndUntilActionBuilder
     private java.time.ZonedDateTime validUntil;
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param validFrom value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class StandalonePriceSetValidFromAndUntilActionBuilder
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param validUntil value to be set
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class StandalonePriceSetValidFromAndUntilActionBuilder
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return validFrom
      */
 
@@ -64,7 +64,7 @@ public class StandalonePriceSetValidFromAndUntilActionBuilder
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return validUntil
      */
 

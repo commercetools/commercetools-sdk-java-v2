@@ -52,7 +52,7 @@ public class ApprovalRuleSetKeyActionImpl implements ApprovalRuleSetKeyAction, M
     }
 
     /**
-     *  <p>Value to set. Must be unique within a Business Unit. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Must be unique within a Business Unit. If omitted, any existing value is removed.</p>
      */
 
     public String getKey() {

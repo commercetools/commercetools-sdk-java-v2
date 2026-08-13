@@ -25,7 +25,7 @@ public class StateSetNameActionBuilder implements Builder<StateSetNameAction> {
     private com.commercetools.api.models.common.LocalizedString name;
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Set to an empty object to remove any existing value.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class StateSetNameActionBuilder implements Builder<StateSetNameAction> {
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Set to an empty object to remove any existing value.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class StateSetNameActionBuilder implements Builder<StateSetNameAction> {
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Set to an empty object to remove any existing value.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class StateSetNameActionBuilder implements Builder<StateSetNameAction> {
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Set to an empty object to remove any existing value.</p>
      * @return name
      */
 

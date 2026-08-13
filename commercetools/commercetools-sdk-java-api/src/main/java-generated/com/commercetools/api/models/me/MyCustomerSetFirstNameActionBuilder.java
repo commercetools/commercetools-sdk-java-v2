@@ -26,7 +26,7 @@ public class MyCustomerSetFirstNameActionBuilder implements Builder<MyCustomerSe
     private String firstName;
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param firstName value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class MyCustomerSetFirstNameActionBuilder implements Builder<MyCustomerSe
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return firstName
      */
 

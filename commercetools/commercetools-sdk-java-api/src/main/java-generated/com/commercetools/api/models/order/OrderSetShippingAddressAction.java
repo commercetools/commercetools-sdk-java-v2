@@ -39,7 +39,7 @@ public interface OrderSetShippingAddressAction extends OrderUpdateAction {
     String SET_SHIPPING_ADDRESS = "setShippingAddress";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return address
      */
     @Valid
@@ -47,7 +47,7 @@ public interface OrderSetShippingAddressAction extends OrderUpdateAction {
     public BaseAddress getAddress();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param address value to be set
      */
 

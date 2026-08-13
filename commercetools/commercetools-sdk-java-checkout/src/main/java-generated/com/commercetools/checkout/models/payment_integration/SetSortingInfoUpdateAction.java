@@ -37,7 +37,7 @@ public interface SetSortingInfoUpdateAction extends PaymentIntegrationUpdateActi
     String SET_SORTING_INFO = "setSortingInfo";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @return sortingInfo
      */
     @Valid
@@ -45,7 +45,7 @@ public interface SetSortingInfoUpdateAction extends PaymentIntegrationUpdateActi
     public SortingInfo getSortingInfo();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @param sortingInfo value to be set
      */
 

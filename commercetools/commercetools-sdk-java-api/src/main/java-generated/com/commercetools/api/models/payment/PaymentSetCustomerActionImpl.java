@@ -53,7 +53,7 @@ public class PaymentSetCustomerActionImpl implements PaymentSetCustomerAction, M
     }
 
     /**
-     *  <p>Value to set. If empty, any existing reference is removed.</p>
+     *  <p>Value to set. If omitted, any existing reference is removed.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer() {

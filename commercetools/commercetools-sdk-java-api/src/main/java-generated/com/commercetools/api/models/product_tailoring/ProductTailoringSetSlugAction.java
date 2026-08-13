@@ -38,7 +38,7 @@ public interface ProductTailoringSetSlugAction extends ProductTailoringUpdateAct
     String SET_SLUG = "setSlug";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return slug
      */
     @Valid
@@ -54,7 +54,7 @@ public interface ProductTailoringSetSlugAction extends ProductTailoringUpdateAct
     public Boolean getStaged();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param slug value to be set
      */
 

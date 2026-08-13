@@ -47,7 +47,7 @@ public interface StagedOrderSetShippingMethodTaxRateAction extends StagedOrderUp
     public String getShippingKey();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return externalTaxRate
      */
     @Valid
@@ -62,7 +62,7 @@ public interface StagedOrderSetShippingMethodTaxRateAction extends StagedOrderUp
     public void setShippingKey(final String shippingKey);
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param externalTaxRate value to be set
      */
 

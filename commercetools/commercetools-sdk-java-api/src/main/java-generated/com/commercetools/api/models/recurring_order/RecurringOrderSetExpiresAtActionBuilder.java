@@ -26,7 +26,7 @@ public class RecurringOrderSetExpiresAtActionBuilder implements Builder<Recurrin
     private java.time.ZonedDateTime expiresAt;
 
     /**
-     *  <p>Date and time (UTC) the Recurring Order should expire. If empty, any existing value will be removed.</p>
+     *  <p>Date and time (UTC) the Recurring Order should expire. If omitted, any existing value is removed.</p>
      *  <p>If the date or time is extended or removed when the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderState" rel="nofollow">RecurringOrderState</a> is <code>Expired</code>, the state will be updated to <code>Active</code>.</p>
      * @param expiresAt value to be set
      * @return Builder
@@ -38,7 +38,7 @@ public class RecurringOrderSetExpiresAtActionBuilder implements Builder<Recurrin
     }
 
     /**
-     *  <p>Date and time (UTC) the Recurring Order should expire. If empty, any existing value will be removed.</p>
+     *  <p>Date and time (UTC) the Recurring Order should expire. If omitted, any existing value is removed.</p>
      *  <p>If the date or time is extended or removed when the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderState" rel="nofollow">RecurringOrderState</a> is <code>Expired</code>, the state will be updated to <code>Active</code>.</p>
      * @return expiresAt
      */

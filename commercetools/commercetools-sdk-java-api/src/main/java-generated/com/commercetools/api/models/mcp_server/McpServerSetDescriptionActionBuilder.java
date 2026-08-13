@@ -27,7 +27,7 @@ public class McpServerSetDescriptionActionBuilder implements Builder<McpServerSe
     private com.commercetools.api.models.common.LocalizedString description;
 
     /**
-     *  <p>Value to set. If empty or absent, the existing description is removed.</p>
+     *  <p>Value to set. If omitted, the existing description is removed.</p>
      * @param builder function to build the description value
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class McpServerSetDescriptionActionBuilder implements Builder<McpServerSe
     }
 
     /**
-     *  <p>Value to set. If empty or absent, the existing description is removed.</p>
+     *  <p>Value to set. If omitted, the existing description is removed.</p>
      * @param builder function to build the description value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class McpServerSetDescriptionActionBuilder implements Builder<McpServerSe
     }
 
     /**
-     *  <p>Value to set. If empty or absent, the existing description is removed.</p>
+     *  <p>Value to set. If omitted, the existing description is removed.</p>
      * @param description value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class McpServerSetDescriptionActionBuilder implements Builder<McpServerSe
     }
 
     /**
-     *  <p>Value to set. If empty or absent, the existing description is removed.</p>
+     *  <p>Value to set. If omitted, the existing description is removed.</p>
      * @return description
      */
 

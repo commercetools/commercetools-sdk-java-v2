@@ -36,7 +36,7 @@ public interface PaymentSetAnonymousIdAction extends PaymentUpdateAction {
     String SET_ANONYMOUS_ID = "setAnonymousId";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return anonymousId
      */
 
@@ -44,7 +44,7 @@ public interface PaymentSetAnonymousIdAction extends PaymentUpdateAction {
     public String getAnonymousId();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param anonymousId value to be set
      */
 

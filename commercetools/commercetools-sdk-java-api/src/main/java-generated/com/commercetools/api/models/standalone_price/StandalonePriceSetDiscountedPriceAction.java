@@ -39,7 +39,7 @@ public interface StandalonePriceSetDiscountedPriceAction extends StandalonePrice
     String SET_DISCOUNTED_PRICE = "setDiscountedPrice";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      *  <p>The referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> must be of type external, active, and its predicate must match the referenced Price.</p>
      * @return discounted
      */
@@ -48,7 +48,7 @@ public interface StandalonePriceSetDiscountedPriceAction extends StandalonePrice
     public DiscountedPriceDraft getDiscounted();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      *  <p>The referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> must be of type external, active, and its predicate must match the referenced Price.</p>
      * @param discounted value to be set
      */

@@ -36,7 +36,7 @@ public interface CustomerSetExternalIdAction extends CustomerUpdateAction {
     String SET_EXTERNAL_ID = "setExternalId";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return externalId
      */
 
@@ -44,7 +44,7 @@ public interface CustomerSetExternalIdAction extends CustomerUpdateAction {
     public String getExternalId();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param externalId value to be set
      */
 

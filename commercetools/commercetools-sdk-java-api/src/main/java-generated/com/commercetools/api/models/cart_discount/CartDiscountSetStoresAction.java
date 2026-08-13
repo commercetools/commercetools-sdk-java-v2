@@ -42,7 +42,7 @@ public interface CartDiscountSetStoresAction extends CartDiscountUpdateAction {
     String SET_STORES = "setStores";
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set. Overrides the current list of Stores. If empty, any existing values will be removed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set. Overrides the current list of Stores. Set to an empty array to remove all existing values.</p>
      *  <p>A failed update can return the following errors:</p>
      *  <ul>
      *   <li>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</li>
@@ -56,7 +56,7 @@ public interface CartDiscountSetStoresAction extends CartDiscountUpdateAction {
     public List<StoreResourceIdentifier> getStores();
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set. Overrides the current list of Stores. If empty, any existing values will be removed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set. Overrides the current list of Stores. Set to an empty array to remove all existing values.</p>
      *  <p>A failed update can return the following errors:</p>
      *  <ul>
      *   <li>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</li>
@@ -69,7 +69,7 @@ public interface CartDiscountSetStoresAction extends CartDiscountUpdateAction {
     public void setStores(final StoreResourceIdentifier... stores);
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set. Overrides the current list of Stores. If empty, any existing values will be removed.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to set. Overrides the current list of Stores. Set to an empty array to remove all existing values.</p>
      *  <p>A failed update can return the following errors:</p>
      *  <ul>
      *   <li>If the referenced Stores exceed the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxStoreReferencesReachedError" rel="nofollow">MaxStoreReferencesReached</a> error is returned.</li>

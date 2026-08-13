@@ -37,7 +37,7 @@ public interface SetDisplayInfoUpdateAction extends PaymentIntegrationUpdateActi
     String SET_DISPLAY_INFO = "setDisplayInfo";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @return displayInfo
      */
     @Valid
@@ -45,7 +45,7 @@ public interface SetDisplayInfoUpdateAction extends PaymentIntegrationUpdateActi
     public DisplayInfo getDisplayInfo();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @param displayInfo value to be set
      */
 

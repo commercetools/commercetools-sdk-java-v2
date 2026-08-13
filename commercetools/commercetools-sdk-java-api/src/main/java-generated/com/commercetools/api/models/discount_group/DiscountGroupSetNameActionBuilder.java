@@ -27,7 +27,7 @@ public class DiscountGroupSetNameActionBuilder implements Builder<DiscountGroupS
     private com.commercetools.api.models.common.LocalizedString name;
 
     /**
-     *  <p>New value to set. If empty, any existing value will be removed.</p>
+     *  <p>New value to set. If omitted, any existing value is removed.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class DiscountGroupSetNameActionBuilder implements Builder<DiscountGroupS
     }
 
     /**
-     *  <p>New value to set. If empty, any existing value will be removed.</p>
+     *  <p>New value to set. If omitted, any existing value is removed.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class DiscountGroupSetNameActionBuilder implements Builder<DiscountGroupS
     }
 
     /**
-     *  <p>New value to set. If empty, any existing value will be removed.</p>
+     *  <p>New value to set. If omitted, any existing value is removed.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class DiscountGroupSetNameActionBuilder implements Builder<DiscountGroupS
     }
 
     /**
-     *  <p>New value to set. If empty, any existing value will be removed.</p>
+     *  <p>New value to set. If omitted, any existing value is removed.</p>
      * @return name
      */
 

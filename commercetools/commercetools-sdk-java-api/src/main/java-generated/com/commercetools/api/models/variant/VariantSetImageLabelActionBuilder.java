@@ -43,7 +43,7 @@ public class VariantSetImageLabelActionBuilder implements Builder<VariantSetImag
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param label value to be set
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class VariantSetImageLabelActionBuilder implements Builder<VariantSetImag
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return label
      */
 

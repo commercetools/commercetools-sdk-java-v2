@@ -37,7 +37,7 @@ public interface OrderSetCustomerEmailAction extends OrderUpdateAction {
     String SET_CUSTOMER_EMAIL = "setCustomerEmail";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return email
      */
 
@@ -45,7 +45,7 @@ public interface OrderSetCustomerEmailAction extends OrderUpdateAction {
     public String getEmail();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param email value to be set
      */
 

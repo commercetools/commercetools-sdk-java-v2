@@ -27,7 +27,7 @@ public class SetDisplayInfoLogoUrlUpdateActionBuilder implements Builder<SetDisp
     private com.commercetools.checkout.models.common.LocalizedString logoUrl;
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @param builder function to build the logoUrl value
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class SetDisplayInfoLogoUrlUpdateActionBuilder implements Builder<SetDisp
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @param builder function to build the logoUrl value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class SetDisplayInfoLogoUrlUpdateActionBuilder implements Builder<SetDisp
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @param logoUrl value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class SetDisplayInfoLogoUrlUpdateActionBuilder implements Builder<SetDisp
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @return logoUrl
      */
 

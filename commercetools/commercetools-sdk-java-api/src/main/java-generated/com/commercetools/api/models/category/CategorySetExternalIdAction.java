@@ -36,7 +36,7 @@ public interface CategorySetExternalIdAction extends CategoryUpdateAction {
     String SET_EXTERNAL_ID = "setExternalId";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return externalId
      */
 
@@ -44,7 +44,7 @@ public interface CategorySetExternalIdAction extends CategoryUpdateAction {
     public String getExternalId();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param externalId value to be set
      */
 

@@ -36,7 +36,7 @@ public interface OrderSetPurchaseOrderNumberAction extends OrderUpdateAction {
     String SET_PURCHASE_ORDER_NUMBER = "setPurchaseOrderNumber";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return purchaseOrderNumber
      */
 
@@ -44,7 +44,7 @@ public interface OrderSetPurchaseOrderNumberAction extends OrderUpdateAction {
     public String getPurchaseOrderNumber();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param purchaseOrderNumber value to be set
      */
 

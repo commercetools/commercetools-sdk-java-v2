@@ -57,7 +57,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. Set to an empty array to remove any existing value.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. Set to an empty array to remove any existing value.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. Set to an empty array to remove any existing value.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -96,7 +96,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. Set to an empty array to remove any existing value.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -111,7 +111,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. Set to an empty array to remove any existing value.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -124,7 +124,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. Set to an empty array to remove any existing value.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -135,7 +135,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. Set to an empty array to remove any existing value.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -168,7 +168,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. Set to an empty array to remove any existing value.</p>
      * @return items
      */
 

@@ -48,7 +48,7 @@ public interface ProductTypeSetInputTipAction extends ProductTypeUpdateAction {
     public String getAttributeName();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return inputTip
      */
     @Valid
@@ -63,7 +63,7 @@ public interface ProductTypeSetInputTipAction extends ProductTypeUpdateAction {
     public void setAttributeName(final String attributeName);
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param inputTip value to be set
      */
 

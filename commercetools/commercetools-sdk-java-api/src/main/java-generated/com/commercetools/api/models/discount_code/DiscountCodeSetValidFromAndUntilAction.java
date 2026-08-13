@@ -37,7 +37,7 @@ public interface DiscountCodeSetValidFromAndUntilAction extends DiscountCodeUpda
     String SET_VALID_FROM_AND_UNTIL = "setValidFromAndUntil";
 
     /**
-     *  <p>Value to set that must be earlier than <code>validUntil</code>. If empty, any existing value will be removed.</p>
+     *  <p>Value to set that must be earlier than <code>validUntil</code>. If omitted, any existing value is removed.</p>
      * @return validFrom
      */
 
@@ -45,7 +45,7 @@ public interface DiscountCodeSetValidFromAndUntilAction extends DiscountCodeUpda
     public ZonedDateTime getValidFrom();
 
     /**
-     *  <p>Value to set that must be later than <code>validFrom</code>. If empty, any existing value will be removed.</p>
+     *  <p>Value to set that must be later than <code>validFrom</code>. If omitted, any existing value is removed.</p>
      * @return validUntil
      */
 
@@ -53,14 +53,14 @@ public interface DiscountCodeSetValidFromAndUntilAction extends DiscountCodeUpda
     public ZonedDateTime getValidUntil();
 
     /**
-     *  <p>Value to set that must be earlier than <code>validUntil</code>. If empty, any existing value will be removed.</p>
+     *  <p>Value to set that must be earlier than <code>validUntil</code>. If omitted, any existing value is removed.</p>
      * @param validFrom value to be set
      */
 
     public void setValidFrom(final ZonedDateTime validFrom);
 
     /**
-     *  <p>Value to set that must be later than <code>validFrom</code>. If empty, any existing value will be removed.</p>
+     *  <p>Value to set that must be later than <code>validFrom</code>. If omitted, any existing value is removed.</p>
      * @param validUntil value to be set
      */
 

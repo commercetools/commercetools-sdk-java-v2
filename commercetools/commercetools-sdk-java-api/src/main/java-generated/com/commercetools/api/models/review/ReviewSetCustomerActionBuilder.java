@@ -27,7 +27,7 @@ public class ReviewSetCustomerActionBuilder implements Builder<ReviewSetCustomer
     private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class ReviewSetCustomerActionBuilder implements Builder<ReviewSetCustomer
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class ReviewSetCustomerActionBuilder implements Builder<ReviewSetCustomer
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class ReviewSetCustomerActionBuilder implements Builder<ReviewSetCustomer
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return customer
      */
 

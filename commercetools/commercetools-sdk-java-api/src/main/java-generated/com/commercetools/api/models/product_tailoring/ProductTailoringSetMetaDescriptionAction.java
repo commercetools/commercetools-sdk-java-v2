@@ -38,7 +38,7 @@ public interface ProductTailoringSetMetaDescriptionAction extends ProductTailori
     String SET_META_DESCRIPTION = "setMetaDescription";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return metaDescription
      */
     @Valid
@@ -54,7 +54,7 @@ public interface ProductTailoringSetMetaDescriptionAction extends ProductTailori
     public Boolean getStaged();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param metaDescription value to be set
      */
 

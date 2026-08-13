@@ -38,7 +38,7 @@ public interface SetDisplayInfoPayButtonTextUpdateAction extends PaymentIntegrat
     String SET_DISPLAY_INFO_PAY_BUTTON_TEXT = "setDisplayInfoPayButtonText";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @return payButtonText
      */
     @Valid
@@ -46,7 +46,7 @@ public interface SetDisplayInfoPayButtonTextUpdateAction extends PaymentIntegrat
     public LocalizedString getPayButtonText();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @param payButtonText value to be set
      */
 

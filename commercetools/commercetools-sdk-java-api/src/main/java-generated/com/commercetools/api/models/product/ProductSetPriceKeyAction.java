@@ -54,7 +54,7 @@ public interface ProductSetPriceKeyAction extends ProductUpdateAction {
     public Boolean getStaged();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return key
      */
 
@@ -76,7 +76,7 @@ public interface ProductSetPriceKeyAction extends ProductUpdateAction {
     public void setStaged(final Boolean staged);
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param key value to be set
      */
 

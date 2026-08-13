@@ -55,7 +55,7 @@ public interface StagedOrderSetCustomLineItemShippingDetailsAction extends Stage
     public String getCustomLineItemKey();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return shippingDetails
      */
     @Valid
@@ -77,7 +77,7 @@ public interface StagedOrderSetCustomLineItemShippingDetailsAction extends Stage
     public void setCustomLineItemKey(final String customLineItemKey);
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param shippingDetails value to be set
      */
 

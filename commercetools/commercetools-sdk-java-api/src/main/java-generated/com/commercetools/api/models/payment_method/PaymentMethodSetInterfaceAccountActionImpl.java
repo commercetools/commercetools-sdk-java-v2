@@ -52,7 +52,7 @@ public class PaymentMethodSetInterfaceAccountActionImpl implements PaymentMethod
     }
 
     /**
-     *  <p>New account or instance of the payment interface. If empty, any existing value will be removed.</p>
+     *  <p>New account or instance of the payment interface. If omitted, any existing value is removed.</p>
      */
 
     public String getInterfaceAccount() {

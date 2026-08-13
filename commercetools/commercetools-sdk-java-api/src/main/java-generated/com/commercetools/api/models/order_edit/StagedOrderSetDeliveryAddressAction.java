@@ -57,7 +57,7 @@ public interface StagedOrderSetDeliveryAddressAction extends StagedOrderUpdateAc
     public String getDeliveryKey();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return address
      */
     @Valid
@@ -81,7 +81,7 @@ public interface StagedOrderSetDeliveryAddressAction extends StagedOrderUpdateAc
     public void setDeliveryKey(final String deliveryKey);
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param address value to be set
      */
 

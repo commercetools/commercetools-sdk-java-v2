@@ -27,7 +27,7 @@ public class PaymentSetMethodInfoTokenActionBuilder implements Builder<PaymentSe
     private com.commercetools.api.models.payment_method.PaymentMethodToken token;
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param builder function to build the token value
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class PaymentSetMethodInfoTokenActionBuilder implements Builder<PaymentSe
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param builder function to build the token value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class PaymentSetMethodInfoTokenActionBuilder implements Builder<PaymentSe
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param token value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class PaymentSetMethodInfoTokenActionBuilder implements Builder<PaymentSe
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return token
      */
 

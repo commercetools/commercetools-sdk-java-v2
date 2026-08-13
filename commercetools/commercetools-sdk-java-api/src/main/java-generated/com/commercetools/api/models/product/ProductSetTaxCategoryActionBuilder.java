@@ -27,7 +27,7 @@ public class ProductSetTaxCategoryActionBuilder implements Builder<ProductSetTax
     private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
 
     /**
-     *  <p>The Tax Category to set. If empty, any existing value will be removed.</p>
+     *  <p>The Tax Category to set. If omitted, any existing value is removed.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class ProductSetTaxCategoryActionBuilder implements Builder<ProductSetTax
     }
 
     /**
-     *  <p>The Tax Category to set. If empty, any existing value will be removed.</p>
+     *  <p>The Tax Category to set. If omitted, any existing value is removed.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class ProductSetTaxCategoryActionBuilder implements Builder<ProductSetTax
     }
 
     /**
-     *  <p>The Tax Category to set. If empty, any existing value will be removed.</p>
+     *  <p>The Tax Category to set. If omitted, any existing value is removed.</p>
      * @param taxCategory value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class ProductSetTaxCategoryActionBuilder implements Builder<ProductSetTax
     }
 
     /**
-     *  <p>The Tax Category to set. If empty, any existing value will be removed.</p>
+     *  <p>The Tax Category to set. If omitted, any existing value is removed.</p>
      * @return taxCategory
      */
 

@@ -40,7 +40,7 @@ public interface StagedOrderSetShippingMethodAction extends StagedOrderUpdateAct
     String SET_SHIPPING_METHOD = "setShippingMethod";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. If the referenced Shipping Method has a predicate that does not match the Cart, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>Value to set. If omitted, any existing value is removed. If the referenced Shipping Method has a predicate that does not match the Cart, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return shippingMethod
      */
     @Valid
@@ -56,7 +56,7 @@ public interface StagedOrderSetShippingMethodAction extends StagedOrderUpdateAct
     public ExternalTaxRateDraft getExternalTaxRate();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. If the referenced Shipping Method has a predicate that does not match the Cart, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>Value to set. If omitted, any existing value is removed. If the referenced Shipping Method has a predicate that does not match the Cart, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param shippingMethod value to be set
      */
 

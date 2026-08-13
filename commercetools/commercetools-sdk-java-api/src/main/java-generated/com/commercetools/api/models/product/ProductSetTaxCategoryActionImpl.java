@@ -53,7 +53,7 @@ public class ProductSetTaxCategoryActionImpl implements ProductSetTaxCategoryAct
     }
 
     /**
-     *  <p>The Tax Category to set. If empty, any existing value will be removed.</p>
+     *  <p>The Tax Category to set. If omitted, any existing value is removed.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {

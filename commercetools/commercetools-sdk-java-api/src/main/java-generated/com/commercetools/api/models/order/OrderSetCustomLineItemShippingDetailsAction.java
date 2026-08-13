@@ -54,7 +54,7 @@ public interface OrderSetCustomLineItemShippingDetailsAction extends OrderUpdate
     public String getCustomLineItemKey();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return shippingDetails
      */
     @Valid
@@ -76,7 +76,7 @@ public interface OrderSetCustomLineItemShippingDetailsAction extends OrderUpdate
     public void setCustomLineItemKey(final String customLineItemKey);
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param shippingDetails value to be set
      */
 

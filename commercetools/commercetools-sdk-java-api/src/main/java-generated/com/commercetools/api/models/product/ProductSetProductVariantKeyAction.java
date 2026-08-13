@@ -52,7 +52,7 @@ public interface ProductSetProductVariantKeyAction extends ProductUpdateAction {
     public String getSku();
 
     /**
-     *  <p>Value to set. Must be unique among ProductVariants in the same Product. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Must be unique among ProductVariants in the same Product. If omitted, any existing value is removed.</p>
      * @return key
      */
 
@@ -82,7 +82,7 @@ public interface ProductSetProductVariantKeyAction extends ProductUpdateAction {
     public void setSku(final String sku);
 
     /**
-     *  <p>Value to set. Must be unique among ProductVariants in the same Product. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. Must be unique among ProductVariants in the same Product. If omitted, any existing value is removed.</p>
      * @param key value to be set
      */
 

@@ -36,7 +36,7 @@ public interface InventoryEntrySetRestockableInDaysAction extends InventoryEntry
     String SET_RESTOCKABLE_IN_DAYS = "setRestockableInDays";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return restockableInDays
      */
 
@@ -44,7 +44,7 @@ public interface InventoryEntrySetRestockableInDaysAction extends InventoryEntry
     public Long getRestockableInDays();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param restockableInDays value to be set
      */
 

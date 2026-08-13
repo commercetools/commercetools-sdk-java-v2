@@ -39,7 +39,7 @@ public interface CartSetCustomerGroupAction extends CartUpdateAction {
     String SET_CUSTOMER_GROUP = "setCustomerGroup";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return customerGroup
      */
     @Valid
@@ -47,7 +47,7 @@ public interface CartSetCustomerGroupAction extends CartUpdateAction {
     public CustomerGroupResourceIdentifier getCustomerGroup();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param customerGroup value to be set
      */
 

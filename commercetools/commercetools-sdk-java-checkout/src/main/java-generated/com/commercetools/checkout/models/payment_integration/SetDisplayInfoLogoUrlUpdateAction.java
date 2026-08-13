@@ -38,7 +38,7 @@ public interface SetDisplayInfoLogoUrlUpdateAction extends PaymentIntegrationUpd
     String SET_DISPLAY_INFO_LOGO_URL = "setDisplayInfoLogoUrl";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @return logoUrl
      */
     @Valid
@@ -46,7 +46,7 @@ public interface SetDisplayInfoLogoUrlUpdateAction extends PaymentIntegrationUpd
     public LocalizedString getLogoUrl();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @param logoUrl value to be set
      */
 

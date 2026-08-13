@@ -38,7 +38,7 @@ public interface PaymentSetMethodInfoTokenAction extends PaymentUpdateAction {
     String SET_METHOD_INFO_TOKEN = "setMethodInfoToken";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return token
      */
     @Valid
@@ -46,7 +46,7 @@ public interface PaymentSetMethodInfoTokenAction extends PaymentUpdateAction {
     public PaymentMethodToken getToken();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param token value to be set
      */
 

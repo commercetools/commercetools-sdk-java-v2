@@ -58,7 +58,7 @@ public class CartSetCustomLineItemTaxAmountActionBuilder implements Builder<Cart
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param builder function to build the externalTaxAmount value
      * @return Builder
      */
@@ -71,7 +71,7 @@ public class CartSetCustomLineItemTaxAmountActionBuilder implements Builder<Cart
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param builder function to build the externalTaxAmount value
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class CartSetCustomLineItemTaxAmountActionBuilder implements Builder<Cart
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param externalTaxAmount value to be set
      * @return Builder
      */
@@ -126,7 +126,7 @@ public class CartSetCustomLineItemTaxAmountActionBuilder implements Builder<Cart
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return externalTaxAmount
      */
 

@@ -36,7 +36,7 @@ public interface ReviewSetTitleAction extends ReviewUpdateAction {
     String SET_TITLE = "setTitle";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return title
      */
 
@@ -44,7 +44,7 @@ public interface ReviewSetTitleAction extends ReviewUpdateAction {
     public String getTitle();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param title value to be set
      */
 

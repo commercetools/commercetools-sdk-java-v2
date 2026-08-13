@@ -38,7 +38,7 @@ public interface ReviewSetCustomerAction extends ReviewUpdateAction {
     String SET_CUSTOMER = "setCustomer";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return customer
      */
     @Valid
@@ -46,7 +46,7 @@ public interface ReviewSetCustomerAction extends ReviewUpdateAction {
     public CustomerResourceIdentifier getCustomer();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param customer value to be set
      */
 

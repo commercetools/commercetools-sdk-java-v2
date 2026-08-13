@@ -38,7 +38,7 @@ public interface ProductTailoringSetNameAction extends ProductTailoringUpdateAct
     String SET_NAME = "setName";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return name
      */
     @Valid
@@ -54,7 +54,7 @@ public interface ProductTailoringSetNameAction extends ProductTailoringUpdateAct
     public Boolean getStaged();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param name value to be set
      */
 

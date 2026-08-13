@@ -36,7 +36,7 @@ public interface ReviewSetAuthorNameAction extends ReviewUpdateAction {
     String SET_AUTHOR_NAME = "setAuthorName";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return authorName
      */
 
@@ -44,7 +44,7 @@ public interface ReviewSetAuthorNameAction extends ReviewUpdateAction {
     public String getAuthorName();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param authorName value to be set
      */
 

@@ -52,7 +52,7 @@ public class StagedOrderSetLocaleActionImpl implements StagedOrderSetLocaleActio
     }
 
     /**
-     *  <p>Value to set. Must be one of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>'s languages. If empty, any existing value is removed.</p>
+     *  <p>Value to set. Must be one of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>'s languages. If omitted, any existing value is removed.</p>
      */
 
     public String getLocale() {

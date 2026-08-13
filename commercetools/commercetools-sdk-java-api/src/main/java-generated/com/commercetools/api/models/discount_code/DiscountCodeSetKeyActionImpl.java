@@ -52,7 +52,7 @@ public class DiscountCodeSetKeyActionImpl implements DiscountCodeSetKeyAction, M
     }
 
     /**
-     *  <p>Unique value to set. If empty, any existing value will be removed.</p>
+     *  <p>Unique value to set. If omitted, any existing value is removed.</p>
      */
 
     public String getKey() {

@@ -53,7 +53,7 @@ public class StagedOrderSetCustomerIdActionImpl implements StagedOrderSetCustome
     }
 
     /**
-     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>. If empty, any existing value is removed.</p>
+     *  <p><code>id</code> of an existing <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>. If omitted, any existing value is removed.</p>
      */
 
     public String getCustomerId() {

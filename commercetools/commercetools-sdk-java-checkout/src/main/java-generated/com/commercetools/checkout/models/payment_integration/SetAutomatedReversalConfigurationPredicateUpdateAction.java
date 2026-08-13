@@ -36,7 +36,7 @@ public interface SetAutomatedReversalConfigurationPredicateUpdateAction extends 
     String SET_AUTOMATED_REVERSAL_CONFIGURATION_PREDICATE = "setAutomatedReversalConfigurationPredicate";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @return predicate
      */
 
@@ -44,7 +44,7 @@ public interface SetAutomatedReversalConfigurationPredicateUpdateAction extends 
     public String getPredicate();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @param predicate value to be set
      */
 

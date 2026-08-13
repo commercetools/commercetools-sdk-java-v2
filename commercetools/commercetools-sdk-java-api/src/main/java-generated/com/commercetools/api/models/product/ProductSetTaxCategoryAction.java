@@ -38,7 +38,7 @@ public interface ProductSetTaxCategoryAction extends ProductUpdateAction {
     String SET_TAX_CATEGORY = "setTaxCategory";
 
     /**
-     *  <p>The Tax Category to set. If empty, any existing value will be removed.</p>
+     *  <p>The Tax Category to set. If omitted, any existing value is removed.</p>
      * @return taxCategory
      */
     @Valid
@@ -46,7 +46,7 @@ public interface ProductSetTaxCategoryAction extends ProductUpdateAction {
     public TaxCategoryResourceIdentifier getTaxCategory();
 
     /**
-     *  <p>The Tax Category to set. If empty, any existing value will be removed.</p>
+     *  <p>The Tax Category to set. If omitted, any existing value is removed.</p>
      * @param taxCategory value to be set
      */
 

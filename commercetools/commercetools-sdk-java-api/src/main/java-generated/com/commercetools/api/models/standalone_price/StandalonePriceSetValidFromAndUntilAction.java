@@ -39,7 +39,7 @@ public interface StandalonePriceSetValidFromAndUntilAction extends StandalonePri
     String SET_VALID_FROM_AND_UNTIL = "setValidFromAndUntil";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return validFrom
      */
 
@@ -47,7 +47,7 @@ public interface StandalonePriceSetValidFromAndUntilAction extends StandalonePri
     public ZonedDateTime getValidFrom();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return validUntil
      */
 
@@ -55,14 +55,14 @@ public interface StandalonePriceSetValidFromAndUntilAction extends StandalonePri
     public ZonedDateTime getValidUntil();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param validFrom value to be set
      */
 
     public void setValidFrom(final ZonedDateTime validFrom);
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param validUntil value to be set
      */
 

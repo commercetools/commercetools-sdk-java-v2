@@ -28,7 +28,7 @@ public class SetDisplayInfoPayButtonTextUpdateActionBuilder
     private com.commercetools.checkout.models.common.LocalizedString payButtonText;
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @param builder function to build the payButtonText value
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class SetDisplayInfoPayButtonTextUpdateActionBuilder
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @param builder function to build the payButtonText value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class SetDisplayInfoPayButtonTextUpdateActionBuilder
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @param payButtonText value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class SetDisplayInfoPayButtonTextUpdateActionBuilder
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @return payButtonText
      */
 

@@ -36,7 +36,7 @@ public interface ReviewSetKeyAction extends ReviewUpdateAction {
     String SET_KEY = "setKey";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return key
      */
 
@@ -44,7 +44,7 @@ public interface ReviewSetKeyAction extends ReviewUpdateAction {
     public String getKey();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param key value to be set
      */
 

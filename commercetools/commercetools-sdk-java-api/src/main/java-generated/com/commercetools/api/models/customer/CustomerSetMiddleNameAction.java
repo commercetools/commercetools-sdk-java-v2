@@ -36,7 +36,7 @@ public interface CustomerSetMiddleNameAction extends CustomerUpdateAction {
     String SET_MIDDLE_NAME = "setMiddleName";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return middleName
      */
 
@@ -44,7 +44,7 @@ public interface CustomerSetMiddleNameAction extends CustomerUpdateAction {
     public String getMiddleName();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param middleName value to be set
      */
 

@@ -56,7 +56,7 @@ public class CartSetDeleteDaysAfterLastModificationActionImpl
     }
 
     /**
-     *  <p>Value to set. If not provided, the default value for this field configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a> is assigned.</p>
+     *  <p>Value to set. If omitted, the default value for this field configured in <a href="https://docs.commercetools.com/apis/ctp:api:type:CartsConfiguration" rel="nofollow">Project settings</a> is assigned.</p>
      */
 
     public Integer getDeleteDaysAfterLastModification() {

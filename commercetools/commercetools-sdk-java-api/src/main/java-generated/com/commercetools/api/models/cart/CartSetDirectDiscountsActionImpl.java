@@ -55,7 +55,7 @@ public class CartSetDirectDiscountsActionImpl implements CartSetDirectDiscountsA
     /**
      *  <ul>
      *   <li>If set, all existing Direct Discounts are replaced. The discounts apply in the order they are added to the list.</li>
-     *   <li>If empty, all existing Direct Discounts are removed and all affected prices on the Cart or Order are recalculated.</li>
+     *   <li>If set to an empty array, all existing Direct Discounts are removed and all affected prices on the Cart or Order are recalculated.</li>
      *  </ul>
      */
 

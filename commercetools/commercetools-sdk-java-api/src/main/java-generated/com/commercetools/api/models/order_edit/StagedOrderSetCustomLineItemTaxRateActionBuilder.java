@@ -60,7 +60,7 @@ public class StagedOrderSetCustomLineItemTaxRateActionBuilder
     }
 
     /**
-     *  <p>Value to set. If empty, an existing value is removed.</p>
+     *  <p>Value to set. If omitted, an existing value is removed.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -73,7 +73,7 @@ public class StagedOrderSetCustomLineItemTaxRateActionBuilder
     }
 
     /**
-     *  <p>Value to set. If empty, an existing value is removed.</p>
+     *  <p>Value to set. If omitted, an existing value is removed.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -85,7 +85,7 @@ public class StagedOrderSetCustomLineItemTaxRateActionBuilder
     }
 
     /**
-     *  <p>Value to set. If empty, an existing value is removed.</p>
+     *  <p>Value to set. If omitted, an existing value is removed.</p>
      * @param externalTaxRate value to be set
      * @return Builder
      */
@@ -128,7 +128,7 @@ public class StagedOrderSetCustomLineItemTaxRateActionBuilder
     }
 
     /**
-     *  <p>Value to set. If empty, an existing value is removed.</p>
+     *  <p>Value to set. If omitted, an existing value is removed.</p>
      * @return externalTaxRate
      */
 

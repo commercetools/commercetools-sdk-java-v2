@@ -53,7 +53,7 @@ public interface CartSetCustomLineItemTaxAmountAction extends CartUpdateAction {
     public String getCustomLineItemKey();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return externalTaxAmount
      */
     @Valid
@@ -83,7 +83,7 @@ public interface CartSetCustomLineItemTaxAmountAction extends CartUpdateAction {
     public void setCustomLineItemKey(final String customLineItemKey);
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param externalTaxAmount value to be set
      */
 

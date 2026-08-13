@@ -39,7 +39,7 @@ public interface StandalonePriceSetValidUntilAction extends StandalonePriceUpdat
     String SET_VALID_UNTIL = "setValidUntil";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return validUntil
      */
 
@@ -47,7 +47,7 @@ public interface StandalonePriceSetValidUntilAction extends StandalonePriceUpdat
     public ZonedDateTime getValidUntil();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param validUntil value to be set
      */
 

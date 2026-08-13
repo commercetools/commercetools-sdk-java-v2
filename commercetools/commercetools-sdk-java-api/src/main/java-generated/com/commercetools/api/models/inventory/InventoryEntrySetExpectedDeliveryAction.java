@@ -37,7 +37,7 @@ public interface InventoryEntrySetExpectedDeliveryAction extends InventoryEntryU
     String SET_EXPECTED_DELIVERY = "setExpectedDelivery";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return expectedDelivery
      */
 
@@ -45,7 +45,7 @@ public interface InventoryEntrySetExpectedDeliveryAction extends InventoryEntryU
     public ZonedDateTime getExpectedDelivery();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param expectedDelivery value to be set
      */
 

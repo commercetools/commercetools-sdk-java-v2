@@ -26,7 +26,7 @@ public class CustomerSetExternalIdActionBuilder implements Builder<CustomerSetEx
     private String externalId;
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param externalId value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class CustomerSetExternalIdActionBuilder implements Builder<CustomerSetEx
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return externalId
      */
 

@@ -54,7 +54,7 @@ public class CustomerSetCustomerGroupActionImpl implements CustomerSetCustomerGr
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {

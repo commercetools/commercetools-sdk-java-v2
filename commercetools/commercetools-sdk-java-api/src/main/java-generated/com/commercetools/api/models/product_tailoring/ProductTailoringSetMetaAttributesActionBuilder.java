@@ -37,7 +37,7 @@ public class ProductTailoringSetMetaAttributesActionBuilder
     private Boolean staged;
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param builder function to build the metaTitle value
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class ProductTailoringSetMetaAttributesActionBuilder
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param builder function to build the metaTitle value
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class ProductTailoringSetMetaAttributesActionBuilder
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param metaTitle value to be set
      * @return Builder
      */
@@ -73,7 +73,7 @@ public class ProductTailoringSetMetaAttributesActionBuilder
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param builder function to build the metaDescription value
      * @return Builder
      */
@@ -85,7 +85,7 @@ public class ProductTailoringSetMetaAttributesActionBuilder
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param builder function to build the metaDescription value
      * @return Builder
      */
@@ -97,7 +97,7 @@ public class ProductTailoringSetMetaAttributesActionBuilder
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param metaDescription value to be set
      * @return Builder
      */
@@ -109,7 +109,7 @@ public class ProductTailoringSetMetaAttributesActionBuilder
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param builder function to build the metaKeywords value
      * @return Builder
      */
@@ -121,7 +121,7 @@ public class ProductTailoringSetMetaAttributesActionBuilder
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param builder function to build the metaKeywords value
      * @return Builder
      */
@@ -133,7 +133,7 @@ public class ProductTailoringSetMetaAttributesActionBuilder
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param metaKeywords value to be set
      * @return Builder
      */
@@ -156,7 +156,7 @@ public class ProductTailoringSetMetaAttributesActionBuilder
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return metaTitle
      */
 
@@ -166,7 +166,7 @@ public class ProductTailoringSetMetaAttributesActionBuilder
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return metaDescription
      */
 
@@ -176,7 +176,7 @@ public class ProductTailoringSetMetaAttributesActionBuilder
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return metaKeywords
      */
 

@@ -27,7 +27,7 @@ public class SetAutomatedReversalConfigurationPredicateUpdateActionBuilder
     private String predicate;
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @param predicate value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class SetAutomatedReversalConfigurationPredicateUpdateActionBuilder
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>If omitted, any existing value is removed.</p>
      * @return predicate
      */
 

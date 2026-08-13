@@ -26,7 +26,7 @@ public class CustomerSetVatIdActionBuilder implements Builder<CustomerSetVatIdAc
     private String vatId;
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param vatId value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class CustomerSetVatIdActionBuilder implements Builder<CustomerSetVatIdAc
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return vatId
      */
 

@@ -40,7 +40,7 @@ public interface StagedOrderSetBillingAddressAction extends StagedOrderUpdateAct
     String SET_BILLING_ADDRESS = "setBillingAddress";
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return address
      */
     @Valid
@@ -48,7 +48,7 @@ public interface StagedOrderSetBillingAddressAction extends StagedOrderUpdateAct
     public BaseAddress getAddress();
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param address value to be set
      */
 

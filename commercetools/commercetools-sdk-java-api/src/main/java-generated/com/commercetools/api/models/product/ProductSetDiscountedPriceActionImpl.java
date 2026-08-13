@@ -76,7 +76,7 @@ public class ProductSetDiscountedPriceActionImpl implements ProductSetDiscounted
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. The referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p>
+     *  <p>Value to set. If omitted, any existing value is removed. The referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductDiscount" rel="nofollow">ProductDiscount</a> must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p>
      */
 
     public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {

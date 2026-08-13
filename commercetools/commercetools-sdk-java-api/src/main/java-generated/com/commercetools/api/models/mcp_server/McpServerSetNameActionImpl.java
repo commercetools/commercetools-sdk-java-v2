@@ -52,7 +52,7 @@ public class McpServerSetNameActionImpl implements McpServerSetNameAction, Model
     }
 
     /**
-     *  <p>Value to set. If empty or absent, the existing name is removed.</p>
+     *  <p>Value to set. If omitted, the existing name is removed.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {

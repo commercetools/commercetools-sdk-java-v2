@@ -26,7 +26,7 @@ public class PaymentMethodSetPaymentInterfaceActionBuilder implements Builder<Pa
     private String paymentInterface;
 
     /**
-     *  <p>New payment service that processes the Payment—for example, a PSP. If empty, any existing value will be removed.</p>
+     *  <p>New payment service that processes the Payment—for example, a PSP. If omitted, any existing value is removed.</p>
      * @param paymentInterface value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class PaymentMethodSetPaymentInterfaceActionBuilder implements Builder<Pa
     }
 
     /**
-     *  <p>New payment service that processes the Payment—for example, a PSP. If empty, any existing value will be removed.</p>
+     *  <p>New payment service that processes the Payment—for example, a PSP. If omitted, any existing value is removed.</p>
      * @return paymentInterface
      */
 

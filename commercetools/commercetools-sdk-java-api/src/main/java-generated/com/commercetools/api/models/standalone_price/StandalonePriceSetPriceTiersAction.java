@@ -41,7 +41,7 @@ public interface StandalonePriceSetPriceTiersAction extends StandalonePriceUpdat
     String SET_PRICE_TIERS = "setPriceTiers";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
+     *  <p>Value to set. Set to an empty array to remove any existing value. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      * @return tiers
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface StandalonePriceSetPriceTiersAction extends StandalonePriceUpdat
     public List<PriceTierDraft> getTiers();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
+     *  <p>Value to set. Set to an empty array to remove any existing value. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      * @param tiers values to be set
      */
 
@@ -58,7 +58,7 @@ public interface StandalonePriceSetPriceTiersAction extends StandalonePriceUpdat
     public void setTiers(final PriceTierDraft... tiers);
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
+     *  <p>Value to set. Set to an empty array to remove any existing value. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidFieldError" rel="nofollow">InvalidField</a> error is returned.</p>
      * @param tiers values to be set
      */
 

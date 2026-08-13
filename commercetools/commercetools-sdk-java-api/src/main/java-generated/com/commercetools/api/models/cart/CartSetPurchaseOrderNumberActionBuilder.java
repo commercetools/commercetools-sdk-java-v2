@@ -26,7 +26,7 @@ public class CartSetPurchaseOrderNumberActionBuilder implements Builder<CartSetP
     private String purchaseOrderNumber;
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param purchaseOrderNumber value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class CartSetPurchaseOrderNumberActionBuilder implements Builder<CartSetP
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return purchaseOrderNumber
      */
 

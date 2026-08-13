@@ -55,7 +55,7 @@ public class CartSetLineItemShippingDetailsActionBuilder implements Builder<Cart
     }
 
     /**
-     *  <p>Value to set. If empty, the existing value is removed.</p>
+     *  <p>Value to set. If omitted, the existing value is removed.</p>
      * @param builder function to build the shippingDetails value
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class CartSetLineItemShippingDetailsActionBuilder implements Builder<Cart
     }
 
     /**
-     *  <p>Value to set. If empty, the existing value is removed.</p>
+     *  <p>Value to set. If omitted, the existing value is removed.</p>
      * @param builder function to build the shippingDetails value
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class CartSetLineItemShippingDetailsActionBuilder implements Builder<Cart
     }
 
     /**
-     *  <p>Value to set. If empty, the existing value is removed.</p>
+     *  <p>Value to set. If omitted, the existing value is removed.</p>
      * @param shippingDetails value to be set
      * @return Builder
      */
@@ -112,7 +112,7 @@ public class CartSetLineItemShippingDetailsActionBuilder implements Builder<Cart
     }
 
     /**
-     *  <p>Value to set. If empty, the existing value is removed.</p>
+     *  <p>Value to set. If omitted, the existing value is removed.</p>
      * @return shippingDetails
      */
 

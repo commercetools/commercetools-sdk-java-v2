@@ -53,7 +53,9 @@ public class ChannelChangeDescriptionActionImpl implements ChannelChangeDescript
     }
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     *  <p>New value to set.</p>
+     *  <p>If set to an empty value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getDescription() {

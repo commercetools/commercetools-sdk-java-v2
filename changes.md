@@ -1,6 +1,39 @@
 **Api changes**
 
 <details>
+<summary>Added Property(s)</summary>
+
+- added property `stores` to type `DiscountCode`
+- added property `warnings` to type `Variant`
+- added property `categories` to type `VariantProjection`
+- added property `categoryOrderHints` to type `VariantProjection`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `variant` to type `AttributeReferenceTypeId`
+- added enum `variant` to type `CustomFieldReferenceValue`
+</details>
+
+
+<details>
+<summary>Added Resource(s)</summary>
+
+- added resource `/{projectKey}/mcp-servers`
+- added resource `/{projectKey}/variants/{ID}/images`
+- added resource `/{projectKey}/in-store/key={storeKey}/discount-codes`
+- added resource `/{projectKey}/in-store/key={storeKey}/discount-codes/key={key}`
+- added resource `/{projectKey}/in-store/key={storeKey}/discount-codes/{ID}`
+- added resource `/{projectKey}/mcp-servers/types`
+- added resource `/{projectKey}/mcp-servers/key={key}`
+- added resource `/{projectKey}/mcp-servers/{ID}`
+- added resource `/{projectKey}/mcp-servers/types/{mcpServerType}`
+</details>
+
+
+<details>
 <summary>Added Method(s)</summary>
 
 - added method `apiRoot.withProjectKey().mcpServers().get()`
@@ -20,16 +53,6 @@
 - added method `apiRoot.withProjectKey().mcpServers().withId().post()`
 - added method `apiRoot.withProjectKey().mcpServers().withId().delete()`
 - added method `apiRoot.withProjectKey().mcpServers().types().withMcpServerType().get()`
-</details>
-
-
-<details>
-<summary>Added Property(s)</summary>
-
-- added property `stores` to type `DiscountCode`
-- added property `warnings` to type `Variant`
-- added property `categories` to type `VariantProjection`
-- added property `categoryOrderHints` to type `VariantProjection`
 </details>
 
 
@@ -77,37 +100,7 @@
 - added type `VariantSetImageLabelAction`
 </details>
 
-
-<details>
-<summary>Added Enum(s)</summary>
-
-- added enum `variant` to type `AttributeReferenceTypeId`
-- added enum `variant` to type `CustomFieldReferenceValue`
-</details>
-
-
-<details>
-<summary>Added Resource(s)</summary>
-
-- added resource `/{projectKey}/mcp-servers`
-- added resource `/{projectKey}/variants/{ID}/images`
-- added resource `/{projectKey}/in-store/key={storeKey}/discount-codes`
-- added resource `/{projectKey}/in-store/key={storeKey}/discount-codes/key={key}`
-- added resource `/{projectKey}/in-store/key={storeKey}/discount-codes/{ID}`
-- added resource `/{projectKey}/mcp-servers/types`
-- added resource `/{projectKey}/mcp-servers/key={key}`
-- added resource `/{projectKey}/mcp-servers/{ID}`
-- added resource `/{projectKey}/mcp-servers/types/{mcpServerType}`
-</details>
-
 **History changes**
-
-<details>
-<summary>Required Property(s)</summary>
-
-- changed property `total` of type `RecordPagedQueryResponse` to be optional
-</details>
-
 
 <details>
 <summary>Added QueryParameter(s)</summary>
@@ -115,5 +108,12 @@
 - added query parameter `withTotal` to method `get /{projectKey}`
 - added query parameter `withTotal` to method `get /{projectKey}/{resourceType}`
 - added query parameter `withTotal` to method `get /{projectKey}/{resourceType}/{ID}`
+</details>
+
+
+<details>
+<summary>Required Property(s)</summary>
+
+- changed property `total` of type `RecordPagedQueryResponse` to be optional
 </details>
 

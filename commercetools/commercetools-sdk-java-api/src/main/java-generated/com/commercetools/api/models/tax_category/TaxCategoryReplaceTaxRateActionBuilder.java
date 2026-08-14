@@ -33,7 +33,8 @@ public class TaxCategoryReplaceTaxRateActionBuilder implements Builder<TaxCatego
     private com.commercetools.api.models.tax_category.TaxRateDraft taxRate;
 
     /**
-     *  <p>ID of the TaxRate to replace. Either <code>taxRateId</code> or <code>taxRateKey</code> is required for this update action.</p>
+     *  <p>ID of the TaxRate to replace. Either <code>taxRateId</code> or <code>taxRateKey</code> must be provided.</p>
+     *  <p>If the referenced TaxRate does not exist within the TaxCategory, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param taxRateId value to be set
      * @return Builder
      */
@@ -44,7 +45,8 @@ public class TaxCategoryReplaceTaxRateActionBuilder implements Builder<TaxCatego
     }
 
     /**
-     *  <p>Key of the TaxRate to replace. Either <code>taxRateId</code> or <code>taxRateKey</code> is required for this update action.</p>
+     *  <p>Key of the TaxRate to replace. Either <code>taxRateId</code> or <code>taxRateKey</code> must be provided.</p>
+     *  <p>If the referenced TaxRate does not exist within the TaxCategory, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param taxRateKey value to be set
      * @return Builder
      */
@@ -91,7 +93,8 @@ public class TaxCategoryReplaceTaxRateActionBuilder implements Builder<TaxCatego
     }
 
     /**
-     *  <p>ID of the TaxRate to replace. Either <code>taxRateId</code> or <code>taxRateKey</code> is required for this update action.</p>
+     *  <p>ID of the TaxRate to replace. Either <code>taxRateId</code> or <code>taxRateKey</code> must be provided.</p>
+     *  <p>If the referenced TaxRate does not exist within the TaxCategory, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return taxRateId
      */
 
@@ -101,7 +104,8 @@ public class TaxCategoryReplaceTaxRateActionBuilder implements Builder<TaxCatego
     }
 
     /**
-     *  <p>Key of the TaxRate to replace. Either <code>taxRateId</code> or <code>taxRateKey</code> is required for this update action.</p>
+     *  <p>Key of the TaxRate to replace. Either <code>taxRateId</code> or <code>taxRateKey</code> must be provided.</p>
+     *  <p>If the referenced TaxRate does not exist within the TaxCategory, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return taxRateKey
      */
 

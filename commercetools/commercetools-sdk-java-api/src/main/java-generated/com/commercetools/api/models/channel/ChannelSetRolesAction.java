@@ -38,7 +38,8 @@ public interface ChannelSetRolesAction extends ChannelUpdateAction {
     String SET_ROLES = "setRoles";
 
     /**
-     *  <p>Value to set. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     *  <p>Value to set. If set to an empty array, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return roles
      */
     @NotNull
@@ -46,7 +47,8 @@ public interface ChannelSetRolesAction extends ChannelUpdateAction {
     public List<ChannelRoleEnum> getRoles();
 
     /**
-     *  <p>Value to set. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     *  <p>Value to set. If set to an empty array, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param roles values to be set
      */
 
@@ -54,7 +56,8 @@ public interface ChannelSetRolesAction extends ChannelUpdateAction {
     public void setRoles(final ChannelRoleEnum... roles);
 
     /**
-     *  <p>Value to set. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     *  <p>Value to set. If set to an empty array, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param roles values to be set
      */
 

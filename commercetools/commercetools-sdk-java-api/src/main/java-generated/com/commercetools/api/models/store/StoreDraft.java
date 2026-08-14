@@ -56,6 +56,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>Languages defined in <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Only languages defined in the Project can be used.</p>
+     *  <p>If a language is not configured for the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectNotConfiguredForLanguagesError" rel="nofollow">ProjectNotConfiguredForLanguages</a> error is returned.</p>
      * @return languages
      */
 
@@ -72,6 +73,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @return distributionChannels
      */
     @Valid
@@ -80,6 +82,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @return supplyChannels
      */
     @Valid
@@ -124,6 +127,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>Languages defined in <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Only languages defined in the Project can be used.</p>
+     *  <p>If a language is not configured for the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectNotConfiguredForLanguagesError" rel="nofollow">ProjectNotConfiguredForLanguages</a> error is returned.</p>
      * @param languages values to be set
      */
 
@@ -132,6 +136,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>Languages defined in <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Only languages defined in the Project can be used.</p>
+     *  <p>If a language is not configured for the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectNotConfiguredForLanguagesError" rel="nofollow">ProjectNotConfiguredForLanguages</a> error is returned.</p>
      * @param languages values to be set
      */
 
@@ -154,6 +159,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @param distributionChannels values to be set
      */
 
@@ -162,6 +168,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @param distributionChannels values to be set
      */
 
@@ -169,6 +176,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @param supplyChannels values to be set
      */
 
@@ -177,6 +185,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @param supplyChannels values to be set
      */
 

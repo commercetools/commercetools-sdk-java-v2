@@ -52,7 +52,8 @@ public class TaxCategoryChangeNameActionImpl implements TaxCategoryChangeNameAct
     }
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     *  <p>New value to set.</p>
+     *  <p>If the provided name is used by another TaxCategory in the Project, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      */
 
     public String getName() {

@@ -39,6 +39,8 @@ public interface ChannelRemoveRolesAction extends ChannelUpdateAction {
 
     /**
      *  <p>Value to remove from the array.</p>
+     *  <p>If none of the specified roles are already present, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If all roles from the Channel are removed, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return roles
      */
     @NotNull
@@ -47,6 +49,8 @@ public interface ChannelRemoveRolesAction extends ChannelUpdateAction {
 
     /**
      *  <p>Value to remove from the array.</p>
+     *  <p>If none of the specified roles are already present, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If all roles from the Channel are removed, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param roles values to be set
      */
 
@@ -55,6 +59,8 @@ public interface ChannelRemoveRolesAction extends ChannelUpdateAction {
 
     /**
      *  <p>Value to remove from the array.</p>
+     *  <p>If none of the specified roles are already present, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If all roles from the Channel are removed, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param roles values to be set
      */
 

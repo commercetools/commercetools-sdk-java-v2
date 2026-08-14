@@ -27,6 +27,7 @@ public class TaxCategorySetKeyActionBuilder implements Builder<TaxCategorySetKey
 
     /**
      *  <p>Value to set. If omitted, any existing value is removed.</p>
+     *  <p>If the value is used by another TaxCategory in the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -38,6 +39,7 @@ public class TaxCategorySetKeyActionBuilder implements Builder<TaxCategorySetKey
 
     /**
      *  <p>Value to set. If omitted, any existing value is removed.</p>
+     *  <p>If the value is used by another TaxCategory in the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return key
      */
 

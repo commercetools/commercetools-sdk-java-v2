@@ -40,7 +40,8 @@ public interface StateSetDescriptionAction extends StateUpdateAction {
     String SET_DESCRIPTION = "setDescription";
 
     /**
-     *  <p>Value to set. Set to an empty object to remove any existing value.</p>
+     *  <p>Value to set. If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>Set to an empty object to remove any existing value.</p>
      * @return description
      */
     @NotNull
@@ -49,7 +50,8 @@ public interface StateSetDescriptionAction extends StateUpdateAction {
     public LocalizedString getDescription();
 
     /**
-     *  <p>Value to set. Set to an empty object to remove any existing value.</p>
+     *  <p>Value to set. If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>Set to an empty object to remove any existing value.</p>
      * @param description value to be set
      */
 

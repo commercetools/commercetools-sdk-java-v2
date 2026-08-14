@@ -60,7 +60,8 @@ public class TaxCategoryReplaceTaxRateActionImpl implements TaxCategoryReplaceTa
     }
 
     /**
-     *  <p>ID of the TaxRate to replace. Either <code>taxRateId</code> or <code>taxRateKey</code> is required for this update action.</p>
+     *  <p>ID of the TaxRate to replace. Either <code>taxRateId</code> or <code>taxRateKey</code> must be provided.</p>
+     *  <p>If the referenced TaxRate does not exist within the TaxCategory, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      */
 
     public String getTaxRateId() {
@@ -68,7 +69,8 @@ public class TaxCategoryReplaceTaxRateActionImpl implements TaxCategoryReplaceTa
     }
 
     /**
-     *  <p>Key of the TaxRate to replace. Either <code>taxRateId</code> or <code>taxRateKey</code> is required for this update action.</p>
+     *  <p>Key of the TaxRate to replace. Either <code>taxRateId</code> or <code>taxRateKey</code> must be provided.</p>
+     *  <p>If the referenced TaxRate does not exist within the TaxCategory, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      */
 
     public String getTaxRateKey() {

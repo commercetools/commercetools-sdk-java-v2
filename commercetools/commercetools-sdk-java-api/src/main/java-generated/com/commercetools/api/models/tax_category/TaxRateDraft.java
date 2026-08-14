@@ -44,7 +44,8 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
     public String getName();
 
     /**
-     *  <p>Tax rate. Must be supplied if no <code>subRates</code> are specified. If <code>subRates</code> are specified, this field can be omitted or it must be the sum of amounts of all <code>subRates</code>.</p>
+     *  <p>Tax rate.</p>
+     *  <p>Either <code>amount</code> or <code>subRates</code> must be defined. If both are defined, the value of this field must be equal to the sum of the <code>subRates</code> amounts; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return amount
      */
 
@@ -61,6 +62,7 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
 
     /**
      *  <p>Country in which the tax rate is applied in <span>ISO 3166-1 alpha-2</span> format.</p>
+     *  <p>If the provided combination of <code>country</code> and <code>state</code> exists for the TaxCategory, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return country
      */
     @NotNull
@@ -68,7 +70,8 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
     public String getCountry();
 
     /**
-     *  <p>State within the country, such as Texas in the United States. The value is case-sensitive and must use the same casing as the <code>state</code> value in the Cart <code>shippingAddress</code>.</p>
+     *  <p>State within the country, such as Texas in the United States. The value is case-sensitive and must use the same casing as the <code>state</code> value in the Cart <code>shippingAddress</code>. Empty strings are treated as if <code>state</code> was omitted.</p>
+     *  <p>If the provided combination of <code>country</code> and <code>state</code> exists for the TaxCategory, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return state
      */
 
@@ -76,7 +79,7 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
     public String getState();
 
     /**
-     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). If <code>amount</code> is defined, the total of all subrates must equal <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
      * @return subRates
      */
     @Valid
@@ -84,7 +87,8 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
     public List<SubRate> getSubRates();
 
     /**
-     *  <p>User-defined identifier of the TaxRate. Must be unique within the TaxCategory containing it.</p>
+     *  <p>User-defined identifier of the TaxRate.</p>
+     *  <p>If the provided key is used by another TaxRate in the TaxCategory, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return key
      */
 
@@ -99,7 +103,8 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
     public void setName(final String name);
 
     /**
-     *  <p>Tax rate. Must be supplied if no <code>subRates</code> are specified. If <code>subRates</code> are specified, this field can be omitted or it must be the sum of amounts of all <code>subRates</code>.</p>
+     *  <p>Tax rate.</p>
+     *  <p>Either <code>amount</code> or <code>subRates</code> must be defined. If both are defined, the value of this field must be equal to the sum of the <code>subRates</code> amounts; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param amount value to be set
      */
 
@@ -114,20 +119,22 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
 
     /**
      *  <p>Country in which the tax rate is applied in <span>ISO 3166-1 alpha-2</span> format.</p>
+     *  <p>If the provided combination of <code>country</code> and <code>state</code> exists for the TaxCategory, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param country value to be set
      */
 
     public void setCountry(final String country);
 
     /**
-     *  <p>State within the country, such as Texas in the United States. The value is case-sensitive and must use the same casing as the <code>state</code> value in the Cart <code>shippingAddress</code>.</p>
+     *  <p>State within the country, such as Texas in the United States. The value is case-sensitive and must use the same casing as the <code>state</code> value in the Cart <code>shippingAddress</code>. Empty strings are treated as if <code>state</code> was omitted.</p>
+     *  <p>If the provided combination of <code>country</code> and <code>state</code> exists for the TaxCategory, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param state value to be set
      */
 
     public void setState(final String state);
 
     /**
-     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). If <code>amount</code> is defined, the total of all subrates must equal <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
      * @param subRates values to be set
      */
 
@@ -135,14 +142,15 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
     public void setSubRates(final SubRate... subRates);
 
     /**
-     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). If <code>amount</code> is defined, the total of all subrates must equal <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> and the <code>taxedPrice</code> field of <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItems</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItems</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfos</a>.</p>
      * @param subRates values to be set
      */
 
     public void setSubRates(final List<SubRate> subRates);
 
     /**
-     *  <p>User-defined identifier of the TaxRate. Must be unique within the TaxCategory containing it.</p>
+     *  <p>User-defined identifier of the TaxRate.</p>
+     *  <p>If the provided key is used by another TaxRate in the TaxCategory, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param key value to be set
      */
 

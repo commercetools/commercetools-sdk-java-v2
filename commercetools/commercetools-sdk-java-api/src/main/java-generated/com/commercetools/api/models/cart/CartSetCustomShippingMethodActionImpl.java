@@ -37,6 +37,8 @@ public class CartSetCustomShippingMethodActionImpl implements CartSetCustomShipp
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    private com.commercetools.api.models.cart.EstimatedDelivery estimatedDelivery;
+
     /**
      * create instance with all properties
      */
@@ -45,12 +47,14 @@ public class CartSetCustomShippingMethodActionImpl implements CartSetCustomShipp
             @JsonProperty("shippingRate") final com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate,
             @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory,
             @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
+            @JsonProperty("estimatedDelivery") final com.commercetools.api.models.cart.EstimatedDelivery estimatedDelivery) {
         this.shippingMethodName = shippingMethodName;
         this.shippingRate = shippingRate;
         this.taxCategory = taxCategory;
         this.externalTaxRate = externalTaxRate;
         this.custom = custom;
+        this.estimatedDelivery = estimatedDelivery;
         this.action = SET_CUSTOM_SHIPPING_METHOD;
     }
 
@@ -109,6 +113,14 @@ public class CartSetCustomShippingMethodActionImpl implements CartSetCustomShipp
         return this.custom;
     }
 
+    /**
+     *  <p>Estimated time window during which the shipment is expected to be delivered. If not set, any existing estimate on the Cart's <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> is cleared.</p>
+     */
+
+    public com.commercetools.api.models.cart.EstimatedDelivery getEstimatedDelivery() {
+        return this.estimatedDelivery;
+    }
+
     public void setShippingMethodName(final String shippingMethodName) {
         this.shippingMethodName = shippingMethodName;
     }
@@ -130,6 +142,10 @@ public class CartSetCustomShippingMethodActionImpl implements CartSetCustomShipp
         this.custom = custom;
     }
 
+    public void setEstimatedDelivery(final com.commercetools.api.models.cart.EstimatedDelivery estimatedDelivery) {
+        this.estimatedDelivery = estimatedDelivery;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -146,12 +162,14 @@ public class CartSetCustomShippingMethodActionImpl implements CartSetCustomShipp
                 .append(taxCategory, that.taxCategory)
                 .append(externalTaxRate, that.externalTaxRate)
                 .append(custom, that.custom)
+                .append(estimatedDelivery, that.estimatedDelivery)
                 .append(action, that.action)
                 .append(shippingMethodName, that.shippingMethodName)
                 .append(shippingRate, that.shippingRate)
                 .append(taxCategory, that.taxCategory)
                 .append(externalTaxRate, that.externalTaxRate)
                 .append(custom, that.custom)
+                .append(estimatedDelivery, that.estimatedDelivery)
                 .isEquals();
     }
 
@@ -163,6 +181,7 @@ public class CartSetCustomShippingMethodActionImpl implements CartSetCustomShipp
                 .append(taxCategory)
                 .append(externalTaxRate)
                 .append(custom)
+                .append(estimatedDelivery)
                 .toHashCode();
     }
 
@@ -174,6 +193,7 @@ public class CartSetCustomShippingMethodActionImpl implements CartSetCustomShipp
                 .append("taxCategory", taxCategory)
                 .append("externalTaxRate", externalTaxRate)
                 .append("custom", custom)
+                .append("estimatedDelivery", estimatedDelivery)
                 .build();
     }
 

@@ -43,6 +43,8 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
 
     private com.commercetools.api.models.cart.ShippingMethodState shippingMethodState;
 
+    private com.commercetools.api.models.cart.EstimatedDelivery estimatedDelivery;
+
     /**
      * create instance with all properties
      */
@@ -56,7 +58,8 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
             @JsonProperty("shippingMethod") final com.commercetools.api.models.shipping_method.ShippingMethodReference shippingMethod,
             @JsonProperty("deliveries") final java.util.List<com.commercetools.api.models.order.Delivery> deliveries,
             @JsonProperty("discountedPrice") final com.commercetools.api.models.cart.DiscountedLineItemPrice discountedPrice,
-            @JsonProperty("shippingMethodState") final com.commercetools.api.models.cart.ShippingMethodState shippingMethodState) {
+            @JsonProperty("shippingMethodState") final com.commercetools.api.models.cart.ShippingMethodState shippingMethodState,
+            @JsonProperty("estimatedDelivery") final com.commercetools.api.models.cart.EstimatedDelivery estimatedDelivery) {
         this.shippingMethodName = shippingMethodName;
         this.price = price;
         this.shippingRate = shippingRate;
@@ -67,6 +70,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
         this.deliveries = deliveries;
         this.discountedPrice = discountedPrice;
         this.shippingMethodState = shippingMethodState;
+        this.estimatedDelivery = estimatedDelivery;
     }
 
     /**
@@ -156,6 +160,14 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
         return this.shippingMethodState;
     }
 
+    /**
+     *  <p>Estimated time window during which the shipment is expected to be delivered. This value is removed if the Cart's <code>shippingAddress</code> changes.</p>
+     */
+
+    public com.commercetools.api.models.cart.EstimatedDelivery getEstimatedDelivery() {
+        return this.estimatedDelivery;
+    }
+
     public void setShippingMethodName(final String shippingMethodName) {
         this.shippingMethodName = shippingMethodName;
     }
@@ -202,6 +214,10 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
         this.shippingMethodState = shippingMethodState;
     }
 
+    public void setEstimatedDelivery(final com.commercetools.api.models.cart.EstimatedDelivery estimatedDelivery) {
+        this.estimatedDelivery = estimatedDelivery;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -222,6 +238,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
                 .append(deliveries, that.deliveries)
                 .append(discountedPrice, that.discountedPrice)
                 .append(shippingMethodState, that.shippingMethodState)
+                .append(estimatedDelivery, that.estimatedDelivery)
                 .append(shippingMethodName, that.shippingMethodName)
                 .append(price, that.price)
                 .append(shippingRate, that.shippingRate)
@@ -232,6 +249,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
                 .append(deliveries, that.deliveries)
                 .append(discountedPrice, that.discountedPrice)
                 .append(shippingMethodState, that.shippingMethodState)
+                .append(estimatedDelivery, that.estimatedDelivery)
                 .isEquals();
     }
 
@@ -247,6 +265,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
                 .append(deliveries)
                 .append(discountedPrice)
                 .append(shippingMethodState)
+                .append(estimatedDelivery)
                 .toHashCode();
     }
 
@@ -263,6 +282,7 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
                 .append("deliveries", deliveries)
                 .append("discountedPrice", discountedPrice)
                 .append("shippingMethodState", shippingMethodState)
+                .append("estimatedDelivery", estimatedDelivery)
                 .build();
     }
 

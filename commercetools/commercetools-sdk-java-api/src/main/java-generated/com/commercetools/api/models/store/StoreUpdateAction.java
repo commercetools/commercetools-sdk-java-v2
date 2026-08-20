@@ -133,6 +133,30 @@ public interface StoreUpdateAction extends com.commercetools.api.models.Resource
     }
 
     /**
+     * builder for setCheckoutUrlTemplate subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.store.StoreSetCheckoutUrlTemplateActionBuilder setCheckoutUrlTemplateBuilder() {
+        return com.commercetools.api.models.store.StoreSetCheckoutUrlTemplateActionBuilder.of();
+    }
+
+    /**
+     * builder for setContactUrl subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.store.StoreSetContactUrlActionBuilder setContactUrlBuilder() {
+        return com.commercetools.api.models.store.StoreSetContactUrlActionBuilder.of();
+    }
+
+    /**
+     * builder for setCookiePolicyUrl subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.store.StoreSetCookiePolicyUrlActionBuilder setCookiePolicyUrlBuilder() {
+        return com.commercetools.api.models.store.StoreSetCookiePolicyUrlActionBuilder.of();
+    }
+
+    /**
      * builder for setCountries subtype
      * @return builder
      */
@@ -165,6 +189,22 @@ public interface StoreUpdateAction extends com.commercetools.api.models.Resource
     }
 
     /**
+     * builder for setFaqUrl subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.store.StoreSetFaqUrlActionBuilder setFaqUrlBuilder() {
+        return com.commercetools.api.models.store.StoreSetFaqUrlActionBuilder.of();
+    }
+
+    /**
+     * builder for setImprintUrl subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.store.StoreSetImprintUrlActionBuilder setImprintUrlBuilder() {
+        return com.commercetools.api.models.store.StoreSetImprintUrlActionBuilder.of();
+    }
+
+    /**
      * builder for setLanguages subtype
      * @return builder
      */
@@ -181,6 +221,22 @@ public interface StoreUpdateAction extends com.commercetools.api.models.Resource
     }
 
     /**
+     * builder for setOrderUrlTemplate subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.store.StoreSetOrderUrlTemplateActionBuilder setOrderUrlTemplateBuilder() {
+        return com.commercetools.api.models.store.StoreSetOrderUrlTemplateActionBuilder.of();
+    }
+
+    /**
+     * builder for setPrivacyPolicyUrl subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.store.StoreSetPrivacyPolicyUrlActionBuilder setPrivacyPolicyUrlBuilder() {
+        return com.commercetools.api.models.store.StoreSetPrivacyPolicyUrlActionBuilder.of();
+    }
+
+    /**
      * builder for setProductSelections subtype
      * @return builder
      */
@@ -189,11 +245,35 @@ public interface StoreUpdateAction extends com.commercetools.api.models.Resource
     }
 
     /**
+     * builder for setRefundPolicyUrl subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.store.StoreSetRefundPolicyUrlActionBuilder setRefundPolicyUrlBuilder() {
+        return com.commercetools.api.models.store.StoreSetRefundPolicyUrlActionBuilder.of();
+    }
+
+    /**
+     * builder for setShippingPolicyUrl subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.store.StoreSetShippingPolicyUrlActionBuilder setShippingPolicyUrlBuilder() {
+        return com.commercetools.api.models.store.StoreSetShippingPolicyUrlActionBuilder.of();
+    }
+
+    /**
      * builder for setSupplyChannels subtype
      * @return builder
      */
     public static com.commercetools.api.models.store.StoreSetSupplyChannelsActionBuilder setSupplyChannelsBuilder() {
         return com.commercetools.api.models.store.StoreSetSupplyChannelsActionBuilder.of();
+    }
+
+    /**
+     * builder for setTermsOfServiceUrl subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.store.StoreSetTermsOfServiceUrlActionBuilder setTermsOfServiceUrlBuilder() {
+        return com.commercetools.api.models.store.StoreSetTermsOfServiceUrlActionBuilder.of();
     }
 
     /**

@@ -29,6 +29,9 @@ public class CartSetShippingMethodActionBuilder implements Builder<CartSetShippi
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
+    @Nullable
+    private com.commercetools.api.models.cart.EstimatedDelivery estimatedDelivery;
+
     /**
      *  <p>Value to set. If omitted, any existing value is removed.</p>
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned in one of the following cases:</p>
@@ -127,6 +130,42 @@ public class CartSetShippingMethodActionBuilder implements Builder<CartSetShippi
     }
 
     /**
+     *  <p>Estimated time window during which the shipment is expected to be delivered. If not set, any existing estimate on the Cart's <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> is cleared.</p>
+     * @param builder function to build the estimatedDelivery value
+     * @return Builder
+     */
+
+    public CartSetShippingMethodActionBuilder estimatedDelivery(
+            Function<com.commercetools.api.models.cart.EstimatedDeliveryBuilder, com.commercetools.api.models.cart.EstimatedDeliveryBuilder> builder) {
+        this.estimatedDelivery = builder.apply(com.commercetools.api.models.cart.EstimatedDeliveryBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Estimated time window during which the shipment is expected to be delivered. If not set, any existing estimate on the Cart's <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> is cleared.</p>
+     * @param builder function to build the estimatedDelivery value
+     * @return Builder
+     */
+
+    public CartSetShippingMethodActionBuilder withEstimatedDelivery(
+            Function<com.commercetools.api.models.cart.EstimatedDeliveryBuilder, com.commercetools.api.models.cart.EstimatedDelivery> builder) {
+        this.estimatedDelivery = builder.apply(com.commercetools.api.models.cart.EstimatedDeliveryBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Estimated time window during which the shipment is expected to be delivered. If not set, any existing estimate on the Cart's <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> is cleared.</p>
+     * @param estimatedDelivery value to be set
+     * @return Builder
+     */
+
+    public CartSetShippingMethodActionBuilder estimatedDelivery(
+            @Nullable final com.commercetools.api.models.cart.EstimatedDelivery estimatedDelivery) {
+        this.estimatedDelivery = estimatedDelivery;
+        return this;
+    }
+
+    /**
      *  <p>Value to set. If omitted, any existing value is removed.</p>
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned in one of the following cases:</p>
      *  <ol>
@@ -154,11 +193,21 @@ public class CartSetShippingMethodActionBuilder implements Builder<CartSetShippi
     }
 
     /**
+     *  <p>Estimated time window during which the shipment is expected to be delivered. If not set, any existing estimate on the Cart's <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> is cleared.</p>
+     * @return estimatedDelivery
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart.EstimatedDelivery getEstimatedDelivery() {
+        return this.estimatedDelivery;
+    }
+
+    /**
      * builds CartSetShippingMethodAction with checking for non-null required values
      * @return CartSetShippingMethodAction
      */
     public CartSetShippingMethodAction build() {
-        return new CartSetShippingMethodActionImpl(shippingMethod, externalTaxRate);
+        return new CartSetShippingMethodActionImpl(shippingMethod, externalTaxRate, estimatedDelivery);
     }
 
     /**
@@ -166,7 +215,7 @@ public class CartSetShippingMethodActionBuilder implements Builder<CartSetShippi
      * @return CartSetShippingMethodAction
      */
     public CartSetShippingMethodAction buildUnchecked() {
-        return new CartSetShippingMethodActionImpl(shippingMethod, externalTaxRate);
+        return new CartSetShippingMethodActionImpl(shippingMethod, externalTaxRate, estimatedDelivery);
     }
 
     /**
@@ -186,6 +235,7 @@ public class CartSetShippingMethodActionBuilder implements Builder<CartSetShippi
         CartSetShippingMethodActionBuilder builder = new CartSetShippingMethodActionBuilder();
         builder.shippingMethod = template.getShippingMethod();
         builder.externalTaxRate = template.getExternalTaxRate();
+        builder.estimatedDelivery = template.getEstimatedDelivery();
         return builder;
     }
 

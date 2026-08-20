@@ -39,6 +39,8 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    private com.commercetools.api.models.store.Storefront storefront;
+
     /**
      * create instance with all properties
      */
@@ -50,7 +52,8 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
             @JsonProperty("distributionChannels") final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels,
             @JsonProperty("supplyChannels") final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels,
             @JsonProperty("productSelections") final java.util.List<com.commercetools.api.models.store.ProductSelectionSettingDraft> productSelections,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
+            @JsonProperty("storefront") final com.commercetools.api.models.store.Storefront storefront) {
         this.key = key;
         this.name = name;
         this.languages = languages;
@@ -59,6 +62,7 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
         this.supplyChannels = supplyChannels;
         this.productSelections = productSelections;
         this.custom = custom;
+        this.storefront = storefront;
     }
 
     /**
@@ -140,6 +144,14 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
         return this.custom;
     }
 
+    /**
+     *  <p>Customer-facing URLs and policy links for the Store's storefront.</p>
+     */
+
+    public com.commercetools.api.models.store.Storefront getStorefront() {
+        return this.storefront;
+    }
+
     public void setKey(final String key) {
         this.key = key;
     }
@@ -198,6 +210,10 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
         this.custom = custom;
     }
 
+    public void setStorefront(final com.commercetools.api.models.store.Storefront storefront) {
+        this.storefront = storefront;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -216,6 +232,7 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
                 .append(supplyChannels, that.supplyChannels)
                 .append(productSelections, that.productSelections)
                 .append(custom, that.custom)
+                .append(storefront, that.storefront)
                 .append(key, that.key)
                 .append(name, that.name)
                 .append(languages, that.languages)
@@ -224,6 +241,7 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
                 .append(supplyChannels, that.supplyChannels)
                 .append(productSelections, that.productSelections)
                 .append(custom, that.custom)
+                .append(storefront, that.storefront)
                 .isEquals();
     }
 
@@ -237,6 +255,7 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
                 .append(supplyChannels)
                 .append(productSelections)
                 .append(custom)
+                .append(storefront)
                 .toHashCode();
     }
 
@@ -250,6 +269,7 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
                 .append("supplyChannels", supplyChannels)
                 .append("productSelections", productSelections)
                 .append("custom", custom)
+                .append("storefront", storefront)
                 .build();
     }
 

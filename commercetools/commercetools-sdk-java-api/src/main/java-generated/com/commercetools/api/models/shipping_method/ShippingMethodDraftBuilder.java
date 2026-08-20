@@ -60,6 +60,9 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     @Nullable
     private java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores;
 
+    @Nullable
+    private String carrier;
+
     /**
      *  <p>User-defined unique identifier for the ShippingMethod.</p>
      * @param key value to be set
@@ -483,6 +486,17 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
+     *  <p>Name of the carrier that delivers the parcel, for example <code>DHL</code>.</p>
+     * @param carrier value to be set
+     * @return Builder
+     */
+
+    public ShippingMethodDraftBuilder carrier(@Nullable final String carrier) {
+        this.carrier = carrier;
+        return this;
+    }
+
+    /**
      *  <p>User-defined unique identifier for the ShippingMethod.</p>
      * @return key
      */
@@ -603,6 +617,16 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
+     *  <p>Name of the carrier that delivers the parcel, for example <code>DHL</code>.</p>
+     * @return carrier
+     */
+
+    @Nullable
+    public String getCarrier() {
+        return this.carrier;
+    }
+
+    /**
      * builds ShippingMethodDraft with checking for non-null required values
      * @return ShippingMethodDraft
      */
@@ -612,7 +636,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
         Objects.requireNonNull(zoneRates, ShippingMethodDraft.class + ": zoneRates is missing");
         Objects.requireNonNull(isDefault, ShippingMethodDraft.class + ": isDefault is missing");
         return new ShippingMethodDraftImpl(key, name, localizedName, description, localizedDescription, taxCategory,
-            zoneRates, active, isDefault, predicate, custom, stores);
+            zoneRates, active, isDefault, predicate, custom, stores, carrier);
     }
 
     /**
@@ -621,7 +645,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
      */
     public ShippingMethodDraft buildUnchecked() {
         return new ShippingMethodDraftImpl(key, name, localizedName, description, localizedDescription, taxCategory,
-            zoneRates, active, isDefault, predicate, custom, stores);
+            zoneRates, active, isDefault, predicate, custom, stores, carrier);
     }
 
     /**
@@ -651,6 +675,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
         builder.predicate = template.getPredicate();
         builder.custom = template.getCustom();
         builder.stores = template.getStores();
+        builder.carrier = template.getCarrier();
         return builder;
     }
 

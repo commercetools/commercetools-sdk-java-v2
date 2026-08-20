@@ -95,6 +95,13 @@ public class ShippingMethodUpdateActionQueryBuilderDsl {
             ShippingMethodUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ShippingMethodUpdateActionQueryBuilderDsl> asSetCarrier(
+            Function<com.commercetools.api.predicates.query.shipping_method.ShippingMethodSetCarrierActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.shipping_method.ShippingMethodSetCarrierActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.shipping_method.ShippingMethodSetCarrierActionQueryBuilderDsl.of()),
+            ShippingMethodUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ShippingMethodUpdateActionQueryBuilderDsl> asSetCustomField(
             Function<com.commercetools.api.predicates.query.shipping_method.ShippingMethodSetCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.shipping_method.ShippingMethodSetCustomFieldActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(

@@ -39,7 +39,9 @@ public class StoreDraftTest {
                                 .productSelections(Collections.singletonList(
                                     new com.commercetools.api.models.store.ProductSelectionSettingDraftImpl())) },
                 new Object[] { "custom",
-                        StoreDraft.builder().custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
+                        StoreDraft.builder().custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
+                new Object[] { "storefront",
+                        StoreDraft.builder().storefront(new com.commercetools.api.models.store.StorefrontImpl()) } };
     }
 
     @Test
@@ -109,5 +111,12 @@ public class StoreDraftTest {
         value.setCustom(new com.commercetools.api.models.type.CustomFieldsDraftImpl());
         Assertions.assertThat(value.getCustom())
                 .isEqualTo(new com.commercetools.api.models.type.CustomFieldsDraftImpl());
+    }
+
+    @Test
+    public void storefront() {
+        StoreDraft value = StoreDraft.of();
+        value.setStorefront(new com.commercetools.api.models.store.StorefrontImpl());
+        Assertions.assertThat(value.getStorefront()).isEqualTo(new com.commercetools.api.models.store.StorefrontImpl());
     }
 }

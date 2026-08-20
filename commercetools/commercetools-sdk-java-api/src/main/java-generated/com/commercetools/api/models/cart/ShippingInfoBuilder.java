@@ -53,6 +53,9 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
 
     private com.commercetools.api.models.cart.ShippingMethodState shippingMethodState;
 
+    @Nullable
+    private com.commercetools.api.models.cart.EstimatedDelivery estimatedDelivery;
+
     /**
      *  <p>Name of the Shipping Method.</p>
      * @param shippingMethodName value to be set
@@ -423,6 +426,42 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
+     *  <p>Estimated time window during which the shipment is expected to be delivered. This value is removed if the Cart's <code>shippingAddress</code> changes.</p>
+     * @param builder function to build the estimatedDelivery value
+     * @return Builder
+     */
+
+    public ShippingInfoBuilder estimatedDelivery(
+            Function<com.commercetools.api.models.cart.EstimatedDeliveryBuilder, com.commercetools.api.models.cart.EstimatedDeliveryBuilder> builder) {
+        this.estimatedDelivery = builder.apply(com.commercetools.api.models.cart.EstimatedDeliveryBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Estimated time window during which the shipment is expected to be delivered. This value is removed if the Cart's <code>shippingAddress</code> changes.</p>
+     * @param builder function to build the estimatedDelivery value
+     * @return Builder
+     */
+
+    public ShippingInfoBuilder withEstimatedDelivery(
+            Function<com.commercetools.api.models.cart.EstimatedDeliveryBuilder, com.commercetools.api.models.cart.EstimatedDelivery> builder) {
+        this.estimatedDelivery = builder.apply(com.commercetools.api.models.cart.EstimatedDeliveryBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Estimated time window during which the shipment is expected to be delivered. This value is removed if the Cart's <code>shippingAddress</code> changes.</p>
+     * @param estimatedDelivery value to be set
+     * @return Builder
+     */
+
+    public ShippingInfoBuilder estimatedDelivery(
+            @Nullable final com.commercetools.api.models.cart.EstimatedDelivery estimatedDelivery) {
+        this.estimatedDelivery = estimatedDelivery;
+        return this;
+    }
+
+    /**
      *  <p>Name of the Shipping Method.</p>
      * @return shippingMethodName
      */
@@ -520,6 +559,16 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
+     *  <p>Estimated time window during which the shipment is expected to be delivered. This value is removed if the Cart's <code>shippingAddress</code> changes.</p>
+     * @return estimatedDelivery
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart.EstimatedDelivery getEstimatedDelivery() {
+        return this.estimatedDelivery;
+    }
+
+    /**
      * builds ShippingInfo with checking for non-null required values
      * @return ShippingInfo
      */
@@ -529,7 +578,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
         Objects.requireNonNull(shippingRate, ShippingInfo.class + ": shippingRate is missing");
         Objects.requireNonNull(shippingMethodState, ShippingInfo.class + ": shippingMethodState is missing");
         return new ShippingInfoImpl(shippingMethodName, price, shippingRate, taxedPrice, taxRate, taxCategory,
-            shippingMethod, deliveries, discountedPrice, shippingMethodState);
+            shippingMethod, deliveries, discountedPrice, shippingMethodState, estimatedDelivery);
     }
 
     /**
@@ -538,7 +587,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
      */
     public ShippingInfo buildUnchecked() {
         return new ShippingInfoImpl(shippingMethodName, price, shippingRate, taxedPrice, taxRate, taxCategory,
-            shippingMethod, deliveries, discountedPrice, shippingMethodState);
+            shippingMethod, deliveries, discountedPrice, shippingMethodState, estimatedDelivery);
     }
 
     /**
@@ -566,6 +615,7 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
         builder.deliveries = template.getDeliveries();
         builder.discountedPrice = template.getDiscountedPrice();
         builder.shippingMethodState = template.getShippingMethodState();
+        builder.estimatedDelivery = template.getEstimatedDelivery();
         return builder;
     }
 

@@ -47,6 +47,9 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    @Nullable
+    private com.commercetools.api.models.store.Storefront storefront;
+
     /**
      *  <p>User-defined unique and immutable identifier for the Store. Keys can only contain alphanumeric characters, underscores, and hyphens.</p>
      * @param key value to be set
@@ -592,6 +595,41 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
+     *  <p>Customer-facing URLs and policy links for the Store's storefront.</p>
+     * @param builder function to build the storefront value
+     * @return Builder
+     */
+
+    public StoreDraftBuilder storefront(
+            Function<com.commercetools.api.models.store.StorefrontBuilder, com.commercetools.api.models.store.StorefrontBuilder> builder) {
+        this.storefront = builder.apply(com.commercetools.api.models.store.StorefrontBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Customer-facing URLs and policy links for the Store's storefront.</p>
+     * @param builder function to build the storefront value
+     * @return Builder
+     */
+
+    public StoreDraftBuilder withStorefront(
+            Function<com.commercetools.api.models.store.StorefrontBuilder, com.commercetools.api.models.store.Storefront> builder) {
+        this.storefront = builder.apply(com.commercetools.api.models.store.StorefrontBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Customer-facing URLs and policy links for the Store's storefront.</p>
+     * @param storefront value to be set
+     * @return Builder
+     */
+
+    public StoreDraftBuilder storefront(@Nullable final com.commercetools.api.models.store.Storefront storefront) {
+        this.storefront = storefront;
+        return this;
+    }
+
+    /**
      *  <p>User-defined unique and immutable identifier for the Store. Keys can only contain alphanumeric characters, underscores, and hyphens.</p>
      * @return key
      */
@@ -680,13 +718,23 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
+     *  <p>Customer-facing URLs and policy links for the Store's storefront.</p>
+     * @return storefront
+     */
+
+    @Nullable
+    public com.commercetools.api.models.store.Storefront getStorefront() {
+        return this.storefront;
+    }
+
+    /**
      * builds StoreDraft with checking for non-null required values
      * @return StoreDraft
      */
     public StoreDraft build() {
         Objects.requireNonNull(key, StoreDraft.class + ": key is missing");
         return new StoreDraftImpl(key, name, languages, countries, distributionChannels, supplyChannels,
-            productSelections, custom);
+            productSelections, custom, storefront);
     }
 
     /**
@@ -695,7 +743,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
      */
     public StoreDraft buildUnchecked() {
         return new StoreDraftImpl(key, name, languages, countries, distributionChannels, supplyChannels,
-            productSelections, custom);
+            productSelections, custom, storefront);
     }
 
     /**
@@ -721,6 +769,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
         builder.supplyChannels = template.getSupplyChannels();
         builder.productSelections = template.getProductSelections();
         builder.custom = template.getCustom();
+        builder.storefront = template.getStorefront();
         return builder;
     }
 

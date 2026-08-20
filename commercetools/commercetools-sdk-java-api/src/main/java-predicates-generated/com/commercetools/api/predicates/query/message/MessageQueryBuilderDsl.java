@@ -574,6 +574,14 @@ public class MessageQueryBuilderDsl {
             MessageQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asCartEstimatedDeliverySet(
+            Function<com.commercetools.api.predicates.query.message.CartEstimatedDeliverySetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.CartEstimatedDeliverySetMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.message.CartEstimatedDeliverySetMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MessageQueryBuilderDsl> asCartFrozen(
             Function<com.commercetools.api.predicates.query.message.CartFrozenMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.CartFrozenMessageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -1994,6 +2002,28 @@ public class MessageQueryBuilderDsl {
             MessageQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asStoreCheckoutUrlTemplateSet(
+            Function<com.commercetools.api.predicates.query.message.StoreCheckoutUrlTemplateSetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.StoreCheckoutUrlTemplateSetMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.message.StoreCheckoutUrlTemplateSetMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asStoreContactUrlSet(
+            Function<com.commercetools.api.predicates.query.message.StoreContactUrlSetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.StoreContactUrlSetMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.message.StoreContactUrlSetMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asStoreCookiePolicyUrlSet(
+            Function<com.commercetools.api.predicates.query.message.StoreCookiePolicyUrlSetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.StoreCookiePolicyUrlSetMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.message.StoreCookiePolicyUrlSetMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MessageQueryBuilderDsl> asStoreCountriesChanged(
             Function<com.commercetools.api.predicates.query.message.StoreCountriesChangedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.StoreCountriesChangedMessageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -2022,6 +2052,20 @@ public class MessageQueryBuilderDsl {
             MessageQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asStoreFaqUrlSet(
+            Function<com.commercetools.api.predicates.query.message.StoreFaqUrlSetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.StoreFaqUrlSetMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.message.StoreFaqUrlSetMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asStoreImprintUrlSet(
+            Function<com.commercetools.api.predicates.query.message.StoreImprintUrlSetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.StoreImprintUrlSetMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.message.StoreImprintUrlSetMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MessageQueryBuilderDsl> asStoreLanguagesChanged(
             Function<com.commercetools.api.predicates.query.message.StoreLanguagesChangedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.StoreLanguagesChangedMessageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -2036,10 +2080,41 @@ public class MessageQueryBuilderDsl {
             MessageQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asStoreOrderUrlTemplateSet(
+            Function<com.commercetools.api.predicates.query.message.StoreOrderUrlTemplateSetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.StoreOrderUrlTemplateSetMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.message.StoreOrderUrlTemplateSetMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asStorePrivacyPolicyUrlSet(
+            Function<com.commercetools.api.predicates.query.message.StorePrivacyPolicyUrlSetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.StorePrivacyPolicyUrlSetMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.message.StorePrivacyPolicyUrlSetMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MessageQueryBuilderDsl> asStoreProductSelectionsChanged(
             Function<com.commercetools.api.predicates.query.message.StoreProductSelectionsChangedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.StoreProductSelectionsChangedMessageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(
             com.commercetools.api.predicates.query.message.StoreProductSelectionsChangedMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asStoreRefundPolicyUrlSet(
+            Function<com.commercetools.api.predicates.query.message.StoreRefundPolicyUrlSetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.StoreRefundPolicyUrlSetMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.message.StoreRefundPolicyUrlSetMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asStoreShippingPolicyUrlSet(
+            Function<com.commercetools.api.predicates.query.message.StoreShippingPolicyUrlSetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.StoreShippingPolicyUrlSetMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.message.StoreShippingPolicyUrlSetMessageQueryBuilderDsl.of()),
             MessageQueryBuilderDsl::of);
     }
 
@@ -2048,6 +2123,14 @@ public class MessageQueryBuilderDsl {
         return new CombinationQueryPredicate<>(
             fn.apply(
                 com.commercetools.api.predicates.query.message.StoreSupplyChannelsChangedMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asStoreTermsOfServiceUrlSet(
+            Function<com.commercetools.api.predicates.query.message.StoreTermsOfServiceUrlSetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.StoreTermsOfServiceUrlSetMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.message.StoreTermsOfServiceUrlSetMessageQueryBuilderDsl.of()),
             MessageQueryBuilderDsl::of);
     }
 

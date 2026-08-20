@@ -48,6 +48,8 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
 
     private java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores;
 
+    private String carrier;
+
     /**
      * create instance with all properties
      */
@@ -61,7 +63,8 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
             @JsonProperty("active") final Boolean active, @JsonProperty("isDefault") final Boolean isDefault,
             @JsonProperty("predicate") final String predicate,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
-            @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores) {
+            @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores,
+            @JsonProperty("carrier") final String carrier) {
         this.key = key;
         this.name = name;
         this.localizedName = localizedName;
@@ -74,6 +77,7 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
         this.predicate = predicate;
         this.custom = custom;
         this.stores = stores;
+        this.carrier = carrier;
     }
 
     /**
@@ -182,6 +186,14 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
         return this.stores;
     }
 
+    /**
+     *  <p>Name of the carrier that delivers the parcel, for example <code>DHL</code>.</p>
+     */
+
+    public String getCarrier() {
+        return this.carrier;
+    }
+
     public void setKey(final String key) {
         this.key = key;
     }
@@ -242,6 +254,10 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
         this.stores = stores;
     }
 
+    public void setCarrier(final String carrier) {
+        this.carrier = carrier;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -264,6 +280,7 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
                 .append(predicate, that.predicate)
                 .append(custom, that.custom)
                 .append(stores, that.stores)
+                .append(carrier, that.carrier)
                 .append(key, that.key)
                 .append(name, that.name)
                 .append(localizedName, that.localizedName)
@@ -276,6 +293,7 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
                 .append(predicate, that.predicate)
                 .append(custom, that.custom)
                 .append(stores, that.stores)
+                .append(carrier, that.carrier)
                 .isEquals();
     }
 
@@ -293,6 +311,7 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
                 .append(predicate)
                 .append(custom)
                 .append(stores)
+                .append(carrier)
                 .toHashCode();
     }
 
@@ -310,6 +329,7 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
                 .append("predicate", predicate)
                 .append("custom", custom)
                 .append("stores", stores)
+                .append("carrier", carrier)
                 .build();
     }
 

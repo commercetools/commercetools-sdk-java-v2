@@ -92,6 +92,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
 
     /**
      *  <p>User-defined unique identifier for the StandalonePrice.</p>
+     *  <p>If the value is used by another Standalone Price, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      */
 
     public String getKey() {
@@ -133,6 +134,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
 
     /**
      *  <p>Sets the product distribution <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which this Price is valid.</p>
+     *  <p>If the referenced Channel does not contain the <code>ProductDistribution</code> role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {

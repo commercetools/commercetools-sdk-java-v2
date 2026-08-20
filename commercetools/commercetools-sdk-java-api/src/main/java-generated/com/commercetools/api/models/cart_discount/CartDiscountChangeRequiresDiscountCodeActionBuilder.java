@@ -25,7 +25,8 @@ public class CartDiscountChangeRequiresDiscountCodeActionBuilder
     private Boolean requiresDiscountCode;
 
     /**
-     *  <p>New value to set. If set to <code>true</code>, the Discount can only be used in connection with a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a>.</p>
+     *  <p>New value to set. If <code>true</code>, the Cart Discount can only be used with a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a>.</p>
+     *  <p>When set to <code>false</code>, if the number of active Cart Discounts without a Discount Code exceeds the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxCartDiscountsReachedError" rel="nofollow">MaxCartDiscountsReached</a> error is returned.</p>
      * @param requiresDiscountCode value to be set
      * @return Builder
      */
@@ -37,7 +38,8 @@ public class CartDiscountChangeRequiresDiscountCodeActionBuilder
     }
 
     /**
-     *  <p>New value to set. If set to <code>true</code>, the Discount can only be used in connection with a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a>.</p>
+     *  <p>New value to set. If <code>true</code>, the Cart Discount can only be used with a <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a>.</p>
+     *  <p>When set to <code>false</code>, if the number of active Cart Discounts without a Discount Code exceeds the <span>limit</span>, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MaxCartDiscountsReachedError" rel="nofollow">MaxCartDiscountsReached</a> error is returned.</p>
      * @return requiresDiscountCode
      */
 

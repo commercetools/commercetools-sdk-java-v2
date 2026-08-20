@@ -38,6 +38,14 @@ public interface CustomerKeyReference extends KeyReference {
     String CUSTOMER = "customer";
 
     /**
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceType getTypeId();
+
+    /**
      *  <p>User-defined unique identifier of the referenced Customer.</p>
      * @return key
      */

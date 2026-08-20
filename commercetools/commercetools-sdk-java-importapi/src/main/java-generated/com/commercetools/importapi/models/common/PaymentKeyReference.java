@@ -38,6 +38,14 @@ public interface PaymentKeyReference extends KeyReference {
     String PAYMENT = "payment";
 
     /**
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceType getTypeId();
+
+    /**
      *  <p>User-defined unique identifier of the referenced Payment.</p>
      * @return key
      */

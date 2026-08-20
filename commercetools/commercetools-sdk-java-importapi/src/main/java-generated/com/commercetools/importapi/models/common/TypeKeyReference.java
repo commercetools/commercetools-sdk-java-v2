@@ -38,6 +38,14 @@ public interface TypeKeyReference extends KeyReference {
     String TYPE = "type";
 
     /**
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceType getTypeId();
+
+    /**
      *  <p>User-defined unique identifier of the referenced Type.</p>
      * @return key
      */

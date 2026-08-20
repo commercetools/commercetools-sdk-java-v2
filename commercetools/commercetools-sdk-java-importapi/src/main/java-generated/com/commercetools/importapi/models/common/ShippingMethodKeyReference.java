@@ -38,6 +38,14 @@ public interface ShippingMethodKeyReference extends KeyReference {
     String SHIPPING_METHOD = "shipping-method";
 
     /**
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceType getTypeId();
+
+    /**
      *  <p>User-defined unique identifier of the referenced ShippingMethod.</p>
      * @return key
      */

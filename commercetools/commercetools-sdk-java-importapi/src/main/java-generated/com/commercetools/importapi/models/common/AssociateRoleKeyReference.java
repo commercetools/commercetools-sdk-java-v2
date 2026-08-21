@@ -38,6 +38,14 @@ public interface AssociateRoleKeyReference extends KeyReference {
     String ASSOCIATE_ROLE = "associate-role";
 
     /**
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceType getTypeId();
+
+    /**
      *  <p>User-defined unique identifier of the referenced Type.</p>
      * @return key
      */

@@ -86,6 +86,14 @@ public interface CartSetCustomShippingMethodAction extends CartUpdateAction {
     public CustomFieldsDraft getCustom();
 
     /**
+     *  <p>Estimated time window during which the shipment is expected to be delivered. If not set, any existing estimate on the Cart's <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> is cleared.</p>
+     * @return estimatedDelivery
+     */
+    @Valid
+    @JsonProperty("estimatedDelivery")
+    public EstimatedDelivery getEstimatedDelivery();
+
+    /**
      *  <p>Name of the custom Shipping Method.</p>
      * @param shippingMethodName value to be set
      */
@@ -121,6 +129,13 @@ public interface CartSetCustomShippingMethodAction extends CartUpdateAction {
     public void setCustom(final CustomFieldsDraft custom);
 
     /**
+     *  <p>Estimated time window during which the shipment is expected to be delivered. If not set, any existing estimate on the Cart's <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> is cleared.</p>
+     * @param estimatedDelivery value to be set
+     */
+
+    public void setEstimatedDelivery(final EstimatedDelivery estimatedDelivery);
+
+    /**
      * factory method
      * @return instance of CartSetCustomShippingMethodAction
      */
@@ -140,6 +155,7 @@ public interface CartSetCustomShippingMethodAction extends CartUpdateAction {
         instance.setTaxCategory(template.getTaxCategory());
         instance.setExternalTaxRate(template.getExternalTaxRate());
         instance.setCustom(template.getCustom());
+        instance.setEstimatedDelivery(template.getEstimatedDelivery());
         return instance;
     }
 
@@ -165,6 +181,8 @@ public interface CartSetCustomShippingMethodAction extends CartUpdateAction {
         instance.setExternalTaxRate(
             com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setEstimatedDelivery(
+            com.commercetools.api.models.cart.EstimatedDelivery.deepCopy(template.getEstimatedDelivery()));
         return instance;
     }
 

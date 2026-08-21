@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>This update action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreLanguagesChangedMessage" rel="nofollow">StoreLanguagesChanged</a> Message. Adding a language other than the ones defined in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> returns a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectNotConfiguredForLanguagesError" rel="nofollow">ProjectNotConfiguredForLanguages</a> error.</p>
+ *  <p>This update action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreLanguagesChangedMessage" rel="nofollow">StoreLanguagesChanged</a> Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreSetLanguagesActionImpl implements StoreSetLanguagesAction, ModelBase {
@@ -53,6 +53,7 @@ public class StoreSetLanguagesActionImpl implements StoreSetLanguagesAction, Mod
 
     /**
      *  <p>Value to set.</p>
+     *  <p>If a language is not configured for the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectNotConfiguredForLanguagesError" rel="nofollow">ProjectNotConfiguredForLanguages</a> error is returned.</p>
      */
 
     public java.util.List<String> getLanguages() {

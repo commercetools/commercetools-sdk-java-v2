@@ -52,7 +52,7 @@ public class ChannelKeyReferenceImpl implements ChannelKeyReference, ModelBase {
     }
 
     /**
-     *  <p>Type of referenced resource.</p>
+     *
      */
 
     public com.commercetools.importapi.models.common.ReferenceType getTypeId() {

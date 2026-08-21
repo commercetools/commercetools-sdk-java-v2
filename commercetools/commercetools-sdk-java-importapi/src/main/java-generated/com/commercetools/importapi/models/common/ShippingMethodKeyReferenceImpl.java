@@ -52,7 +52,7 @@ public class ShippingMethodKeyReferenceImpl implements ShippingMethodKeyReferenc
     }
 
     /**
-     *  <p>Type of referenced resource.</p>
+     *
      */
 
     public com.commercetools.importapi.models.common.ReferenceType getTypeId() {

@@ -38,6 +38,14 @@ public interface ProductVariantKeyReference extends KeyReference {
     String PRODUCT_VARIANT = "product-variant";
 
     /**
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceType getTypeId();
+
+    /**
      *  <p>User-defined unique identifier of the referenced ProductVariant.</p>
      * @return key
      */

@@ -54,6 +54,8 @@ public class StateAddRolesActionImpl implements StateAddRolesAction, ModelBase {
 
     /**
      *  <p>Value to append to the array.</p>
+     *  <p>If the specified roles are already present, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If a specified role is not applicable to the State's <code>type</code>, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      */
 
     public java.util.List<com.commercetools.api.models.state.StateRoleEnum> getRoles() {

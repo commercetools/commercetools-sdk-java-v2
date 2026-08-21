@@ -38,6 +38,14 @@ public interface CategoryKeyReference extends KeyReference {
     String CATEGORY = "category";
 
     /**
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceType getTypeId();
+
+    /**
      *  <p>User-defined unique identifier of the referenced Category.</p>
      * @return key
      */

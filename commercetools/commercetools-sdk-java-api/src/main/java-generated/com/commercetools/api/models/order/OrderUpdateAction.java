@@ -308,6 +308,14 @@ public interface OrderUpdateAction extends com.commercetools.api.models.Resource
     }
 
     /**
+     * builder for setEstimatedDelivery subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.order.OrderSetEstimatedDeliveryActionBuilder setEstimatedDeliveryBuilder() {
+        return com.commercetools.api.models.order.OrderSetEstimatedDeliveryActionBuilder.of();
+    }
+
+    /**
      * builder for setItemShippingAddressCustomField subtype
      * @return builder
      */

@@ -375,6 +375,13 @@ public class CartUpdateActionQueryBuilderDsl {
             CartUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> asSetEstimatedDelivery(
+            Function<com.commercetools.api.predicates.query.cart.CartSetEstimatedDeliveryActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.CartSetEstimatedDeliveryActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.cart.CartSetEstimatedDeliveryActionQueryBuilderDsl.of()),
+            CartUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> asSetItemShippingAddressCustomField(
             Function<com.commercetools.api.predicates.query.cart.CartSetItemShippingAddressCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.CartSetItemShippingAddressCustomFieldActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(

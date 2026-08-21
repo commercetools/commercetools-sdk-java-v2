@@ -267,6 +267,10 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.CartDiscountStoresSetMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.CartEstimatedDeliverySetMessageBuilder cartEstimatedDeliverySetBuilder() {
+        return com.commercetools.api.models.message.CartEstimatedDeliverySetMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.CartFrozenMessageBuilder cartFrozenBuilder() {
         return com.commercetools.api.models.message.CartFrozenMessageBuilder.of();
     }
@@ -649,6 +653,10 @@ public class MessageBuilder {
 
     public com.commercetools.api.models.message.OrderEditAppliedMessageBuilder orderEditAppliedBuilder() {
         return com.commercetools.api.models.message.OrderEditAppliedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.OrderEstimatedDeliverySetMessageBuilder orderEstimatedDeliverySetBuilder() {
+        return com.commercetools.api.models.message.OrderEstimatedDeliverySetMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.OrderImportedMessageBuilder orderImportedBuilder() {
@@ -1255,6 +1263,18 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.StandalonePriceValueChangedMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.StoreCheckoutUrlTemplateSetMessageBuilder storeCheckoutUrlTemplateSetBuilder() {
+        return com.commercetools.api.models.message.StoreCheckoutUrlTemplateSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.StoreContactUrlSetMessageBuilder storeContactUrlSetBuilder() {
+        return com.commercetools.api.models.message.StoreContactUrlSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.StoreCookiePolicyUrlSetMessageBuilder storeCookiePolicyUrlSetBuilder() {
+        return com.commercetools.api.models.message.StoreCookiePolicyUrlSetMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.StoreCountriesChangedMessageBuilder storeCountriesChangedBuilder() {
         return com.commercetools.api.models.message.StoreCountriesChangedMessageBuilder.of();
     }
@@ -1271,6 +1291,14 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.StoreDistributionChannelsChangedMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.StoreFaqUrlSetMessageBuilder storeFaqUrlSetBuilder() {
+        return com.commercetools.api.models.message.StoreFaqUrlSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.StoreImprintUrlSetMessageBuilder storeImprintUrlSetBuilder() {
+        return com.commercetools.api.models.message.StoreImprintUrlSetMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.StoreLanguagesChangedMessageBuilder storeLanguagesChangedBuilder() {
         return com.commercetools.api.models.message.StoreLanguagesChangedMessageBuilder.of();
     }
@@ -1279,12 +1307,32 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.StoreNameSetMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.StoreOrderUrlTemplateSetMessageBuilder storeOrderUrlTemplateSetBuilder() {
+        return com.commercetools.api.models.message.StoreOrderUrlTemplateSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.StorePrivacyPolicyUrlSetMessageBuilder storePrivacyPolicyUrlSetBuilder() {
+        return com.commercetools.api.models.message.StorePrivacyPolicyUrlSetMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.StoreProductSelectionsChangedMessageBuilder storeProductSelectionsChangedBuilder() {
         return com.commercetools.api.models.message.StoreProductSelectionsChangedMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.StoreRefundPolicyUrlSetMessageBuilder storeRefundPolicyUrlSetBuilder() {
+        return com.commercetools.api.models.message.StoreRefundPolicyUrlSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.StoreShippingPolicyUrlSetMessageBuilder storeShippingPolicyUrlSetBuilder() {
+        return com.commercetools.api.models.message.StoreShippingPolicyUrlSetMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.StoreSupplyChannelsChangedMessageBuilder storeSupplyChannelsChangedBuilder() {
         return com.commercetools.api.models.message.StoreSupplyChannelsChangedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.StoreTermsOfServiceUrlSetMessageBuilder storeTermsOfServiceUrlSetBuilder() {
+        return com.commercetools.api.models.message.StoreTermsOfServiceUrlSetMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.VariantCreatedMessageBuilder variantCreatedBuilder() {

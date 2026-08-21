@@ -78,6 +78,9 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
 
+    @Nullable
+    private String carrier;
+
     /**
      *  <p>Unique identifier of the ShippingMethod.</p>
      * @param id value to be set
@@ -602,6 +605,17 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
+     *  <p>Name of the carrier that delivers the parcel, for example <code>DHL</code>.</p>
+     * @param carrier value to be set
+     * @return Builder
+     */
+
+    public ShippingMethodBuilder carrier(@Nullable final String carrier) {
+        this.carrier = carrier;
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the ShippingMethod.</p>
      * @return id
      */
@@ -776,6 +790,16 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
+     *  <p>Name of the carrier that delivers the parcel, for example <code>DHL</code>.</p>
+     * @return carrier
+     */
+
+    @Nullable
+    public String getCarrier() {
+        return this.carrier;
+    }
+
+    /**
      * builds ShippingMethod with checking for non-null required values
      * @return ShippingMethod
      */
@@ -792,7 +816,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
         Objects.requireNonNull(stores, ShippingMethod.class + ": stores is missing");
         return new ShippingMethodImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
             localizedName, description, localizedDescription, taxCategory, zoneRates, active, isDefault, predicate,
-            custom, stores);
+            custom, stores, carrier);
     }
 
     /**
@@ -802,7 +826,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     public ShippingMethod buildUnchecked() {
         return new ShippingMethodImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
             localizedName, description, localizedDescription, taxCategory, zoneRates, active, isDefault, predicate,
-            custom, stores);
+            custom, stores, carrier);
     }
 
     /**
@@ -838,6 +862,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
         builder.predicate = template.getPredicate();
         builder.custom = template.getCustom();
         builder.stores = template.getStores();
+        builder.carrier = template.getCarrier();
         return builder;
     }
 

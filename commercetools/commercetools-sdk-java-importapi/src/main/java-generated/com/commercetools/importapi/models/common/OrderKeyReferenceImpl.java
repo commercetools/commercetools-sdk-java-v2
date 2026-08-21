@@ -52,7 +52,7 @@ public class OrderKeyReferenceImpl implements OrderKeyReference, ModelBase {
     }
 
     /**
-     *  <p>Type of referenced resource.</p>
+     *
      */
 
     public com.commercetools.importapi.models.common.ReferenceType getTypeId() {

@@ -40,7 +40,8 @@ public interface StateSetNameAction extends StateUpdateAction {
     String SET_NAME = "setName";
 
     /**
-     *  <p>Value to set. Set to an empty object to remove any existing value.</p>
+     *  <p>Value to set. If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>Set to an empty object to remove any existing value.</p>
      * @return name
      */
     @NotNull
@@ -49,7 +50,8 @@ public interface StateSetNameAction extends StateUpdateAction {
     public LocalizedString getName();
 
     /**
-     *  <p>Value to set. Set to an empty object to remove any existing value.</p>
+     *  <p>Value to set. If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>Set to an empty object to remove any existing value.</p>
      * @param name value to be set
      */
 

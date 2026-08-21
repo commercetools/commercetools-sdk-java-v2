@@ -51,6 +51,10 @@ public class ShippingMethodUpdateActionBuilder {
         return com.commercetools.api.models.shipping_method.ShippingMethodRemoveZoneActionBuilder.of();
     }
 
+    public com.commercetools.api.models.shipping_method.ShippingMethodSetCarrierActionBuilder setCarrierBuilder() {
+        return com.commercetools.api.models.shipping_method.ShippingMethodSetCarrierActionBuilder.of();
+    }
+
     public com.commercetools.api.models.shipping_method.ShippingMethodSetCustomFieldActionBuilder setCustomFieldBuilder() {
         return com.commercetools.api.models.shipping_method.ShippingMethodSetCustomFieldActionBuilder.of();
     }

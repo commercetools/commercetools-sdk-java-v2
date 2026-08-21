@@ -20,8 +20,11 @@ public class CartSetShippingMethodActionTest {
                 new Object[] { "shippingMethod", CartSetShippingMethodAction.builder()
                         .shippingMethod(
                             new com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierImpl()) },
-                new Object[] { "externalTaxRate", CartSetShippingMethodAction.builder()
-                        .externalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl()) } };
+                new Object[] { "externalTaxRate",
+                        CartSetShippingMethodAction.builder()
+                                .externalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl()) },
+                new Object[] { "estimatedDelivery", CartSetShippingMethodAction.builder()
+                        .estimatedDelivery(new com.commercetools.api.models.cart.EstimatedDeliveryImpl()) } };
     }
 
     @Test
@@ -39,5 +42,13 @@ public class CartSetShippingMethodActionTest {
         value.setExternalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl());
         Assertions.assertThat(value.getExternalTaxRate())
                 .isEqualTo(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl());
+    }
+
+    @Test
+    public void estimatedDelivery() {
+        CartSetShippingMethodAction value = CartSetShippingMethodAction.of();
+        value.setEstimatedDelivery(new com.commercetools.api.models.cart.EstimatedDeliveryImpl());
+        Assertions.assertThat(value.getEstimatedDelivery())
+                .isEqualTo(new com.commercetools.api.models.cart.EstimatedDeliveryImpl());
     }
 }

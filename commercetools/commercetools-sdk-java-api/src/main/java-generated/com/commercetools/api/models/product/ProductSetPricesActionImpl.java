@@ -79,7 +79,10 @@ public class ProductSetPricesActionImpl implements ProductSetPricesAction, Model
     }
 
     /**
-     *  <p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>The Embedded Prices to set.</p>
+     *  <p>If any two Embedded Prices in this array have the same key, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
+     *  <p>If any two Embedded Prices in this array have the same price scope, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceScopeError" rel="nofollow">DuplicatePriceScope</a> error is returned.</p>
+     *  <p>If any two Embedded Prices in this array have overlapping validity periods within the same price scope, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OverlappingPriceValidityError" rel="nofollow">OverlappingPriceValidity</a> error is returned. An Embedded Price without validity period does not conflict with an Embedded Price defined for a time period.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices() {

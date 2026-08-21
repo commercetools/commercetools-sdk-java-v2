@@ -41,6 +41,7 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>User-defined identifier for the Price. It must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+     *  <p>If the value is used by another Embedded Price on the same ProductVariant, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
      * @return key
      */
 
@@ -138,6 +139,7 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>User-defined identifier for the Price. It must be unique per <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</p>
+     *  <p>If the value is used by another Embedded Price on the same ProductVariant, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
      * @param key value to be set
      */
 

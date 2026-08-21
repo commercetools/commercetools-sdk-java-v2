@@ -44,6 +44,7 @@ public interface DiscountGroupDraft extends io.vrap.rmf.base.client.Draft<Discou
 
     /**
      *  <p>User-defined unique identifier for the DiscountGroup.</p>
+     *  <p>If the value is used by another Discount Group, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return key
      */
     @NotNull
@@ -60,7 +61,7 @@ public interface DiscountGroupDraft extends io.vrap.rmf.base.client.Draft<Discou
 
     /**
      *  <p>Value between <code>0</code> and <code>1</code> that determines the order in which the CartDiscount from the DiscountGroup will be applied; a CartDiscount with a higher value will be prioritized.</p>
-     *  <p>The sort order must be unique among all DiscountGroups and CartDiscounts.</p>
+     *  <p>If the value is used by another Cart Discount or Discount Group, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return sortOrder
      */
     @NotNull
@@ -84,6 +85,7 @@ public interface DiscountGroupDraft extends io.vrap.rmf.base.client.Draft<Discou
 
     /**
      *  <p>User-defined unique identifier for the DiscountGroup.</p>
+     *  <p>If the value is used by another Discount Group, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param key value to be set
      */
 
@@ -98,7 +100,7 @@ public interface DiscountGroupDraft extends io.vrap.rmf.base.client.Draft<Discou
 
     /**
      *  <p>Value between <code>0</code> and <code>1</code> that determines the order in which the CartDiscount from the DiscountGroup will be applied; a CartDiscount with a higher value will be prioritized.</p>
-     *  <p>The sort order must be unique among all DiscountGroups and CartDiscounts.</p>
+     *  <p>If the value is used by another Cart Discount or Discount Group, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param sortOrder value to be set
      */
 

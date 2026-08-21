@@ -51,6 +51,8 @@ public class StoreImpl implements Store, ModelBase {
 
     private com.commercetools.api.models.type.CustomFields custom;
 
+    private com.commercetools.api.models.store.Storefront storefront;
+
     /**
      * create instance with all properties
      */
@@ -67,7 +69,8 @@ public class StoreImpl implements Store, ModelBase {
             @JsonProperty("distributionChannels") final java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels,
             @JsonProperty("supplyChannels") final java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels,
             @JsonProperty("productSelections") final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> productSelections,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
+            @JsonProperty("storefront") final com.commercetools.api.models.store.Storefront storefront) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -82,6 +85,7 @@ public class StoreImpl implements Store, ModelBase {
         this.supplyChannels = supplyChannels;
         this.productSelections = productSelections;
         this.custom = custom;
+        this.storefront = storefront;
     }
 
     /**
@@ -208,6 +212,14 @@ public class StoreImpl implements Store, ModelBase {
         return this.custom;
     }
 
+    /**
+     *  <p>Customer-facing URLs and policy links for the Store's storefront.</p>
+     */
+
+    public com.commercetools.api.models.store.Storefront getStorefront() {
+        return this.storefront;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -289,6 +301,10 @@ public class StoreImpl implements Store, ModelBase {
         this.custom = custom;
     }
 
+    public void setStorefront(final com.commercetools.api.models.store.Storefront storefront) {
+        this.storefront = storefront;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -313,6 +329,7 @@ public class StoreImpl implements Store, ModelBase {
                 .append(supplyChannels, that.supplyChannels)
                 .append(productSelections, that.productSelections)
                 .append(custom, that.custom)
+                .append(storefront, that.storefront)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -327,6 +344,7 @@ public class StoreImpl implements Store, ModelBase {
                 .append(supplyChannels, that.supplyChannels)
                 .append(productSelections, that.productSelections)
                 .append(custom, that.custom)
+                .append(storefront, that.storefront)
                 .isEquals();
     }
 
@@ -346,6 +364,7 @@ public class StoreImpl implements Store, ModelBase {
                 .append(supplyChannels)
                 .append(productSelections)
                 .append(custom)
+                .append(storefront)
                 .toHashCode();
     }
 
@@ -365,6 +384,7 @@ public class StoreImpl implements Store, ModelBase {
                 .append("supplyChannels", supplyChannels)
                 .append("productSelections", productSelections)
                 .append("custom", custom)
+                .append("storefront", storefront)
                 .build();
     }
 

@@ -15,7 +15,7 @@ import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Removing a language used by a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> returns a <a href="https://docs.commercetools.com/apis/ctp:api:type:LanguageUsedInStoresError" rel="nofollow">LanguageUsedInStores</a> error.</p>
+ * ProjectChangeLanguagesAction
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,9 @@ public interface ProjectChangeLanguagesAction extends ProjectUpdateAction {
     String CHANGE_LANGUAGES = "changeLanguages";
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     *  <p>New value to set.</p>
+     *  <p>If set to an empty value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If a language in use by a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> is removed, a <a href="https://docs.commercetools.com/apis/ctp:api:type:LanguageUsedInStoresError" rel="nofollow">LanguageUsedInStores</a> error is returned.</p>
      * @return languages
      */
     @NotNull
@@ -46,7 +48,9 @@ public interface ProjectChangeLanguagesAction extends ProjectUpdateAction {
     public List<String> getLanguages();
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     *  <p>New value to set.</p>
+     *  <p>If set to an empty value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If a language in use by a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> is removed, a <a href="https://docs.commercetools.com/apis/ctp:api:type:LanguageUsedInStoresError" rel="nofollow">LanguageUsedInStores</a> error is returned.</p>
      * @param languages values to be set
      */
 
@@ -54,7 +58,9 @@ public interface ProjectChangeLanguagesAction extends ProjectUpdateAction {
     public void setLanguages(final String... languages);
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     *  <p>New value to set.</p>
+     *  <p>If set to an empty value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If a language in use by a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> is removed, a <a href="https://docs.commercetools.com/apis/ctp:api:type:LanguageUsedInStoresError" rel="nofollow">LanguageUsedInStores</a> error is returned.</p>
      * @param languages values to be set
      */
 

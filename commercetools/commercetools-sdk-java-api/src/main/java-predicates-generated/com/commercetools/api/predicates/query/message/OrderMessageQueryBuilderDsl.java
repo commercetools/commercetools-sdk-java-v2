@@ -324,6 +324,14 @@ public class OrderMessageQueryBuilderDsl {
             OrderMessageQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<OrderMessageQueryBuilderDsl> asOrderEstimatedDeliverySet(
+            Function<com.commercetools.api.predicates.query.message.OrderEstimatedDeliverySetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.OrderEstimatedDeliverySetMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.message.OrderEstimatedDeliverySetMessageQueryBuilderDsl.of()),
+            OrderMessageQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<OrderMessageQueryBuilderDsl> asOrderImported(
             Function<com.commercetools.api.predicates.query.message.OrderImportedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.OrderImportedMessageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

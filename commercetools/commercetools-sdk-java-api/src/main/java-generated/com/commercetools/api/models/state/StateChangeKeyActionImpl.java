@@ -52,7 +52,9 @@ public class StateChangeKeyActionImpl implements StateChangeKeyAction, ModelBase
     }
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     *  <p>New value to set.</p>
+     *  <p>If set to an empty value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If the value is used by another State in the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      */
 
     public String getKey() {

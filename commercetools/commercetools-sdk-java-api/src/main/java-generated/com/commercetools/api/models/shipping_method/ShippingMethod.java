@@ -206,6 +206,14 @@ public interface ShippingMethod
     public List<StoreKeyReference> getStores();
 
     /**
+     *  <p>Name of the carrier that delivers the parcel, for example <code>DHL</code>.</p>
+     * @return carrier
+     */
+
+    @JsonProperty("carrier")
+    public String getCarrier();
+
+    /**
      *  <p>Unique identifier of the ShippingMethod.</p>
      * @param id value to be set
      */
@@ -355,6 +363,13 @@ public interface ShippingMethod
     public void setStores(final List<StoreKeyReference> stores);
 
     /**
+     *  <p>Name of the carrier that delivers the parcel, for example <code>DHL</code>.</p>
+     * @param carrier value to be set
+     */
+
+    public void setCarrier(final String carrier);
+
+    /**
      * factory method
      * @return instance of ShippingMethod
      */
@@ -387,6 +402,7 @@ public interface ShippingMethod
         instance.setPredicate(template.getPredicate());
         instance.setCustom(template.getCustom());
         instance.setStores(template.getStores());
+        instance.setCarrier(template.getCarrier());
         return instance;
     }
 
@@ -433,6 +449,7 @@ public interface ShippingMethod
                         .map(com.commercetools.api.models.store.StoreKeyReference::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setCarrier(template.getCarrier());
         return instance;
     }
 

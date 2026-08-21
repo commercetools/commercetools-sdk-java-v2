@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- * ChannelSetAddressCustomFieldAction
+ *  <p>To set a Custom Field for a Channel, <code>Channel.address</code> must be set; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChannelSetAddressCustomFieldActionImpl implements ChannelSetAddressCustomFieldAction, ModelBase {

@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import tools.jackson.core.type.TypeReference;
 
 /**
- *  <p>Returns a <a href="https://docs.commercetools.com/apis/ctp:api:type:ReferenceExistsError" rel="nofollow">ReferenceExists</a> error if other resources reference the Channel to be deleted.</p>
+ *  <p>If the Channel is referenced by a resource, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ReferenceExistsError" rel="nofollow">ReferenceExists</a> error is returned.</p>
  *
  * <hr>
  * <div class=code-example>

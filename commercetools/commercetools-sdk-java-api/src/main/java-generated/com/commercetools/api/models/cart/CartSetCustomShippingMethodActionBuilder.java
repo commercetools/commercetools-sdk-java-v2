@@ -38,6 +38,9 @@ public class CartSetCustomShippingMethodActionBuilder implements Builder<CartSet
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    @Nullable
+    private com.commercetools.api.models.cart.EstimatedDelivery estimatedDelivery;
+
     /**
      *  <p>Name of the custom Shipping Method.</p>
      * @param shippingMethodName value to be set
@@ -199,6 +202,42 @@ public class CartSetCustomShippingMethodActionBuilder implements Builder<CartSet
     }
 
     /**
+     *  <p>Estimated time window during which the shipment is expected to be delivered. If not set, any existing estimate on the Cart's <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> is cleared.</p>
+     * @param builder function to build the estimatedDelivery value
+     * @return Builder
+     */
+
+    public CartSetCustomShippingMethodActionBuilder estimatedDelivery(
+            Function<com.commercetools.api.models.cart.EstimatedDeliveryBuilder, com.commercetools.api.models.cart.EstimatedDeliveryBuilder> builder) {
+        this.estimatedDelivery = builder.apply(com.commercetools.api.models.cart.EstimatedDeliveryBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Estimated time window during which the shipment is expected to be delivered. If not set, any existing estimate on the Cart's <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> is cleared.</p>
+     * @param builder function to build the estimatedDelivery value
+     * @return Builder
+     */
+
+    public CartSetCustomShippingMethodActionBuilder withEstimatedDelivery(
+            Function<com.commercetools.api.models.cart.EstimatedDeliveryBuilder, com.commercetools.api.models.cart.EstimatedDelivery> builder) {
+        this.estimatedDelivery = builder.apply(com.commercetools.api.models.cart.EstimatedDeliveryBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Estimated time window during which the shipment is expected to be delivered. If not set, any existing estimate on the Cart's <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> is cleared.</p>
+     * @param estimatedDelivery value to be set
+     * @return Builder
+     */
+
+    public CartSetCustomShippingMethodActionBuilder estimatedDelivery(
+            @Nullable final com.commercetools.api.models.cart.EstimatedDelivery estimatedDelivery) {
+        this.estimatedDelivery = estimatedDelivery;
+        return this;
+    }
+
+    /**
      *  <p>Name of the custom Shipping Method.</p>
      * @return shippingMethodName
      */
@@ -247,6 +286,16 @@ public class CartSetCustomShippingMethodActionBuilder implements Builder<CartSet
     }
 
     /**
+     *  <p>Estimated time window during which the shipment is expected to be delivered. If not set, any existing estimate on the Cart's <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> is cleared.</p>
+     * @return estimatedDelivery
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart.EstimatedDelivery getEstimatedDelivery() {
+        return this.estimatedDelivery;
+    }
+
+    /**
      * builds CartSetCustomShippingMethodAction with checking for non-null required values
      * @return CartSetCustomShippingMethodAction
      */
@@ -255,7 +304,7 @@ public class CartSetCustomShippingMethodActionBuilder implements Builder<CartSet
             CartSetCustomShippingMethodAction.class + ": shippingMethodName is missing");
         Objects.requireNonNull(shippingRate, CartSetCustomShippingMethodAction.class + ": shippingRate is missing");
         return new CartSetCustomShippingMethodActionImpl(shippingMethodName, shippingRate, taxCategory, externalTaxRate,
-            custom);
+            custom, estimatedDelivery);
     }
 
     /**
@@ -264,7 +313,7 @@ public class CartSetCustomShippingMethodActionBuilder implements Builder<CartSet
      */
     public CartSetCustomShippingMethodAction buildUnchecked() {
         return new CartSetCustomShippingMethodActionImpl(shippingMethodName, shippingRate, taxCategory, externalTaxRate,
-            custom);
+            custom, estimatedDelivery);
     }
 
     /**
@@ -287,6 +336,7 @@ public class CartSetCustomShippingMethodActionBuilder implements Builder<CartSet
         builder.taxCategory = template.getTaxCategory();
         builder.externalTaxRate = template.getExternalTaxRate();
         builder.custom = template.getCustom();
+        builder.estimatedDelivery = template.getEstimatedDelivery();
         return builder;
     }
 

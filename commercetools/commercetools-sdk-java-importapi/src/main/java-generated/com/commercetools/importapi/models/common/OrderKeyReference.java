@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
@@ -35,6 +36,14 @@ public interface OrderKeyReference extends KeyReference {
      * discriminator value for OrderKeyReference
      */
     String ORDER = "order";
+
+    /**
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceType getTypeId();
 
     /**
      * factory method

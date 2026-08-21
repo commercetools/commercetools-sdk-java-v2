@@ -45,6 +45,7 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
 
     /**
      *  <p>User-defined unique identifier for the StandalonePrice.</p>
+     *  <p>If the value is used by another Standalone Price, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return key
      */
 
@@ -87,6 +88,7 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
 
     /**
      *  <p>Sets the product distribution <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which this Price is valid.</p>
+     *  <p>If the referenced Channel does not contain the <code>ProductDistribution</code> role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @return channel
      */
     @Valid
@@ -160,6 +162,7 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
 
     /**
      *  <p>User-defined unique identifier for the StandalonePrice.</p>
+     *  <p>If the value is used by another Standalone Price, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param key value to be set
      */
 
@@ -196,6 +199,7 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
 
     /**
      *  <p>Sets the product distribution <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a> for which this Price is valid.</p>
+     *  <p>If the referenced Channel does not contain the <code>ProductDistribution</code> role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @param channel value to be set
      */
 

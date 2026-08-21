@@ -25,6 +25,8 @@ public class ChannelRemoveRolesActionBuilder implements Builder<ChannelRemoveRol
 
     /**
      *  <p>Value to remove from the array.</p>
+     *  <p>If none of the specified roles are already present, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If all roles from the Channel are removed, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param roles value to be set
      * @return Builder
      */
@@ -36,6 +38,8 @@ public class ChannelRemoveRolesActionBuilder implements Builder<ChannelRemoveRol
 
     /**
      *  <p>Value to remove from the array.</p>
+     *  <p>If none of the specified roles are already present, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If all roles from the Channel are removed, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param roles value to be set
      * @return Builder
      */
@@ -48,6 +52,8 @@ public class ChannelRemoveRolesActionBuilder implements Builder<ChannelRemoveRol
 
     /**
      *  <p>Value to remove from the array.</p>
+     *  <p>If none of the specified roles are already present, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If all roles from the Channel are removed, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param roles value to be set
      * @return Builder
      */
@@ -63,6 +69,8 @@ public class ChannelRemoveRolesActionBuilder implements Builder<ChannelRemoveRol
 
     /**
      *  <p>Value to remove from the array.</p>
+     *  <p>If none of the specified roles are already present, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If all roles from the Channel are removed, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return roles
      */
 

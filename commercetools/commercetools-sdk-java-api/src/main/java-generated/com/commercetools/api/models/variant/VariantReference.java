@@ -8,6 +8,7 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
@@ -38,6 +39,14 @@ public interface VariantReference extends Reference {
      * discriminator value for VariantReference
      */
     String VARIANT = "variant";
+
+    /**
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
 
     /**
      *  <p>Contains the representation of the expanded Variant. Only present in responses to requests with <span>Reference Expansion</span> for Variants.</p>

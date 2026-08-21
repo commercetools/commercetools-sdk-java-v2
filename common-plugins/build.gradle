@@ -32,5 +32,5 @@ dependencies {
     implementation project(path: ':javaparser', configuration: 'shadow')
     implementation "com.google.code.gson:gson:2.14.0"
     implementation 'com.squareup:javapoet:1.13.0'
-    implementation 'com.google.guava:guava:33.6.0-jre'
+    implementation 'com.google.guava:guava:33.7.1-jre'
 }

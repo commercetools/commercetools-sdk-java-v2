@@ -1,12 +1,12 @@
 dependencies {
     api project(":rmf:rmf-java-base")
     implementation "com.datadoghq:java-dogstatsd-client:4.4.5"
-    implementation "com.datadoghq:datadog-api-client:2.56.0"
+    implementation "com.datadoghq:datadog-api-client:2.59.0"
     constraints {
-        implementation("com.fasterxml.jackson.core:jackson-core:2.22.1") {
+        implementation("com.fasterxml.jackson.core:jackson-core:2.22.2") {
             because("security update")
         }
-        implementation("com.fasterxml.jackson.core:jackson-databind:2.22.1") {
+        implementation("com.fasterxml.jackson.core:jackson-databind:2.22.2") {
             because("security update")
         }
     }

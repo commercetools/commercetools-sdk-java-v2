@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import tools.jackson.databind.annotation.*;
 
 /**
- * ChannelSetAddressCustomTypeAction
+ *  <p>To set a Custom Type for a Channel, <code>Channel.address</code> must be set; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

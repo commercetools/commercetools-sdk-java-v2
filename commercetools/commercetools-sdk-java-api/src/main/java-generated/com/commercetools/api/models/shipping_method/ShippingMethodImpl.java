@@ -60,6 +60,8 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
 
     private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
 
+    private String carrier;
+
     /**
      * create instance with all properties
      */
@@ -78,7 +80,8 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
             @JsonProperty("active") final Boolean active, @JsonProperty("isDefault") final Boolean isDefault,
             @JsonProperty("predicate") final String predicate,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
-            @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores) {
+            @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores,
+            @JsonProperty("carrier") final String carrier) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -97,6 +100,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
         this.predicate = predicate;
         this.custom = custom;
         this.stores = stores;
+        this.carrier = carrier;
     }
 
     /**
@@ -253,6 +257,14 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
         return this.stores;
     }
 
+    /**
+     *  <p>Name of the carrier that delivers the parcel, for example <code>DHL</code>.</p>
+     */
+
+    public String getCarrier() {
+        return this.carrier;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -335,6 +347,10 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
         this.stores = stores;
     }
 
+    public void setCarrier(final String carrier) {
+        this.carrier = carrier;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -363,6 +379,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
                 .append(predicate, that.predicate)
                 .append(custom, that.custom)
                 .append(stores, that.stores)
+                .append(carrier, that.carrier)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -381,6 +398,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
                 .append(predicate, that.predicate)
                 .append(custom, that.custom)
                 .append(stores, that.stores)
+                .append(carrier, that.carrier)
                 .isEquals();
     }
 
@@ -404,6 +422,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
                 .append(predicate)
                 .append(custom)
                 .append(stores)
+                .append(carrier)
                 .toHashCode();
     }
 
@@ -427,6 +446,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
                 .append("predicate", predicate)
                 .append("custom", custom)
                 .append("stores", stores)
+                .append("carrier", carrier)
                 .build();
     }
 

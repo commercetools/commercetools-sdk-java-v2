@@ -242,6 +242,13 @@ public class OrderUpdateActionQueryBuilderDsl {
             OrderUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<OrderUpdateActionQueryBuilderDsl> asSetEstimatedDelivery(
+            Function<com.commercetools.api.predicates.query.order.OrderSetEstimatedDeliveryActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order.OrderSetEstimatedDeliveryActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.order.OrderSetEstimatedDeliveryActionQueryBuilderDsl.of()),
+            OrderUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<OrderUpdateActionQueryBuilderDsl> asSetItemShippingAddressCustomField(
             Function<com.commercetools.api.predicates.query.order.OrderSetItemShippingAddressCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order.OrderSetItemShippingAddressCustomFieldActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(

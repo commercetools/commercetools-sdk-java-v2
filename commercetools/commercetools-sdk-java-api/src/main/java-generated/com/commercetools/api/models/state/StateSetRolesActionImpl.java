@@ -53,7 +53,8 @@ public class StateSetRolesActionImpl implements StateSetRolesAction, ModelBase {
     }
 
     /**
-     *  <p>Value to set. Set to an empty array to remove any existing value.</p>
+     *  <p>Value to set. If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned. If a specified role is not applicable to the State's <code>type</code>, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>Set to an empty array to remove any existing value.</p>
      */
 
     public java.util.List<com.commercetools.api.models.state.StateRoleEnum> getRoles() {

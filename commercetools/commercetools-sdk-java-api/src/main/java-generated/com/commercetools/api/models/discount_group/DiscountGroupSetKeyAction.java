@@ -39,6 +39,7 @@ public interface DiscountGroupSetKeyAction extends DiscountGroupUpdateAction {
 
     /**
      *  <p>New value to set.</p>
+     *  <p>If the value is used by another Discount Group, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return key
      */
     @NotNull
@@ -47,6 +48,7 @@ public interface DiscountGroupSetKeyAction extends DiscountGroupUpdateAction {
 
     /**
      *  <p>New value to set.</p>
+     *  <p>If the value is used by another Discount Group, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param key value to be set
      */
 

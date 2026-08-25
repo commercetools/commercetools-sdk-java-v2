@@ -268,6 +268,10 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.CartDiscountStoresSetMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.CartEstimatedDeliverySetMessagePayloadBuilder cartEstimatedDeliverySetBuilder() {
+        return com.commercetools.api.models.message.CartEstimatedDeliverySetMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.CartFrozenMessagePayloadBuilder cartFrozenBuilder() {
         return com.commercetools.api.models.message.CartFrozenMessagePayloadBuilder.of();
     }
@@ -651,6 +655,10 @@ public class MessagePayloadBuilder {
 
     public com.commercetools.api.models.message.OrderEditAppliedMessagePayloadBuilder orderEditAppliedBuilder() {
         return com.commercetools.api.models.message.OrderEditAppliedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.OrderEstimatedDeliverySetMessagePayloadBuilder orderEstimatedDeliverySetBuilder() {
+        return com.commercetools.api.models.message.OrderEstimatedDeliverySetMessagePayloadBuilder.of();
     }
 
     public com.commercetools.api.models.message.OrderImportedMessagePayloadBuilder orderImportedBuilder() {
@@ -1261,6 +1269,18 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.StandalonePriceValueChangedMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.StoreCheckoutUrlTemplateSetMessagePayloadBuilder storeCheckoutUrlTemplateSetBuilder() {
+        return com.commercetools.api.models.message.StoreCheckoutUrlTemplateSetMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.StoreContactUrlSetMessagePayloadBuilder storeContactUrlSetBuilder() {
+        return com.commercetools.api.models.message.StoreContactUrlSetMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.StoreCookiePolicyUrlSetMessagePayloadBuilder storeCookiePolicyUrlSetBuilder() {
+        return com.commercetools.api.models.message.StoreCookiePolicyUrlSetMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.StoreCountriesChangedMessagePayloadBuilder storeCountriesChangedBuilder() {
         return com.commercetools.api.models.message.StoreCountriesChangedMessagePayloadBuilder.of();
     }
@@ -1277,6 +1297,14 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.StoreDistributionChannelsChangedMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.StoreFaqUrlSetMessagePayloadBuilder storeFaqUrlSetBuilder() {
+        return com.commercetools.api.models.message.StoreFaqUrlSetMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.StoreImprintUrlSetMessagePayloadBuilder storeImprintUrlSetBuilder() {
+        return com.commercetools.api.models.message.StoreImprintUrlSetMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.StoreLanguagesChangedMessagePayloadBuilder storeLanguagesChangedBuilder() {
         return com.commercetools.api.models.message.StoreLanguagesChangedMessagePayloadBuilder.of();
     }
@@ -1285,12 +1313,32 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.StoreNameSetMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.StoreOrderUrlTemplateSetMessagePayloadBuilder storeOrderUrlTemplateSetBuilder() {
+        return com.commercetools.api.models.message.StoreOrderUrlTemplateSetMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.StorePrivacyPolicyUrlSetMessagePayloadBuilder storePrivacyPolicyUrlSetBuilder() {
+        return com.commercetools.api.models.message.StorePrivacyPolicyUrlSetMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.StoreProductSelectionsChangedMessagePayloadBuilder storeProductSelectionsChangedBuilder() {
         return com.commercetools.api.models.message.StoreProductSelectionsChangedMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.StoreRefundPolicyUrlSetMessagePayloadBuilder storeRefundPolicyUrlSetBuilder() {
+        return com.commercetools.api.models.message.StoreRefundPolicyUrlSetMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.StoreShippingPolicyUrlSetMessagePayloadBuilder storeShippingPolicyUrlSetBuilder() {
+        return com.commercetools.api.models.message.StoreShippingPolicyUrlSetMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.StoreSupplyChannelsChangedMessagePayloadBuilder storeSupplyChannelsChangedBuilder() {
         return com.commercetools.api.models.message.StoreSupplyChannelsChangedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.StoreTermsOfServiceUrlSetMessagePayloadBuilder storeTermsOfServiceUrlSetBuilder() {
+        return com.commercetools.api.models.message.StoreTermsOfServiceUrlSetMessagePayloadBuilder.of();
     }
 
     public com.commercetools.api.models.message.VariantCreatedMessagePayloadBuilder variantCreatedBuilder() {

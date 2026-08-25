@@ -35,8 +35,11 @@ public class CartAddShippingMethodActionTest {
                         CartAddShippingMethodAction.builder()
                                 .deliveries(Collections
                                         .singletonList(new com.commercetools.api.models.order.DeliveryDraftImpl())) },
-                new Object[] { "custom", CartAddShippingMethodAction.builder()
-                        .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
+                new Object[] { "custom",
+                        CartAddShippingMethodAction.builder()
+                                .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
+                new Object[] { "estimatedDelivery", CartAddShippingMethodAction.builder()
+                        .estimatedDelivery(new com.commercetools.api.models.cart.EstimatedDeliveryImpl()) } };
     }
 
     @Test
@@ -93,5 +96,13 @@ public class CartAddShippingMethodActionTest {
         value.setCustom(new com.commercetools.api.models.type.CustomFieldsDraftImpl());
         Assertions.assertThat(value.getCustom())
                 .isEqualTo(new com.commercetools.api.models.type.CustomFieldsDraftImpl());
+    }
+
+    @Test
+    public void estimatedDelivery() {
+        CartAddShippingMethodAction value = CartAddShippingMethodAction.of();
+        value.setEstimatedDelivery(new com.commercetools.api.models.cart.EstimatedDeliveryImpl());
+        Assertions.assertThat(value.getEstimatedDelivery())
+                .isEqualTo(new com.commercetools.api.models.cart.EstimatedDeliveryImpl());
     }
 }

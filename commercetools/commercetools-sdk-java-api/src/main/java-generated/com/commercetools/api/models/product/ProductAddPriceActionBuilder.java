@@ -59,6 +59,9 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
 
     /**
      *  <p>Embedded Price to add to the Product Variant.</p>
+     *  <p>If the key of the Price is used by another Embedded Price on the ProductVariant, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
+     *  <p>If this Embedded Price has the same price scope as an existing Embedded Price on the ProductVariant, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceScopeError" rel="nofollow">DuplicatePriceScope</a> error is returned.</p>
+     *  <p>If this Embedded Price has overlapping validity periods within the same price scope, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OverlappingPriceValidityError" rel="nofollow">OverlappingPriceValidity</a> error is returned. An Embedded Price without validity period does not conflict with an Embedded Price defined for a time period.</p>
      * @param builder function to build the price value
      * @return Builder
      */
@@ -71,6 +74,9 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
 
     /**
      *  <p>Embedded Price to add to the Product Variant.</p>
+     *  <p>If the key of the Price is used by another Embedded Price on the ProductVariant, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
+     *  <p>If this Embedded Price has the same price scope as an existing Embedded Price on the ProductVariant, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceScopeError" rel="nofollow">DuplicatePriceScope</a> error is returned.</p>
+     *  <p>If this Embedded Price has overlapping validity periods within the same price scope, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OverlappingPriceValidityError" rel="nofollow">OverlappingPriceValidity</a> error is returned. An Embedded Price without validity period does not conflict with an Embedded Price defined for a time period.</p>
      * @param builder function to build the price value
      * @return Builder
      */
@@ -83,6 +89,9 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
 
     /**
      *  <p>Embedded Price to add to the Product Variant.</p>
+     *  <p>If the key of the Price is used by another Embedded Price on the ProductVariant, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
+     *  <p>If this Embedded Price has the same price scope as an existing Embedded Price on the ProductVariant, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceScopeError" rel="nofollow">DuplicatePriceScope</a> error is returned.</p>
+     *  <p>If this Embedded Price has overlapping validity periods within the same price scope, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OverlappingPriceValidityError" rel="nofollow">OverlappingPriceValidity</a> error is returned. An Embedded Price without validity period does not conflict with an Embedded Price defined for a time period.</p>
      * @param price value to be set
      * @return Builder
      */
@@ -125,6 +134,9 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
 
     /**
      *  <p>Embedded Price to add to the Product Variant.</p>
+     *  <p>If the key of the Price is used by another Embedded Price on the ProductVariant, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
+     *  <p>If this Embedded Price has the same price scope as an existing Embedded Price on the ProductVariant, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceScopeError" rel="nofollow">DuplicatePriceScope</a> error is returned.</p>
+     *  <p>If this Embedded Price has overlapping validity periods within the same price scope, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OverlappingPriceValidityError" rel="nofollow">OverlappingPriceValidity</a> error is returned. An Embedded Price without validity period does not conflict with an Embedded Price defined for a time period.</p>
      * @return price
      */
 

@@ -89,6 +89,7 @@ public class DiscountCodeDraftImpl implements DiscountCodeDraft, ModelBase {
     /**
      *  <p>User-defined unique identifier for the DiscountCode.</p>
      *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Discount Codes with the <span>Import API</span> and the <span>Merchant Center</span>.</p>
+     *  <p>If the value is used by another Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      */
 
     public String getKey() {
@@ -113,6 +114,7 @@ public class DiscountCodeDraftImpl implements DiscountCodeDraft, ModelBase {
 
     /**
      *  <p>User-defined unique identifier for the DiscountCode that can be <span>added to the Cart</span> to apply the related <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a>. It cannot be modified after the DiscountCode is created.</p>
+     *  <p>If the value is used by another Discount Code, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      */
 
     public String getCode() {

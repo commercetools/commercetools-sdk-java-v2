@@ -126,6 +126,14 @@ public interface ShippingInfo {
     public ShippingMethodState getShippingMethodState();
 
     /**
+     *  <p>Estimated time window during which the shipment is expected to be delivered. This value is removed if the Cart's <code>shippingAddress</code> changes.</p>
+     * @return estimatedDelivery
+     */
+    @Valid
+    @JsonProperty("estimatedDelivery")
+    public EstimatedDelivery getEstimatedDelivery();
+
+    /**
      *  <p>Name of the Shipping Method.</p>
      * @param shippingMethodName value to be set
      */
@@ -205,6 +213,13 @@ public interface ShippingInfo {
     public void setShippingMethodState(final ShippingMethodState shippingMethodState);
 
     /**
+     *  <p>Estimated time window during which the shipment is expected to be delivered. This value is removed if the Cart's <code>shippingAddress</code> changes.</p>
+     * @param estimatedDelivery value to be set
+     */
+
+    public void setEstimatedDelivery(final EstimatedDelivery estimatedDelivery);
+
+    /**
      * factory method
      * @return instance of ShippingInfo
      */
@@ -229,6 +244,7 @@ public interface ShippingInfo {
         instance.setDeliveries(template.getDeliveries());
         instance.setDiscountedPrice(template.getDiscountedPrice());
         instance.setShippingMethodState(template.getShippingMethodState());
+        instance.setEstimatedDelivery(template.getEstimatedDelivery());
         return instance;
     }
 
@@ -263,6 +279,8 @@ public interface ShippingInfo {
         instance.setDiscountedPrice(
             com.commercetools.api.models.cart.DiscountedLineItemPrice.deepCopy(template.getDiscountedPrice()));
         instance.setShippingMethodState(template.getShippingMethodState());
+        instance.setEstimatedDelivery(
+            com.commercetools.api.models.cart.EstimatedDelivery.deepCopy(template.getEstimatedDelivery()));
         return instance;
     }
 

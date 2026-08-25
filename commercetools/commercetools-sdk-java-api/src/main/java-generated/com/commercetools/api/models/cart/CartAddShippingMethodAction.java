@@ -115,6 +115,14 @@ public interface CartAddShippingMethodAction extends CartUpdateAction {
     public CustomFieldsDraft getCustom();
 
     /**
+     *  <p>Estimated time window during which this shipment is expected to be delivered.</p>
+     * @return estimatedDelivery
+     */
+    @Valid
+    @JsonProperty("estimatedDelivery")
+    public EstimatedDelivery getEstimatedDelivery();
+
+    /**
      *  <p>User-defined identifier for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Shipping" rel="nofollow">Shipping</a> that must be unique across the Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingKey value to be set
      */
@@ -183,6 +191,13 @@ public interface CartAddShippingMethodAction extends CartUpdateAction {
     public void setCustom(final CustomFieldsDraft custom);
 
     /**
+     *  <p>Estimated time window during which this shipment is expected to be delivered.</p>
+     * @param estimatedDelivery value to be set
+     */
+
+    public void setEstimatedDelivery(final EstimatedDelivery estimatedDelivery);
+
+    /**
      * factory method
      * @return instance of CartAddShippingMethodAction
      */
@@ -204,6 +219,7 @@ public interface CartAddShippingMethodAction extends CartUpdateAction {
         instance.setExternalTaxRate(template.getExternalTaxRate());
         instance.setDeliveries(template.getDeliveries());
         instance.setCustom(template.getCustom());
+        instance.setEstimatedDelivery(template.getEstimatedDelivery());
         return instance;
     }
 
@@ -235,6 +251,8 @@ public interface CartAddShippingMethodAction extends CartUpdateAction {
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setEstimatedDelivery(
+            com.commercetools.api.models.cart.EstimatedDelivery.deepCopy(template.getEstimatedDelivery()));
         return instance;
     }
 

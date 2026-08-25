@@ -39,7 +39,7 @@ public interface DiscountGroupSetSortOrderAction extends DiscountGroupUpdateActi
 
     /**
      *  <p>New value to set (between <code>0</code> and <code>1</code>). A CartDiscount with a higher value will be prioritized.</p>
-     *  <p>The sort order must be unique among all DiscountGroups and CartDiscounts.</p>
+     *  <p>If the value is used by another Cart Discount or Discount Group, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return sortOrder
      */
     @NotNull
@@ -48,7 +48,7 @@ public interface DiscountGroupSetSortOrderAction extends DiscountGroupUpdateActi
 
     /**
      *  <p>New value to set (between <code>0</code> and <code>1</code>). A CartDiscount with a higher value will be prioritized.</p>
-     *  <p>The sort order must be unique among all DiscountGroups and CartDiscounts.</p>
+     *  <p>If the value is used by another Cart Discount or Discount Group, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param sortOrder value to be set
      */
 

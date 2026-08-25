@@ -52,7 +52,7 @@ public class PriceKeyReferenceImpl implements PriceKeyReference, ModelBase {
     }
 
     /**
-     *  <p>Type of referenced resource.</p>
+     *
      */
 
     public com.commercetools.importapi.models.common.ReferenceType getTypeId() {

@@ -25,7 +25,8 @@ public class StateSetDescriptionActionBuilder implements Builder<StateSetDescrip
     private com.commercetools.api.models.common.LocalizedString description;
 
     /**
-     *  <p>Value to set. Set to an empty object to remove any existing value.</p>
+     *  <p>Value to set. If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>Set to an empty object to remove any existing value.</p>
      * @param builder function to build the description value
      * @return Builder
      */
@@ -37,7 +38,8 @@ public class StateSetDescriptionActionBuilder implements Builder<StateSetDescrip
     }
 
     /**
-     *  <p>Value to set. Set to an empty object to remove any existing value.</p>
+     *  <p>Value to set. If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>Set to an empty object to remove any existing value.</p>
      * @param builder function to build the description value
      * @return Builder
      */
@@ -49,7 +51,8 @@ public class StateSetDescriptionActionBuilder implements Builder<StateSetDescrip
     }
 
     /**
-     *  <p>Value to set. Set to an empty object to remove any existing value.</p>
+     *  <p>Value to set. If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>Set to an empty object to remove any existing value.</p>
      * @param description value to be set
      * @return Builder
      */
@@ -61,7 +64,8 @@ public class StateSetDescriptionActionBuilder implements Builder<StateSetDescrip
     }
 
     /**
-     *  <p>Value to set. Set to an empty object to remove any existing value.</p>
+     *  <p>Value to set. If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>Set to an empty object to remove any existing value.</p>
      * @return description
      */
 

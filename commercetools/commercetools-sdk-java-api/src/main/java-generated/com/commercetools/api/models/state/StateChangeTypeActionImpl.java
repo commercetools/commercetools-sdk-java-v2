@@ -53,6 +53,7 @@ public class StateChangeTypeActionImpl implements StateChangeTypeAction, ModelBa
 
     /**
      *  <p>Resource or object types the State shall be assigned to. Must not be empty.</p>
+     *  <p>If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      */
 
     public com.commercetools.api.models.state.StateTypeEnum getType() {

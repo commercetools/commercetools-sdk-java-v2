@@ -38,6 +38,14 @@ public interface StateKeyReference extends KeyReference {
     String STATE = "state";
 
     /**
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceType getTypeId();
+
+    /**
      *  <p>User-defined unique identifier of the referenced State.</p>
      * @return key
      */

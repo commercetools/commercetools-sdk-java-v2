@@ -38,6 +38,14 @@ public interface ChannelKeyReference extends KeyReference {
     String CHANNEL = "channel";
 
     /**
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceType getTypeId();
+
+    /**
      *  <p>User-defined unique identifier of the referenced Channel.</p>
      * @return key
      */

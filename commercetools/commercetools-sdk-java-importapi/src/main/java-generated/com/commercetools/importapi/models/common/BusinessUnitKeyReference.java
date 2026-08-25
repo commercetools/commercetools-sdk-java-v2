@@ -38,6 +38,14 @@ public interface BusinessUnitKeyReference extends KeyReference {
     String BUSINESS_UNIT = "business-unit";
 
     /**
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceType getTypeId();
+
+    /**
      *  <p>User-defined unique identifier of the referenced Type.</p>
      * @return key
      */

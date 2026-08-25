@@ -39,6 +39,7 @@ public interface StateChangeInitialAction extends StateUpdateAction {
 
     /**
      *  <p>Whether to define the State as the initial State in a state machine and make it the first step in a workflow.</p>
+     *  <p>If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return initial
      */
     @NotNull
@@ -47,6 +48,7 @@ public interface StateChangeInitialAction extends StateUpdateAction {
 
     /**
      *  <p>Whether to define the State as the initial State in a state machine and make it the first step in a workflow.</p>
+     *  <p>If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param initial value to be set
      */
 

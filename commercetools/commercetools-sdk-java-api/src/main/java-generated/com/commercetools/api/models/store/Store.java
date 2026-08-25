@@ -175,6 +175,14 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
     public CustomFields getCustom();
 
     /**
+     *  <p>Customer-facing URLs and policy links for the Store's storefront.</p>
+     * @return storefront
+     */
+    @Valid
+    @JsonProperty("storefront")
+    public Storefront getStorefront();
+
+    /**
      *  <p>Unique ID of the Store.</p>
      * @param id value to be set
      */
@@ -325,6 +333,13 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
     public void setCustom(final CustomFields custom);
 
     /**
+     *  <p>Customer-facing URLs and policy links for the Store's storefront.</p>
+     * @param storefront value to be set
+     */
+
+    public void setStorefront(final Storefront storefront);
+
+    /**
      * factory method
      * @return instance of Store
      */
@@ -353,6 +368,7 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
         instance.setSupplyChannels(template.getSupplyChannels());
         instance.setProductSelections(template.getProductSelections());
         instance.setCustom(template.getCustom());
+        instance.setStorefront(template.getStorefront());
         return instance;
     }
 
@@ -400,6 +416,7 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
+        instance.setStorefront(com.commercetools.api.models.store.Storefront.deepCopy(template.getStorefront()));
         return instance;
     }
 

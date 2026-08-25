@@ -38,6 +38,14 @@ public interface CustomerGroupKeyReference extends KeyReference {
     String CUSTOMER_GROUP = "customer-group";
 
     /**
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceType getTypeId();
+
+    /**
      *  <p>User-defined unique identifier of the referenced CustomerGroup.</p>
      * @return key
      */

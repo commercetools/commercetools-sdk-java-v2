@@ -455,6 +455,14 @@ public interface CartUpdateAction extends com.commercetools.api.models.ResourceU
     }
 
     /**
+     * builder for setEstimatedDelivery subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.cart.CartSetEstimatedDeliveryActionBuilder setEstimatedDeliveryBuilder() {
+        return com.commercetools.api.models.cart.CartSetEstimatedDeliveryActionBuilder.of();
+    }
+
+    /**
      * builder for setItemShippingAddressCustomField subtype
      * @return builder
      */

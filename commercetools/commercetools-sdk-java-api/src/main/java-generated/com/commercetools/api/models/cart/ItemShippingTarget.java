@@ -53,6 +53,7 @@ public interface ItemShippingTarget {
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      *  <p>It connects Line Item or Custom Line Item quantities with individual Shipping Methods.</p>
+     *  <p>Required when the Cart has <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Omitting this field in that case returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      * @return shippingMethodKey
      */
 
@@ -77,6 +78,7 @@ public interface ItemShippingTarget {
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      *  <p>It connects Line Item or Custom Line Item quantities with individual Shipping Methods.</p>
+     *  <p>Required when the Cart has <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Omitting this field in that case returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
      * @param shippingMethodKey value to be set
      */
 

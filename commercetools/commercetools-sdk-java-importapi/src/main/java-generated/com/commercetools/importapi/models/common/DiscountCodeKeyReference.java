@@ -38,6 +38,14 @@ public interface DiscountCodeKeyReference extends KeyReference {
     String DISCOUNT_CODE = "discount-code";
 
     /**
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceType getTypeId();
+
+    /**
      *  <p>User-defined unique identifier of the referenced DiscountCode.</p>
      * @return key
      */

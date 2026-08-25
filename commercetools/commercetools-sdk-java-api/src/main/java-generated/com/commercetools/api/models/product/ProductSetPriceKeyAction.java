@@ -55,6 +55,7 @@ public interface ProductSetPriceKeyAction extends ProductUpdateAction {
 
     /**
      *  <p>Value to set. If omitted, any existing value is removed.</p>
+     *  <p>If the value is used by another Embedded Price on the same ProductVariant, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
      * @return key
      */
 
@@ -77,6 +78,7 @@ public interface ProductSetPriceKeyAction extends ProductUpdateAction {
 
     /**
      *  <p>Value to set. If omitted, any existing value is removed.</p>
+     *  <p>If the value is used by another Embedded Price on the same ProductVariant, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
      * @param key value to be set
      */
 

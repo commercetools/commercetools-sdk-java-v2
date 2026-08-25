@@ -38,6 +38,14 @@ public interface ProductKeyReference extends KeyReference {
     String PRODUCT = "product";
 
     /**
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceType getTypeId();
+
+    /**
      *  <p>User-defined unique identifier of the referenced Product.</p>
      * @return key
      */

@@ -38,7 +38,8 @@ public interface TaxCategoryChangeNameAction extends TaxCategoryUpdateAction {
     String CHANGE_NAME = "changeName";
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     *  <p>New value to set.</p>
+     *  <p>If the provided name is used by another TaxCategory in the Project, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return name
      */
     @NotNull
@@ -46,7 +47,8 @@ public interface TaxCategoryChangeNameAction extends TaxCategoryUpdateAction {
     public String getName();
 
     /**
-     *  <p>New value to set. Must not be empty.</p>
+     *  <p>New value to set.</p>
+     *  <p>If the provided name is used by another TaxCategory in the Project, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param name value to be set
      */
 

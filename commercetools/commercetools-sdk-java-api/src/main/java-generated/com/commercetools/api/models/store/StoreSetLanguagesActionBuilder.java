@@ -27,6 +27,7 @@ public class StoreSetLanguagesActionBuilder implements Builder<StoreSetLanguages
 
     /**
      *  <p>Value to set.</p>
+     *  <p>If a language is not configured for the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectNotConfiguredForLanguagesError" rel="nofollow">ProjectNotConfiguredForLanguages</a> error is returned.</p>
      * @param languages value to be set
      * @return Builder
      */
@@ -38,6 +39,7 @@ public class StoreSetLanguagesActionBuilder implements Builder<StoreSetLanguages
 
     /**
      *  <p>Value to set.</p>
+     *  <p>If a language is not configured for the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectNotConfiguredForLanguagesError" rel="nofollow">ProjectNotConfiguredForLanguages</a> error is returned.</p>
      * @param languages value to be set
      * @return Builder
      */
@@ -49,6 +51,7 @@ public class StoreSetLanguagesActionBuilder implements Builder<StoreSetLanguages
 
     /**
      *  <p>Value to set.</p>
+     *  <p>If a language is not configured for the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectNotConfiguredForLanguagesError" rel="nofollow">ProjectNotConfiguredForLanguages</a> error is returned.</p>
      * @param languages value to be set
      * @return Builder
      */
@@ -63,6 +66,7 @@ public class StoreSetLanguagesActionBuilder implements Builder<StoreSetLanguages
 
     /**
      *  <p>Value to set.</p>
+     *  <p>If a language is not configured for the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectNotConfiguredForLanguagesError" rel="nofollow">ProjectNotConfiguredForLanguages</a> error is returned.</p>
      * @return languages
      */
 

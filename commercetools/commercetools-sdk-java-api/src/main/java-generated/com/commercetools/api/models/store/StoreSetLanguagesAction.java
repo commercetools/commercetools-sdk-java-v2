@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>This update action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreLanguagesChangedMessage" rel="nofollow">StoreLanguagesChanged</a> Message. Adding a language other than the ones defined in the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> returns a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectNotConfiguredForLanguagesError" rel="nofollow">ProjectNotConfiguredForLanguages</a> error.</p>
+ *  <p>This update action produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreLanguagesChangedMessage" rel="nofollow">StoreLanguagesChanged</a> Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,6 +37,7 @@ public interface StoreSetLanguagesAction extends StoreUpdateAction {
 
     /**
      *  <p>Value to set.</p>
+     *  <p>If a language is not configured for the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectNotConfiguredForLanguagesError" rel="nofollow">ProjectNotConfiguredForLanguages</a> error is returned.</p>
      * @return languages
      */
 
@@ -45,6 +46,7 @@ public interface StoreSetLanguagesAction extends StoreUpdateAction {
 
     /**
      *  <p>Value to set.</p>
+     *  <p>If a language is not configured for the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectNotConfiguredForLanguagesError" rel="nofollow">ProjectNotConfiguredForLanguages</a> error is returned.</p>
      * @param languages values to be set
      */
 
@@ -53,6 +55,7 @@ public interface StoreSetLanguagesAction extends StoreUpdateAction {
 
     /**
      *  <p>Value to set.</p>
+     *  <p>If a language is not configured for the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectNotConfiguredForLanguagesError" rel="nofollow">ProjectNotConfiguredForLanguages</a> error is returned.</p>
      * @param languages values to be set
      */
 

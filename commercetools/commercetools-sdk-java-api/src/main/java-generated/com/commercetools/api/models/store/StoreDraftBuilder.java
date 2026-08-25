@@ -47,6 +47,9 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    @Nullable
+    private com.commercetools.api.models.store.Storefront storefront;
+
     /**
      *  <p>User-defined unique and immutable identifier for the Store. Keys can only contain alphanumeric characters, underscores, and hyphens.</p>
      * @param key value to be set
@@ -95,6 +98,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>Languages defined in <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Only languages defined in the Project can be used.</p>
+     *  <p>If a language is not configured for the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectNotConfiguredForLanguagesError" rel="nofollow">ProjectNotConfiguredForLanguages</a> error is returned.</p>
      * @param languages value to be set
      * @return Builder
      */
@@ -106,6 +110,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>Languages defined in <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Only languages defined in the Project can be used.</p>
+     *  <p>If a language is not configured for the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectNotConfiguredForLanguagesError" rel="nofollow">ProjectNotConfiguredForLanguages</a> error is returned.</p>
      * @param languages value to be set
      * @return Builder
      */
@@ -117,6 +122,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>Languages defined in <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Only languages defined in the Project can be used.</p>
+     *  <p>If a language is not configured for the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectNotConfiguredForLanguagesError" rel="nofollow">ProjectNotConfiguredForLanguages</a> error is returned.</p>
      * @param languages value to be set
      * @return Builder
      */
@@ -220,6 +226,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @param distributionChannels value to be set
      * @return Builder
      */
@@ -232,6 +239,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @param distributionChannels value to be set
      * @return Builder
      */
@@ -244,6 +252,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @param distributionChannels value to be set
      * @return Builder
      */
@@ -259,6 +268,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @param builder function to build the distributionChannels value
      * @return Builder
      */
@@ -275,6 +285,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @param builder function to build the distributionChannels value
      * @return Builder
      */
@@ -289,6 +300,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @param builder function to build the distributionChannels value
      * @return Builder
      */
@@ -301,6 +313,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @param builder function to build the distributionChannels value
      * @return Builder
      */
@@ -313,6 +326,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @param supplyChannels value to be set
      * @return Builder
      */
@@ -325,6 +339,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @param supplyChannels value to be set
      * @return Builder
      */
@@ -337,6 +352,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @param supplyChannels value to be set
      * @return Builder
      */
@@ -352,6 +368,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @param builder function to build the supplyChannels value
      * @return Builder
      */
@@ -368,6 +385,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @param builder function to build the supplyChannels value
      * @return Builder
      */
@@ -382,6 +400,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @param builder function to build the supplyChannels value
      * @return Builder
      */
@@ -394,6 +413,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @param builder function to build the supplyChannels value
      * @return Builder
      */
@@ -575,6 +595,41 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
+     *  <p>Customer-facing URLs and policy links for the Store's storefront.</p>
+     * @param builder function to build the storefront value
+     * @return Builder
+     */
+
+    public StoreDraftBuilder storefront(
+            Function<com.commercetools.api.models.store.StorefrontBuilder, com.commercetools.api.models.store.StorefrontBuilder> builder) {
+        this.storefront = builder.apply(com.commercetools.api.models.store.StorefrontBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Customer-facing URLs and policy links for the Store's storefront.</p>
+     * @param builder function to build the storefront value
+     * @return Builder
+     */
+
+    public StoreDraftBuilder withStorefront(
+            Function<com.commercetools.api.models.store.StorefrontBuilder, com.commercetools.api.models.store.Storefront> builder) {
+        this.storefront = builder.apply(com.commercetools.api.models.store.StorefrontBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Customer-facing URLs and policy links for the Store's storefront.</p>
+     * @param storefront value to be set
+     * @return Builder
+     */
+
+    public StoreDraftBuilder storefront(@Nullable final com.commercetools.api.models.store.Storefront storefront) {
+        this.storefront = storefront;
+        return this;
+    }
+
+    /**
      *  <p>User-defined unique and immutable identifier for the Store. Keys can only contain alphanumeric characters, underscores, and hyphens.</p>
      * @return key
      */
@@ -595,6 +650,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>Languages defined in <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Only languages defined in the Project can be used.</p>
+     *  <p>If a language is not configured for the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectNotConfiguredForLanguagesError" rel="nofollow">ProjectNotConfiguredForLanguages</a> error is returned.</p>
      * @return languages
      */
 
@@ -615,6 +671,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @return distributionChannels
      */
 
@@ -625,6 +682,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @return supplyChannels
      */
 
@@ -660,13 +718,23 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
+     *  <p>Customer-facing URLs and policy links for the Store's storefront.</p>
+     * @return storefront
+     */
+
+    @Nullable
+    public com.commercetools.api.models.store.Storefront getStorefront() {
+        return this.storefront;
+    }
+
+    /**
      * builds StoreDraft with checking for non-null required values
      * @return StoreDraft
      */
     public StoreDraft build() {
         Objects.requireNonNull(key, StoreDraft.class + ": key is missing");
         return new StoreDraftImpl(key, name, languages, countries, distributionChannels, supplyChannels,
-            productSelections, custom);
+            productSelections, custom, storefront);
     }
 
     /**
@@ -675,7 +743,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
      */
     public StoreDraft buildUnchecked() {
         return new StoreDraftImpl(key, name, languages, countries, distributionChannels, supplyChannels,
-            productSelections, custom);
+            productSelections, custom, storefront);
     }
 
     /**
@@ -701,6 +769,7 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
         builder.supplyChannels = template.getSupplyChannels();
         builder.productSelections = template.getProductSelections();
         builder.custom = template.getCustom();
+        builder.storefront = template.getStorefront();
         return builder;
     }
 

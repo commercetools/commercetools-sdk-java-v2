@@ -47,6 +47,18 @@ public class StoreUpdateActionBuilder {
         return com.commercetools.api.models.store.StoreRemoveSupplyChannelActionBuilder.of();
     }
 
+    public com.commercetools.api.models.store.StoreSetCheckoutUrlTemplateActionBuilder setCheckoutUrlTemplateBuilder() {
+        return com.commercetools.api.models.store.StoreSetCheckoutUrlTemplateActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.store.StoreSetContactUrlActionBuilder setContactUrlBuilder() {
+        return com.commercetools.api.models.store.StoreSetContactUrlActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.store.StoreSetCookiePolicyUrlActionBuilder setCookiePolicyUrlBuilder() {
+        return com.commercetools.api.models.store.StoreSetCookiePolicyUrlActionBuilder.of();
+    }
+
     public com.commercetools.api.models.store.StoreSetCountriesActionBuilder setCountriesBuilder() {
         return com.commercetools.api.models.store.StoreSetCountriesActionBuilder.of();
     }
@@ -63,6 +75,14 @@ public class StoreUpdateActionBuilder {
         return com.commercetools.api.models.store.StoreSetDistributionChannelsActionBuilder.of();
     }
 
+    public com.commercetools.api.models.store.StoreSetFaqUrlActionBuilder setFaqUrlBuilder() {
+        return com.commercetools.api.models.store.StoreSetFaqUrlActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.store.StoreSetImprintUrlActionBuilder setImprintUrlBuilder() {
+        return com.commercetools.api.models.store.StoreSetImprintUrlActionBuilder.of();
+    }
+
     public com.commercetools.api.models.store.StoreSetLanguagesActionBuilder setLanguagesBuilder() {
         return com.commercetools.api.models.store.StoreSetLanguagesActionBuilder.of();
     }
@@ -71,12 +91,32 @@ public class StoreUpdateActionBuilder {
         return com.commercetools.api.models.store.StoreSetNameActionBuilder.of();
     }
 
+    public com.commercetools.api.models.store.StoreSetOrderUrlTemplateActionBuilder setOrderUrlTemplateBuilder() {
+        return com.commercetools.api.models.store.StoreSetOrderUrlTemplateActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.store.StoreSetPrivacyPolicyUrlActionBuilder setPrivacyPolicyUrlBuilder() {
+        return com.commercetools.api.models.store.StoreSetPrivacyPolicyUrlActionBuilder.of();
+    }
+
     public com.commercetools.api.models.store.StoreSetProductSelectionsActionBuilder setProductSelectionsBuilder() {
         return com.commercetools.api.models.store.StoreSetProductSelectionsActionBuilder.of();
     }
 
+    public com.commercetools.api.models.store.StoreSetRefundPolicyUrlActionBuilder setRefundPolicyUrlBuilder() {
+        return com.commercetools.api.models.store.StoreSetRefundPolicyUrlActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.store.StoreSetShippingPolicyUrlActionBuilder setShippingPolicyUrlBuilder() {
+        return com.commercetools.api.models.store.StoreSetShippingPolicyUrlActionBuilder.of();
+    }
+
     public com.commercetools.api.models.store.StoreSetSupplyChannelsActionBuilder setSupplyChannelsBuilder() {
         return com.commercetools.api.models.store.StoreSetSupplyChannelsActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.store.StoreSetTermsOfServiceUrlActionBuilder setTermsOfServiceUrlBuilder() {
+        return com.commercetools.api.models.store.StoreSetTermsOfServiceUrlActionBuilder.of();
     }
 
     /**

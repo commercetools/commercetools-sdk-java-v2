@@ -41,9 +41,12 @@ public class ShippingInfoTest {
                 new Object[] { "discountedPrice",
                         ShippingInfo.builder()
                                 .discountedPrice(new com.commercetools.api.models.cart.DiscountedLineItemPriceImpl()) },
-                new Object[] { "shippingMethodState", ShippingInfo.builder()
-                        .shippingMethodState(
-                            com.commercetools.api.models.cart.ShippingMethodState.findEnum("DoesNotMatchCart")) } };
+                new Object[] { "shippingMethodState",
+                        ShippingInfo.builder()
+                                .shippingMethodState(com.commercetools.api.models.cart.ShippingMethodState
+                                        .findEnum("DoesNotMatchCart")) },
+                new Object[] { "estimatedDelivery", ShippingInfo.builder()
+                        .estimatedDelivery(new com.commercetools.api.models.cart.EstimatedDeliveryImpl()) } };
     }
 
     @Test
@@ -124,5 +127,13 @@ public class ShippingInfoTest {
             com.commercetools.api.models.cart.ShippingMethodState.findEnum("DoesNotMatchCart"));
         Assertions.assertThat(value.getShippingMethodState())
                 .isEqualTo(com.commercetools.api.models.cart.ShippingMethodState.findEnum("DoesNotMatchCart"));
+    }
+
+    @Test
+    public void estimatedDelivery() {
+        ShippingInfo value = ShippingInfo.of();
+        value.setEstimatedDelivery(new com.commercetools.api.models.cart.EstimatedDeliveryImpl());
+        Assertions.assertThat(value.getEstimatedDelivery())
+                .isEqualTo(new com.commercetools.api.models.cart.EstimatedDeliveryImpl());
     }
 }

@@ -39,6 +39,7 @@ public interface ChannelAddRolesAction extends ChannelUpdateAction {
 
     /**
      *  <p>Value to append to the array.</p>
+     *  <p>If the specified roles are already present, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return roles
      */
     @NotNull
@@ -47,6 +48,7 @@ public interface ChannelAddRolesAction extends ChannelUpdateAction {
 
     /**
      *  <p>Value to append to the array.</p>
+     *  <p>If the specified roles are already present, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param roles values to be set
      */
 
@@ -55,6 +57,7 @@ public interface ChannelAddRolesAction extends ChannelUpdateAction {
 
     /**
      *  <p>Value to append to the array.</p>
+     *  <p>If the specified roles are already present, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param roles values to be set
      */
 

@@ -39,6 +39,7 @@ public interface StateChangeTypeAction extends StateUpdateAction {
 
     /**
      *  <p>Resource or object types the State shall be assigned to. Must not be empty.</p>
+     *  <p>If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return type
      */
     @NotNull
@@ -47,6 +48,7 @@ public interface StateChangeTypeAction extends StateUpdateAction {
 
     /**
      *  <p>Resource or object types the State shall be assigned to. Must not be empty.</p>
+     *  <p>If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param type value to be set
      */
 

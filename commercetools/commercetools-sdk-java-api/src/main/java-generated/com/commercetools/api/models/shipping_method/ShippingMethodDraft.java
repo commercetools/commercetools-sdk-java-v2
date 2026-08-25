@@ -144,6 +144,14 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public List<StoreResourceIdentifier> getStores();
 
     /**
+     *  <p>Name of the carrier that delivers the parcel, for example <code>DHL</code>.</p>
+     * @return carrier
+     */
+
+    @JsonProperty("carrier")
+    public String getCarrier();
+
+    /**
      *  <p>User-defined unique identifier for the ShippingMethod.</p>
      * @param key value to be set
      */
@@ -252,6 +260,13 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public void setStores(final List<StoreResourceIdentifier> stores);
 
     /**
+     *  <p>Name of the carrier that delivers the parcel, for example <code>DHL</code>.</p>
+     * @param carrier value to be set
+     */
+
+    public void setCarrier(final String carrier);
+
+    /**
      * factory method
      * @return instance of ShippingMethodDraft
      */
@@ -278,6 +293,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
         instance.setPredicate(template.getPredicate());
         instance.setCustom(template.getCustom());
         instance.setStores(template.getStores());
+        instance.setCarrier(template.getCarrier());
         return instance;
     }
 
@@ -317,6 +333,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
                         .map(com.commercetools.api.models.store.StoreResourceIdentifier::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setCarrier(template.getCarrier());
         return instance;
     }
 

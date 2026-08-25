@@ -106,4 +106,13 @@ public class ShippingInfoQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, ShippingInfoQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<ShippingInfoQueryBuilderDsl> estimatedDelivery(
+            Function<com.commercetools.api.predicates.query.cart.EstimatedDeliveryQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.EstimatedDeliveryQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("estimatedDelivery"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.cart.EstimatedDeliveryQueryBuilderDsl.of())),
+            ShippingInfoQueryBuilderDsl::of);
+    }
+
 }

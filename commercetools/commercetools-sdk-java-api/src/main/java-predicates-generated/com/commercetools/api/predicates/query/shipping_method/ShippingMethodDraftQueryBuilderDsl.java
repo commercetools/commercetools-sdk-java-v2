@@ -115,4 +115,10 @@ public class ShippingMethodDraftQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, ShippingMethodDraftQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<ShippingMethodDraftQueryBuilderDsl> carrier() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("carrier")),
+            p -> new CombinationQueryPredicate<>(p, ShippingMethodDraftQueryBuilderDsl::of));
+    }
+
 }

@@ -53,6 +53,7 @@ public class CartDiscountChangeSortOrderActionImpl implements CartDiscountChange
 
     /**
      *  <p>New value to set (between <code>0</code> and <code>1</code>). A Discount with a higher sortOrder is prioritized.</p>
+     *  <p>If the value is used by another Cart Discount or Discount Group, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      */
 
     public String getSortOrder() {

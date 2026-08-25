@@ -105,4 +105,13 @@ public class StoreDraftQueryBuilderDsl {
             StoreDraftQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<StoreDraftQueryBuilderDsl> storefront(
+            Function<com.commercetools.api.predicates.query.store.StorefrontQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.store.StorefrontQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("storefront"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.store.StorefrontQueryBuilderDsl.of())),
+            StoreDraftQueryBuilderDsl::of);
+    }
+
 }

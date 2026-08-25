@@ -39,6 +39,14 @@ public interface CustomObjectKeyReference extends KeyReference {
     String KEY_VALUE_DOCUMENT = "key-value-document";
 
     /**
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceType getTypeId();
+
+    /**
      *  <p>User-defined unique identifier of the referenced CustomObject.</p>
      * @return key
      */

@@ -50,6 +50,9 @@ public interface ProductChangePriceAction extends ProductUpdateAction {
 
     /**
      *  <p>Value to set.</p>
+     *  <p>If the key of the Price is used by another Embedded Price on the ProductVariant, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
+     *  <p>If the new Embedded Price has the same price scope as another Embedded Price on the ProductVariant, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceScopeError" rel="nofollow">DuplicatePriceScope</a> error is returned.</p>
+     *  <p>If the new Embedded Price has overlapping validity periods within the same price scope, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OverlappingPriceValidityError" rel="nofollow">OverlappingPriceValidity</a> error is returned. An Embedded Price without validity period does not conflict with an Embedded Price defined for a time period.</p>
      * @return price
      */
     @NotNull
@@ -74,6 +77,9 @@ public interface ProductChangePriceAction extends ProductUpdateAction {
 
     /**
      *  <p>Value to set.</p>
+     *  <p>If the key of the Price is used by another Embedded Price on the ProductVariant, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
+     *  <p>If the new Embedded Price has the same price scope as another Embedded Price on the ProductVariant, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceScopeError" rel="nofollow">DuplicatePriceScope</a> error is returned.</p>
+     *  <p>If the new Embedded Price has overlapping validity periods within the same price scope, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OverlappingPriceValidityError" rel="nofollow">OverlappingPriceValidity</a> error is returned. An Embedded Price without validity period does not conflict with an Embedded Price defined for a time period.</p>
      * @param price value to be set
      */
 

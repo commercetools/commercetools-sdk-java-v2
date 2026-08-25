@@ -49,7 +49,9 @@ public class StoreTest {
                                 .productSelections(Collections.singletonList(
                                     new com.commercetools.api.models.store.ProductSelectionSettingImpl())) },
                 new Object[] { "custom",
-                        Store.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) } };
+                        Store.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
+                new Object[] { "storefront",
+                        Store.builder().storefront(new com.commercetools.api.models.store.StorefrontImpl()) } };
     }
 
     @Test
@@ -159,5 +161,12 @@ public class StoreTest {
         Store value = Store.of();
         value.setCustom(new com.commercetools.api.models.type.CustomFieldsImpl());
         Assertions.assertThat(value.getCustom()).isEqualTo(new com.commercetools.api.models.type.CustomFieldsImpl());
+    }
+
+    @Test
+    public void storefront() {
+        Store value = Store.of();
+        value.setStorefront(new com.commercetools.api.models.store.StorefrontImpl());
+        Assertions.assertThat(value.getStorefront()).isEqualTo(new com.commercetools.api.models.store.StorefrontImpl());
     }
 }

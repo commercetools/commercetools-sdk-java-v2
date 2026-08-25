@@ -52,7 +52,7 @@ public class TaxCategoryKeyReferenceImpl implements TaxCategoryKeyReference, Mod
     }
 
     /**
-     *  <p>Type of referenced resource.</p>
+     *
      */
 
     public com.commercetools.importapi.models.common.ReferenceType getTypeId() {

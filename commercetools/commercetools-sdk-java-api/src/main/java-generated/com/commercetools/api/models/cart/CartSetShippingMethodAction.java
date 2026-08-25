@@ -62,6 +62,14 @@ public interface CartSetShippingMethodAction extends CartUpdateAction {
     public ExternalTaxRateDraft getExternalTaxRate();
 
     /**
+     *  <p>Estimated time window during which the shipment is expected to be delivered. If not set, any existing estimate on the Cart's <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> is cleared.</p>
+     * @return estimatedDelivery
+     */
+    @Valid
+    @JsonProperty("estimatedDelivery")
+    public EstimatedDelivery getEstimatedDelivery();
+
+    /**
      *  <p>Value to set. If omitted, any existing value is removed.</p>
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned in one of the following cases:</p>
      *  <ol>
@@ -83,6 +91,13 @@ public interface CartSetShippingMethodAction extends CartUpdateAction {
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
 
     /**
+     *  <p>Estimated time window during which the shipment is expected to be delivered. If not set, any existing estimate on the Cart's <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> is cleared.</p>
+     * @param estimatedDelivery value to be set
+     */
+
+    public void setEstimatedDelivery(final EstimatedDelivery estimatedDelivery);
+
+    /**
      * factory method
      * @return instance of CartSetShippingMethodAction
      */
@@ -99,6 +114,7 @@ public interface CartSetShippingMethodAction extends CartUpdateAction {
         CartSetShippingMethodActionImpl instance = new CartSetShippingMethodActionImpl();
         instance.setShippingMethod(template.getShippingMethod());
         instance.setExternalTaxRate(template.getExternalTaxRate());
+        instance.setEstimatedDelivery(template.getEstimatedDelivery());
         return instance;
     }
 
@@ -119,6 +135,8 @@ public interface CartSetShippingMethodAction extends CartUpdateAction {
                 .deepCopy(template.getShippingMethod()));
         instance.setExternalTaxRate(
             com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
+        instance.setEstimatedDelivery(
+            com.commercetools.api.models.cart.EstimatedDelivery.deepCopy(template.getEstimatedDelivery()));
         return instance;
     }
 

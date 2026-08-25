@@ -52,7 +52,7 @@ public class DiscountCodeKeyReferenceImpl implements DiscountCodeKeyReference, M
     }
 
     /**
-     *  <p>Type of referenced resource.</p>
+     *
      */
 
     public com.commercetools.importapi.models.common.ReferenceType getTypeId() {

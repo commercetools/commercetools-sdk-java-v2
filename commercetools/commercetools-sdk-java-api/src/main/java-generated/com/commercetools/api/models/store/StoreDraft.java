@@ -56,6 +56,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>Languages defined in <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Only languages defined in the Project can be used.</p>
+     *  <p>If a language is not configured for the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectNotConfiguredForLanguagesError" rel="nofollow">ProjectNotConfiguredForLanguages</a> error is returned.</p>
      * @return languages
      */
 
@@ -72,6 +73,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @return distributionChannels
      */
     @Valid
@@ -80,6 +82,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @return supplyChannels
      */
     @Valid
@@ -109,6 +112,14 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
     public CustomFieldsDraft getCustom();
 
     /**
+     *  <p>Customer-facing URLs and policy links for the Store's storefront.</p>
+     * @return storefront
+     */
+    @Valid
+    @JsonProperty("storefront")
+    public Storefront getStorefront();
+
+    /**
      *  <p>User-defined unique and immutable identifier for the Store. Keys can only contain alphanumeric characters, underscores, and hyphens.</p>
      * @param key value to be set
      */
@@ -124,6 +135,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>Languages defined in <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Only languages defined in the Project can be used.</p>
+     *  <p>If a language is not configured for the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectNotConfiguredForLanguagesError" rel="nofollow">ProjectNotConfiguredForLanguages</a> error is returned.</p>
      * @param languages values to be set
      */
 
@@ -132,6 +144,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>Languages defined in <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>. Only languages defined in the Project can be used.</p>
+     *  <p>If a language is not configured for the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProjectNotConfiguredForLanguagesError" rel="nofollow">ProjectNotConfiguredForLanguages</a> error is returned.</p>
      * @param languages values to be set
      */
 
@@ -154,6 +167,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @param distributionChannels values to be set
      */
 
@@ -162,6 +176,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @param distributionChannels values to be set
      */
 
@@ -169,6 +184,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @param supplyChannels values to be set
      */
 
@@ -177,6 +193,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ChannelRoleEnum" rel="nofollow">ChannelRoleEnum</a>.</p>
+     *  <p>If the referenced Channel does not have this role, a <a href="https://docs.commercetools.com/apis/ctp:api:type:MissingRoleOnChannelError" rel="nofollow">MissingRoleOnChannel</a> error is returned.</p>
      * @param supplyChannels values to be set
      */
 
@@ -217,6 +234,13 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
     public void setCustom(final CustomFieldsDraft custom);
 
     /**
+     *  <p>Customer-facing URLs and policy links for the Store's storefront.</p>
+     * @param storefront value to be set
+     */
+
+    public void setStorefront(final Storefront storefront);
+
+    /**
      * factory method
      * @return instance of StoreDraft
      */
@@ -239,6 +263,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
         instance.setSupplyChannels(template.getSupplyChannels());
         instance.setProductSelections(template.getProductSelections());
         instance.setCustom(template.getCustom());
+        instance.setStorefront(template.getStorefront());
         return instance;
     }
 
@@ -279,6 +304,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setStorefront(com.commercetools.api.models.store.Storefront.deepCopy(template.getStorefront()));
         return instance;
     }
 

@@ -53,6 +53,7 @@ public class CartDiscountSetKeyActionImpl implements CartDiscountSetKeyAction, M
 
     /**
      *  <p>Value to set. If omitted, any existing value is removed.</p>
+     *  <p>If the value is used by another Cart Discount, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      */
 
     public String getKey() {

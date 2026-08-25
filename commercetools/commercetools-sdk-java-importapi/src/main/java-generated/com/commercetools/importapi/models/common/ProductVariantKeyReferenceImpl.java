@@ -52,7 +52,7 @@ public class ProductVariantKeyReferenceImpl implements ProductVariantKeyReferenc
     }
 
     /**
-     *  <p>Type of referenced resource.</p>
+     *
      */
 
     public com.commercetools.importapi.models.common.ReferenceType getTypeId() {

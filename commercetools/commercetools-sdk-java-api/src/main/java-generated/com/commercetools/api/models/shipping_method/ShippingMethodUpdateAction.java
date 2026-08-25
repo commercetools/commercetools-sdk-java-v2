@@ -143,6 +143,14 @@ public interface ShippingMethodUpdateAction
     }
 
     /**
+     * builder for setCarrier subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.shipping_method.ShippingMethodSetCarrierActionBuilder setCarrierBuilder() {
+        return com.commercetools.api.models.shipping_method.ShippingMethodSetCarrierActionBuilder.of();
+    }
+
+    /**
      * builder for setCustomField subtype
      * @return builder
      */

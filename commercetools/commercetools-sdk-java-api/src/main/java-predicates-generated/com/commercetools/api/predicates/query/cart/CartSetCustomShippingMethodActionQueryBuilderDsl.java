@@ -62,4 +62,13 @@ public class CartSetCustomShippingMethodActionQueryBuilderDsl {
             CartSetCustomShippingMethodActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<CartSetCustomShippingMethodActionQueryBuilderDsl> estimatedDelivery(
+            Function<com.commercetools.api.predicates.query.cart.EstimatedDeliveryQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.EstimatedDeliveryQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("estimatedDelivery"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.cart.EstimatedDeliveryQueryBuilderDsl.of())),
+            CartSetCustomShippingMethodActionQueryBuilderDsl::of);
+    }
+
 }

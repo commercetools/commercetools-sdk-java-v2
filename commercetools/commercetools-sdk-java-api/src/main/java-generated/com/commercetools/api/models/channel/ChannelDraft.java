@@ -39,6 +39,8 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
 
     /**
      *  <p>User-defined unique identifier for the Channel.</p>
+     *  <p>If set to an empty value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If the value is used by another Channel in the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return key
      */
     @NotNull
@@ -46,7 +48,8 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
     public String getKey();
 
     /**
-     *  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     *  <p>Roles of the Channel.</p>
+     *  <p>The Channel must have at least one role. If set to an empty array, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @return roles
      */
 
@@ -95,13 +98,16 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
 
     /**
      *  <p>User-defined unique identifier for the Channel.</p>
+     *  <p>If set to an empty value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+     *  <p>If the value is used by another Channel in the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     *  <p>Roles of the Channel.</p>
+     *  <p>The Channel must have at least one role. If set to an empty array, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param roles values to be set
      */
 
@@ -109,7 +115,8 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
     public void setRoles(final ChannelRoleEnum... roles);
 
     /**
-     *  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     *  <p>Roles of the Channel.</p>
+     *  <p>The Channel must have at least one role. If set to an empty array, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      * @param roles values to be set
      */
 

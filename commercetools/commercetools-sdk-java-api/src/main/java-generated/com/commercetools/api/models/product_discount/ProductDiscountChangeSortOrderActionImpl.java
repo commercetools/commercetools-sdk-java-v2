@@ -53,6 +53,7 @@ public class ProductDiscountChangeSortOrderActionImpl implements ProductDiscount
 
     /**
      *  <p>New value to set. Must not be empty. The string value must be a number between <code>0</code> and <code>1</code>. A Discount with a higher sortOrder is prioritized.</p>
+     *  <p>If the value is used by another Product Discount, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      */
 
     public String getSortOrder() {

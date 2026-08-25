@@ -38,6 +38,14 @@ public interface StoreKeyReference extends KeyReference {
     String STORE = "store";
 
     /**
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceType getTypeId();
+
+    /**
      *  <p>User-defined unique identifier of the referenced Store.</p>
      * @return key
      */

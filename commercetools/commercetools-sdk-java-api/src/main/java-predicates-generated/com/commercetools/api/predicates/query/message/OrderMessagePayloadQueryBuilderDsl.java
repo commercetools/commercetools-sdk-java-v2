@@ -258,6 +258,13 @@ public class OrderMessagePayloadQueryBuilderDsl {
             OrderMessagePayloadQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<OrderMessagePayloadQueryBuilderDsl> asOrderEstimatedDeliverySet(
+            Function<com.commercetools.api.predicates.query.message.OrderEstimatedDeliverySetMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.OrderEstimatedDeliverySetMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.OrderEstimatedDeliverySetMessagePayloadQueryBuilderDsl.of()),
+            OrderMessagePayloadQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<OrderMessagePayloadQueryBuilderDsl> asOrderImported(
             Function<com.commercetools.api.predicates.query.message.OrderImportedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.OrderImportedMessagePayloadQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

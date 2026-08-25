@@ -38,6 +38,14 @@ public interface TaxCategoryKeyReference extends KeyReference {
     String TAX_CATEGORY = "tax-category";
 
     /**
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceType getTypeId();
+
+    /**
      *  <p>User-defined unique identifier of the referenced TaxCategory.</p>
      * @return key
      */

@@ -52,6 +52,7 @@ public class TaxCategoryDraftImpl implements TaxCategoryDraft, ModelBase {
 
     /**
      *  <p>Name of the TaxCategory.</p>
+     *  <p>If the provided name is used by another TaxCategory in the Project, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
      */
 
     public String getName() {
@@ -76,6 +77,7 @@ public class TaxCategoryDraftImpl implements TaxCategoryDraft, ModelBase {
 
     /**
      *  <p>User-defined unique identifier for the TaxCategory.</p>
+     *  <p>If the value is used by another TaxCategory in the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      */
 
     public String getKey() {

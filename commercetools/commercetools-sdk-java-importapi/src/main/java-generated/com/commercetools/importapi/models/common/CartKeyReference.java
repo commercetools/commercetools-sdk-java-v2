@@ -38,6 +38,14 @@ public interface CartKeyReference extends KeyReference {
     String CART = "cart";
 
     /**
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceType getTypeId();
+
+    /**
      *  <p>User-defined unique identifier of the referenced Cart.</p>
      * @return key
      */

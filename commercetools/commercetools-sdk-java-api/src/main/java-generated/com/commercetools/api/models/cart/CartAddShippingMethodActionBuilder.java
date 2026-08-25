@@ -44,6 +44,9 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    @Nullable
+    private com.commercetools.api.models.cart.EstimatedDelivery estimatedDelivery;
+
     /**
      *  <p>User-defined identifier for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Shipping" rel="nofollow">Shipping</a> that must be unique across the Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @param shippingKey value to be set
@@ -346,6 +349,42 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     }
 
     /**
+     *  <p>Estimated time window during which this shipment is expected to be delivered.</p>
+     * @param builder function to build the estimatedDelivery value
+     * @return Builder
+     */
+
+    public CartAddShippingMethodActionBuilder estimatedDelivery(
+            Function<com.commercetools.api.models.cart.EstimatedDeliveryBuilder, com.commercetools.api.models.cart.EstimatedDeliveryBuilder> builder) {
+        this.estimatedDelivery = builder.apply(com.commercetools.api.models.cart.EstimatedDeliveryBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Estimated time window during which this shipment is expected to be delivered.</p>
+     * @param builder function to build the estimatedDelivery value
+     * @return Builder
+     */
+
+    public CartAddShippingMethodActionBuilder withEstimatedDelivery(
+            Function<com.commercetools.api.models.cart.EstimatedDeliveryBuilder, com.commercetools.api.models.cart.EstimatedDelivery> builder) {
+        this.estimatedDelivery = builder.apply(com.commercetools.api.models.cart.EstimatedDeliveryBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Estimated time window during which this shipment is expected to be delivered.</p>
+     * @param estimatedDelivery value to be set
+     * @return Builder
+     */
+
+    public CartAddShippingMethodActionBuilder estimatedDelivery(
+            @Nullable final com.commercetools.api.models.cart.EstimatedDelivery estimatedDelivery) {
+        this.estimatedDelivery = estimatedDelivery;
+        return this;
+    }
+
+    /**
      *  <p>User-defined identifier for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Shipping" rel="nofollow">Shipping</a> that must be unique across the Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
      * @return shippingKey
      */
@@ -424,6 +463,16 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     }
 
     /**
+     *  <p>Estimated time window during which this shipment is expected to be delivered.</p>
+     * @return estimatedDelivery
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart.EstimatedDelivery getEstimatedDelivery() {
+        return this.estimatedDelivery;
+    }
+
+    /**
      * builds CartAddShippingMethodAction with checking for non-null required values
      * @return CartAddShippingMethodAction
      */
@@ -432,7 +481,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
         Objects.requireNonNull(shippingMethod, CartAddShippingMethodAction.class + ": shippingMethod is missing");
         Objects.requireNonNull(shippingAddress, CartAddShippingMethodAction.class + ": shippingAddress is missing");
         return new CartAddShippingMethodActionImpl(shippingKey, shippingMethod, shippingAddress, shippingRateInput,
-            externalTaxRate, deliveries, custom);
+            externalTaxRate, deliveries, custom, estimatedDelivery);
     }
 
     /**
@@ -441,7 +490,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
      */
     public CartAddShippingMethodAction buildUnchecked() {
         return new CartAddShippingMethodActionImpl(shippingKey, shippingMethod, shippingAddress, shippingRateInput,
-            externalTaxRate, deliveries, custom);
+            externalTaxRate, deliveries, custom, estimatedDelivery);
     }
 
     /**
@@ -466,6 +515,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
         builder.externalTaxRate = template.getExternalTaxRate();
         builder.deliveries = template.getDeliveries();
         builder.custom = template.getCustom();
+        builder.estimatedDelivery = template.getEstimatedDelivery();
         return builder;
     }
 

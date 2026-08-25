@@ -108,6 +108,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     /**
      *  <p>User-defined unique identifier for the CartDiscount.</p>
+     *  <p>If the value is used by another Cart Discount, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -217,7 +218,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     /**
      *  <p>Value between <code>0</code> and <code>1</code> that determines the order in which the CartDiscounts will be applied; a CartDiscount with a higher value will be prioritized.</p>
-     *  <p>It must be unique among all CartDiscounts and DiscountGroups.</p>
+     *  <p>If the value is used by another Cart Discount or Discount Group, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      *  <p>If the CartDiscount is part of a DiscountGroup, it will use the sort order of the DiscountGroup.</p>
      * @param sortOrder value to be set
      * @return Builder
@@ -524,6 +525,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     /**
      *  <p>User-defined unique identifier for the CartDiscount.</p>
+     *  <p>If the value is used by another Cart Discount, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return key
      */
 
@@ -573,7 +575,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     /**
      *  <p>Value between <code>0</code> and <code>1</code> that determines the order in which the CartDiscounts will be applied; a CartDiscount with a higher value will be prioritized.</p>
-     *  <p>It must be unique among all CartDiscounts and DiscountGroups.</p>
+     *  <p>If the value is used by another Cart Discount or Discount Group, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      *  <p>If the CartDiscount is part of a DiscountGroup, it will use the sort order of the DiscountGroup.</p>
      * @return sortOrder
      */

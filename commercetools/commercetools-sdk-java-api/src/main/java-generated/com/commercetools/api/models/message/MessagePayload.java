@@ -575,6 +575,14 @@ public interface MessagePayload extends MessagePayloadMixin {
     }
 
     /**
+     * builder for cartEstimatedDeliverySet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CartEstimatedDeliverySetMessagePayloadBuilder cartEstimatedDeliverySetBuilder() {
+        return com.commercetools.api.models.message.CartEstimatedDeliverySetMessagePayloadBuilder.of();
+    }
+
+    /**
      * builder for cartFrozen subtype
      * @return builder
      */
@@ -1341,6 +1349,14 @@ public interface MessagePayload extends MessagePayloadMixin {
      */
     public static com.commercetools.api.models.message.OrderEditAppliedMessagePayloadBuilder orderEditAppliedBuilder() {
         return com.commercetools.api.models.message.OrderEditAppliedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for orderEstimatedDeliverySet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.OrderEstimatedDeliverySetMessagePayloadBuilder orderEstimatedDeliverySetBuilder() {
+        return com.commercetools.api.models.message.OrderEstimatedDeliverySetMessagePayloadBuilder.of();
     }
 
     /**
@@ -2560,6 +2576,30 @@ public interface MessagePayload extends MessagePayloadMixin {
     }
 
     /**
+     * builder for storeCheckoutUrlTemplateSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.StoreCheckoutUrlTemplateSetMessagePayloadBuilder storeCheckoutUrlTemplateSetBuilder() {
+        return com.commercetools.api.models.message.StoreCheckoutUrlTemplateSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for storeContactUrlSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.StoreContactUrlSetMessagePayloadBuilder storeContactUrlSetBuilder() {
+        return com.commercetools.api.models.message.StoreContactUrlSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for storeCookiePolicyUrlSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.StoreCookiePolicyUrlSetMessagePayloadBuilder storeCookiePolicyUrlSetBuilder() {
+        return com.commercetools.api.models.message.StoreCookiePolicyUrlSetMessagePayloadBuilder.of();
+    }
+
+    /**
      * builder for storeCountriesChanged subtype
      * @return builder
      */
@@ -2592,6 +2632,22 @@ public interface MessagePayload extends MessagePayloadMixin {
     }
 
     /**
+     * builder for storeFaqUrlSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.StoreFaqUrlSetMessagePayloadBuilder storeFaqUrlSetBuilder() {
+        return com.commercetools.api.models.message.StoreFaqUrlSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for storeImprintUrlSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.StoreImprintUrlSetMessagePayloadBuilder storeImprintUrlSetBuilder() {
+        return com.commercetools.api.models.message.StoreImprintUrlSetMessagePayloadBuilder.of();
+    }
+
+    /**
      * builder for storeLanguagesChanged subtype
      * @return builder
      */
@@ -2608,6 +2664,22 @@ public interface MessagePayload extends MessagePayloadMixin {
     }
 
     /**
+     * builder for storeOrderUrlTemplateSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.StoreOrderUrlTemplateSetMessagePayloadBuilder storeOrderUrlTemplateSetBuilder() {
+        return com.commercetools.api.models.message.StoreOrderUrlTemplateSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for storePrivacyPolicyUrlSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.StorePrivacyPolicyUrlSetMessagePayloadBuilder storePrivacyPolicyUrlSetBuilder() {
+        return com.commercetools.api.models.message.StorePrivacyPolicyUrlSetMessagePayloadBuilder.of();
+    }
+
+    /**
      * builder for storeProductSelectionsChanged subtype
      * @return builder
      */
@@ -2616,11 +2688,35 @@ public interface MessagePayload extends MessagePayloadMixin {
     }
 
     /**
+     * builder for storeRefundPolicyUrlSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.StoreRefundPolicyUrlSetMessagePayloadBuilder storeRefundPolicyUrlSetBuilder() {
+        return com.commercetools.api.models.message.StoreRefundPolicyUrlSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for storeShippingPolicyUrlSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.StoreShippingPolicyUrlSetMessagePayloadBuilder storeShippingPolicyUrlSetBuilder() {
+        return com.commercetools.api.models.message.StoreShippingPolicyUrlSetMessagePayloadBuilder.of();
+    }
+
+    /**
      * builder for storeSupplyChannelsChanged subtype
      * @return builder
      */
     public static com.commercetools.api.models.message.StoreSupplyChannelsChangedMessagePayloadBuilder storeSupplyChannelsChangedBuilder() {
         return com.commercetools.api.models.message.StoreSupplyChannelsChangedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for storeTermsOfServiceUrlSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.StoreTermsOfServiceUrlSetMessagePayloadBuilder storeTermsOfServiceUrlSetBuilder() {
+        return com.commercetools.api.models.message.StoreTermsOfServiceUrlSetMessagePayloadBuilder.of();
     }
 
     /**

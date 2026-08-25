@@ -53,7 +53,8 @@ public class ShippingMethodTest {
                 new Object[] { "stores",
                         ShippingMethod.builder()
                                 .stores(Collections.singletonList(
-                                    new com.commercetools.api.models.store.StoreKeyReferenceImpl())) } };
+                                    new com.commercetools.api.models.store.StoreKeyReferenceImpl())) },
+                new Object[] { "carrier", ShippingMethod.builder().carrier("carrier") } };
     }
 
     @Test
@@ -186,5 +187,12 @@ public class ShippingMethodTest {
         value.setStores(Collections.singletonList(new com.commercetools.api.models.store.StoreKeyReferenceImpl()));
         Assertions.assertThat(value.getStores())
                 .isEqualTo(Collections.singletonList(new com.commercetools.api.models.store.StoreKeyReferenceImpl()));
+    }
+
+    @Test
+    public void carrier() {
+        ShippingMethod value = ShippingMethod.of();
+        value.setCarrier("carrier");
+        Assertions.assertThat(value.getCarrier()).isEqualTo("carrier");
     }
 }

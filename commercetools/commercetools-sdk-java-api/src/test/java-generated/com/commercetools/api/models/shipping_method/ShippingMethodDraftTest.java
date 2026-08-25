@@ -43,7 +43,8 @@ public class ShippingMethodDraftTest {
                 new Object[] { "stores",
                         ShippingMethodDraft.builder()
                                 .stores(Collections.singletonList(
-                                    new com.commercetools.api.models.store.StoreResourceIdentifierImpl())) } };
+                                    new com.commercetools.api.models.store.StoreResourceIdentifierImpl())) },
+                new Object[] { "carrier", ShippingMethodDraft.builder().carrier("carrier") } };
     }
 
     @Test
@@ -138,5 +139,12 @@ public class ShippingMethodDraftTest {
         Assertions.assertThat(value.getStores())
                 .isEqualTo(
                     Collections.singletonList(new com.commercetools.api.models.store.StoreResourceIdentifierImpl()));
+    }
+
+    @Test
+    public void carrier() {
+        ShippingMethodDraft value = ShippingMethodDraft.of();
+        value.setCarrier("carrier");
+        Assertions.assertThat(value.getCarrier()).isEqualTo("carrier");
     }
 }

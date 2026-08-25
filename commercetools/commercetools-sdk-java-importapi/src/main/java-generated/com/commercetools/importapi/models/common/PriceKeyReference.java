@@ -38,6 +38,14 @@ public interface PriceKeyReference extends KeyReference {
     String PRICE = "price";
 
     /**
+     *
+     * @return typeId
+     */
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceType getTypeId();
+
+    /**
      *  <p>User-defined unique identifier of the referenced Embedded Price.</p>
      * @return key
      */

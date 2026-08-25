@@ -135,6 +135,10 @@ public class OrderUpdateActionBuilder {
         return com.commercetools.api.models.order.OrderSetDeliveryItemsActionBuilder.of();
     }
 
+    public com.commercetools.api.models.order.OrderSetEstimatedDeliveryActionBuilder setEstimatedDeliveryBuilder() {
+        return com.commercetools.api.models.order.OrderSetEstimatedDeliveryActionBuilder.of();
+    }
+
     public com.commercetools.api.models.order.OrderSetItemShippingAddressCustomFieldActionBuilder setItemShippingAddressCustomFieldBuilder() {
         return com.commercetools.api.models.order.OrderSetItemShippingAddressCustomFieldActionBuilder.of();
     }

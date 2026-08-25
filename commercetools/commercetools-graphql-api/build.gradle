@@ -33,15 +33,15 @@ dependencies {
     implementation 'com.google.code.findbugs:jsr305:3.0.2'
     implementation 'jakarta.validation:jakarta.validation-api:3.1.1'
     api 'com.graphql-java:graphql-java:19.11'
-    api 'tools.jackson.core:jackson-databind:3.1.5'
-    api 'tools.jackson.core:jackson-core:3.2.1'
+    api 'tools.jackson.core:jackson-databind:3.2.2'
+    api 'tools.jackson.core:jackson-core:3.2.2'
     //api jackson_core.datatype
     api 'com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core:8.6.0'
     constraints {
-        implementation("com.fasterxml.jackson.core:jackson-core:2.22.1") {
+        implementation("com.fasterxml.jackson.core:jackson-core:2.22.2") {
             because("security update")
         }
-        implementation("com.fasterxml.jackson.core:jackson-databind:2.22.1") {
+        implementation("com.fasterxml.jackson.core:jackson-databind:2.22.2") {
             because("security update")
         }
     }

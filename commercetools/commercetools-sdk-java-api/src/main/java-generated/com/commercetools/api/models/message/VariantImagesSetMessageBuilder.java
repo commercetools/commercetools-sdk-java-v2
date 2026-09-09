@@ -23,6 +23,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .sequenceNumber(0.3)
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
+ *             .product(productBuilder -> productBuilder)
  *             .plusImages(imagesBuilder -> imagesBuilder)
  *             .plusOldImages(oldImagesBuilder -> oldImagesBuilder)
  *             .staged(true)
@@ -55,6 +56,8 @@ public class VariantImagesSetMessageBuilder implements Builder<VariantImagesSetM
 
     @Nullable
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+
+    private com.commercetools.api.models.product.ProductReference product;
 
     private java.util.List<com.commercetools.api.models.common.Image> images;
 
@@ -259,6 +262,41 @@ public class VariantImagesSetMessageBuilder implements Builder<VariantImagesSetM
     public VariantImagesSetMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public VariantImagesSetMessageBuilder product(
+            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public VariantImagesSetMessageBuilder withProduct(
+            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @param product value to be set
+     * @return Builder
+     */
+
+    public VariantImagesSetMessageBuilder product(final com.commercetools.api.models.product.ProductReference product) {
+        this.product = product;
         return this;
     }
 
@@ -541,6 +579,15 @@ public class VariantImagesSetMessageBuilder implements Builder<VariantImagesSetM
     }
 
     /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @return product
+     */
+
+    public com.commercetools.api.models.product.ProductReference getProduct() {
+        return this.product;
+    }
+
+    /**
      *  <p>The images that were set on the Variant.</p>
      * @return images
      */
@@ -579,11 +626,13 @@ public class VariantImagesSetMessageBuilder implements Builder<VariantImagesSetM
         Objects.requireNonNull(sequenceNumber, VariantImagesSetMessage.class + ": sequenceNumber is missing");
         Objects.requireNonNull(resource, VariantImagesSetMessage.class + ": resource is missing");
         Objects.requireNonNull(resourceVersion, VariantImagesSetMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(product, VariantImagesSetMessage.class + ": product is missing");
         Objects.requireNonNull(images, VariantImagesSetMessage.class + ": images is missing");
         Objects.requireNonNull(oldImages, VariantImagesSetMessage.class + ": oldImages is missing");
         Objects.requireNonNull(staged, VariantImagesSetMessage.class + ": staged is missing");
         return new VariantImagesSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, images, oldImages, staged);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, product, images, oldImages,
+            staged);
     }
 
     /**
@@ -592,7 +641,8 @@ public class VariantImagesSetMessageBuilder implements Builder<VariantImagesSetM
      */
     public VariantImagesSetMessage buildUnchecked() {
         return new VariantImagesSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, images, oldImages, staged);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, product, images, oldImages,
+            staged);
     }
 
     /**
@@ -620,6 +670,7 @@ public class VariantImagesSetMessageBuilder implements Builder<VariantImagesSetM
         builder.resource = template.getResource();
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
+        builder.product = template.getProduct();
         builder.images = template.getImages();
         builder.oldImages = template.getOldImages();
         builder.staged = template.getStaged();

@@ -21,9 +21,9 @@ import tools.jackson.databind.annotation.*;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     WarningObject warningObject = WarningObject.cannotChangeReservationExpiryBuilder()
+ *     WarningObject warningObject = WarningObject.fileNotProcessedBuilder()
  *             message("{message}")
- *             lineItemId("{lineItemId}")
+ *             fileName("{fileName}")
  *             .build()
  * </code></pre>
  * </div>
@@ -75,6 +75,22 @@ public interface WarningObject {
         WarningObjectImpl instance = new WarningObjectImpl();
         instance.setMessage(template.getMessage());
         return instance;
+    }
+
+    /**
+     * builder for fileNotProcessed subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentFileNotProcessedWarningBuilder fileNotProcessedBuilder() {
+        return com.commercetools.api.models.agent.AgentFileNotProcessedWarningBuilder.of();
+    }
+
+    /**
+     * builder for productsNotFound subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentProductsNotFoundWarningBuilder productsNotFoundBuilder() {
+        return com.commercetools.api.models.agent.AgentProductsNotFoundWarningBuilder.of();
     }
 
     /**

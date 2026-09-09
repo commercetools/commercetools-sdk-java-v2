@@ -34,6 +34,7 @@ import tools.jackson.databind.annotation.*;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductProjectionPagedSearchResponseImpl.class)
+@Deprecated
 public interface ProductProjectionPagedSearchResponse
         extends com.commercetools.api.models.ResourcePagedQueryResponse<ProductProjection> {
 
@@ -84,6 +85,7 @@ public interface ProductProjectionPagedSearchResponse
      * @return facets
      */
     @Valid
+    @Deprecated
     @JsonProperty("facets")
     public FacetResults getFacets();
 
@@ -135,7 +137,7 @@ public interface ProductProjectionPagedSearchResponse
      *  <p>Only present if at least one <code>facet</code> parameter was provided with the search request.</p>
      * @param facets value to be set
      */
-
+    @Deprecated
     public void setFacets(final FacetResults facets);
 
     /**

@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful <span>Create Variant</span> request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/variants:POST" rel="nofollow">Create Variant</a> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class VariantCreatedMessageImpl implements VariantCreatedMessage, ModelBase {
@@ -45,7 +45,7 @@ public class VariantCreatedMessageImpl implements VariantCreatedMessage, ModelBa
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
-    private String productId;
+    private com.commercetools.api.models.product.ProductReference product;
 
     private Integer variantId;
 
@@ -74,8 +74,9 @@ public class VariantCreatedMessageImpl implements VariantCreatedMessage, ModelBa
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("productId") final String productId, @JsonProperty("variantId") final Integer variantId,
-            @JsonProperty("key") final String key, @JsonProperty("sku") final String sku,
+            @JsonProperty("product") final com.commercetools.api.models.product.ProductReference product,
+            @JsonProperty("variantId") final Integer variantId, @JsonProperty("key") final String key,
+            @JsonProperty("sku") final String sku,
             @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product.Attribute> attributes,
             @JsonProperty("assets") final java.util.List<com.commercetools.api.models.common.Asset> assets,
             @JsonProperty("images") final java.util.List<com.commercetools.api.models.common.Image> images,
@@ -90,7 +91,7 @@ public class VariantCreatedMessageImpl implements VariantCreatedMessage, ModelBa
         this.resource = resource;
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
-        this.productId = productId;
+        this.product = product;
         this.variantId = variantId;
         this.key = key;
         this.sku = sku;
@@ -197,11 +198,11 @@ public class VariantCreatedMessageImpl implements VariantCreatedMessage, ModelBa
     }
 
     /**
-     *  <p>Unique identifier of the Product to which the Variant belongs.</p>
+     *  <p>Reference to the Product containing the Variant.</p>
      */
 
-    public String getProductId() {
-        return this.productId;
+    public com.commercetools.api.models.product.ProductReference getProduct() {
+        return this.product;
     }
 
     /**
@@ -301,8 +302,8 @@ public class VariantCreatedMessageImpl implements VariantCreatedMessage, ModelBa
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
     }
 
-    public void setProductId(final String productId) {
-        this.productId = productId;
+    public void setProduct(final com.commercetools.api.models.product.ProductReference product) {
+        this.product = product;
     }
 
     public void setVariantId(final Integer variantId) {
@@ -366,7 +367,7 @@ public class VariantCreatedMessageImpl implements VariantCreatedMessage, ModelBa
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
-                .append(productId, that.productId)
+                .append(product, that.product)
                 .append(variantId, that.variantId)
                 .append(key, that.key)
                 .append(sku, that.sku)
@@ -385,7 +386,7 @@ public class VariantCreatedMessageImpl implements VariantCreatedMessage, ModelBa
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
-                .append(productId, that.productId)
+                .append(product, that.product)
                 .append(variantId, that.variantId)
                 .append(key, that.key)
                 .append(sku, that.sku)
@@ -409,7 +410,7 @@ public class VariantCreatedMessageImpl implements VariantCreatedMessage, ModelBa
                 .append(resourceVersion)
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
-                .append(productId)
+                .append(product)
                 .append(variantId)
                 .append(key)
                 .append(sku)
@@ -433,7 +434,7 @@ public class VariantCreatedMessageImpl implements VariantCreatedMessage, ModelBa
                 .append("resourceVersion", resourceVersion)
                 .append("type", type)
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
-                .append("productId", productId)
+                .append("product", product)
                 .append("variantId", variantId)
                 .append("key", key)
                 .append("sku", sku)

@@ -18,7 +18,7 @@ import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeState" rel="nofollow">DiscountCodeState</a> changes due to a <span>recalculation</span>.</p>
+ *  <p>Generated after the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCodeState" rel="nofollow">DiscountCodeState</a> changes due to a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRecalculateAction" rel="nofollow">recalculation</a>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

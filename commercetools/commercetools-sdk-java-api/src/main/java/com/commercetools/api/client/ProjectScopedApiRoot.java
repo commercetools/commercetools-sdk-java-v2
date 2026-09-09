@@ -108,6 +108,8 @@ public interface ProjectScopedApiRoot {
 
     ByProjectKeyMcpServersRequestBuilder mcpServers();
 
+    ByProjectKeyAgentsRequestBuilder agents();
+
     <R> R with(Function<ProjectApiRoot, R> op);
 
     ByProjectKeyVariantProjectionsRequestBuilder variantProjections();

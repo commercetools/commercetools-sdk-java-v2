@@ -45,6 +45,8 @@ public class VariantImageAddedMessageImpl implements VariantImageAddedMessage, M
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
+    private com.commercetools.api.models.product.ProductReference product;
+
     private com.commercetools.api.models.common.Image image;
 
     private Boolean staged;
@@ -62,6 +64,7 @@ public class VariantImageAddedMessageImpl implements VariantImageAddedMessage, M
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
+            @JsonProperty("product") final com.commercetools.api.models.product.ProductReference product,
             @JsonProperty("image") final com.commercetools.api.models.common.Image image,
             @JsonProperty("staged") final Boolean staged) {
         this.id = id;
@@ -74,6 +77,7 @@ public class VariantImageAddedMessageImpl implements VariantImageAddedMessage, M
         this.resource = resource;
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
+        this.product = product;
         this.image = image;
         this.staged = staged;
         this.type = VARIANT_IMAGE_ADDED;
@@ -175,6 +179,14 @@ public class VariantImageAddedMessageImpl implements VariantImageAddedMessage, M
     }
 
     /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     */
+
+    public com.commercetools.api.models.product.ProductReference getProduct() {
+        return this.product;
+    }
+
+    /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
      */
 
@@ -231,6 +243,10 @@ public class VariantImageAddedMessageImpl implements VariantImageAddedMessage, M
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
     }
 
+    public void setProduct(final com.commercetools.api.models.product.ProductReference product) {
+        this.product = product;
+    }
+
     public void setImage(final com.commercetools.api.models.common.Image image) {
         this.image = image;
     }
@@ -260,6 +276,7 @@ public class VariantImageAddedMessageImpl implements VariantImageAddedMessage, M
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(product, that.product)
                 .append(image, that.image)
                 .append(staged, that.staged)
                 .append(id, that.id)
@@ -273,6 +290,7 @@ public class VariantImageAddedMessageImpl implements VariantImageAddedMessage, M
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(product, that.product)
                 .append(image, that.image)
                 .append(staged, that.staged)
                 .isEquals();
@@ -291,6 +309,7 @@ public class VariantImageAddedMessageImpl implements VariantImageAddedMessage, M
                 .append(resourceVersion)
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
+                .append(product)
                 .append(image)
                 .append(staged)
                 .toHashCode();
@@ -309,6 +328,7 @@ public class VariantImageAddedMessageImpl implements VariantImageAddedMessage, M
                 .append("resourceVersion", resourceVersion)
                 .append("type", type)
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
+                .append("product", product)
                 .append("image", image)
                 .append("staged", staged)
                 .build();

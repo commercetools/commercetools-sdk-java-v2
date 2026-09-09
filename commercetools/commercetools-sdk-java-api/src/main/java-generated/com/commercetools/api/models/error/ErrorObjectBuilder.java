@@ -11,6 +11,70 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ErrorObjectBuilder {
 
+    public com.commercetools.api.models.agent.AgentBusinessUnitAmbiguousErrorBuilder businessUnitAmbiguousBuilder() {
+        return com.commercetools.api.models.agent.AgentBusinessUnitAmbiguousErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentBusinessUnitLimitExceededErrorBuilder businessUnitLimitExceededBuilder() {
+        return com.commercetools.api.models.agent.AgentBusinessUnitLimitExceededErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentBusinessUnitUnresolvedErrorBuilder businessUnitUnresolvedBuilder() {
+        return com.commercetools.api.models.agent.AgentBusinessUnitUnresolvedErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentExtractionFailedErrorBuilder extractionFailedBuilder() {
+        return com.commercetools.api.models.agent.AgentExtractionFailedErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentFeatureDisabledErrorBuilder featureDisabledBuilder() {
+        return com.commercetools.api.models.agent.AgentFeatureDisabledErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentMissingCountryErrorBuilder missingCountryBuilder() {
+        return com.commercetools.api.models.agent.AgentMissingCountryErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentMissingCustomerEmailErrorBuilder missingCustomerEmailBuilder() {
+        return com.commercetools.api.models.agent.AgentMissingCustomerEmailErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentMissingEntityTypeErrorBuilder missingEntityTypeBuilder() {
+        return com.commercetools.api.models.agent.AgentMissingEntityTypeErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentNoLineItemsExtractedErrorBuilder noLineItemsExtractedBuilder() {
+        return com.commercetools.api.models.agent.AgentNoLineItemsExtractedErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentOutOfScopeErrorBuilder outOfScopeBuilder() {
+        return com.commercetools.api.models.agent.AgentOutOfScopeErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentProductSearchNotEnabledErrorBuilder productSearchNotEnabledBuilder() {
+        return com.commercetools.api.models.agent.AgentProductSearchNotEnabledErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentProductsNotFoundErrorBuilder productsNotFoundBuilder() {
+        return com.commercetools.api.models.agent.AgentProductsNotFoundErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentQuoteRequestCreationFailedErrorBuilder quoteRequestCreationFailedBuilder() {
+        return com.commercetools.api.models.agent.AgentQuoteRequestCreationFailedErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentStoreAmbiguousErrorBuilder storeAmbiguousBuilder() {
+        return com.commercetools.api.models.agent.AgentStoreAmbiguousErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentStoreDistributionChannelsUnsupportedErrorBuilder storeDistributionChannelsUnsupportedBuilder() {
+        return com.commercetools.api.models.agent.AgentStoreDistributionChannelsUnsupportedErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentStoreUnresolvedErrorBuilder storeUnresolvedBuilder() {
+        return com.commercetools.api.models.agent.AgentStoreUnresolvedErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.AnonymousIdAlreadyInUseErrorBuilder anonymousIdAlreadyInUseBuilder() {
         return com.commercetools.api.models.error.AnonymousIdAlreadyInUseErrorBuilder.of();
     }

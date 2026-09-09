@@ -21,6 +21,7 @@ import tools.jackson.databind.annotation.*;
  *  <p>The response returned to a <span>Product Projection Search</span> request. The object contains the <span>query results</span> with Product Projections where at least one ProductVariant matches the search query, as well as the <span>facet results</span>, if requested.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class ProductProjectionPagedSearchResponseImpl implements ProductProjectionPagedSearchResponse, ModelBase {
 
     private Long limit;
@@ -33,6 +34,7 @@ public class ProductProjectionPagedSearchResponseImpl implements ProductProjecti
 
     private java.util.List<com.commercetools.api.models.product.ProductProjection> results;
 
+    @Deprecated
     private com.commercetools.api.models.product.FacetResults facets;
 
     /**
@@ -102,7 +104,7 @@ public class ProductProjectionPagedSearchResponseImpl implements ProductProjecti
      *  <p>Facet results for each <span>facet expression</span> specified in the search request.</p>
      *  <p>Only present if at least one <code>facet</code> parameter was provided with the search request.</p>
      */
-
+    @Deprecated
     public com.commercetools.api.models.product.FacetResults getFacets() {
         return this.facets;
     }
@@ -131,6 +133,7 @@ public class ProductProjectionPagedSearchResponseImpl implements ProductProjecti
         this.results = results;
     }
 
+    @Deprecated
     public void setFacets(final com.commercetools.api.models.product.FacetResults facets) {
         this.facets = facets;
     }

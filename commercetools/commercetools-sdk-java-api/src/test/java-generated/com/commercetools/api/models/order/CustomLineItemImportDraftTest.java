@@ -31,6 +31,9 @@ public class CustomLineItemImportDraftTest {
                 new Object[] { "taxRate",
                         CustomLineItemImportDraft.builder()
                                 .taxRate(new com.commercetools.api.models.tax_category.TaxRateImpl()) },
+                new Object[] { "taxedPrice",
+                        CustomLineItemImportDraft.builder()
+                                .taxedPrice(new com.commercetools.api.models.cart.TaxedPriceDraftImpl()) },
                 new Object[] { "taxCategory", CustomLineItemImportDraft.builder()
                         .taxCategory(
                             new com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierImpl()) },
@@ -87,6 +90,14 @@ public class CustomLineItemImportDraftTest {
         value.setTaxRate(new com.commercetools.api.models.tax_category.TaxRateImpl());
         Assertions.assertThat(value.getTaxRate())
                 .isEqualTo(new com.commercetools.api.models.tax_category.TaxRateImpl());
+    }
+
+    @Test
+    public void taxedPrice() {
+        CustomLineItemImportDraft value = CustomLineItemImportDraft.of();
+        value.setTaxedPrice(new com.commercetools.api.models.cart.TaxedPriceDraftImpl());
+        Assertions.assertThat(value.getTaxedPrice())
+                .isEqualTo(new com.commercetools.api.models.cart.TaxedPriceDraftImpl());
     }
 
     @Test

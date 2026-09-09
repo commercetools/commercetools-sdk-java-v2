@@ -7,10 +7,13 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import com.commercetools.api.models.product.ProductReference;
 import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
@@ -21,6 +24,7 @@ import tools.jackson.databind.annotation.*;
  * <div class=code-example>
  * <pre><code class='java'>
  *     VariantKeySetMessagePayload variantKeySetMessagePayload = VariantKeySetMessagePayload.builder()
+ *             .product(productBuilder -> productBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -34,6 +38,15 @@ public interface VariantKeySetMessagePayload extends MessagePayload {
      * discriminator value for VariantKeySetMessagePayload
      */
     String VARIANT_KEY_SET = "VariantKeySet";
+
+    /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @return product
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("product")
+    public ProductReference getProduct();
 
     /**
      *  <p>The key that was set on the Variant.</p>
@@ -50,6 +63,13 @@ public interface VariantKeySetMessagePayload extends MessagePayload {
 
     @JsonProperty("oldKey")
     public String getOldKey();
+
+    /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @param product value to be set
+     */
+
+    public void setProduct(final ProductReference product);
 
     /**
      *  <p>The key that was set on the Variant.</p>
@@ -80,6 +100,7 @@ public interface VariantKeySetMessagePayload extends MessagePayload {
      */
     public static VariantKeySetMessagePayload of(final VariantKeySetMessagePayload template) {
         VariantKeySetMessagePayloadImpl instance = new VariantKeySetMessagePayloadImpl();
+        instance.setProduct(template.getProduct());
         instance.setKey(template.getKey());
         instance.setOldKey(template.getOldKey());
         return instance;
@@ -98,6 +119,7 @@ public interface VariantKeySetMessagePayload extends MessagePayload {
             return null;
         }
         VariantKeySetMessagePayloadImpl instance = new VariantKeySetMessagePayloadImpl();
+        instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
         instance.setKey(template.getKey());
         instance.setOldKey(template.getOldKey());
         return instance;

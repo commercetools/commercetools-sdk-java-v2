@@ -11,6 +11,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class WarningObjectBuilder {
 
+    public com.commercetools.api.models.agent.AgentFileNotProcessedWarningBuilder fileNotProcessedBuilder() {
+        return com.commercetools.api.models.agent.AgentFileNotProcessedWarningBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentProductsNotFoundWarningBuilder productsNotFoundBuilder() {
+        return com.commercetools.api.models.agent.AgentProductsNotFoundWarningBuilder.of();
+    }
+
     public com.commercetools.api.models.warning.CannotChangeReservationExpiryWarningBuilder cannotChangeReservationExpiryBuilder() {
         return com.commercetools.api.models.warning.CannotChangeReservationExpiryWarningBuilder.of();
     }

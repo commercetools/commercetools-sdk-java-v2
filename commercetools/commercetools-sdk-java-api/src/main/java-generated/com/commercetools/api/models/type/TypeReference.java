@@ -58,7 +58,7 @@ public interface TypeReference extends Reference, com.commercetools.api.models.I
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded Type. Only present in responses to requests with <a href="https://docs.commercetools.com/apis/ctp:api:type:Expansion" rel="nofollow">Reference Expansion</a> for Types.</p>
+     *  <p>Contains the representation of the expanded Type. Only present in responses to requests with <span>Reference Expansion</span> for Types.</p>
      * @return obj
      */
     @Valid
@@ -73,7 +73,7 @@ public interface TypeReference extends Reference, com.commercetools.api.models.I
     public void setId(final String id);
 
     /**
-     *  <p>Contains the representation of the expanded Type. Only present in responses to requests with <a href="https://docs.commercetools.com/apis/ctp:api:type:Expansion" rel="nofollow">Reference Expansion</a> for Types.</p>
+     *  <p>Contains the representation of the expanded Type. Only present in responses to requests with <span>Reference Expansion</span> for Types.</p>
      * @param obj value to be set
      */
 

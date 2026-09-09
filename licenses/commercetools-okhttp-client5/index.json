@@ -41,9 +41,9 @@
         },
         {
             "moduleName": "com.squareup.okhttp3:okhttp",
-            "moduleVersion": "5.4.0",
+            "moduleVersion": "5.5.0",
             "moduleUrls": [
-                "https://square.github.io/okhttp/"
+                "https://lysine.dev/okhttp/"
             ],
             "moduleLicenses": [
                 {
@@ -54,9 +54,9 @@
         },
         {
             "moduleName": "com.squareup.okhttp3:okhttp-jvm",
-            "moduleVersion": "5.4.0",
+            "moduleVersion": "5.5.0",
             "moduleUrls": [
-                "https://square.github.io/okhttp/"
+                "https://lysine.dev/okhttp/"
             ],
             "moduleLicenses": [
                 {
@@ -234,7 +234,7 @@
         },
         {
             "moduleName": "tools.jackson.core:jackson-core",
-            "moduleVersion": "3.2.1",
+            "moduleVersion": "3.2.2",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-core"
             ],
@@ -247,7 +247,7 @@
         },
         {
             "moduleName": "tools.jackson.core:jackson-databind",
-            "moduleVersion": "3.2.1",
+            "moduleVersion": "3.2.2",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],

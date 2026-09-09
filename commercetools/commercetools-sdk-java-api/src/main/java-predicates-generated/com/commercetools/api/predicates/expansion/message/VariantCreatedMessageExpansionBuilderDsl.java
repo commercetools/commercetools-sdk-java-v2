@@ -44,6 +44,11 @@ public class VariantCreatedMessageExpansionBuilderDsl implements ExpansionDsl {
                 .of(appendOne(path, "resource"));
     }
 
+    public com.commercetools.api.predicates.expansion.product.ProductReferenceExpansionBuilderDsl product() {
+        return com.commercetools.api.predicates.expansion.product.ProductReferenceExpansionBuilderDsl
+                .of(appendOne(path, "product"));
+    }
+
     public com.commercetools.api.predicates.expansion.product.AttributeExpansionBuilderDsl attributes() {
         return com.commercetools.api.predicates.expansion.product.AttributeExpansionBuilderDsl
                 .of(appendOne(path, "attributes[*]"));

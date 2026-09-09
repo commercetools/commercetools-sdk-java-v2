@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -15,6 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     VariantKeySetMessagePayload variantKeySetMessagePayload = VariantKeySetMessagePayload.builder()
+ *             .product(productBuilder -> productBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -22,11 +24,49 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class VariantKeySetMessagePayloadBuilder implements Builder<VariantKeySetMessagePayload> {
 
+    private com.commercetools.api.models.product.ProductReference product;
+
     @Nullable
     private String key;
 
     @Nullable
     private String oldKey;
+
+    /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public VariantKeySetMessagePayloadBuilder product(
+            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public VariantKeySetMessagePayloadBuilder withProduct(
+            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @param product value to be set
+     * @return Builder
+     */
+
+    public VariantKeySetMessagePayloadBuilder product(
+            final com.commercetools.api.models.product.ProductReference product) {
+        this.product = product;
+        return this;
+    }
 
     /**
      *  <p>The key that was set on the Variant.</p>
@@ -48,6 +88,15 @@ public class VariantKeySetMessagePayloadBuilder implements Builder<VariantKeySet
     public VariantKeySetMessagePayloadBuilder oldKey(@Nullable final String oldKey) {
         this.oldKey = oldKey;
         return this;
+    }
+
+    /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @return product
+     */
+
+    public com.commercetools.api.models.product.ProductReference getProduct() {
+        return this.product;
     }
 
     /**
@@ -75,7 +124,8 @@ public class VariantKeySetMessagePayloadBuilder implements Builder<VariantKeySet
      * @return VariantKeySetMessagePayload
      */
     public VariantKeySetMessagePayload build() {
-        return new VariantKeySetMessagePayloadImpl(key, oldKey);
+        Objects.requireNonNull(product, VariantKeySetMessagePayload.class + ": product is missing");
+        return new VariantKeySetMessagePayloadImpl(product, key, oldKey);
     }
 
     /**
@@ -83,7 +133,7 @@ public class VariantKeySetMessagePayloadBuilder implements Builder<VariantKeySet
      * @return VariantKeySetMessagePayload
      */
     public VariantKeySetMessagePayload buildUnchecked() {
-        return new VariantKeySetMessagePayloadImpl(key, oldKey);
+        return new VariantKeySetMessagePayloadImpl(product, key, oldKey);
     }
 
     /**
@@ -101,6 +151,7 @@ public class VariantKeySetMessagePayloadBuilder implements Builder<VariantKeySet
      */
     public static VariantKeySetMessagePayloadBuilder of(final VariantKeySetMessagePayload template) {
         VariantKeySetMessagePayloadBuilder builder = new VariantKeySetMessagePayloadBuilder();
+        builder.product = template.getProduct();
         builder.key = template.getKey();
         builder.oldKey = template.getOldKey();
         return builder;

@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Image;
+import com.commercetools.api.models.product.ProductReference;
 import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
@@ -25,6 +26,7 @@ import tools.jackson.databind.annotation.*;
  * <div class=code-example>
  * <pre><code class='java'>
  *     VariantImagesSetMessagePayload variantImagesSetMessagePayload = VariantImagesSetMessagePayload.builder()
+ *             .product(productBuilder -> productBuilder)
  *             .plusImages(imagesBuilder -> imagesBuilder)
  *             .plusOldImages(oldImagesBuilder -> oldImagesBuilder)
  *             .staged(true)
@@ -41,6 +43,15 @@ public interface VariantImagesSetMessagePayload extends MessagePayload {
      * discriminator value for VariantImagesSetMessagePayload
      */
     String VARIANT_IMAGES_SET = "VariantImagesSet";
+
+    /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @return product
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("product")
+    public ProductReference getProduct();
 
     /**
      *  <p>The images that were set on the Variant.</p>
@@ -67,6 +78,13 @@ public interface VariantImagesSetMessagePayload extends MessagePayload {
     @NotNull
     @JsonProperty("staged")
     public Boolean getStaged();
+
+    /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @param product value to be set
+     */
+
+    public void setProduct(final ProductReference product);
 
     /**
      *  <p>The images that were set on the Variant.</p>
@@ -120,6 +138,7 @@ public interface VariantImagesSetMessagePayload extends MessagePayload {
      */
     public static VariantImagesSetMessagePayload of(final VariantImagesSetMessagePayload template) {
         VariantImagesSetMessagePayloadImpl instance = new VariantImagesSetMessagePayloadImpl();
+        instance.setProduct(template.getProduct());
         instance.setImages(template.getImages());
         instance.setOldImages(template.getOldImages());
         instance.setStaged(template.getStaged());
@@ -139,6 +158,7 @@ public interface VariantImagesSetMessagePayload extends MessagePayload {
             return null;
         }
         VariantImagesSetMessagePayloadImpl instance = new VariantImagesSetMessagePayloadImpl();
+        instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
         instance.setImages(Optional.ofNullable(template.getImages())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.common.Image::deepCopy)

@@ -26,7 +26,7 @@ public class ExtensionChainTooDeepErrorBuilder implements Builder<ExtensionChain
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     *  <p><code>"The dependency chain depth 4 exceeds the maximum allowed depth of 3"</code></p>
+     *  <p><code>"The dependency chain depth 4 exceeds the maximum allowed depth of 3."</code></p>
      * @param message value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class ExtensionChainTooDeepErrorBuilder implements Builder<ExtensionChain
     }
 
     /**
-     *  <p><code>"The dependency chain depth 4 exceeds the maximum allowed depth of 3"</code></p>
+     *  <p><code>"The dependency chain depth 4 exceeds the maximum allowed depth of 3."</code></p>
      * @return message
      */
 

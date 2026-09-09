@@ -46,7 +46,7 @@ public interface ExtensionChainTooWideError extends ErrorObject {
     public String getCode();
 
     /**
-     *  <p><code>"Extension chain breadth exceeds the maximum allowed breadth of 5"</code></p>
+     *  <p><code>"Extension chain breadth exceeds the maximum allowed breadth of 5."</code></p>
      * @return message
      */
     @NotNull
@@ -54,7 +54,7 @@ public interface ExtensionChainTooWideError extends ErrorObject {
     public String getMessage();
 
     /**
-     *  <p><code>"Extension chain breadth exceeds the maximum allowed breadth of 5"</code></p>
+     *  <p><code>"Extension chain breadth exceeds the maximum allowed breadth of 5."</code></p>
      * @param message value to be set
      */
 

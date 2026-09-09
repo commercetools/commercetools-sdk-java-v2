@@ -20,6 +20,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
 
     private java.util.List<com.commercetools.api.models.product.FacetRange> ranges;

@@ -57,6 +57,15 @@ public class CustomLineItemImportDraftQueryBuilderDsl {
             CustomLineItemImportDraftQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<CustomLineItemImportDraftQueryBuilderDsl> taxedPrice(
+            Function<com.commercetools.api.predicates.query.cart.TaxedPriceDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.TaxedPriceDraftQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("taxedPrice"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.cart.TaxedPriceDraftQueryBuilderDsl.of())),
+            CustomLineItemImportDraftQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<CustomLineItemImportDraftQueryBuilderDsl> taxCategory(
             Function<com.commercetools.api.predicates.query.tax_category.TaxCategoryResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.tax_category.TaxCategoryResourceIdentifierQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()

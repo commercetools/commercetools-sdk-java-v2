@@ -81,7 +81,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public List<Attribute> getAttributes();
 
     /**
-     *  <p>Only present when <span>price selection</span> is applied. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
+     *  <p>Only present when <span>price selection</span> is applied. Cannot be used in a <span>Query Predicate</span>.</p>
      * @return price
      */
     @Valid
@@ -137,7 +137,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public Boolean getScopedPriceDiscounted();
 
     /**
-     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
+     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <span>Query Predicate</span>.</p>
      * @return recurrencePrices
      */
     @Valid
@@ -199,7 +199,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public void setAttributes(final List<Attribute> attributes);
 
     /**
-     *  <p>Only present when <span>price selection</span> is applied. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
+     *  <p>Only present when <span>price selection</span> is applied. Cannot be used in a <span>Query Predicate</span>.</p>
      * @param price value to be set
      */
 
@@ -264,7 +264,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public void setScopedPriceDiscounted(final Boolean scopedPriceDiscounted);
 
     /**
-     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
+     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <span>Query Predicate</span>.</p>
      * @param recurrencePrices values to be set
      */
 
@@ -272,7 +272,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public void setRecurrencePrices(final Price... recurrencePrices);
 
     /**
-     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
+     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <span>Query Predicate</span>.</p>
      * @param recurrencePrices values to be set
      */
 

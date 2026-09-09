@@ -16,9 +16,21 @@ public class VariantSkuSetMessagePayloadTest {
     }
 
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { "sku", VariantSkuSetMessagePayload.builder().sku("sku") },
+        return new Object[][] {
+                new Object[] { "product",
+                        VariantSkuSetMessagePayload.builder()
+                                .product(new com.commercetools.api.models.product.ProductReferenceImpl()) },
+                new Object[] { "sku", VariantSkuSetMessagePayload.builder().sku("sku") },
                 new Object[] { "oldSku", VariantSkuSetMessagePayload.builder().oldSku("oldSku") },
                 new Object[] { "staged", VariantSkuSetMessagePayload.builder().staged(true) } };
+    }
+
+    @Test
+    public void product() {
+        VariantSkuSetMessagePayload value = VariantSkuSetMessagePayload.of();
+        value.setProduct(new com.commercetools.api.models.product.ProductReferenceImpl());
+        Assertions.assertThat(value.getProduct())
+                .isEqualTo(new com.commercetools.api.models.product.ProductReferenceImpl());
     }
 
     @Test

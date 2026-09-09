@@ -21,6 +21,7 @@ import tools.jackson.databind.annotation.*;
  * FacetRange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class FacetRangeImpl implements FacetRange, ModelBase {
 
     private Double from;

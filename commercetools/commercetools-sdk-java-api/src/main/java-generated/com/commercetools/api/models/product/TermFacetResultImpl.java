@@ -21,10 +21,13 @@ import tools.jackson.databind.annotation.*;
  * TermFacetResult
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class TermFacetResultImpl implements TermFacetResult, ModelBase {
 
+    @Deprecated
     private com.commercetools.api.models.product.FacetTypes type;
 
+    @Deprecated
     private com.commercetools.api.models.product.TermFacetResultType dataType;
 
     private Long missing;
@@ -62,7 +65,7 @@ public class TermFacetResultImpl implements TermFacetResult, ModelBase {
     /**
      *
      */
-
+    @Deprecated
     public com.commercetools.api.models.product.FacetTypes getType() {
         return this.type;
     }
@@ -70,7 +73,7 @@ public class TermFacetResultImpl implements TermFacetResult, ModelBase {
     /**
      *  <p>Data type to which the facet is applied.</p>
      */
-
+    @Deprecated
     public com.commercetools.api.models.product.TermFacetResultType getDataType() {
         return this.dataType;
     }
@@ -113,6 +116,7 @@ public class TermFacetResultImpl implements TermFacetResult, ModelBase {
         return this.terms;
     }
 
+    @Deprecated
     public void setDataType(final com.commercetools.api.models.product.TermFacetResultType dataType) {
         this.dataType = dataType;
     }

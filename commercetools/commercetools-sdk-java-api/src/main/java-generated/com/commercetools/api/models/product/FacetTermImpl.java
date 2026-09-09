@@ -21,6 +21,7 @@ import tools.jackson.databind.annotation.*;
  * FacetTerm
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class FacetTermImpl implements FacetTerm, ModelBase {
 
     private java.lang.Object term;

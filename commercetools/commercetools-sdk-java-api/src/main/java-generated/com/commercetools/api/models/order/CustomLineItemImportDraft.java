@@ -10,6 +10,7 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.cart.CustomLineItemPriceMode;
 import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
+import com.commercetools.api.models.cart.TaxedPriceDraft;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
@@ -89,12 +90,21 @@ public interface CustomLineItemImportDraft
     public Money getMoney();
 
     /**
-     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Order.</p>
+     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Custom Line Item if <code>taxedPrice</code> is not provided.</p>
      * @return taxRate
      */
     @Valid
     @JsonProperty("taxRate")
     public TaxRate getTaxRate();
+
+    /**
+     *  <p>Taxed price of the Custom Line Item. If provided, the values are stored as-is on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> instead of being derived from <code>money</code>, <code>quantity</code>, and <code>taxRate</code>.</p>
+     *  <p>Can only be set if <code>taxRate</code> is also set.</p>
+     * @return taxedPrice
+     */
+    @Valid
+    @JsonProperty("taxedPrice")
+    public TaxedPriceDraft getTaxedPrice();
 
     /**
      *  <p>Include a value to associate a Tax Category with the Custom Line Item.</p>
@@ -176,11 +186,19 @@ public interface CustomLineItemImportDraft
     public void setMoney(final Money money);
 
     /**
-     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Order.</p>
+     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Custom Line Item if <code>taxedPrice</code> is not provided.</p>
      * @param taxRate value to be set
      */
 
     public void setTaxRate(final TaxRate taxRate);
+
+    /**
+     *  <p>Taxed price of the Custom Line Item. If provided, the values are stored as-is on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> instead of being derived from <code>money</code>, <code>quantity</code>, and <code>taxRate</code>.</p>
+     *  <p>Can only be set if <code>taxRate</code> is also set.</p>
+     * @param taxedPrice value to be set
+     */
+
+    public void setTaxedPrice(final TaxedPriceDraft taxedPrice);
 
     /**
      *  <p>Include a value to associate a Tax Category with the Custom Line Item.</p>
@@ -249,6 +267,7 @@ public interface CustomLineItemImportDraft
         instance.setQuantity(template.getQuantity());
         instance.setMoney(template.getMoney());
         instance.setTaxRate(template.getTaxRate());
+        instance.setTaxedPrice(template.getTaxedPrice());
         instance.setTaxCategory(template.getTaxCategory());
         instance.setPriceMode(template.getPriceMode());
         instance.setShippingDetails(template.getShippingDetails());
@@ -276,6 +295,7 @@ public interface CustomLineItemImportDraft
         instance.setQuantity(template.getQuantity());
         instance.setMoney(com.commercetools.api.models.common.Money.deepCopy(template.getMoney()));
         instance.setTaxRate(com.commercetools.api.models.tax_category.TaxRate.deepCopy(template.getTaxRate()));
+        instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedPriceDraft.deepCopy(template.getTaxedPrice()));
         instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier
                 .deepCopy(template.getTaxCategory()));
         instance.setPriceMode(template.getPriceMode());

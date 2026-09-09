@@ -36,6 +36,7 @@ import tools.jackson.databind.annotation.*;
 @io.vrap.rmf.base.client.utils.json.SubType("terms")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TermFacetResultImpl.class)
+@Deprecated
 public interface TermFacetResult extends FacetResult {
 
     /**
@@ -48,6 +49,7 @@ public interface TermFacetResult extends FacetResult {
      * @return dataType
      */
     @NotNull
+    @Deprecated
     @JsonProperty("dataType")
     public TermFacetResultType getDataType();
 
@@ -94,7 +96,7 @@ public interface TermFacetResult extends FacetResult {
      *  <p>Data type to which the facet is applied.</p>
      * @param dataType value to be set
      */
-
+    @Deprecated
     public void setDataType(final TermFacetResultType dataType);
 
     /**

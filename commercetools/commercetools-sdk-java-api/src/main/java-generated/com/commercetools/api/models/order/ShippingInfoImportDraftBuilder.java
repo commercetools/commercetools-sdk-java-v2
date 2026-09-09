@@ -36,6 +36,9 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     private com.commercetools.api.models.tax_category.TaxRate taxRate;
 
     @Nullable
+    private com.commercetools.api.models.cart.TaxedPriceDraft taxedPrice;
+
+    @Nullable
     private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
 
     @Nullable
@@ -166,6 +169,42 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     public ShippingInfoImportDraftBuilder taxRate(
             @Nullable final com.commercetools.api.models.tax_category.TaxRate taxRate) {
         this.taxRate = taxRate;
+        return this;
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Method. If provided, the values are stored as-is on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> instead of being derived from <code>price</code> and <code>taxRate</code>.</p>
+     * @param builder function to build the taxedPrice value
+     * @return Builder
+     */
+
+    public ShippingInfoImportDraftBuilder taxedPrice(
+            Function<com.commercetools.api.models.cart.TaxedPriceDraftBuilder, com.commercetools.api.models.cart.TaxedPriceDraftBuilder> builder) {
+        this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedPriceDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Method. If provided, the values are stored as-is on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> instead of being derived from <code>price</code> and <code>taxRate</code>.</p>
+     * @param builder function to build the taxedPrice value
+     * @return Builder
+     */
+
+    public ShippingInfoImportDraftBuilder withTaxedPrice(
+            Function<com.commercetools.api.models.cart.TaxedPriceDraftBuilder, com.commercetools.api.models.cart.TaxedPriceDraft> builder) {
+        this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedPriceDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Method. If provided, the values are stored as-is on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> instead of being derived from <code>price</code> and <code>taxRate</code>.</p>
+     * @param taxedPrice value to be set
+     * @return Builder
+     */
+
+    public ShippingInfoImportDraftBuilder taxedPrice(
+            @Nullable final com.commercetools.api.models.cart.TaxedPriceDraft taxedPrice) {
+        this.taxedPrice = taxedPrice;
         return this;
     }
 
@@ -425,6 +464,16 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
+     *  <p>Taxed price of the Shipping Method. If provided, the values are stored as-is on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> instead of being derived from <code>price</code> and <code>taxRate</code>.</p>
+     * @return taxedPrice
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart.TaxedPriceDraft getTaxedPrice() {
+        return this.taxedPrice;
+    }
+
+    /**
      *  <p>Include a value to associate a Tax Category with the shipping information.</p>
      * @return taxCategory
      */
@@ -482,8 +531,8 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
         Objects.requireNonNull(shippingMethodName, ShippingInfoImportDraft.class + ": shippingMethodName is missing");
         Objects.requireNonNull(price, ShippingInfoImportDraft.class + ": price is missing");
         Objects.requireNonNull(shippingRate, ShippingInfoImportDraft.class + ": shippingRate is missing");
-        return new ShippingInfoImportDraftImpl(shippingMethodName, price, shippingRate, taxRate, taxCategory,
-            shippingMethod, deliveries, discountedPrice, shippingMethodState);
+        return new ShippingInfoImportDraftImpl(shippingMethodName, price, shippingRate, taxRate, taxedPrice,
+            taxCategory, shippingMethod, deliveries, discountedPrice, shippingMethodState);
     }
 
     /**
@@ -491,8 +540,8 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
      * @return ShippingInfoImportDraft
      */
     public ShippingInfoImportDraft buildUnchecked() {
-        return new ShippingInfoImportDraftImpl(shippingMethodName, price, shippingRate, taxRate, taxCategory,
-            shippingMethod, deliveries, discountedPrice, shippingMethodState);
+        return new ShippingInfoImportDraftImpl(shippingMethodName, price, shippingRate, taxRate, taxedPrice,
+            taxCategory, shippingMethod, deliveries, discountedPrice, shippingMethodState);
     }
 
     /**
@@ -514,6 +563,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
         builder.price = template.getPrice();
         builder.shippingRate = template.getShippingRate();
         builder.taxRate = template.getTaxRate();
+        builder.taxedPrice = template.getTaxedPrice();
         builder.taxCategory = template.getTaxCategory();
         builder.shippingMethod = template.getShippingMethod();
         builder.deliveries = template.getDeliveries();

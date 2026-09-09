@@ -32,6 +32,7 @@ import tools.jackson.databind.annotation.*;
 @io.vrap.rmf.base.client.utils.json.SubType("range")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = RangeFacetResultImpl.class)
+@Deprecated
 public interface RangeFacetResult extends FacetResult {
 
     /**

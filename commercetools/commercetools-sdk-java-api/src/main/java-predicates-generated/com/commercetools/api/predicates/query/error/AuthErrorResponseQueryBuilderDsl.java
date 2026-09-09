@@ -51,4 +51,10 @@ public class AuthErrorResponseQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, AuthErrorResponseQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<AuthErrorResponseQueryBuilderDsl> asAgentResponsesAuthError(
+            Function<com.commercetools.api.predicates.query.agent.AgentResponsesAuthErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.AgentResponsesAuthErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.agent.AgentResponsesAuthErrorQueryBuilderDsl.of()),
+            AuthErrorResponseQueryBuilderDsl::of);
+    }
 }

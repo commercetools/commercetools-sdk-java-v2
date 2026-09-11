@@ -25,8 +25,6 @@ public class VariantImageAddedMessagePayloadImpl implements VariantImageAddedMes
 
     private String type;
 
-    private com.commercetools.api.models.product.ProductReference product;
-
     private com.commercetools.api.models.common.Image image;
 
     private Boolean staged;
@@ -35,11 +33,8 @@ public class VariantImageAddedMessagePayloadImpl implements VariantImageAddedMes
      * create instance with all properties
      */
     @JsonCreator
-    VariantImageAddedMessagePayloadImpl(
-            @JsonProperty("product") final com.commercetools.api.models.product.ProductReference product,
-            @JsonProperty("image") final com.commercetools.api.models.common.Image image,
+    VariantImageAddedMessagePayloadImpl(@JsonProperty("image") final com.commercetools.api.models.common.Image image,
             @JsonProperty("staged") final Boolean staged) {
-        this.product = product;
         this.image = image;
         this.staged = staged;
         this.type = VARIANT_IMAGE_ADDED;
@@ -61,14 +56,6 @@ public class VariantImageAddedMessagePayloadImpl implements VariantImageAddedMes
     }
 
     /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     */
-
-    public com.commercetools.api.models.product.ProductReference getProduct() {
-        return this.product;
-    }
-
-    /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
      */
 
@@ -82,10 +69,6 @@ public class VariantImageAddedMessagePayloadImpl implements VariantImageAddedMes
 
     public Boolean getStaged() {
         return this.staged;
-    }
-
-    public void setProduct(final com.commercetools.api.models.product.ProductReference product) {
-        this.product = product;
     }
 
     public void setImage(final com.commercetools.api.models.common.Image image) {
@@ -107,11 +90,9 @@ public class VariantImageAddedMessagePayloadImpl implements VariantImageAddedMes
         VariantImageAddedMessagePayloadImpl that = (VariantImageAddedMessagePayloadImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
-                .append(product, that.product)
                 .append(image, that.image)
                 .append(staged, that.staged)
                 .append(type, that.type)
-                .append(product, that.product)
                 .append(image, that.image)
                 .append(staged, that.staged)
                 .isEquals();
@@ -119,13 +100,12 @@ public class VariantImageAddedMessagePayloadImpl implements VariantImageAddedMes
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(product).append(image).append(staged).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(image).append(staged).toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
-                .append("product", product)
                 .append("image", image)
                 .append("staged", staged)
                 .build();

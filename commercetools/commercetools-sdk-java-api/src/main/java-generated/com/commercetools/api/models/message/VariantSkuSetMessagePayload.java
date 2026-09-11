@@ -7,12 +7,10 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
-import com.commercetools.api.models.product.ProductReference;
 import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
@@ -24,7 +22,6 @@ import tools.jackson.databind.annotation.*;
  * <div class=code-example>
  * <pre><code class='java'>
  *     VariantSkuSetMessagePayload variantSkuSetMessagePayload = VariantSkuSetMessagePayload.builder()
- *             .product(productBuilder -> productBuilder)
  *             .staged(true)
  *             .build()
  * </code></pre>
@@ -39,15 +36,6 @@ public interface VariantSkuSetMessagePayload extends MessagePayload {
      * discriminator value for VariantSkuSetMessagePayload
      */
     String VARIANT_SKU_SET = "VariantSkuSet";
-
-    /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     * @return product
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("product")
-    public ProductReference getProduct();
 
     /**
      *  <p>The SKU that was set on the Variant.</p>
@@ -72,13 +60,6 @@ public interface VariantSkuSetMessagePayload extends MessagePayload {
     @NotNull
     @JsonProperty("staged")
     public Boolean getStaged();
-
-    /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     * @param product value to be set
-     */
-
-    public void setProduct(final ProductReference product);
 
     /**
      *  <p>The SKU that was set on the Variant.</p>
@@ -116,7 +97,6 @@ public interface VariantSkuSetMessagePayload extends MessagePayload {
      */
     public static VariantSkuSetMessagePayload of(final VariantSkuSetMessagePayload template) {
         VariantSkuSetMessagePayloadImpl instance = new VariantSkuSetMessagePayloadImpl();
-        instance.setProduct(template.getProduct());
         instance.setSku(template.getSku());
         instance.setOldSku(template.getOldSku());
         instance.setStaged(template.getStaged());
@@ -136,7 +116,6 @@ public interface VariantSkuSetMessagePayload extends MessagePayload {
             return null;
         }
         VariantSkuSetMessagePayloadImpl instance = new VariantSkuSetMessagePayloadImpl();
-        instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
         instance.setSku(template.getSku());
         instance.setOldSku(template.getOldSku());
         instance.setStaged(template.getStaged());

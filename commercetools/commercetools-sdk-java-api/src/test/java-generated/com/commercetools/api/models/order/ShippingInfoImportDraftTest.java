@@ -28,9 +28,6 @@ public class ShippingInfoImportDraftTest {
                 new Object[] { "taxRate",
                         ShippingInfoImportDraft.builder()
                                 .taxRate(new com.commercetools.api.models.tax_category.TaxRateImpl()) },
-                new Object[] { "taxedPrice",
-                        ShippingInfoImportDraft.builder()
-                                .taxedPrice(new com.commercetools.api.models.cart.TaxedPriceDraftImpl()) },
                 new Object[] { "taxCategory", ShippingInfoImportDraft.builder()
                         .taxCategory(
                             new com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierImpl()) },
@@ -76,14 +73,6 @@ public class ShippingInfoImportDraftTest {
         value.setTaxRate(new com.commercetools.api.models.tax_category.TaxRateImpl());
         Assertions.assertThat(value.getTaxRate())
                 .isEqualTo(new com.commercetools.api.models.tax_category.TaxRateImpl());
-    }
-
-    @Test
-    public void taxedPrice() {
-        ShippingInfoImportDraft value = ShippingInfoImportDraft.of();
-        value.setTaxedPrice(new com.commercetools.api.models.cart.TaxedPriceDraftImpl());
-        Assertions.assertThat(value.getTaxedPrice())
-                .isEqualTo(new com.commercetools.api.models.cart.TaxedPriceDraftImpl());
     }
 
     @Test

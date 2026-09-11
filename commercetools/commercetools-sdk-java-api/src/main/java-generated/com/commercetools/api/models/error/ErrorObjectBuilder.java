@@ -103,6 +103,10 @@ public class ErrorObjectBuilder {
         return com.commercetools.api.models.error.BulkOperationMaxItemsExceededErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.CircularDependencyErrorBuilder circularDependencyBuilder() {
+        return com.commercetools.api.models.error.CircularDependencyErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.ConcurrentModificationErrorBuilder concurrentModificationBuilder() {
         return com.commercetools.api.models.error.ConcurrentModificationErrorBuilder.of();
     }
@@ -197,10 +201,6 @@ public class ErrorObjectBuilder {
 
     public com.commercetools.api.models.error.ExtensionChainTooWideErrorBuilder extensionChainTooWideBuilder() {
         return com.commercetools.api.models.error.ExtensionChainTooWideErrorBuilder.of();
-    }
-
-    public com.commercetools.api.models.error.ExtensionCircularDependencyErrorBuilder extensionCircularDependencyBuilder() {
-        return com.commercetools.api.models.error.ExtensionCircularDependencyErrorBuilder.of();
     }
 
     public com.commercetools.api.models.error.ExtensionDependencyExistsErrorBuilder extensionDependencyExistsBuilder() {
@@ -309,6 +309,10 @@ public class ErrorObjectBuilder {
 
     public com.commercetools.api.models.error.MaxStoreReferencesReachedErrorBuilder maxStoreReferencesReachedBuilder() {
         return com.commercetools.api.models.error.MaxStoreReferencesReachedErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.error.MissingDependencyErrorBuilder missingDependencyBuilder() {
+        return com.commercetools.api.models.error.MissingDependencyErrorBuilder.of();
     }
 
     public com.commercetools.api.models.error.MissingRoleOnChannelErrorBuilder missingRoleOnChannelBuilder() {

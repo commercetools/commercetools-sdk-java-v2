@@ -137,9 +137,6 @@ public interface ChangeSubscriptionResourceTypeId extends JsonEnum {
     <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Types</a>.</p> */
     ChangeSubscriptionResourceTypeId TYPE = ChangeSubscriptionResourceTypeIdEnum.TYPE;
     /**
-    <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variants</a>.</p> */
-    ChangeSubscriptionResourceTypeId VARIANT = ChangeSubscriptionResourceTypeIdEnum.VARIANT;
-    /**
     <p>Changes to <a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zones</a>.</p> */
     ChangeSubscriptionResourceTypeId ZONE = ChangeSubscriptionResourceTypeIdEnum.ZONE;
 
@@ -346,11 +343,6 @@ public interface ChangeSubscriptionResourceTypeId extends JsonEnum {
          * type
          */
         TYPE("type"),
-
-        /**
-         * variant
-         */
-        VARIANT("variant"),
 
         /**
          * zone

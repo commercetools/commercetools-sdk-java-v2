@@ -273,7 +273,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available when <span>price selection</span> is used. Cannot be used in a <span>Query Predicate</span>.</p>
+     *  <p>Only available when <span>price selection</span> is used. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
      * @param builder function to build the price value
      * @return Builder
      */
@@ -285,7 +285,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available when <span>price selection</span> is used. Cannot be used in a <span>Query Predicate</span>.</p>
+     *  <p>Only available when <span>price selection</span> is used. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
      * @param builder function to build the price value
      * @return Builder
      */
@@ -297,7 +297,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available when <span>price selection</span> is used. Cannot be used in a <span>Query Predicate</span>.</p>
+     *  <p>Only available when <span>price selection</span> is used. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
      * @param price value to be set
      * @return Builder
      */
@@ -579,7 +579,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <span>Query Predicate</span>.</p>
+     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
      * @param recurrencePrices value to be set
      * @return Builder
      */
@@ -591,7 +591,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <span>Query Predicate</span>.</p>
+     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
      * @param recurrencePrices value to be set
      * @return Builder
      */
@@ -603,7 +603,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <span>Query Predicate</span>.</p>
+     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
      * @param recurrencePrices value to be set
      * @return Builder
      */
@@ -618,7 +618,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <span>Query Predicate</span>.</p>
+     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
      * @param builder function to build the recurrencePrices value
      * @return Builder
      */
@@ -633,7 +633,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <span>Query Predicate</span>.</p>
+     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
      * @param builder function to build the recurrencePrices value
      * @return Builder
      */
@@ -646,7 +646,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <span>Query Predicate</span>.</p>
+     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
      * @param builder function to build the recurrencePrices value
      * @return Builder
      */
@@ -657,7 +657,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <span>Query Predicate</span>.</p>
+     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
      * @param builder function to build the recurrencePrices value
      * @return Builder
      */
@@ -718,7 +718,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available when <span>price selection</span> is used. Cannot be used in a <span>Query Predicate</span>.</p>
+     *  <p>Only available when <span>price selection</span> is used. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
      * @return price
      */
 
@@ -788,7 +788,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <span>Query Predicate</span>.</p>
+     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
      * @return recurrencePrices
      */
 

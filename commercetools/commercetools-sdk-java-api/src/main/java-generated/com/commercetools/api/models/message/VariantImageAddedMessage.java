@@ -8,7 +8,6 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Image;
-import com.commercetools.api.models.product.ProductReference;
 import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
@@ -32,7 +31,6 @@ import tools.jackson.databind.annotation.*;
  *             .sequenceNumber(0.3)
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
- *             .product(productBuilder -> productBuilder)
  *             .image(imageBuilder -> imageBuilder)
  *             .staged(true)
  *             .build()
@@ -50,15 +48,6 @@ public interface VariantImageAddedMessage extends Message {
     String VARIANT_IMAGE_ADDED = "VariantImageAdded";
 
     /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     * @return product
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("product")
-    public ProductReference getProduct();
-
-    /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
      * @return image
      */
@@ -74,13 +63,6 @@ public interface VariantImageAddedMessage extends Message {
     @NotNull
     @JsonProperty("staged")
     public Boolean getStaged();
-
-    /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     * @param product value to be set
-     */
-
-    public void setProduct(final ProductReference product);
 
     /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
@@ -121,7 +103,6 @@ public interface VariantImageAddedMessage extends Message {
         instance.setResource(template.getResource());
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-        instance.setProduct(template.getProduct());
         instance.setImage(template.getImage());
         instance.setStaged(template.getStaged());
         return instance;
@@ -152,7 +133,6 @@ public interface VariantImageAddedMessage extends Message {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
                 .deepCopy(template.getResourceUserProvidedIdentifiers()));
-        instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
         instance.setImage(com.commercetools.api.models.common.Image.deepCopy(template.getImage()));
         instance.setStaged(template.getStaged());
         return instance;

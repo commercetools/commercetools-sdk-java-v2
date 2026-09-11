@@ -23,7 +23,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .sequenceNumber(0.3)
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
- *             .product(productBuilder -> productBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -53,8 +52,6 @@ public class VariantStagedChangesRemovedMessageBuilder implements Builder<Varian
 
     @Nullable
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
-
-    private com.commercetools.api.models.product.ProductReference product;
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
@@ -258,42 +255,6 @@ public class VariantStagedChangesRemovedMessageBuilder implements Builder<Varian
     }
 
     /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     * @param builder function to build the product value
-     * @return Builder
-     */
-
-    public VariantStagedChangesRemovedMessageBuilder product(
-            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
-        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     * @param builder function to build the product value
-     * @return Builder
-     */
-
-    public VariantStagedChangesRemovedMessageBuilder withProduct(
-            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
-        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     * @param product value to be set
-     * @return Builder
-     */
-
-    public VariantStagedChangesRemovedMessageBuilder product(
-            final com.commercetools.api.models.product.ProductReference product) {
-        this.product = product;
-        return this;
-    }
-
-    /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @return id
      */
@@ -387,15 +348,6 @@ public class VariantStagedChangesRemovedMessageBuilder implements Builder<Varian
     }
 
     /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     * @return product
-     */
-
-    public com.commercetools.api.models.product.ProductReference getProduct() {
-        return this.product;
-    }
-
-    /**
      * builds VariantStagedChangesRemovedMessage with checking for non-null required values
      * @return VariantStagedChangesRemovedMessage
      */
@@ -410,9 +362,8 @@ public class VariantStagedChangesRemovedMessageBuilder implements Builder<Varian
         Objects.requireNonNull(resource, VariantStagedChangesRemovedMessage.class + ": resource is missing");
         Objects.requireNonNull(resourceVersion,
             VariantStagedChangesRemovedMessage.class + ": resourceVersion is missing");
-        Objects.requireNonNull(product, VariantStagedChangesRemovedMessage.class + ": product is missing");
         return new VariantStagedChangesRemovedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
-            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, product);
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers);
     }
 
     /**
@@ -421,7 +372,7 @@ public class VariantStagedChangesRemovedMessageBuilder implements Builder<Varian
      */
     public VariantStagedChangesRemovedMessage buildUnchecked() {
         return new VariantStagedChangesRemovedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
-            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, product);
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers);
     }
 
     /**
@@ -449,7 +400,6 @@ public class VariantStagedChangesRemovedMessageBuilder implements Builder<Varian
         builder.resource = template.getResource();
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
-        builder.product = template.getProduct();
         return builder;
     }
 

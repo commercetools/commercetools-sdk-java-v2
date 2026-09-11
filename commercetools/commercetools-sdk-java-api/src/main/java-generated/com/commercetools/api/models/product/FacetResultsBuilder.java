@@ -19,10 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-@Deprecated
 public class FacetResultsBuilder implements Builder<FacetResults> {
-
-    @Deprecated
 
     private Map<String, com.commercetools.api.models.product.FacetResult> values = new HashMap<>();
 
@@ -31,7 +28,7 @@ public class FacetResultsBuilder implements Builder<FacetResults> {
      * @param values properties to be set
      * @return Builder
      */
-    @Deprecated
+
     public FacetResultsBuilder values(final Map<String, com.commercetools.api.models.product.FacetResult> values) {
         this.values = values;
         return this;
@@ -43,7 +40,7 @@ public class FacetResultsBuilder implements Builder<FacetResults> {
      * @param value property value
      * @return Builder
      */
-    @Deprecated
+
     public FacetResultsBuilder addValue(final String key,
             final com.commercetools.api.models.product.FacetResult value) {
         if (this.values == null) {
@@ -57,7 +54,6 @@ public class FacetResultsBuilder implements Builder<FacetResults> {
      * values of pattern properties
      * @return pattern properties
      */
-    @Deprecated
 
     public Map<String, com.commercetools.api.models.product.FacetResult> getValues() {
         return this.values;

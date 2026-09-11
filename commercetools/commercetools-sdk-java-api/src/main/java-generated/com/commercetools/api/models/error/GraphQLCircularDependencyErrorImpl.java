@@ -22,7 +22,7 @@ import tools.jackson.databind.annotation.*;
  *  <p>Returned when a circular reference is detected among Extension dependencies.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class GraphQLExtensionCircularDependencyErrorImpl implements GraphQLExtensionCircularDependencyError, ModelBase {
+public class GraphQLCircularDependencyErrorImpl implements GraphQLCircularDependencyError, ModelBase {
 
     private String code;
 
@@ -32,17 +32,17 @@ public class GraphQLExtensionCircularDependencyErrorImpl implements GraphQLExten
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLExtensionCircularDependencyErrorImpl(
+    GraphQLCircularDependencyErrorImpl(
             @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.values = values;
-        this.code = EXTENSION_CIRCULAR_DEPENDENCY;
+        this.code = CIRCULAR_DEPENDENCY;
     }
 
     /**
      * create empty instance
      */
-    public GraphQLExtensionCircularDependencyErrorImpl() {
-        this.code = EXTENSION_CIRCULAR_DEPENDENCY;
+    public GraphQLCircularDependencyErrorImpl() {
+        this.code = CIRCULAR_DEPENDENCY;
     }
 
     /**
@@ -76,7 +76,7 @@ public class GraphQLExtensionCircularDependencyErrorImpl implements GraphQLExten
         if (o == null || getClass() != o.getClass())
             return false;
 
-        GraphQLExtensionCircularDependencyErrorImpl that = (GraphQLExtensionCircularDependencyErrorImpl) o;
+        GraphQLCircularDependencyErrorImpl that = (GraphQLCircularDependencyErrorImpl) o;
 
         return new EqualsBuilder().append(code, that.code)
                 .append(values, that.values)
@@ -98,7 +98,7 @@ public class GraphQLExtensionCircularDependencyErrorImpl implements GraphQLExten
     }
 
     @Override
-    public GraphQLExtensionCircularDependencyError copyDeep() {
-        return GraphQLExtensionCircularDependencyError.deepCopy(this);
+    public GraphQLCircularDependencyError copyDeep() {
+        return GraphQLCircularDependencyError.deepCopy(this);
     }
 }

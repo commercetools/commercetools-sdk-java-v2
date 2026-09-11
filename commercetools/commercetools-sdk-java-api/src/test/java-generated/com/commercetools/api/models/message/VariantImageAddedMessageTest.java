@@ -17,20 +17,9 @@ public class VariantImageAddedMessageTest {
 
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { "product",
-                        VariantImageAddedMessage.builder()
-                                .product(new com.commercetools.api.models.product.ProductReferenceImpl()) },
                 new Object[] { "image",
                         VariantImageAddedMessage.builder().image(new com.commercetools.api.models.common.ImageImpl()) },
                 new Object[] { "staged", VariantImageAddedMessage.builder().staged(true) } };
-    }
-
-    @Test
-    public void product() {
-        VariantImageAddedMessage value = VariantImageAddedMessage.of();
-        value.setProduct(new com.commercetools.api.models.product.ProductReferenceImpl());
-        Assertions.assertThat(value.getProduct())
-                .isEqualTo(new com.commercetools.api.models.product.ProductReferenceImpl());
     }
 
     @Test

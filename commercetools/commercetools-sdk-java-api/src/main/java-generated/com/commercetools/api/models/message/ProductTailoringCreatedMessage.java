@@ -22,7 +22,7 @@ import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/product-tailoring:POST" rel="nofollow">Create Product Tailoring</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/product-tailoring:POST" rel="nofollow">Create Product Tailoring in Store</a> request.</p>
+ *  <p>Generated after a successful <span>Create Product Tailoring</span> or <span>Create Product Tailoring in Store</span> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

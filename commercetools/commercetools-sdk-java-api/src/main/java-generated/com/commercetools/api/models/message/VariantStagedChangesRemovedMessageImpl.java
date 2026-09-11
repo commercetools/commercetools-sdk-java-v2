@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:VariantRemoveStagedChangesAction" rel="nofollow">Staged Changes Removed</a> update action.</p>
+ *  <p>Generated after a successful <span>Staged Changes Removed</span> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class VariantStagedChangesRemovedMessageImpl implements VariantStagedChangesRemovedMessage, ModelBase {
@@ -45,8 +45,6 @@ public class VariantStagedChangesRemovedMessageImpl implements VariantStagedChan
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
-    private com.commercetools.api.models.product.ProductReference product;
-
     /**
      * create instance with all properties
      */
@@ -60,8 +58,7 @@ public class VariantStagedChangesRemovedMessageImpl implements VariantStagedChan
             @JsonProperty("sequenceNumber") final Long sequenceNumber,
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
-            @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("product") final com.commercetools.api.models.product.ProductReference product) {
+            @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -72,7 +69,6 @@ public class VariantStagedChangesRemovedMessageImpl implements VariantStagedChan
         this.resource = resource;
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
-        this.product = product;
         this.type = VARIANT_STAGED_CHANGES_REMOVED;
     }
 
@@ -171,14 +167,6 @@ public class VariantStagedChangesRemovedMessageImpl implements VariantStagedChan
         return this.resourceUserProvidedIdentifiers;
     }
 
-    /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     */
-
-    public com.commercetools.api.models.product.ProductReference getProduct() {
-        return this.product;
-    }
-
     public void setId(final String id) {
         this.id = id;
     }
@@ -220,10 +208,6 @@ public class VariantStagedChangesRemovedMessageImpl implements VariantStagedChan
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
     }
 
-    public void setProduct(final com.commercetools.api.models.product.ProductReference product) {
-        this.product = product;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -245,7 +229,6 @@ public class VariantStagedChangesRemovedMessageImpl implements VariantStagedChan
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
-                .append(product, that.product)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -257,7 +240,6 @@ public class VariantStagedChangesRemovedMessageImpl implements VariantStagedChan
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
-                .append(product, that.product)
                 .isEquals();
     }
 
@@ -274,7 +256,6 @@ public class VariantStagedChangesRemovedMessageImpl implements VariantStagedChan
                 .append(resourceVersion)
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
-                .append(product)
                 .toHashCode();
     }
 
@@ -291,7 +272,6 @@ public class VariantStagedChangesRemovedMessageImpl implements VariantStagedChan
                 .append("resourceVersion", resourceVersion)
                 .append("type", type)
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
-                .append("product", product)
                 .build();
     }
 

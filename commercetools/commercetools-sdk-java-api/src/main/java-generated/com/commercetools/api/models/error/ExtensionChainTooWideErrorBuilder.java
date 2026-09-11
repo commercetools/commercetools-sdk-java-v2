@@ -26,7 +26,7 @@ public class ExtensionChainTooWideErrorBuilder implements Builder<ExtensionChain
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     *  <p><code>"Extension chain breadth exceeds the maximum allowed breadth of 5."</code></p>
+     *  <p><code>"Extension chain breadth exceeds the maximum allowed breadth of 5"</code></p>
      * @param message value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class ExtensionChainTooWideErrorBuilder implements Builder<ExtensionChain
     }
 
     /**
-     *  <p><code>"Extension chain breadth exceeds the maximum allowed breadth of 5."</code></p>
+     *  <p><code>"Extension chain breadth exceeds the maximum allowed breadth of 5"</code></p>
      * @return message
      */
 

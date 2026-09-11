@@ -27,8 +27,7 @@ public class OrderSetBillingAddressActionBuilder implements Builder<OrderSetBill
     private com.commercetools.api.models.common.BaseAddress address;
 
     /**
-     *  <p>Value to set. It replaces the entire address, including <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> if <code>custom</code> is not included. To preserve Custom Fields, include the <code>custom</code> object in the request.</p>
-     *  <p>If omitted, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -40,8 +39,7 @@ public class OrderSetBillingAddressActionBuilder implements Builder<OrderSetBill
     }
 
     /**
-     *  <p>Value to set. It replaces the entire address, including <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> if <code>custom</code> is not included. To preserve Custom Fields, include the <code>custom</code> object in the request.</p>
-     *  <p>If omitted, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -53,8 +51,7 @@ public class OrderSetBillingAddressActionBuilder implements Builder<OrderSetBill
     }
 
     /**
-     *  <p>Value to set. It replaces the entire address, including <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> if <code>custom</code> is not included. To preserve Custom Fields, include the <code>custom</code> object in the request.</p>
-     *  <p>If omitted, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @param address value to be set
      * @return Builder
      */
@@ -66,8 +63,7 @@ public class OrderSetBillingAddressActionBuilder implements Builder<OrderSetBill
     }
 
     /**
-     *  <p>Value to set. It replaces the entire address, including <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> if <code>custom</code> is not included. To preserve Custom Fields, include the <code>custom</code> object in the request.</p>
-     *  <p>If omitted, any existing value is removed.</p>
+     *  <p>Value to set. If omitted, any existing value is removed.</p>
      * @return address
      */
 

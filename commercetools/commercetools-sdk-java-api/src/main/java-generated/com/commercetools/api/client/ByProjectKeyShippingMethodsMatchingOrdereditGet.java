@@ -21,7 +21,6 @@ import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Retrieves the active ShippingMethods that can ship to the provided <a href="https://docs.commercetools.com/apis/ctp:api:type:Location" rel="nofollow">Location</a> for an <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEdit" rel="nofollow">OrderEdit</a>.</p>
- *  <p>Store scoping is evaluated against the Order that results from applying the OrderEdit's staged actions. If the underlying Order belongs to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>, the results include globally scoped ShippingMethods (those with an empty <code>stores</code> field) and ShippingMethods scoped to that Store. If the underlying Order has no Store, only globally scoped ShippingMethods are returned.</p>
  *  <p>If a matching ShippingMethod has <code>isDefault</code> set to <code>true</code>, it is returned as the first item in the array.</p>
  *  <p>If the OrderEdit preview cannot be generated, an <a href="https://docs.commercetools.com/apis/ctp:api:type:EditPreviewFailedError" rel="nofollow">EditPreviewFailed</a> error is returned.</p>
  *

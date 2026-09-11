@@ -158,27 +158,11 @@ public interface TypeUpdateAction extends com.commercetools.api.models.ResourceU
     }
 
     /**
-     * builder for removeEnumValues subtype
-     * @return builder
-     */
-    public static com.commercetools.api.models.type.TypeRemoveEnumValuesActionBuilder removeEnumValuesBuilder() {
-        return com.commercetools.api.models.type.TypeRemoveEnumValuesActionBuilder.of();
-    }
-
-    /**
      * builder for removeFieldDefinition subtype
      * @return builder
      */
     public static com.commercetools.api.models.type.TypeRemoveFieldDefinitionActionBuilder removeFieldDefinitionBuilder() {
         return com.commercetools.api.models.type.TypeRemoveFieldDefinitionActionBuilder.of();
-    }
-
-    /**
-     * builder for removeLocalizedEnumValues subtype
-     * @return builder
-     */
-    public static com.commercetools.api.models.type.TypeRemoveLocalizedEnumValuesActionBuilder removeLocalizedEnumValuesBuilder() {
-        return com.commercetools.api.models.type.TypeRemoveLocalizedEnumValuesActionBuilder.of();
     }
 
     /**

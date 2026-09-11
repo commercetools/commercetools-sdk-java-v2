@@ -19,11 +19,10 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Returned when a circular reference is detected among Extension dependencies.</p>
- *  <p>The <code>message</code> lists the <code>id</code> of each Extension in the detected cycle, starting and ending with the same Extension.</p>
+ *  <p>Returned when a referenced Extension does not exist or is not applicable to the same trigger.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ExtensionCircularDependencyErrorImpl implements ExtensionCircularDependencyError, ModelBase {
+public class MissingDependencyErrorImpl implements MissingDependencyError, ModelBase {
 
     private String code;
 
@@ -35,18 +34,18 @@ public class ExtensionCircularDependencyErrorImpl implements ExtensionCircularDe
      * create instance with all properties
      */
     @JsonCreator
-    ExtensionCircularDependencyErrorImpl(@JsonProperty("message") final String message,
+    MissingDependencyErrorImpl(@JsonProperty("message") final String message,
             @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.message = message;
         this.values = values;
-        this.code = EXTENSION_CIRCULAR_DEPENDENCY;
+        this.code = MISSING_DEPENDENCY;
     }
 
     /**
      * create empty instance
      */
-    public ExtensionCircularDependencyErrorImpl() {
-        this.code = EXTENSION_CIRCULAR_DEPENDENCY;
+    public MissingDependencyErrorImpl() {
+        this.code = MISSING_DEPENDENCY;
     }
 
     /**
@@ -58,7 +57,7 @@ public class ExtensionCircularDependencyErrorImpl implements ExtensionCircularDe
     }
 
     /**
-     *  <p><code>"Circular dependency detected: [3fa85f64-5717-4562-b3fc-2c963f66afa6, 5e0e1e0b-1f4b-4b8b-9c1a-2d3f4a5b6c7d, 3fa85f64-5717-4562-b3fc-2c963f66afa6]"</code></p>
+     *  <p><code>"The extensions '[ext-1, ext-2]' referenced in 'dependencies' do not exist."</code></p>
      */
 
     public String getMessage() {
@@ -92,7 +91,7 @@ public class ExtensionCircularDependencyErrorImpl implements ExtensionCircularDe
         if (o == null || getClass() != o.getClass())
             return false;
 
-        ExtensionCircularDependencyErrorImpl that = (ExtensionCircularDependencyErrorImpl) o;
+        MissingDependencyErrorImpl that = (MissingDependencyErrorImpl) o;
 
         return new EqualsBuilder().append(code, that.code)
                 .append(message, that.message)
@@ -117,7 +116,7 @@ public class ExtensionCircularDependencyErrorImpl implements ExtensionCircularDe
     }
 
     @Override
-    public ExtensionCircularDependencyError copyDeep() {
-        return ExtensionCircularDependencyError.deepCopy(this);
+    public MissingDependencyError copyDeep() {
+        return MissingDependencyError.deepCopy(this);
     }
 }

@@ -25,8 +25,6 @@ public class VariantKeySetMessagePayloadImpl implements VariantKeySetMessagePayl
 
     private String type;
 
-    private com.commercetools.api.models.product.ProductReference product;
-
     private String key;
 
     private String oldKey;
@@ -35,10 +33,8 @@ public class VariantKeySetMessagePayloadImpl implements VariantKeySetMessagePayl
      * create instance with all properties
      */
     @JsonCreator
-    VariantKeySetMessagePayloadImpl(
-            @JsonProperty("product") final com.commercetools.api.models.product.ProductReference product,
-            @JsonProperty("key") final String key, @JsonProperty("oldKey") final String oldKey) {
-        this.product = product;
+    VariantKeySetMessagePayloadImpl(@JsonProperty("key") final String key,
+            @JsonProperty("oldKey") final String oldKey) {
         this.key = key;
         this.oldKey = oldKey;
         this.type = VARIANT_KEY_SET;
@@ -60,14 +56,6 @@ public class VariantKeySetMessagePayloadImpl implements VariantKeySetMessagePayl
     }
 
     /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     */
-
-    public com.commercetools.api.models.product.ProductReference getProduct() {
-        return this.product;
-    }
-
-    /**
      *  <p>The key that was set on the Variant.</p>
      */
 
@@ -81,10 +69,6 @@ public class VariantKeySetMessagePayloadImpl implements VariantKeySetMessagePayl
 
     public String getOldKey() {
         return this.oldKey;
-    }
-
-    public void setProduct(final com.commercetools.api.models.product.ProductReference product) {
-        this.product = product;
     }
 
     public void setKey(final String key) {
@@ -106,11 +90,9 @@ public class VariantKeySetMessagePayloadImpl implements VariantKeySetMessagePayl
         VariantKeySetMessagePayloadImpl that = (VariantKeySetMessagePayloadImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
-                .append(product, that.product)
                 .append(key, that.key)
                 .append(oldKey, that.oldKey)
                 .append(type, that.type)
-                .append(product, that.product)
                 .append(key, that.key)
                 .append(oldKey, that.oldKey)
                 .isEquals();
@@ -118,13 +100,12 @@ public class VariantKeySetMessagePayloadImpl implements VariantKeySetMessagePayl
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(product).append(key).append(oldKey).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(key).append(oldKey).toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
-                .append("product", product)
                 .append("key", key)
                 .append("oldKey", oldKey)
                 .build();

@@ -42,9 +42,6 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     private com.commercetools.api.models.tax_category.TaxRate taxRate;
 
     @Nullable
-    private com.commercetools.api.models.cart.TaxedPriceDraft taxedPrice;
-
-    @Nullable
     private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
 
     @Nullable
@@ -166,7 +163,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Custom Line Item if <code>taxedPrice</code> is not provided.</p>
+     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Order.</p>
      * @param builder function to build the taxRate value
      * @return Builder
      */
@@ -178,7 +175,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Custom Line Item if <code>taxedPrice</code> is not provided.</p>
+     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Order.</p>
      * @param builder function to build the taxRate value
      * @return Builder
      */
@@ -190,7 +187,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Custom Line Item if <code>taxedPrice</code> is not provided.</p>
+     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Order.</p>
      * @param taxRate value to be set
      * @return Builder
      */
@@ -198,45 +195,6 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     public CustomLineItemImportDraftBuilder taxRate(
             @Nullable final com.commercetools.api.models.tax_category.TaxRate taxRate) {
         this.taxRate = taxRate;
-        return this;
-    }
-
-    /**
-     *  <p>Taxed price of the Custom Line Item. If provided, the values are stored as-is on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> instead of being derived from <code>money</code>, <code>quantity</code>, and <code>taxRate</code>.</p>
-     *  <p>Can only be set if <code>taxRate</code> is also set.</p>
-     * @param builder function to build the taxedPrice value
-     * @return Builder
-     */
-
-    public CustomLineItemImportDraftBuilder taxedPrice(
-            Function<com.commercetools.api.models.cart.TaxedPriceDraftBuilder, com.commercetools.api.models.cart.TaxedPriceDraftBuilder> builder) {
-        this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedPriceDraftBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Taxed price of the Custom Line Item. If provided, the values are stored as-is on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> instead of being derived from <code>money</code>, <code>quantity</code>, and <code>taxRate</code>.</p>
-     *  <p>Can only be set if <code>taxRate</code> is also set.</p>
-     * @param builder function to build the taxedPrice value
-     * @return Builder
-     */
-
-    public CustomLineItemImportDraftBuilder withTaxedPrice(
-            Function<com.commercetools.api.models.cart.TaxedPriceDraftBuilder, com.commercetools.api.models.cart.TaxedPriceDraft> builder) {
-        this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedPriceDraftBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>Taxed price of the Custom Line Item. If provided, the values are stored as-is on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> instead of being derived from <code>money</code>, <code>quantity</code>, and <code>taxRate</code>.</p>
-     *  <p>Can only be set if <code>taxRate</code> is also set.</p>
-     * @param taxedPrice value to be set
-     * @return Builder
-     */
-
-    public CustomLineItemImportDraftBuilder taxedPrice(
-            @Nullable final com.commercetools.api.models.cart.TaxedPriceDraft taxedPrice) {
-        this.taxedPrice = taxedPrice;
         return this;
     }
 
@@ -504,24 +462,13 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
-     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Custom Line Item if <code>taxedPrice</code> is not provided.</p>
+     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Order.</p>
      * @return taxRate
      */
 
     @Nullable
     public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {
         return this.taxRate;
-    }
-
-    /**
-     *  <p>Taxed price of the Custom Line Item. If provided, the values are stored as-is on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> instead of being derived from <code>money</code>, <code>quantity</code>, and <code>taxRate</code>.</p>
-     *  <p>Can only be set if <code>taxRate</code> is also set.</p>
-     * @return taxedPrice
-     */
-
-    @Nullable
-    public com.commercetools.api.models.cart.TaxedPriceDraft getTaxedPrice() {
-        return this.taxedPrice;
     }
 
     /**
@@ -586,8 +533,8 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
         Objects.requireNonNull(slug, CustomLineItemImportDraft.class + ": slug is missing");
         Objects.requireNonNull(quantity, CustomLineItemImportDraft.class + ": quantity is missing");
         Objects.requireNonNull(money, CustomLineItemImportDraft.class + ": money is missing");
-        return new CustomLineItemImportDraftImpl(name, key, slug, quantity, money, taxRate, taxedPrice, taxCategory,
-            priceMode, shippingDetails, state, custom);
+        return new CustomLineItemImportDraftImpl(name, key, slug, quantity, money, taxRate, taxCategory, priceMode,
+            shippingDetails, state, custom);
     }
 
     /**
@@ -595,8 +542,8 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
      * @return CustomLineItemImportDraft
      */
     public CustomLineItemImportDraft buildUnchecked() {
-        return new CustomLineItemImportDraftImpl(name, key, slug, quantity, money, taxRate, taxedPrice, taxCategory,
-            priceMode, shippingDetails, state, custom);
+        return new CustomLineItemImportDraftImpl(name, key, slug, quantity, money, taxRate, taxCategory, priceMode,
+            shippingDetails, state, custom);
     }
 
     /**
@@ -620,7 +567,6 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
         builder.quantity = template.getQuantity();
         builder.money = template.getMoney();
         builder.taxRate = template.getTaxRate();
-        builder.taxedPrice = template.getTaxedPrice();
         builder.taxCategory = template.getTaxCategory();
         builder.priceMode = template.getPriceMode();
         builder.shippingDetails = template.getShippingDetails();

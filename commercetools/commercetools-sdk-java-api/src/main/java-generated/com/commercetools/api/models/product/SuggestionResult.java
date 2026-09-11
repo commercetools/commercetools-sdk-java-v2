@@ -30,7 +30,6 @@ import tools.jackson.databind.annotation.*;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SuggestionResultImpl.class)
-@Deprecated
 public interface SuggestionResult {
 
     /**

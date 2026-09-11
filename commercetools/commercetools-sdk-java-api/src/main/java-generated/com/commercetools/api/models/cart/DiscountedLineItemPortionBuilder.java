@@ -52,11 +52,6 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
 
     /**
      *  <p>Money value of the applicable discount.</p>
-     *  <p>When a Cart Discount with <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> is used:</p>
-     *  <ul>
-     *   <li>The value is zero for a (Custom) Line Item matching the <code>triggerPattern</code>, indicating it participated in the discount as a trigger.</li>
-     *   <li>The value is the actual discount amount for a (Custom) Line Item matching the <code>targetPattern</code>.</li>
-     *  </ul>
      * @param discountedAmount value to be set
      * @return Builder
      */
@@ -69,11 +64,6 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
 
     /**
      *  <p>Money value of the applicable discount.</p>
-     *  <p>When a Cart Discount with <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> is used:</p>
-     *  <ul>
-     *   <li>The value is zero for a (Custom) Line Item matching the <code>triggerPattern</code>, indicating it participated in the discount as a trigger.</li>
-     *   <li>The value is the actual discount amount for a (Custom) Line Item matching the <code>targetPattern</code>.</li>
-     *  </ul>
      * @param builder function to build the discountedAmount value
      * @return Builder
      */
@@ -95,11 +85,6 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
 
     /**
      *  <p>Money value of the applicable discount.</p>
-     *  <p>When a Cart Discount with <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> is used:</p>
-     *  <ul>
-     *   <li>The value is zero for a (Custom) Line Item matching the <code>triggerPattern</code>, indicating it participated in the discount as a trigger.</li>
-     *   <li>The value is the actual discount amount for a (Custom) Line Item matching the <code>targetPattern</code>.</li>
-     *  </ul>
      * @return discountedAmount
      */
 

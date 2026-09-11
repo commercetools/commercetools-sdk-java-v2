@@ -57,7 +57,7 @@ public class ExtensionChainTooWideErrorImpl implements ExtensionChainTooWideErro
     }
 
     /**
-     *  <p><code>"Extension chain breadth exceeds the maximum allowed breadth of 5."</code></p>
+     *  <p><code>"Extension chain breadth exceeds the maximum allowed breadth of 5"</code></p>
      */
 
     public String getMessage() {

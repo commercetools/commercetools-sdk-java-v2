@@ -59,16 +59,8 @@ public class TypeUpdateActionBuilder {
         return com.commercetools.api.models.type.TypeChangeNameActionBuilder.of();
     }
 
-    public com.commercetools.api.models.type.TypeRemoveEnumValuesActionBuilder removeEnumValuesBuilder() {
-        return com.commercetools.api.models.type.TypeRemoveEnumValuesActionBuilder.of();
-    }
-
     public com.commercetools.api.models.type.TypeRemoveFieldDefinitionActionBuilder removeFieldDefinitionBuilder() {
         return com.commercetools.api.models.type.TypeRemoveFieldDefinitionActionBuilder.of();
-    }
-
-    public com.commercetools.api.models.type.TypeRemoveLocalizedEnumValuesActionBuilder removeLocalizedEnumValuesBuilder() {
-        return com.commercetools.api.models.type.TypeRemoveLocalizedEnumValuesActionBuilder.of();
     }
 
     public com.commercetools.api.models.type.TypeSetDescriptionActionBuilder setDescriptionBuilder() {

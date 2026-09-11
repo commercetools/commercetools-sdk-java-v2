@@ -30,7 +30,6 @@ import tools.jackson.databind.annotation.*;
 @io.vrap.rmf.base.client.utils.json.SubType("filter")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = FilteredFacetResultImpl.class)
-@Deprecated
 public interface FilteredFacetResult extends FacetResult {
 
     /**

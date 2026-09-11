@@ -7,17 +7,14 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
-import com.commercetools.api.models.product.ProductReference;
 import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-import jakarta.validation.Valid;
-import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:VariantPublishAction" rel="nofollow">Publish</a> update action.</p>
+ *  <p>Generated after a successful <span>Publish</span> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,7 +28,6 @@ import tools.jackson.databind.annotation.*;
  *             .sequenceNumber(0.3)
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
- *             .product(productBuilder -> productBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -45,22 +41,6 @@ public interface VariantPublishedMessage extends Message {
      * discriminator value for VariantPublishedMessage
      */
     String VARIANT_PUBLISHED = "VariantPublished";
-
-    /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     * @return product
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("product")
-    public ProductReference getProduct();
-
-    /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     * @param product value to be set
-     */
-
-    public void setProduct(final ProductReference product);
 
     /**
      * factory method
@@ -87,7 +67,6 @@ public interface VariantPublishedMessage extends Message {
         instance.setResource(template.getResource());
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-        instance.setProduct(template.getProduct());
         return instance;
     }
 
@@ -116,7 +95,6 @@ public interface VariantPublishedMessage extends Message {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
                 .deepCopy(template.getResourceUserProvidedIdentifiers()));
-        instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
         return instance;
     }
 

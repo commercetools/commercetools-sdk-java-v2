@@ -104,25 +104,10 @@ public class TypeUpdateActionQueryBuilderDsl {
             TypeUpdateActionQueryBuilderDsl::of);
     }
 
-    public CombinationQueryPredicate<TypeUpdateActionQueryBuilderDsl> asRemoveEnumValues(
-            Function<com.commercetools.api.predicates.query.type.TypeRemoveEnumValuesActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.type.TypeRemoveEnumValuesActionQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            fn.apply(com.commercetools.api.predicates.query.type.TypeRemoveEnumValuesActionQueryBuilderDsl.of()),
-            TypeUpdateActionQueryBuilderDsl::of);
-    }
-
     public CombinationQueryPredicate<TypeUpdateActionQueryBuilderDsl> asRemoveFieldDefinition(
             Function<com.commercetools.api.predicates.query.type.TypeRemoveFieldDefinitionActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.type.TypeRemoveFieldDefinitionActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             fn.apply(com.commercetools.api.predicates.query.type.TypeRemoveFieldDefinitionActionQueryBuilderDsl.of()),
-            TypeUpdateActionQueryBuilderDsl::of);
-    }
-
-    public CombinationQueryPredicate<TypeUpdateActionQueryBuilderDsl> asRemoveLocalizedEnumValues(
-            Function<com.commercetools.api.predicates.query.type.TypeRemoveLocalizedEnumValuesActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.type.TypeRemoveLocalizedEnumValuesActionQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            fn.apply(
-                com.commercetools.api.predicates.query.type.TypeRemoveLocalizedEnumValuesActionQueryBuilderDsl.of()),
             TypeUpdateActionQueryBuilderDsl::of);
     }
 

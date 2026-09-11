@@ -91,12 +91,4 @@ public class VariantStagedChangesRemovedMessageQueryBuilderDsl {
             VariantStagedChangesRemovedMessageQueryBuilderDsl::of);
     }
 
-    public CombinationQueryPredicate<VariantStagedChangesRemovedMessageQueryBuilderDsl> product(
-            Function<com.commercetools.api.predicates.query.product.ProductReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product.ProductReferenceQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
-                .parent(ConstantQueryPredicate.of().constant("product"))
-                .inner(fn.apply(com.commercetools.api.predicates.query.product.ProductReferenceQueryBuilderDsl.of())),
-            VariantStagedChangesRemovedMessageQueryBuilderDsl::of);
-    }
-
 }

@@ -33,9 +33,6 @@ public class LineItemImportDraftTest {
                 new Object[] { "taxRate",
                         LineItemImportDraft.builder()
                                 .taxRate(new com.commercetools.api.models.tax_category.TaxRateImpl()) },
-                new Object[] { "taxedPrice",
-                        LineItemImportDraft.builder()
-                                .taxedPrice(new com.commercetools.api.models.cart.TaxedPriceDraftImpl()) },
                 new Object[] { "distributionChannel",
                         LineItemImportDraft.builder()
                                 .distributionChannel(
@@ -104,14 +101,6 @@ public class LineItemImportDraftTest {
         value.setTaxRate(new com.commercetools.api.models.tax_category.TaxRateImpl());
         Assertions.assertThat(value.getTaxRate())
                 .isEqualTo(new com.commercetools.api.models.tax_category.TaxRateImpl());
-    }
-
-    @Test
-    public void taxedPrice() {
-        LineItemImportDraft value = LineItemImportDraft.of();
-        value.setTaxedPrice(new com.commercetools.api.models.cart.TaxedPriceDraftImpl());
-        Assertions.assertThat(value.getTaxedPrice())
-                .isEqualTo(new com.commercetools.api.models.cart.TaxedPriceDraftImpl());
     }
 
     @Test

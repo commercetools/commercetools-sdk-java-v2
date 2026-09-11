@@ -9,7 +9,6 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.cart.ShippingMethodState;
-import com.commercetools.api.models.cart.TaxedPriceDraft;
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;
 import com.commercetools.api.models.shipping_method.ShippingRateDraft;
@@ -75,14 +74,6 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     @Valid
     @JsonProperty("taxRate")
     public TaxRate getTaxRate();
-
-    /**
-     *  <p>Taxed price of the Shipping Method. If provided, the values are stored as-is on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> instead of being derived from <code>price</code> and <code>taxRate</code>.</p>
-     * @return taxedPrice
-     */
-    @Valid
-    @JsonProperty("taxedPrice")
-    public TaxedPriceDraft getTaxedPrice();
 
     /**
      *  <p>Include a value to associate a Tax Category with the shipping information.</p>
@@ -153,13 +144,6 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     public void setTaxRate(final TaxRate taxRate);
 
     /**
-     *  <p>Taxed price of the Shipping Method. If provided, the values are stored as-is on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> instead of being derived from <code>price</code> and <code>taxRate</code>.</p>
-     * @param taxedPrice value to be set
-     */
-
-    public void setTaxedPrice(final TaxedPriceDraft taxedPrice);
-
-    /**
      *  <p>Include a value to associate a Tax Category with the shipping information.</p>
      * @param taxCategory value to be set
      */
@@ -221,7 +205,6 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
         instance.setPrice(template.getPrice());
         instance.setShippingRate(template.getShippingRate());
         instance.setTaxRate(template.getTaxRate());
-        instance.setTaxedPrice(template.getTaxedPrice());
         instance.setTaxCategory(template.getTaxCategory());
         instance.setShippingMethod(template.getShippingMethod());
         instance.setDeliveries(template.getDeliveries());
@@ -248,7 +231,6 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
         instance.setShippingRate(
             com.commercetools.api.models.shipping_method.ShippingRateDraft.deepCopy(template.getShippingRate()));
         instance.setTaxRate(com.commercetools.api.models.tax_category.TaxRate.deepCopy(template.getTaxRate()));
-        instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedPriceDraft.deepCopy(template.getTaxedPrice()));
         instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier
                 .deepCopy(template.getTaxCategory()));
         instance.setShippingMethod(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier

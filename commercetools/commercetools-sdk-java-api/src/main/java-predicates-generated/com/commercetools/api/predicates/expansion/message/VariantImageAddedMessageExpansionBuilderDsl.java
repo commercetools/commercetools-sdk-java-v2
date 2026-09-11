@@ -43,9 +43,4 @@ public class VariantImageAddedMessageExpansionBuilderDsl implements ExpansionDsl
         return com.commercetools.api.predicates.expansion.common.ReferenceExpansionBuilderDsl
                 .of(appendOne(path, "resource"));
     }
-
-    public com.commercetools.api.predicates.expansion.product.ProductReferenceExpansionBuilderDsl product() {
-        return com.commercetools.api.predicates.expansion.product.ProductReferenceExpansionBuilderDsl
-                .of(appendOne(path, "product"));
-    }
 }

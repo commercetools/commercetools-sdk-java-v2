@@ -91,14 +91,6 @@ public class VariantImageAddedMessageQueryBuilderDsl {
             VariantImageAddedMessageQueryBuilderDsl::of);
     }
 
-    public CombinationQueryPredicate<VariantImageAddedMessageQueryBuilderDsl> product(
-            Function<com.commercetools.api.predicates.query.product.ProductReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product.ProductReferenceQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
-                .parent(ConstantQueryPredicate.of().constant("product"))
-                .inner(fn.apply(com.commercetools.api.predicates.query.product.ProductReferenceQueryBuilderDsl.of())),
-            VariantImageAddedMessageQueryBuilderDsl::of);
-    }
-
     public CombinationQueryPredicate<VariantImageAddedMessageQueryBuilderDsl> image(
             Function<com.commercetools.api.predicates.query.common.ImageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.ImageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

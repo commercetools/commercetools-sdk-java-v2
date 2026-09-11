@@ -9,7 +9,6 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Image;
-import com.commercetools.api.models.product.ProductReference;
 import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
@@ -33,7 +32,6 @@ import tools.jackson.databind.annotation.*;
  *             .sequenceNumber(0.3)
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
- *             .product(productBuilder -> productBuilder)
  *             .plusImages(imagesBuilder -> imagesBuilder)
  *             .plusOldImages(oldImagesBuilder -> oldImagesBuilder)
  *             .staged(true)
@@ -50,15 +48,6 @@ public interface VariantImagesSetMessage extends Message {
      * discriminator value for VariantImagesSetMessage
      */
     String VARIANT_IMAGES_SET = "VariantImagesSet";
-
-    /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     * @return product
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("product")
-    public ProductReference getProduct();
 
     /**
      *  <p>The images that were set on the Variant.</p>
@@ -85,13 +74,6 @@ public interface VariantImagesSetMessage extends Message {
     @NotNull
     @JsonProperty("staged")
     public Boolean getStaged();
-
-    /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     * @param product value to be set
-     */
-
-    public void setProduct(final ProductReference product);
 
     /**
      *  <p>The images that were set on the Variant.</p>
@@ -155,7 +137,6 @@ public interface VariantImagesSetMessage extends Message {
         instance.setResource(template.getResource());
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-        instance.setProduct(template.getProduct());
         instance.setImages(template.getImages());
         instance.setOldImages(template.getOldImages());
         instance.setStaged(template.getStaged());
@@ -187,7 +168,6 @@ public interface VariantImagesSetMessage extends Message {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
                 .deepCopy(template.getResourceUserProvidedIdentifiers()));
-        instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
         instance.setImages(Optional.ofNullable(template.getImages())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.common.Image::deepCopy)

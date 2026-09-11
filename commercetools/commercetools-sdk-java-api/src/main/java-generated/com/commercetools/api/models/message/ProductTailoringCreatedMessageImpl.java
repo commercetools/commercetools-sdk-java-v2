@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/product-tailoring:POST" rel="nofollow">Create Product Tailoring</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/product-tailoring:POST" rel="nofollow">Create Product Tailoring in Store</a> request.</p>
+ *  <p>Generated after a successful <span>Create Product Tailoring</span> or <span>Create Product Tailoring in Store</span> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTailoringCreatedMessageImpl implements ProductTailoringCreatedMessage, ModelBase {

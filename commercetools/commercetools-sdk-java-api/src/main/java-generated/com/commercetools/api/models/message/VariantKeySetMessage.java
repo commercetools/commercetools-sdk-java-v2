@@ -7,13 +7,10 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
-import com.commercetools.api.models.product.ProductReference;
 import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-import jakarta.validation.Valid;
-import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
@@ -31,7 +28,6 @@ import tools.jackson.databind.annotation.*;
  *             .sequenceNumber(0.3)
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
- *             .product(productBuilder -> productBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -45,15 +41,6 @@ public interface VariantKeySetMessage extends Message {
      * discriminator value for VariantKeySetMessage
      */
     String VARIANT_KEY_SET = "VariantKeySet";
-
-    /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     * @return product
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("product")
-    public ProductReference getProduct();
 
     /**
      *  <p>The key that was set on the Variant.</p>
@@ -70,13 +57,6 @@ public interface VariantKeySetMessage extends Message {
 
     @JsonProperty("oldKey")
     public String getOldKey();
-
-    /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     * @param product value to be set
-     */
-
-    public void setProduct(final ProductReference product);
 
     /**
      *  <p>The key that was set on the Variant.</p>
@@ -117,7 +97,6 @@ public interface VariantKeySetMessage extends Message {
         instance.setResource(template.getResource());
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-        instance.setProduct(template.getProduct());
         instance.setKey(template.getKey());
         instance.setOldKey(template.getOldKey());
         return instance;
@@ -148,7 +127,6 @@ public interface VariantKeySetMessage extends Message {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
                 .deepCopy(template.getResourceUserProvidedIdentifiers()));
-        instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
         instance.setKey(template.getKey());
         instance.setOldKey(template.getOldKey());
         return instance;

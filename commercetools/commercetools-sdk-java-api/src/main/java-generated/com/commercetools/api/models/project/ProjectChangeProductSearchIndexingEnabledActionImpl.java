@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p><span>Product Projection Search</span> is <strong>deprecated</strong>. For Projects created after 31 August 2026, the <code>"ProductProjectionsSearch"</code> mode cannot be activated. Use <code>ProductsSearch</code> instead. For such Projects, setting <code>enabled</code> to <code>true</code> with <code>mode</code> <code>"ProductProjectionsSearch"</code> returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p>
+ * ProjectChangeProductSearchIndexingEnabledAction
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectChangeProductSearchIndexingEnabledActionImpl
@@ -57,10 +57,9 @@ public class ProjectChangeProductSearchIndexingEnabledActionImpl
     }
 
     /**
-     *  <p>Whether to enable product indexing for the storefront search APIs selected by <code>mode</code>.</p>
      *  <ul>
-     *   <li>If <code>true</code>, indexing starts for the selected API and the corresponding status changes to <code>"Indexing"</code>. After indexing finishes, the status changes to <code>"Activated"</code> and the selected API becomes available.</li>
-     *   <li>If <code>false</code>, indexing stops and the selected API become unavailable. The corresponding <a href="https://docs.commercetools.com/apis/ctp:api:type:SearchIndexingConfiguration" rel="nofollow">SearchIndexingConfiguration</a> <code>status</code> changes to <code>"Deactivated"</code>.</li>
+     *   <li>If <code>false</code>, the indexing of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> information will stop and the <span>Product Projection Search</span> as well as the <span>Search Term Suggestions</span> API will no longer be available for this Project. The Project's <a href="https://docs.commercetools.com/apis/ctp:api:type:SearchIndexingConfiguration" rel="nofollow">SearchIndexingConfiguration</a> <code>status</code> for <code>products</code> will be changed to <code>"Deactivated"</code>.</li>
+     *   <li>If <code>true</code>, the indexing of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> information will start and the <span>Product Projection Search</span> as well as the <span>Search Term Suggestions</span> API will become available soon after for this Project. Proportional to the amount of information being indexed, the Project's <a href="https://docs.commercetools.com/apis/ctp:api:type:SearchIndexingConfiguration" rel="nofollow">SearchIndexingConfiguration</a> <code>status</code> for <code>products</code> will be shown as <code>"Indexing"</code> during this time. As soon as the indexing has finished, the configuration status will be changed to <code>"Activated"</code> making the aforementioned APIs fully available for this Project.</li>
      *  </ul>
      */
 

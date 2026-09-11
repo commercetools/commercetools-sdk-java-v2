@@ -45,8 +45,6 @@ public class VariantDeletedMessageImpl implements VariantDeletedMessage, ModelBa
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
-    private com.commercetools.api.models.product.ProductReference product;
-
     /**
      * create instance with all properties
      */
@@ -59,8 +57,7 @@ public class VariantDeletedMessageImpl implements VariantDeletedMessage, ModelBa
             @JsonProperty("sequenceNumber") final Long sequenceNumber,
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
-            @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("product") final com.commercetools.api.models.product.ProductReference product) {
+            @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -71,7 +68,6 @@ public class VariantDeletedMessageImpl implements VariantDeletedMessage, ModelBa
         this.resource = resource;
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
-        this.product = product;
         this.type = VARIANT_DELETED;
     }
 
@@ -170,14 +166,6 @@ public class VariantDeletedMessageImpl implements VariantDeletedMessage, ModelBa
         return this.resourceUserProvidedIdentifiers;
     }
 
-    /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     */
-
-    public com.commercetools.api.models.product.ProductReference getProduct() {
-        return this.product;
-    }
-
     public void setId(final String id) {
         this.id = id;
     }
@@ -219,10 +207,6 @@ public class VariantDeletedMessageImpl implements VariantDeletedMessage, ModelBa
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
     }
 
-    public void setProduct(final com.commercetools.api.models.product.ProductReference product) {
-        this.product = product;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -244,7 +228,6 @@ public class VariantDeletedMessageImpl implements VariantDeletedMessage, ModelBa
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
-                .append(product, that.product)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -256,7 +239,6 @@ public class VariantDeletedMessageImpl implements VariantDeletedMessage, ModelBa
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
-                .append(product, that.product)
                 .isEquals();
     }
 
@@ -273,7 +255,6 @@ public class VariantDeletedMessageImpl implements VariantDeletedMessage, ModelBa
                 .append(resourceVersion)
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
-                .append(product)
                 .toHashCode();
     }
 
@@ -290,7 +271,6 @@ public class VariantDeletedMessageImpl implements VariantDeletedMessage, ModelBa
                 .append("resourceVersion", resourceVersion)
                 .append("type", type)
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
-                .append("product", product)
                 .build();
     }
 

@@ -36,7 +36,6 @@ import tools.jackson.core.type.TypeReference;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-@Deprecated
 public class ByProjectKeyProductProjectionsSearchPost extends
         TypeApiMethod<ByProjectKeyProductProjectionsSearchPost, com.commercetools.api.models.product.ProductProjectionPagedSearchResponse>
         implements ByProjectKeyProductProjectionsSearchPostMixin,

@@ -21,7 +21,6 @@ import tools.jackson.databind.annotation.*;
  * Suggestion
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-@Deprecated
 public class SuggestionImpl implements Suggestion, ModelBase {
 
     private String text;

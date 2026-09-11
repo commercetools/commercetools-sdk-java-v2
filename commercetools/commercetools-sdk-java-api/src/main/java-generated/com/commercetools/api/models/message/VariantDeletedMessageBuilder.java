@@ -23,7 +23,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .sequenceNumber(0.3)
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
- *             .product(productBuilder -> productBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -53,8 +52,6 @@ public class VariantDeletedMessageBuilder implements Builder<VariantDeletedMessa
 
     @Nullable
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
-
-    private com.commercetools.api.models.product.ProductReference product;
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
@@ -257,41 +254,6 @@ public class VariantDeletedMessageBuilder implements Builder<VariantDeletedMessa
     }
 
     /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     * @param builder function to build the product value
-     * @return Builder
-     */
-
-    public VariantDeletedMessageBuilder product(
-            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
-        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     * @param builder function to build the product value
-     * @return Builder
-     */
-
-    public VariantDeletedMessageBuilder withProduct(
-            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
-        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     * @param product value to be set
-     * @return Builder
-     */
-
-    public VariantDeletedMessageBuilder product(final com.commercetools.api.models.product.ProductReference product) {
-        this.product = product;
-        return this;
-    }
-
-    /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @return id
      */
@@ -385,15 +347,6 @@ public class VariantDeletedMessageBuilder implements Builder<VariantDeletedMessa
     }
 
     /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     * @return product
-     */
-
-    public com.commercetools.api.models.product.ProductReference getProduct() {
-        return this.product;
-    }
-
-    /**
      * builds VariantDeletedMessage with checking for non-null required values
      * @return VariantDeletedMessage
      */
@@ -405,9 +358,8 @@ public class VariantDeletedMessageBuilder implements Builder<VariantDeletedMessa
         Objects.requireNonNull(sequenceNumber, VariantDeletedMessage.class + ": sequenceNumber is missing");
         Objects.requireNonNull(resource, VariantDeletedMessage.class + ": resource is missing");
         Objects.requireNonNull(resourceVersion, VariantDeletedMessage.class + ": resourceVersion is missing");
-        Objects.requireNonNull(product, VariantDeletedMessage.class + ": product is missing");
         return new VariantDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, product);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers);
     }
 
     /**
@@ -416,7 +368,7 @@ public class VariantDeletedMessageBuilder implements Builder<VariantDeletedMessa
      */
     public VariantDeletedMessage buildUnchecked() {
         return new VariantDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, product);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers);
     }
 
     /**
@@ -444,7 +396,6 @@ public class VariantDeletedMessageBuilder implements Builder<VariantDeletedMessa
         builder.resource = template.getResource();
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
-        builder.product = template.getProduct();
         return builder;
     }
 

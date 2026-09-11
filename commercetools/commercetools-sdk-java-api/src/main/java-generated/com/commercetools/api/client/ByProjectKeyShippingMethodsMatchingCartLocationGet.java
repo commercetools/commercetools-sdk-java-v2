@@ -21,7 +21,6 @@ import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Retrieves the active ShippingMethods that can ship to the provided <a href="https://docs.commercetools.com/apis/ctp:api:type:Location" rel="nofollow">Location</a> with a <code>predicate</code> that matches the provided Cart.</p>
- *  <p>If the Cart belongs to a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>, the results include globally scoped ShippingMethods (those with an empty <code>stores</code> field) and ShippingMethods scoped to that Store. If the Cart has no Store, only globally scoped ShippingMethods are returned.</p>
  *  <p>Each ShippingMethod contains exactly one ShippingRate with the flag <code>isMatching</code> set to <code>true</code>. This ShippingRate is used when the ShippingMethod is <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetShippingMethodAction" rel="nofollow">added to the Cart</a>.</p>
  *  <p>If a matching ShippingMethod has <code>isDefault</code> set to <code>true</code>, it is returned as the first item in the array.</p>
  *

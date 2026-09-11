@@ -10,7 +10,6 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.cart.InventoryMode;
 import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
-import com.commercetools.api.models.cart.TaxedPriceDraft;
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.PriceDraft;
@@ -98,21 +97,12 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     public PriceDraft getPrice();
 
     /**
-     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Line Item if <code>taxedPrice</code> is not provided.</p>
+     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Order.</p>
      * @return taxRate
      */
     @Valid
     @JsonProperty("taxRate")
     public TaxRate getTaxRate();
-
-    /**
-     *  <p>Taxed price of the Line Item. If provided, the values are stored as-is on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> instead of being derived from <code>price</code>, <code>quantity</code>, and <code>taxRate</code>.</p>
-     *  <p>Can only be set if <code>taxRate</code> is also set.</p>
-     * @return taxedPrice
-     */
-    @Valid
-    @JsonProperty("taxedPrice")
-    public TaxedPriceDraft getTaxedPrice();
 
     /**
      *  <p>The Channel used to <span>select a Price</span>. This Channel must have the <code>ProductDistribution</code> role.</p>
@@ -206,19 +196,11 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     public void setPrice(final PriceDraft price);
 
     /**
-     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Line Item if <code>taxedPrice</code> is not provided.</p>
+     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Order.</p>
      * @param taxRate value to be set
      */
 
     public void setTaxRate(final TaxRate taxRate);
-
-    /**
-     *  <p>Taxed price of the Line Item. If provided, the values are stored as-is on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> instead of being derived from <code>price</code>, <code>quantity</code>, and <code>taxRate</code>.</p>
-     *  <p>Can only be set if <code>taxRate</code> is also set.</p>
-     * @param taxedPrice value to be set
-     */
-
-    public void setTaxedPrice(final TaxedPriceDraft taxedPrice);
 
     /**
      *  <p>The Channel used to <span>select a Price</span>. This Channel must have the <code>ProductDistribution</code> role.</p>
@@ -292,7 +274,6 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
         instance.setQuantity(template.getQuantity());
         instance.setPrice(template.getPrice());
         instance.setTaxRate(template.getTaxRate());
-        instance.setTaxedPrice(template.getTaxedPrice());
         instance.setDistributionChannel(template.getDistributionChannel());
         instance.setSupplyChannel(template.getSupplyChannel());
         instance.setInventoryMode(template.getInventoryMode());
@@ -323,7 +304,6 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
         instance.setQuantity(template.getQuantity());
         instance.setPrice(com.commercetools.api.models.common.PriceDraft.deepCopy(template.getPrice()));
         instance.setTaxRate(com.commercetools.api.models.tax_category.TaxRate.deepCopy(template.getTaxRate()));
-        instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedPriceDraft.deepCopy(template.getTaxedPrice()));
         instance.setDistributionChannel(
             com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getDistributionChannel()));
         instance.setSupplyChannel(

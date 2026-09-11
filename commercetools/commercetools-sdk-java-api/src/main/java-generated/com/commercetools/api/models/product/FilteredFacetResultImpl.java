@@ -21,10 +21,8 @@ import tools.jackson.databind.annotation.*;
  * FilteredFacetResult
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-@Deprecated
 public class FilteredFacetResultImpl implements FilteredFacetResult, ModelBase {
 
-    @Deprecated
     private com.commercetools.api.models.product.FacetTypes type;
 
     private Long count;
@@ -52,7 +50,7 @@ public class FilteredFacetResultImpl implements FilteredFacetResult, ModelBase {
     /**
      *
      */
-    @Deprecated
+
     public com.commercetools.api.models.product.FacetTypes getType() {
         return this.type;
     }

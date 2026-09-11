@@ -46,7 +46,7 @@ public interface ExtensionChainTooDeepError extends ErrorObject {
     public String getCode();
 
     /**
-     *  <p><code>"The dependency chain depth 4 exceeds the maximum allowed depth of 3."</code></p>
+     *  <p><code>"The dependency chain depth 4 exceeds the maximum allowed depth of 3"</code></p>
      * @return message
      */
     @NotNull
@@ -54,7 +54,7 @@ public interface ExtensionChainTooDeepError extends ErrorObject {
     public String getMessage();
 
     /**
-     *  <p><code>"The dependency chain depth 4 exceeds the maximum allowed depth of 3."</code></p>
+     *  <p><code>"The dependency chain depth 4 exceeds the maximum allowed depth of 3"</code></p>
      * @param message value to be set
      */
 

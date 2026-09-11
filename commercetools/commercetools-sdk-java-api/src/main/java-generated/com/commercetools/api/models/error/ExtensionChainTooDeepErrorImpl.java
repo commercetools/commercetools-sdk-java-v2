@@ -57,7 +57,7 @@ public class ExtensionChainTooDeepErrorImpl implements ExtensionChainTooDeepErro
     }
 
     /**
-     *  <p><code>"The dependency chain depth 4 exceeds the maximum allowed depth of 3."</code></p>
+     *  <p><code>"The dependency chain depth 4 exceeds the maximum allowed depth of 3"</code></p>
      */
 
     public String getMessage() {

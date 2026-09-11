@@ -19,22 +19,11 @@ public class VariantImagesSetMessagePayloadTest {
 
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { "product",
-                        VariantImagesSetMessagePayload.builder()
-                                .product(new com.commercetools.api.models.product.ProductReferenceImpl()) },
                 new Object[] { "images", VariantImagesSetMessagePayload.builder()
                         .images(Collections.singletonList(new com.commercetools.api.models.common.ImageImpl())) },
                 new Object[] { "oldImages", VariantImagesSetMessagePayload.builder()
                         .oldImages(Collections.singletonList(new com.commercetools.api.models.common.ImageImpl())) },
                 new Object[] { "staged", VariantImagesSetMessagePayload.builder().staged(true) } };
-    }
-
-    @Test
-    public void product() {
-        VariantImagesSetMessagePayload value = VariantImagesSetMessagePayload.of();
-        value.setProduct(new com.commercetools.api.models.product.ProductReferenceImpl());
-        Assertions.assertThat(value.getProduct())
-                .isEqualTo(new com.commercetools.api.models.product.ProductReferenceImpl());
     }
 
     @Test

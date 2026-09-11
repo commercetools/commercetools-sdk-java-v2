@@ -9,7 +9,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * FacetResultBuilder
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-@Deprecated
 public class FacetResultBuilder {
 
     public com.commercetools.api.models.product.FilteredFacetResultBuilder filterBuilder() {

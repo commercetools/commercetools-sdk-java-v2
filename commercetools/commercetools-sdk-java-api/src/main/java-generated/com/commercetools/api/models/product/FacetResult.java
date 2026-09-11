@@ -30,7 +30,6 @@ import tools.jackson.databind.annotation.*;
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = FacetResultImpl.class, visible = true)
 @JsonDeserialize(as = FacetResultImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-@Deprecated
 public interface FacetResult {
 
     /**
@@ -38,7 +37,6 @@ public interface FacetResult {
      * @return type
      */
     @NotNull
-    @Deprecated
     @JsonProperty("type")
     public FacetTypes getType();
 

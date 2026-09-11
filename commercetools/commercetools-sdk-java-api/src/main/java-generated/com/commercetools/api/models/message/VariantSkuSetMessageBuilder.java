@@ -23,7 +23,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .sequenceNumber(0.3)
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
- *             .product(productBuilder -> productBuilder)
  *             .staged(true)
  *             .build()
  * </code></pre>
@@ -54,8 +53,6 @@ public class VariantSkuSetMessageBuilder implements Builder<VariantSkuSetMessage
 
     @Nullable
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
-
-    private com.commercetools.api.models.product.ProductReference product;
 
     @Nullable
     private String sku;
@@ -266,41 +263,6 @@ public class VariantSkuSetMessageBuilder implements Builder<VariantSkuSetMessage
     }
 
     /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     * @param builder function to build the product value
-     * @return Builder
-     */
-
-    public VariantSkuSetMessageBuilder product(
-            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
-        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     * @param builder function to build the product value
-     * @return Builder
-     */
-
-    public VariantSkuSetMessageBuilder withProduct(
-            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
-        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     * @param product value to be set
-     * @return Builder
-     */
-
-    public VariantSkuSetMessageBuilder product(final com.commercetools.api.models.product.ProductReference product) {
-        this.product = product;
-        return this;
-    }
-
-    /**
      *  <p>The SKU that was set on the Variant.</p>
      * @param sku value to be set
      * @return Builder
@@ -427,15 +389,6 @@ public class VariantSkuSetMessageBuilder implements Builder<VariantSkuSetMessage
     }
 
     /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     * @return product
-     */
-
-    public com.commercetools.api.models.product.ProductReference getProduct() {
-        return this.product;
-    }
-
-    /**
      *  <p>The SKU that was set on the Variant.</p>
      * @return sku
      */
@@ -476,10 +429,9 @@ public class VariantSkuSetMessageBuilder implements Builder<VariantSkuSetMessage
         Objects.requireNonNull(sequenceNumber, VariantSkuSetMessage.class + ": sequenceNumber is missing");
         Objects.requireNonNull(resource, VariantSkuSetMessage.class + ": resource is missing");
         Objects.requireNonNull(resourceVersion, VariantSkuSetMessage.class + ": resourceVersion is missing");
-        Objects.requireNonNull(product, VariantSkuSetMessage.class + ": product is missing");
         Objects.requireNonNull(staged, VariantSkuSetMessage.class + ": staged is missing");
         return new VariantSkuSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, product, sku, oldSku, staged);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, sku, oldSku, staged);
     }
 
     /**
@@ -488,7 +440,7 @@ public class VariantSkuSetMessageBuilder implements Builder<VariantSkuSetMessage
      */
     public VariantSkuSetMessage buildUnchecked() {
         return new VariantSkuSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, product, sku, oldSku, staged);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, sku, oldSku, staged);
     }
 
     /**
@@ -516,7 +468,6 @@ public class VariantSkuSetMessageBuilder implements Builder<VariantSkuSetMessage
         builder.resource = template.getResource();
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
-        builder.product = template.getProduct();
         builder.sku = template.getSku();
         builder.oldSku = template.getOldSku();
         builder.staged = template.getStaged();

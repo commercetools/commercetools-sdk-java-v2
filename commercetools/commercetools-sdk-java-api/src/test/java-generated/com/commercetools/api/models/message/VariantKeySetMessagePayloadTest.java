@@ -16,20 +16,8 @@ public class VariantKeySetMessagePayloadTest {
     }
 
     public static Object[][] objectBuilder() {
-        return new Object[][] {
-                new Object[] { "product",
-                        VariantKeySetMessagePayload.builder()
-                                .product(new com.commercetools.api.models.product.ProductReferenceImpl()) },
-                new Object[] { "key", VariantKeySetMessagePayload.builder().key("key") },
+        return new Object[][] { new Object[] { "key", VariantKeySetMessagePayload.builder().key("key") },
                 new Object[] { "oldKey", VariantKeySetMessagePayload.builder().oldKey("oldKey") } };
-    }
-
-    @Test
-    public void product() {
-        VariantKeySetMessagePayload value = VariantKeySetMessagePayload.of();
-        value.setProduct(new com.commercetools.api.models.product.ProductReferenceImpl());
-        Assertions.assertThat(value.getProduct())
-                .isEqualTo(new com.commercetools.api.models.product.ProductReferenceImpl());
     }
 
     @Test

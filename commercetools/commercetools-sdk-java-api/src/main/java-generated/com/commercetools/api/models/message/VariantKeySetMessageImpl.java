@@ -45,8 +45,6 @@ public class VariantKeySetMessageImpl implements VariantKeySetMessage, ModelBase
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
-    private com.commercetools.api.models.product.ProductReference product;
-
     private String key;
 
     private String oldKey;
@@ -64,7 +62,6 @@ public class VariantKeySetMessageImpl implements VariantKeySetMessage, ModelBase
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("product") final com.commercetools.api.models.product.ProductReference product,
             @JsonProperty("key") final String key, @JsonProperty("oldKey") final String oldKey) {
         this.id = id;
         this.version = version;
@@ -76,7 +73,6 @@ public class VariantKeySetMessageImpl implements VariantKeySetMessage, ModelBase
         this.resource = resource;
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
-        this.product = product;
         this.key = key;
         this.oldKey = oldKey;
         this.type = VARIANT_KEY_SET;
@@ -178,14 +174,6 @@ public class VariantKeySetMessageImpl implements VariantKeySetMessage, ModelBase
     }
 
     /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     */
-
-    public com.commercetools.api.models.product.ProductReference getProduct() {
-        return this.product;
-    }
-
-    /**
      *  <p>The key that was set on the Variant.</p>
      */
 
@@ -242,10 +230,6 @@ public class VariantKeySetMessageImpl implements VariantKeySetMessage, ModelBase
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
     }
 
-    public void setProduct(final com.commercetools.api.models.product.ProductReference product) {
-        this.product = product;
-    }
-
     public void setKey(final String key) {
         this.key = key;
     }
@@ -275,7 +259,6 @@ public class VariantKeySetMessageImpl implements VariantKeySetMessage, ModelBase
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
-                .append(product, that.product)
                 .append(key, that.key)
                 .append(oldKey, that.oldKey)
                 .append(id, that.id)
@@ -289,7 +272,6 @@ public class VariantKeySetMessageImpl implements VariantKeySetMessage, ModelBase
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
-                .append(product, that.product)
                 .append(key, that.key)
                 .append(oldKey, that.oldKey)
                 .isEquals();
@@ -308,7 +290,6 @@ public class VariantKeySetMessageImpl implements VariantKeySetMessage, ModelBase
                 .append(resourceVersion)
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
-                .append(product)
                 .append(key)
                 .append(oldKey)
                 .toHashCode();
@@ -327,7 +308,6 @@ public class VariantKeySetMessageImpl implements VariantKeySetMessage, ModelBase
                 .append("resourceVersion", resourceVersion)
                 .append("type", type)
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
-                .append("product", product)
                 .append("key", key)
                 .append("oldKey", oldKey)
                 .build();

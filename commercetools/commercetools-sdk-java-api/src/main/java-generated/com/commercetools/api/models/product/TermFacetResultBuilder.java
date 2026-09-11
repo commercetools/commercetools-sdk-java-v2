@@ -24,10 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-@Deprecated
 public class TermFacetResultBuilder implements Builder<TermFacetResult> {
-
-    @Deprecated
 
     private com.commercetools.api.models.product.TermFacetResultType dataType;
 
@@ -44,7 +41,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
      * @param dataType value to be set
      * @return Builder
      */
-    @Deprecated
+
     public TermFacetResultBuilder dataType(final com.commercetools.api.models.product.TermFacetResultType dataType) {
         this.dataType = dataType;
         return this;
@@ -191,7 +188,6 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
      *  <p>Data type to which the facet is applied.</p>
      * @return dataType
      */
-    @Deprecated
 
     public com.commercetools.api.models.product.TermFacetResultType getDataType() {
         return this.dataType;

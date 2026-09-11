@@ -130,7 +130,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *  <p>Only present when <span>price selection</span> is applied. Cannot be used in a <span>Query Predicate</span>.</p>
+     *  <p>Only present when <span>price selection</span> is applied. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
      */
 
     public com.commercetools.api.models.common.Price getPrice() {
@@ -186,7 +186,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <span>Query Predicate</span>.</p>
+     *  <p>Only available when <span>Product price selection</span> is used. Cannot be used in a <a href="https://docs.commercetools.com/apis/ctp:api:type:QueryPredicate" rel="nofollow">Query Predicate</a>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Price> getRecurrencePrices() {

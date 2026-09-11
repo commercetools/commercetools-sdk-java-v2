@@ -35,8 +35,6 @@ public class CustomLineItemImportDraftImpl implements CustomLineItemImportDraft,
 
     private com.commercetools.api.models.tax_category.TaxRate taxRate;
 
-    private com.commercetools.api.models.cart.TaxedPriceDraft taxedPrice;
-
     private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
 
     private com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode;
@@ -56,7 +54,6 @@ public class CustomLineItemImportDraftImpl implements CustomLineItemImportDraft,
             @JsonProperty("quantity") final Long quantity,
             @JsonProperty("money") final com.commercetools.api.models.common.Money money,
             @JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRate taxRate,
-            @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedPriceDraft taxedPrice,
             @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory,
             @JsonProperty("priceMode") final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode,
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails,
@@ -68,7 +65,6 @@ public class CustomLineItemImportDraftImpl implements CustomLineItemImportDraft,
         this.quantity = quantity;
         this.money = money;
         this.taxRate = taxRate;
-        this.taxedPrice = taxedPrice;
         this.taxCategory = taxCategory;
         this.priceMode = priceMode;
         this.shippingDetails = shippingDetails;
@@ -124,20 +120,11 @@ public class CustomLineItemImportDraftImpl implements CustomLineItemImportDraft,
     }
 
     /**
-     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Custom Line Item if <code>taxedPrice</code> is not provided.</p>
+     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Order.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {
         return this.taxRate;
-    }
-
-    /**
-     *  <p>Taxed price of the Custom Line Item. If provided, the values are stored as-is on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a> instead of being derived from <code>money</code>, <code>quantity</code>, and <code>taxRate</code>.</p>
-     *  <p>Can only be set if <code>taxRate</code> is also set.</p>
-     */
-
-    public com.commercetools.api.models.cart.TaxedPriceDraft getTaxedPrice() {
-        return this.taxedPrice;
     }
 
     /**
@@ -207,10 +194,6 @@ public class CustomLineItemImportDraftImpl implements CustomLineItemImportDraft,
         this.taxRate = taxRate;
     }
 
-    public void setTaxedPrice(final com.commercetools.api.models.cart.TaxedPriceDraft taxedPrice) {
-        this.taxedPrice = taxedPrice;
-    }
-
     public void setTaxCategory(
             final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
         this.taxCategory = taxCategory;
@@ -252,7 +235,6 @@ public class CustomLineItemImportDraftImpl implements CustomLineItemImportDraft,
                 .append(quantity, that.quantity)
                 .append(money, that.money)
                 .append(taxRate, that.taxRate)
-                .append(taxedPrice, that.taxedPrice)
                 .append(taxCategory, that.taxCategory)
                 .append(priceMode, that.priceMode)
                 .append(shippingDetails, that.shippingDetails)
@@ -264,7 +246,6 @@ public class CustomLineItemImportDraftImpl implements CustomLineItemImportDraft,
                 .append(quantity, that.quantity)
                 .append(money, that.money)
                 .append(taxRate, that.taxRate)
-                .append(taxedPrice, that.taxedPrice)
                 .append(taxCategory, that.taxCategory)
                 .append(priceMode, that.priceMode)
                 .append(shippingDetails, that.shippingDetails)
@@ -281,7 +262,6 @@ public class CustomLineItemImportDraftImpl implements CustomLineItemImportDraft,
                 .append(quantity)
                 .append(money)
                 .append(taxRate)
-                .append(taxedPrice)
                 .append(taxCategory)
                 .append(priceMode)
                 .append(shippingDetails)
@@ -298,7 +278,6 @@ public class CustomLineItemImportDraftImpl implements CustomLineItemImportDraft,
                 .append("quantity", quantity)
                 .append("money", money)
                 .append("taxRate", taxRate)
-                .append("taxedPrice", taxedPrice)
                 .append("taxCategory", taxCategory)
                 .append("priceMode", priceMode)
                 .append("shippingDetails", shippingDetails)

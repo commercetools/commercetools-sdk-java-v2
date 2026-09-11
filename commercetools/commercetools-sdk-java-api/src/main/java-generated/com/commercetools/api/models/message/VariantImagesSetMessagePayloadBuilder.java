@@ -14,7 +14,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     VariantImagesSetMessagePayload variantImagesSetMessagePayload = VariantImagesSetMessagePayload.builder()
- *             .product(productBuilder -> productBuilder)
  *             .plusImages(imagesBuilder -> imagesBuilder)
  *             .plusOldImages(oldImagesBuilder -> oldImagesBuilder)
  *             .staged(true)
@@ -25,49 +24,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class VariantImagesSetMessagePayloadBuilder implements Builder<VariantImagesSetMessagePayload> {
 
-    private com.commercetools.api.models.product.ProductReference product;
-
     private java.util.List<com.commercetools.api.models.common.Image> images;
 
     private java.util.List<com.commercetools.api.models.common.Image> oldImages;
 
     private Boolean staged;
-
-    /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     * @param builder function to build the product value
-     * @return Builder
-     */
-
-    public VariantImagesSetMessagePayloadBuilder product(
-            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
-        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     * @param builder function to build the product value
-     * @return Builder
-     */
-
-    public VariantImagesSetMessagePayloadBuilder withProduct(
-            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
-        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     * @param product value to be set
-     * @return Builder
-     */
-
-    public VariantImagesSetMessagePayloadBuilder product(
-            final com.commercetools.api.models.product.ProductReference product) {
-        this.product = product;
-        return this;
-    }
 
     /**
      *  <p>The images that were set on the Variant.</p>
@@ -257,15 +218,6 @@ public class VariantImagesSetMessagePayloadBuilder implements Builder<VariantIma
     }
 
     /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     * @return product
-     */
-
-    public com.commercetools.api.models.product.ProductReference getProduct() {
-        return this.product;
-    }
-
-    /**
      *  <p>The images that were set on the Variant.</p>
      * @return images
      */
@@ -297,11 +249,10 @@ public class VariantImagesSetMessagePayloadBuilder implements Builder<VariantIma
      * @return VariantImagesSetMessagePayload
      */
     public VariantImagesSetMessagePayload build() {
-        Objects.requireNonNull(product, VariantImagesSetMessagePayload.class + ": product is missing");
         Objects.requireNonNull(images, VariantImagesSetMessagePayload.class + ": images is missing");
         Objects.requireNonNull(oldImages, VariantImagesSetMessagePayload.class + ": oldImages is missing");
         Objects.requireNonNull(staged, VariantImagesSetMessagePayload.class + ": staged is missing");
-        return new VariantImagesSetMessagePayloadImpl(product, images, oldImages, staged);
+        return new VariantImagesSetMessagePayloadImpl(images, oldImages, staged);
     }
 
     /**
@@ -309,7 +260,7 @@ public class VariantImagesSetMessagePayloadBuilder implements Builder<VariantIma
      * @return VariantImagesSetMessagePayload
      */
     public VariantImagesSetMessagePayload buildUnchecked() {
-        return new VariantImagesSetMessagePayloadImpl(product, images, oldImages, staged);
+        return new VariantImagesSetMessagePayloadImpl(images, oldImages, staged);
     }
 
     /**
@@ -327,7 +278,6 @@ public class VariantImagesSetMessagePayloadBuilder implements Builder<VariantIma
      */
     public static VariantImagesSetMessagePayloadBuilder of(final VariantImagesSetMessagePayload template) {
         VariantImagesSetMessagePayloadBuilder builder = new VariantImagesSetMessagePayloadBuilder();
-        builder.product = template.getProduct();
         builder.images = template.getImages();
         builder.oldImages = template.getOldImages();
         builder.staged = template.getStaged();

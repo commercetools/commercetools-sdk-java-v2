@@ -17,7 +17,7 @@ import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderSetLineItemDistributionChannelAction" rel="nofollow">Set LineItem DistributionChannel</a> update action.</p>
+ *  <p>Generated after a successful <span>Set LineItem DistributionChannel</span> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

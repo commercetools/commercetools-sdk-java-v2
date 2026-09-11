@@ -25,8 +25,6 @@ public class VariantSkuSetMessagePayloadImpl implements VariantSkuSetMessagePayl
 
     private String type;
 
-    private com.commercetools.api.models.product.ProductReference product;
-
     private String sku;
 
     private String oldSku;
@@ -37,11 +35,8 @@ public class VariantSkuSetMessagePayloadImpl implements VariantSkuSetMessagePayl
      * create instance with all properties
      */
     @JsonCreator
-    VariantSkuSetMessagePayloadImpl(
-            @JsonProperty("product") final com.commercetools.api.models.product.ProductReference product,
-            @JsonProperty("sku") final String sku, @JsonProperty("oldSku") final String oldSku,
+    VariantSkuSetMessagePayloadImpl(@JsonProperty("sku") final String sku, @JsonProperty("oldSku") final String oldSku,
             @JsonProperty("staged") final Boolean staged) {
-        this.product = product;
         this.sku = sku;
         this.oldSku = oldSku;
         this.staged = staged;
@@ -61,14 +56,6 @@ public class VariantSkuSetMessagePayloadImpl implements VariantSkuSetMessagePayl
 
     public String getType() {
         return this.type;
-    }
-
-    /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     */
-
-    public com.commercetools.api.models.product.ProductReference getProduct() {
-        return this.product;
     }
 
     /**
@@ -95,10 +82,6 @@ public class VariantSkuSetMessagePayloadImpl implements VariantSkuSetMessagePayl
         return this.staged;
     }
 
-    public void setProduct(final com.commercetools.api.models.product.ProductReference product) {
-        this.product = product;
-    }
-
     public void setSku(final String sku) {
         this.sku = sku;
     }
@@ -122,12 +105,10 @@ public class VariantSkuSetMessagePayloadImpl implements VariantSkuSetMessagePayl
         VariantSkuSetMessagePayloadImpl that = (VariantSkuSetMessagePayloadImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
-                .append(product, that.product)
                 .append(sku, that.sku)
                 .append(oldSku, that.oldSku)
                 .append(staged, that.staged)
                 .append(type, that.type)
-                .append(product, that.product)
                 .append(sku, that.sku)
                 .append(oldSku, that.oldSku)
                 .append(staged, that.staged)
@@ -136,18 +117,12 @@ public class VariantSkuSetMessagePayloadImpl implements VariantSkuSetMessagePayl
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type)
-                .append(product)
-                .append(sku)
-                .append(oldSku)
-                .append(staged)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(sku).append(oldSku).append(staged).toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
-                .append("product", product)
                 .append("sku", sku)
                 .append("oldSku", oldSku)
                 .append("staged", staged)

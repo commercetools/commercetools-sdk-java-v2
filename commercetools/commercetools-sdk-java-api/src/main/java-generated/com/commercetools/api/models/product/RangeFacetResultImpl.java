@@ -21,10 +21,8 @@ import tools.jackson.databind.annotation.*;
  * RangeFacetResult
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-@Deprecated
 public class RangeFacetResultImpl implements RangeFacetResult, ModelBase {
 
-    @Deprecated
     private com.commercetools.api.models.product.FacetTypes type;
 
     private java.util.List<com.commercetools.api.models.product.FacetRange> ranges;
@@ -49,7 +47,7 @@ public class RangeFacetResultImpl implements RangeFacetResult, ModelBase {
     /**
      *
      */
-    @Deprecated
+
     public com.commercetools.api.models.product.FacetTypes getType() {
         return this.type;
     }

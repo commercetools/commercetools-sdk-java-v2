@@ -25,8 +25,6 @@ public class VariantImagesSetMessagePayloadImpl implements VariantImagesSetMessa
 
     private String type;
 
-    private com.commercetools.api.models.product.ProductReference product;
-
     private java.util.List<com.commercetools.api.models.common.Image> images;
 
     private java.util.List<com.commercetools.api.models.common.Image> oldImages;
@@ -38,11 +36,9 @@ public class VariantImagesSetMessagePayloadImpl implements VariantImagesSetMessa
      */
     @JsonCreator
     VariantImagesSetMessagePayloadImpl(
-            @JsonProperty("product") final com.commercetools.api.models.product.ProductReference product,
             @JsonProperty("images") final java.util.List<com.commercetools.api.models.common.Image> images,
             @JsonProperty("oldImages") final java.util.List<com.commercetools.api.models.common.Image> oldImages,
             @JsonProperty("staged") final Boolean staged) {
-        this.product = product;
         this.images = images;
         this.oldImages = oldImages;
         this.staged = staged;
@@ -62,14 +58,6 @@ public class VariantImagesSetMessagePayloadImpl implements VariantImagesSetMessa
 
     public String getType() {
         return this.type;
-    }
-
-    /**
-     *  <p>Reference to the Product containing the Variant.</p>
-     */
-
-    public com.commercetools.api.models.product.ProductReference getProduct() {
-        return this.product;
     }
 
     /**
@@ -94,10 +82,6 @@ public class VariantImagesSetMessagePayloadImpl implements VariantImagesSetMessa
 
     public Boolean getStaged() {
         return this.staged;
-    }
-
-    public void setProduct(final com.commercetools.api.models.product.ProductReference product) {
-        this.product = product;
     }
 
     public void setImages(final com.commercetools.api.models.common.Image... images) {
@@ -131,12 +115,10 @@ public class VariantImagesSetMessagePayloadImpl implements VariantImagesSetMessa
         VariantImagesSetMessagePayloadImpl that = (VariantImagesSetMessagePayloadImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
-                .append(product, that.product)
                 .append(images, that.images)
                 .append(oldImages, that.oldImages)
                 .append(staged, that.staged)
                 .append(type, that.type)
-                .append(product, that.product)
                 .append(images, that.images)
                 .append(oldImages, that.oldImages)
                 .append(staged, that.staged)
@@ -145,18 +127,12 @@ public class VariantImagesSetMessagePayloadImpl implements VariantImagesSetMessa
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type)
-                .append(product)
-                .append(images)
-                .append(oldImages)
-                .append(staged)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(images).append(oldImages).append(staged).toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
-                .append("product", product)
                 .append("images", images)
                 .append("oldImages", oldImages)
                 .append("staged", staged)

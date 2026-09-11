@@ -45,9 +45,6 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     private com.commercetools.api.models.tax_category.TaxRate taxRate;
 
     @Nullable
-    private com.commercetools.api.models.cart.TaxedPriceDraft taxedPrice;
-
-    @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
     @Nullable
@@ -206,7 +203,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Line Item if <code>taxedPrice</code> is not provided.</p>
+     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Order.</p>
      * @param builder function to build the taxRate value
      * @return Builder
      */
@@ -218,7 +215,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Line Item if <code>taxedPrice</code> is not provided.</p>
+     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Order.</p>
      * @param builder function to build the taxRate value
      * @return Builder
      */
@@ -230,7 +227,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Line Item if <code>taxedPrice</code> is not provided.</p>
+     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Order.</p>
      * @param taxRate value to be set
      * @return Builder
      */
@@ -238,45 +235,6 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     public LineItemImportDraftBuilder taxRate(
             @Nullable final com.commercetools.api.models.tax_category.TaxRate taxRate) {
         this.taxRate = taxRate;
-        return this;
-    }
-
-    /**
-     *  <p>Taxed price of the Line Item. If provided, the values are stored as-is on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> instead of being derived from <code>price</code>, <code>quantity</code>, and <code>taxRate</code>.</p>
-     *  <p>Can only be set if <code>taxRate</code> is also set.</p>
-     * @param builder function to build the taxedPrice value
-     * @return Builder
-     */
-
-    public LineItemImportDraftBuilder taxedPrice(
-            Function<com.commercetools.api.models.cart.TaxedPriceDraftBuilder, com.commercetools.api.models.cart.TaxedPriceDraftBuilder> builder) {
-        this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedPriceDraftBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Taxed price of the Line Item. If provided, the values are stored as-is on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> instead of being derived from <code>price</code>, <code>quantity</code>, and <code>taxRate</code>.</p>
-     *  <p>Can only be set if <code>taxRate</code> is also set.</p>
-     * @param builder function to build the taxedPrice value
-     * @return Builder
-     */
-
-    public LineItemImportDraftBuilder withTaxedPrice(
-            Function<com.commercetools.api.models.cart.TaxedPriceDraftBuilder, com.commercetools.api.models.cart.TaxedPriceDraft> builder) {
-        this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedPriceDraftBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>Taxed price of the Line Item. If provided, the values are stored as-is on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> instead of being derived from <code>price</code>, <code>quantity</code>, and <code>taxRate</code>.</p>
-     *  <p>Can only be set if <code>taxRate</code> is also set.</p>
-     * @param taxedPrice value to be set
-     * @return Builder
-     */
-
-    public LineItemImportDraftBuilder taxedPrice(
-            @Nullable final com.commercetools.api.models.cart.TaxedPriceDraft taxedPrice) {
-        this.taxedPrice = taxedPrice;
         return this;
     }
 
@@ -586,24 +544,13 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Line Item if <code>taxedPrice</code> is not provided.</p>
+     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Order.</p>
      * @return taxRate
      */
 
     @Nullable
     public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {
         return this.taxRate;
-    }
-
-    /**
-     *  <p>Taxed price of the Line Item. If provided, the values are stored as-is on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> instead of being derived from <code>price</code>, <code>quantity</code>, and <code>taxRate</code>.</p>
-     *  <p>Can only be set if <code>taxRate</code> is also set.</p>
-     * @return taxedPrice
-     */
-
-    @Nullable
-    public com.commercetools.api.models.cart.TaxedPriceDraft getTaxedPrice() {
-        return this.taxedPrice;
     }
 
     /**
@@ -675,8 +622,8 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
         Objects.requireNonNull(variant, LineItemImportDraft.class + ": variant is missing");
         Objects.requireNonNull(quantity, LineItemImportDraft.class + ": quantity is missing");
         Objects.requireNonNull(price, LineItemImportDraft.class + ": price is missing");
-        return new LineItemImportDraftImpl(name, key, variant, productId, quantity, price, taxRate, taxedPrice,
-            distributionChannel, supplyChannel, inventoryMode, shippingDetails, state, custom);
+        return new LineItemImportDraftImpl(name, key, variant, productId, quantity, price, taxRate, distributionChannel,
+            supplyChannel, inventoryMode, shippingDetails, state, custom);
     }
 
     /**
@@ -684,8 +631,8 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
      * @return LineItemImportDraft
      */
     public LineItemImportDraft buildUnchecked() {
-        return new LineItemImportDraftImpl(name, key, variant, productId, quantity, price, taxRate, taxedPrice,
-            distributionChannel, supplyChannel, inventoryMode, shippingDetails, state, custom);
+        return new LineItemImportDraftImpl(name, key, variant, productId, quantity, price, taxRate, distributionChannel,
+            supplyChannel, inventoryMode, shippingDetails, state, custom);
     }
 
     /**
@@ -710,7 +657,6 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
         builder.quantity = template.getQuantity();
         builder.price = template.getPrice();
         builder.taxRate = template.getTaxRate();
-        builder.taxedPrice = template.getTaxedPrice();
         builder.distributionChannel = template.getDistributionChannel();
         builder.supplyChannel = template.getSupplyChannel();
         builder.inventoryMode = template.getInventoryMode();

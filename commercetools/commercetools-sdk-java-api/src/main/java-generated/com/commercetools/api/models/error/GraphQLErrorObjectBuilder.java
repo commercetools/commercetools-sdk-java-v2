@@ -39,10 +39,6 @@ public class GraphQLErrorObjectBuilder {
         return com.commercetools.api.models.error.GraphQLBulkOperationMaxItemsExceededErrorBuilder.of();
     }
 
-    public com.commercetools.api.models.error.GraphQLCircularDependencyErrorBuilder circularDependencyBuilder() {
-        return com.commercetools.api.models.error.GraphQLCircularDependencyErrorBuilder.of();
-    }
-
     public com.commercetools.api.models.error.GraphQLConcurrentModificationErrorBuilder concurrentModificationBuilder() {
         return com.commercetools.api.models.error.GraphQLConcurrentModificationErrorBuilder.of();
     }
@@ -137,6 +133,10 @@ public class GraphQLErrorObjectBuilder {
 
     public com.commercetools.api.models.error.GraphQLExtensionChainTooWideErrorBuilder extensionChainTooWideBuilder() {
         return com.commercetools.api.models.error.GraphQLExtensionChainTooWideErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.error.GraphQLExtensionCircularDependencyErrorBuilder extensionCircularDependencyBuilder() {
+        return com.commercetools.api.models.error.GraphQLExtensionCircularDependencyErrorBuilder.of();
     }
 
     public com.commercetools.api.models.error.GraphQLExtensionDependencyExistsErrorBuilder extensionDependencyExistsBuilder() {
@@ -245,10 +245,6 @@ public class GraphQLErrorObjectBuilder {
 
     public com.commercetools.api.models.error.GraphQLMaxStoreReferencesReachedErrorBuilder maxStoreReferencesReachedBuilder() {
         return com.commercetools.api.models.error.GraphQLMaxStoreReferencesReachedErrorBuilder.of();
-    }
-
-    public com.commercetools.api.models.error.GraphQLMissingDependencyErrorBuilder missingDependencyBuilder() {
-        return com.commercetools.api.models.error.GraphQLMissingDependencyErrorBuilder.of();
     }
 
     public com.commercetools.api.models.error.GraphQLMissingRoleOnChannelErrorBuilder missingRoleOnChannelBuilder() {

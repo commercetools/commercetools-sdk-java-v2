@@ -21,8 +21,10 @@ import tools.jackson.databind.annotation.*;
  * FacetResult
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class FacetResultImpl implements FacetResult, ModelBase {
 
+    @Deprecated
     private com.commercetools.api.models.product.FacetTypes type;
 
     /**
@@ -42,7 +44,7 @@ public class FacetResultImpl implements FacetResult, ModelBase {
     /**
      *
      */
-
+    @Deprecated
     public com.commercetools.api.models.product.FacetTypes getType() {
         return this.type;
     }

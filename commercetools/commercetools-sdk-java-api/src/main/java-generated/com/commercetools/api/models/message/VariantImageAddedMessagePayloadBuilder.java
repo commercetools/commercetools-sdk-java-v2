@@ -14,6 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     VariantImageAddedMessagePayload variantImageAddedMessagePayload = VariantImageAddedMessagePayload.builder()
+ *             .product(productBuilder -> productBuilder)
  *             .image(imageBuilder -> imageBuilder)
  *             .staged(true)
  *             .build()
@@ -23,9 +24,47 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class VariantImageAddedMessagePayloadBuilder implements Builder<VariantImageAddedMessagePayload> {
 
+    private com.commercetools.api.models.product.ProductReference product;
+
     private com.commercetools.api.models.common.Image image;
 
     private Boolean staged;
+
+    /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public VariantImageAddedMessagePayloadBuilder product(
+            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public VariantImageAddedMessagePayloadBuilder withProduct(
+            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @param product value to be set
+     * @return Builder
+     */
+
+    public VariantImageAddedMessagePayloadBuilder product(
+            final com.commercetools.api.models.product.ProductReference product) {
+        this.product = product;
+        return this;
+    }
 
     /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
@@ -74,6 +113,15 @@ public class VariantImageAddedMessagePayloadBuilder implements Builder<VariantIm
     }
 
     /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @return product
+     */
+
+    public com.commercetools.api.models.product.ProductReference getProduct() {
+        return this.product;
+    }
+
+    /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
      * @return image
      */
@@ -96,9 +144,10 @@ public class VariantImageAddedMessagePayloadBuilder implements Builder<VariantIm
      * @return VariantImageAddedMessagePayload
      */
     public VariantImageAddedMessagePayload build() {
+        Objects.requireNonNull(product, VariantImageAddedMessagePayload.class + ": product is missing");
         Objects.requireNonNull(image, VariantImageAddedMessagePayload.class + ": image is missing");
         Objects.requireNonNull(staged, VariantImageAddedMessagePayload.class + ": staged is missing");
-        return new VariantImageAddedMessagePayloadImpl(image, staged);
+        return new VariantImageAddedMessagePayloadImpl(product, image, staged);
     }
 
     /**
@@ -106,7 +155,7 @@ public class VariantImageAddedMessagePayloadBuilder implements Builder<VariantIm
      * @return VariantImageAddedMessagePayload
      */
     public VariantImageAddedMessagePayload buildUnchecked() {
-        return new VariantImageAddedMessagePayloadImpl(image, staged);
+        return new VariantImageAddedMessagePayloadImpl(product, image, staged);
     }
 
     /**
@@ -124,6 +173,7 @@ public class VariantImageAddedMessagePayloadBuilder implements Builder<VariantIm
      */
     public static VariantImageAddedMessagePayloadBuilder of(final VariantImageAddedMessagePayload template) {
         VariantImageAddedMessagePayloadBuilder builder = new VariantImageAddedMessagePayloadBuilder();
+        builder.product = template.getProduct();
         builder.image = template.getImage();
         builder.staged = template.getStaged();
         return builder;

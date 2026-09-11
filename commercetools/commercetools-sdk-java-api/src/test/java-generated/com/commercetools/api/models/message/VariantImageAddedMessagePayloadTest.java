@@ -17,10 +17,21 @@ public class VariantImageAddedMessagePayloadTest {
 
     public static Object[][] objectBuilder() {
         return new Object[][] {
+                new Object[] { "product",
+                        VariantImageAddedMessagePayload.builder()
+                                .product(new com.commercetools.api.models.product.ProductReferenceImpl()) },
                 new Object[] { "image",
                         VariantImageAddedMessagePayload.builder()
                                 .image(new com.commercetools.api.models.common.ImageImpl()) },
                 new Object[] { "staged", VariantImageAddedMessagePayload.builder().staged(true) } };
+    }
+
+    @Test
+    public void product() {
+        VariantImageAddedMessagePayload value = VariantImageAddedMessagePayload.of();
+        value.setProduct(new com.commercetools.api.models.product.ProductReferenceImpl());
+        Assertions.assertThat(value.getProduct())
+                .isEqualTo(new com.commercetools.api.models.product.ProductReferenceImpl());
     }
 
     @Test

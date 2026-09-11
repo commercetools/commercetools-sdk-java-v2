@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful <span>Unpublish</span> update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:VariantUnpublishAction" rel="nofollow">Unpublish</a> update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class VariantUnpublishedMessagePayloadImpl implements VariantUnpublishedMessagePayload, ModelBase {
@@ -53,7 +53,7 @@ public class VariantUnpublishedMessagePayloadImpl implements VariantUnpublishedM
     }
 
     /**
-     *  <p>Reference to the Product containing the Variant that was unpublished.</p>
+     *  <p>Reference to the Product containing the Variant.</p>
      */
 
     public com.commercetools.api.models.product.ProductReference getProduct() {

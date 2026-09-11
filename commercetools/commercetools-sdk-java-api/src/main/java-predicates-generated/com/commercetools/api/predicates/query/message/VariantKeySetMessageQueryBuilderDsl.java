@@ -91,6 +91,14 @@ public class VariantKeySetMessageQueryBuilderDsl {
             VariantKeySetMessageQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<VariantKeySetMessageQueryBuilderDsl> product(
+            Function<com.commercetools.api.predicates.query.product.ProductReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product.ProductReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("product"))
+                .inner(fn.apply(com.commercetools.api.predicates.query.product.ProductReferenceQueryBuilderDsl.of())),
+            VariantKeySetMessageQueryBuilderDsl::of);
+    }
+
     public StringComparisonPredicateBuilder<VariantKeySetMessageQueryBuilderDsl> key() {
         return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
             p -> new CombinationQueryPredicate<>(p, VariantKeySetMessageQueryBuilderDsl::of));

@@ -134,14 +134,6 @@ public interface GraphQLErrorObject {
     }
 
     /**
-     * builder for circularDependency subtype
-     * @return builder
-     */
-    public static com.commercetools.api.models.error.GraphQLCircularDependencyErrorBuilder circularDependencyBuilder() {
-        return com.commercetools.api.models.error.GraphQLCircularDependencyErrorBuilder.of();
-    }
-
-    /**
      * builder for concurrentModification subtype
      * @return builder
      */
@@ -331,6 +323,14 @@ public interface GraphQLErrorObject {
      */
     public static com.commercetools.api.models.error.GraphQLExtensionChainTooWideErrorBuilder extensionChainTooWideBuilder() {
         return com.commercetools.api.models.error.GraphQLExtensionChainTooWideErrorBuilder.of();
+    }
+
+    /**
+     * builder for extensionCircularDependency subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLExtensionCircularDependencyErrorBuilder extensionCircularDependencyBuilder() {
+        return com.commercetools.api.models.error.GraphQLExtensionCircularDependencyErrorBuilder.of();
     }
 
     /**
@@ -547,14 +547,6 @@ public interface GraphQLErrorObject {
      */
     public static com.commercetools.api.models.error.GraphQLMaxStoreReferencesReachedErrorBuilder maxStoreReferencesReachedBuilder() {
         return com.commercetools.api.models.error.GraphQLMaxStoreReferencesReachedErrorBuilder.of();
-    }
-
-    /**
-     * builder for missingDependency subtype
-     * @return builder
-     */
-    public static com.commercetools.api.models.error.GraphQLMissingDependencyErrorBuilder missingDependencyBuilder() {
-        return com.commercetools.api.models.error.GraphQLMissingDependencyErrorBuilder.of();
     }
 
     /**

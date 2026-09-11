@@ -30,6 +30,7 @@ import tools.jackson.databind.annotation.*;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = FacetResultsImpl.class)
+@Deprecated
 public interface FacetResults {
 
     /**
@@ -38,6 +39,7 @@ public interface FacetResults {
      */
     @NotNull
     @Valid
+    @Deprecated
     @JsonAnyGetter
     public Map<String, FacetResult> values();
 
@@ -46,7 +48,7 @@ public interface FacetResults {
      * @param key property name
      * @param value property value
      */
-
+    @Deprecated
     @JsonAnySetter
     public void setValue(String key, FacetResult value);
 

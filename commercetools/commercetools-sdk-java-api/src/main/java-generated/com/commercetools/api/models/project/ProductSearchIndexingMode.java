@@ -17,7 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductSearchIndexingMode extends JsonEnum {
 
     /**
-    <p>For <span>Product Projection Search</span>.</p> */
+    <p>For <span>Product Projection Search</span>. <strong>Deprecated.</strong> Use <code>ProductsSearch</code> instead.</p> */
     ProductSearchIndexingMode PRODUCT_PROJECTIONS_SEARCH = ProductSearchIndexingModeEnum.PRODUCT_PROJECTIONS_SEARCH;
     /**
     <p>For <span>Product Search</span>.</p> */

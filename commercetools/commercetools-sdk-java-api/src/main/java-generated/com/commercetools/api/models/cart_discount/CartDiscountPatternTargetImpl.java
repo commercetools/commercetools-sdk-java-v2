@@ -19,7 +19,7 @@ import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Pattern targets can be used to model Buy and Get discounts.</p>
- *  <p>Unlike <span>CartDiscountLineItemsTarget</span> and <span>CartDiscountCustomLineItemsTarget</span>, it does not apply to a (Custom) Line Item as a whole, but to individual units of a (Custom) Line Item. The discounts can apply multiple times on the same cart, but each unit can be discounted only once.</p>
+ *  <p>Unlike <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountLineItemsTarget" rel="nofollow">CartDiscountLineItemsTarget</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountCustomLineItemsTarget" rel="nofollow">CartDiscountCustomLineItemsTarget</a>, it does not apply to a (Custom) Line Item as a whole, but to individual units of a (Custom) Line Item. The discounts can apply multiple times on the same cart, but each unit can be discounted only once.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountPatternTargetImpl implements CartDiscountPatternTarget, ModelBase {

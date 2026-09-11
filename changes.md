@@ -6,6 +6,10 @@
 - :warning: removed type `Expansion`
 - :warning: removed type `QueryPredicate`
 - :warning: removed type `Sort`
+- :warning: removed type `CircularDependencyError`
+- :warning: removed type `MissingDependencyError`
+- :warning: removed type `GraphQLCircularDependencyError`
+- :warning: removed type `GraphQLMissingDependencyError`
 </details>
 
 
@@ -59,7 +63,9 @@
 - added type `AgentStoreUnresolvedError`
 - added type `EstimatedDelivery`
 - added type `CartSetEstimatedDeliveryAction`
+- added type `ExtensionCircularDependencyError`
 - added type `UnauthorizedError`
+- added type `GraphQLExtensionCircularDependencyError`
 - added type `GraphQLUnauthorizedError`
 - added type `CommerceMcpServerConfig`
 - added type `CommerceMcpServerConfigDraft`

@@ -75,11 +75,23 @@ type Query {
     """
   This field gives access to the resources (such as carts) that are inside the given store.
   """
-  inStore(key: KeyReferenceInput!): InStore!
+  inStore(
+    key: KeyReferenceInput!
+    """
+    When `false`, in-store product reads return the original (untailored) product information instead of the Store-specific tailored values. Defaults to `true`.
+    """
+    tailored: Boolean = true
+  ): InStore!
     """
   This field gives access to the resources (such as carts) that are inside one of the given stores.
   """
-  inStores(keys: [KeyReferenceInput!]!): InStore!
+  inStores(
+    keys: [KeyReferenceInput!]!
+    """
+    When `false`, in-store product reads return the original (untailored) product information instead of the Store-specific tailored values. Defaults to `true`.
+    """
+    tailored: Boolean = true
+  ): InStore!
     """
   This field gives access to the resources (such as carts) as an associate of a given business unit.
   """
@@ -767,10 +779,20 @@ type Mutation {
     """
     key: String
   ): CustomerGroup
-    createCategory(draft: CategoryDraft!): Category
+    createCategory(
+    draft: CategoryDraft!
+    """
+    The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions.
+    """
+    storeKey: KeyReferenceInput
+  ): Category
     updateCategory(
     version: Long!
     actions: [CategoryUpdateAction!]!
+    """
+    The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions.
+    """
+    storeKey: KeyReferenceInput
     """
     Queries with specified ID
     """
@@ -782,6 +804,10 @@ type Mutation {
   ): Category
     deleteCategory(
     version: Long!
+    """
+    The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions.
+    """
+    storeKey: KeyReferenceInput
     """
     Queries with specified ID
     """
@@ -3981,6 +4007,8 @@ type Category implements Versioned & ReferenceExpandable {
     createdAt: DateTime!
     lastModifiedAt: DateTime!
     assets: [Asset!]!
+    storesRef: [KeyReference!]!
+    stores: [Store!]!
     custom: CustomFieldsType
     createdBy: Initiator
     lastModifiedBy: Initiator
@@ -5353,6 +5381,17 @@ type InStore implements CartDiscountQueryInterface & CartQueryInterface & Custom
   It gives access to the data that is specific to the customer or the anonymous session linked to the access token.
   """
   me: InStoreMe!
+    category(
+    """
+    Queries with specified ID
+    """
+    id: String
+    """
+    Queries with specified key
+    """
+    key: String
+  ): Category
+    categories(where: String, sort: [String!], limit: Int, offset: Int): CategoryQueryResult!
     shippingMethodsByCart(id: String!): [ShippingMethod!]!
     cartDiscount(
     """
@@ -13423,6 +13462,10 @@ input AddCategoryAsset {
     asset: AssetDraftInput!
 }
 
+input AddCategoryStore {
+    store: ResourceIdentifierInput!
+}
+
 input AddChannelRoles {
     roles: [ChannelRole!]!
 }
@@ -14370,6 +14413,7 @@ input CategoryDraft {
     metaKeywords: [LocalizedStringItemInputType!]
     orderHint: String
     parent: ResourceIdentifierInput
+    stores: [ResourceIdentifierInput!]
     assets: [AssetDraftInput!] = []
 }
 
@@ -14380,6 +14424,7 @@ input CategoryOrderHintInput {
 
 input CategoryUpdateAction {
     addAsset: AddCategoryAsset
+    addStore: AddCategoryStore
     changeAssetName: ChangeCategoryAssetName
     changeAssetOrder: ChangeCategoryAssetOrder
     changeName: ChangeCategoryName
@@ -14387,6 +14432,7 @@ input CategoryUpdateAction {
     changeSlug: ChangeCategorySlug
     changeParent: ChangeCategoryParent
     removeAsset: RemoveCategoryAsset
+    removeStore: RemoveCategoryStore
     setAssetCustomField: SetCategoryAssetCustomField
     setAssetCustomType: SetCategoryAssetCustomType
     setAssetDescription: SetCategoryAssetDescription
@@ -14400,6 +14446,7 @@ input CategoryUpdateAction {
     setMetaDescription: SetCategoryMetaDescription
     setMetaKeywords: SetCategoryMetaKeywords
     setMetaTitle: SetCategoryMetaTitle
+    setStores: SetCategoryStores
     setExternalId: SetCategoryExternalId
 }
 
@@ -17234,6 +17281,10 @@ input RemoveCategoryAsset {
     assetId: String
 }
 
+input RemoveCategoryStore {
+    store: ResourceIdentifierInput!
+}
+
 input RemoveChannelRoles {
     roles: [ChannelRole!]!
 }
@@ -18153,6 +18204,10 @@ input SetCategoryMetaKeywords {
 
 input SetCategoryMetaTitle {
     metaTitle: [LocalizedStringItemInputType!]
+}
+
+input SetCategoryStores {
+    stores: [ResourceIdentifierInput!]!
 }
 
 input SetChannelAddress {

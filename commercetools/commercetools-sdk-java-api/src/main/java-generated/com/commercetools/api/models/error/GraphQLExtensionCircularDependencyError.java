@@ -16,6 +16,7 @@ import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Returned when a circular reference is detected among Extension dependencies.</p>
+ *  <p>The <code>message</code> lists the <code>id</code> of each Extension in the detected cycle, starting and ending with the same Extension.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

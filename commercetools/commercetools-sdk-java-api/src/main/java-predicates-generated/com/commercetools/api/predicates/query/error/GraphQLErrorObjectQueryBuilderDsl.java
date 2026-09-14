@@ -19,6 +19,126 @@ public class GraphQLErrorObjectQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, GraphQLErrorObjectQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asBusinessUnitAmbiguous(
+            Function<com.commercetools.api.predicates.query.agent.GraphQLAgentBusinessUnitAmbiguousErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.GraphQLAgentBusinessUnitAmbiguousErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.agent.GraphQLAgentBusinessUnitAmbiguousErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asBusinessUnitLimitExceeded(
+            Function<com.commercetools.api.predicates.query.agent.GraphQLAgentBusinessUnitLimitExceededErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.GraphQLAgentBusinessUnitLimitExceededErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.agent.GraphQLAgentBusinessUnitLimitExceededErrorQueryBuilderDsl
+                    .of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asBusinessUnitUnresolved(
+            Function<com.commercetools.api.predicates.query.agent.GraphQLAgentBusinessUnitUnresolvedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.GraphQLAgentBusinessUnitUnresolvedErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.agent.GraphQLAgentBusinessUnitUnresolvedErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asExtractionFailed(
+            Function<com.commercetools.api.predicates.query.agent.GraphQLAgentExtractionFailedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.GraphQLAgentExtractionFailedErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.agent.GraphQLAgentExtractionFailedErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asFeatureDisabled(
+            Function<com.commercetools.api.predicates.query.agent.GraphQLAgentFeatureDisabledErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.GraphQLAgentFeatureDisabledErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.agent.GraphQLAgentFeatureDisabledErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asMissingCountry(
+            Function<com.commercetools.api.predicates.query.agent.GraphQLAgentMissingCountryErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.GraphQLAgentMissingCountryErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.agent.GraphQLAgentMissingCountryErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asMissingCustomerEmail(
+            Function<com.commercetools.api.predicates.query.agent.GraphQLAgentMissingCustomerEmailErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.GraphQLAgentMissingCustomerEmailErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.agent.GraphQLAgentMissingCustomerEmailErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asMissingEntityType(
+            Function<com.commercetools.api.predicates.query.agent.GraphQLAgentMissingEntityTypeErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.GraphQLAgentMissingEntityTypeErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.agent.GraphQLAgentMissingEntityTypeErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asNoLineItemsExtracted(
+            Function<com.commercetools.api.predicates.query.agent.GraphQLAgentNoLineItemsExtractedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.GraphQLAgentNoLineItemsExtractedErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.agent.GraphQLAgentNoLineItemsExtractedErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asOutOfScope(
+            Function<com.commercetools.api.predicates.query.agent.GraphQLAgentOutOfScopeErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.GraphQLAgentOutOfScopeErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.agent.GraphQLAgentOutOfScopeErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asProductSearchNotEnabled(
+            Function<com.commercetools.api.predicates.query.agent.GraphQLAgentProductSearchNotEnabledErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.GraphQLAgentProductSearchNotEnabledErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.agent.GraphQLAgentProductSearchNotEnabledErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asProductsNotFound(
+            Function<com.commercetools.api.predicates.query.agent.GraphQLAgentProductsNotFoundErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.GraphQLAgentProductsNotFoundErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.agent.GraphQLAgentProductsNotFoundErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asQuoteRequestCreationFailed(
+            Function<com.commercetools.api.predicates.query.agent.GraphQLAgentQuoteRequestCreationFailedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.GraphQLAgentQuoteRequestCreationFailedErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.agent.GraphQLAgentQuoteRequestCreationFailedErrorQueryBuilderDsl
+                    .of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asStoreAmbiguous(
+            Function<com.commercetools.api.predicates.query.agent.GraphQLAgentStoreAmbiguousErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.GraphQLAgentStoreAmbiguousErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.agent.GraphQLAgentStoreAmbiguousErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asStoreDistributionChannelsUnsupported(
+            Function<com.commercetools.api.predicates.query.agent.GraphQLAgentStoreDistributionChannelsUnsupportedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.GraphQLAgentStoreDistributionChannelsUnsupportedErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.agent.GraphQLAgentStoreDistributionChannelsUnsupportedErrorQueryBuilderDsl
+                    .of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asStoreUnresolved(
+            Function<com.commercetools.api.predicates.query.agent.GraphQLAgentStoreUnresolvedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.GraphQLAgentStoreUnresolvedErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.agent.GraphQLAgentStoreUnresolvedErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asAnonymousIdAlreadyInUse(
             Function<com.commercetools.api.predicates.query.error.GraphQLAnonymousIdAlreadyInUseErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLAnonymousIdAlreadyInUseErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

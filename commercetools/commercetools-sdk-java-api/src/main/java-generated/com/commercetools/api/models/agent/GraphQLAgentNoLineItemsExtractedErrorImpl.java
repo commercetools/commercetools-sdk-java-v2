@@ -1,5 +1,5 @@
 
-package com.commercetools.api.models.error;
+package com.commercetools.api.models.agent;
 
 import java.time.*;
 import java.util.*;
@@ -19,11 +19,10 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Returned when a circular reference is detected among Extension dependencies.</p>
- *  <p>The <code>message</code> lists the <code>id</code> of each Extension in the detected cycle, starting and ending with the same Extension.</p>
+ *  <p>Returned by a <span>/responses</span> request when no Line Items could be extracted from the provided <code>prompt</code> or files.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class GraphQLExtensionCircularDependencyErrorImpl implements GraphQLExtensionCircularDependencyError, ModelBase {
+public class GraphQLAgentNoLineItemsExtractedErrorImpl implements GraphQLAgentNoLineItemsExtractedError, ModelBase {
 
     private String code;
 
@@ -33,17 +32,17 @@ public class GraphQLExtensionCircularDependencyErrorImpl implements GraphQLExten
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLExtensionCircularDependencyErrorImpl(
+    GraphQLAgentNoLineItemsExtractedErrorImpl(
             @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.values = values;
-        this.code = EXTENSION_CIRCULAR_DEPENDENCY;
+        this.code = NO_LINE_ITEMS_EXTRACTED;
     }
 
     /**
      * create empty instance
      */
-    public GraphQLExtensionCircularDependencyErrorImpl() {
-        this.code = EXTENSION_CIRCULAR_DEPENDENCY;
+    public GraphQLAgentNoLineItemsExtractedErrorImpl() {
+        this.code = NO_LINE_ITEMS_EXTRACTED;
     }
 
     /**
@@ -77,7 +76,7 @@ public class GraphQLExtensionCircularDependencyErrorImpl implements GraphQLExten
         if (o == null || getClass() != o.getClass())
             return false;
 
-        GraphQLExtensionCircularDependencyErrorImpl that = (GraphQLExtensionCircularDependencyErrorImpl) o;
+        GraphQLAgentNoLineItemsExtractedErrorImpl that = (GraphQLAgentNoLineItemsExtractedErrorImpl) o;
 
         return new EqualsBuilder().append(code, that.code)
                 .append(values, that.values)
@@ -99,7 +98,7 @@ public class GraphQLExtensionCircularDependencyErrorImpl implements GraphQLExten
     }
 
     @Override
-    public GraphQLExtensionCircularDependencyError copyDeep() {
-        return GraphQLExtensionCircularDependencyError.deepCopy(this);
+    public GraphQLAgentNoLineItemsExtractedError copyDeep() {
+        return GraphQLAgentNoLineItemsExtractedError.deepCopy(this);
     }
 }

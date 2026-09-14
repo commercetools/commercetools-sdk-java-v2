@@ -11,6 +11,70 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLErrorObjectBuilder {
 
+    public com.commercetools.api.models.agent.GraphQLAgentBusinessUnitAmbiguousErrorBuilder businessUnitAmbiguousBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentBusinessUnitAmbiguousErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.GraphQLAgentBusinessUnitLimitExceededErrorBuilder businessUnitLimitExceededBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentBusinessUnitLimitExceededErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.GraphQLAgentBusinessUnitUnresolvedErrorBuilder businessUnitUnresolvedBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentBusinessUnitUnresolvedErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.GraphQLAgentExtractionFailedErrorBuilder extractionFailedBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentExtractionFailedErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.GraphQLAgentFeatureDisabledErrorBuilder featureDisabledBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentFeatureDisabledErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.GraphQLAgentMissingCountryErrorBuilder missingCountryBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentMissingCountryErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.GraphQLAgentMissingCustomerEmailErrorBuilder missingCustomerEmailBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentMissingCustomerEmailErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.GraphQLAgentMissingEntityTypeErrorBuilder missingEntityTypeBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentMissingEntityTypeErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.GraphQLAgentNoLineItemsExtractedErrorBuilder noLineItemsExtractedBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentNoLineItemsExtractedErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.GraphQLAgentOutOfScopeErrorBuilder outOfScopeBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentOutOfScopeErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.GraphQLAgentProductSearchNotEnabledErrorBuilder productSearchNotEnabledBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentProductSearchNotEnabledErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.GraphQLAgentProductsNotFoundErrorBuilder productsNotFoundBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentProductsNotFoundErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.GraphQLAgentQuoteRequestCreationFailedErrorBuilder quoteRequestCreationFailedBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentQuoteRequestCreationFailedErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.GraphQLAgentStoreAmbiguousErrorBuilder storeAmbiguousBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentStoreAmbiguousErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.GraphQLAgentStoreDistributionChannelsUnsupportedErrorBuilder storeDistributionChannelsUnsupportedBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentStoreDistributionChannelsUnsupportedErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.GraphQLAgentStoreUnresolvedErrorBuilder storeUnresolvedBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentStoreUnresolvedErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.GraphQLAnonymousIdAlreadyInUseErrorBuilder anonymousIdAlreadyInUseBuilder() {
         return com.commercetools.api.models.error.GraphQLAnonymousIdAlreadyInUseErrorBuilder.of();
     }

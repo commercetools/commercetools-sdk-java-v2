@@ -115,6 +115,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
 
     /**
      *  <p>State within the country, such as Texas in the United States. The value is case-sensitive and must use the same casing as the <code>state</code> value in the Cart <code>shippingAddress</code>.</p>
+     *  <p>A TaxRate whose <code>state</code> is omitted does <strong>not</strong> act as a wildcard: it only matches a Cart whose <code>shippingAddress</code> also has no <code>state</code> value. To apply the same rate across states, either define an individual TaxRate for each state, or use the <code>region</code> field or a Custom Field on the shipping address as described in <span>Address matching</span>.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -269,6 +270,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
 
     /**
      *  <p>State within the country, such as Texas in the United States. The value is case-sensitive and must use the same casing as the <code>state</code> value in the Cart <code>shippingAddress</code>.</p>
+     *  <p>A TaxRate whose <code>state</code> is omitted does <strong>not</strong> act as a wildcard: it only matches a Cart whose <code>shippingAddress</code> also has no <code>state</code> value. To apply the same rate across states, either define an individual TaxRate for each state, or use the <code>region</code> field or a Custom Field on the shipping address as described in <span>Address matching</span>.</p>
      * @return state
      */
 

@@ -251,6 +251,17 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public List<String> getDiscountCodes();
 
     /**
+     *  <ul>
+     *   <li>If set to <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Cart. Matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> are ignored, and Discount Codes cannot be added.</li>
+     *   <li>If set to <code>false</code>, Cart Discounts, Discount Codes, and Direct Discounts apply to the Cart.</li>
+     *  </ul>
+     * @return directDiscountsIgnoreCartDiscounts
+     */
+
+    @JsonProperty("directDiscountsIgnoreCartDiscounts")
+    public Boolean getDirectDiscountsIgnoreCartDiscounts();
+
+    /**
      *  <p>Used for <span>Line Item price selection</span>. If used for <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/carts:POST" rel="nofollow">Create Cart in Store</a>, the provided country must be one of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store's</a> <code>countries</code>.</p>
      * @return country
      */
@@ -535,6 +546,16 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public void setDiscountCodes(final List<String> discountCodes);
 
     /**
+     *  <ul>
+     *   <li>If set to <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Cart. Matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> are ignored, and Discount Codes cannot be added.</li>
+     *   <li>If set to <code>false</code>, Cart Discounts, Discount Codes, and Direct Discounts apply to the Cart.</li>
+     *  </ul>
+     * @param directDiscountsIgnoreCartDiscounts value to be set
+     */
+
+    public void setDirectDiscountsIgnoreCartDiscounts(final Boolean directDiscountsIgnoreCartDiscounts);
+
+    /**
      *  <p>Used for <span>Line Item price selection</span>. If used for <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/carts:POST" rel="nofollow">Create Cart in Store</a>, the provided country must be one of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store's</a> <code>countries</code>.</p>
      * @param country value to be set
      */
@@ -618,6 +639,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
         instance.setShipping(template.getShipping());
         instance.setItemShippingAddresses(template.getItemShippingAddresses());
         instance.setDiscountCodes(template.getDiscountCodes());
+        instance.setDirectDiscountsIgnoreCartDiscounts(template.getDirectDiscountsIgnoreCartDiscounts());
         instance.setCountry(template.getCountry());
         instance.setLocale(template.getLocale());
         instance.setOrigin(template.getOrigin());
@@ -692,6 +714,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setDiscountCodes(Optional.ofNullable(template.getDiscountCodes()).map(ArrayList::new).orElse(null));
+        instance.setDirectDiscountsIgnoreCartDiscounts(template.getDirectDiscountsIgnoreCartDiscounts());
         instance.setCountry(template.getCountry());
         instance.setLocale(template.getLocale());
         instance.setOrigin(template.getOrigin());

@@ -335,6 +335,17 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
     public List<DirectDiscount> getDirectDiscounts();
 
     /**
+     *  <ul>
+     *   <li>If <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Quote. Matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> are ignored, and Discount Codes cannot be added.</li>
+     *   <li>If <code>false</code>, Cart Discounts, Discount Codes, and Direct Discounts apply to the Quote.</li>
+     *  </ul>
+     * @return directDiscountsIgnoreCartDiscounts
+     */
+
+    @JsonProperty("directDiscountsIgnoreCartDiscounts")
+    public Boolean getDirectDiscountsIgnoreCartDiscounts();
+
+    /**
      *  <p>Custom Fields on the Quote.</p>
      * @return custom
      */
@@ -631,6 +642,16 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
     public void setDirectDiscounts(final List<DirectDiscount> directDiscounts);
 
     /**
+     *  <ul>
+     *   <li>If <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Quote. Matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> are ignored, and Discount Codes cannot be added.</li>
+     *   <li>If <code>false</code>, Cart Discounts, Discount Codes, and Direct Discounts apply to the Quote.</li>
+     *  </ul>
+     * @param directDiscountsIgnoreCartDiscounts value to be set
+     */
+
+    public void setDirectDiscountsIgnoreCartDiscounts(final Boolean directDiscountsIgnoreCartDiscounts);
+
+    /**
      *  <p>Custom Fields on the Quote.</p>
      * @param custom value to be set
      */
@@ -712,6 +733,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
         instance.setShippingRateInput(template.getShippingRateInput());
         instance.setItemShippingAddresses(template.getItemShippingAddresses());
         instance.setDirectDiscounts(template.getDirectDiscounts());
+        instance.setDirectDiscountsIgnoreCartDiscounts(template.getDirectDiscountsIgnoreCartDiscounts());
         instance.setCustom(template.getCustom());
         instance.setQuoteState(template.getQuoteState());
         instance.setState(template.getState());
@@ -787,6 +809,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
                         .map(com.commercetools.api.models.cart.DirectDiscount::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setDirectDiscountsIgnoreCartDiscounts(template.getDirectDiscountsIgnoreCartDiscounts());
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         instance.setQuoteState(template.getQuoteState());
         instance.setState(com.commercetools.api.models.state.StateReference.deepCopy(template.getState()));

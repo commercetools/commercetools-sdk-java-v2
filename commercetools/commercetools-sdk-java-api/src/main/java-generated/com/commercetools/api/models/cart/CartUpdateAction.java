@@ -455,6 +455,14 @@ public interface CartUpdateAction extends com.commercetools.api.models.ResourceU
     }
 
     /**
+     * builder for setDirectDiscountsIgnoreCartDiscounts subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.cart.CartSetDirectDiscountsIgnoreCartDiscountsActionBuilder setDirectDiscountsIgnoreCartDiscountsBuilder() {
+        return com.commercetools.api.models.cart.CartSetDirectDiscountsIgnoreCartDiscountsActionBuilder.of();
+    }
+
+    /**
      * builder for setEstimatedDelivery subtype
      * @return builder
      */

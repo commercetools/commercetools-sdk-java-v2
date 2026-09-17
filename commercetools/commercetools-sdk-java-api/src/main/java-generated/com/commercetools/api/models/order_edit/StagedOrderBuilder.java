@@ -129,6 +129,9 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     @Nullable
     private java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts;
 
+    @Nullable
+    private Boolean directDiscountsIgnoreCartDiscounts;
+
     private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> refusedGifts;
 
     @Nullable
@@ -1170,7 +1173,8 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Discount Codes added to the Order. An Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     *  <p>Discount Codes added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
      * @param discountCodes value to be set
      * @return Builder
      */
@@ -1182,7 +1186,8 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Discount Codes added to the Order. An Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     *  <p>Discount Codes added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
      * @param discountCodes value to be set
      * @return Builder
      */
@@ -1194,7 +1199,8 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Discount Codes added to the Order. An Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     *  <p>Discount Codes added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
      * @param discountCodes value to be set
      * @return Builder
      */
@@ -1209,7 +1215,8 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Discount Codes added to the Order. An Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     *  <p>Discount Codes added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
      * @param builder function to build the discountCodes value
      * @return Builder
      */
@@ -1224,7 +1231,8 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Discount Codes added to the Order. An Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     *  <p>Discount Codes added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
      * @param builder function to build the discountCodes value
      * @return Builder
      */
@@ -1237,7 +1245,8 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Discount Codes added to the Order. An Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     *  <p>Discount Codes added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
      * @param builder function to build the discountCodes value
      * @return Builder
      */
@@ -1248,7 +1257,8 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Discount Codes added to the Order. An Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     *  <p>Discount Codes added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
      * @param builder function to build the discountCodes value
      * @return Builder
      */
@@ -1259,7 +1269,8 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Direct Discounts added to the Order. An Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     *  <p>Direct Discounts added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
      * @param directDiscounts value to be set
      * @return Builder
      */
@@ -1271,7 +1282,8 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Direct Discounts added to the Order. An Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     *  <p>Direct Discounts added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
      * @param directDiscounts value to be set
      * @return Builder
      */
@@ -1283,7 +1295,8 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Direct Discounts added to the Order. An Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     *  <p>Direct Discounts added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
      * @param directDiscounts value to be set
      * @return Builder
      */
@@ -1298,7 +1311,8 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Direct Discounts added to the Order. An Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     *  <p>Direct Discounts added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
      * @param builder function to build the directDiscounts value
      * @return Builder
      */
@@ -1313,7 +1327,8 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Direct Discounts added to the Order. An Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     *  <p>Direct Discounts added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
      * @param builder function to build the directDiscounts value
      * @return Builder
      */
@@ -1326,7 +1341,8 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Direct Discounts added to the Order. An Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     *  <p>Direct Discounts added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
      * @param builder function to build the directDiscounts value
      * @return Builder
      */
@@ -1337,7 +1353,8 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Direct Discounts added to the Order. An Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     *  <p>Direct Discounts added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
      * @param builder function to build the directDiscounts value
      * @return Builder
      */
@@ -1345,6 +1362,21 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     public StagedOrderBuilder setDirectDiscounts(
             Function<com.commercetools.api.models.cart.DirectDiscountBuilder, com.commercetools.api.models.cart.DirectDiscount> builder) {
         return directDiscounts(builder.apply(com.commercetools.api.models.cart.DirectDiscountBuilder.of()));
+    }
+
+    /**
+     *  <ul>
+     *   <li>If <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Order. Matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> are ignored, and Discount Codes cannot be added.</li>
+     *   <li>If <code>false</code>, Cart Discounts, Discount Codes, and Direct Discounts apply to the Order.</li>
+     *  </ul>
+     * @param directDiscountsIgnoreCartDiscounts value to be set
+     * @return Builder
+     */
+
+    public StagedOrderBuilder directDiscountsIgnoreCartDiscounts(
+            @Nullable final Boolean directDiscountsIgnoreCartDiscounts) {
+        this.directDiscountsIgnoreCartDiscounts = directDiscountsIgnoreCartDiscounts;
+        return this;
     }
 
     /**
@@ -2339,7 +2371,8 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Discount Codes added to the Order. An Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     *  <p>Discount Codes added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
      * @return discountCodes
      */
 
@@ -2349,13 +2382,27 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Direct Discounts added to the Order. An Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     *  <p>Direct Discounts added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
      * @return directDiscounts
      */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.cart.DirectDiscount> getDirectDiscounts() {
         return this.directDiscounts;
+    }
+
+    /**
+     *  <ul>
+     *   <li>If <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Order. Matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> are ignored, and Discount Codes cannot be added.</li>
+     *   <li>If <code>false</code>, Cart Discounts, Discount Codes, and Direct Discounts apply to the Order.</li>
+     *  </ul>
+     * @return directDiscountsIgnoreCartDiscounts
+     */
+
+    @Nullable
+    public Boolean getDirectDiscountsIgnoreCartDiscounts() {
+        return this.directDiscountsIgnoreCartDiscounts;
     }
 
     /**
@@ -2577,9 +2624,9 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
             taxedPrice, taxedShippingPrice, discountOnTotalPrice, priceRoundingMode, taxMode, taxRoundingMode,
             taxCalculationMode, inventoryMode, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo,
             shippingRateInput, shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts,
-            refusedGifts, paymentInfo, country, locale, origin, cart, quote, recurringOrder, orderState, shipmentState,
-            paymentState, state, syncInfo, returnInfo, discountTypeCombination, lastMessageSequenceNumber, custom,
-            completedAt, lastModifiedBy, createdBy);
+            directDiscountsIgnoreCartDiscounts, refusedGifts, paymentInfo, country, locale, origin, cart, quote,
+            recurringOrder, orderState, shipmentState, paymentState, state, syncInfo, returnInfo,
+            discountTypeCombination, lastMessageSequenceNumber, custom, completedAt, lastModifiedBy, createdBy);
     }
 
     /**
@@ -2592,9 +2639,9 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
             taxedPrice, taxedShippingPrice, discountOnTotalPrice, priceRoundingMode, taxMode, taxRoundingMode,
             taxCalculationMode, inventoryMode, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo,
             shippingRateInput, shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts,
-            refusedGifts, paymentInfo, country, locale, origin, cart, quote, recurringOrder, orderState, shipmentState,
-            paymentState, state, syncInfo, returnInfo, discountTypeCombination, lastMessageSequenceNumber, custom,
-            completedAt, lastModifiedBy, createdBy);
+            directDiscountsIgnoreCartDiscounts, refusedGifts, paymentInfo, country, locale, origin, cart, quote,
+            recurringOrder, orderState, shipmentState, paymentState, state, syncInfo, returnInfo,
+            discountTypeCombination, lastMessageSequenceNumber, custom, completedAt, lastModifiedBy, createdBy);
     }
 
     /**
@@ -2646,6 +2693,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         builder.itemShippingAddresses = template.getItemShippingAddresses();
         builder.discountCodes = template.getDiscountCodes();
         builder.directDiscounts = template.getDirectDiscounts();
+        builder.directDiscountsIgnoreCartDiscounts = template.getDirectDiscountsIgnoreCartDiscounts();
         builder.refusedGifts = template.getRefusedGifts();
         builder.paymentInfo = template.getPaymentInfo();
         builder.country = template.getCountry();

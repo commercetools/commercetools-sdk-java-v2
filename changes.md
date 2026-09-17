@@ -78,6 +78,7 @@
 - added type `GraphQLAgentStoreDistributionChannelsUnsupportedError`
 - added type `GraphQLAgentStoreUnresolvedError`
 - added type `EstimatedDelivery`
+- added type `CartSetDirectDiscountsIgnoreCartDiscountsAction`
 - added type `CartSetEstimatedDeliveryAction`
 - added type `ExtensionCircularDependencyError`
 - added type `UnauthorizedError`
@@ -141,6 +142,7 @@
 - added type `StoreRefundPolicyUrlSetMessagePayload`
 - added type `StoreShippingPolicyUrlSetMessagePayload`
 - added type `StoreTermsOfServiceUrlSetMessagePayload`
+- added type `StagedOrderSetDirectDiscountsIgnoreCartDiscountsAction`
 - added type `OrderSetEstimatedDeliveryAction`
 - added type `ProductTailoringSetKeyAction`
 - added type `ShippingMethodSetCarrierAction`
@@ -165,6 +167,10 @@
 <details>
 <summary>Added Property(s)</summary>
 
+- added property `directDiscountsIgnoreCartDiscounts` to type `Cart`
+- added property `directDiscountsIgnoreCartDiscounts` to type `CartDraft`
+- added property `participateInBestDealSelection` to type `DirectDiscount`
+- added property `participateInBestDealSelection` to type `DirectDiscountDraft`
 - added property `estimatedDelivery` to type `ShippingInfo`
 - added property `estimatedDelivery` to type `CartAddShippingMethodAction`
 - added property `estimatedDelivery` to type `CartSetCustomShippingMethodAction`
@@ -186,9 +192,13 @@
 - added property `product` to type `VariantPublishedMessagePayload`
 - added property `product` to type `VariantSkuSetMessagePayload`
 - added property `product` to type `VariantStagedChangesRemovedMessagePayload`
+- added property `directDiscountsIgnoreCartDiscounts` to type `StagedOrder`
 - added property `taxedPrice` to type `CustomLineItemImportDraft`
 - added property `taxedPrice` to type `LineItemImportDraft`
+- added property `directDiscountsIgnoreCartDiscounts` to type `Order`
 - added property `taxedPrice` to type `ShippingInfoImportDraft`
+- added property `directDiscountsIgnoreCartDiscounts` to type `QuoteRequest`
+- added property `directDiscountsIgnoreCartDiscounts` to type `Quote`
 - added property `carrier` to type `ShippingMethod`
 - added property `carrier` to type `ShippingMethodDraft`
 - added property `storefront` to type `Store`

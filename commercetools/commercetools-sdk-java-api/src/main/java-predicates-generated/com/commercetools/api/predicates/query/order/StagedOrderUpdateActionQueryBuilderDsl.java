@@ -412,6 +412,14 @@ public class StagedOrderUpdateActionQueryBuilderDsl {
             StagedOrderUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl> asSetDirectDiscountsIgnoreCartDiscounts(
+            Function<com.commercetools.api.predicates.query.order_edit.StagedOrderSetDirectDiscountsIgnoreCartDiscountsActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order_edit.StagedOrderSetDirectDiscountsIgnoreCartDiscountsActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.order_edit.StagedOrderSetDirectDiscountsIgnoreCartDiscountsActionQueryBuilderDsl
+                    .of()),
+            StagedOrderUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl> asSetItemShippingAddressCustomField(
             Function<com.commercetools.api.predicates.query.order_edit.StagedOrderSetItemShippingAddressCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order_edit.StagedOrderSetItemShippingAddressCustomFieldActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(

@@ -215,6 +215,11 @@ public class StagedOrderUpdateActionBuilder {
         return com.commercetools.api.models.order_edit.StagedOrderSetDirectDiscountsActionBuilder.of();
     }
 
+    public com.commercetools.api.models.order_edit.StagedOrderSetDirectDiscountsIgnoreCartDiscountsActionBuilder setDirectDiscountsIgnoreCartDiscountsBuilder() {
+        return com.commercetools.api.models.order_edit.StagedOrderSetDirectDiscountsIgnoreCartDiscountsActionBuilder
+                .of();
+    }
+
     public com.commercetools.api.models.order_edit.StagedOrderSetItemShippingAddressCustomFieldActionBuilder setItemShippingAddressCustomFieldBuilder() {
         return com.commercetools.api.models.order_edit.StagedOrderSetItemShippingAddressCustomFieldActionBuilder.of();
     }

@@ -261,6 +261,7 @@
 
 - added enum `mcp-server` to type `ReferenceTypeId`
 - added enum `variant` to type `AttributeReferenceTypeId`
+- added enum `InMigration` to type `ProductCatalogModel`
 - added enum `variant` to type `ChangeSubscriptionResourceTypeId`
 - added enum `variant` to type `MessageSubscriptionResourceTypeId`
 - added enum `variant` to type `CustomFieldReferenceValue`

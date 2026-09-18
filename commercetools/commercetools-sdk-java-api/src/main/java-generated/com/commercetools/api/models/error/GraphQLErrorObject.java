@@ -21,7 +21,7 @@ import tools.jackson.databind.annotation.*;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     GraphQLErrorObject graphQLErrorObject = GraphQLErrorObject.anonymousIdAlreadyInUseBuilder()
+ *     GraphQLErrorObject graphQLErrorObject = GraphQLErrorObject.businessUnitAmbiguousBuilder()
  *             .build()
  * </code></pre>
  * </div>
@@ -78,6 +78,134 @@ public interface GraphQLErrorObject {
     }
 
     /**
+     * builder for businessUnitAmbiguous subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.GraphQLAgentBusinessUnitAmbiguousErrorBuilder businessUnitAmbiguousBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentBusinessUnitAmbiguousErrorBuilder.of();
+    }
+
+    /**
+     * builder for businessUnitLimitExceeded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.GraphQLAgentBusinessUnitLimitExceededErrorBuilder businessUnitLimitExceededBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentBusinessUnitLimitExceededErrorBuilder.of();
+    }
+
+    /**
+     * builder for businessUnitUnresolved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.GraphQLAgentBusinessUnitUnresolvedErrorBuilder businessUnitUnresolvedBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentBusinessUnitUnresolvedErrorBuilder.of();
+    }
+
+    /**
+     * builder for extractionFailed subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.GraphQLAgentExtractionFailedErrorBuilder extractionFailedBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentExtractionFailedErrorBuilder.of();
+    }
+
+    /**
+     * builder for featureDisabled subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.GraphQLAgentFeatureDisabledErrorBuilder featureDisabledBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentFeatureDisabledErrorBuilder.of();
+    }
+
+    /**
+     * builder for missingCountry subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.GraphQLAgentMissingCountryErrorBuilder missingCountryBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentMissingCountryErrorBuilder.of();
+    }
+
+    /**
+     * builder for missingCustomerEmail subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.GraphQLAgentMissingCustomerEmailErrorBuilder missingCustomerEmailBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentMissingCustomerEmailErrorBuilder.of();
+    }
+
+    /**
+     * builder for missingEntityType subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.GraphQLAgentMissingEntityTypeErrorBuilder missingEntityTypeBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentMissingEntityTypeErrorBuilder.of();
+    }
+
+    /**
+     * builder for noLineItemsExtracted subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.GraphQLAgentNoLineItemsExtractedErrorBuilder noLineItemsExtractedBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentNoLineItemsExtractedErrorBuilder.of();
+    }
+
+    /**
+     * builder for outOfScope subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.GraphQLAgentOutOfScopeErrorBuilder outOfScopeBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentOutOfScopeErrorBuilder.of();
+    }
+
+    /**
+     * builder for productSearchNotEnabled subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.GraphQLAgentProductSearchNotEnabledErrorBuilder productSearchNotEnabledBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentProductSearchNotEnabledErrorBuilder.of();
+    }
+
+    /**
+     * builder for productsNotFound subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.GraphQLAgentProductsNotFoundErrorBuilder productsNotFoundBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentProductsNotFoundErrorBuilder.of();
+    }
+
+    /**
+     * builder for quoteRequestCreationFailed subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.GraphQLAgentQuoteRequestCreationFailedErrorBuilder quoteRequestCreationFailedBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentQuoteRequestCreationFailedErrorBuilder.of();
+    }
+
+    /**
+     * builder for storeAmbiguous subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.GraphQLAgentStoreAmbiguousErrorBuilder storeAmbiguousBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentStoreAmbiguousErrorBuilder.of();
+    }
+
+    /**
+     * builder for storeDistributionChannelsUnsupported subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.GraphQLAgentStoreDistributionChannelsUnsupportedErrorBuilder storeDistributionChannelsUnsupportedBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentStoreDistributionChannelsUnsupportedErrorBuilder.of();
+    }
+
+    /**
+     * builder for storeUnresolved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.GraphQLAgentStoreUnresolvedErrorBuilder storeUnresolvedBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentStoreUnresolvedErrorBuilder.of();
+    }
+
+    /**
      * builder for anonymousIdAlreadyInUse subtype
      * @return builder
      */
@@ -131,14 +259,6 @@ public interface GraphQLErrorObject {
      */
     public static com.commercetools.api.models.error.GraphQLBulkOperationMaxItemsExceededErrorBuilder bulkOperationMaxItemsExceededBuilder() {
         return com.commercetools.api.models.error.GraphQLBulkOperationMaxItemsExceededErrorBuilder.of();
-    }
-
-    /**
-     * builder for circularDependency subtype
-     * @return builder
-     */
-    public static com.commercetools.api.models.error.GraphQLCircularDependencyErrorBuilder circularDependencyBuilder() {
-        return com.commercetools.api.models.error.GraphQLCircularDependencyErrorBuilder.of();
     }
 
     /**
@@ -331,6 +451,14 @@ public interface GraphQLErrorObject {
      */
     public static com.commercetools.api.models.error.GraphQLExtensionChainTooWideErrorBuilder extensionChainTooWideBuilder() {
         return com.commercetools.api.models.error.GraphQLExtensionChainTooWideErrorBuilder.of();
+    }
+
+    /**
+     * builder for extensionCircularDependency subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLExtensionCircularDependencyErrorBuilder extensionCircularDependencyBuilder() {
+        return com.commercetools.api.models.error.GraphQLExtensionCircularDependencyErrorBuilder.of();
     }
 
     /**
@@ -547,14 +675,6 @@ public interface GraphQLErrorObject {
      */
     public static com.commercetools.api.models.error.GraphQLMaxStoreReferencesReachedErrorBuilder maxStoreReferencesReachedBuilder() {
         return com.commercetools.api.models.error.GraphQLMaxStoreReferencesReachedErrorBuilder.of();
-    }
-
-    /**
-     * builder for missingDependency subtype
-     * @return builder
-     */
-    public static com.commercetools.api.models.error.GraphQLMissingDependencyErrorBuilder missingDependencyBuilder() {
-        return com.commercetools.api.models.error.GraphQLMissingDependencyErrorBuilder.of();
     }
 
     /**

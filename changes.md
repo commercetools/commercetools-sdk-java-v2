@@ -6,6 +6,10 @@
 - :warning: removed type `Expansion`
 - :warning: removed type `QueryPredicate`
 - :warning: removed type `Sort`
+- :warning: removed type `CircularDependencyError`
+- :warning: removed type `MissingDependencyError`
+- :warning: removed type `GraphQLCircularDependencyError`
+- :warning: removed type `GraphQLMissingDependencyError`
 </details>
 
 
@@ -57,9 +61,28 @@
 - added type `AgentStoreAmbiguousError`
 - added type `AgentStoreDistributionChannelsUnsupportedError`
 - added type `AgentStoreUnresolvedError`
+- added type `GraphQLAgentBusinessUnitAmbiguousError`
+- added type `GraphQLAgentBusinessUnitLimitExceededError`
+- added type `GraphQLAgentBusinessUnitUnresolvedError`
+- added type `GraphQLAgentExtractionFailedError`
+- added type `GraphQLAgentFeatureDisabledError`
+- added type `GraphQLAgentMissingCountryError`
+- added type `GraphQLAgentMissingCustomerEmailError`
+- added type `GraphQLAgentMissingEntityTypeError`
+- added type `GraphQLAgentNoLineItemsExtractedError`
+- added type `GraphQLAgentOutOfScopeError`
+- added type `GraphQLAgentProductSearchNotEnabledError`
+- added type `GraphQLAgentProductsNotFoundError`
+- added type `GraphQLAgentQuoteRequestCreationFailedError`
+- added type `GraphQLAgentStoreAmbiguousError`
+- added type `GraphQLAgentStoreDistributionChannelsUnsupportedError`
+- added type `GraphQLAgentStoreUnresolvedError`
 - added type `EstimatedDelivery`
+- added type `CartSetDirectDiscountsIgnoreCartDiscountsAction`
 - added type `CartSetEstimatedDeliveryAction`
+- added type `ExtensionCircularDependencyError`
 - added type `UnauthorizedError`
+- added type `GraphQLExtensionCircularDependencyError`
 - added type `GraphQLUnauthorizedError`
 - added type `CommerceMcpServerConfig`
 - added type `CommerceMcpServerConfigDraft`
@@ -119,6 +142,7 @@
 - added type `StoreRefundPolicyUrlSetMessagePayload`
 - added type `StoreShippingPolicyUrlSetMessagePayload`
 - added type `StoreTermsOfServiceUrlSetMessagePayload`
+- added type `StagedOrderSetDirectDiscountsIgnoreCartDiscountsAction`
 - added type `OrderSetEstimatedDeliveryAction`
 - added type `ProductTailoringSetKeyAction`
 - added type `ShippingMethodSetCarrierAction`
@@ -143,6 +167,10 @@
 <details>
 <summary>Added Property(s)</summary>
 
+- added property `directDiscountsIgnoreCartDiscounts` to type `Cart`
+- added property `directDiscountsIgnoreCartDiscounts` to type `CartDraft`
+- added property `participateInBestDealSelection` to type `DirectDiscount`
+- added property `participateInBestDealSelection` to type `DirectDiscountDraft`
 - added property `estimatedDelivery` to type `ShippingInfo`
 - added property `estimatedDelivery` to type `CartAddShippingMethodAction`
 - added property `estimatedDelivery` to type `CartSetCustomShippingMethodAction`
@@ -164,9 +192,13 @@
 - added property `product` to type `VariantPublishedMessagePayload`
 - added property `product` to type `VariantSkuSetMessagePayload`
 - added property `product` to type `VariantStagedChangesRemovedMessagePayload`
+- added property `directDiscountsIgnoreCartDiscounts` to type `StagedOrder`
 - added property `taxedPrice` to type `CustomLineItemImportDraft`
 - added property `taxedPrice` to type `LineItemImportDraft`
+- added property `directDiscountsIgnoreCartDiscounts` to type `Order`
 - added property `taxedPrice` to type `ShippingInfoImportDraft`
+- added property `directDiscountsIgnoreCartDiscounts` to type `QuoteRequest`
+- added property `directDiscountsIgnoreCartDiscounts` to type `Quote`
 - added property `carrier` to type `ShippingMethod`
 - added property `carrier` to type `ShippingMethodDraft`
 - added property `storefront` to type `Store`
@@ -227,7 +259,9 @@
 <details>
 <summary>Added Enum(s)</summary>
 
+- added enum `mcp-server` to type `ReferenceTypeId`
 - added enum `variant` to type `AttributeReferenceTypeId`
+- added enum `InMigration` to type `ProductCatalogModel`
 - added enum `variant` to type `ChangeSubscriptionResourceTypeId`
 - added enum `variant` to type `MessageSubscriptionResourceTypeId`
 - added enum `variant` to type `CustomFieldReferenceValue`

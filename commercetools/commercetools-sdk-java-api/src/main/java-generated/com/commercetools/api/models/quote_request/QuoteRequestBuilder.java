@@ -111,6 +111,9 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     private java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts;
 
     @Nullable
+    private Boolean directDiscountsIgnoreCartDiscounts;
+
+    @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
     @Nullable
@@ -1031,6 +1034,21 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
+     *  <ul>
+     *   <li>If <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Quote Request. Matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> are ignored, and Discount Codes cannot be added.</li>
+     *   <li>If <code>false</code>, Cart Discounts, Discount Codes, and Direct Discounts apply to the Quote Request.</li>
+     *  </ul>
+     * @param directDiscountsIgnoreCartDiscounts value to be set
+     * @return Builder
+     */
+
+    public QuoteRequestBuilder directDiscountsIgnoreCartDiscounts(
+            @Nullable final Boolean directDiscountsIgnoreCartDiscounts) {
+        this.directDiscountsIgnoreCartDiscounts = directDiscountsIgnoreCartDiscounts;
+        return this;
+    }
+
+    /**
      *  <p>Custom Fields of the Quote Request.</p>
      * @param builder function to build the custom value
      * @return Builder
@@ -1463,6 +1481,19 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
+     *  <ul>
+     *   <li>If <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Quote Request. Matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> are ignored, and Discount Codes cannot be added.</li>
+     *   <li>If <code>false</code>, Cart Discounts, Discount Codes, and Direct Discounts apply to the Quote Request.</li>
+     *  </ul>
+     * @return directDiscountsIgnoreCartDiscounts
+     */
+
+    @Nullable
+    public Boolean getDirectDiscountsIgnoreCartDiscounts() {
+        return this.directDiscountsIgnoreCartDiscounts;
+    }
+
+    /**
      *  <p>Custom Fields of the Quote Request.</p>
      * @return custom
      */
@@ -1534,7 +1565,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
             quoteRequestState, comment, customer, customerGroup, store, lineItems, customLineItems, totalPrice,
             taxedPrice, shippingAddress, billingAddress, inventoryMode, taxMode, priceRoundingMode, taxRoundingMode,
             taxCalculationMode, country, shippingInfo, paymentInfo, shippingRateInput, itemShippingAddresses,
-            directDiscounts, custom, state, purchaseOrderNumber, cart, businessUnit);
+            directDiscounts, directDiscountsIgnoreCartDiscounts, custom, state, purchaseOrderNumber, cart,
+            businessUnit);
     }
 
     /**
@@ -1546,7 +1578,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
             quoteRequestState, comment, customer, customerGroup, store, lineItems, customLineItems, totalPrice,
             taxedPrice, shippingAddress, billingAddress, inventoryMode, taxMode, priceRoundingMode, taxRoundingMode,
             taxCalculationMode, country, shippingInfo, paymentInfo, shippingRateInput, itemShippingAddresses,
-            directDiscounts, custom, state, purchaseOrderNumber, cart, businessUnit);
+            directDiscounts, directDiscountsIgnoreCartDiscounts, custom, state, purchaseOrderNumber, cart,
+            businessUnit);
     }
 
     /**
@@ -1593,6 +1626,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
         builder.shippingRateInput = template.getShippingRateInput();
         builder.itemShippingAddresses = template.getItemShippingAddresses();
         builder.directDiscounts = template.getDirectDiscounts();
+        builder.directDiscountsIgnoreCartDiscounts = template.getDirectDiscountsIgnoreCartDiscounts();
         builder.custom = template.getCustom();
         builder.state = template.getState();
         builder.purchaseOrderNumber = template.getPurchaseOrderNumber();

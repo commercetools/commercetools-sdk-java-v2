@@ -280,14 +280,6 @@ public interface ErrorObject {
     }
 
     /**
-     * builder for circularDependency subtype
-     * @return builder
-     */
-    public static com.commercetools.api.models.error.CircularDependencyErrorBuilder circularDependencyBuilder() {
-        return com.commercetools.api.models.error.CircularDependencyErrorBuilder.of();
-    }
-
-    /**
      * builder for concurrentModification subtype
      * @return builder
      */
@@ -477,6 +469,14 @@ public interface ErrorObject {
      */
     public static com.commercetools.api.models.error.ExtensionChainTooWideErrorBuilder extensionChainTooWideBuilder() {
         return com.commercetools.api.models.error.ExtensionChainTooWideErrorBuilder.of();
+    }
+
+    /**
+     * builder for extensionCircularDependency subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.ExtensionCircularDependencyErrorBuilder extensionCircularDependencyBuilder() {
+        return com.commercetools.api.models.error.ExtensionCircularDependencyErrorBuilder.of();
     }
 
     /**
@@ -693,14 +693,6 @@ public interface ErrorObject {
      */
     public static com.commercetools.api.models.error.MaxStoreReferencesReachedErrorBuilder maxStoreReferencesReachedBuilder() {
         return com.commercetools.api.models.error.MaxStoreReferencesReachedErrorBuilder.of();
-    }
-
-    /**
-     * builder for missingDependency subtype
-     * @return builder
-     */
-    public static com.commercetools.api.models.error.MissingDependencyErrorBuilder missingDependencyBuilder() {
-        return com.commercetools.api.models.error.MissingDependencyErrorBuilder.of();
     }
 
     /**

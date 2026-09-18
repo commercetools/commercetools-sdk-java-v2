@@ -335,7 +335,8 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public List<Address> getItemShippingAddresses();
 
     /**
-     *  <p>Discount Codes added to the Order. An Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     *  <p>Discount Codes added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
      * @return discountCodes
      */
     @Valid
@@ -343,12 +344,24 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public List<DiscountCodeInfo> getDiscountCodes();
 
     /**
-     *  <p>Direct Discounts added to the Order. An Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     *  <p>Direct Discounts added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
      * @return directDiscounts
      */
     @Valid
     @JsonProperty("directDiscounts")
     public List<DirectDiscount> getDirectDiscounts();
+
+    /**
+     *  <ul>
+     *   <li>If <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Order. Matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> are ignored, and Discount Codes cannot be added.</li>
+     *   <li>If <code>false</code>, Cart Discounts, Discount Codes, and Direct Discounts apply to the Order.</li>
+     *  </ul>
+     * @return directDiscountsIgnoreCartDiscounts
+     */
+
+    @JsonProperty("directDiscountsIgnoreCartDiscounts")
+    public Boolean getDirectDiscountsIgnoreCartDiscounts();
 
     /**
      *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemMode" rel="nofollow">LineItemMode</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">removed</a> from the Order.</p>
@@ -783,7 +796,8 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public void setItemShippingAddresses(final List<Address> itemShippingAddresses);
 
     /**
-     *  <p>Discount Codes added to the Order. An Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     *  <p>Discount Codes added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
      * @param discountCodes values to be set
      */
 
@@ -791,14 +805,16 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public void setDiscountCodes(final DiscountCodeInfo... discountCodes);
 
     /**
-     *  <p>Discount Codes added to the Order. An Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     *  <p>Discount Codes added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
      * @param discountCodes values to be set
      */
 
     public void setDiscountCodes(final List<DiscountCodeInfo> discountCodes);
 
     /**
-     *  <p>Direct Discounts added to the Order. An Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     *  <p>Direct Discounts added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
      * @param directDiscounts values to be set
      */
 
@@ -806,11 +822,22 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public void setDirectDiscounts(final DirectDiscount... directDiscounts);
 
     /**
-     *  <p>Direct Discounts added to the Order. An Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     *  <p>Direct Discounts added to the Order.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, an Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
      * @param directDiscounts values to be set
      */
 
     public void setDirectDiscounts(final List<DirectDiscount> directDiscounts);
+
+    /**
+     *  <ul>
+     *   <li>If <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Order. Matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> are ignored, and Discount Codes cannot be added.</li>
+     *   <li>If <code>false</code>, Cart Discounts, Discount Codes, and Direct Discounts apply to the Order.</li>
+     *  </ul>
+     * @param directDiscountsIgnoreCartDiscounts value to be set
+     */
+
+    public void setDirectDiscountsIgnoreCartDiscounts(final Boolean directDiscountsIgnoreCartDiscounts);
 
     /**
      *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItemMode" rel="nofollow">LineItemMode</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:StagedOrderRemoveLineItemAction" rel="nofollow">removed</a> from the Order.</p>
@@ -1039,6 +1066,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
         instance.setItemShippingAddresses(template.getItemShippingAddresses());
         instance.setDiscountCodes(template.getDiscountCodes());
         instance.setDirectDiscounts(template.getDirectDiscounts());
+        instance.setDirectDiscountsIgnoreCartDiscounts(template.getDirectDiscountsIgnoreCartDiscounts());
         instance.setRefusedGifts(template.getRefusedGifts());
         instance.setPaymentInfo(template.getPaymentInfo());
         instance.setCountry(template.getCountry());
@@ -1145,6 +1173,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
                         .map(com.commercetools.api.models.cart.DirectDiscount::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setDirectDiscountsIgnoreCartDiscounts(template.getDirectDiscountsIgnoreCartDiscounts());
         instance.setRefusedGifts(Optional.ofNullable(template.getRefusedGifts())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.cart_discount.CartDiscountReference::deepCopy)

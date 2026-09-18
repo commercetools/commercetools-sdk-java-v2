@@ -256,6 +256,12 @@ public class QuoteRequestQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, QuoteRequestQueryBuilderDsl::of));
     }
 
+    public BooleanComparisonPredicateBuilder<QuoteRequestQueryBuilderDsl> directDiscountsIgnoreCartDiscounts() {
+        return new BooleanComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("directDiscountsIgnoreCartDiscounts")),
+            p -> new CombinationQueryPredicate<>(p, QuoteRequestQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<QuoteRequestQueryBuilderDsl> custom(
             Function<com.commercetools.api.predicates.query.type.CustomFieldsQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.type.CustomFieldsQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

@@ -75,11 +75,23 @@ type Query {
     """
   This field gives access to the resources (such as carts) that are inside the given store.
   """
-  inStore(key: KeyReferenceInput!): InStore!
+  inStore(
+    key: KeyReferenceInput!
+    """
+    When `false`, in-store product reads return the original (untailored) product information instead of the Store-specific tailored values. Defaults to `true`.
+    """
+    tailored: Boolean = true
+  ): InStore!
     """
   This field gives access to the resources (such as carts) that are inside one of the given stores.
   """
-  inStores(keys: [KeyReferenceInput!]!): InStore!
+  inStores(
+    keys: [KeyReferenceInput!]!
+    """
+    When `false`, in-store product reads return the original (untailored) product information instead of the Store-specific tailored values. Defaults to `true`.
+    """
+    tailored: Boolean = true
+  ): InStore!
     """
   This field gives access to the resources (such as carts) as an associate of a given business unit.
   """
@@ -767,10 +779,20 @@ type Mutation {
     """
     key: String
   ): CustomerGroup
-    createCategory(draft: CategoryDraft!): Category
+    createCategory(
+    draft: CategoryDraft!
+    """
+    The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions.
+    """
+    storeKey: KeyReferenceInput
+  ): Category
     updateCategory(
     version: Long!
     actions: [CategoryUpdateAction!]!
+    """
+    The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions.
+    """
+    storeKey: KeyReferenceInput
     """
     Queries with specified ID
     """
@@ -782,6 +804,10 @@ type Mutation {
   ): Category
     deleteCategory(
     version: Long!
+    """
+    The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions.
+    """
+    storeKey: KeyReferenceInput
     """
     Queries with specified ID
     """
@@ -3981,6 +4007,8 @@ type Category implements Versioned & ReferenceExpandable {
     createdAt: DateTime!
     lastModifiedAt: DateTime!
     assets: [Asset!]!
+    storesRef: [KeyReference!]!
+    stores: [Store!]!
     custom: CustomFieldsType
     createdBy: Initiator
     lastModifiedBy: Initiator
@@ -5236,6 +5264,7 @@ type ExternalTaxRateDraftOutput {
     state: String
     subRates: [SubRate!]!
     includedInPrice: Boolean!
+    taxRoundingTarget: TaxRoundingTarget!
 }
 
 type FacetResultValue {
@@ -5353,6 +5382,17 @@ type InStore implements CartDiscountQueryInterface & CartQueryInterface & Custom
   It gives access to the data that is specific to the customer or the anonymous session linked to the access token.
   """
   me: InStoreMe!
+    category(
+    """
+    Queries with specified ID
+    """
+    id: String
+    """
+    Queries with specified key
+    """
+    key: String
+  ): Category
+    categories(where: String, sort: [String!], limit: Int, offset: Int): CategoryQueryResult!
     shippingMethodsByCart(id: String!): [ShippingMethod!]!
     cartDiscount(
     """
@@ -10973,6 +11013,7 @@ type TaxRate {
     id: String
     key: String
     subRates: [SubRate!]!
+    taxRoundingTarget: TaxRoundingTarget!
 }
 
 type TaxedItemPrice {
@@ -11435,6 +11476,9 @@ type VariantProjection {
     acceptLanguage: [Locale!]
   ): String
     descriptionAllLocales: [LocalizedString!]
+    categoriesRef: [Reference!]!
+    categories: [Category!]!
+    categoryOrderHints: [CategoryOrderHint!]!
     """
   Returns a single price based on the price selection rules.
   """
@@ -12705,6 +12749,19 @@ enum DiscountCombinationMode {
   Stacking
   BestDeal
 }
+enum TaxRoundingTarget {
+  """
+  Default. `taxRoundingMode` is applied to the net price and the tax amount is the exact
+  remainder. E.g. at 20% on `1.23`, the net rounds to `1.02` and the tax is `0.21`.
+  """
+  Net
+  """
+  `taxRoundingMode` is applied to the tax amount and the net price is the exact remainder.
+  E.g. at 20% on `1.23`, the tax rounds to `0.20` and the net is `1.03`.
+  Has no effect when the rate is not included in the price.
+  """
+  Tax
+}
 enum IntervalUnit {
   Days
   Weeks
@@ -13421,6 +13478,10 @@ input AddCartShoppingList {
 input AddCategoryAsset {
     position: Int
     asset: AssetDraftInput!
+}
+
+input AddCategoryStore {
+    store: ResourceIdentifierInput!
 }
 
 input AddChannelRoles {
@@ -14370,6 +14431,7 @@ input CategoryDraft {
     metaKeywords: [LocalizedStringItemInputType!]
     orderHint: String
     parent: ResourceIdentifierInput
+    stores: [ResourceIdentifierInput!]
     assets: [AssetDraftInput!] = []
 }
 
@@ -14380,6 +14442,7 @@ input CategoryOrderHintInput {
 
 input CategoryUpdateAction {
     addAsset: AddCategoryAsset
+    addStore: AddCategoryStore
     changeAssetName: ChangeCategoryAssetName
     changeAssetOrder: ChangeCategoryAssetOrder
     changeName: ChangeCategoryName
@@ -14387,6 +14450,7 @@ input CategoryUpdateAction {
     changeSlug: ChangeCategorySlug
     changeParent: ChangeCategoryParent
     removeAsset: RemoveCategoryAsset
+    removeStore: RemoveCategoryStore
     setAssetCustomField: SetCategoryAssetCustomField
     setAssetCustomType: SetCategoryAssetCustomType
     setAssetDescription: SetCategoryAssetDescription
@@ -14400,6 +14464,7 @@ input CategoryUpdateAction {
     setMetaDescription: SetCategoryMetaDescription
     setMetaKeywords: SetCategoryMetaKeywords
     setMetaTitle: SetCategoryMetaTitle
+    setStores: SetCategoryStores
     setExternalId: SetCategoryExternalId
 }
 
@@ -15661,6 +15726,7 @@ input ExternalTaxRateDraft {
     state: String
     subRates: [SubRateDraft!] = []
     includedInPrice: Boolean = false
+    taxRoundingTarget: TaxRoundingTarget = Net
 }
 
 input FieldDefinitionInput {
@@ -17234,6 +17300,10 @@ input RemoveCategoryAsset {
     assetId: String
 }
 
+input RemoveCategoryStore {
+    store: ResourceIdentifierInput!
+}
+
 input RemoveChannelRoles {
     roles: [ChannelRole!]!
 }
@@ -18153,6 +18223,10 @@ input SetCategoryMetaKeywords {
 
 input SetCategoryMetaTitle {
     metaTitle: [LocalizedStringItemInputType!]
+}
+
+input SetCategoryStores {
+    stores: [ResourceIdentifierInput!]!
 }
 
 input SetChannelAddress {
@@ -20805,6 +20879,7 @@ input TaxRateDraft {
     state: String
     subRates: [SubRateDraft!] = []
     key: String
+    taxRoundingTarget: TaxRoundingTarget = Net
 }
 
 input TaxRateInput {
@@ -20816,6 +20891,7 @@ input TaxRateInput {
     id: String
     key: String
     subRates: [SubRateDraft!] = []
+    taxRoundingTarget: TaxRoundingTarget = Net
 }
 
 input TaxedPriceDraft {

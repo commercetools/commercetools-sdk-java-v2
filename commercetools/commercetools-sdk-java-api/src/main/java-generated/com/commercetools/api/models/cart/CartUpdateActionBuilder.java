@@ -207,6 +207,10 @@ public class CartUpdateActionBuilder {
         return com.commercetools.api.models.cart.CartSetDirectDiscountsActionBuilder.of();
     }
 
+    public com.commercetools.api.models.cart.CartSetDirectDiscountsIgnoreCartDiscountsActionBuilder setDirectDiscountsIgnoreCartDiscountsBuilder() {
+        return com.commercetools.api.models.cart.CartSetDirectDiscountsIgnoreCartDiscountsActionBuilder.of();
+    }
+
     public com.commercetools.api.models.cart.CartSetEstimatedDeliveryActionBuilder setEstimatedDeliveryBuilder() {
         return com.commercetools.api.models.cart.CartSetEstimatedDeliveryActionBuilder.of();
     }

@@ -73,6 +73,8 @@ public class CartDraftImpl implements CartDraft, ModelBase {
 
     private java.util.List<String> discountCodes;
 
+    private Boolean directDiscountsIgnoreCartDiscounts;
+
     private String country;
 
     private String locale;
@@ -113,6 +115,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
             @JsonProperty("shipping") final java.util.List<com.commercetools.api.models.cart.ShippingDraft> shipping,
             @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses,
             @JsonProperty("discountCodes") final java.util.List<String> discountCodes,
+            @JsonProperty("directDiscountsIgnoreCartDiscounts") final Boolean directDiscountsIgnoreCartDiscounts,
             @JsonProperty("country") final String country, @JsonProperty("locale") final String locale,
             @JsonProperty("origin") final com.commercetools.api.models.cart.CartOrigin origin,
             @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification,
@@ -143,6 +146,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
         this.shipping = shipping;
         this.itemShippingAddresses = itemShippingAddresses;
         this.discountCodes = discountCodes;
+        this.directDiscountsIgnoreCartDiscounts = directDiscountsIgnoreCartDiscounts;
         this.country = country;
         this.locale = locale;
         this.origin = origin;
@@ -368,6 +372,17 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
+     *  <ul>
+     *   <li>If set to <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Cart. Matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> are ignored, and Discount Codes cannot be added.</li>
+     *   <li>If set to <code>false</code>, Cart Discounts, Discount Codes, and Direct Discounts apply to the Cart.</li>
+     *  </ul>
+     */
+
+    public Boolean getDirectDiscountsIgnoreCartDiscounts() {
+        return this.directDiscountsIgnoreCartDiscounts;
+    }
+
+    /**
      *  <p>Used for <span>Line Item price selection</span>. If used for <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/carts:POST" rel="nofollow">Create Cart in Store</a>, the provided country must be one of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store's</a> <code>countries</code>.</p>
      */
 
@@ -549,6 +564,10 @@ public class CartDraftImpl implements CartDraft, ModelBase {
         this.discountCodes = discountCodes;
     }
 
+    public void setDirectDiscountsIgnoreCartDiscounts(final Boolean directDiscountsIgnoreCartDiscounts) {
+        this.directDiscountsIgnoreCartDiscounts = directDiscountsIgnoreCartDiscounts;
+    }
+
     public void setCountry(final String country) {
         this.country = country;
     }
@@ -608,6 +627,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
                 .append(shipping, that.shipping)
                 .append(itemShippingAddresses, that.itemShippingAddresses)
                 .append(discountCodes, that.discountCodes)
+                .append(directDiscountsIgnoreCartDiscounts, that.directDiscountsIgnoreCartDiscounts)
                 .append(country, that.country)
                 .append(locale, that.locale)
                 .append(origin, that.origin)
@@ -639,6 +659,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
                 .append(shipping, that.shipping)
                 .append(itemShippingAddresses, that.itemShippingAddresses)
                 .append(discountCodes, that.discountCodes)
+                .append(directDiscountsIgnoreCartDiscounts, that.directDiscountsIgnoreCartDiscounts)
                 .append(country, that.country)
                 .append(locale, that.locale)
                 .append(origin, that.origin)
@@ -675,6 +696,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
                 .append(shipping)
                 .append(itemShippingAddresses)
                 .append(discountCodes)
+                .append(directDiscountsIgnoreCartDiscounts)
                 .append(country)
                 .append(locale)
                 .append(origin)
@@ -711,6 +733,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
                 .append("shipping", shipping)
                 .append("itemShippingAddresses", itemShippingAddresses)
                 .append("discountCodes", discountCodes)
+                .append("directDiscountsIgnoreCartDiscounts", directDiscountsIgnoreCartDiscounts)
                 .append("country", country)
                 .append("locale", locale)
                 .append("origin", origin)

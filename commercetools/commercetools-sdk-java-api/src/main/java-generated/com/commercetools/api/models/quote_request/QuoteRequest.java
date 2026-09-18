@@ -306,6 +306,17 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
     public List<DirectDiscount> getDirectDiscounts();
 
     /**
+     *  <ul>
+     *   <li>If <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Quote Request. Matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> are ignored, and Discount Codes cannot be added.</li>
+     *   <li>If <code>false</code>, Cart Discounts, Discount Codes, and Direct Discounts apply to the Quote Request.</li>
+     *  </ul>
+     * @return directDiscountsIgnoreCartDiscounts
+     */
+
+    @JsonProperty("directDiscountsIgnoreCartDiscounts")
+    public Boolean getDirectDiscountsIgnoreCartDiscounts();
+
+    /**
      *  <p>Custom Fields of the Quote Request.</p>
      * @return custom
      */
@@ -581,6 +592,16 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
     public void setDirectDiscounts(final List<DirectDiscount> directDiscounts);
 
     /**
+     *  <ul>
+     *   <li>If <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Quote Request. Matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> are ignored, and Discount Codes cannot be added.</li>
+     *   <li>If <code>false</code>, Cart Discounts, Discount Codes, and Direct Discounts apply to the Quote Request.</li>
+     *  </ul>
+     * @param directDiscountsIgnoreCartDiscounts value to be set
+     */
+
+    public void setDirectDiscountsIgnoreCartDiscounts(final Boolean directDiscountsIgnoreCartDiscounts);
+
+    /**
      *  <p>Custom Fields of the Quote Request.</p>
      * @param custom value to be set
      */
@@ -659,6 +680,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
         instance.setShippingRateInput(template.getShippingRateInput());
         instance.setItemShippingAddresses(template.getItemShippingAddresses());
         instance.setDirectDiscounts(template.getDirectDiscounts());
+        instance.setDirectDiscountsIgnoreCartDiscounts(template.getDirectDiscountsIgnoreCartDiscounts());
         instance.setCustom(template.getCustom());
         instance.setState(template.getState());
         instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
@@ -729,6 +751,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
                         .map(com.commercetools.api.models.cart.DirectDiscount::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setDirectDiscountsIgnoreCartDiscounts(template.getDirectDiscountsIgnoreCartDiscounts());
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         instance.setState(com.commercetools.api.models.state.StateReference.deepCopy(template.getState()));
         instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());

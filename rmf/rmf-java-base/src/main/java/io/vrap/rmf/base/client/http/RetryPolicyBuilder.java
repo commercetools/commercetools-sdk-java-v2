@@ -3,6 +3,7 @@ package io.vrap.rmf.base.client.http;
 
 import static io.vrap.rmf.base.client.http.HttpStatusCode.INTERNAL_SERVER_ERROR_500;
 import static io.vrap.rmf.base.client.http.HttpStatusCode.SERVICE_UNAVAILABLE_503;
+import static io.vrap.rmf.base.client.http.HttpStatusCode.TOO_MANY_REQUESTS_429;
 import static java.util.Arrays.asList;
 
 import java.time.Duration;
@@ -31,7 +32,8 @@ public class RetryPolicyBuilder {
 
     int DEFAULT_RETRIES = 3;
 
-    List<Integer> DEFAULT_RETRY_STATUS_CODES = asList(INTERNAL_SERVER_ERROR_500, SERVICE_UNAVAILABLE_503);
+    List<Integer> DEFAULT_RETRY_STATUS_CODES = asList(INTERNAL_SERVER_ERROR_500, SERVICE_UNAVAILABLE_503,
+        TOO_MANY_REQUESTS_429);
 
     private static final InternalLogger logger = InternalLogger.getLogger(loggerName);
     private static final Logger classLogger = LoggerFactory.getLogger(PolicyMiddleware.class);
@@ -101,7 +103,7 @@ public class RetryPolicyBuilder {
         return fn
                 .apply(RetryPolicy.<ApiHttpResponse<byte[]>> builder()
                         .withBackoff(delay, maxDelay, ChronoUnit.MILLIS)
-                        .withJitter(0.25)
+                        .withDelayFn(context -> RetryAfterDelay.forContext(context, delay, maxDelay))
                         .withMaxRetries(maxRetries)
                         .onRetry(RetryPolicyBuilder::logEventFailure))
                 .build();
@@ -146,10 +148,30 @@ public class RetryPolicyBuilder {
 
     public static FailsafeRetryPolicyBuilderOptions handleStatusCodes(final List<Integer> statusCodes) {
         return builder -> builder.handleIf((response, throwable) -> {
-            if (throwable instanceof ApiHttpException) {
-                return statusCodes.contains(((ApiHttpException) throwable).getStatusCode());
+            final int statusCode;
+            final ApiHttpHeaders headers;
+
+            if (throwable instanceof ApiHttpException exception) {
+                statusCode = exception.getStatusCode();
+                headers = exception.getHeaders();
             }
-            return statusCodes.contains(response.getStatusCode());
+            else if (response != null) {
+                statusCode = response.getStatusCode();
+                headers = response.getHeaders();
+            }
+            else {
+                return false;
+            }
+
+            if (!statusCodes.contains(statusCode)) {
+                return false;
+            }
+
+            if (statusCode == TOO_MANY_REQUESTS_429) {
+                return RetryAfterDelay.hasTiming(headers, statusCode);
+            }
+
+            return true;
         });
     }
 

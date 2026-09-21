@@ -23,9 +23,14 @@ public class ExternalTaxRateDraftTest {
                 new Object[] { "includedInPrice", ExternalTaxRateDraft.builder().includedInPrice(true) },
                 new Object[] { "country", ExternalTaxRateDraft.builder().country("country") },
                 new Object[] { "state", ExternalTaxRateDraft.builder().state("state") },
-                new Object[] { "subRates", ExternalTaxRateDraft.builder()
-                        .subRates(
-                            Collections.singletonList(new com.commercetools.api.models.tax_category.SubRateImpl())) } };
+                new Object[] { "subRates",
+                        ExternalTaxRateDraft.builder()
+                                .subRates(Collections
+                                        .singletonList(new com.commercetools.api.models.tax_category.SubRateImpl())) },
+                new Object[] { "taxRoundingTarget",
+                        ExternalTaxRateDraft.builder()
+                                .taxRoundingTarget(
+                                    com.commercetools.api.models.tax_category.TaxRoundingTarget.findEnum("Net")) } };
     }
 
     @Test
@@ -69,5 +74,13 @@ public class ExternalTaxRateDraftTest {
         value.setSubRates(Collections.singletonList(new com.commercetools.api.models.tax_category.SubRateImpl()));
         Assertions.assertThat(value.getSubRates())
                 .isEqualTo(Collections.singletonList(new com.commercetools.api.models.tax_category.SubRateImpl()));
+    }
+
+    @Test
+    public void taxRoundingTarget() {
+        ExternalTaxRateDraft value = ExternalTaxRateDraft.of();
+        value.setTaxRoundingTarget(com.commercetools.api.models.tax_category.TaxRoundingTarget.findEnum("Net"));
+        Assertions.assertThat(value.getTaxRoundingTarget())
+                .isEqualTo(com.commercetools.api.models.tax_category.TaxRoundingTarget.findEnum("Net"));
     }
 }

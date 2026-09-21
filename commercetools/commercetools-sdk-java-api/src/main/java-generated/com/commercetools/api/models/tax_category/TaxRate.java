@@ -102,6 +102,15 @@ public interface TaxRate {
     public List<SubRate> getSubRates();
 
     /**
+     *  <p>Determines which of the net price and the tax amount the <code>taxRoundingMode</code> of the Cart or Order is applied to, when this TaxRate is included in the price. Ignored if <code>includedInPrice</code> is <code>false</code>.</p>
+     *  <p>Always returned by the API. Can be omitted when a TaxRate is supplied as input, such as in <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderImportDraft" rel="nofollow">OrderImportDraft</a>, and then defaults to <code>Net</code>.</p>
+     * @return taxRoundingTarget
+     */
+
+    @JsonProperty("taxRoundingTarget")
+    public TaxRoundingTarget getTaxRoundingTarget();
+
+    /**
      *  <p>Present if the TaxRate is part of a <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a>. Absent for external TaxRates in <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a>.</p>
      * @param id value to be set
      */
@@ -167,6 +176,14 @@ public interface TaxRate {
     public void setSubRates(final List<SubRate> subRates);
 
     /**
+     *  <p>Determines which of the net price and the tax amount the <code>taxRoundingMode</code> of the Cart or Order is applied to, when this TaxRate is included in the price. Ignored if <code>includedInPrice</code> is <code>false</code>.</p>
+     *  <p>Always returned by the API. Can be omitted when a TaxRate is supplied as input, such as in <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderImportDraft" rel="nofollow">OrderImportDraft</a>, and then defaults to <code>Net</code>.</p>
+     * @param taxRoundingTarget value to be set
+     */
+
+    public void setTaxRoundingTarget(final TaxRoundingTarget taxRoundingTarget);
+
+    /**
      * factory method
      * @return instance of TaxRate
      */
@@ -189,6 +206,7 @@ public interface TaxRate {
         instance.setCountry(template.getCountry());
         instance.setState(template.getState());
         instance.setSubRates(template.getSubRates());
+        instance.setTaxRoundingTarget(template.getTaxRoundingTarget());
         return instance;
     }
 
@@ -217,6 +235,7 @@ public interface TaxRate {
                         .map(com.commercetools.api.models.tax_category.SubRate::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setTaxRoundingTarget(template.getTaxRoundingTarget());
         return instance;
     }
 

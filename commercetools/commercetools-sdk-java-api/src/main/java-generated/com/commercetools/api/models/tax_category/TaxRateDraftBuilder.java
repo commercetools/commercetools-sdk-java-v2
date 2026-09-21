@@ -44,6 +44,9 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     @Nullable
     private String key;
 
+    @Nullable
+    private com.commercetools.api.models.tax_category.TaxRoundingTarget taxRoundingTarget;
+
     /**
      *  <p>Name of the TaxRate.</p>
      * @param name value to be set
@@ -204,6 +207,18 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
+     *  <p>Determines whether the <code>taxRoundingMode</code> of the Cart or Order is applied to the net price or the tax amount when this TaxRate is included in the price. The field is ignored if <code>includedInPrice</code> is <code>false</code>.</p>
+     * @param taxRoundingTarget value to be set
+     * @return Builder
+     */
+
+    public TaxRateDraftBuilder taxRoundingTarget(
+            @Nullable final com.commercetools.api.models.tax_category.TaxRoundingTarget taxRoundingTarget) {
+        this.taxRoundingTarget = taxRoundingTarget;
+        return this;
+    }
+
+    /**
      *  <p>Name of the TaxRate.</p>
      * @return name
      */
@@ -276,6 +291,16 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
+     *  <p>Determines whether the <code>taxRoundingMode</code> of the Cart or Order is applied to the net price or the tax amount when this TaxRate is included in the price. The field is ignored if <code>includedInPrice</code> is <code>false</code>.</p>
+     * @return taxRoundingTarget
+     */
+
+    @Nullable
+    public com.commercetools.api.models.tax_category.TaxRoundingTarget getTaxRoundingTarget() {
+        return this.taxRoundingTarget;
+    }
+
+    /**
      * builds TaxRateDraft with checking for non-null required values
      * @return TaxRateDraft
      */
@@ -283,7 +308,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
         Objects.requireNonNull(name, TaxRateDraft.class + ": name is missing");
         Objects.requireNonNull(includedInPrice, TaxRateDraft.class + ": includedInPrice is missing");
         Objects.requireNonNull(country, TaxRateDraft.class + ": country is missing");
-        return new TaxRateDraftImpl(name, amount, includedInPrice, country, state, subRates, key);
+        return new TaxRateDraftImpl(name, amount, includedInPrice, country, state, subRates, key, taxRoundingTarget);
     }
 
     /**
@@ -291,7 +316,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
      * @return TaxRateDraft
      */
     public TaxRateDraft buildUnchecked() {
-        return new TaxRateDraftImpl(name, amount, includedInPrice, country, state, subRates, key);
+        return new TaxRateDraftImpl(name, amount, includedInPrice, country, state, subRates, key, taxRoundingTarget);
     }
 
     /**
@@ -316,6 +341,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
         builder.state = template.getState();
         builder.subRates = template.getSubRates();
         builder.key = template.getKey();
+        builder.taxRoundingTarget = template.getTaxRoundingTarget();
         return builder;
     }
 

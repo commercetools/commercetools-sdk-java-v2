@@ -25,9 +25,14 @@ public class TaxRateTest {
                 new Object[] { "includedInPrice", TaxRate.builder().includedInPrice(true) },
                 new Object[] { "country", TaxRate.builder().country("country") },
                 new Object[] { "state", TaxRate.builder().state("state") },
-                new Object[] { "subRates", TaxRate.builder()
-                        .subRates(
-                            Collections.singletonList(new com.commercetools.api.models.tax_category.SubRateImpl())) } };
+                new Object[] { "subRates",
+                        TaxRate.builder()
+                                .subRates(Collections
+                                        .singletonList(new com.commercetools.api.models.tax_category.SubRateImpl())) },
+                new Object[] { "taxRoundingTarget",
+                        TaxRate.builder()
+                                .taxRoundingTarget(
+                                    com.commercetools.api.models.tax_category.TaxRoundingTarget.findEnum("Net")) } };
     }
 
     @Test
@@ -85,5 +90,13 @@ public class TaxRateTest {
         value.setSubRates(Collections.singletonList(new com.commercetools.api.models.tax_category.SubRateImpl()));
         Assertions.assertThat(value.getSubRates())
                 .isEqualTo(Collections.singletonList(new com.commercetools.api.models.tax_category.SubRateImpl()));
+    }
+
+    @Test
+    public void taxRoundingTarget() {
+        TaxRate value = TaxRate.of();
+        value.setTaxRoundingTarget(com.commercetools.api.models.tax_category.TaxRoundingTarget.findEnum("Net"));
+        Assertions.assertThat(value.getTaxRoundingTarget())
+                .isEqualTo(com.commercetools.api.models.tax_category.TaxRoundingTarget.findEnum("Net"));
     }
 }

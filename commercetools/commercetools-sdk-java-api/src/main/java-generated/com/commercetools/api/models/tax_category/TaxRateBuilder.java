@@ -47,6 +47,9 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     @Nullable
     private java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates;
 
+    @Nullable
+    private com.commercetools.api.models.tax_category.TaxRoundingTarget taxRoundingTarget;
+
     /**
      *  <p>Present if the TaxRate is part of a <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a>. Absent for external TaxRates in <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a>.</p>
      * @param id value to be set
@@ -213,6 +216,19 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
+     *  <p>Determines which of the net price and the tax amount the <code>taxRoundingMode</code> of the Cart or Order is applied to, when this TaxRate is included in the price. Ignored if <code>includedInPrice</code> is <code>false</code>.</p>
+     *  <p>Always returned by the API. Can be omitted when a TaxRate is supplied as input, such as in <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderImportDraft" rel="nofollow">OrderImportDraft</a>, and then defaults to <code>Net</code>.</p>
+     * @param taxRoundingTarget value to be set
+     * @return Builder
+     */
+
+    public TaxRateBuilder taxRoundingTarget(
+            @Nullable final com.commercetools.api.models.tax_category.TaxRoundingTarget taxRoundingTarget) {
+        this.taxRoundingTarget = taxRoundingTarget;
+        return this;
+    }
+
+    /**
      *  <p>Present if the TaxRate is part of a <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a>. Absent for external TaxRates in <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomLineItem" rel="nofollow">CustomLineItem</a>, and <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a>.</p>
      * @return id
      */
@@ -290,6 +306,17 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
+     *  <p>Determines which of the net price and the tax amount the <code>taxRoundingMode</code> of the Cart or Order is applied to, when this TaxRate is included in the price. Ignored if <code>includedInPrice</code> is <code>false</code>.</p>
+     *  <p>Always returned by the API. Can be omitted when a TaxRate is supplied as input, such as in <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderImportDraft" rel="nofollow">OrderImportDraft</a>, and then defaults to <code>Net</code>.</p>
+     * @return taxRoundingTarget
+     */
+
+    @Nullable
+    public com.commercetools.api.models.tax_category.TaxRoundingTarget getTaxRoundingTarget() {
+        return this.taxRoundingTarget;
+    }
+
+    /**
      * builds TaxRate with checking for non-null required values
      * @return TaxRate
      */
@@ -298,7 +325,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
         Objects.requireNonNull(amount, TaxRate.class + ": amount is missing");
         Objects.requireNonNull(includedInPrice, TaxRate.class + ": includedInPrice is missing");
         Objects.requireNonNull(country, TaxRate.class + ": country is missing");
-        return new TaxRateImpl(id, key, name, amount, includedInPrice, country, state, subRates);
+        return new TaxRateImpl(id, key, name, amount, includedInPrice, country, state, subRates, taxRoundingTarget);
     }
 
     /**
@@ -306,7 +333,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
      * @return TaxRate
      */
     public TaxRate buildUnchecked() {
-        return new TaxRateImpl(id, key, name, amount, includedInPrice, country, state, subRates);
+        return new TaxRateImpl(id, key, name, amount, includedInPrice, country, state, subRates, taxRoundingTarget);
     }
 
     /**
@@ -332,6 +359,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
         builder.country = template.getCountry();
         builder.state = template.getState();
         builder.subRates = template.getSubRates();
+        builder.taxRoundingTarget = template.getTaxRoundingTarget();
         return builder;
     }
 

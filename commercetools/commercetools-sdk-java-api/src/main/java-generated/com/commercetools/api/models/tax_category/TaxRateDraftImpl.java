@@ -37,6 +37,8 @@ public class TaxRateDraftImpl implements TaxRateDraft, ModelBase {
 
     private String key;
 
+    private com.commercetools.api.models.tax_category.TaxRoundingTarget taxRoundingTarget;
+
     /**
      * create instance with all properties
      */
@@ -45,7 +47,8 @@ public class TaxRateDraftImpl implements TaxRateDraft, ModelBase {
             @JsonProperty("includedInPrice") final Boolean includedInPrice,
             @JsonProperty("country") final String country, @JsonProperty("state") final String state,
             @JsonProperty("subRates") final java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates,
-            @JsonProperty("key") final String key) {
+            @JsonProperty("key") final String key,
+            @JsonProperty("taxRoundingTarget") final com.commercetools.api.models.tax_category.TaxRoundingTarget taxRoundingTarget) {
         this.name = name;
         this.amount = amount;
         this.includedInPrice = includedInPrice;
@@ -53,6 +56,7 @@ public class TaxRateDraftImpl implements TaxRateDraft, ModelBase {
         this.state = state;
         this.subRates = subRates;
         this.key = key;
+        this.taxRoundingTarget = taxRoundingTarget;
     }
 
     /**
@@ -122,6 +126,14 @@ public class TaxRateDraftImpl implements TaxRateDraft, ModelBase {
         return this.key;
     }
 
+    /**
+     *  <p>Determines whether the <code>taxRoundingMode</code> of the Cart or Order is applied to the net price or the tax amount when this TaxRate is included in the price. The field is ignored if <code>includedInPrice</code> is <code>false</code>.</p>
+     */
+
+    public com.commercetools.api.models.tax_category.TaxRoundingTarget getTaxRoundingTarget() {
+        return this.taxRoundingTarget;
+    }
+
     public void setName(final String name) {
         this.name = name;
     }
@@ -154,6 +166,11 @@ public class TaxRateDraftImpl implements TaxRateDraft, ModelBase {
         this.key = key;
     }
 
+    public void setTaxRoundingTarget(
+            final com.commercetools.api.models.tax_category.TaxRoundingTarget taxRoundingTarget) {
+        this.taxRoundingTarget = taxRoundingTarget;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -171,6 +188,7 @@ public class TaxRateDraftImpl implements TaxRateDraft, ModelBase {
                 .append(state, that.state)
                 .append(subRates, that.subRates)
                 .append(key, that.key)
+                .append(taxRoundingTarget, that.taxRoundingTarget)
                 .append(name, that.name)
                 .append(amount, that.amount)
                 .append(includedInPrice, that.includedInPrice)
@@ -178,6 +196,7 @@ public class TaxRateDraftImpl implements TaxRateDraft, ModelBase {
                 .append(state, that.state)
                 .append(subRates, that.subRates)
                 .append(key, that.key)
+                .append(taxRoundingTarget, that.taxRoundingTarget)
                 .isEquals();
     }
 
@@ -190,6 +209,7 @@ public class TaxRateDraftImpl implements TaxRateDraft, ModelBase {
                 .append(state)
                 .append(subRates)
                 .append(key)
+                .append(taxRoundingTarget)
                 .toHashCode();
     }
 
@@ -202,6 +222,7 @@ public class TaxRateDraftImpl implements TaxRateDraft, ModelBase {
                 .append("state", state)
                 .append("subRates", subRates)
                 .append("key", key)
+                .append("taxRoundingTarget", taxRoundingTarget)
                 .build();
     }
 

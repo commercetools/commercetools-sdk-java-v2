@@ -97,6 +97,14 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
     public String getKey();
 
     /**
+     *  <p>Determines whether the <code>taxRoundingMode</code> of the Cart or Order is applied to the net price or the tax amount when this TaxRate is included in the price. The field is ignored if <code>includedInPrice</code> is <code>false</code>.</p>
+     * @return taxRoundingTarget
+     */
+
+    @JsonProperty("taxRoundingTarget")
+    public TaxRoundingTarget getTaxRoundingTarget();
+
+    /**
      *  <p>Name of the TaxRate.</p>
      * @param name value to be set
      */
@@ -159,6 +167,13 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
     public void setKey(final String key);
 
     /**
+     *  <p>Determines whether the <code>taxRoundingMode</code> of the Cart or Order is applied to the net price or the tax amount when this TaxRate is included in the price. The field is ignored if <code>includedInPrice</code> is <code>false</code>.</p>
+     * @param taxRoundingTarget value to be set
+     */
+
+    public void setTaxRoundingTarget(final TaxRoundingTarget taxRoundingTarget);
+
+    /**
      * factory method
      * @return instance of TaxRateDraft
      */
@@ -180,6 +195,7 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
         instance.setState(template.getState());
         instance.setSubRates(template.getSubRates());
         instance.setKey(template.getKey());
+        instance.setTaxRoundingTarget(template.getTaxRoundingTarget());
         return instance;
     }
 
@@ -207,6 +223,7 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setKey(template.getKey());
+        instance.setTaxRoundingTarget(template.getTaxRoundingTarget());
         return instance;
     }
 

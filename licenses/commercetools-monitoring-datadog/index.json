@@ -2,7 +2,7 @@
     "dependencies": [
         {
             "moduleName": "com.datadoghq:datadog-api-client",
-            "moduleVersion": "2.56.0",
+            "moduleVersion": "2.59.0",
             "moduleUrls": [
                 "https://github.com/DataDog/datadog-api-client-java"
             ],
@@ -49,7 +49,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-core",
-            "moduleVersion": "2.22.1",
+            "moduleVersion": "2.22.2",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-core"
             ],
@@ -62,7 +62,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-databind",
-            "moduleVersion": "2.22.1",
+            "moduleVersion": "2.22.2",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -75,7 +75,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
-            "moduleVersion": "2.22.1",
+            "moduleVersion": "2.22.2",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jsr310"
             ],
@@ -88,7 +88,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.module:jackson-module-jakarta-xmlbind-annotations",
-            "moduleVersion": "2.22.1",
+            "moduleVersion": "2.22.2",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-base"
             ],
@@ -1182,7 +1182,7 @@
         },
         {
             "moduleName": "tools.jackson.core:jackson-core",
-            "moduleVersion": "3.2.1",
+            "moduleVersion": "3.2.2",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-core"
             ],
@@ -1195,7 +1195,7 @@
         },
         {
             "moduleName": "tools.jackson.core:jackson-databind",
-            "moduleVersion": "3.2.1",
+            "moduleVersion": "3.2.2",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],

@@ -37,6 +37,10 @@ public class ByProjectKeyRequestBuilder {
         return post(op.apply(com.commercetools.api.models.project.ProjectUpdateBuilder.of()).build());
     }
 
+    public ByProjectKeyAgentsRequestBuilder agents() {
+        return new ByProjectKeyAgentsRequestBuilder(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyAsAssociateRequestBuilder asAssociate() {
         return new ByProjectKeyAsAssociateRequestBuilder(apiHttpClient, projectKey);
     }

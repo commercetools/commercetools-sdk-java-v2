@@ -23,6 +23,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .sequenceNumber(0.3)
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
+ *             .product(productBuilder -> productBuilder)
  *             .image(imageBuilder -> imageBuilder)
  *             .staged(true)
  *             .build()
@@ -54,6 +55,8 @@ public class VariantImageAddedMessageBuilder implements Builder<VariantImageAdde
 
     @Nullable
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+
+    private com.commercetools.api.models.product.ProductReference product;
 
     private com.commercetools.api.models.common.Image image;
 
@@ -260,6 +263,42 @@ public class VariantImageAddedMessageBuilder implements Builder<VariantImageAdde
     }
 
     /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public VariantImageAddedMessageBuilder product(
+            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public VariantImageAddedMessageBuilder withProduct(
+            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @param product value to be set
+     * @return Builder
+     */
+
+    public VariantImageAddedMessageBuilder product(
+            final com.commercetools.api.models.product.ProductReference product) {
+        this.product = product;
+        return this;
+    }
+
+    /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
      * @param builder function to build the image value
      * @return Builder
@@ -399,6 +438,15 @@ public class VariantImageAddedMessageBuilder implements Builder<VariantImageAdde
     }
 
     /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @return product
+     */
+
+    public com.commercetools.api.models.product.ProductReference getProduct() {
+        return this.product;
+    }
+
+    /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
      * @return image
      */
@@ -428,10 +476,11 @@ public class VariantImageAddedMessageBuilder implements Builder<VariantImageAdde
         Objects.requireNonNull(sequenceNumber, VariantImageAddedMessage.class + ": sequenceNumber is missing");
         Objects.requireNonNull(resource, VariantImageAddedMessage.class + ": resource is missing");
         Objects.requireNonNull(resourceVersion, VariantImageAddedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(product, VariantImageAddedMessage.class + ": product is missing");
         Objects.requireNonNull(image, VariantImageAddedMessage.class + ": image is missing");
         Objects.requireNonNull(staged, VariantImageAddedMessage.class + ": staged is missing");
         return new VariantImageAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, image, staged);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, product, image, staged);
     }
 
     /**
@@ -440,7 +489,7 @@ public class VariantImageAddedMessageBuilder implements Builder<VariantImageAdde
      */
     public VariantImageAddedMessage buildUnchecked() {
         return new VariantImageAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, image, staged);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, product, image, staged);
     }
 
     /**
@@ -468,6 +517,7 @@ public class VariantImageAddedMessageBuilder implements Builder<VariantImageAdde
         builder.resource = template.getResource();
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
+        builder.product = template.getProduct();
         builder.image = template.getImage();
         builder.staged = template.getStaged();
         return builder;

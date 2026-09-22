@@ -18,8 +18,11 @@ public class VariantCreatedMessageTest {
     }
 
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { "id", VariantCreatedMessage.builder().id("id") },
-                new Object[] { "productId", VariantCreatedMessage.builder().productId("productId") },
+        return new Object[][] {
+                new Object[] { "product",
+                        VariantCreatedMessage.builder()
+                                .product(new com.commercetools.api.models.product.ProductReferenceImpl()) },
+                new Object[] { "id", VariantCreatedMessage.builder().id("id") },
                 new Object[] { "variantId", VariantCreatedMessage.builder().variantId(5) },
                 new Object[] { "key", VariantCreatedMessage.builder().key("key") },
                 new Object[] { "sku", VariantCreatedMessage.builder().sku("sku") },
@@ -35,17 +38,18 @@ public class VariantCreatedMessageTest {
     }
 
     @Test
+    public void product() {
+        VariantCreatedMessage value = VariantCreatedMessage.of();
+        value.setProduct(new com.commercetools.api.models.product.ProductReferenceImpl());
+        Assertions.assertThat(value.getProduct())
+                .isEqualTo(new com.commercetools.api.models.product.ProductReferenceImpl());
+    }
+
+    @Test
     public void id() {
         VariantCreatedMessage value = VariantCreatedMessage.of();
         value.setId("id");
         Assertions.assertThat(value.getId()).isEqualTo("id");
-    }
-
-    @Test
-    public void productId() {
-        VariantCreatedMessage value = VariantCreatedMessage.of();
-        value.setProductId("productId");
-        Assertions.assertThat(value.getProductId()).isEqualTo("productId");
     }
 
     @Test

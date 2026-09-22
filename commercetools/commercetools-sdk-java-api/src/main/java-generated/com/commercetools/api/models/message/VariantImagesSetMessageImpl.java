@@ -45,6 +45,8 @@ public class VariantImagesSetMessageImpl implements VariantImagesSetMessage, Mod
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
+    private com.commercetools.api.models.product.ProductReference product;
+
     private java.util.List<com.commercetools.api.models.common.Image> images;
 
     private java.util.List<com.commercetools.api.models.common.Image> oldImages;
@@ -64,6 +66,7 @@ public class VariantImagesSetMessageImpl implements VariantImagesSetMessage, Mod
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
+            @JsonProperty("product") final com.commercetools.api.models.product.ProductReference product,
             @JsonProperty("images") final java.util.List<com.commercetools.api.models.common.Image> images,
             @JsonProperty("oldImages") final java.util.List<com.commercetools.api.models.common.Image> oldImages,
             @JsonProperty("staged") final Boolean staged) {
@@ -77,6 +80,7 @@ public class VariantImagesSetMessageImpl implements VariantImagesSetMessage, Mod
         this.resource = resource;
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
+        this.product = product;
         this.images = images;
         this.oldImages = oldImages;
         this.staged = staged;
@@ -179,6 +183,14 @@ public class VariantImagesSetMessageImpl implements VariantImagesSetMessage, Mod
     }
 
     /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     */
+
+    public com.commercetools.api.models.product.ProductReference getProduct() {
+        return this.product;
+    }
+
+    /**
      *  <p>The images that were set on the Variant.</p>
      */
 
@@ -243,6 +255,10 @@ public class VariantImagesSetMessageImpl implements VariantImagesSetMessage, Mod
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
     }
 
+    public void setProduct(final com.commercetools.api.models.product.ProductReference product) {
+        this.product = product;
+    }
+
     public void setImages(final com.commercetools.api.models.common.Image... images) {
         this.images = new ArrayList<>(Arrays.asList(images));
     }
@@ -284,6 +300,7 @@ public class VariantImagesSetMessageImpl implements VariantImagesSetMessage, Mod
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(product, that.product)
                 .append(images, that.images)
                 .append(oldImages, that.oldImages)
                 .append(staged, that.staged)
@@ -298,6 +315,7 @@ public class VariantImagesSetMessageImpl implements VariantImagesSetMessage, Mod
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(product, that.product)
                 .append(images, that.images)
                 .append(oldImages, that.oldImages)
                 .append(staged, that.staged)
@@ -317,6 +335,7 @@ public class VariantImagesSetMessageImpl implements VariantImagesSetMessage, Mod
                 .append(resourceVersion)
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
+                .append(product)
                 .append(images)
                 .append(oldImages)
                 .append(staged)
@@ -336,6 +355,7 @@ public class VariantImagesSetMessageImpl implements VariantImagesSetMessage, Mod
                 .append("resourceVersion", resourceVersion)
                 .append("type", type)
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
+                .append("product", product)
                 .append("images", images)
                 .append("oldImages", oldImages)
                 .append("staged", staged)

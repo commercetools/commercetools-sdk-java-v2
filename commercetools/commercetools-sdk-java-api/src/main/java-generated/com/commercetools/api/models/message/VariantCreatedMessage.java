@@ -11,6 +11,7 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.common.Asset;
 import com.commercetools.api.models.common.Image;
 import com.commercetools.api.models.product.Attribute;
+import com.commercetools.api.models.product.ProductReference;
 import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
@@ -20,7 +21,7 @@ import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful <span>Create Variant</span> request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/variants:POST" rel="nofollow">Create Variant</a> request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +35,7 @@ import tools.jackson.databind.annotation.*;
  *             .sequenceNumber(0.3)
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
- *             .productId("{productId}")
+ *             .product(productBuilder -> productBuilder)
  *             .variantId(1)
  *             .publish(true)
  *             .build()
@@ -52,20 +53,21 @@ public interface VariantCreatedMessage extends Message {
     String VARIANT_CREATED = "VariantCreated";
 
     /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @return product
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("product")
+    public ProductReference getProduct();
+
+    /**
      *  <p>Unique identifier of the Variant.</p>
      * @return id
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
-
-    /**
-     *  <p>Unique identifier of the Product to which the Variant belongs.</p>
-     * @return productId
-     */
-    @NotNull
-    @JsonProperty("productId")
-    public String getProductId();
 
     /**
      *  <p>Unique identifier of the Variant within its parent Product.</p>
@@ -124,18 +126,18 @@ public interface VariantCreatedMessage extends Message {
     public Boolean getPublish();
 
     /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @param product value to be set
+     */
+
+    public void setProduct(final ProductReference product);
+
+    /**
      *  <p>Unique identifier of the Variant.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
-
-    /**
-     *  <p>Unique identifier of the Product to which the Variant belongs.</p>
-     * @param productId value to be set
-     */
-
-    public void setProductId(final String productId);
 
     /**
      *  <p>Unique identifier of the Variant within its parent Product.</p>
@@ -235,7 +237,7 @@ public interface VariantCreatedMessage extends Message {
         instance.setResource(template.getResource());
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-        instance.setProductId(template.getProductId());
+        instance.setProduct(template.getProduct());
         instance.setVariantId(template.getVariantId());
         instance.setKey(template.getKey());
         instance.setSku(template.getSku());
@@ -271,7 +273,7 @@ public interface VariantCreatedMessage extends Message {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
                 .deepCopy(template.getResourceUserProvidedIdentifiers()));
-        instance.setProductId(template.getProductId());
+        instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
         instance.setVariantId(template.getVariantId());
         instance.setKey(template.getKey());
         instance.setSku(template.getSku());

@@ -50,7 +50,7 @@ public interface CustomerReference extends Reference, com.commercetools.api.mode
     public ReferenceTypeId getTypeId();
 
     /**
-     *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with <a href="https://docs.commercetools.com/apis/ctp:api:type:Expansion" rel="nofollow">Reference Expansion</a> for Customers.</p>
+     *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with <span>Reference Expansion</span> for Customers.</p>
      * @return obj
      */
     @Valid
@@ -66,7 +66,7 @@ public interface CustomerReference extends Reference, com.commercetools.api.mode
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with <a href="https://docs.commercetools.com/apis/ctp:api:type:Expansion" rel="nofollow">Reference Expansion</a> for Customers.</p>
+     *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with <span>Reference Expansion</span> for Customers.</p>
      * @param obj value to be set
      */
 

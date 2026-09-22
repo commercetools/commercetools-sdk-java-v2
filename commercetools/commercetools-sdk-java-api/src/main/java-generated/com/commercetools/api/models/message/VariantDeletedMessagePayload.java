@@ -7,10 +7,13 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import com.commercetools.api.models.product.ProductReference;
 import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
@@ -21,6 +24,7 @@ import tools.jackson.databind.annotation.*;
  * <div class=code-example>
  * <pre><code class='java'>
  *     VariantDeletedMessagePayload variantDeletedMessagePayload = VariantDeletedMessagePayload.builder()
+ *             .product(productBuilder -> productBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -34,6 +38,22 @@ public interface VariantDeletedMessagePayload extends MessagePayload {
      * discriminator value for VariantDeletedMessagePayload
      */
     String VARIANT_DELETED = "VariantDeleted";
+
+    /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @return product
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("product")
+    public ProductReference getProduct();
+
+    /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @param product value to be set
+     */
+
+    public void setProduct(final ProductReference product);
 
     /**
      * factory method
@@ -50,6 +70,7 @@ public interface VariantDeletedMessagePayload extends MessagePayload {
      */
     public static VariantDeletedMessagePayload of(final VariantDeletedMessagePayload template) {
         VariantDeletedMessagePayloadImpl instance = new VariantDeletedMessagePayloadImpl();
+        instance.setProduct(template.getProduct());
         return instance;
     }
 
@@ -66,6 +87,7 @@ public interface VariantDeletedMessagePayload extends MessagePayload {
             return null;
         }
         VariantDeletedMessagePayloadImpl instance = new VariantDeletedMessagePayloadImpl();
+        instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
         return instance;
     }
 

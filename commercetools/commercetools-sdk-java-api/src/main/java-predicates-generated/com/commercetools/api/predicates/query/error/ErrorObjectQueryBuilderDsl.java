@@ -25,6 +25,122 @@ public class ErrorObjectQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, ErrorObjectQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asBusinessUnitAmbiguous(
+            Function<com.commercetools.api.predicates.query.agent.AgentBusinessUnitAmbiguousErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.AgentBusinessUnitAmbiguousErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.agent.AgentBusinessUnitAmbiguousErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asBusinessUnitLimitExceeded(
+            Function<com.commercetools.api.predicates.query.agent.AgentBusinessUnitLimitExceededErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.AgentBusinessUnitLimitExceededErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.agent.AgentBusinessUnitLimitExceededErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asBusinessUnitUnresolved(
+            Function<com.commercetools.api.predicates.query.agent.AgentBusinessUnitUnresolvedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.AgentBusinessUnitUnresolvedErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.agent.AgentBusinessUnitUnresolvedErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asExtractionFailed(
+            Function<com.commercetools.api.predicates.query.agent.AgentExtractionFailedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.AgentExtractionFailedErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.agent.AgentExtractionFailedErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asFeatureDisabled(
+            Function<com.commercetools.api.predicates.query.agent.AgentFeatureDisabledErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.AgentFeatureDisabledErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.agent.AgentFeatureDisabledErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asMissingCountry(
+            Function<com.commercetools.api.predicates.query.agent.AgentMissingCountryErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.AgentMissingCountryErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.agent.AgentMissingCountryErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asMissingCustomerEmail(
+            Function<com.commercetools.api.predicates.query.agent.AgentMissingCustomerEmailErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.AgentMissingCustomerEmailErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.agent.AgentMissingCustomerEmailErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asMissingEntityType(
+            Function<com.commercetools.api.predicates.query.agent.AgentMissingEntityTypeErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.AgentMissingEntityTypeErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.agent.AgentMissingEntityTypeErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asNoLineItemsExtracted(
+            Function<com.commercetools.api.predicates.query.agent.AgentNoLineItemsExtractedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.AgentNoLineItemsExtractedErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.agent.AgentNoLineItemsExtractedErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asOutOfScope(
+            Function<com.commercetools.api.predicates.query.agent.AgentOutOfScopeErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.AgentOutOfScopeErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.agent.AgentOutOfScopeErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asProductSearchNotEnabled(
+            Function<com.commercetools.api.predicates.query.agent.AgentProductSearchNotEnabledErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.AgentProductSearchNotEnabledErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.agent.AgentProductSearchNotEnabledErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asProductsNotFound(
+            Function<com.commercetools.api.predicates.query.agent.AgentProductsNotFoundErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.AgentProductsNotFoundErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.agent.AgentProductsNotFoundErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asQuoteRequestCreationFailed(
+            Function<com.commercetools.api.predicates.query.agent.AgentQuoteRequestCreationFailedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.AgentQuoteRequestCreationFailedErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.agent.AgentQuoteRequestCreationFailedErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asStoreAmbiguous(
+            Function<com.commercetools.api.predicates.query.agent.AgentStoreAmbiguousErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.AgentStoreAmbiguousErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.agent.AgentStoreAmbiguousErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asStoreDistributionChannelsUnsupported(
+            Function<com.commercetools.api.predicates.query.agent.AgentStoreDistributionChannelsUnsupportedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.AgentStoreDistributionChannelsUnsupportedErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.agent.AgentStoreDistributionChannelsUnsupportedErrorQueryBuilderDsl
+                    .of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asStoreUnresolved(
+            Function<com.commercetools.api.predicates.query.agent.AgentStoreUnresolvedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.AgentStoreUnresolvedErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.agent.AgentStoreUnresolvedErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asAnonymousIdAlreadyInUse(
             Function<com.commercetools.api.predicates.query.error.AnonymousIdAlreadyInUseErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.AnonymousIdAlreadyInUseErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

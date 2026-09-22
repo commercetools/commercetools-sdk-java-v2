@@ -125,6 +125,10 @@ public interface AuthErrorResponse extends ErrorResponse {
         if (template == null) {
             return null;
         }
+
+        if (!(template instanceof AuthErrorResponseImpl)) {
+            return template.copyDeep();
+        }
         AuthErrorResponseImpl instance = new AuthErrorResponseImpl();
         instance.setStatusCode(template.getStatusCode());
         instance.setMessage(template.getMessage());

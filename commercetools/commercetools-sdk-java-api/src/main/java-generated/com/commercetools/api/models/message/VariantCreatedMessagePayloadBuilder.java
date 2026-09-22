@@ -16,8 +16,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     VariantCreatedMessagePayload variantCreatedMessagePayload = VariantCreatedMessagePayload.builder()
+ *             .product(productBuilder -> productBuilder)
  *             .id("{id}")
- *             .productId("{productId}")
  *             .variantId(1)
  *             .publish(true)
  *             .build()
@@ -27,9 +27,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class VariantCreatedMessagePayloadBuilder implements Builder<VariantCreatedMessagePayload> {
 
-    private String id;
+    private com.commercetools.api.models.product.ProductReference product;
 
-    private String productId;
+    private String id;
 
     private Integer variantId;
 
@@ -51,6 +51,42 @@ public class VariantCreatedMessagePayloadBuilder implements Builder<VariantCreat
     private Boolean publish;
 
     /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public VariantCreatedMessagePayloadBuilder product(
+            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public VariantCreatedMessagePayloadBuilder withProduct(
+            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @param product value to be set
+     * @return Builder
+     */
+
+    public VariantCreatedMessagePayloadBuilder product(
+            final com.commercetools.api.models.product.ProductReference product) {
+        this.product = product;
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the Variant.</p>
      * @param id value to be set
      * @return Builder
@@ -58,17 +94,6 @@ public class VariantCreatedMessagePayloadBuilder implements Builder<VariantCreat
 
     public VariantCreatedMessagePayloadBuilder id(final String id) {
         this.id = id;
-        return this;
-    }
-
-    /**
-     *  <p>Unique identifier of the Product to which the Variant belongs.</p>
-     * @param productId value to be set
-     * @return Builder
-     */
-
-    public VariantCreatedMessagePayloadBuilder productId(final String productId) {
-        this.productId = productId;
         return this;
     }
 
@@ -384,21 +409,21 @@ public class VariantCreatedMessagePayloadBuilder implements Builder<VariantCreat
     }
 
     /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @return product
+     */
+
+    public com.commercetools.api.models.product.ProductReference getProduct() {
+        return this.product;
+    }
+
+    /**
      *  <p>Unique identifier of the Variant.</p>
      * @return id
      */
 
     public String getId() {
         return this.id;
-    }
-
-    /**
-     *  <p>Unique identifier of the Product to which the Variant belongs.</p>
-     * @return productId
-     */
-
-    public String getProductId() {
-        return this.productId;
     }
 
     /**
@@ -474,11 +499,11 @@ public class VariantCreatedMessagePayloadBuilder implements Builder<VariantCreat
      * @return VariantCreatedMessagePayload
      */
     public VariantCreatedMessagePayload build() {
+        Objects.requireNonNull(product, VariantCreatedMessagePayload.class + ": product is missing");
         Objects.requireNonNull(id, VariantCreatedMessagePayload.class + ": id is missing");
-        Objects.requireNonNull(productId, VariantCreatedMessagePayload.class + ": productId is missing");
         Objects.requireNonNull(variantId, VariantCreatedMessagePayload.class + ": variantId is missing");
         Objects.requireNonNull(publish, VariantCreatedMessagePayload.class + ": publish is missing");
-        return new VariantCreatedMessagePayloadImpl(id, productId, variantId, key, sku, attributes, assets, images,
+        return new VariantCreatedMessagePayloadImpl(product, id, variantId, key, sku, attributes, assets, images,
             publish);
     }
 
@@ -487,7 +512,7 @@ public class VariantCreatedMessagePayloadBuilder implements Builder<VariantCreat
      * @return VariantCreatedMessagePayload
      */
     public VariantCreatedMessagePayload buildUnchecked() {
-        return new VariantCreatedMessagePayloadImpl(id, productId, variantId, key, sku, attributes, assets, images,
+        return new VariantCreatedMessagePayloadImpl(product, id, variantId, key, sku, attributes, assets, images,
             publish);
     }
 
@@ -506,8 +531,8 @@ public class VariantCreatedMessagePayloadBuilder implements Builder<VariantCreat
      */
     public static VariantCreatedMessagePayloadBuilder of(final VariantCreatedMessagePayload template) {
         VariantCreatedMessagePayloadBuilder builder = new VariantCreatedMessagePayloadBuilder();
+        builder.product = template.getProduct();
         builder.id = template.getId();
-        builder.productId = template.getProductId();
         builder.variantId = template.getVariantId();
         builder.key = template.getKey();
         builder.sku = template.getSku();

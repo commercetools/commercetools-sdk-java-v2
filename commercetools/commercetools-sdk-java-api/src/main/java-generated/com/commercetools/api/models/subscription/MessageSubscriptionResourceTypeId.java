@@ -82,6 +82,9 @@ public interface MessageSubscriptionResourceTypeId extends JsonEnum {
     /**
     <p>Messages related to <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a>.</p> */
     MessageSubscriptionResourceTypeId STORE = MessageSubscriptionResourceTypeIdEnum.STORE;
+    /**
+    <p>Messages related to <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variants</a>.</p> */
+    MessageSubscriptionResourceTypeId VARIANT = MessageSubscriptionResourceTypeIdEnum.VARIANT;
 
     /**
      * possible values of MessageSubscriptionResourceTypeId
@@ -195,7 +198,12 @@ public interface MessageSubscriptionResourceTypeId extends JsonEnum {
         /**
          * store
          */
-        STORE("store");
+        STORE("store"),
+
+        /**
+         * variant
+         */
+        VARIANT("variant");
         private final String jsonName;
 
         private MessageSubscriptionResourceTypeIdEnum(final String jsonName) {

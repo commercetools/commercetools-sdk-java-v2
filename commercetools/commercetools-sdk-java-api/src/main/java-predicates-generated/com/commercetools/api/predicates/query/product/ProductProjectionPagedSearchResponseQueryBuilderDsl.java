@@ -5,6 +5,7 @@ import java.util.function.Function;
 
 import com.commercetools.api.predicates.query.*;
 
+@Deprecated
 public class ProductProjectionPagedSearchResponseQueryBuilderDsl {
     public ProductProjectionPagedSearchResponseQueryBuilderDsl() {
     }

@@ -5,6 +5,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 import java.time.Duration;
 import java.time.Instant;
+import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -125,7 +126,58 @@ public class RetryAfterDelayTest {
         Assertions.assertThat(RetryAfterDelay.of(null, 429, TIME)).isEmpty();
     }
 
+    @Test
+    public void testResponseHeadersNotExceptionHeaders() {
+        final ApiHttpResponse<byte[]> response = new ApiHttpResponse<>(429,
+            headers(ApiHttpHeaders.X_RATE_LIMIT_RESET, "40"), null);
+        final ApiHttpException exception = new ApiHttpException(429, null, new ApiHttpHeaders(), null, response);
+
+        Assertions.assertThat(RetryAfterDelay.of(exception, TIME)).contains(Duration.ofSeconds(40));
+        Assertions.assertThat(RetryAfterDelay.hasTiming(exception)).isTrue();
+    }
+
+    @Test
+    public void testExceptionHeadersWithoutAResponse() {
+        final ApiHttpException exception = new ApiHttpException(429, "",
+            headers(ApiHttpHeaders.X_RATE_LIMIT_RESET, "40"), "", null);
+
+        Assertions.assertThat(RetryAfterDelay.of(exception, TIME)).contains(Duration.ofSeconds(40));
+    }
+
+    @Test
+    public void testRetryAfterOn503Response() {
+        final ApiHttpResponse<byte[]> response = new ApiHttpResponse<>(503, headers(ApiHttpHeaders.RETRY_AFTER, "15"),
+            null);
+        final ApiHttpException exception = new ApiHttpException(503, "", new ApiHttpHeaders(), "", response);
+
+        Assertions.assertThat(RetryAfterDelay.of(exception, TIME)).contains(Duration.ofSeconds(15));
+    }
+
+    @Test
+    public void testNoTimingWhenNeitherSourceHasAHeader() {
+        final ApiHttpResponse<byte[]> response = new ApiHttpResponse<>(429, new ApiHttpHeaders(), null);
+        final ApiHttpException exception = new ApiHttpException(429, "", new ApiHttpHeaders(), "", response);
+
+        Assertions.assertThat(RetryAfterDelay.hasTiming(exception)).isFalse();
+    }
+
     // Jitter tests
+    @Test
+    public void testRetryAfterIsNotOverflowed() {
+        Assertions.assertThat(RetryAfterDelay.withJitterAndCap(Duration.ofSeconds(Long.MAX_VALUE), 60000, 0.5))
+                .isEqualTo(Duration.ofMillis(60000));
+    }
+
+    @Test
+    public void testRetryAfterHeaderNoException() {
+        final ApiHttpHeaders huge = headers(ApiHttpHeaders.RETRY_AFTER, String.valueOf(Long.MAX_VALUE));
+        final Optional<Duration> parsed = RetryAfterDelay.of(huge, 429, TIME);
+
+        Assertions.assertThat(parsed).isPresent();
+        Assertions.assertThatCode(() -> RetryAfterDelay.withJitterAndCap(parsed.get(), 60000, 0.5))
+                .doesNotThrowAnyException();
+    }
+
     @Test
     public void testNeverRetriesEarlierThanInstructed() {
         for (int i = 0; i < 100; i++) {

@@ -10,6 +10,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.Optional;
 
+import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 import io.vrap.rmf.base.client.ApiHttpException;
@@ -90,6 +91,21 @@ public final class RetryAfterDelay {
         return of(headers, statusCode, Instant.now()).isPresent();
     }
 
+    public static Optional<Duration> of(@Nonnull final ApiHttpException exception, final Instant now) {
+        final Optional<Duration> fromResponse = Optional.ofNullable(exception.getResponse())
+                .flatMap(response -> of(response.getHeaders(), exception.getStatusCode(), now));
+
+        if (fromResponse.isPresent()) {
+            return fromResponse;
+        }
+
+        return of(exception.getHeaders(), exception.getStatusCode(), now);
+    }
+
+    public static boolean hasTiming(final ApiHttpException exception) {
+        return of(exception, Instant.now()).isPresent();
+    }
+
     public static Duration forContext(final ExecutionContext<ApiHttpResponse<byte[]>> context,
             final long initialDelayMillis, final long maxDelayMillis) {
         return forContext(context, initialDelayMillis, maxDelayMillis, Instant.now(), Math.random());
@@ -101,7 +117,7 @@ public final class RetryAfterDelay {
 
         Optional<Duration> delay = Optional.empty();
         if (failure instanceof ApiHttpException exception) {
-            delay = of(exception.getHeaders(), exception.getStatusCode(), now);
+            delay = of(exception, now);
         }
 
         if (delay.isEmpty()) {
@@ -130,6 +146,12 @@ public final class RetryAfterDelay {
     }
 
     static Duration withJitterAndCap(final Duration delay, final long maxDelayMillis, final double random) {
+        final Duration max = Duration.ofMillis(maxDelayMillis);
+
+        if (delay.compareTo(max) >= 0) {
+            return max;
+        }
+
         final long jittered = Math.round(delay.toMillis() * (1 + random * JITTER_FACTOR));
         return Duration.ofMillis(Math.min(jittered, maxDelayMillis));
     }

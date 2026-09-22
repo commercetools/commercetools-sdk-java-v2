@@ -148,29 +148,26 @@ public class RetryPolicyBuilder {
 
     public static FailsafeRetryPolicyBuilderOptions handleStatusCodes(final List<Integer> statusCodes) {
         return builder -> builder.handleIf((response, throwable) -> {
-            final int statusCode;
-            final ApiHttpHeaders headers;
-
             if (throwable instanceof ApiHttpException exception) {
-                statusCode = exception.getStatusCode();
-                headers = exception.getHeaders();
+                int exceptionStatusCode = exception.getStatusCode();
+                if (!statusCodes.contains(exceptionStatusCode)) {
+                    return false;
+                }
+                if (exceptionStatusCode == TOO_MANY_REQUESTS_429) {
+                    return RetryAfterDelay.hasTiming(exception);
+                }
+                return true;
             }
-            else if (response != null) {
-                statusCode = response.getStatusCode();
-                headers = response.getHeaders();
-            }
-            else {
+            if (response == null) {
                 return false;
             }
-
-            if (!statusCodes.contains(statusCode)) {
+            int responseStatusCode = response.getStatusCode();
+            if (!statusCodes.contains(responseStatusCode)) {
                 return false;
             }
-
-            if (statusCode == TOO_MANY_REQUESTS_429) {
-                return RetryAfterDelay.hasTiming(headers, statusCode);
+            if (responseStatusCode == TOO_MANY_REQUESTS_429) {
+                return RetryAfterDelay.hasTiming(response.getHeaders(), responseStatusCode);
             }
-
             return true;
         });
     }

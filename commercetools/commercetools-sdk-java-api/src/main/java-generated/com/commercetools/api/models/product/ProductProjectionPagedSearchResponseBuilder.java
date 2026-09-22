@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class ProductProjectionPagedSearchResponseBuilder implements Builder<ProductProjectionPagedSearchResponse> {
 
     private Long limit;
@@ -38,6 +39,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
 
     private java.util.List<com.commercetools.api.models.product.ProductProjection> results;
 
+    @Deprecated
     @Nullable
     private com.commercetools.api.models.product.FacetResults facets;
 
@@ -180,7 +182,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
      * @param builder function to build the facets value
      * @return Builder
      */
-
+    @Deprecated
     public ProductProjectionPagedSearchResponseBuilder facets(
             Function<com.commercetools.api.models.product.FacetResultsBuilder, com.commercetools.api.models.product.FacetResultsBuilder> builder) {
         this.facets = builder.apply(com.commercetools.api.models.product.FacetResultsBuilder.of()).build();
@@ -193,7 +195,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
      * @param builder function to build the facets value
      * @return Builder
      */
-
+    @Deprecated
     public ProductProjectionPagedSearchResponseBuilder withFacets(
             Function<com.commercetools.api.models.product.FacetResultsBuilder, com.commercetools.api.models.product.FacetResults> builder) {
         this.facets = builder.apply(com.commercetools.api.models.product.FacetResultsBuilder.of());
@@ -206,7 +208,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
      * @param facets value to be set
      * @return Builder
      */
-
+    @Deprecated
     public ProductProjectionPagedSearchResponseBuilder facets(
             @Nullable final com.commercetools.api.models.product.FacetResults facets) {
         this.facets = facets;
@@ -264,7 +266,7 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
      *  <p>Only present if at least one <code>facet</code> parameter was provided with the search request.</p>
      * @return facets
      */
-
+    @Deprecated
     @Nullable
     public com.commercetools.api.models.product.FacetResults getFacets() {
         return this.facets;

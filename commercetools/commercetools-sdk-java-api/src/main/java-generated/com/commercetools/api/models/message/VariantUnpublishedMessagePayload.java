@@ -17,7 +17,7 @@ import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful <span>Unpublish</span> update action.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:VariantUnpublishAction" rel="nofollow">Unpublish</a> update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface VariantUnpublishedMessagePayload extends MessagePayload {
     String VARIANT_UNPUBLISHED = "VariantUnpublished";
 
     /**
-     *  <p>Reference to the Product containing the Variant that was unpublished.</p>
+     *  <p>Reference to the Product containing the Variant.</p>
      * @return product
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface VariantUnpublishedMessagePayload extends MessagePayload {
     public ProductReference getProduct();
 
     /**
-     *  <p>Reference to the Product containing the Variant that was unpublished.</p>
+     *  <p>Reference to the Product containing the Variant.</p>
      * @param product value to be set
      */
 

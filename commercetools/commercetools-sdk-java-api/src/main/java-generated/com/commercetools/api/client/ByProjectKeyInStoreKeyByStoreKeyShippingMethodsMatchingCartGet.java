@@ -21,6 +21,8 @@ import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Retrieves the active ShippingMethods that can ship to the shipping address of the provided Cart in a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
+ *  <p>The Cart must belong to the Store specified in the path. If no Cart exists for the given <code>cartId</code> in the specified Store, either because the Cart does not exist in the Project or because it exists but does not belong to that Store, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+ *  <p>The results include globally scoped ShippingMethods (those with an empty <code>stores</code> field) and ShippingMethods scoped to the Store specified in the path.</p>
  *  <p>Each ShippingMethod contains exactly one ShippingRate with the flag <code>isMatching</code> set to <code>true</code>. This ShippingRate is used when the ShippingMethod is <a href="https://docs.commercetools.com/apis/ctp:api:type:CartSetShippingMethodAction" rel="nofollow">added to the Cart</a>.</p>
  *  <p>If a matching ShippingMethod has <code>isDefault</code> set to <code>true</code>, it is returned as the first item in the array.</p>
  *

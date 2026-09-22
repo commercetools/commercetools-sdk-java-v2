@@ -23,6 +23,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .sequenceNumber(0.3)
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
+ *             .product(productBuilder -> productBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -52,6 +53,8 @@ public class VariantKeySetMessageBuilder implements Builder<VariantKeySetMessage
 
     @Nullable
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+
+    private com.commercetools.api.models.product.ProductReference product;
 
     @Nullable
     private String key;
@@ -260,6 +263,41 @@ public class VariantKeySetMessageBuilder implements Builder<VariantKeySetMessage
     }
 
     /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public VariantKeySetMessageBuilder product(
+            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public VariantKeySetMessageBuilder withProduct(
+            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @param product value to be set
+     * @return Builder
+     */
+
+    public VariantKeySetMessageBuilder product(final com.commercetools.api.models.product.ProductReference product) {
+        this.product = product;
+        return this;
+    }
+
+    /**
      *  <p>The key that was set on the Variant.</p>
      * @param key value to be set
      * @return Builder
@@ -375,6 +413,15 @@ public class VariantKeySetMessageBuilder implements Builder<VariantKeySetMessage
     }
 
     /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @return product
+     */
+
+    public com.commercetools.api.models.product.ProductReference getProduct() {
+        return this.product;
+    }
+
+    /**
      *  <p>The key that was set on the Variant.</p>
      * @return key
      */
@@ -406,8 +453,9 @@ public class VariantKeySetMessageBuilder implements Builder<VariantKeySetMessage
         Objects.requireNonNull(sequenceNumber, VariantKeySetMessage.class + ": sequenceNumber is missing");
         Objects.requireNonNull(resource, VariantKeySetMessage.class + ": resource is missing");
         Objects.requireNonNull(resourceVersion, VariantKeySetMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(product, VariantKeySetMessage.class + ": product is missing");
         return new VariantKeySetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, key, oldKey);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, product, key, oldKey);
     }
 
     /**
@@ -416,7 +464,7 @@ public class VariantKeySetMessageBuilder implements Builder<VariantKeySetMessage
      */
     public VariantKeySetMessage buildUnchecked() {
         return new VariantKeySetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, key, oldKey);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, product, key, oldKey);
     }
 
     /**
@@ -444,6 +492,7 @@ public class VariantKeySetMessageBuilder implements Builder<VariantKeySetMessage
         builder.resource = template.getResource();
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
+        builder.product = template.getProduct();
         builder.key = template.getKey();
         builder.oldKey = template.getOldKey();
         return builder;

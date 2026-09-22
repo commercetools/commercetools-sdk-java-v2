@@ -91,10 +91,12 @@ public class VariantCreatedMessageQueryBuilderDsl {
             VariantCreatedMessageQueryBuilderDsl::of);
     }
 
-    public StringComparisonPredicateBuilder<VariantCreatedMessageQueryBuilderDsl> productId() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("productId")),
-            p -> new CombinationQueryPredicate<>(p, VariantCreatedMessageQueryBuilderDsl::of));
+    public CombinationQueryPredicate<VariantCreatedMessageQueryBuilderDsl> product(
+            Function<com.commercetools.api.predicates.query.product.ProductReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product.ProductReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("product"))
+                .inner(fn.apply(com.commercetools.api.predicates.query.product.ProductReferenceQueryBuilderDsl.of())),
+            VariantCreatedMessageQueryBuilderDsl::of);
     }
 
     public LongComparisonPredicateBuilder<VariantCreatedMessageQueryBuilderDsl> variantId() {

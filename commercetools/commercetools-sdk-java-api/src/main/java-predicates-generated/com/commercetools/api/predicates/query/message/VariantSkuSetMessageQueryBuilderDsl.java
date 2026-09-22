@@ -91,6 +91,14 @@ public class VariantSkuSetMessageQueryBuilderDsl {
             VariantSkuSetMessageQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<VariantSkuSetMessageQueryBuilderDsl> product(
+            Function<com.commercetools.api.predicates.query.product.ProductReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product.ProductReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("product"))
+                .inner(fn.apply(com.commercetools.api.predicates.query.product.ProductReferenceQueryBuilderDsl.of())),
+            VariantSkuSetMessageQueryBuilderDsl::of);
+    }
+
     public StringComparisonPredicateBuilder<VariantSkuSetMessageQueryBuilderDsl> sku() {
         return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("sku")),
             p -> new CombinationQueryPredicate<>(p, VariantSkuSetMessageQueryBuilderDsl::of));

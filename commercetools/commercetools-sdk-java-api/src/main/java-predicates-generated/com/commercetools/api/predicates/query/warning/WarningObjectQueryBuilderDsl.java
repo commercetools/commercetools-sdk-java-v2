@@ -25,6 +25,20 @@ public class WarningObjectQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, WarningObjectQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<WarningObjectQueryBuilderDsl> asFileNotProcessed(
+            Function<com.commercetools.api.predicates.query.agent.AgentFileNotProcessedWarningQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.AgentFileNotProcessedWarningQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.agent.AgentFileNotProcessedWarningQueryBuilderDsl.of()),
+            WarningObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<WarningObjectQueryBuilderDsl> asProductsNotFound(
+            Function<com.commercetools.api.predicates.query.agent.AgentProductsNotFoundWarningQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.AgentProductsNotFoundWarningQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.agent.AgentProductsNotFoundWarningQueryBuilderDsl.of()),
+            WarningObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<WarningObjectQueryBuilderDsl> asCannotChangeReservationExpiry(
             Function<com.commercetools.api.predicates.query.warning.CannotChangeReservationExpiryWarningQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.warning.CannotChangeReservationExpiryWarningQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(

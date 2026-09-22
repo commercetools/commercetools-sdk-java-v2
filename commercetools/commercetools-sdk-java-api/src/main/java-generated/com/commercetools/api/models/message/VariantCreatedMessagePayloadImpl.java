@@ -18,16 +18,16 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Generated after a successful <span>Create Variant</span> request.</p>
+ *  <p>Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/variants:POST" rel="nofollow">Create Variant</a> request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class VariantCreatedMessagePayloadImpl implements VariantCreatedMessagePayload, ModelBase {
 
     private String type;
 
-    private String id;
+    private com.commercetools.api.models.product.ProductReference product;
 
-    private String productId;
+    private String id;
 
     private Integer variantId;
 
@@ -47,15 +47,16 @@ public class VariantCreatedMessagePayloadImpl implements VariantCreatedMessagePa
      * create instance with all properties
      */
     @JsonCreator
-    VariantCreatedMessagePayloadImpl(@JsonProperty("id") final String id,
-            @JsonProperty("productId") final String productId, @JsonProperty("variantId") final Integer variantId,
+    VariantCreatedMessagePayloadImpl(
+            @JsonProperty("product") final com.commercetools.api.models.product.ProductReference product,
+            @JsonProperty("id") final String id, @JsonProperty("variantId") final Integer variantId,
             @JsonProperty("key") final String key, @JsonProperty("sku") final String sku,
             @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product.Attribute> attributes,
             @JsonProperty("assets") final java.util.List<com.commercetools.api.models.common.Asset> assets,
             @JsonProperty("images") final java.util.List<com.commercetools.api.models.common.Image> images,
             @JsonProperty("publish") final Boolean publish) {
+        this.product = product;
         this.id = id;
-        this.productId = productId;
         this.variantId = variantId;
         this.key = key;
         this.sku = sku;
@@ -82,19 +83,19 @@ public class VariantCreatedMessagePayloadImpl implements VariantCreatedMessagePa
     }
 
     /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     */
+
+    public com.commercetools.api.models.product.ProductReference getProduct() {
+        return this.product;
+    }
+
+    /**
      *  <p>Unique identifier of the Variant.</p>
      */
 
     public String getId() {
         return this.id;
-    }
-
-    /**
-     *  <p>Unique identifier of the Product to which the Variant belongs.</p>
-     */
-
-    public String getProductId() {
-        return this.productId;
     }
 
     /**
@@ -153,12 +154,12 @@ public class VariantCreatedMessagePayloadImpl implements VariantCreatedMessagePa
         return this.publish;
     }
 
-    public void setId(final String id) {
-        this.id = id;
+    public void setProduct(final com.commercetools.api.models.product.ProductReference product) {
+        this.product = product;
     }
 
-    public void setProductId(final String productId) {
-        this.productId = productId;
+    public void setId(final String id) {
+        this.id = id;
     }
 
     public void setVariantId(final Integer variantId) {
@@ -212,8 +213,8 @@ public class VariantCreatedMessagePayloadImpl implements VariantCreatedMessagePa
         VariantCreatedMessagePayloadImpl that = (VariantCreatedMessagePayloadImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
+                .append(product, that.product)
                 .append(id, that.id)
-                .append(productId, that.productId)
                 .append(variantId, that.variantId)
                 .append(key, that.key)
                 .append(sku, that.sku)
@@ -222,8 +223,8 @@ public class VariantCreatedMessagePayloadImpl implements VariantCreatedMessagePa
                 .append(images, that.images)
                 .append(publish, that.publish)
                 .append(type, that.type)
+                .append(product, that.product)
                 .append(id, that.id)
-                .append(productId, that.productId)
                 .append(variantId, that.variantId)
                 .append(key, that.key)
                 .append(sku, that.sku)
@@ -237,8 +238,8 @@ public class VariantCreatedMessagePayloadImpl implements VariantCreatedMessagePa
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
+                .append(product)
                 .append(id)
-                .append(productId)
                 .append(variantId)
                 .append(key)
                 .append(sku)
@@ -252,8 +253,8 @@ public class VariantCreatedMessagePayloadImpl implements VariantCreatedMessagePa
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("product", product)
                 .append("id", id)
-                .append("productId", productId)
                 .append("variantId", variantId)
                 .append("key", key)
                 .append("sku", sku)

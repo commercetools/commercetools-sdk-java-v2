@@ -19,14 +19,16 @@ public class VariantCreatedMessagePayloadQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, VariantCreatedMessagePayloadQueryBuilderDsl::of));
     }
 
-    public StringComparisonPredicateBuilder<VariantCreatedMessagePayloadQueryBuilderDsl> id() {
-        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("id")),
-            p -> new CombinationQueryPredicate<>(p, VariantCreatedMessagePayloadQueryBuilderDsl::of));
+    public CombinationQueryPredicate<VariantCreatedMessagePayloadQueryBuilderDsl> product(
+            Function<com.commercetools.api.predicates.query.product.ProductReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product.ProductReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("product"))
+                .inner(fn.apply(com.commercetools.api.predicates.query.product.ProductReferenceQueryBuilderDsl.of())),
+            VariantCreatedMessagePayloadQueryBuilderDsl::of);
     }
 
-    public StringComparisonPredicateBuilder<VariantCreatedMessagePayloadQueryBuilderDsl> productId() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("productId")),
+    public StringComparisonPredicateBuilder<VariantCreatedMessagePayloadQueryBuilderDsl> id() {
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("id")),
             p -> new CombinationQueryPredicate<>(p, VariantCreatedMessagePayloadQueryBuilderDsl::of));
     }
 

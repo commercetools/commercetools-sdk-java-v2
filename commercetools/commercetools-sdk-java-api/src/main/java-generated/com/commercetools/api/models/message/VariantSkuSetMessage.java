@@ -7,10 +7,12 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import com.commercetools.api.models.product.ProductReference;
 import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
@@ -29,6 +31,7 @@ import tools.jackson.databind.annotation.*;
  *             .sequenceNumber(0.3)
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
+ *             .product(productBuilder -> productBuilder)
  *             .staged(true)
  *             .build()
  * </code></pre>
@@ -43,6 +46,15 @@ public interface VariantSkuSetMessage extends Message {
      * discriminator value for VariantSkuSetMessage
      */
     String VARIANT_SKU_SET = "VariantSkuSet";
+
+    /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @return product
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("product")
+    public ProductReference getProduct();
 
     /**
      *  <p>The SKU that was set on the Variant.</p>
@@ -67,6 +79,13 @@ public interface VariantSkuSetMessage extends Message {
     @NotNull
     @JsonProperty("staged")
     public Boolean getStaged();
+
+    /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @param product value to be set
+     */
+
+    public void setProduct(final ProductReference product);
 
     /**
      *  <p>The SKU that was set on the Variant.</p>
@@ -114,6 +133,7 @@ public interface VariantSkuSetMessage extends Message {
         instance.setResource(template.getResource());
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setProduct(template.getProduct());
         instance.setSku(template.getSku());
         instance.setOldSku(template.getOldSku());
         instance.setStaged(template.getStaged());
@@ -145,6 +165,7 @@ public interface VariantSkuSetMessage extends Message {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
                 .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
         instance.setSku(template.getSku());
         instance.setOldSku(template.getOldSku());
         instance.setStaged(template.getStaged());

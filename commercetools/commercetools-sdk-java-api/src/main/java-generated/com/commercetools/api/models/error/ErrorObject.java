@@ -21,7 +21,7 @@ import tools.jackson.databind.annotation.*;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     ErrorObject errorObject = ErrorObject.anonymousIdAlreadyInUseBuilder()
+ *     ErrorObject errorObject = ErrorObject.businessUnitAmbiguousBuilder()
  *             message("{message}")
  *
  *             .build()
@@ -93,6 +93,134 @@ public interface ErrorObject {
         instance.setMessage(template.getMessage());
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
+    }
+
+    /**
+     * builder for businessUnitAmbiguous subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentBusinessUnitAmbiguousErrorBuilder businessUnitAmbiguousBuilder() {
+        return com.commercetools.api.models.agent.AgentBusinessUnitAmbiguousErrorBuilder.of();
+    }
+
+    /**
+     * builder for businessUnitLimitExceeded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentBusinessUnitLimitExceededErrorBuilder businessUnitLimitExceededBuilder() {
+        return com.commercetools.api.models.agent.AgentBusinessUnitLimitExceededErrorBuilder.of();
+    }
+
+    /**
+     * builder for businessUnitUnresolved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentBusinessUnitUnresolvedErrorBuilder businessUnitUnresolvedBuilder() {
+        return com.commercetools.api.models.agent.AgentBusinessUnitUnresolvedErrorBuilder.of();
+    }
+
+    /**
+     * builder for extractionFailed subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentExtractionFailedErrorBuilder extractionFailedBuilder() {
+        return com.commercetools.api.models.agent.AgentExtractionFailedErrorBuilder.of();
+    }
+
+    /**
+     * builder for featureDisabled subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentFeatureDisabledErrorBuilder featureDisabledBuilder() {
+        return com.commercetools.api.models.agent.AgentFeatureDisabledErrorBuilder.of();
+    }
+
+    /**
+     * builder for missingCountry subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentMissingCountryErrorBuilder missingCountryBuilder() {
+        return com.commercetools.api.models.agent.AgentMissingCountryErrorBuilder.of();
+    }
+
+    /**
+     * builder for missingCustomerEmail subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentMissingCustomerEmailErrorBuilder missingCustomerEmailBuilder() {
+        return com.commercetools.api.models.agent.AgentMissingCustomerEmailErrorBuilder.of();
+    }
+
+    /**
+     * builder for missingEntityType subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentMissingEntityTypeErrorBuilder missingEntityTypeBuilder() {
+        return com.commercetools.api.models.agent.AgentMissingEntityTypeErrorBuilder.of();
+    }
+
+    /**
+     * builder for noLineItemsExtracted subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentNoLineItemsExtractedErrorBuilder noLineItemsExtractedBuilder() {
+        return com.commercetools.api.models.agent.AgentNoLineItemsExtractedErrorBuilder.of();
+    }
+
+    /**
+     * builder for outOfScope subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentOutOfScopeErrorBuilder outOfScopeBuilder() {
+        return com.commercetools.api.models.agent.AgentOutOfScopeErrorBuilder.of();
+    }
+
+    /**
+     * builder for productSearchNotEnabled subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentProductSearchNotEnabledErrorBuilder productSearchNotEnabledBuilder() {
+        return com.commercetools.api.models.agent.AgentProductSearchNotEnabledErrorBuilder.of();
+    }
+
+    /**
+     * builder for productsNotFound subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentProductsNotFoundErrorBuilder productsNotFoundBuilder() {
+        return com.commercetools.api.models.agent.AgentProductsNotFoundErrorBuilder.of();
+    }
+
+    /**
+     * builder for quoteRequestCreationFailed subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentQuoteRequestCreationFailedErrorBuilder quoteRequestCreationFailedBuilder() {
+        return com.commercetools.api.models.agent.AgentQuoteRequestCreationFailedErrorBuilder.of();
+    }
+
+    /**
+     * builder for storeAmbiguous subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentStoreAmbiguousErrorBuilder storeAmbiguousBuilder() {
+        return com.commercetools.api.models.agent.AgentStoreAmbiguousErrorBuilder.of();
+    }
+
+    /**
+     * builder for storeDistributionChannelsUnsupported subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentStoreDistributionChannelsUnsupportedErrorBuilder storeDistributionChannelsUnsupportedBuilder() {
+        return com.commercetools.api.models.agent.AgentStoreDistributionChannelsUnsupportedErrorBuilder.of();
+    }
+
+    /**
+     * builder for storeUnresolved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentStoreUnresolvedErrorBuilder storeUnresolvedBuilder() {
+        return com.commercetools.api.models.agent.AgentStoreUnresolvedErrorBuilder.of();
     }
 
     /**

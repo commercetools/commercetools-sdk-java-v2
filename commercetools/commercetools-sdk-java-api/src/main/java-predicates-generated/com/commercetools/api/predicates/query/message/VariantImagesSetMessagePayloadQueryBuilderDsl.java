@@ -19,6 +19,14 @@ public class VariantImagesSetMessagePayloadQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, VariantImagesSetMessagePayloadQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<VariantImagesSetMessagePayloadQueryBuilderDsl> product(
+            Function<com.commercetools.api.predicates.query.product.ProductReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product.ProductReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("product"))
+                .inner(fn.apply(com.commercetools.api.predicates.query.product.ProductReferenceQueryBuilderDsl.of())),
+            VariantImagesSetMessagePayloadQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<VariantImagesSetMessagePayloadQueryBuilderDsl> images(
             Function<com.commercetools.api.predicates.query.common.ImageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.ImageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

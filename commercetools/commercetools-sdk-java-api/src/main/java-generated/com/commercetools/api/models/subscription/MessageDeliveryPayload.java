@@ -95,7 +95,7 @@ public interface MessageDeliveryPayload extends DeliveryPayload, MessageDelivery
     public Long getResourceVersion();
 
     /**
-     *  <p>If the payload does not fit into the size limit or its format is not accepted by the messaging service, the <code>payloadNotIncluded</code> field is present.</p>
+     *  <p>Present when the payload exceeds the size limit of the message queue (the limit is often 256 KB) or its format is not accepted by the messaging service. If the payload exceeds the size limit, the additional Message fields are replaced with a <a href="https://docs.commercetools.com/apis/ctp:api:type:PayloadNotIncluded" rel="nofollow">PayloadNotIncluded</a> object. You can retrieve the full Message using the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/messages/{id}:GET" rel="nofollow">Messages API</a> if the feature is enabled.</p>
      * @return payloadNotIncluded
      */
     @Valid
@@ -145,7 +145,7 @@ public interface MessageDeliveryPayload extends DeliveryPayload, MessageDelivery
     public void setResourceVersion(final Long resourceVersion);
 
     /**
-     *  <p>If the payload does not fit into the size limit or its format is not accepted by the messaging service, the <code>payloadNotIncluded</code> field is present.</p>
+     *  <p>Present when the payload exceeds the size limit of the message queue (the limit is often 256 KB) or its format is not accepted by the messaging service. If the payload exceeds the size limit, the additional Message fields are replaced with a <a href="https://docs.commercetools.com/apis/ctp:api:type:PayloadNotIncluded" rel="nofollow">PayloadNotIncluded</a> object. You can retrieve the full Message using the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/messages/{id}:GET" rel="nofollow">Messages API</a> if the feature is enabled.</p>
      * @param payloadNotIncluded value to be set
      */
 

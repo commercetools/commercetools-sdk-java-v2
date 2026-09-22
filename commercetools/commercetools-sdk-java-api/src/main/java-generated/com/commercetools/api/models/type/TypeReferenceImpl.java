@@ -65,7 +65,7 @@ public class TypeReferenceImpl implements TypeReference, ModelBase {
     }
 
     /**
-     *  <p>Contains the representation of the expanded Type. Only present in responses to requests with <a href="https://docs.commercetools.com/apis/ctp:api:type:Expansion" rel="nofollow">Reference Expansion</a> for Types.</p>
+     *  <p>Contains the representation of the expanded Type. Only present in responses to requests with <span>Reference Expansion</span> for Types.</p>
      */
 
     public com.commercetools.api.models.type.Type getObj() {

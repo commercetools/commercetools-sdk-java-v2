@@ -8,6 +8,7 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Image;
+import com.commercetools.api.models.product.ProductReference;
 import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
@@ -24,6 +25,7 @@ import tools.jackson.databind.annotation.*;
  * <div class=code-example>
  * <pre><code class='java'>
  *     VariantImageAddedMessagePayload variantImageAddedMessagePayload = VariantImageAddedMessagePayload.builder()
+ *             .product(productBuilder -> productBuilder)
  *             .image(imageBuilder -> imageBuilder)
  *             .staged(true)
  *             .build()
@@ -41,6 +43,15 @@ public interface VariantImageAddedMessagePayload extends MessagePayload {
     String VARIANT_IMAGE_ADDED = "VariantImageAdded";
 
     /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @return product
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("product")
+    public ProductReference getProduct();
+
+    /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
      * @return image
      */
@@ -56,6 +67,13 @@ public interface VariantImageAddedMessagePayload extends MessagePayload {
     @NotNull
     @JsonProperty("staged")
     public Boolean getStaged();
+
+    /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @param product value to be set
+     */
+
+    public void setProduct(final ProductReference product);
 
     /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Image" rel="nofollow">Image</a> that was added.</p>
@@ -86,6 +104,7 @@ public interface VariantImageAddedMessagePayload extends MessagePayload {
      */
     public static VariantImageAddedMessagePayload of(final VariantImageAddedMessagePayload template) {
         VariantImageAddedMessagePayloadImpl instance = new VariantImageAddedMessagePayloadImpl();
+        instance.setProduct(template.getProduct());
         instance.setImage(template.getImage());
         instance.setStaged(template.getStaged());
         return instance;
@@ -104,6 +123,7 @@ public interface VariantImageAddedMessagePayload extends MessagePayload {
             return null;
         }
         VariantImageAddedMessagePayloadImpl instance = new VariantImageAddedMessagePayloadImpl();
+        instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
         instance.setImage(com.commercetools.api.models.common.Image.deepCopy(template.getImage()));
         instance.setStaged(template.getStaged());
         return instance;

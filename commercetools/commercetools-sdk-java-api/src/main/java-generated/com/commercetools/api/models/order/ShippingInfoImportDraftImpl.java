@@ -31,6 +31,8 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
 
     private com.commercetools.api.models.tax_category.TaxRate taxRate;
 
+    private com.commercetools.api.models.cart.TaxedPriceDraft taxedPrice;
+
     private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
 
     private com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod;
@@ -49,6 +51,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
             @JsonProperty("price") final com.commercetools.api.models.common.Money price,
             @JsonProperty("shippingRate") final com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate,
             @JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRate taxRate,
+            @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedPriceDraft taxedPrice,
             @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory,
             @JsonProperty("shippingMethod") final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod,
             @JsonProperty("deliveries") final java.util.List<com.commercetools.api.models.order.DeliveryDraft> deliveries,
@@ -58,6 +61,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
         this.price = price;
         this.shippingRate = shippingRate;
         this.taxRate = taxRate;
+        this.taxedPrice = taxedPrice;
         this.taxCategory = taxCategory;
         this.shippingMethod = shippingMethod;
         this.deliveries = deliveries;
@@ -101,6 +105,14 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
 
     public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {
         return this.taxRate;
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Method. If provided, the values are stored as-is on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a> instead of being derived from <code>price</code> and <code>taxRate</code>.</p>
+     */
+
+    public com.commercetools.api.models.cart.TaxedPriceDraft getTaxedPrice() {
+        return this.taxedPrice;
     }
 
     /**
@@ -159,6 +171,10 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
         this.taxRate = taxRate;
     }
 
+    public void setTaxedPrice(final com.commercetools.api.models.cart.TaxedPriceDraft taxedPrice) {
+        this.taxedPrice = taxedPrice;
+    }
+
     public void setTaxCategory(
             final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
         this.taxCategory = taxCategory;
@@ -201,6 +217,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
                 .append(price, that.price)
                 .append(shippingRate, that.shippingRate)
                 .append(taxRate, that.taxRate)
+                .append(taxedPrice, that.taxedPrice)
                 .append(taxCategory, that.taxCategory)
                 .append(shippingMethod, that.shippingMethod)
                 .append(deliveries, that.deliveries)
@@ -210,6 +227,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
                 .append(price, that.price)
                 .append(shippingRate, that.shippingRate)
                 .append(taxRate, that.taxRate)
+                .append(taxedPrice, that.taxedPrice)
                 .append(taxCategory, that.taxCategory)
                 .append(shippingMethod, that.shippingMethod)
                 .append(deliveries, that.deliveries)
@@ -224,6 +242,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
                 .append(price)
                 .append(shippingRate)
                 .append(taxRate)
+                .append(taxedPrice)
                 .append(taxCategory)
                 .append(shippingMethod)
                 .append(deliveries)
@@ -239,6 +258,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
                 .append("price", price)
                 .append("shippingRate", shippingRate)
                 .append("taxRate", taxRate)
+                .append("taxedPrice", taxedPrice)
                 .append("taxCategory", taxCategory)
                 .append("shippingMethod", shippingMethod)
                 .append("deliveries", deliveries)

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -15,6 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     VariantSkuSetMessagePayload variantSkuSetMessagePayload = VariantSkuSetMessagePayload.builder()
+ *             .product(productBuilder -> productBuilder)
  *             .staged(true)
  *             .build()
  * </code></pre>
@@ -23,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class VariantSkuSetMessagePayloadBuilder implements Builder<VariantSkuSetMessagePayload> {
 
+    private com.commercetools.api.models.product.ProductReference product;
+
     @Nullable
     private String sku;
 
@@ -30,6 +34,42 @@ public class VariantSkuSetMessagePayloadBuilder implements Builder<VariantSkuSet
     private String oldSku;
 
     private Boolean staged;
+
+    /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public VariantSkuSetMessagePayloadBuilder product(
+            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public VariantSkuSetMessagePayloadBuilder withProduct(
+            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @param product value to be set
+     * @return Builder
+     */
+
+    public VariantSkuSetMessagePayloadBuilder product(
+            final com.commercetools.api.models.product.ProductReference product) {
+        this.product = product;
+        return this;
+    }
 
     /**
      *  <p>The SKU that was set on the Variant.</p>
@@ -62,6 +102,15 @@ public class VariantSkuSetMessagePayloadBuilder implements Builder<VariantSkuSet
     public VariantSkuSetMessagePayloadBuilder staged(final Boolean staged) {
         this.staged = staged;
         return this;
+    }
+
+    /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @return product
+     */
+
+    public com.commercetools.api.models.product.ProductReference getProduct() {
+        return this.product;
     }
 
     /**
@@ -98,8 +147,9 @@ public class VariantSkuSetMessagePayloadBuilder implements Builder<VariantSkuSet
      * @return VariantSkuSetMessagePayload
      */
     public VariantSkuSetMessagePayload build() {
+        Objects.requireNonNull(product, VariantSkuSetMessagePayload.class + ": product is missing");
         Objects.requireNonNull(staged, VariantSkuSetMessagePayload.class + ": staged is missing");
-        return new VariantSkuSetMessagePayloadImpl(sku, oldSku, staged);
+        return new VariantSkuSetMessagePayloadImpl(product, sku, oldSku, staged);
     }
 
     /**
@@ -107,7 +157,7 @@ public class VariantSkuSetMessagePayloadBuilder implements Builder<VariantSkuSet
      * @return VariantSkuSetMessagePayload
      */
     public VariantSkuSetMessagePayload buildUnchecked() {
-        return new VariantSkuSetMessagePayloadImpl(sku, oldSku, staged);
+        return new VariantSkuSetMessagePayloadImpl(product, sku, oldSku, staged);
     }
 
     /**
@@ -125,6 +175,7 @@ public class VariantSkuSetMessagePayloadBuilder implements Builder<VariantSkuSet
      */
     public static VariantSkuSetMessagePayloadBuilder of(final VariantSkuSetMessagePayload template) {
         VariantSkuSetMessagePayloadBuilder builder = new VariantSkuSetMessagePayloadBuilder();
+        builder.product = template.getProduct();
         builder.sku = template.getSku();
         builder.oldSku = template.getOldSku();
         builder.staged = template.getStaged();

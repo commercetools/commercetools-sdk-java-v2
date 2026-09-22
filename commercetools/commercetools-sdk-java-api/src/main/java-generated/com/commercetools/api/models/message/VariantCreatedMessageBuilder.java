@@ -23,7 +23,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .sequenceNumber(0.3)
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
- *             .productId("{productId}")
+ *             .product(productBuilder -> productBuilder)
  *             .variantId(1)
  *             .publish(true)
  *             .build()
@@ -56,7 +56,7 @@ public class VariantCreatedMessageBuilder implements Builder<VariantCreatedMessa
     @Nullable
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
-    private String productId;
+    private com.commercetools.api.models.product.ProductReference product;
 
     private Integer variantId;
 
@@ -278,13 +278,37 @@ public class VariantCreatedMessageBuilder implements Builder<VariantCreatedMessa
     }
 
     /**
-     *  <p>Unique identifier of the Product to which the Variant belongs.</p>
-     * @param productId value to be set
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @param builder function to build the product value
      * @return Builder
      */
 
-    public VariantCreatedMessageBuilder productId(final String productId) {
-        this.productId = productId;
+    public VariantCreatedMessageBuilder product(
+            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public VariantCreatedMessageBuilder withProduct(
+            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @param product value to be set
+     * @return Builder
+     */
+
+    public VariantCreatedMessageBuilder product(final com.commercetools.api.models.product.ProductReference product) {
+        this.product = product;
         return this;
     }
 
@@ -691,12 +715,12 @@ public class VariantCreatedMessageBuilder implements Builder<VariantCreatedMessa
     }
 
     /**
-     *  <p>Unique identifier of the Product to which the Variant belongs.</p>
-     * @return productId
+     *  <p>Reference to the Product containing the Variant.</p>
+     * @return product
      */
 
-    public String getProductId() {
-        return this.productId;
+    public com.commercetools.api.models.product.ProductReference getProduct() {
+        return this.product;
     }
 
     /**
@@ -779,11 +803,11 @@ public class VariantCreatedMessageBuilder implements Builder<VariantCreatedMessa
         Objects.requireNonNull(sequenceNumber, VariantCreatedMessage.class + ": sequenceNumber is missing");
         Objects.requireNonNull(resource, VariantCreatedMessage.class + ": resource is missing");
         Objects.requireNonNull(resourceVersion, VariantCreatedMessage.class + ": resourceVersion is missing");
-        Objects.requireNonNull(productId, VariantCreatedMessage.class + ": productId is missing");
+        Objects.requireNonNull(product, VariantCreatedMessage.class + ": product is missing");
         Objects.requireNonNull(variantId, VariantCreatedMessage.class + ": variantId is missing");
         Objects.requireNonNull(publish, VariantCreatedMessage.class + ": publish is missing");
         return new VariantCreatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, productId, variantId, key, sku,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, product, variantId, key, sku,
             attributes, assets, images, publish);
     }
 
@@ -793,7 +817,7 @@ public class VariantCreatedMessageBuilder implements Builder<VariantCreatedMessa
      */
     public VariantCreatedMessage buildUnchecked() {
         return new VariantCreatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, productId, variantId, key, sku,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, product, variantId, key, sku,
             attributes, assets, images, publish);
     }
 
@@ -822,7 +846,7 @@ public class VariantCreatedMessageBuilder implements Builder<VariantCreatedMessa
         builder.resource = template.getResource();
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
-        builder.productId = template.getProductId();
+        builder.product = template.getProduct();
         builder.variantId = template.getVariantId();
         builder.key = template.getKey();
         builder.sku = template.getSku();

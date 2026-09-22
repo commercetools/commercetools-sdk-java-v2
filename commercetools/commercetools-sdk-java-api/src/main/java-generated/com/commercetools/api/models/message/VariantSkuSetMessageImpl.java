@@ -45,6 +45,8 @@ public class VariantSkuSetMessageImpl implements VariantSkuSetMessage, ModelBase
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
+    private com.commercetools.api.models.product.ProductReference product;
+
     private String sku;
 
     private String oldSku;
@@ -64,6 +66,7 @@ public class VariantSkuSetMessageImpl implements VariantSkuSetMessage, ModelBase
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
+            @JsonProperty("product") final com.commercetools.api.models.product.ProductReference product,
             @JsonProperty("sku") final String sku, @JsonProperty("oldSku") final String oldSku,
             @JsonProperty("staged") final Boolean staged) {
         this.id = id;
@@ -76,6 +79,7 @@ public class VariantSkuSetMessageImpl implements VariantSkuSetMessage, ModelBase
         this.resource = resource;
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
+        this.product = product;
         this.sku = sku;
         this.oldSku = oldSku;
         this.staged = staged;
@@ -178,6 +182,14 @@ public class VariantSkuSetMessageImpl implements VariantSkuSetMessage, ModelBase
     }
 
     /**
+     *  <p>Reference to the Product containing the Variant.</p>
+     */
+
+    public com.commercetools.api.models.product.ProductReference getProduct() {
+        return this.product;
+    }
+
+    /**
      *  <p>The SKU that was set on the Variant.</p>
      */
 
@@ -242,6 +254,10 @@ public class VariantSkuSetMessageImpl implements VariantSkuSetMessage, ModelBase
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
     }
 
+    public void setProduct(final com.commercetools.api.models.product.ProductReference product) {
+        this.product = product;
+    }
+
     public void setSku(final String sku) {
         this.sku = sku;
     }
@@ -275,6 +291,7 @@ public class VariantSkuSetMessageImpl implements VariantSkuSetMessage, ModelBase
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(product, that.product)
                 .append(sku, that.sku)
                 .append(oldSku, that.oldSku)
                 .append(staged, that.staged)
@@ -289,6 +306,7 @@ public class VariantSkuSetMessageImpl implements VariantSkuSetMessage, ModelBase
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(product, that.product)
                 .append(sku, that.sku)
                 .append(oldSku, that.oldSku)
                 .append(staged, that.staged)
@@ -308,6 +326,7 @@ public class VariantSkuSetMessageImpl implements VariantSkuSetMessage, ModelBase
                 .append(resourceVersion)
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
+                .append(product)
                 .append(sku)
                 .append(oldSku)
                 .append(staged)
@@ -327,6 +346,7 @@ public class VariantSkuSetMessageImpl implements VariantSkuSetMessage, ModelBase
                 .append("resourceVersion", resourceVersion)
                 .append("type", type)
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
+                .append("product", product)
                 .append("sku", sku)
                 .append("oldSku", oldSku)
                 .append("staged", staged)

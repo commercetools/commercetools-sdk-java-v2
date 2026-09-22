@@ -257,7 +257,7 @@ public class VariantUnpublishedMessageBuilder implements Builder<VariantUnpublis
     }
 
     /**
-     *  <p>Reference to the Product containing the Variant that was unpublished.</p>
+     *  <p>Reference to the Product containing the Variant.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -269,7 +269,7 @@ public class VariantUnpublishedMessageBuilder implements Builder<VariantUnpublis
     }
 
     /**
-     *  <p>Reference to the Product containing the Variant that was unpublished.</p>
+     *  <p>Reference to the Product containing the Variant.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -281,7 +281,7 @@ public class VariantUnpublishedMessageBuilder implements Builder<VariantUnpublis
     }
 
     /**
-     *  <p>Reference to the Product containing the Variant that was unpublished.</p>
+     *  <p>Reference to the Product containing the Variant.</p>
      * @param product value to be set
      * @return Builder
      */
@@ -386,7 +386,7 @@ public class VariantUnpublishedMessageBuilder implements Builder<VariantUnpublis
     }
 
     /**
-     *  <p>Reference to the Product containing the Variant that was unpublished.</p>
+     *  <p>Reference to the Product containing the Variant.</p>
      * @return product
      */
 

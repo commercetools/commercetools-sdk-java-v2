@@ -62,6 +62,18 @@ public interface DirectDiscount {
     public CartDiscountTarget getTarget();
 
     /**
+     *  <ul>
+     *   <li>If <code>true</code>, Direct Discounts compete against Product Discounts to apply the <span>best deal</span>.</li>
+     *   <li>If <code>false</code>, Direct Discounts are ignored when calculating the best deal comparison, and are applied on top of the discount type that offers the best deal.</li>
+     *  </ul>
+     *  <p>This applies only when the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCombinationMode" rel="nofollow">DiscountCombinationMode</a> for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> is <code>BestDeal</code>.</p>
+     * @return participateInBestDealSelection
+     */
+
+    @JsonProperty("participateInBestDealSelection")
+    public Boolean getParticipateInBestDealSelection();
+
+    /**
      *  <p>Unique identifier of the Direct Discount.</p>
      * @param id value to be set
      */
@@ -84,6 +96,17 @@ public interface DirectDiscount {
     public void setTarget(final CartDiscountTarget target);
 
     /**
+     *  <ul>
+     *   <li>If <code>true</code>, Direct Discounts compete against Product Discounts to apply the <span>best deal</span>.</li>
+     *   <li>If <code>false</code>, Direct Discounts are ignored when calculating the best deal comparison, and are applied on top of the discount type that offers the best deal.</li>
+     *  </ul>
+     *  <p>This applies only when the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCombinationMode" rel="nofollow">DiscountCombinationMode</a> for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> is <code>BestDeal</code>.</p>
+     * @param participateInBestDealSelection value to be set
+     */
+
+    public void setParticipateInBestDealSelection(final Boolean participateInBestDealSelection);
+
+    /**
      * factory method
      * @return instance of DirectDiscount
      */
@@ -101,6 +124,7 @@ public interface DirectDiscount {
         instance.setId(template.getId());
         instance.setValue(template.getValue());
         instance.setTarget(template.getTarget());
+        instance.setParticipateInBestDealSelection(template.getParticipateInBestDealSelection());
         return instance;
     }
 
@@ -121,6 +145,7 @@ public interface DirectDiscount {
         instance.setValue(com.commercetools.api.models.cart_discount.CartDiscountValue.deepCopy(template.getValue()));
         instance.setTarget(
             com.commercetools.api.models.cart_discount.CartDiscountTarget.deepCopy(template.getTarget()));
+        instance.setParticipateInBestDealSelection(template.getParticipateInBestDealSelection());
         return instance;
     }
 

@@ -18,7 +18,8 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Adds a <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">DirectDiscount</a>, but only if no <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> has been added to the Cart. Either a Discount Code or a Direct Discount can exist on a Cart at the same time.</p>
+ *  <p>Adds a <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">DirectDiscount</a> to the Cart.</p>
+ *  <p>If <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, Direct Discounts can only be added when no <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> has been added to the Cart.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetDirectDiscountsActionImpl implements CartSetDirectDiscountsAction, ModelBase {

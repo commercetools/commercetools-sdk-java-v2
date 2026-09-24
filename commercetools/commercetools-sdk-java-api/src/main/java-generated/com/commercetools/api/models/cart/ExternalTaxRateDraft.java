@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.tax_category.SubRate;
+import com.commercetools.api.models.tax_category.TaxRoundingTarget;
 import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
@@ -91,6 +92,14 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
     public List<SubRate> getSubRates();
 
     /**
+     *  <p>Determines whether the <code>taxRoundingMode</code> of the Cart or Order is applied to the net price or the tax amount when <code>includedInPrice</code> is <code>true</code>. The field is ignored if <code>includedInPrice</code> is <code>false</code>.</p>
+     * @return taxRoundingTarget
+     */
+
+    @JsonProperty("taxRoundingTarget")
+    public TaxRoundingTarget getTaxRoundingTarget();
+
+    /**
      *  <p>Name of the Tax Rate.</p>
      * @param name value to be set
      */
@@ -148,6 +157,13 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
     public void setSubRates(final List<SubRate> subRates);
 
     /**
+     *  <p>Determines whether the <code>taxRoundingMode</code> of the Cart or Order is applied to the net price or the tax amount when <code>includedInPrice</code> is <code>true</code>. The field is ignored if <code>includedInPrice</code> is <code>false</code>.</p>
+     * @param taxRoundingTarget value to be set
+     */
+
+    public void setTaxRoundingTarget(final TaxRoundingTarget taxRoundingTarget);
+
+    /**
      * factory method
      * @return instance of ExternalTaxRateDraft
      */
@@ -168,6 +184,7 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
         instance.setCountry(template.getCountry());
         instance.setState(template.getState());
         instance.setSubRates(template.getSubRates());
+        instance.setTaxRoundingTarget(template.getTaxRoundingTarget());
         return instance;
     }
 
@@ -194,6 +211,7 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
                         .map(com.commercetools.api.models.tax_category.SubRate::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setTaxRoundingTarget(template.getTaxRoundingTarget());
         return instance;
     }
 

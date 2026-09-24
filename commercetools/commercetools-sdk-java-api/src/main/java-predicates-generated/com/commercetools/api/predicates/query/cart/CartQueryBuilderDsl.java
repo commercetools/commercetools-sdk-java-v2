@@ -312,6 +312,12 @@ public class CartQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CartQueryBuilderDsl::of));
     }
 
+    public BooleanComparisonPredicateBuilder<CartQueryBuilderDsl> directDiscountsIgnoreCartDiscounts() {
+        return new BooleanComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("directDiscountsIgnoreCartDiscounts")),
+            p -> new CombinationQueryPredicate<>(p, CartQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<CartQueryBuilderDsl> refusedGifts(
             Function<com.commercetools.api.predicates.query.cart_discount.CartDiscountReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart_discount.CartDiscountReferenceQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()

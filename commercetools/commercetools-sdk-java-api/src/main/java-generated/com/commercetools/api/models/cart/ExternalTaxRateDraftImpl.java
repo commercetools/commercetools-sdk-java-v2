@@ -35,6 +35,8 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
 
     private java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates;
 
+    private com.commercetools.api.models.tax_category.TaxRoundingTarget taxRoundingTarget;
+
     /**
      * create instance with all properties
      */
@@ -42,13 +44,15 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
     ExternalTaxRateDraftImpl(@JsonProperty("name") final String name, @JsonProperty("amount") final Double amount,
             @JsonProperty("includedInPrice") final Boolean includedInPrice,
             @JsonProperty("country") final String country, @JsonProperty("state") final String state,
-            @JsonProperty("subRates") final java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates) {
+            @JsonProperty("subRates") final java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates,
+            @JsonProperty("taxRoundingTarget") final com.commercetools.api.models.tax_category.TaxRoundingTarget taxRoundingTarget) {
         this.name = name;
         this.amount = amount;
         this.includedInPrice = includedInPrice;
         this.country = country;
         this.state = state;
         this.subRates = subRates;
+        this.taxRoundingTarget = taxRoundingTarget;
     }
 
     /**
@@ -112,6 +116,14 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
         return this.subRates;
     }
 
+    /**
+     *  <p>Determines whether the <code>taxRoundingMode</code> of the Cart or Order is applied to the net price or the tax amount when <code>includedInPrice</code> is <code>true</code>. The field is ignored if <code>includedInPrice</code> is <code>false</code>.</p>
+     */
+
+    public com.commercetools.api.models.tax_category.TaxRoundingTarget getTaxRoundingTarget() {
+        return this.taxRoundingTarget;
+    }
+
     public void setName(final String name) {
         this.name = name;
     }
@@ -140,6 +152,11 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
         this.subRates = subRates;
     }
 
+    public void setTaxRoundingTarget(
+            final com.commercetools.api.models.tax_category.TaxRoundingTarget taxRoundingTarget) {
+        this.taxRoundingTarget = taxRoundingTarget;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -156,12 +173,14 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
                 .append(country, that.country)
                 .append(state, that.state)
                 .append(subRates, that.subRates)
+                .append(taxRoundingTarget, that.taxRoundingTarget)
                 .append(name, that.name)
                 .append(amount, that.amount)
                 .append(includedInPrice, that.includedInPrice)
                 .append(country, that.country)
                 .append(state, that.state)
                 .append(subRates, that.subRates)
+                .append(taxRoundingTarget, that.taxRoundingTarget)
                 .isEquals();
     }
 
@@ -173,6 +192,7 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
                 .append(country)
                 .append(state)
                 .append(subRates)
+                .append(taxRoundingTarget)
                 .toHashCode();
     }
 
@@ -184,6 +204,7 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
                 .append("country", country)
                 .append("state", state)
                 .append("subRates", subRates)
+                .append("taxRoundingTarget", taxRoundingTarget)
                 .build();
     }
 

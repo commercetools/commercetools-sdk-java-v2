@@ -46,6 +46,11 @@ public interface DiscountedLineItemPortion {
 
     /**
      *  <p>Money value of the applicable discount.</p>
+     *  <p>When a Cart Discount with <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> is used:</p>
+     *  <ul>
+     *   <li>The value is zero for a (Custom) Line Item matching the <code>triggerPattern</code>, indicating it participated in the discount as a trigger.</li>
+     *   <li>The value is the actual discount amount for a (Custom) Line Item matching the <code>targetPattern</code>.</li>
+     *  </ul>
      * @return discountedAmount
      */
     @NotNull
@@ -62,6 +67,11 @@ public interface DiscountedLineItemPortion {
 
     /**
      *  <p>Money value of the applicable discount.</p>
+     *  <p>When a Cart Discount with <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> is used:</p>
+     *  <ul>
+     *   <li>The value is zero for a (Custom) Line Item matching the <code>triggerPattern</code>, indicating it participated in the discount as a trigger.</li>
+     *   <li>The value is the actual discount amount for a (Custom) Line Item matching the <code>targetPattern</code>.</li>
+     *  </ul>
      * @param discountedAmount value to be set
      */
 

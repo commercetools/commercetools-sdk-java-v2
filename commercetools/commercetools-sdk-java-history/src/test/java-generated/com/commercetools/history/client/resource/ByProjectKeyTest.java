@@ -76,6 +76,9 @@ public class ByProjectKeyTest {
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey").get().withUserId("userId").createHttpRequest(),
                         "get", "test_projectKey?userId=userId", },
+                new Object[] {
+                        apiRoot.withProjectKeyValue("test_projectKey").get().withUserIds("userIds").createHttpRequest(),
+                        "get", "test_projectKey?userIds=userIds", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .get()
                         .withClientId("clientId")
@@ -99,6 +102,10 @@ public class ByProjectKeyTest {
                         .get()
                         .withResourceId("resourceId")
                         .createHttpRequest(), "get", "test_projectKey?resourceId=resourceId", },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .get()
+                        .withResourceIds("resourceIds")
+                        .createHttpRequest(), "get", "test_projectKey?resourceIds=resourceIds", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .get()
                         .withResourceKey("resourceKey")
@@ -142,12 +149,14 @@ public class ByProjectKeyTest {
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withLimit(7), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withOffset(3), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withUserId("userId"), },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withUserIds("userIds"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withClientId("clientId"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withCustomerId("customerId"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withAssociateId("associateId"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withBusinessUnit("businessUnit"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withType("type"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withResourceId("resourceId"), },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withResourceIds("resourceIds"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withResourceKey("resourceKey"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .get()

@@ -39,6 +39,8 @@ public class TaxRateImpl implements TaxRate, ModelBase {
 
     private java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates;
 
+    private com.commercetools.api.models.tax_category.TaxRoundingTarget taxRoundingTarget;
+
     /**
      * create instance with all properties
      */
@@ -47,7 +49,8 @@ public class TaxRateImpl implements TaxRate, ModelBase {
             @JsonProperty("name") final String name, @JsonProperty("amount") final Double amount,
             @JsonProperty("includedInPrice") final Boolean includedInPrice,
             @JsonProperty("country") final String country, @JsonProperty("state") final String state,
-            @JsonProperty("subRates") final java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates) {
+            @JsonProperty("subRates") final java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates,
+            @JsonProperty("taxRoundingTarget") final com.commercetools.api.models.tax_category.TaxRoundingTarget taxRoundingTarget) {
         this.id = id;
         this.key = key;
         this.name = name;
@@ -56,6 +59,7 @@ public class TaxRateImpl implements TaxRate, ModelBase {
         this.country = country;
         this.state = state;
         this.subRates = subRates;
+        this.taxRoundingTarget = taxRoundingTarget;
     }
 
     /**
@@ -114,6 +118,7 @@ public class TaxRateImpl implements TaxRate, ModelBase {
 
     /**
      *  <p>State within the country, such as Texas in the United States. The value is case-sensitive and must use the same casing as the <code>state</code> value in the Cart <code>shippingAddress</code>.</p>
+     *  <p>A TaxRate whose <code>state</code> is omitted does <strong>not</strong> act as a wildcard: it only matches a Cart whose <code>shippingAddress</code> also has no <code>state</code> value. To apply the same rate across states, either define an individual TaxRate for each state, or use the <code>region</code> field or a Custom Field on the shipping address as described in <span>Address matching</span>.</p>
      */
 
     public String getState() {
@@ -126,6 +131,15 @@ public class TaxRateImpl implements TaxRate, ModelBase {
 
     public java.util.List<com.commercetools.api.models.tax_category.SubRate> getSubRates() {
         return this.subRates;
+    }
+
+    /**
+     *  <p>Determines which of the net price and the tax amount the <code>taxRoundingMode</code> of the Cart or Order is applied to, when this TaxRate is included in the price. Ignored if <code>includedInPrice</code> is <code>false</code>.</p>
+     *  <p>Always returned by the API. Can be omitted when a TaxRate is supplied as input, such as in <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderImportDraft" rel="nofollow">OrderImportDraft</a>, and then defaults to <code>Net</code>.</p>
+     */
+
+    public com.commercetools.api.models.tax_category.TaxRoundingTarget getTaxRoundingTarget() {
+        return this.taxRoundingTarget;
     }
 
     public void setId(final String id) {
@@ -164,6 +178,11 @@ public class TaxRateImpl implements TaxRate, ModelBase {
         this.subRates = subRates;
     }
 
+    public void setTaxRoundingTarget(
+            final com.commercetools.api.models.tax_category.TaxRoundingTarget taxRoundingTarget) {
+        this.taxRoundingTarget = taxRoundingTarget;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -182,6 +201,7 @@ public class TaxRateImpl implements TaxRate, ModelBase {
                 .append(country, that.country)
                 .append(state, that.state)
                 .append(subRates, that.subRates)
+                .append(taxRoundingTarget, that.taxRoundingTarget)
                 .append(id, that.id)
                 .append(key, that.key)
                 .append(name, that.name)
@@ -190,6 +210,7 @@ public class TaxRateImpl implements TaxRate, ModelBase {
                 .append(country, that.country)
                 .append(state, that.state)
                 .append(subRates, that.subRates)
+                .append(taxRoundingTarget, that.taxRoundingTarget)
                 .isEquals();
     }
 
@@ -203,6 +224,7 @@ public class TaxRateImpl implements TaxRate, ModelBase {
                 .append(country)
                 .append(state)
                 .append(subRates)
+                .append(taxRoundingTarget)
                 .toHashCode();
     }
 
@@ -216,6 +238,7 @@ public class TaxRateImpl implements TaxRate, ModelBase {
                 .append("country", country)
                 .append("state", state)
                 .append("subRates", subRates)
+                .append("taxRoundingTarget", taxRoundingTarget)
                 .build();
     }
 

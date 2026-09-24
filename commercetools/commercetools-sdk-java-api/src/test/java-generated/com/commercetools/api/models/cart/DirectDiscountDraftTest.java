@@ -20,8 +20,11 @@ public class DirectDiscountDraftTest {
                 new Object[] { "value",
                         DirectDiscountDraft.builder()
                                 .value(new com.commercetools.api.models.cart_discount.CartDiscountValueDraftImpl()) },
-                new Object[] { "target", DirectDiscountDraft.builder()
-                        .target(new com.commercetools.api.models.cart_discount.CartDiscountTargetImpl()) } };
+                new Object[] { "target",
+                        DirectDiscountDraft.builder()
+                                .target(new com.commercetools.api.models.cart_discount.CartDiscountTargetImpl()) },
+                new Object[] { "participateInBestDealSelection",
+                        DirectDiscountDraft.builder().participateInBestDealSelection(true) } };
     }
 
     @Test
@@ -38,5 +41,12 @@ public class DirectDiscountDraftTest {
         value.setTarget(new com.commercetools.api.models.cart_discount.CartDiscountTargetImpl());
         Assertions.assertThat(value.getTarget())
                 .isEqualTo(new com.commercetools.api.models.cart_discount.CartDiscountTargetImpl());
+    }
+
+    @Test
+    public void participateInBestDealSelection() {
+        DirectDiscountDraft value = DirectDiscountDraft.of();
+        value.setParticipateInBestDealSelection(true);
+        Assertions.assertThat(value.getParticipateInBestDealSelection()).isEqualTo(true);
     }
 }

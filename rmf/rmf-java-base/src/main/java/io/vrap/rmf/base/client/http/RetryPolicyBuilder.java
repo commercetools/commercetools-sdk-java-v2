@@ -3,6 +3,7 @@ package io.vrap.rmf.base.client.http;
 
 import static io.vrap.rmf.base.client.http.HttpStatusCode.INTERNAL_SERVER_ERROR_500;
 import static io.vrap.rmf.base.client.http.HttpStatusCode.SERVICE_UNAVAILABLE_503;
+import static io.vrap.rmf.base.client.http.HttpStatusCode.TOO_MANY_REQUESTS_429;
 import static java.util.Arrays.asList;
 
 import java.time.Duration;
@@ -31,7 +32,8 @@ public class RetryPolicyBuilder {
 
     int DEFAULT_RETRIES = 3;
 
-    List<Integer> DEFAULT_RETRY_STATUS_CODES = asList(INTERNAL_SERVER_ERROR_500, SERVICE_UNAVAILABLE_503);
+    List<Integer> DEFAULT_RETRY_STATUS_CODES = asList(INTERNAL_SERVER_ERROR_500, SERVICE_UNAVAILABLE_503,
+        TOO_MANY_REQUESTS_429);
 
     private static final InternalLogger logger = InternalLogger.getLogger(loggerName);
     private static final Logger classLogger = LoggerFactory.getLogger(PolicyMiddleware.class);
@@ -89,7 +91,7 @@ public class RetryPolicyBuilder {
 
     public RetryPolicy<ApiHttpResponse<byte[]>> build() {
         return retry(maxRetries, initialDelay, maxDelay,
-            handleStatusCodes(statusCodes).andThen(handleFailures(failures).andThen(fn)));
+            handleStatusCodes(statusCodes, maxDelay).andThen(handleFailures(failures).andThen(fn)));
     }
 
     public static RetryPolicyBuilder of() {
@@ -101,7 +103,7 @@ public class RetryPolicyBuilder {
         return fn
                 .apply(RetryPolicy.<ApiHttpResponse<byte[]>> builder()
                         .withBackoff(delay, maxDelay, ChronoUnit.MILLIS)
-                        .withJitter(0.25)
+                        .withDelayFn(context -> RetryAfterDelay.forContext(context, delay, maxDelay))
                         .withMaxRetries(maxRetries)
                         .onRetry(RetryPolicyBuilder::logEventFailure))
                 .build();
@@ -144,12 +146,39 @@ public class RetryPolicyBuilder {
         };
     }
 
+    /** @deprecated retained for source compatibility.
+     * Without a maximum delay a {@code 429} is retried whenever it carries any timing header,
+     * even when it asks for longer than maximum.
+     * Prefer{@link #handleStatusCodes(List, long)}. */
+    @Deprecated
     public static FailsafeRetryPolicyBuilderOptions handleStatusCodes(final List<Integer> statusCodes) {
+        return handleStatusCodes(statusCodes, Long.MAX_VALUE);
+    }
+
+    public static FailsafeRetryPolicyBuilderOptions handleStatusCodes(final List<Integer> statusCodes,
+            final long maxDelayMillis) {
         return builder -> builder.handleIf((response, throwable) -> {
-            if (throwable instanceof ApiHttpException) {
-                return statusCodes.contains(((ApiHttpException) throwable).getStatusCode());
+            if (throwable instanceof ApiHttpException exception) {
+                int exceptionStatusCode = exception.getStatusCode();
+                if (!statusCodes.contains(exceptionStatusCode)) {
+                    return false;
+                }
+                if (exceptionStatusCode == TOO_MANY_REQUESTS_429) {
+                    return RetryAfterDelay.canRetryWithin(exception, maxDelayMillis);
+                }
+                return true;
             }
-            return statusCodes.contains(response.getStatusCode());
+            if (response == null) {
+                return false;
+            }
+            int responseStatusCode = response.getStatusCode();
+            if (!statusCodes.contains(responseStatusCode)) {
+                return false;
+            }
+            if (responseStatusCode == TOO_MANY_REQUESTS_429) {
+                return RetryAfterDelay.canRetryWithin(response.getHeaders(), responseStatusCode, maxDelayMillis);
+            }
+            return true;
         });
     }
 

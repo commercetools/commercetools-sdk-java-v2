@@ -57,8 +57,8 @@ public final class RetryAfterDelay {
         }
 
         try {
-            final long seconds = Long.parseLong(trimmed);
-            return seconds > 0 ? Optional.of(Duration.ofSeconds(seconds)) : Optional.empty();
+            // only reachable with an all-digit string, so the value cannot be negative
+            return Optional.of(Duration.ofSeconds(Long.parseLong(trimmed)));
         }
         catch (final NumberFormatException e) {
             return Optional.empty();
@@ -104,6 +104,48 @@ public final class RetryAfterDelay {
 
     public static boolean hasTiming(final ApiHttpException exception) {
         return of(exception, Instant.now()).isPresent();
+    }
+
+    /**
+     * Whether a rate-limited response can usefully be retried within the configured maximum delay.
+     *
+     * <p>
+     * A rate limit window is a hard boundary: until it resets, every request is rejected. So if the
+     * server asks for longer than we are willing to wait, capping the delay does not salvage the
+     * retry — it guarantees the next attempt lands inside the same window and fails again, and the
+     * one after that, until the budget is gone. The caller ends up waiting
+     * {@code maxRetries * maxDelay} and still gets the error, having added load to a server that
+     * was already shedding it.
+     *
+     * <p>
+     * Failing immediately is more useful: the caller gets the {@code 429} straight away and can
+     * decide what to do with it, rather than being blocked on attempts that cannot succeed.
+     *
+     * <p>
+     * This applies to {@code 429} only. A {@code Retry-After} on a {@code 503} is the server's
+     * estimate of when it might recover, not a hard boundary, so an early retry there may well
+     * succeed and the delay is capped rather than abandoned.
+     *
+     * @return {@code false} when there is no timing header at all, or when the wait it asks for
+     *         exceeds {@code maxDelayMillis}
+     */
+    public static boolean canRetryWithin(@Nullable final ApiHttpHeaders headers, final int statusCode,
+            final long maxDelayMillis) {
+        return withinMaxDelay(of(headers, statusCode, Instant.now()), maxDelayMillis);
+    }
+
+    /**
+     * @see #canRetryWithin(ApiHttpHeaders, int, long)
+     */
+    public static boolean canRetryWithin(final ApiHttpException exception, final long maxDelayMillis) {
+        return withinMaxDelay(of(exception, Instant.now()), maxDelayMillis);
+    }
+
+    private static boolean withinMaxDelay(final Optional<Duration> delay, final long maxDelayMillis) {
+        final Duration max = Duration.ofMillis(maxDelayMillis);
+        // Compared as Durations rather than millis: `toMillis()` throws on overflow, and an absurd
+        // header can produce a Duration too large to express in milliseconds.
+        return delay.map(d -> d.compareTo(max) <= 0).orElse(false);
     }
 
     public static Duration forContext(final ExecutionContext<ApiHttpResponse<byte[]>> context,

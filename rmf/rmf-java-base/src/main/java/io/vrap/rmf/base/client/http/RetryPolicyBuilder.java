@@ -91,7 +91,7 @@ public class RetryPolicyBuilder {
 
     public RetryPolicy<ApiHttpResponse<byte[]>> build() {
         return retry(maxRetries, initialDelay, maxDelay,
-            handleStatusCodes(statusCodes).andThen(handleFailures(failures).andThen(fn)));
+            handleStatusCodes(statusCodes, maxDelay).andThen(handleFailures(failures).andThen(fn)));
     }
 
     public static RetryPolicyBuilder of() {
@@ -146,7 +146,17 @@ public class RetryPolicyBuilder {
         };
     }
 
+    /** @deprecated retained for source compatibility.
+     * Without a maximum delay a {@code 429} is retried whenever it carries any timing header,
+     * even when it asks for longer than maximum.
+     * Prefer{@link #handleStatusCodes(List, long)}. */
+    @Deprecated
     public static FailsafeRetryPolicyBuilderOptions handleStatusCodes(final List<Integer> statusCodes) {
+        return handleStatusCodes(statusCodes, Long.MAX_VALUE);
+    }
+
+    public static FailsafeRetryPolicyBuilderOptions handleStatusCodes(final List<Integer> statusCodes,
+            final long maxDelayMillis) {
         return builder -> builder.handleIf((response, throwable) -> {
             if (throwable instanceof ApiHttpException exception) {
                 int exceptionStatusCode = exception.getStatusCode();
@@ -154,7 +164,7 @@ public class RetryPolicyBuilder {
                     return false;
                 }
                 if (exceptionStatusCode == TOO_MANY_REQUESTS_429) {
-                    return RetryAfterDelay.hasTiming(exception);
+                    return RetryAfterDelay.canRetryWithin(exception, maxDelayMillis);
                 }
                 return true;
             }
@@ -166,7 +176,7 @@ public class RetryPolicyBuilder {
                 return false;
             }
             if (responseStatusCode == TOO_MANY_REQUESTS_429) {
-                return RetryAfterDelay.hasTiming(response.getHeaders(), responseStatusCode);
+                return RetryAfterDelay.canRetryWithin(response.getHeaders(), responseStatusCode, maxDelayMillis);
             }
             return true;
         });

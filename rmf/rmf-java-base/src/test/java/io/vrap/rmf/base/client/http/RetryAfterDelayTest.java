@@ -37,7 +37,9 @@ public class RetryAfterDelayTest {
 
     @Test
     public void testZeroSeconds() {
-        Assertions.assertThat(RetryAfterDelay.parse("0", TIME)).isEmpty();
+        // RFC 9110 delta-seconds is non-negative, so 0 is possible and means retry now
+        Assertions.assertThat(RetryAfterDelay.parse("0", TIME)).contains(Duration.ZERO);
+        Assertions.assertThat(RetryAfterDelay.hasTiming(headers(ApiHttpHeaders.RETRY_AFTER, "0"), 429)).isTrue();
     }
 
     @Test
@@ -161,6 +163,44 @@ public class RetryAfterDelayTest {
         Assertions.assertThat(RetryAfterDelay.hasTiming(exception)).isFalse();
     }
 
+    // Aborting instead of capping, when the server asks for longer than max wait duration
+    @Test
+    public void testCanRetryTheWaitFitsWithinMaxDelay() {
+        Assertions
+                .assertThat(
+                    RetryAfterDelay.canRetryWithin(headers(ApiHttpHeaders.X_RATE_LIMIT_RESET, "30"), 429, 60000))
+                .isTrue();
+    }
+
+    @Test
+    public void testCannotRetryTheWaitExceedsMaxDelay() {
+        Assertions.assertThat(RetryAfterDelay.canRetryWithin(headers(ApiHttpHeaders.RETRY_AFTER, "120"), 429, 60000))
+                .isFalse();
+    }
+
+    @Test
+    public void testCannotRetryWithoutTimingHeader() {
+        Assertions.assertThat(RetryAfterDelay.canRetryWithin(new ApiHttpHeaders(), 429, 60000)).isFalse();
+    }
+
+    @Test
+    public void testCanRetryTheWaitEqualsMaxDelay() {
+        Assertions.assertThat(RetryAfterDelay.canRetryWithin(headers(ApiHttpHeaders.RETRY_AFTER, "60"), 429, 60000))
+                .isTrue();
+    }
+
+    @Test
+    public void testHugeWaitDoesNotOverflowTheComparison() {
+        Assertions
+                .assertThatCode(() -> RetryAfterDelay.canRetryWithin(
+                    headers(ApiHttpHeaders.RETRY_AFTER, String.valueOf(Long.MAX_VALUE)), 429, 60000))
+                .doesNotThrowAnyException();
+        Assertions
+                .assertThat(RetryAfterDelay.canRetryWithin(
+                    headers(ApiHttpHeaders.RETRY_AFTER, String.valueOf(Long.MAX_VALUE)), 429, 60000))
+                .isFalse();
+    }
+
     // Jitter tests
     @Test
     public void testRetryAfterIsNotOverflowed() {
@@ -229,6 +269,47 @@ public class RetryAfterDelayTest {
     }
 
     // Failsafe
+    @Test
+    public void testNoRetryWhen429AsksForLongerThanMaxDelay() {
+        final PolicyMiddleware middleware = PolicyBuilder.of()
+                .withRetry(builder -> builder.maxRetries(3).initialDelay(10).maxDelay(100))
+                .build();
+        final ApiHttpRequest request = new ApiHttpRequest();
+        final AtomicInteger count = new AtomicInteger();
+
+        final ApiHttpResponse<byte[]> response = blockingWait(middleware.invoke(request, req -> {
+            count.getAndIncrement();
+            return CompletableFuture
+                    .completedFuture(new ApiHttpResponse<>(429, headers(ApiHttpHeaders.X_RATE_LIMIT_RESET, "1"), null));
+        }), Duration.ofSeconds(10));
+
+        Assertions.assertThat(response.getStatusCode()).isEqualTo(429);
+        Assertions.assertThat(count.get()).isEqualTo(1);
+    }
+
+    @Test
+    public void test503StillCapsRatherThanGivingUp() {
+        // Retry-After for 503 is an estimate, so an early retry works
+        final PolicyMiddleware middleware = PolicyBuilder.of()
+                .withRetry(builder -> builder.maxRetries(1).initialDelay(10).maxDelay(100))
+                .build();
+        final ApiHttpRequest request = new ApiHttpRequest();
+        final AtomicInteger count = new AtomicInteger();
+
+        final Instant start = Instant.now();
+        final ApiHttpResponse<byte[]> response = blockingWait(middleware.invoke(request, req -> {
+            count.getAndIncrement();
+            return CompletableFuture
+                    .completedFuture(new ApiHttpResponse<>(503, headers(ApiHttpHeaders.RETRY_AFTER, "1"), null));
+        }), Duration.ofSeconds(10));
+        final Duration elapsed = Duration.between(start, Instant.now());
+
+        Assertions.assertThat(response.getStatusCode()).isEqualTo(503);
+        Assertions.assertThat(count.get()).isEqualTo(2);
+        // capped at 100ms rather than waiting the full second
+        Assertions.assertThat(elapsed).isLessThan(Duration.ofMillis(900));
+    }
+
     @Test
     public void testRateLimitResetOnRawResponse() {
         final PolicyMiddleware middleware = PolicyBuilder.of().withRetry(builder -> builder.maxRetries(1)).build();

@@ -27,13 +27,12 @@ public final class RetryAfterDelay {
     }
 
     public static Optional<Duration> parse(@Nullable final String value, final Instant now) {
+        if (value == null || value.trim().isEmpty()) {
+            return Optional.empty();
+        }
         final Optional<Duration> seconds = parseDeltaSeconds(value);
         if (seconds.isPresent()) {
             return seconds;
-        }
-
-        if (value == null || value.trim().isEmpty()) {
-            return Optional.empty();
         }
 
         try {
@@ -71,9 +70,12 @@ public final class RetryAfterDelay {
             return Optional.empty();
         }
 
-        final Optional<Duration> retryAfter = parse(headers.getFirst(ApiHttpHeaders.RETRY_AFTER), now);
-        if (retryAfter.isPresent()) {
-            return retryAfter;
+        var header = headers.getFirst(ApiHttpHeaders.RETRY_AFTER);
+        if (header != null) {
+            final Optional<Duration> retryAfter = parse(header, now);
+            if (retryAfter.isPresent()) {
+                return retryAfter;
+            }
         }
 
         if (statusCode == TOO_MANY_REQUESTS_429) {

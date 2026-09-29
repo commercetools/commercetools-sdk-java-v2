@@ -1,5 +1,5 @@
 
-package com.commercetools.api;
+package com.commercetools;
 
 import java.lang.management.ManagementFactory;
 import java.lang.management.ThreadMXBean;

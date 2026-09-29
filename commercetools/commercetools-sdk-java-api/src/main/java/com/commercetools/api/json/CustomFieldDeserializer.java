@@ -35,6 +35,7 @@ public class CustomFieldDeserializer extends ValueDeserializer<FieldContainerImp
     private final boolean deserializeNumberAsDouble;
 
     private final Map<String, TypeReference<?>> customFieldTypes;
+    private final ValueDeserializerCache valueCache = new ValueDeserializerCache();
 
     public CustomFieldDeserializer(boolean deserializeAsDateString, boolean deserializeNumberAsDouble,
             final Map<String, TypeReference<?>> customFieldTypes) {
@@ -71,16 +72,17 @@ public class CustomFieldDeserializer extends ValueDeserializer<FieldContainerImp
         node.properties()
                 .iterator()
                 .forEachRemaining(nodeEntry -> builder.addValue(nodeEntry.getKey(),
-                    mapValue(p, nodeEntry.getKey(), nodeEntry.getValue())));
+                    mapValue(p, ctx, nodeEntry.getKey(), nodeEntry.getValue())));
 
         return (FieldContainerImpl) builder.build();
     }
 
-    private Object mapValue(final JsonParser p, final String name, final JsonNode nodeValue) {
+    private Object mapValue(final JsonParser p, final DeserializationContext ctx, final String name,
+            final JsonNode nodeValue) {
         if (customFieldTypes != null && customFieldTypes.containsKey(name)) {
-            return p.objectReadContext().treeAsTokens(nodeValue).readValueAs(customFieldTypes.get(name));
+            return valueCache.readValue(p, ctx, customFieldTypes.get(name), nodeValue);
         }
-        return p.objectReadContext().treeAsTokens(nodeValue).readValueAs(typeRef(nodeValue));
+        return valueCache.readValue(p, ctx, typeRef(nodeValue), nodeValue);
     }
 
     private TypeReference<?> typeRef(JsonNode valueNode) {

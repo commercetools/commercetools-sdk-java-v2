@@ -37,6 +37,7 @@ public class AttributeDeserializer extends ValueDeserializer<AttributeImpl> {
     private final boolean deserializeNumberAsDouble;
 
     private final Map<String, TypeReference<?>> attributeTypes;
+    private final ValueDeserializerCache valueCache = new ValueDeserializerCache();
 
     public AttributeDeserializer(boolean deserializeAsDateString, boolean deserializeNumberAsDouble,
             final Map<String, TypeReference<?>> attributeTypes) {
@@ -73,14 +74,10 @@ public class AttributeDeserializer extends ValueDeserializer<AttributeImpl> {
         AttributeBuilder builder = Attribute.builder();
         builder.name(name);
 
-        if (attributeTypes != null && attributeTypes.containsKey(name)) {
-            return (AttributeImpl) builder
-                    .value(p.objectReadContext().treeAsTokens(valueNode).readValueAs(attributeTypes.get(name)))
-                    .build();
-        }
-        return (AttributeImpl) builder
-                .value(p.objectReadContext().treeAsTokens(valueNode).readValueAs(typeRef(valueNode)))
-                .build();
+        final TypeReference<?> ref = (attributeTypes != null && attributeTypes.containsKey(name))
+                ? attributeTypes.get(name)
+                : typeRef(valueNode);
+        return (AttributeImpl) builder.value(valueCache.readValue(p, ctx, ref, valueNode)).build();
     }
 
     private TypeReference<?> typeRef(JsonNode valueNode) {

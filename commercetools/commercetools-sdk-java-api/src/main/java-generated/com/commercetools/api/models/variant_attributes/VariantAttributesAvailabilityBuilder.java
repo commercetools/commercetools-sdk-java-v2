@@ -27,19 +27,33 @@ public class VariantAttributesAvailabilityBuilder implements Builder<VariantAttr
     private Boolean isOnStock;
 
     @Nullable
+    private Long restockableInDays;
+
+    @Nullable
     private Long availableQuantity;
 
     @Nullable
     private com.commercetools.api.models.variant_attributes.VariantAttributesChannelAvailabilityMap channels;
 
     /**
-     *  <p>Indicates whether the Variant is in stock.</p>
+     *  <p>Whether the Variant is in stock.</p>
      * @param isOnStock value to be set
      * @return Builder
      */
 
     public VariantAttributesAvailabilityBuilder isOnStock(@Nullable final Boolean isOnStock) {
         this.isOnStock = isOnStock;
+        return this;
+    }
+
+    /**
+     *  <p>Number of days to restock the Variant once it is out of stock.</p>
+     * @param restockableInDays value to be set
+     * @return Builder
+     */
+
+    public VariantAttributesAvailabilityBuilder restockableInDays(@Nullable final Long restockableInDays) {
+        this.restockableInDays = restockableInDays;
         return this;
     }
 
@@ -95,13 +109,23 @@ public class VariantAttributesAvailabilityBuilder implements Builder<VariantAttr
     }
 
     /**
-     *  <p>Indicates whether the Variant is in stock.</p>
+     *  <p>Whether the Variant is in stock.</p>
      * @return isOnStock
      */
 
     @Nullable
     public Boolean getIsOnStock() {
         return this.isOnStock;
+    }
+
+    /**
+     *  <p>Number of days to restock the Variant once it is out of stock.</p>
+     * @return restockableInDays
+     */
+
+    @Nullable
+    public Long getRestockableInDays() {
+        return this.restockableInDays;
     }
 
     /**
@@ -129,7 +153,7 @@ public class VariantAttributesAvailabilityBuilder implements Builder<VariantAttr
      * @return VariantAttributesAvailability
      */
     public VariantAttributesAvailability build() {
-        return new VariantAttributesAvailabilityImpl(isOnStock, availableQuantity, channels);
+        return new VariantAttributesAvailabilityImpl(isOnStock, restockableInDays, availableQuantity, channels);
     }
 
     /**
@@ -137,7 +161,7 @@ public class VariantAttributesAvailabilityBuilder implements Builder<VariantAttr
      * @return VariantAttributesAvailability
      */
     public VariantAttributesAvailability buildUnchecked() {
-        return new VariantAttributesAvailabilityImpl(isOnStock, availableQuantity, channels);
+        return new VariantAttributesAvailabilityImpl(isOnStock, restockableInDays, availableQuantity, channels);
     }
 
     /**
@@ -156,6 +180,7 @@ public class VariantAttributesAvailabilityBuilder implements Builder<VariantAttr
     public static VariantAttributesAvailabilityBuilder of(final VariantAttributesAvailability template) {
         VariantAttributesAvailabilityBuilder builder = new VariantAttributesAvailabilityBuilder();
         builder.isOnStock = template.getIsOnStock();
+        builder.restockableInDays = template.getRestockableInDays();
         builder.availableQuantity = template.getAvailableQuantity();
         builder.channels = template.getChannels();
         return builder;

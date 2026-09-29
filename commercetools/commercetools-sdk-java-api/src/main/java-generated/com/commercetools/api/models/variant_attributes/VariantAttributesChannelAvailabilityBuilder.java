@@ -26,16 +26,30 @@ public class VariantAttributesChannelAvailabilityBuilder implements Builder<Vari
     private Boolean isOnStock;
 
     @Nullable
+    private Long restockableInDays;
+
+    @Nullable
     private Long availableQuantity;
 
     /**
-     *  <p>Indicates whether the Variant is in stock in the specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
+     *  <p>Whether the Variant is in stock in the specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @param isOnStock value to be set
      * @return Builder
      */
 
     public VariantAttributesChannelAvailabilityBuilder isOnStock(@Nullable final Boolean isOnStock) {
         this.isOnStock = isOnStock;
+        return this;
+    }
+
+    /**
+     *  <p>Number of days to restock the Variant once it is out of stock in the specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
+     * @param restockableInDays value to be set
+     * @return Builder
+     */
+
+    public VariantAttributesChannelAvailabilityBuilder restockableInDays(@Nullable final Long restockableInDays) {
+        this.restockableInDays = restockableInDays;
         return this;
     }
 
@@ -51,13 +65,23 @@ public class VariantAttributesChannelAvailabilityBuilder implements Builder<Vari
     }
 
     /**
-     *  <p>Indicates whether the Variant is in stock in the specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
+     *  <p>Whether the Variant is in stock in the specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @return isOnStock
      */
 
     @Nullable
     public Boolean getIsOnStock() {
         return this.isOnStock;
+    }
+
+    /**
+     *  <p>Number of days to restock the Variant once it is out of stock in the specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
+     * @return restockableInDays
+     */
+
+    @Nullable
+    public Long getRestockableInDays() {
+        return this.restockableInDays;
     }
 
     /**
@@ -75,7 +99,7 @@ public class VariantAttributesChannelAvailabilityBuilder implements Builder<Vari
      * @return VariantAttributesChannelAvailability
      */
     public VariantAttributesChannelAvailability build() {
-        return new VariantAttributesChannelAvailabilityImpl(isOnStock, availableQuantity);
+        return new VariantAttributesChannelAvailabilityImpl(isOnStock, restockableInDays, availableQuantity);
     }
 
     /**
@@ -83,7 +107,7 @@ public class VariantAttributesChannelAvailabilityBuilder implements Builder<Vari
      * @return VariantAttributesChannelAvailability
      */
     public VariantAttributesChannelAvailability buildUnchecked() {
-        return new VariantAttributesChannelAvailabilityImpl(isOnStock, availableQuantity);
+        return new VariantAttributesChannelAvailabilityImpl(isOnStock, restockableInDays, availableQuantity);
     }
 
     /**
@@ -102,6 +126,7 @@ public class VariantAttributesChannelAvailabilityBuilder implements Builder<Vari
     public static VariantAttributesChannelAvailabilityBuilder of(final VariantAttributesChannelAvailability template) {
         VariantAttributesChannelAvailabilityBuilder builder = new VariantAttributesChannelAvailabilityBuilder();
         builder.isOnStock = template.getIsOnStock();
+        builder.restockableInDays = template.getRestockableInDays();
         builder.availableQuantity = template.getAvailableQuantity();
         return builder;
     }

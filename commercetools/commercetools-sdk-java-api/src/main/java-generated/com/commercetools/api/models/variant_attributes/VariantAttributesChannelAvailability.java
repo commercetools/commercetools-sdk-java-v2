@@ -30,12 +30,20 @@ import tools.jackson.databind.annotation.*;
 public interface VariantAttributesChannelAvailability {
 
     /**
-     *  <p>Indicates whether the Variant is in stock in the specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
+     *  <p>Whether the Variant is in stock in the specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @return isOnStock
      */
 
     @JsonProperty("isOnStock")
     public Boolean getIsOnStock();
+
+    /**
+     *  <p>Number of days to restock the Variant once it is out of stock in the specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
+     * @return restockableInDays
+     */
+
+    @JsonProperty("restockableInDays")
+    public Long getRestockableInDays();
 
     /**
      *  <p>Number of items of this Variant that are in stock in the specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
@@ -46,11 +54,18 @@ public interface VariantAttributesChannelAvailability {
     public Long getAvailableQuantity();
 
     /**
-     *  <p>Indicates whether the Variant is in stock in the specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
+     *  <p>Whether the Variant is in stock in the specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
      * @param isOnStock value to be set
      */
 
     public void setIsOnStock(final Boolean isOnStock);
+
+    /**
+     *  <p>Number of days to restock the Variant once it is out of stock in the specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
+     * @param restockableInDays value to be set
+     */
+
+    public void setRestockableInDays(final Long restockableInDays);
 
     /**
      *  <p>Number of items of this Variant that are in stock in the specified <a href="https://docs.commercetools.com/apis/ctp:api:type:Channel" rel="nofollow">Channel</a>.</p>
@@ -75,6 +90,7 @@ public interface VariantAttributesChannelAvailability {
     public static VariantAttributesChannelAvailability of(final VariantAttributesChannelAvailability template) {
         VariantAttributesChannelAvailabilityImpl instance = new VariantAttributesChannelAvailabilityImpl();
         instance.setIsOnStock(template.getIsOnStock());
+        instance.setRestockableInDays(template.getRestockableInDays());
         instance.setAvailableQuantity(template.getAvailableQuantity());
         return instance;
     }
@@ -94,6 +110,7 @@ public interface VariantAttributesChannelAvailability {
         }
         VariantAttributesChannelAvailabilityImpl instance = new VariantAttributesChannelAvailabilityImpl();
         instance.setIsOnStock(template.getIsOnStock());
+        instance.setRestockableInDays(template.getRestockableInDays());
         instance.setAvailableQuantity(template.getAvailableQuantity());
         return instance;
     }

@@ -25,6 +25,8 @@ public class VariantAttributesAvailabilityImpl implements VariantAttributesAvail
 
     private Boolean isOnStock;
 
+    private Long restockableInDays;
+
     private Long availableQuantity;
 
     private com.commercetools.api.models.variant_attributes.VariantAttributesChannelAvailabilityMap channels;
@@ -34,9 +36,11 @@ public class VariantAttributesAvailabilityImpl implements VariantAttributesAvail
      */
     @JsonCreator
     VariantAttributesAvailabilityImpl(@JsonProperty("isOnStock") final Boolean isOnStock,
+            @JsonProperty("restockableInDays") final Long restockableInDays,
             @JsonProperty("availableQuantity") final Long availableQuantity,
             @JsonProperty("channels") final com.commercetools.api.models.variant_attributes.VariantAttributesChannelAvailabilityMap channels) {
         this.isOnStock = isOnStock;
+        this.restockableInDays = restockableInDays;
         this.availableQuantity = availableQuantity;
         this.channels = channels;
     }
@@ -48,11 +52,19 @@ public class VariantAttributesAvailabilityImpl implements VariantAttributesAvail
     }
 
     /**
-     *  <p>Indicates whether the Variant is in stock.</p>
+     *  <p>Whether the Variant is in stock.</p>
      */
 
     public Boolean getIsOnStock() {
         return this.isOnStock;
+    }
+
+    /**
+     *  <p>Number of days to restock the Variant once it is out of stock.</p>
+     */
+
+    public Long getRestockableInDays() {
+        return this.restockableInDays;
     }
 
     /**
@@ -75,6 +87,10 @@ public class VariantAttributesAvailabilityImpl implements VariantAttributesAvail
         this.isOnStock = isOnStock;
     }
 
+    public void setRestockableInDays(final Long restockableInDays) {
+        this.restockableInDays = restockableInDays;
+    }
+
     public void setAvailableQuantity(final Long availableQuantity) {
         this.availableQuantity = availableQuantity;
     }
@@ -95,9 +111,11 @@ public class VariantAttributesAvailabilityImpl implements VariantAttributesAvail
         VariantAttributesAvailabilityImpl that = (VariantAttributesAvailabilityImpl) o;
 
         return new EqualsBuilder().append(isOnStock, that.isOnStock)
+                .append(restockableInDays, that.restockableInDays)
                 .append(availableQuantity, that.availableQuantity)
                 .append(channels, that.channels)
                 .append(isOnStock, that.isOnStock)
+                .append(restockableInDays, that.restockableInDays)
                 .append(availableQuantity, that.availableQuantity)
                 .append(channels, that.channels)
                 .isEquals();
@@ -105,12 +123,17 @@ public class VariantAttributesAvailabilityImpl implements VariantAttributesAvail
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(isOnStock).append(availableQuantity).append(channels).toHashCode();
+        return new HashCodeBuilder(17, 37).append(isOnStock)
+                .append(restockableInDays)
+                .append(availableQuantity)
+                .append(channels)
+                .toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("isOnStock", isOnStock)
+                .append("restockableInDays", restockableInDays)
                 .append("availableQuantity", availableQuantity)
                 .append("channels", channels)
                 .build();

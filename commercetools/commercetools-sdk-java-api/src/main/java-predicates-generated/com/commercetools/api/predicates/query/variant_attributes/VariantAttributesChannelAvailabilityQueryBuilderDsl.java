@@ -17,6 +17,12 @@ public class VariantAttributesChannelAvailabilityQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, VariantAttributesChannelAvailabilityQueryBuilderDsl::of));
     }
 
+    public LongComparisonPredicateBuilder<VariantAttributesChannelAvailabilityQueryBuilderDsl> restockableInDays() {
+        return new LongComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("restockableInDays")),
+            p -> new CombinationQueryPredicate<>(p, VariantAttributesChannelAvailabilityQueryBuilderDsl::of));
+    }
+
     public LongComparisonPredicateBuilder<VariantAttributesChannelAvailabilityQueryBuilderDsl> availableQuantity() {
         return new LongComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("availableQuantity")),

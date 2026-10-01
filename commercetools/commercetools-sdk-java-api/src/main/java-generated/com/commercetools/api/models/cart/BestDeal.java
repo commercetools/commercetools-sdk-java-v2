@@ -15,7 +15,7 @@ import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Indicates if a Product Discount or Cart Discount offers the best deal for a Cart or Order.</p>
+ *  <p>Indicates if a Product Discount, Cart Discount, or Direct Discount offers the best deal for a Cart or Order.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,6 +39,7 @@ public interface BestDeal extends DiscountTypeCombination {
 
     /**
      *  <p>Discount type that offers the best deal; the value can be <code>ProductDiscount</code> or <code>CartDiscount</code>.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> are indicated as <code>CartDiscount</code> when they offer the best deal.</p>
      * @return chosenDiscountType
      */
     @NotNull
@@ -47,6 +48,7 @@ public interface BestDeal extends DiscountTypeCombination {
 
     /**
      *  <p>Discount type that offers the best deal; the value can be <code>ProductDiscount</code> or <code>CartDiscount</code>.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> are indicated as <code>CartDiscount</code> when they offer the best deal.</p>
      * @param chosenDiscountType value to be set
      */
 

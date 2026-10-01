@@ -95,6 +95,8 @@ public class CartImpl implements Cart, ModelBase {
 
     private java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts;
 
+    private Boolean directDiscountsIgnoreCartDiscounts;
+
     private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> refusedGifts;
 
     private com.commercetools.api.models.order.PaymentInfo paymentInfo;
@@ -159,6 +161,7 @@ public class CartImpl implements Cart, ModelBase {
             @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses,
             @JsonProperty("discountCodes") final java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes,
             @JsonProperty("directDiscounts") final java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts,
+            @JsonProperty("directDiscountsIgnoreCartDiscounts") final Boolean directDiscountsIgnoreCartDiscounts,
             @JsonProperty("refusedGifts") final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> refusedGifts,
             @JsonProperty("paymentInfo") final com.commercetools.api.models.order.PaymentInfo paymentInfo,
             @JsonProperty("country") final String country, @JsonProperty("locale") final String locale,
@@ -207,6 +210,7 @@ public class CartImpl implements Cart, ModelBase {
         this.itemShippingAddresses = itemShippingAddresses;
         this.discountCodes = discountCodes;
         this.directDiscounts = directDiscounts;
+        this.directDiscountsIgnoreCartDiscounts = directDiscountsIgnoreCartDiscounts;
         this.refusedGifts = refusedGifts;
         this.paymentInfo = paymentInfo;
         this.country = country;
@@ -513,7 +517,8 @@ public class CartImpl implements Cart, ModelBase {
     }
 
     /**
-     *  <p>Discount Codes applied to the Cart. A Cart that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     *  <p>Discount Codes applied to the Cart.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, a Cart that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> getDiscountCodes() {
@@ -521,11 +526,23 @@ public class CartImpl implements Cart, ModelBase {
     }
 
     /**
-     *  <p>Direct Discounts added to the Cart. A Cart that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     *  <p>Direct Discounts added to the Cart.</p>
+     *  <p>If <code>directDiscountsIgnoreCartDiscounts</code> is <code>true</code>, a Cart that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.DirectDiscount> getDirectDiscounts() {
         return this.directDiscounts;
+    }
+
+    /**
+     *  <ul>
+     *   <li>If <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Cart. Matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> are ignored, and Discount Codes cannot be added.</li>
+     *   <li>If <code>false</code>, Cart Discounts, Discount Codes, and Direct Discounts apply to the Cart.</li>
+     *  </ul>
+     */
+
+    public Boolean getDirectDiscountsIgnoreCartDiscounts() {
+        return this.directDiscountsIgnoreCartDiscounts;
     }
 
     /**
@@ -808,6 +825,10 @@ public class CartImpl implements Cart, ModelBase {
         this.directDiscounts = directDiscounts;
     }
 
+    public void setDirectDiscountsIgnoreCartDiscounts(final Boolean directDiscountsIgnoreCartDiscounts) {
+        this.directDiscountsIgnoreCartDiscounts = directDiscountsIgnoreCartDiscounts;
+    }
+
     public void setRefusedGifts(
             final com.commercetools.api.models.cart_discount.CartDiscountReference... refusedGifts) {
         this.refusedGifts = new ArrayList<>(Arrays.asList(refusedGifts));
@@ -917,6 +938,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append(itemShippingAddresses, that.itemShippingAddresses)
                 .append(discountCodes, that.discountCodes)
                 .append(directDiscounts, that.directDiscounts)
+                .append(directDiscountsIgnoreCartDiscounts, that.directDiscountsIgnoreCartDiscounts)
                 .append(refusedGifts, that.refusedGifts)
                 .append(paymentInfo, that.paymentInfo)
                 .append(country, that.country)
@@ -966,6 +988,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append(itemShippingAddresses, that.itemShippingAddresses)
                 .append(discountCodes, that.discountCodes)
                 .append(directDiscounts, that.directDiscounts)
+                .append(directDiscountsIgnoreCartDiscounts, that.directDiscountsIgnoreCartDiscounts)
                 .append(refusedGifts, that.refusedGifts)
                 .append(paymentInfo, that.paymentInfo)
                 .append(country, that.country)
@@ -1020,6 +1043,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append(itemShippingAddresses)
                 .append(discountCodes)
                 .append(directDiscounts)
+                .append(directDiscountsIgnoreCartDiscounts)
                 .append(refusedGifts)
                 .append(paymentInfo)
                 .append(country)
@@ -1074,6 +1098,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append("itemShippingAddresses", itemShippingAddresses)
                 .append("discountCodes", discountCodes)
                 .append("directDiscounts", directDiscounts)
+                .append("directDiscountsIgnoreCartDiscounts", directDiscountsIgnoreCartDiscounts)
                 .append("refusedGifts", refusedGifts)
                 .append("paymentInfo", paymentInfo)
                 .append("country", country)

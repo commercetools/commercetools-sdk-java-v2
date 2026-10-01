@@ -85,6 +85,18 @@ public class ByProjectKeyByResourceTypeTest {
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()
+                        .withUserIds("userIds")
+                        .createHttpRequest(), "get", "test_projectKey/test_resourceType?userIds=userIds", },
+                new Object[] {
+                        apiRoot.withProjectKeyValue("test_projectKey")
+                                .withResourceTypeValue("test_resourceType")
+                                .get()
+                                .withResourceIds("resourceIds")
+                                .createHttpRequest(),
+                        "get", "test_projectKey/test_resourceType?resourceIds=resourceIds", },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .withResourceTypeValue("test_resourceType")
+                        .get()
                         .withClientId("clientId")
                         .createHttpRequest(), "get", "test_projectKey/test_resourceType?clientId=clientId", },
                 new Object[] {
@@ -183,6 +195,14 @@ public class ByProjectKeyByResourceTypeTest {
                         .withResourceTypeValue("test_resourceType")
                         .get()
                         .withUserId("userId"), },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .withResourceTypeValue("test_resourceType")
+                        .get()
+                        .withUserIds("userIds"), },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .withResourceTypeValue("test_resourceType")
+                        .get()
+                        .withResourceIds("resourceIds"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()

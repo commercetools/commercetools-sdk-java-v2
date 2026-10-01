@@ -31,12 +31,20 @@ import tools.jackson.databind.annotation.*;
 public interface VariantAttributesAvailability {
 
     /**
-     *  <p>Indicates whether the Variant is in stock.</p>
+     *  <p>Whether the Variant is in stock.</p>
      * @return isOnStock
      */
 
     @JsonProperty("isOnStock")
     public Boolean getIsOnStock();
+
+    /**
+     *  <p>Number of days to restock the Variant once it is out of stock.</p>
+     * @return restockableInDays
+     */
+
+    @JsonProperty("restockableInDays")
+    public Long getRestockableInDays();
 
     /**
      *  <p>Number of items of this Variant that are in stock.</p>
@@ -55,11 +63,18 @@ public interface VariantAttributesAvailability {
     public VariantAttributesChannelAvailabilityMap getChannels();
 
     /**
-     *  <p>Indicates whether the Variant is in stock.</p>
+     *  <p>Whether the Variant is in stock.</p>
      * @param isOnStock value to be set
      */
 
     public void setIsOnStock(final Boolean isOnStock);
+
+    /**
+     *  <p>Number of days to restock the Variant once it is out of stock.</p>
+     * @param restockableInDays value to be set
+     */
+
+    public void setRestockableInDays(final Long restockableInDays);
 
     /**
      *  <p>Number of items of this Variant that are in stock.</p>
@@ -91,6 +106,7 @@ public interface VariantAttributesAvailability {
     public static VariantAttributesAvailability of(final VariantAttributesAvailability template) {
         VariantAttributesAvailabilityImpl instance = new VariantAttributesAvailabilityImpl();
         instance.setIsOnStock(template.getIsOnStock());
+        instance.setRestockableInDays(template.getRestockableInDays());
         instance.setAvailableQuantity(template.getAvailableQuantity());
         instance.setChannels(template.getChannels());
         return instance;
@@ -110,6 +126,7 @@ public interface VariantAttributesAvailability {
         }
         VariantAttributesAvailabilityImpl instance = new VariantAttributesAvailabilityImpl();
         instance.setIsOnStock(template.getIsOnStock());
+        instance.setRestockableInDays(template.getRestockableInDays());
         instance.setAvailableQuantity(template.getAvailableQuantity());
         instance.setChannels(com.commercetools.api.models.variant_attributes.VariantAttributesChannelAvailabilityMap
                 .deepCopy(template.getChannels()));

@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Indicates if a Product Discount or Cart Discount offers the best deal for a Cart or Order.</p>
+ *  <p>Indicates if a Product Discount, Cart Discount, or Direct Discount offers the best deal for a Cart or Order.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BestDealImpl implements BestDeal, ModelBase {
@@ -53,6 +53,7 @@ public class BestDealImpl implements BestDeal, ModelBase {
 
     /**
      *  <p>Discount type that offers the best deal; the value can be <code>ProductDiscount</code> or <code>CartDiscount</code>.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> are indicated as <code>CartDiscount</code> when they offer the best deal.</p>
      */
 
     public String getChosenDiscountType() {

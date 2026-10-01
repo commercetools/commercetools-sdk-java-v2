@@ -99,6 +99,9 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     private java.util.List<String> discountCodes;
 
     @Nullable
+    private Boolean directDiscountsIgnoreCartDiscounts;
+
+    @Nullable
     private String country;
 
     @Nullable
@@ -1037,6 +1040,21 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
+     *  <ul>
+     *   <li>If set to <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Cart. Matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> are ignored, and Discount Codes cannot be added.</li>
+     *   <li>If set to <code>false</code>, Cart Discounts, Discount Codes, and Direct Discounts apply to the Cart.</li>
+     *  </ul>
+     * @param directDiscountsIgnoreCartDiscounts value to be set
+     * @return Builder
+     */
+
+    public CartDraftBuilder directDiscountsIgnoreCartDiscounts(
+            @Nullable final Boolean directDiscountsIgnoreCartDiscounts) {
+        this.directDiscountsIgnoreCartDiscounts = directDiscountsIgnoreCartDiscounts;
+        return this;
+    }
+
+    /**
      *  <p>Used for <span>Line Item price selection</span>. If used for <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/carts:POST" rel="nofollow">Create Cart in Store</a>, the provided country must be one of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store's</a> <code>countries</code>.</p>
      * @param country value to be set
      * @return Builder
@@ -1388,6 +1406,19 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
+     *  <ul>
+     *   <li>If set to <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Cart. Matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> are ignored, and Discount Codes cannot be added.</li>
+     *   <li>If set to <code>false</code>, Cart Discounts, Discount Codes, and Direct Discounts apply to the Cart.</li>
+     *  </ul>
+     * @return directDiscountsIgnoreCartDiscounts
+     */
+
+    @Nullable
+    public Boolean getDirectDiscountsIgnoreCartDiscounts() {
+        return this.directDiscountsIgnoreCartDiscounts;
+    }
+
+    /**
      *  <p>Used for <span>Line Item price selection</span>. If used for <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/carts:POST" rel="nofollow">Create Cart in Store</a>, the provided country must be one of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store's</a> <code>countries</code>.</p>
      * @return country
      */
@@ -1458,8 +1489,9 @@ public class CartDraftBuilder implements Builder<CartDraft> {
         return new CartDraftImpl(currency, key, customerId, customerEmail, customerGroup, anonymousId, businessUnit,
             store, lineItems, customLineItems, taxMode, externalTaxRateForShippingMethod, priceRoundingMode,
             taxRoundingMode, taxCalculationMode, inventoryMode, billingAddress, shippingAddress, shippingMethod,
-            shippingRateInput, shippingMode, customShipping, shipping, itemShippingAddresses, discountCodes, country,
-            locale, origin, deleteDaysAfterLastModification, custom, purchaseOrderNumber);
+            shippingRateInput, shippingMode, customShipping, shipping, itemShippingAddresses, discountCodes,
+            directDiscountsIgnoreCartDiscounts, country, locale, origin, deleteDaysAfterLastModification, custom,
+            purchaseOrderNumber);
     }
 
     /**
@@ -1470,8 +1502,9 @@ public class CartDraftBuilder implements Builder<CartDraft> {
         return new CartDraftImpl(currency, key, customerId, customerEmail, customerGroup, anonymousId, businessUnit,
             store, lineItems, customLineItems, taxMode, externalTaxRateForShippingMethod, priceRoundingMode,
             taxRoundingMode, taxCalculationMode, inventoryMode, billingAddress, shippingAddress, shippingMethod,
-            shippingRateInput, shippingMode, customShipping, shipping, itemShippingAddresses, discountCodes, country,
-            locale, origin, deleteDaysAfterLastModification, custom, purchaseOrderNumber);
+            shippingRateInput, shippingMode, customShipping, shipping, itemShippingAddresses, discountCodes,
+            directDiscountsIgnoreCartDiscounts, country, locale, origin, deleteDaysAfterLastModification, custom,
+            purchaseOrderNumber);
     }
 
     /**
@@ -1514,6 +1547,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
         builder.shipping = template.getShipping();
         builder.itemShippingAddresses = template.getItemShippingAddresses();
         builder.discountCodes = template.getDiscountCodes();
+        builder.directDiscountsIgnoreCartDiscounts = template.getDirectDiscountsIgnoreCartDiscounts();
         builder.country = template.getCountry();
         builder.locale = template.getLocale();
         builder.origin = template.getOrigin();

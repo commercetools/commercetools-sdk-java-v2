@@ -29,16 +29,20 @@ public class DirectDiscountImpl implements DirectDiscount, ModelBase {
 
     private com.commercetools.api.models.cart_discount.CartDiscountTarget target;
 
+    private Boolean participateInBestDealSelection;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     DirectDiscountImpl(@JsonProperty("id") final String id,
             @JsonProperty("value") final com.commercetools.api.models.cart_discount.CartDiscountValue value,
-            @JsonProperty("target") final com.commercetools.api.models.cart_discount.CartDiscountTarget target) {
+            @JsonProperty("target") final com.commercetools.api.models.cart_discount.CartDiscountTarget target,
+            @JsonProperty("participateInBestDealSelection") final Boolean participateInBestDealSelection) {
         this.id = id;
         this.value = value;
         this.target = target;
+        this.participateInBestDealSelection = participateInBestDealSelection;
     }
 
     /**
@@ -72,6 +76,18 @@ public class DirectDiscountImpl implements DirectDiscount, ModelBase {
         return this.target;
     }
 
+    /**
+     *  <ul>
+     *   <li>If <code>true</code>, Direct Discounts compete against Product Discounts to apply the <span>best deal</span>.</li>
+     *   <li>If <code>false</code>, Direct Discounts are ignored when calculating the best deal comparison, and are applied on top of the discount type that offers the best deal.</li>
+     *  </ul>
+     *  <p>This applies only when the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCombinationMode" rel="nofollow">DiscountCombinationMode</a> for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> is <code>BestDeal</code>.</p>
+     */
+
+    public Boolean getParticipateInBestDealSelection() {
+        return this.participateInBestDealSelection;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -82,6 +98,10 @@ public class DirectDiscountImpl implements DirectDiscount, ModelBase {
 
     public void setTarget(final com.commercetools.api.models.cart_discount.CartDiscountTarget target) {
         this.target = target;
+    }
+
+    public void setParticipateInBestDealSelection(final Boolean participateInBestDealSelection) {
+        this.participateInBestDealSelection = participateInBestDealSelection;
     }
 
     @Override
@@ -97,15 +117,21 @@ public class DirectDiscountImpl implements DirectDiscount, ModelBase {
         return new EqualsBuilder().append(id, that.id)
                 .append(value, that.value)
                 .append(target, that.target)
+                .append(participateInBestDealSelection, that.participateInBestDealSelection)
                 .append(id, that.id)
                 .append(value, that.value)
                 .append(target, that.target)
+                .append(participateInBestDealSelection, that.participateInBestDealSelection)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(value).append(target).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(value)
+                .append(target)
+                .append(participateInBestDealSelection)
+                .toHashCode();
     }
 
     @Override
@@ -113,6 +139,7 @@ public class DirectDiscountImpl implements DirectDiscount, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
                 .append("value", value)
                 .append("target", target)
+                .append("participateInBestDealSelection", participateInBestDealSelection)
                 .build();
     }
 

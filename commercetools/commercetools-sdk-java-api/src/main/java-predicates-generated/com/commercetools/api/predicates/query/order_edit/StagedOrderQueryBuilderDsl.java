@@ -301,6 +301,12 @@ public class StagedOrderQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
     }
 
+    public BooleanComparisonPredicateBuilder<StagedOrderQueryBuilderDsl> directDiscountsIgnoreCartDiscounts() {
+        return new BooleanComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("directDiscountsIgnoreCartDiscounts")),
+            p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> refusedGifts(
             Function<com.commercetools.api.predicates.query.cart_discount.CartDiscountReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart_discount.CartDiscountReferenceQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()

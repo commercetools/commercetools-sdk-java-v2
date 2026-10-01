@@ -19,7 +19,7 @@ import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Represents a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a> that can only be associated with a single Cart or Order.</p>
- *  <p>For an introduction to Direct Discounts and to understand how they work in Composable Commerce, see the <span>Direct Discounts overview</span>.</p>
+ *  <p>For an introduction to Direct Discounts and to understand how they work, see the <span>Direct Discounts overview</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -54,6 +54,18 @@ public interface DirectDiscountDraft extends io.vrap.rmf.base.client.Draft<Direc
     public CartDiscountTarget getTarget();
 
     /**
+     *  <ul>
+     *   <li>If set to <code>true</code>, Direct Discounts compete against Product Discounts to apply the <span>best deal</span>.</li>
+     *   <li>If set to <code>false</code>, Direct Discounts are ignored when calculating the best deal comparison, and are applied on top of the discount type that offers the best deal.</li>
+     *  </ul>
+     *  <p>This applies only when the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCombinationMode" rel="nofollow">DiscountCombinationMode</a> for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> is <code>BestDeal</code>.</p>
+     * @return participateInBestDealSelection
+     */
+
+    @JsonProperty("participateInBestDealSelection")
+    public Boolean getParticipateInBestDealSelection();
+
+    /**
      *  <p>Defines the effect the Discount will have.</p>
      * @param value value to be set
      */
@@ -67,6 +79,17 @@ public interface DirectDiscountDraft extends io.vrap.rmf.base.client.Draft<Direc
      */
 
     public void setTarget(final CartDiscountTarget target);
+
+    /**
+     *  <ul>
+     *   <li>If set to <code>true</code>, Direct Discounts compete against Product Discounts to apply the <span>best deal</span>.</li>
+     *   <li>If set to <code>false</code>, Direct Discounts are ignored when calculating the best deal comparison, and are applied on top of the discount type that offers the best deal.</li>
+     *  </ul>
+     *  <p>This applies only when the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCombinationMode" rel="nofollow">DiscountCombinationMode</a> for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> is <code>BestDeal</code>.</p>
+     * @param participateInBestDealSelection value to be set
+     */
+
+    public void setParticipateInBestDealSelection(final Boolean participateInBestDealSelection);
 
     /**
      * factory method
@@ -85,6 +108,7 @@ public interface DirectDiscountDraft extends io.vrap.rmf.base.client.Draft<Direc
         DirectDiscountDraftImpl instance = new DirectDiscountDraftImpl();
         instance.setValue(template.getValue());
         instance.setTarget(template.getTarget());
+        instance.setParticipateInBestDealSelection(template.getParticipateInBestDealSelection());
         return instance;
     }
 
@@ -105,6 +129,7 @@ public interface DirectDiscountDraft extends io.vrap.rmf.base.client.Draft<Direc
             com.commercetools.api.models.cart_discount.CartDiscountValueDraft.deepCopy(template.getValue()));
         instance.setTarget(
             com.commercetools.api.models.cart_discount.CartDiscountTarget.deepCopy(template.getTarget()));
+        instance.setParticipateInBestDealSelection(template.getParticipateInBestDealSelection());
         return instance;
     }
 

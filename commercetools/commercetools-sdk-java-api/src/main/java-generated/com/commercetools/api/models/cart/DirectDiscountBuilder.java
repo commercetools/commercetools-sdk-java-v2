@@ -32,6 +32,9 @@ public class DirectDiscountBuilder implements Builder<DirectDiscount> {
     @Nullable
     private com.commercetools.api.models.cart_discount.CartDiscountTarget target;
 
+    @Nullable
+    private Boolean participateInBestDealSelection;
+
     /**
      *  <p>Unique identifier of the Direct Discount.</p>
      * @param id value to be set
@@ -93,6 +96,22 @@ public class DirectDiscountBuilder implements Builder<DirectDiscount> {
     }
 
     /**
+     *  <ul>
+     *   <li>If <code>true</code>, Direct Discounts compete against Product Discounts to apply the <span>best deal</span>.</li>
+     *   <li>If <code>false</code>, Direct Discounts are ignored when calculating the best deal comparison, and are applied on top of the discount type that offers the best deal.</li>
+     *  </ul>
+     *  <p>This applies only when the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCombinationMode" rel="nofollow">DiscountCombinationMode</a> for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> is <code>BestDeal</code>.</p>
+     * @param participateInBestDealSelection value to be set
+     * @return Builder
+     */
+
+    public DirectDiscountBuilder participateInBestDealSelection(
+            @Nullable final Boolean participateInBestDealSelection) {
+        this.participateInBestDealSelection = participateInBestDealSelection;
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the Direct Discount.</p>
      * @return id
      */
@@ -122,13 +141,27 @@ public class DirectDiscountBuilder implements Builder<DirectDiscount> {
     }
 
     /**
+     *  <ul>
+     *   <li>If <code>true</code>, Direct Discounts compete against Product Discounts to apply the <span>best deal</span>.</li>
+     *   <li>If <code>false</code>, Direct Discounts are ignored when calculating the best deal comparison, and are applied on top of the discount type that offers the best deal.</li>
+     *  </ul>
+     *  <p>This applies only when the <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCombinationMode" rel="nofollow">DiscountCombinationMode</a> for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a> is <code>BestDeal</code>.</p>
+     * @return participateInBestDealSelection
+     */
+
+    @Nullable
+    public Boolean getParticipateInBestDealSelection() {
+        return this.participateInBestDealSelection;
+    }
+
+    /**
      * builds DirectDiscount with checking for non-null required values
      * @return DirectDiscount
      */
     public DirectDiscount build() {
         Objects.requireNonNull(id, DirectDiscount.class + ": id is missing");
         Objects.requireNonNull(value, DirectDiscount.class + ": value is missing");
-        return new DirectDiscountImpl(id, value, target);
+        return new DirectDiscountImpl(id, value, target, participateInBestDealSelection);
     }
 
     /**
@@ -136,7 +169,7 @@ public class DirectDiscountBuilder implements Builder<DirectDiscount> {
      * @return DirectDiscount
      */
     public DirectDiscount buildUnchecked() {
-        return new DirectDiscountImpl(id, value, target);
+        return new DirectDiscountImpl(id, value, target, participateInBestDealSelection);
     }
 
     /**
@@ -157,6 +190,7 @@ public class DirectDiscountBuilder implements Builder<DirectDiscount> {
         builder.id = template.getId();
         builder.value = template.getValue();
         builder.target = template.getTarget();
+        builder.participateInBestDealSelection = template.getParticipateInBestDealSelection();
         return builder;
     }
 

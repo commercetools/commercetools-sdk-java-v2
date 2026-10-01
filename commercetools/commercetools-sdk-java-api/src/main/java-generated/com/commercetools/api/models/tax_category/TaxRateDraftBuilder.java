@@ -44,6 +44,9 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     @Nullable
     private String key;
 
+    @Nullable
+    private com.commercetools.api.models.tax_category.TaxRoundingTarget taxRoundingTarget;
+
     /**
      *  <p>Name of the TaxRate.</p>
      * @param name value to be set
@@ -92,6 +95,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
 
     /**
      *  <p>State within the country, such as Texas in the United States. The value is case-sensitive and must use the same casing as the <code>state</code> value in the Cart <code>shippingAddress</code>. Empty strings are treated as if <code>state</code> was omitted.</p>
+     *  <p>If <code>state</code> is omitted, the resulting TaxRate does <strong>not</strong> act as a wildcard: it only matches a Cart whose <code>shippingAddress</code> also has no <code>state</code> value. To apply the same rate across states, either define an individual TaxRate for each state, or use the <code>region</code> field or a Custom Field on the shipping address as described in <span>Address matching</span>.</p>
      *  <p>If the provided combination of <code>country</code> and <code>state</code> exists for the TaxCategory, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @param state value to be set
      * @return Builder
@@ -203,6 +207,18 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
+     *  <p>Determines whether the <code>taxRoundingMode</code> of the Cart or Order is applied to the net price or the tax amount when this TaxRate is included in the price. The field is ignored if <code>includedInPrice</code> is <code>false</code>.</p>
+     * @param taxRoundingTarget value to be set
+     * @return Builder
+     */
+
+    public TaxRateDraftBuilder taxRoundingTarget(
+            @Nullable final com.commercetools.api.models.tax_category.TaxRoundingTarget taxRoundingTarget) {
+        this.taxRoundingTarget = taxRoundingTarget;
+        return this;
+    }
+
+    /**
      *  <p>Name of the TaxRate.</p>
      * @return name
      */
@@ -243,6 +259,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
 
     /**
      *  <p>State within the country, such as Texas in the United States. The value is case-sensitive and must use the same casing as the <code>state</code> value in the Cart <code>shippingAddress</code>. Empty strings are treated as if <code>state</code> was omitted.</p>
+     *  <p>If <code>state</code> is omitted, the resulting TaxRate does <strong>not</strong> act as a wildcard: it only matches a Cart whose <code>shippingAddress</code> also has no <code>state</code> value. To apply the same rate across states, either define an individual TaxRate for each state, or use the <code>region</code> field or a Custom Field on the shipping address as described in <span>Address matching</span>.</p>
      *  <p>If the provided combination of <code>country</code> and <code>state</code> exists for the TaxCategory, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p>
      * @return state
      */
@@ -274,6 +291,16 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
+     *  <p>Determines whether the <code>taxRoundingMode</code> of the Cart or Order is applied to the net price or the tax amount when this TaxRate is included in the price. The field is ignored if <code>includedInPrice</code> is <code>false</code>.</p>
+     * @return taxRoundingTarget
+     */
+
+    @Nullable
+    public com.commercetools.api.models.tax_category.TaxRoundingTarget getTaxRoundingTarget() {
+        return this.taxRoundingTarget;
+    }
+
+    /**
      * builds TaxRateDraft with checking for non-null required values
      * @return TaxRateDraft
      */
@@ -281,7 +308,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
         Objects.requireNonNull(name, TaxRateDraft.class + ": name is missing");
         Objects.requireNonNull(includedInPrice, TaxRateDraft.class + ": includedInPrice is missing");
         Objects.requireNonNull(country, TaxRateDraft.class + ": country is missing");
-        return new TaxRateDraftImpl(name, amount, includedInPrice, country, state, subRates, key);
+        return new TaxRateDraftImpl(name, amount, includedInPrice, country, state, subRates, key, taxRoundingTarget);
     }
 
     /**
@@ -289,7 +316,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
      * @return TaxRateDraft
      */
     public TaxRateDraft buildUnchecked() {
-        return new TaxRateDraftImpl(name, amount, includedInPrice, country, state, subRates, key);
+        return new TaxRateDraftImpl(name, amount, includedInPrice, country, state, subRates, key, taxRoundingTarget);
     }
 
     /**
@@ -314,6 +341,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
         builder.state = template.getState();
         builder.subRates = template.getSubRates();
         builder.key = template.getKey();
+        builder.taxRoundingTarget = template.getTaxRoundingTarget();
         return builder;
     }
 

@@ -86,6 +86,8 @@ public class QuoteTest {
                         Quote.builder()
                                 .directDiscounts(Collections
                                         .singletonList(new com.commercetools.api.models.cart.DirectDiscountImpl())) },
+                new Object[] { "directDiscountsIgnoreCartDiscounts",
+                        Quote.builder().directDiscountsIgnoreCartDiscounts(true) },
                 new Object[] { "custom",
                         Quote.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
                 new Object[] { "quoteState",
@@ -343,6 +345,13 @@ public class QuoteTest {
         value.setDirectDiscounts(Collections.singletonList(new com.commercetools.api.models.cart.DirectDiscountImpl()));
         Assertions.assertThat(value.getDirectDiscounts())
                 .isEqualTo(Collections.singletonList(new com.commercetools.api.models.cart.DirectDiscountImpl()));
+    }
+
+    @Test
+    public void directDiscountsIgnoreCartDiscounts() {
+        Quote value = Quote.of();
+        value.setDirectDiscountsIgnoreCartDiscounts(true);
+        Assertions.assertThat(value.getDirectDiscountsIgnoreCartDiscounts()).isEqualTo(true);
     }
 
     @Test

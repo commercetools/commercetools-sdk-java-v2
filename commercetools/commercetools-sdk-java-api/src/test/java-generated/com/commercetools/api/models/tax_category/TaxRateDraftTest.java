@@ -27,7 +27,11 @@ public class TaxRateDraftTest {
                         TaxRateDraft.builder()
                                 .subRates(Collections
                                         .singletonList(new com.commercetools.api.models.tax_category.SubRateImpl())) },
-                new Object[] { "key", TaxRateDraft.builder().key("key") } };
+                new Object[] { "key", TaxRateDraft.builder().key("key") },
+                new Object[] { "taxRoundingTarget",
+                        TaxRateDraft.builder()
+                                .taxRoundingTarget(
+                                    com.commercetools.api.models.tax_category.TaxRoundingTarget.findEnum("Net")) } };
     }
 
     @Test
@@ -78,5 +82,13 @@ public class TaxRateDraftTest {
         TaxRateDraft value = TaxRateDraft.of();
         value.setKey("key");
         Assertions.assertThat(value.getKey()).isEqualTo("key");
+    }
+
+    @Test
+    public void taxRoundingTarget() {
+        TaxRateDraft value = TaxRateDraft.of();
+        value.setTaxRoundingTarget(com.commercetools.api.models.tax_category.TaxRoundingTarget.findEnum("Net"));
+        Assertions.assertThat(value.getTaxRoundingTarget())
+                .isEqualTo(com.commercetools.api.models.tax_category.TaxRoundingTarget.findEnum("Net"));
     }
 }

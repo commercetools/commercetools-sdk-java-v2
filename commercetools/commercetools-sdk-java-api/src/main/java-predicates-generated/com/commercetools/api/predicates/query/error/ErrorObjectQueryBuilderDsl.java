@@ -193,13 +193,6 @@ public class ErrorObjectQueryBuilderDsl {
             ErrorObjectQueryBuilderDsl::of);
     }
 
-    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asCircularDependency(
-            Function<com.commercetools.api.predicates.query.error.CircularDependencyErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.CircularDependencyErrorQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            fn.apply(com.commercetools.api.predicates.query.error.CircularDependencyErrorQueryBuilderDsl.of()),
-            ErrorObjectQueryBuilderDsl::of);
-    }
-
     public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asConcurrentModification(
             Function<com.commercetools.api.predicates.query.error.ConcurrentModificationErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.ConcurrentModificationErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -368,6 +361,13 @@ public class ErrorObjectQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.error.ExtensionChainTooWideErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.ExtensionChainTooWideErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             fn.apply(com.commercetools.api.predicates.query.error.ExtensionChainTooWideErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asExtensionCircularDependency(
+            Function<com.commercetools.api.predicates.query.error.ExtensionCircularDependencyErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.ExtensionCircularDependencyErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.error.ExtensionCircularDependencyErrorQueryBuilderDsl.of()),
             ErrorObjectQueryBuilderDsl::of);
     }
 
@@ -558,13 +558,6 @@ public class ErrorObjectQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.error.MaxStoreReferencesReachedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.MaxStoreReferencesReachedErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             fn.apply(com.commercetools.api.predicates.query.error.MaxStoreReferencesReachedErrorQueryBuilderDsl.of()),
-            ErrorObjectQueryBuilderDsl::of);
-    }
-
-    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asMissingDependency(
-            Function<com.commercetools.api.predicates.query.error.MissingDependencyErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.MissingDependencyErrorQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            fn.apply(com.commercetools.api.predicates.query.error.MissingDependencyErrorQueryBuilderDsl.of()),
             ErrorObjectQueryBuilderDsl::of);
     }
 

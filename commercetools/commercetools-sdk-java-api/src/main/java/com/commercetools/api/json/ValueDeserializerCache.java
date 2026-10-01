@@ -13,16 +13,15 @@ import tools.jackson.databind.ValueDeserializer;
 
 class ValueDeserializerCache {
 
-    private final ConcurrentHashMap<JavaType, ValueDeserializer<Object>> deserializers = new ConcurrentHashMap<>();
+    private final ConcurrentHashMap<TypeReference<?>, ValueDeserializer<Object>> deserializers = new ConcurrentHashMap<>();
 
     Object readValue(final JsonParser p, final DeserializationContext ctx, final TypeReference<?> ref,
             final JsonNode nodeValue) {
-        final JavaType type = ctx.getTypeFactory().constructType(ref);
-
-        ValueDeserializer<Object> deser = deserializers.get(type);
+        ValueDeserializer<Object> deser = deserializers.get(ref);
         if (deser == null) {
+            final JavaType type = ctx.getTypeFactory().constructType(ref);
             deser = ctx.findRootValueDeserializer(type);
-            deserializers.putIfAbsent(type, deser);
+            deserializers.putIfAbsent(ref, deser);
         }
 
         final JsonParser sub = p.objectReadContext().treeAsTokens(nodeValue);

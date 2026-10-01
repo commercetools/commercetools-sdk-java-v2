@@ -18,13 +18,13 @@ Deserializing a polymorphic custom field value used to re-resolve the type deser
 value, scanning all subtypes registered by SubTypeModule each time.
 See https://github.com/commercetools/commercetools-sdk-java-v2/issues/1152
 
-Recorded on Java 21 / jackson-databind 3.2.2, single thread, CPU time per decode:
+Recorded on Java 21 / jackson-databind 3.2.2, single thread, µs CPU per decode:
 
-Payload                        before    after
-20 money + 20 ref + 20 text     899.3     31.3
-60 money                        888.7     43.6
-60 reference                   1752.5     39.3
-60 text (control)                 9.9      7.0
+Payload                        before     after    after c6728b7 and 9b69e3e
+20 money + 20 ref + 20 text     899.3     31.3     28.9
+60 money                        888.7     43.6     40.9
+60 reference                   1752.5     39.3     36.9
+60 text (control)                 9.9      7.0     6.5
 
 (absolute numbers are machine specific)
 */

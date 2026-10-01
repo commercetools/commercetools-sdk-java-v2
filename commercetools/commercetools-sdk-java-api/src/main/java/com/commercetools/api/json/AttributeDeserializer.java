@@ -32,6 +32,66 @@ public class AttributeDeserializer extends ValueDeserializer<AttributeImpl> {
     private static Pattern date = Pattern.compile("^[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])");
     private static Pattern time = Pattern.compile("^[0-9]{2}:[0-9]{2}:[0-9]{2}([.][0-9]{1,9})?");
 
+    private static final TypeReference<Boolean> BOOLEAN_TYPE = new TypeReference<Boolean>() {
+    };
+    private static final TypeReference<Long> LONG_TYPE = new TypeReference<Long>() {
+    };
+    private static final TypeReference<Double> DOUBLE_TYPE = new TypeReference<Double>() {
+    };
+    private static final TypeReference<ZonedDateTime> ZONED_DATE_TIME_TYPE = new TypeReference<ZonedDateTime>() {
+    };
+    private static final TypeReference<LocalDate> LOCAL_DATE_TYPE = new TypeReference<LocalDate>() {
+    };
+    private static final TypeReference<LocalTime> LOCAL_TIME_TYPE = new TypeReference<LocalTime>() {
+    };
+    private static final TypeReference<String> STRING_TYPE = new TypeReference<String>() {
+    };
+    private static final TypeReference<AttributeLocalizedEnumValue> LOCALIZED_ENUM_TYPE = new TypeReference<AttributeLocalizedEnumValue>() {
+    };
+    private static final TypeReference<AttributePlainEnumValue> ENUM_TYPE = new TypeReference<AttributePlainEnumValue>() {
+    };
+    private static final TypeReference<TypedMoney> MONEY_TYPE = new TypeReference<TypedMoney>() {
+    };
+    private static final TypeReference<Reference> REFERENCE_TYPE = new TypeReference<Reference>() {
+    };
+    private static final TypeReference<Attribute> NESTED_TYPE = new TypeReference<Attribute>() {
+    };
+    private static final TypeReference<LocalizedString> LOCALIZED_STRING_TYPE = new TypeReference<LocalizedString>() {
+    };
+    private static final TypeReference<JsonNode> JSON_NODE_TYPE = new TypeReference<JsonNode>() {
+    };
+
+    private static final TypeReference<List<Boolean>> BOOLEAN_LIST_TYPE = new TypeReference<List<Boolean>>() {
+    };
+    private static final TypeReference<List<Long>> LONG_LIST_TYPE = new TypeReference<List<Long>>() {
+    };
+    private static final TypeReference<List<Double>> DOUBLE_LIST_TYPE = new TypeReference<List<Double>>() {
+    };
+    private static final TypeReference<List<ZonedDateTime>> ZONED_DATE_TIME_LIST_TYPE = new TypeReference<List<ZonedDateTime>>() {
+    };
+    private static final TypeReference<List<LocalDate>> LOCAL_DATE_LIST_TYPE = new TypeReference<List<LocalDate>>() {
+    };
+    private static final TypeReference<List<LocalTime>> LOCAL_TIME_LIST_TYPE = new TypeReference<List<LocalTime>>() {
+    };
+    private static final TypeReference<List<String>> STRING_LIST_TYPE = new TypeReference<List<String>>() {
+    };
+    private static final TypeReference<List<AttributeLocalizedEnumValue>> LOCALIZED_ENUM_LIST_TYPE = new TypeReference<List<AttributeLocalizedEnumValue>>() {
+    };
+    private static final TypeReference<List<AttributePlainEnumValue>> ENUM_LIST_TYPE = new TypeReference<List<AttributePlainEnumValue>>() {
+    };
+    private static final TypeReference<List<TypedMoney>> MONEY_LIST_TYPE = new TypeReference<List<TypedMoney>>() {
+    };
+    private static final TypeReference<List<Reference>> REFERENCE_LIST_TYPE = new TypeReference<List<Reference>>() {
+    };
+    private static final TypeReference<List<Attribute>> NESTED_LIST_TYPE = new TypeReference<List<Attribute>>() {
+    };
+    private static final TypeReference<List<List<Attribute>>> SET_NESTED_LIST_TYPE = new TypeReference<List<List<Attribute>>>() {
+    };
+    private static final TypeReference<List<LocalizedString>> LOCALIZED_STRING_LIST_TYPE = new TypeReference<List<LocalizedString>>() {
+    };
+    private static final TypeReference<List<JsonNode>> JSON_NODE_LIST_TYPE = new TypeReference<List<JsonNode>>() {
+    };
+
     private final boolean deserializeAsDate;
 
     private final boolean deserializeNumberAsDouble;
@@ -84,111 +144,82 @@ public class AttributeDeserializer extends ValueDeserializer<AttributeImpl> {
         JsonNodeType valueNodeType = valueNode.getNodeType();
         switch (valueNodeType) {
             case BOOLEAN:
-                return new TypeReference<Boolean>() {
-                };
+                return BOOLEAN_TYPE;
             case NUMBER:
                 if (!deserializeNumberAsDouble && (valueNode.isInt() || valueNode.isLong())) {
-                    return new TypeReference<Long>() {
-                    };
+                    return LONG_TYPE;
                 }
-                return new TypeReference<Double>() {
-                };
+                return DOUBLE_TYPE;
             case STRING:
                 if (deserializeAsDate) {
                     String val = valueNode.asString();
                     if (p.matcher(val).find()) {
                         if (dateTime.matcher(val).find()) {
-                            return new TypeReference<ZonedDateTime>() {
-                            };
+                            return ZONED_DATE_TIME_TYPE;
                         }
                         if (date.matcher(val).matches()) {
-                            return new TypeReference<LocalDate>() {
-                            };
+                            return LOCAL_DATE_TYPE;
                         }
                         if (time.matcher(val).matches()) {
-                            return new TypeReference<LocalTime>() {
-                            };
+                            return LOCAL_TIME_TYPE;
                         }
                     }
                 }
-                return new TypeReference<String>() {
-                };
+                return STRING_TYPE;
             case OBJECT:
                 if (valueNode.has("key") && valueNode.has("label")) {
                     JsonNode label = valueNode.get("label");
                     if (label.getNodeType() == JsonNodeType.OBJECT) {
-                        return new TypeReference<AttributeLocalizedEnumValue>() {
-                        };
+                        return LOCALIZED_ENUM_TYPE;
                     }
-                    return new TypeReference<AttributePlainEnumValue>() {
-                    };
+                    return ENUM_TYPE;
                 }
                 if (valueNode.has("currencyCode")) {
-                    return new TypeReference<TypedMoney>() {
-                    };
+                    return MONEY_TYPE;
                 }
                 if (valueNode.has("typeId")) {
-                    return new TypeReference<Reference>() {
-                    };
+                    return REFERENCE_TYPE;
                 }
                 if (valueNode.has("value")) {
-                    return new TypeReference<Attribute>() {
-                    };
+                    return NESTED_TYPE;
                 }
-                return new TypeReference<LocalizedString>() {
-                };
+                return LOCALIZED_STRING_TYPE;
             case ARRAY:
                 JsonNode first = valueNode.get(0);
                 switch (elemType(first)) {
                     case STRING:
-                        return new TypeReference<List<String>>() {
-                        };
+                        return STRING_LIST_TYPE;
                     case DATE:
-                        return new TypeReference<List<LocalDate>>() {
-                        };
+                        return LOCAL_DATE_LIST_TYPE;
                     case DATETIME:
-                        return new TypeReference<List<ZonedDateTime>>() {
-                        };
+                        return ZONED_DATE_TIME_LIST_TYPE;
                     case TIME:
-                        return new TypeReference<List<LocalTime>>() {
-                        };
+                        return LOCAL_TIME_LIST_TYPE;
                     case NUMBER:
-                        return new TypeReference<List<Double>>() {
-                        };
+                        return DOUBLE_LIST_TYPE;
                     case LONG:
-                        return new TypeReference<List<Long>>() {
-                        };
+                        return LONG_LIST_TYPE;
                     case BOOLEAN:
-                        return new TypeReference<List<Boolean>>() {
-                        };
+                        return BOOLEAN_LIST_TYPE;
                     case ENUM:
-                        return new TypeReference<List<AttributePlainEnumValue>>() {
-                        };
+                        return ENUM_LIST_TYPE;
                     case LOCALIZED_ENUM:
-                        return new TypeReference<List<AttributeLocalizedEnumValue>>() {
-                        };
+                        return LOCALIZED_ENUM_LIST_TYPE;
                     case LOCALIZED_STRING:
-                        return new TypeReference<List<LocalizedString>>() {
-                        };
+                        return LOCALIZED_STRING_LIST_TYPE;
                     case MONEY:
-                        return new TypeReference<List<TypedMoney>>() {
-                        };
+                        return MONEY_LIST_TYPE;
                     case REFERENCE:
-                        return new TypeReference<List<Reference>>() {
-                        };
+                        return REFERENCE_LIST_TYPE;
                     case NESTED:
-                        return new TypeReference<List<Attribute>>() {
-                        };
+                        return NESTED_LIST_TYPE;
                     case SET_NESTED:
-                        return new TypeReference<List<List<Attribute>>>() {
-                        };
+                        return SET_NESTED_LIST_TYPE;
                     default:
-                        return new TypeReference<List<JsonNode>>() {
-                        };
+                        return JSON_NODE_LIST_TYPE;
                 }
             default:
-                return new TypeReference<JsonNode>() {
-                };
+                return JSON_NODE_TYPE;
         }
     }
 

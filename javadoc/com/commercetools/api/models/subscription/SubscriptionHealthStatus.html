@@ -214,7 +214,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <section class="detail" id="CONFIGURATION_ERROR_DELIVERY_STOPPED">
 <h3>CONFIGURATION_ERROR_DELIVERY_STOPPED</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="SubscriptionHealthStatus.html" title="interface in com.commercetools.api.models.subscription">SubscriptionHealthStatus</a></span>&nbsp;<span class="element-name">CONFIGURATION_ERROR_DELIVERY_STOPPED</span></div>
-<div class="block"><p>Does not deliver notifications with the current configuration and the delivery of the notifications is no longer attempted. After the configuration is fixed, undelivered notifications are not retained and will not be delivered. The <code>status</code> will change to <a href="https://docs.commercetools.com/apis/ctp:api:type:SubscriptionHealthStatus" rel="nofollow">Healthy</a> as soon as new notifications can be delivered.</p></div>
+<div class="block"><p>Does not deliver notifications with the current configuration and the delivery of the notifications is no longer attempted. After the configuration is fixed, undelivered notifications are not retained and will not be delivered. The <code>status</code> will not automatically change to <a href="https://docs.commercetools.com/apis/ctp:api:type:SubscriptionHealthStatus" rel="nofollow">Healthy</a>. To return your Subscription to a <a href="https://docs.commercetools.com/apis/ctp:api:type:SubscriptionHealthStatus" rel="nofollow">Healthy</a> status, use the <a href="https://docs.commercetools.com/apis/ctp:api:type:SubscriptionChangeDestinationAction" rel="nofollow">Change Destination</a> update action or recreate the Subscription.</p></div>
 </section>
 </li>
 <li>

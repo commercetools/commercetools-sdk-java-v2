@@ -91,6 +91,14 @@ loadScripts(document, 'script');</script>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/StringBodyApiMethod.html" title="class in io.vrap.rmf.base.client">StringBodyApiMethod</a>&lt;<a href="ByProjectKeyStagedQuotesPostString.html" title="class in com.commercetools.api.client">ByProjectKeyStagedQuotesPostString</a>,<wbr><a href="../models/staged_quote/StagedQuote.html" title="interface in com.commercetools.api.models.staged_quote">StagedQuote</a>&gt;
 implements <a href="ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="ByProjectKeyStagedQuotesPostString.html" title="class in com.commercetools.api.client">ByProjectKeyStagedQuotesPostString</a>&gt;, <a href="Deprecatable201Trait.html" title="interface in com.commercetools.api.client">Deprecatable201Trait</a>&lt;<a href="ByProjectKeyStagedQuotesPostString.html" title="class in com.commercetools.api.client">ByProjectKeyStagedQuotesPostString</a>&gt;, <a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyStagedQuotesPostString.html" title="class in com.commercetools.api.client">ByProjectKeyStagedQuotesPostString</a>&gt;</span></div>
 <div class="block"><p>Creates a StagedQuote in the Project.</p>
+  <ul>
+   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> is returned in several cases, including the following:
+    <ul>
+     <li>The referenced Shipping Method is not active.</li>
+     <li>The referenced Shipping Method is scoped to a Store that differs from the Store referenced by the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Request</a>.</li>
+     <li>The referenced Shipping Method is scoped to a Store, but the <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">Quote Request</a> does not belong to a Store.</li>
+    </ul></li>
+  </ul>
 
  <hr>
  <div class=code-example>

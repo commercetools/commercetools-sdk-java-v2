@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Known Subinterfaces:</dt>
-<dd><code><a href="CannotChangeReservationExpiryWarning.html" title="interface in com.commercetools.api.models.warning">CannotChangeReservationExpiryWarning</a></code>, <code><a href="CannotCreateReservationWarning.html" title="interface in com.commercetools.api.models.warning">CannotCreateReservationWarning</a></code>, <code><a href="CannotUpdateReservationWarning.html" title="interface in com.commercetools.api.models.warning">CannotUpdateReservationWarning</a></code>, <code><a href="ImageProcessingOngoingWarning.html" title="interface in com.commercetools.api.models.warning">ImageProcessingOngoingWarning</a></code></dd>
+<dd><code><a href="../agent/AgentFileNotProcessedWarning.html" title="interface in com.commercetools.api.models.agent">AgentFileNotProcessedWarning</a></code>, <code><a href="../agent/AgentProductsNotFoundWarning.html" title="interface in com.commercetools.api.models.agent">AgentProductsNotFoundWarning</a></code>, <code><a href="CannotChangeReservationExpiryWarning.html" title="interface in com.commercetools.api.models.warning">CannotChangeReservationExpiryWarning</a></code>, <code><a href="CannotCreateReservationWarning.html" title="interface in com.commercetools.api.models.warning">CannotCreateReservationWarning</a></code>, <code><a href="CannotUpdateReservationWarning.html" title="interface in com.commercetools.api.models.warning">CannotUpdateReservationWarning</a></code>, <code><a href="ImageProcessingOngoingWarning.html" title="interface in com.commercetools.api.models.warning">ImageProcessingOngoingWarning</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">WarningObject</span></div>
@@ -83,9 +83,9 @@ loadScripts(document, 'script');</script>
  Example to create a subtype instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-     WarningObject warningObject = WarningObject.cannotChangeReservationExpiryBuilder()
+     WarningObject warningObject = WarningObject.fileNotProcessedBuilder()
              message("{message}")
-             lineItemId("{lineItemId}")
+             fileName("{fileName}")
              .build()
  </code></pre>
  </div></div>
@@ -126,20 +126,30 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a deep copy of WarningObject</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCode()" class="member-name-link">getCode</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Identifier for the type of warning.</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="../agent/AgentFileNotProcessedWarningBuilder.html" title="class in com.commercetools.api.models.agent">AgentFileNotProcessedWarningBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#fileNotProcessedBuilder()" class="member-name-link">fileNotProcessedBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for fileNotProcessed subtype</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMessage()" class="member-name-link">getMessage</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCode()" class="member-name-link">getCode</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Identifier for the type of warning.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMessage()" class="member-name-link">getMessage</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Contains information about the returned response.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ImageProcessingOngoingWarningBuilder.html" title="class in com.commercetools.api.models.warning">ImageProcessingOngoingWarningBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#imageProcessingOngoingBuilder()" class="member-name-link">imageProcessingOngoingBuilder</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ImageProcessingOngoingWarningBuilder.html" title="class in com.commercetools.api.models.warning">ImageProcessingOngoingWarningBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#imageProcessingOngoingBuilder()" class="member-name-link">imageProcessingOngoingBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">builder for imageProcessingOngoing subtype</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="../agent/AgentProductsNotFoundWarningBuilder.html" title="class in com.commercetools.api.models.agent">AgentProductsNotFoundWarningBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#productsNotFoundBuilder()" class="member-name-link">productsNotFoundBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for productsNotFound subtype</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setMessage(java.lang.String)" class="member-name-link">setMessage</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</code></div>
@@ -223,6 +233,28 @@ loadScripts(document, 'script');</script>
 <dd><code>template</code> - instance to be copied</dd>
 <dt>Returns:</dt>
 <dd>copy instance</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="fileNotProcessedBuilder()">
+<h3>fileNotProcessedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../agent/AgentFileNotProcessedWarningBuilder.html" title="class in com.commercetools.api.models.agent">AgentFileNotProcessedWarningBuilder</a></span>&nbsp;<span class="element-name">fileNotProcessedBuilder</span>()</div>
+<div class="block">builder for fileNotProcessed subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="productsNotFoundBuilder()">
+<h3>productsNotFoundBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="../agent/AgentProductsNotFoundWarningBuilder.html" title="class in com.commercetools.api.models.agent">AgentProductsNotFoundWarningBuilder</a></span>&nbsp;<span class="element-name">productsNotFoundBuilder</span>()</div>
+<div class="block">builder for productsNotFound subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
 </dl>
 </section>
 </li>

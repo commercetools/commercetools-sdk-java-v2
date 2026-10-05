@@ -150,7 +150,7 @@ extends <a href="ProductUpdateAction.html" title="interface in com.commercetools
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStaged()" class="member-name-link">getStaged</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">If <code>true</code>, only the staged <code>key</code> is set.</div>
+<div class="block">Whether only the staged <code>key</code> is set.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVariantId()" class="member-name-link">getVariantId</a>()</code></div>
@@ -180,7 +180,7 @@ extends <a href="ProductUpdateAction.html" title="interface in com.commercetools
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setStaged(java.lang.Boolean)" class="member-name-link">setStaged</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;staged)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">If <code>true</code>, only the staged <code>key</code> is set.</div>
+<div class="block">Whether only the staged <code>key</code> is set.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setVariantId(java.lang.Long)" class="member-name-link">setVariantId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;variantId)</code></div>
@@ -266,7 +266,7 @@ extends <a href="ProductUpdateAction.html" title="interface in com.commercetools
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
-<div class="block"><p>Value to set. Must be unique among ProductVariants in the same Product. If empty, any existing value will be removed.</p></div>
+<div class="block"><p>Value to set. Must be unique among ProductVariants in the same Product. If omitted, any existing value is removed.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>key</dd>
@@ -277,7 +277,7 @@ extends <a href="ProductUpdateAction.html" title="interface in com.commercetools
 <section class="detail" id="getStaged()">
 <h3>getStaged</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getStaged</span>()</div>
-<div class="block"><p>If <code>true</code>, only the staged <code>key</code> is set. If <code>false</code>, both the current and staged <code>key</code> are set.</p></div>
+<div class="block"><p>Whether only the staged <code>key</code> is set. If <code>false</code>, both the current and staged <code>key</code> are set.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>staged</dd>
@@ -310,7 +310,7 @@ extends <a href="ProductUpdateAction.html" title="interface in com.commercetools
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
-<div class="block"><p>Value to set. Must be unique among ProductVariants in the same Product. If empty, any existing value will be removed.</p></div>
+<div class="block"><p>Value to set. Must be unique among ProductVariants in the same Product. If omitted, any existing value is removed.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>key</code> - value to be set</dd>
@@ -321,7 +321,7 @@ extends <a href="ProductUpdateAction.html" title="interface in com.commercetools
 <section class="detail" id="setStaged(java.lang.Boolean)">
 <h3>setStaged</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setStaged</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;staged)</span></div>
-<div class="block"><p>If <code>true</code>, only the staged <code>key</code> is set. If <code>false</code>, both the current and staged <code>key</code> are set.</p></div>
+<div class="block"><p>Whether only the staged <code>key</code> is set. If <code>false</code>, both the current and staged <code>key</code> are set.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>staged</code> - value to be set</dd>

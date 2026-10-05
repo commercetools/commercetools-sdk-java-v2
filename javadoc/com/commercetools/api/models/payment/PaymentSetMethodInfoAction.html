@@ -276,7 +276,7 @@ extends <a href="PaymentUpdateAction.html" title="interface in com.commercetools
 <section class="detail" id="getMethod()">
 <h3>getMethod</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getMethod</span>()</div>
-<div class="block"><p>Payment method to use—for example, a credit card or direct debit. If empty, any existing value will be removed.</p>
+<div class="block"><p>Payment method to use—for example, a credit card or direct debit. If omitted, any existing value is removed.</p>
   <p>Setting this field is equivalent to the <code>setMethodInfoMethod</code> action and will generate the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoMethodSetMessage" rel="nofollow">PaymentMethodInfoMethodSet</a> Message.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -289,7 +289,7 @@ extends <a href="PaymentUpdateAction.html" title="interface in com.commercetools
 <h3>getName</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name">getName</span>()</div>
-<div class="block"><p>Name of the Payment Method. If empty, any existing value will be removed.</p>
+<div class="block"><p>Name of the Payment Method. If omitted, any existing value is removed.</p>
   <p>Setting this field is equivalent to the <code>setMethodInfoName</code> action and will generate the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoNameSetMessage" rel="nofollow">PaymentMethodInfoNameSet</a> Message.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -302,7 +302,7 @@ extends <a href="PaymentUpdateAction.html" title="interface in com.commercetools
 <h3>getToken</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../payment_method/PaymentMethodToken.html" title="interface in com.commercetools.api.models.payment_method">PaymentMethodToken</a></span>&nbsp;<span class="element-name">getToken</span>()</div>
-<div class="block"><p>Tokenized payment method information of the Payment Method. If empty, any existing value will be removed.</p>
+<div class="block"><p>Tokenized payment method information of the Payment Method. If omitted, any existing value is removed.</p>
   <p>Setting this field is equivalent to the <code>setMethodInfoToken</code> action and will generate the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoTokenSetMessage" rel="nofollow">PaymentMethodInfoTokenSet</a> Message.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -314,7 +314,7 @@ extends <a href="PaymentUpdateAction.html" title="interface in com.commercetools
 <section class="detail" id="getInterfaceAccount()">
 <h3>getInterfaceAccount</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getInterfaceAccount</span>()</div>
-<div class="block"><p>Account or instance of the payment interface when multiple accounts are used (per interface). If empty, any existing value will be removed.</p>
+<div class="block"><p>Account or instance of the payment interface when multiple accounts are used (per interface). If omitted, any existing value is removed.</p>
   <p>Setting this field is equivalent to the <code>setMethodInfoInterfaceAccount</code> action and will generate the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoInterfaceAccountSetMessage" rel="nofollow">PaymentMethodInfoInterfaceAccountSet</a> Message.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -327,7 +327,7 @@ extends <a href="PaymentUpdateAction.html" title="interface in com.commercetools
 <h3>getCustom</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></span>&nbsp;<span class="element-name">getCustom</span>()</div>
-<div class="block"><p>Custom Fields for the PaymentMethodInfo. If not provided, any existing Custom Fields will be removed, including the Custom Type.</p>
+<div class="block"><p>Custom Fields for the PaymentMethodInfo. If omitted, any existing Custom Fields are removed, including the Custom Type.</p>
   <p>Setting this field is equivalent to the <code>setMethodInfoCustomType</code> and <code>setMethodInfoCustomField</code> actions, and will generate the following Messages:</p>
   <ul>
    <li>Adding or updating a Custom Type on a Payment Method Info generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoCustomTypeSetMessage" rel="nofollow">PaymentMethodInfoCustomTypeSet</a> Message, removing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoCustomTypeRemovedMessage" rel="nofollow">PaymentMethodInfoCustomTypeRemoved</a> Message.</li>
@@ -355,7 +355,7 @@ extends <a href="PaymentUpdateAction.html" title="interface in com.commercetools
 <section class="detail" id="setMethod(java.lang.String)">
 <h3>setMethod</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setMethod</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;method)</span></div>
-<div class="block"><p>Payment method to use—for example, a credit card or direct debit. If empty, any existing value will be removed.</p>
+<div class="block"><p>Payment method to use—for example, a credit card or direct debit. If omitted, any existing value is removed.</p>
   <p>Setting this field is equivalent to the <code>setMethodInfoMethod</code> action and will generate the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoMethodSetMessage" rel="nofollow">PaymentMethodInfoMethodSet</a> Message.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -367,7 +367,7 @@ extends <a href="PaymentUpdateAction.html" title="interface in com.commercetools
 <section class="detail" id="setName(com.commercetools.api.models.common.LocalizedString)">
 <h3>setName</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setName</span><wbr><span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</span></div>
-<div class="block"><p>Name of the Payment Method. If empty, any existing value will be removed.</p>
+<div class="block"><p>Name of the Payment Method. If omitted, any existing value is removed.</p>
   <p>Setting this field is equivalent to the <code>setMethodInfoName</code> action and will generate the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoNameSetMessage" rel="nofollow">PaymentMethodInfoNameSet</a> Message.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -379,7 +379,7 @@ extends <a href="PaymentUpdateAction.html" title="interface in com.commercetools
 <section class="detail" id="setToken(com.commercetools.api.models.payment_method.PaymentMethodToken)">
 <h3>setToken</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setToken</span><wbr><span class="parameters">(<a href="../payment_method/PaymentMethodToken.html" title="interface in com.commercetools.api.models.payment_method">PaymentMethodToken</a>&nbsp;token)</span></div>
-<div class="block"><p>Tokenized payment method information of the Payment Method. If empty, any existing value will be removed.</p>
+<div class="block"><p>Tokenized payment method information of the Payment Method. If omitted, any existing value is removed.</p>
   <p>Setting this field is equivalent to the <code>setMethodInfoToken</code> action and will generate the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoTokenSetMessage" rel="nofollow">PaymentMethodInfoTokenSet</a> Message.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -391,7 +391,7 @@ extends <a href="PaymentUpdateAction.html" title="interface in com.commercetools
 <section class="detail" id="setInterfaceAccount(java.lang.String)">
 <h3>setInterfaceAccount</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setInterfaceAccount</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;interfaceAccount)</span></div>
-<div class="block"><p>Account or instance of the payment interface when multiple accounts are used (per interface). If empty, any existing value will be removed.</p>
+<div class="block"><p>Account or instance of the payment interface when multiple accounts are used (per interface). If omitted, any existing value is removed.</p>
   <p>Setting this field is equivalent to the <code>setMethodInfoInterfaceAccount</code> action and will generate the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoInterfaceAccountSetMessage" rel="nofollow">PaymentMethodInfoInterfaceAccountSet</a> Message.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -403,7 +403,7 @@ extends <a href="PaymentUpdateAction.html" title="interface in com.commercetools
 <section class="detail" id="setCustom(com.commercetools.api.models.type.CustomFieldsDraft)">
 <h3>setCustom</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCustom</span><wbr><span class="parameters">(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</span></div>
-<div class="block"><p>Custom Fields for the PaymentMethodInfo. If not provided, any existing Custom Fields will be removed, including the Custom Type.</p>
+<div class="block"><p>Custom Fields for the PaymentMethodInfo. If omitted, any existing Custom Fields are removed, including the Custom Type.</p>
   <p>Setting this field is equivalent to the <code>setMethodInfoCustomType</code> and <code>setMethodInfoCustomField</code> actions, and will generate the following Messages:</p>
   <ul>
    <li>Adding or updating a Custom Type on a Payment Method Info generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoCustomTypeSetMessage" rel="nofollow">PaymentMethodInfoCustomTypeSet</a> Message, removing one generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethodInfoCustomTypeRemovedMessage" rel="nofollow">PaymentMethodInfoCustomTypeRemoved</a> Message.</li>

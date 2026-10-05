@@ -243,7 +243,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="address(java.util.function.Function)">
 <h3>address</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderSetDeliveryAddressActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetDeliveryAddressActionBuilder</a></span>&nbsp;<span class="element-name">address</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/BaseAddressBuilder.html" title="class in com.commercetools.api.models.common">BaseAddressBuilder</a>,<wbr><a href="../common/BaseAddressBuilder.html" title="class in com.commercetools.api.models.common">BaseAddressBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Value to set. If empty, any existing value is removed.</p></div>
+<div class="block"><p>Value to set. It replaces the entire address, including <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> if <code>custom</code> is not included. To preserve Custom Fields, include the <code>custom</code> object in the request.</p>
+  <p>If omitted, any existing value is removed.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the address value</dd>
@@ -256,7 +257,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withAddress(java.util.function.Function)">
 <h3>withAddress</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderSetDeliveryAddressActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetDeliveryAddressActionBuilder</a></span>&nbsp;<span class="element-name">withAddress</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/BaseAddressBuilder.html" title="class in com.commercetools.api.models.common">BaseAddressBuilder</a>,<wbr><a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Value to set. If empty, any existing value is removed.</p></div>
+<div class="block"><p>Value to set. It replaces the entire address, including <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> if <code>custom</code> is not included. To preserve Custom Fields, include the <code>custom</code> object in the request.</p>
+  <p>If omitted, any existing value is removed.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the address value</dd>
@@ -270,7 +272,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>address</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderSetDeliveryAddressActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetDeliveryAddressActionBuilder</a></span>&nbsp;<span class="element-name">address</span><wbr><span class="parameters">(@Nullable
  <a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&nbsp;address)</span></div>
-<div class="block"><p>Value to set. If empty, any existing value is removed.</p></div>
+<div class="block"><p>Value to set. It replaces the entire address, including <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> if <code>custom</code> is not included. To preserve Custom Fields, include the <code>custom</code> object in the request.</p>
+  <p>If omitted, any existing value is removed.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>address</code> - value to be set</dd>
@@ -310,7 +313,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getAddress</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></span>&nbsp;<span class="element-name">getAddress</span>()</div>
-<div class="block"><p>Value to set. If empty, any existing value is removed.</p></div>
+<div class="block"><p>Value to set. It replaces the entire address, including <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFields" rel="nofollow">Custom Fields</a> if <code>custom</code> is not included. To preserve Custom Fields, include the <code>custom</code> object in the request.</p>
+  <p>If omitted, any existing value is removed.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>address</dd>

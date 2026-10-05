@@ -294,6 +294,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Using positive or negative quantities increases or decreases the number of items shipped to an address.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/tax_category/TaxRoundingTarget.TaxRoundingTargetEnum.html#TAX" class="member-name-link">TAX</a> - Enum constant in enum class com.commercetools.api.models.tax_category.<a href="../com/commercetools/api/models/tax_category/TaxRoundingTarget.TaxRoundingTargetEnum.html" title="enum class in com.commercetools.api.models.tax_category">TaxRoundingTarget.TaxRoundingTargetEnum</a></dt>
+<dd>
+<div class="block">Tax</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/tax_category/TaxRoundingTarget.html#TAX" class="member-name-link">TAX</a> - Static variable in interface com.commercetools.api.models.tax_category.<a href="../com/commercetools/api/models/tax_category/TaxRoundingTarget.html" title="interface in com.commercetools.api.models.tax_category">TaxRoundingTarget</a></dt>
+<dd>
+<div class="block"><code>taxRoundingMode</code> is applied to the tax amount and the net price is the exact remainder.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/common/ReferenceTypeId.ReferenceTypeIdEnum.html#TAX_CATEGORY" class="member-name-link">TAX_CATEGORY</a> - Enum constant in enum class com.commercetools.api.models.common.<a href="../com/commercetools/api/models/common/ReferenceTypeId.ReferenceTypeIdEnum.html" title="enum class in com.commercetools.api.models.common">ReferenceTypeId.ReferenceTypeIdEnum</a></dt>
 <dd>
 <div class="block">tax-category</div>
@@ -1022,9 +1030,21 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Not set until the shipping address is set.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/order/CustomLineItemImportDraftBuilder.html#taxedPrice(com.commercetools.api.models.cart.TaxedPriceDraft)" class="member-name-link">taxedPrice(TaxedPriceDraft)</a> - Method in class com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/CustomLineItemImportDraftBuilder.html" title="class in com.commercetools.api.models.order">CustomLineItemImportDraftBuilder</a></dt>
+<dd>
+<div class="block">Taxed price of the Custom Line Item.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/order/LineItemImportDraftBuilder.html#taxedPrice(com.commercetools.api.models.cart.TaxedPriceDraft)" class="member-name-link">taxedPrice(TaxedPriceDraft)</a> - Method in class com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/LineItemImportDraftBuilder.html" title="class in com.commercetools.api.models.order">LineItemImportDraftBuilder</a></dt>
+<dd>
+<div class="block">Taxed price of the Line Item.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/order/OrderImportDraftBuilder.html#taxedPrice(com.commercetools.api.models.cart.TaxedPriceDraft)" class="member-name-link">taxedPrice(TaxedPriceDraft)</a> - Method in class com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/OrderImportDraftBuilder.html" title="class in com.commercetools.api.models.order">OrderImportDraftBuilder</a></dt>
 <dd>
 <div class="block">Include TaxedPrice information for the Order.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/order/ShippingInfoImportDraftBuilder.html#taxedPrice(com.commercetools.api.models.cart.TaxedPriceDraft)" class="member-name-link">taxedPrice(TaxedPriceDraft)</a> - Method in class com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/ShippingInfoImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ShippingInfoImportDraftBuilder</a></dt>
+<dd>
+<div class="block">Taxed price of the Shipping Method.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/common/CustomLineItemBuilder.html#taxedPrice(com.commercetools.history.models.common.TaxedItemPrice)" class="member-name-link">taxedPrice(TaxedItemPrice)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/CustomLineItemBuilder.html" title="class in com.commercetools.history.models.common">CustomLineItemBuilder</a></dt>
 <dd>
@@ -1117,9 +1137,21 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Not set until the shipping address is set.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/order/CustomLineItemImportDraftBuilder.html#taxedPrice(java.util.function.Function)" class="member-name-link">taxedPrice(Function&lt;TaxedPriceDraftBuilder, TaxedPriceDraftBuilder&gt;)</a> - Method in class com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/CustomLineItemImportDraftBuilder.html" title="class in com.commercetools.api.models.order">CustomLineItemImportDraftBuilder</a></dt>
+<dd>
+<div class="block">Taxed price of the Custom Line Item.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/order/LineItemImportDraftBuilder.html#taxedPrice(java.util.function.Function)" class="member-name-link">taxedPrice(Function&lt;TaxedPriceDraftBuilder, TaxedPriceDraftBuilder&gt;)</a> - Method in class com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/LineItemImportDraftBuilder.html" title="class in com.commercetools.api.models.order">LineItemImportDraftBuilder</a></dt>
+<dd>
+<div class="block">Taxed price of the Line Item.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/order/OrderImportDraftBuilder.html#taxedPrice(java.util.function.Function)" class="member-name-link">taxedPrice(Function&lt;TaxedPriceDraftBuilder, TaxedPriceDraftBuilder&gt;)</a> - Method in class com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/OrderImportDraftBuilder.html" title="class in com.commercetools.api.models.order">OrderImportDraftBuilder</a></dt>
 <dd>
 <div class="block">Include TaxedPrice information for the Order.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/order/ShippingInfoImportDraftBuilder.html#taxedPrice(java.util.function.Function)" class="member-name-link">taxedPrice(Function&lt;TaxedPriceDraftBuilder, TaxedPriceDraftBuilder&gt;)</a> - Method in class com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/ShippingInfoImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ShippingInfoImportDraftBuilder</a></dt>
+<dd>
+<div class="block">Taxed price of the Shipping Method.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/common/CustomLineItemBuilder.html#taxedPrice(java.util.function.Function)" class="member-name-link">taxedPrice(Function&lt;TaxedItemPriceBuilder, TaxedItemPriceBuilder&gt;)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/CustomLineItemBuilder.html" title="class in com.commercetools.history.models.common">CustomLineItemBuilder</a></dt>
 <dd>
@@ -1521,11 +1553,11 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/order/CustomLineItemImportDraftBuilder.html#taxRate(com.commercetools.api.models.tax_category.TaxRate)" class="member-name-link">taxRate(TaxRate)</a> - Method in class com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/CustomLineItemImportDraftBuilder.html" title="class in com.commercetools.api.models.order">CustomLineItemImportDraftBuilder</a></dt>
 <dd>
-<div class="block">The tax rate used to calculate the <code>taxedPrice</code> of the Order.</div>
+<div class="block">The tax rate used to calculate the <code>taxedPrice</code> of the Custom Line Item if <code>taxedPrice</code> is not provided.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/order/LineItemImportDraftBuilder.html#taxRate(com.commercetools.api.models.tax_category.TaxRate)" class="member-name-link">taxRate(TaxRate)</a> - Method in class com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/LineItemImportDraftBuilder.html" title="class in com.commercetools.api.models.order">LineItemImportDraftBuilder</a></dt>
 <dd>
-<div class="block">The tax rate used to calculate the <code>taxedPrice</code> of the Order.</div>
+<div class="block">The tax rate used to calculate the <code>taxedPrice</code> of the Line Item if <code>taxedPrice</code> is not provided.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/order/ShippingInfoImportDraftBuilder.html#taxRate(com.commercetools.api.models.tax_category.TaxRate)" class="member-name-link">taxRate(TaxRate)</a> - Method in class com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/ShippingInfoImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ShippingInfoImportDraftBuilder</a></dt>
 <dd>
@@ -1601,11 +1633,11 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/order/CustomLineItemImportDraftBuilder.html#taxRate(java.util.function.Function)" class="member-name-link">taxRate(Function&lt;TaxRateBuilder, TaxRateBuilder&gt;)</a> - Method in class com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/CustomLineItemImportDraftBuilder.html" title="class in com.commercetools.api.models.order">CustomLineItemImportDraftBuilder</a></dt>
 <dd>
-<div class="block">The tax rate used to calculate the <code>taxedPrice</code> of the Order.</div>
+<div class="block">The tax rate used to calculate the <code>taxedPrice</code> of the Custom Line Item if <code>taxedPrice</code> is not provided.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/order/LineItemImportDraftBuilder.html#taxRate(java.util.function.Function)" class="member-name-link">taxRate(Function&lt;TaxRateBuilder, TaxRateBuilder&gt;)</a> - Method in class com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/LineItemImportDraftBuilder.html" title="class in com.commercetools.api.models.order">LineItemImportDraftBuilder</a></dt>
 <dd>
-<div class="block">The tax rate used to calculate the <code>taxedPrice</code> of the Order.</div>
+<div class="block">The tax rate used to calculate the <code>taxedPrice</code> of the Line Item if <code>taxedPrice</code> is not provided.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/order/ShippingInfoImportDraftBuilder.html#taxRate(java.util.function.Function)" class="member-name-link">taxRate(Function&lt;TaxRateBuilder, TaxRateBuilder&gt;)</a> - Method in class com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/ShippingInfoImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ShippingInfoImportDraftBuilder</a></dt>
 <dd>
@@ -1785,6 +1817,26 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Maps to <code>Order.taxRoundingMode</code>.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/cart/ExternalTaxRateDraftBuilder.html#taxRoundingTarget(com.commercetools.api.models.tax_category.TaxRoundingTarget)" class="member-name-link">taxRoundingTarget(TaxRoundingTarget)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/ExternalTaxRateDraftBuilder.html" title="class in com.commercetools.api.models.cart">ExternalTaxRateDraftBuilder</a></dt>
+<dd>
+<div class="block">Determines whether the <code>taxRoundingMode</code> of the Cart or Order is applied to the net price or the tax amount when <code>includedInPrice</code> is <code>true</code>.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/tax_category/TaxRateBuilder.html#taxRoundingTarget(com.commercetools.api.models.tax_category.TaxRoundingTarget)" class="member-name-link">taxRoundingTarget(TaxRoundingTarget)</a> - Method in class com.commercetools.api.models.tax_category.<a href="../com/commercetools/api/models/tax_category/TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a></dt>
+<dd>
+<div class="block">Determines which of the net price and the tax amount the <code>taxRoundingMode</code> of the Cart or Order is applied to, when this TaxRate is included in the price.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/tax_category/TaxRateDraftBuilder.html#taxRoundingTarget(com.commercetools.api.models.tax_category.TaxRoundingTarget)" class="member-name-link">taxRoundingTarget(TaxRoundingTarget)</a> - Method in class com.commercetools.api.models.tax_category.<a href="../com/commercetools/api/models/tax_category/TaxRateDraftBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateDraftBuilder</a></dt>
+<dd>
+<div class="block">Determines whether the <code>taxRoundingMode</code> of the Cart or Order is applied to the net price or the tax amount when this TaxRate is included in the price.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/tax_category/TaxRoundingTarget.html" class="type-name-link" title="interface in com.commercetools.api.models.tax_category">TaxRoundingTarget</a> - Interface in <a href="../com/commercetools/api/models/tax_category/package-summary.html">com.commercetools.api.models.tax_category</a></dt>
+<dd>
+<div class="block">For a <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxRate" rel="nofollow">TaxRate</a> that is included in the price, this value determines which of the two derived amounts the <a href="https://docs.commercetools.com/apis/ctp:api:type:RoundingMode" rel="nofollow">RoundingMode</a> set by <code>taxRoundingMode</code> is applied to.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/tax_category/TaxRoundingTarget.TaxRoundingTargetEnum.html" class="type-name-link" title="enum class in com.commercetools.api.models.tax_category">TaxRoundingTarget.TaxRoundingTargetEnum</a> - Enum Class in <a href="../com/commercetools/api/models/tax_category/package-summary.html">com.commercetools.api.models.tax_category</a></dt>
+<dd>
+<div class="block">possible values of TaxRoundingTarget</div>
+</dd>
 <dt><a href="../io/vrap/rmf/base/client/http/TelemetryMiddleware.html" class="type-name-link" title="interface in io.vrap.rmf.base.client.http">TelemetryMiddleware</a> - Interface in <a href="../io/vrap/rmf/base/client/http/package-summary.html">io.vrap.rmf.base.client.http</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/subscription/SubscriptionHealthStatus.SubscriptionHealthStatusEnum.html#TEMPORARY_ERROR" class="member-name-link">TEMPORARY_ERROR</a> - Enum constant in enum class com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/SubscriptionHealthStatus.SubscriptionHealthStatusEnum.html" title="enum class in com.commercetools.api.models.subscription">SubscriptionHealthStatus.SubscriptionHealthStatusEnum</a></dt>
@@ -1797,27 +1849,23 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/FacetTermBuilder.html#term(java.lang.Object)" class="member-name-link">term(Object)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/FacetTermBuilder.html" title="class in com.commercetools.api.models.product">FacetTermBuilder</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">Value for the field specified in the <span>term facet expression</span> for which at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> could be found.</div>
 </dd>
 <dt><a href="../com/commercetools/api/search/products/TermFacetExpression.html" class="type-name-link" title="class in com.commercetools.api.search.products">TermFacetExpression</a>&lt;<a href="../com/commercetools/api/search/products/TermFacetExpression.html" title="type parameter in TermFacetExpression">T</a>&gt; - Class in <a href="../com/commercetools/api/search/products/package-summary.html">com.commercetools.api.search.products</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/product/TermFacetResult.html" class="type-name-link" title="interface in com.commercetools.api.models.product">TermFacetResult</a> - Interface in <a href="../com/commercetools/api/models/product/package-summary.html">com.commercetools.api.models.product</a></dt>
 <dd>
-<div class="block">TermFacetResult
-
- 
- Example to create an instance using the builder pattern
- </div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/TermFacetResultBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a> - Class in <a href="../com/commercetools/api/models/product/package-summary.html">com.commercetools.api.models.product</a></dt>
 <dd>
-<div class="block">TermFacetResultBuilder
- 
- Example to create an instance using the builder pattern
- </div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/TermFacetResultBuilder.html#%3Cinit%3E()" class="member-name-link">TermFacetResultBuilder()</a> - Constructor for class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/product/TermFacetResultType.html" class="type-name-link" title="interface in com.commercetools.api.models.product">TermFacetResultType</a> - Interface in <a href="../com/commercetools/api/models/product/package-summary.html">com.commercetools.api.models.product</a></dt>
 <dd>
 <div class="block">Data type to which the facet is applied.</div>
@@ -1844,10 +1892,12 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/product/TermFacetResultBuilder.html#terms(com.commercetools.api.models.product.FacetTerm...)" class="member-name-link">terms(FacetTerm...)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">Values for the field specified in <span>term facet expression</span> for which at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> could be found.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/TermFacetResultBuilder.html#terms(java.util.List)" class="member-name-link">terms(List&lt;FacetTerm&gt;)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">Values for the field specified in <span>term facet expression</span> for which at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> could be found.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/FacetTypes.FacetTypesEnum.html#TERMS" class="member-name-link">TERMS</a> - Enum constant in enum class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/FacetTypes.FacetTypesEnum.html" title="enum class in com.commercetools.api.models.product">FacetTypes.FacetTypesEnum</a></dt>
@@ -1858,20 +1908,41 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/product/TermFacetResult.html#TERMS" class="member-name-link">TERMS</a> - Static variable in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/TermFacetResult.html" title="interface in com.commercetools.api.models.product">TermFacetResult</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">discriminator value for TermFacetResult</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/FacetResult.html#termsBuilder()" class="member-name-link">termsBuilder()</a> - Static method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/FacetResult.html" title="interface in com.commercetools.api.models.product">FacetResult</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">builder for terms subtype</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/FacetResultBuilder.html#termsBuilder()" class="member-name-link">termsBuilder()</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/FacetResultBuilder.html" title="class in com.commercetools.api.models.product">FacetResultBuilder</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/message/StoreTermsOfServiceUrlSetMessageBuilder.html#termsOfServiceUrl(java.lang.String)" class="member-name-link">termsOfServiceUrl(String)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreTermsOfServiceUrlSetMessageBuilder.html" title="class in com.commercetools.api.models.message">StoreTermsOfServiceUrlSetMessageBuilder</a></dt>
+<dd>
+<div class="block">The <code>termsOfServiceUrl</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetTermsOfServiceUrlAction" rel="nofollow">Set Terms Of Service Url</a> update action.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StoreTermsOfServiceUrlSetMessagePayloadBuilder.html#termsOfServiceUrl(java.lang.String)" class="member-name-link">termsOfServiceUrl(String)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreTermsOfServiceUrlSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StoreTermsOfServiceUrlSetMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">The <code>termsOfServiceUrl</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetTermsOfServiceUrlAction" rel="nofollow">Set Terms Of Service Url</a> update action.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/store/StorefrontBuilder.html#termsOfServiceUrl(java.lang.String)" class="member-name-link">termsOfServiceUrl(String)</a> - Method in class com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StorefrontBuilder.html" title="class in com.commercetools.api.models.store">StorefrontBuilder</a></dt>
+<dd>
+<div class="block">Absolute <code>https</code> URL of the storefront's terms of service page.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/store/StoreSetTermsOfServiceUrlActionBuilder.html#termsOfServiceUrl(java.lang.String)" class="member-name-link">termsOfServiceUrl(String)</a> - Method in class com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreSetTermsOfServiceUrlActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetTermsOfServiceUrlActionBuilder</a></dt>
+<dd>
+<div class="block">Value to set.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/product/SearchKeywordBuilder.html#text(java.lang.String)" class="member-name-link">text(String)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/SearchKeywordBuilder.html" title="class in com.commercetools.api.models.product">SearchKeywordBuilder</a></dt>
 <dd>
 <div class="block">Text to return in the <a href="https://docs.commercetools.com/apis/ctp:api:type:SuggestionResult" rel="nofollow">SuggestionResult</a>.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/SuggestionBuilder.html#text(java.lang.String)" class="member-name-link">text(String)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/SuggestionBuilder.html" title="class in com.commercetools.api.models.product">SuggestionBuilder</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">The suggested text.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/review/ReviewBuilder.html#text(java.lang.String)" class="member-name-link">text(String)</a> - Method in class com.commercetools.api.models.review.<a href="../com/commercetools/api/models/review/ReviewBuilder.html" title="class in com.commercetools.api.models.review">ReviewBuilder</a></dt>
@@ -2242,6 +2313,18 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/productvariants/AttributeBuilder.html#textSetBuilder()" class="member-name-link">textSetBuilder()</a> - Method in class com.commercetools.importapi.models.productvariants.<a href="../com/commercetools/importapi/models/productvariants/AttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">AttributeBuilder</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesCartSuccessBuilder.html#threadId(java.lang.String)" class="member-name-link">threadId(String)</a> - Method in class com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesCartSuccessBuilder.html" title="class in com.commercetools.api.models.agent">AgentResponsesCartSuccessBuilder</a></dt>
+<dd>
+<div class="block">Identifier of the workflow run that produced this response.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesErrorResponseBuilder.html#threadId(java.lang.String)" class="member-name-link">threadId(String)</a> - Method in class com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesErrorResponseBuilder.html" title="class in com.commercetools.api.models.agent">AgentResponsesErrorResponseBuilder</a></dt>
+<dd>
+<div class="block">Identifier of the workflow run that raised the error.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesQuoteRequestSuccessBuilder.html#threadId(java.lang.String)" class="member-name-link">threadId(String)</a> - Method in class com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesQuoteRequestSuccessBuilder.html" title="class in com.commercetools.api.models.agent">AgentResponsesQuoteRequestSuccessBuilder</a></dt>
+<dd>
+<div class="block">Identifier of the workflow run that produced this response.</div>
+</dd>
 <dt><a href="../io/vrap/rmf/base/client/utils/ThreadUtils.html" class="type-name-link" title="class in io.vrap.rmf.base.client.utils">ThreadUtils</a> - Class in <a href="../io/vrap/rmf/base/client/utils/package-summary.html">io.vrap.rmf.base.client.utils</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../io/vrap/rmf/base/client/utils/ThreadUtils.html#%3Cinit%3E()" class="member-name-link">ThreadUtils()</a> - Constructor for class io.vrap.rmf.base.client.utils.<a href="../io/vrap/rmf/base/client/utils/ThreadUtils.html" title="class in io.vrap.rmf.base.client.utils">ThreadUtils</a></dt>
@@ -2766,6 +2849,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/product/FacetRangeBuilder.html#to(java.lang.Double)" class="member-name-link">to(Double)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/FacetRangeBuilder.html" title="class in com.commercetools.api.models.product">FacetRangeBuilder</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">The range's upper endpoint.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_search/ProductSearchFacetRangesFacetRangeBuilder.html#to(java.lang.Object)" class="member-name-link">to(Object)</a> - Method in class com.commercetools.api.models.product_search.<a href="../com/commercetools/api/models/product_search/ProductSearchFacetRangesFacetRangeBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchFacetRangesFacetRangeBuilder</a></dt>
@@ -2960,6 +3044,119 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../io/vrap/rmf/base/client/http/HttpStatusCode.html#TOO_MANY_REQUESTS_429" class="member-name-link">TOO_MANY_REQUESTS_429</a> - Static variable in class io.vrap.rmf.base.client.http.<a href="../io/vrap/rmf/base/client/http/HttpStatusCode.html" title="class in io.vrap.rmf.base.client.http">HttpStatusCode</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerAddToolActionBuilder.html#tool(com.commercetools.api.models.mcp_server.McpServerTool)" class="member-name-link">tool(McpServerTool)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerAddToolActionBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerAddToolActionBuilder</a></dt>
+<dd>
+<div class="block">Name of the tool to add, such as <code>read_products</code> or <code>create_orders</code>.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerRemoveToolActionBuilder.html#tool(com.commercetools.api.models.mcp_server.McpServerTool)" class="member-name-link">tool(McpServerTool)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerRemoveToolActionBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerRemoveToolActionBuilder</a></dt>
+<dd>
+<div class="block">Name of the tool to remove, such as <code>read_products</code> or <code>create_orders</code>.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/RemoveToolCustomizationTargetBuilder.html#tool(com.commercetools.api.models.mcp_server.McpServerTool)" class="member-name-link">tool(McpServerTool)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/RemoveToolCustomizationTargetBuilder.html" title="class in com.commercetools.api.models.mcp_server">RemoveToolCustomizationTargetBuilder</a></dt>
+<dd>
+<div class="block">Name of the tool whose customization is removed.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/ToolCustomizationBuilder.html#tool(com.commercetools.api.models.mcp_server.McpServerTool)" class="member-name-link">tool(McpServerTool)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/ToolCustomizationBuilder.html" title="class in com.commercetools.api.models.mcp_server">ToolCustomizationBuilder</a></dt>
+<dd>
+<div class="block">Name of the tool to customize, such as <code>read_products</code> or <code>create_orders</code>.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerRemoveToolCustomizationActionBuilder.html#toolCustomization(com.commercetools.api.models.mcp_server.RemoveToolCustomizationTarget)" class="member-name-link">toolCustomization(RemoveToolCustomizationTarget)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerRemoveToolCustomizationActionBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerRemoveToolCustomizationActionBuilder</a></dt>
+<dd>
+<div class="block">Identifies the tool customization to remove by its tool name.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerAddToolCustomizationActionBuilder.html#toolCustomization(com.commercetools.api.models.mcp_server.ToolCustomization)" class="member-name-link">toolCustomization(ToolCustomization)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerAddToolCustomizationActionBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerAddToolCustomizationActionBuilder</a></dt>
+<dd>
+<div class="block">Tool customization to add.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerRemoveToolCustomizationActionBuilder.html#toolCustomization(java.util.function.Function)" class="member-name-link">toolCustomization(Function&lt;RemoveToolCustomizationTargetBuilder, RemoveToolCustomizationTargetBuilder&gt;)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerRemoveToolCustomizationActionBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerRemoveToolCustomizationActionBuilder</a></dt>
+<dd>
+<div class="block">Identifies the tool customization to remove by its tool name.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerAddToolCustomizationActionBuilder.html#toolCustomization(java.util.function.Function)" class="member-name-link">toolCustomization(Function&lt;ToolCustomizationBuilder, ToolCustomizationBuilder&gt;)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerAddToolCustomizationActionBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerAddToolCustomizationActionBuilder</a></dt>
+<dd>
+<div class="block">Tool customization to add.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/ToolCustomization.html" class="type-name-link" title="interface in com.commercetools.api.models.mcp_server">ToolCustomization</a> - Interface in <a href="../com/commercetools/api/models/mcp_server/package-summary.html">com.commercetools.api.models.mcp_server</a></dt>
+<dd>
+<div class="block">Customization applied to a single tool at <code>tools/list</code> and <code>tools/call</code> time.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/ToolCustomizationBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.mcp_server">ToolCustomizationBuilder</a> - Class in <a href="../com/commercetools/api/models/mcp_server/package-summary.html">com.commercetools.api.models.mcp_server</a></dt>
+<dd>
+<div class="block">ToolCustomizationBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/ToolCustomizationBuilder.html#%3Cinit%3E()" class="member-name-link">ToolCustomizationBuilder()</a> - Constructor for class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/ToolCustomizationBuilder.html" title="class in com.commercetools.api.models.mcp_server">ToolCustomizationBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigBuilder.html#toolCustomizations(com.commercetools.api.models.mcp_server.ToolCustomization...)" class="member-name-link">toolCustomizations(ToolCustomization...)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigBuilder.html" title="class in com.commercetools.api.models.mcp_server">CommerceMcpServerConfigBuilder</a></dt>
+<dd>
+<div class="block">Per-tool customizations applied at <code>tools/list</code> and <code>tools/call</code> time, such as overriding a tool's description or constraining its parameters.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigDraftBuilder.html#toolCustomizations(com.commercetools.api.models.mcp_server.ToolCustomization...)" class="member-name-link">toolCustomizations(ToolCustomization...)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigDraftBuilder.html" title="class in com.commercetools.api.models.mcp_server">CommerceMcpServerConfigDraftBuilder</a></dt>
+<dd>
+<div class="block">Per-tool customizations applied at <code>tools/list</code> and <code>tools/call</code> time, such as overriding a tool's description or constraining its parameters.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerSetToolCustomizationsActionBuilder.html#toolCustomizations(com.commercetools.api.models.mcp_server.ToolCustomization...)" class="member-name-link">toolCustomizations(ToolCustomization...)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerSetToolCustomizationsActionBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerSetToolCustomizationsActionBuilder</a></dt>
+<dd>
+<div class="block">New list of tool customizations.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigBuilder.html#toolCustomizations(java.util.List)" class="member-name-link">toolCustomizations(List&lt;ToolCustomization&gt;)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigBuilder.html" title="class in com.commercetools.api.models.mcp_server">CommerceMcpServerConfigBuilder</a></dt>
+<dd>
+<div class="block">Per-tool customizations applied at <code>tools/list</code> and <code>tools/call</code> time, such as overriding a tool's description or constraining its parameters.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigDraftBuilder.html#toolCustomizations(java.util.List)" class="member-name-link">toolCustomizations(List&lt;ToolCustomization&gt;)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigDraftBuilder.html" title="class in com.commercetools.api.models.mcp_server">CommerceMcpServerConfigDraftBuilder</a></dt>
+<dd>
+<div class="block">Per-tool customizations applied at <code>tools/list</code> and <code>tools/call</code> time, such as overriding a tool's description or constraining its parameters.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerSetToolCustomizationsActionBuilder.html#toolCustomizations(java.util.List)" class="member-name-link">toolCustomizations(List&lt;ToolCustomization&gt;)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerSetToolCustomizationsActionBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerSetToolCustomizationsActionBuilder</a></dt>
+<dd>
+<div class="block">New list of tool customizations.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigBuilder.html#toolOutputFormatting(com.commercetools.api.models.mcp_server.McpServerToolOutputFormatting)" class="member-name-link">toolOutputFormatting(McpServerToolOutputFormatting)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigBuilder.html" title="class in com.commercetools.api.models.mcp_server">CommerceMcpServerConfigBuilder</a></dt>
+<dd>
+<div class="block">Output formatting applied to tool responses.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigDraftBuilder.html#toolOutputFormatting(com.commercetools.api.models.mcp_server.McpServerToolOutputFormatting)" class="member-name-link">toolOutputFormatting(McpServerToolOutputFormatting)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigDraftBuilder.html" title="class in com.commercetools.api.models.mcp_server">CommerceMcpServerConfigDraftBuilder</a></dt>
+<dd>
+<div class="block">Output formatting applied to tool responses.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerSetToolOutputFormattingActionBuilder.html#toolOutputFormatting(com.commercetools.api.models.mcp_server.McpServerToolOutputFormatting)" class="member-name-link">toolOutputFormatting(McpServerToolOutputFormatting)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerSetToolOutputFormattingActionBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerSetToolOutputFormattingActionBuilder</a></dt>
+<dd>
+<div class="block">Value to set.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigBuilder.html#tools(com.commercetools.api.models.mcp_server.McpServerTool...)" class="member-name-link">tools(McpServerTool...)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigBuilder.html" title="class in com.commercetools.api.models.mcp_server">CommerceMcpServerConfigBuilder</a></dt>
+<dd>
+<div class="block">List of tools enabled for this MCP Server.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigDraftBuilder.html#tools(com.commercetools.api.models.mcp_server.McpServerTool...)" class="member-name-link">tools(McpServerTool...)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigDraftBuilder.html" title="class in com.commercetools.api.models.mcp_server">CommerceMcpServerConfigDraftBuilder</a></dt>
+<dd>
+<div class="block">List of tools to enable for this MCP Server.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerSetToolsActionBuilder.html#tools(com.commercetools.api.models.mcp_server.McpServerTool...)" class="member-name-link">tools(McpServerTool...)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerSetToolsActionBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerSetToolsActionBuilder</a></dt>
+<dd>
+<div class="block">New list of tools to set.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerTypeBuilder.html#tools(com.commercetools.api.models.mcp_server.McpServerTypeTool...)" class="member-name-link">tools(McpServerTypeTool...)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerTypeBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerTypeBuilder</a></dt>
+<dd>
+<div class="block">Tools available for this MCP Server type and major version.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigBuilder.html#tools(java.util.List)" class="member-name-link">tools(List&lt;McpServerTool&gt;)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigBuilder.html" title="class in com.commercetools.api.models.mcp_server">CommerceMcpServerConfigBuilder</a></dt>
+<dd>
+<div class="block">List of tools enabled for this MCP Server.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigDraftBuilder.html#tools(java.util.List)" class="member-name-link">tools(List&lt;McpServerTool&gt;)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigDraftBuilder.html" title="class in com.commercetools.api.models.mcp_server">CommerceMcpServerConfigDraftBuilder</a></dt>
+<dd>
+<div class="block">List of tools to enable for this MCP Server.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerSetToolsActionBuilder.html#tools(java.util.List)" class="member-name-link">tools(List&lt;McpServerTool&gt;)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerSetToolsActionBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerSetToolsActionBuilder</a></dt>
+<dd>
+<div class="block">New list of tools to set.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerTypeBuilder.html#tools(java.util.List)" class="member-name-link">tools(List&lt;McpServerTypeTool&gt;)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerTypeBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerTypeBuilder</a></dt>
+<dd>
+<div class="block">Tools available for this MCP Server type and major version.</div>
+</dd>
 <dt><a href="../com/commercetools/history/models/error/GraphQLErrorObject.html#tooManyRequestsBuilder()" class="member-name-link">tooManyRequestsBuilder()</a> - Static method in interface com.commercetools.history.models.error.<a href="../com/commercetools/history/models/error/GraphQLErrorObject.html" title="interface in com.commercetools.history.models.error">GraphQLErrorObject</a></dt>
 <dd>
 <div class="block">builder for tooManyRequests subtype</div>
@@ -3359,10 +3556,17 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/FacetRangeBuilder.html#toStr(java.lang.String)" class="member-name-link">toStr(String)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/FacetRangeBuilder.html" title="class in com.commercetools.api.models.product">FacetRangeBuilder</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">The range's upper endpoint.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/InternalUtils.html#toStream(java.lang.Iterable)" class="member-name-link">toStream(Iterable&lt;T&gt;)</a> - Static method in class com.commercetools.api.models.<a href="../com/commercetools/api/models/InternalUtils.html" title="class in com.commercetools.api.models">InternalUtils</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesOutputType.AgentResponsesOutputTypeEnum.html#toString()" class="member-name-link">toString()</a> - Method in enum class com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesOutputType.AgentResponsesOutputTypeEnum.html" title="enum class in com.commercetools.api.models.agent">AgentResponsesOutputType.AgentResponsesOutputTypeEnum</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesOutputType.html#toString()" class="member-name-link">toString()</a> - Method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesOutputType.html" title="interface in com.commercetools.api.models.agent">AgentResponsesOutputType</a></dt>
+<dd>
+<div class="block">convert value to string</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/approval_flow/ApprovalFlowStatus.ApprovalFlowStatusEnum.html#toString()" class="member-name-link">toString()</a> - Method in enum class com.commercetools.api.models.approval_flow.<a href="../com/commercetools/api/models/approval_flow/ApprovalFlowStatus.ApprovalFlowStatusEnum.html" title="enum class in com.commercetools.api.models.approval_flow">ApprovalFlowStatus.ApprovalFlowStatusEnum</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/approval_flow/ApprovalFlowStatus.html#toString()" class="member-name-link">toString()</a> - Method in interface com.commercetools.api.models.approval_flow.<a href="../com/commercetools/api/models/approval_flow/ApprovalFlowStatus.html" title="interface in com.commercetools.api.models.approval_flow">ApprovalFlowStatus</a></dt>
@@ -3582,6 +3786,30 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/extension/ExtensionResourceTypeId.ExtensionResourceTypeIdEnum.html#toString()" class="member-name-link">toString()</a> - Method in enum class com.commercetools.api.models.extension.<a href="../com/commercetools/api/models/extension/ExtensionResourceTypeId.ExtensionResourceTypeIdEnum.html" title="enum class in com.commercetools.api.models.extension">ExtensionResourceTypeId.ExtensionResourceTypeIdEnum</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/extension/ExtensionResourceTypeId.html#toString()" class="member-name-link">toString()</a> - Method in interface com.commercetools.api.models.extension.<a href="../com/commercetools/api/models/extension/ExtensionResourceTypeId.html" title="interface in com.commercetools.api.models.extension">ExtensionResourceTypeId</a></dt>
+<dd>
+<div class="block">convert value to string</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerAuthenticationMode.McpServerAuthenticationModeEnum.html#toString()" class="member-name-link">toString()</a> - Method in enum class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerAuthenticationMode.McpServerAuthenticationModeEnum.html" title="enum class in com.commercetools.api.models.mcp_server">McpServerAuthenticationMode.McpServerAuthenticationModeEnum</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerAuthenticationMode.html#toString()" class="member-name-link">toString()</a> - Method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerAuthenticationMode.html" title="interface in com.commercetools.api.models.mcp_server">McpServerAuthenticationMode</a></dt>
+<dd>
+<div class="block">convert value to string</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerState.McpServerStateEnum.html#toString()" class="member-name-link">toString()</a> - Method in enum class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerState.McpServerStateEnum.html" title="enum class in com.commercetools.api.models.mcp_server">McpServerState.McpServerStateEnum</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerState.html#toString()" class="member-name-link">toString()</a> - Method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerState.html" title="interface in com.commercetools.api.models.mcp_server">McpServerState</a></dt>
+<dd>
+<div class="block">convert value to string</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerTool.McpServerToolEnum.html#toString()" class="member-name-link">toString()</a> - Method in enum class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerTool.McpServerToolEnum.html" title="enum class in com.commercetools.api.models.mcp_server">McpServerTool.McpServerToolEnum</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerTool.html#toString()" class="member-name-link">toString()</a> - Method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerTool.html" title="interface in com.commercetools.api.models.mcp_server">McpServerTool</a></dt>
+<dd>
+<div class="block">convert value to string</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerToolOutputFormatting.McpServerToolOutputFormattingEnum.html#toString()" class="member-name-link">toString()</a> - Method in enum class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerToolOutputFormatting.McpServerToolOutputFormattingEnum.html" title="enum class in com.commercetools.api.models.mcp_server">McpServerToolOutputFormatting.McpServerToolOutputFormattingEnum</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerToolOutputFormatting.html#toString()" class="member-name-link">toString()</a> - Method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerToolOutputFormatting.html" title="interface in com.commercetools.api.models.mcp_server">McpServerToolOutputFormatting</a></dt>
 <dd>
 <div class="block">convert value to string</div>
 </dd>
@@ -3918,6 +4146,12 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/subscription/SubscriptionHealthStatus.SubscriptionHealthStatusEnum.html#toString()" class="member-name-link">toString()</a> - Method in enum class com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/SubscriptionHealthStatus.SubscriptionHealthStatusEnum.html" title="enum class in com.commercetools.api.models.subscription">SubscriptionHealthStatus.SubscriptionHealthStatusEnum</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/subscription/SubscriptionHealthStatus.html#toString()" class="member-name-link">toString()</a> - Method in interface com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/SubscriptionHealthStatus.html" title="interface in com.commercetools.api.models.subscription">SubscriptionHealthStatus</a></dt>
+<dd>
+<div class="block">convert value to string</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/tax_category/TaxRoundingTarget.TaxRoundingTargetEnum.html#toString()" class="member-name-link">toString()</a> - Method in enum class com.commercetools.api.models.tax_category.<a href="../com/commercetools/api/models/tax_category/TaxRoundingTarget.TaxRoundingTargetEnum.html" title="enum class in com.commercetools.api.models.tax_category">TaxRoundingTarget.TaxRoundingTargetEnum</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/tax_category/TaxRoundingTarget.html#toString()" class="member-name-link">toString()</a> - Method in interface com.commercetools.api.models.tax_category.<a href="../com/commercetools/api/models/tax_category/TaxRoundingTarget.html" title="interface in com.commercetools.api.models.tax_category">TaxRoundingTarget</a></dt>
 <dd>
 <div class="block">convert value to string</div>
 </dd>
@@ -4461,6 +4695,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/FacetRangeBuilder.html#total(java.lang.Double)" class="member-name-link">total(Double)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/FacetRangeBuilder.html" title="class in com.commercetools.api.models.product">FacetRangeBuilder</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">Sum of all values contained in the range.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/change_history/RecordPagedQueryResponseBuilder.html#total(java.lang.Integer)" class="member-name-link">total(Integer)</a> - Method in class com.commercetools.history.models.change_history.<a href="../com/commercetools/history/models/change_history/RecordPagedQueryResponseBuilder.html" title="class in com.commercetools.history.models.change_history">RecordPagedQueryResponseBuilder</a></dt>
@@ -4547,6 +4782,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Total number of results matching the query.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerPagedQueryResponseBuilder.html#total(java.lang.Long)" class="member-name-link">total(Long)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerPagedQueryResponseBuilder</a></dt>
+<dd>
+<div class="block">Total number of results matching the query.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/me/MyPaymentPagedQueryResponseBuilder.html#total(java.lang.Long)" class="member-name-link">total(Long)</a> - Method in class com.commercetools.api.models.me.<a href="../com/commercetools/api/models/me/MyPaymentPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.me">MyPaymentPagedQueryResponseBuilder</a></dt>
 <dd>
 <div class="block">Total number of results matching the query.</div>
@@ -4617,10 +4856,12 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#total(java.lang.Long)" class="member-name-link">total(Long)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">Total number of results matching the query.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/TermFacetResultBuilder.html#total(java.lang.Long)" class="member-name-link">total(Long)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">Number of terms matching the <span>term facet expression</span>.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/quote_request/QuoteRequestPagedQueryResponseBuilder.html#total(java.lang.Long)" class="member-name-link">total(Long)</a> - Method in class com.commercetools.api.models.quote_request.<a href="../com/commercetools/api/models/quote_request/QuoteRequestPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.quote_request">QuoteRequestPagedQueryResponseBuilder</a></dt>
@@ -6255,6 +6496,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Data type of the Custom Field to define.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerTypeBuilder.html#type(java.lang.String)" class="member-name-link">type(String)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerTypeBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerTypeBuilder</a></dt>
+<dd>
+<div class="block">Identifier of the MCP Server type, such as <code>CommerceMCP</code>.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/subscription/CloudEventsPayloadBuilder.html#type(java.lang.String)" class="member-name-link">type(String)</a> - Method in class com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/CloudEventsPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">CloudEventsPayloadBuilder</a></dt>
 <dd>
 <div class="block">The <code>type</code> is namespaced with <code>com.commercetools</code>, followed by the <a href="https://docs.commercetools.com/apis/ctp:api:type:ReferenceTypeId" rel="nofollow">ReferenceTypeId</a>, the type of Subscription (either <code>message</code> or <code>change</code>), and the message or change type.</div>
@@ -7105,6 +7350,174 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/type/TypePagedQueryResponseBuilder.html#%3Cinit%3E()" class="member-name-link">TypePagedQueryResponseBuilder()</a> - Constructor for class com.commercetools.api.models.type.<a href="../com/commercetools/api/models/type/TypePagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.type">TypePagedQueryResponseBuilder</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentBusinessUnitAmbiguousError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentBusinessUnitAmbiguousError.html" title="interface in com.commercetools.api.models.agent">AgentBusinessUnitAmbiguousError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentBusinessUnitLimitExceededError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentBusinessUnitLimitExceededError.html" title="interface in com.commercetools.api.models.agent">AgentBusinessUnitLimitExceededError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentBusinessUnitUnresolvedError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentBusinessUnitUnresolvedError.html" title="interface in com.commercetools.api.models.agent">AgentBusinessUnitUnresolvedError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentExtractionFailedError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentExtractionFailedError.html" title="interface in com.commercetools.api.models.agent">AgentExtractionFailedError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentFeatureDisabledError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentFeatureDisabledError.html" title="interface in com.commercetools.api.models.agent">AgentFeatureDisabledError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentFileNotProcessedWarning.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentFileNotProcessedWarning.html" title="interface in com.commercetools.api.models.agent">AgentFileNotProcessedWarning</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentMissingCountryError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentMissingCountryError.html" title="interface in com.commercetools.api.models.agent">AgentMissingCountryError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentMissingCustomerEmailError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentMissingCustomerEmailError.html" title="interface in com.commercetools.api.models.agent">AgentMissingCustomerEmailError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentMissingEntityTypeError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentMissingEntityTypeError.html" title="interface in com.commercetools.api.models.agent">AgentMissingEntityTypeError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentNoLineItemsExtractedError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentNoLineItemsExtractedError.html" title="interface in com.commercetools.api.models.agent">AgentNoLineItemsExtractedError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentOutOfScopeError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentOutOfScopeError.html" title="interface in com.commercetools.api.models.agent">AgentOutOfScopeError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentProductSearchNotEnabledError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentProductSearchNotEnabledError.html" title="interface in com.commercetools.api.models.agent">AgentProductSearchNotEnabledError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentProductsNotFoundError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentProductsNotFoundError.html" title="interface in com.commercetools.api.models.agent">AgentProductsNotFoundError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentProductsNotFoundWarning.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentProductsNotFoundWarning.html" title="interface in com.commercetools.api.models.agent">AgentProductsNotFoundWarning</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentQuoteRequestCreationFailedError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentQuoteRequestCreationFailedError.html" title="interface in com.commercetools.api.models.agent">AgentQuoteRequestCreationFailedError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesAuthError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesAuthError.html" title="interface in com.commercetools.api.models.agent">AgentResponsesAuthError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesCartSuccess.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesCartSuccess.html" title="interface in com.commercetools.api.models.agent">AgentResponsesCartSuccess</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesErrorResponse.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesErrorResponse.html" title="interface in com.commercetools.api.models.agent">AgentResponsesErrorResponse</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesMultipartRequest.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesMultipartRequest.html" title="interface in com.commercetools.api.models.agent">AgentResponsesMultipartRequest</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesPayload.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesPayload.html" title="interface in com.commercetools.api.models.agent">AgentResponsesPayload</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesQuoteRequestSuccess.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesQuoteRequestSuccess.html" title="interface in com.commercetools.api.models.agent">AgentResponsesQuoteRequestSuccess</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesRequest.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesRequest.html" title="interface in com.commercetools.api.models.agent">AgentResponsesRequest</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesSuccess.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesSuccess.html" title="interface in com.commercetools.api.models.agent">AgentResponsesSuccess</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentStoreAmbiguousError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentStoreAmbiguousError.html" title="interface in com.commercetools.api.models.agent">AgentStoreAmbiguousError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentStoreDistributionChannelsUnsupportedError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentStoreDistributionChannelsUnsupportedError.html" title="interface in com.commercetools.api.models.agent">AgentStoreDistributionChannelsUnsupportedError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentStoreUnresolvedError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentStoreUnresolvedError.html" title="interface in com.commercetools.api.models.agent">AgentStoreUnresolvedError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentBusinessUnitAmbiguousError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentBusinessUnitAmbiguousError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentBusinessUnitAmbiguousError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentBusinessUnitLimitExceededError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentBusinessUnitLimitExceededError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentBusinessUnitLimitExceededError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentBusinessUnitUnresolvedError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentBusinessUnitUnresolvedError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentBusinessUnitUnresolvedError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentExtractionFailedError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentExtractionFailedError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentExtractionFailedError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentFeatureDisabledError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentFeatureDisabledError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentFeatureDisabledError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentMissingCountryError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentMissingCountryError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentMissingCountryError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentMissingCustomerEmailError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentMissingCustomerEmailError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentMissingCustomerEmailError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentMissingEntityTypeError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentMissingEntityTypeError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentMissingEntityTypeError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentNoLineItemsExtractedError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentNoLineItemsExtractedError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentNoLineItemsExtractedError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentOutOfScopeError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentOutOfScopeError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentOutOfScopeError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentProductSearchNotEnabledError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentProductSearchNotEnabledError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentProductSearchNotEnabledError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentProductsNotFoundError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentProductsNotFoundError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentProductsNotFoundError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentQuoteRequestCreationFailedError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentQuoteRequestCreationFailedError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentQuoteRequestCreationFailedError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentStoreAmbiguousError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentStoreAmbiguousError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentStoreAmbiguousError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentStoreDistributionChannelsUnsupportedError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentStoreDistributionChannelsUnsupportedError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentStoreDistributionChannelsUnsupportedError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentStoreUnresolvedError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentStoreUnresolvedError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentStoreUnresolvedError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/api_client/ApiClient.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.api_client.<a href="../com/commercetools/api/models/api_client/ApiClient.html" title="interface in com.commercetools.api.models.api_client">ApiClient</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
@@ -8005,6 +8418,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/cart/CartSetDirectDiscountsIgnoreCartDiscountsAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/CartSetDirectDiscountsIgnoreCartDiscountsAction.html" title="interface in com.commercetools.api.models.cart">CartSetDirectDiscountsIgnoreCartDiscountsAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/cart/CartSetEstimatedDeliveryAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/CartSetEstimatedDeliveryAction.html" title="interface in com.commercetools.api.models.cart">CartSetEstimatedDeliveryAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/cart/CartSetItemShippingAddressCustomFieldAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/CartSetItemShippingAddressCustomFieldAction.html" title="interface in com.commercetools.api.models.cart">CartSetItemShippingAddressCustomFieldAction</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
@@ -8190,6 +8611,10 @@ loadScripts(document, 'script');</script>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/cart/DiscountTypeCombination.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/DiscountTypeCombination.html" title="interface in com.commercetools.api.models.cart">DiscountTypeCombination</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/cart/EstimatedDelivery.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/EstimatedDelivery.html" title="interface in com.commercetools.api.models.cart">EstimatedDelivery</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
@@ -9115,10 +9540,6 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
-<dt><a href="../com/commercetools/api/models/error/CircularDependencyError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/CircularDependencyError.html" title="interface in com.commercetools.api.models.error">CircularDependencyError</a></dt>
-<dd>
-<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
-</dd>
 <dt><a href="../com/commercetools/api/models/error/ConcurrentModificationError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/ConcurrentModificationError.html" title="interface in com.commercetools.api.models.error">ConcurrentModificationError</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
@@ -9227,6 +9648,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/error/ExtensionCircularDependencyError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/ExtensionCircularDependencyError.html" title="interface in com.commercetools.api.models.error">ExtensionCircularDependencyError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/error/ExtensionDependencyExistsError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/ExtensionDependencyExistsError.html" title="interface in com.commercetools.api.models.error">ExtensionDependencyExistsError</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
@@ -9284,10 +9709,6 @@ loadScripts(document, 'script');</script>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/error/GraphQLBulkOperationMaxItemsExceededError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLBulkOperationMaxItemsExceededError.html" title="interface in com.commercetools.api.models.error">GraphQLBulkOperationMaxItemsExceededError</a></dt>
-<dd>
-<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
-</dd>
-<dt><a href="../com/commercetools/api/models/error/GraphQLCircularDependencyError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLCircularDependencyError.html" title="interface in com.commercetools.api.models.error">GraphQLCircularDependencyError</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
@@ -9388,6 +9809,10 @@ loadScripts(document, 'script');</script>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/error/GraphQLExtensionChainTooWideError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLExtensionChainTooWideError.html" title="interface in com.commercetools.api.models.error">GraphQLExtensionChainTooWideError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/error/GraphQLExtensionCircularDependencyError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLExtensionCircularDependencyError.html" title="interface in com.commercetools.api.models.error">GraphQLExtensionCircularDependencyError</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
@@ -9496,10 +9921,6 @@ loadScripts(document, 'script');</script>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/error/GraphQLMaxStoreReferencesReachedError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLMaxStoreReferencesReachedError.html" title="interface in com.commercetools.api.models.error">GraphQLMaxStoreReferencesReachedError</a></dt>
-<dd>
-<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
-</dd>
-<dt><a href="../com/commercetools/api/models/error/GraphQLMissingDependencyError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLMissingDependencyError.html" title="interface in com.commercetools.api.models.error">GraphQLMissingDependencyError</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
@@ -9627,6 +10048,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/error/GraphQLUnauthorizedError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLUnauthorizedError.html" title="interface in com.commercetools.api.models.error">GraphQLUnauthorizedError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/error/GraphQLValidityLockConflictError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLValidityLockConflictError.html" title="interface in com.commercetools.api.models.error">GraphQLValidityLockConflictError</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
@@ -9708,10 +10133,6 @@ loadScripts(document, 'script');</script>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/error/MaxStoreReferencesReachedError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/MaxStoreReferencesReachedError.html" title="interface in com.commercetools.api.models.error">MaxStoreReferencesReachedError</a></dt>
-<dd>
-<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
-</dd>
-<dt><a href="../com/commercetools/api/models/error/MissingDependencyError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/MissingDependencyError.html" title="interface in com.commercetools.api.models.error">MissingDependencyError</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
@@ -9836,6 +10257,10 @@ loadScripts(document, 'script');</script>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/error/SyntaxErrorError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/SyntaxErrorError.html" title="interface in com.commercetools.api.models.error">SyntaxErrorError</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/error/UnauthorizedError.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/UnauthorizedError.html" title="interface in com.commercetools.api.models.error">UnauthorizedError</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
@@ -10148,6 +10573,118 @@ loadScripts(document, 'script');</script>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/inventory/InventoryPagedQueryResponse.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.inventory.<a href="../com/commercetools/api/models/inventory/InventoryPagedQueryResponse.html" title="interface in com.commercetools.api.models.inventory">InventoryPagedQueryResponse</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfig.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfig.html" title="interface in com.commercetools.api.models.mcp_server">CommerceMcpServerConfig</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigDraft.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigDraft.html" title="interface in com.commercetools.api.models.mcp_server">CommerceMcpServerConfigDraft</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServer.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServer.html" title="interface in com.commercetools.api.models.mcp_server">McpServer</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerAddToolAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerAddToolAction.html" title="interface in com.commercetools.api.models.mcp_server">McpServerAddToolAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerAddToolCustomizationAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerAddToolCustomizationAction.html" title="interface in com.commercetools.api.models.mcp_server">McpServerAddToolCustomizationAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerConfig.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerConfig.html" title="interface in com.commercetools.api.models.mcp_server">McpServerConfig</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerConfigDraft.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerConfigDraft.html" title="interface in com.commercetools.api.models.mcp_server">McpServerConfigDraft</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerDraft.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerDraft.html" title="interface in com.commercetools.api.models.mcp_server">McpServerDraft</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerJsonOutputFiltering.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerJsonOutputFiltering.html" title="interface in com.commercetools.api.models.mcp_server">McpServerJsonOutputFiltering</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerJsonOutputFilteringMatcher.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerJsonOutputFilteringMatcher.html" title="interface in com.commercetools.api.models.mcp_server">McpServerJsonOutputFilteringMatcher</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerPagedQueryResponse.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerPagedQueryResponse.html" title="interface in com.commercetools.api.models.mcp_server">McpServerPagedQueryResponse</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerRemoveToolAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerRemoveToolAction.html" title="interface in com.commercetools.api.models.mcp_server">McpServerRemoveToolAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerRemoveToolCustomizationAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerRemoveToolCustomizationAction.html" title="interface in com.commercetools.api.models.mcp_server">McpServerRemoveToolCustomizationAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerSetAuthenticationModeAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerSetAuthenticationModeAction.html" title="interface in com.commercetools.api.models.mcp_server">McpServerSetAuthenticationModeAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerSetDescriptionAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerSetDescriptionAction.html" title="interface in com.commercetools.api.models.mcp_server">McpServerSetDescriptionAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerSetJsonOutputFilteringAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerSetJsonOutputFilteringAction.html" title="interface in com.commercetools.api.models.mcp_server">McpServerSetJsonOutputFilteringAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerSetNameAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerSetNameAction.html" title="interface in com.commercetools.api.models.mcp_server">McpServerSetNameAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerSetStateAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerSetStateAction.html" title="interface in com.commercetools.api.models.mcp_server">McpServerSetStateAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerSetToolCustomizationsAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerSetToolCustomizationsAction.html" title="interface in com.commercetools.api.models.mcp_server">McpServerSetToolCustomizationsAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerSetToolOutputFormattingAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerSetToolOutputFormattingAction.html" title="interface in com.commercetools.api.models.mcp_server">McpServerSetToolOutputFormattingAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerSetToolsAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerSetToolsAction.html" title="interface in com.commercetools.api.models.mcp_server">McpServerSetToolsAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerType.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerType.html" title="interface in com.commercetools.api.models.mcp_server">McpServerType</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerTypeTool.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerTypeTool.html" title="interface in com.commercetools.api.models.mcp_server">McpServerTypeTool</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerUpdate.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerUpdate.html" title="interface in com.commercetools.api.models.mcp_server">McpServerUpdate</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerUpdateAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerUpdateAction.html" title="interface in com.commercetools.api.models.mcp_server">McpServerUpdateAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/ParameterOverride.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/ParameterOverride.html" title="interface in com.commercetools.api.models.mcp_server">ParameterOverride</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/RemoveToolCustomizationTarget.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/RemoveToolCustomizationTarget.html" title="interface in com.commercetools.api.models.mcp_server">RemoveToolCustomizationTarget</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/ToolCustomization.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/ToolCustomization.html" title="interface in com.commercetools.api.models.mcp_server">ToolCustomization</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
@@ -11179,6 +11716,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/CartEstimatedDeliverySetMessage.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CartEstimatedDeliverySetMessage.html" title="interface in com.commercetools.api.models.message">CartEstimatedDeliverySetMessage</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/CartEstimatedDeliverySetMessagePayload.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CartEstimatedDeliverySetMessagePayload.html" title="interface in com.commercetools.api.models.message">CartEstimatedDeliverySetMessagePayload</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/CartFrozenMessage.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CartFrozenMessage.html" title="interface in com.commercetools.api.models.message">CartFrozenMessage</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
@@ -11971,6 +12516,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/OrderEstimatedDeliverySetMessage.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/OrderEstimatedDeliverySetMessage.html" title="interface in com.commercetools.api.models.message">OrderEstimatedDeliverySetMessage</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/OrderEstimatedDeliverySetMessagePayload.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/OrderEstimatedDeliverySetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderEstimatedDeliverySetMessagePayload</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/OrderImportedMessage.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/OrderImportedMessage.html" title="interface in com.commercetools.api.models.message">OrderImportedMessage</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
@@ -12687,6 +13240,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessage.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessage.html" title="interface in com.commercetools.api.models.message">ProductTailoringKeySetMessage</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessagePayload.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessagePayload.html" title="interface in com.commercetools.api.models.message">ProductTailoringKeySetMessagePayload</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/ProductTailoringNameSetMessage.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ProductTailoringNameSetMessage.html" title="interface in com.commercetools.api.models.message">ProductTailoringNameSetMessage</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
@@ -13195,6 +13756,30 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/StoreCheckoutUrlTemplateSetMessage.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreCheckoutUrlTemplateSetMessage.html" title="interface in com.commercetools.api.models.message">StoreCheckoutUrlTemplateSetMessage</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StoreCheckoutUrlTemplateSetMessagePayload.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreCheckoutUrlTemplateSetMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreCheckoutUrlTemplateSetMessagePayload</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StoreContactUrlSetMessage.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreContactUrlSetMessage.html" title="interface in com.commercetools.api.models.message">StoreContactUrlSetMessage</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StoreContactUrlSetMessagePayload.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreContactUrlSetMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreContactUrlSetMessagePayload</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StoreCookiePolicyUrlSetMessage.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreCookiePolicyUrlSetMessage.html" title="interface in com.commercetools.api.models.message">StoreCookiePolicyUrlSetMessage</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StoreCookiePolicyUrlSetMessagePayload.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreCookiePolicyUrlSetMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreCookiePolicyUrlSetMessagePayload</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/StoreCountriesChangedMessage.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreCountriesChangedMessage.html" title="interface in com.commercetools.api.models.message">StoreCountriesChangedMessage</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
@@ -13227,6 +13812,22 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/StoreFaqUrlSetMessage.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreFaqUrlSetMessage.html" title="interface in com.commercetools.api.models.message">StoreFaqUrlSetMessage</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StoreFaqUrlSetMessagePayload.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreFaqUrlSetMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreFaqUrlSetMessagePayload</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StoreImprintUrlSetMessage.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreImprintUrlSetMessage.html" title="interface in com.commercetools.api.models.message">StoreImprintUrlSetMessage</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StoreImprintUrlSetMessagePayload.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreImprintUrlSetMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreImprintUrlSetMessagePayload</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/StoreLanguagesChangedMessage.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreLanguagesChangedMessage.html" title="interface in com.commercetools.api.models.message">StoreLanguagesChangedMessage</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
@@ -13243,6 +13844,22 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/StoreOrderUrlTemplateSetMessage.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreOrderUrlTemplateSetMessage.html" title="interface in com.commercetools.api.models.message">StoreOrderUrlTemplateSetMessage</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StoreOrderUrlTemplateSetMessagePayload.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreOrderUrlTemplateSetMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreOrderUrlTemplateSetMessagePayload</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StorePrivacyPolicyUrlSetMessage.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StorePrivacyPolicyUrlSetMessage.html" title="interface in com.commercetools.api.models.message">StorePrivacyPolicyUrlSetMessage</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StorePrivacyPolicyUrlSetMessagePayload.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StorePrivacyPolicyUrlSetMessagePayload.html" title="interface in com.commercetools.api.models.message">StorePrivacyPolicyUrlSetMessagePayload</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/StoreProductSelectionsChangedMessage.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreProductSelectionsChangedMessage.html" title="interface in com.commercetools.api.models.message">StoreProductSelectionsChangedMessage</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
@@ -13251,11 +13868,35 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/StoreRefundPolicyUrlSetMessage.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreRefundPolicyUrlSetMessage.html" title="interface in com.commercetools.api.models.message">StoreRefundPolicyUrlSetMessage</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StoreRefundPolicyUrlSetMessagePayload.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreRefundPolicyUrlSetMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreRefundPolicyUrlSetMessagePayload</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StoreShippingPolicyUrlSetMessage.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreShippingPolicyUrlSetMessage.html" title="interface in com.commercetools.api.models.message">StoreShippingPolicyUrlSetMessage</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StoreShippingPolicyUrlSetMessagePayload.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreShippingPolicyUrlSetMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreShippingPolicyUrlSetMessagePayload</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/StoreSupplyChannelsChangedMessage.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreSupplyChannelsChangedMessage.html" title="interface in com.commercetools.api.models.message">StoreSupplyChannelsChangedMessage</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/StoreSupplyChannelsChangedMessagePayload.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreSupplyChannelsChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreSupplyChannelsChangedMessagePayload</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StoreTermsOfServiceUrlSetMessage.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreTermsOfServiceUrlSetMessage.html" title="interface in com.commercetools.api.models.message">StoreTermsOfServiceUrlSetMessage</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StoreTermsOfServiceUrlSetMessagePayload.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreTermsOfServiceUrlSetMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreTermsOfServiceUrlSetMessagePayload</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
@@ -13620,6 +14261,10 @@ loadScripts(document, 'script');</script>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/order_edit/StagedOrderSetDirectDiscountsAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.order_edit.<a href="../com/commercetools/api/models/order_edit/StagedOrderSetDirectDiscountsAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetDirectDiscountsAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/order_edit/StagedOrderSetDirectDiscountsIgnoreCartDiscountsAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.order_edit.<a href="../com/commercetools/api/models/order_edit/StagedOrderSetDirectDiscountsIgnoreCartDiscountsAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetDirectDiscountsIgnoreCartDiscountsAction</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
@@ -14077,6 +14722,10 @@ loadScripts(document, 'script');</script>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/order/OrderSetDeliveryItemsAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/OrderSetDeliveryItemsAction.html" title="interface in com.commercetools.api.models.order">OrderSetDeliveryItemsAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/order/OrderSetEstimatedDeliveryAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/OrderSetEstimatedDeliveryAction.html" title="interface in com.commercetools.api.models.order">OrderSetEstimatedDeliveryAction</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
@@ -14897,6 +15546,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringSetKeyAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.product_tailoring.<a href="../com/commercetools/api/models/product_tailoring/ProductTailoringSetKeyAction.html" title="interface in com.commercetools.api.models.product_tailoring">ProductTailoringSetKeyAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringSetMetaAttributesAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.product_tailoring.<a href="../com/commercetools/api/models/product_tailoring/ProductTailoringSetMetaAttributesAction.html" title="interface in com.commercetools.api.models.product_tailoring">ProductTailoringSetMetaAttributesAction</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
@@ -15135,22 +15788,27 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/FacetRange.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/FacetRange.html" title="interface in com.commercetools.api.models.product">FacetRange</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/FacetResult.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/FacetResult.html" title="interface in com.commercetools.api.models.product">FacetResult</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/FacetResults.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/FacetResults.html" title="interface in com.commercetools.api.models.product">FacetResults</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/FacetTerm.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/FacetTerm.html" title="interface in com.commercetools.api.models.product">FacetTerm</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/FilteredFacetResult.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/FilteredFacetResult.html" title="interface in com.commercetools.api.models.product">FilteredFacetResult</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/Product.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/Product.html" title="interface in com.commercetools.api.models.product">Product</a></dt>
@@ -15231,6 +15889,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/ProductProjectionPagedSearchResponse.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/ProductProjectionPagedSearchResponse.html" title="interface in com.commercetools.api.models.product">ProductProjectionPagedSearchResponse</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/ProductPublishAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/ProductPublishAction.html" title="interface in com.commercetools.api.models.product">ProductPublishAction</a></dt>
@@ -15419,6 +16078,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/RangeFacetResult.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/RangeFacetResult.html" title="interface in com.commercetools.api.models.product">RangeFacetResult</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/SearchKeyword.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/SearchKeyword.html" title="interface in com.commercetools.api.models.product">SearchKeyword</a></dt>
@@ -15431,10 +16091,12 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/Suggestion.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/Suggestion.html" title="interface in com.commercetools.api.models.product">Suggestion</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/SuggestionResult.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/SuggestionResult.html" title="interface in com.commercetools.api.models.product">SuggestionResult</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/SuggestTokenizer.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/SuggestTokenizer.html" title="interface in com.commercetools.api.models.product">SuggestTokenizer</a></dt>
@@ -15443,6 +16105,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/TermFacetResult.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/TermFacetResult.html" title="interface in com.commercetools.api.models.product">TermFacetResult</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/WhitespaceTokenizer.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/WhitespaceTokenizer.html" title="interface in com.commercetools.api.models.product">WhitespaceTokenizer</a></dt>
@@ -16213,6 +16876,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/shipping_method/ShippingMethodSetCarrierAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.shipping_method.<a href="../com/commercetools/api/models/shipping_method/ShippingMethodSetCarrierAction.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodSetCarrierAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/shipping_method/ShippingMethodSetCustomFieldAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.shipping_method.<a href="../com/commercetools/api/models/shipping_method/ShippingMethodSetCustomFieldAction.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodSetCustomFieldAction</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
@@ -16666,6 +17333,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/store/Storefront.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/Storefront.html" title="interface in com.commercetools.api.models.store">Storefront</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/store/StoreKeyReference.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
@@ -16698,6 +17369,18 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/store/StoreSetCheckoutUrlTemplateAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreSetCheckoutUrlTemplateAction.html" title="interface in com.commercetools.api.models.store">StoreSetCheckoutUrlTemplateAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/store/StoreSetContactUrlAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreSetContactUrlAction.html" title="interface in com.commercetools.api.models.store">StoreSetContactUrlAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/store/StoreSetCookiePolicyUrlAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreSetCookiePolicyUrlAction.html" title="interface in com.commercetools.api.models.store">StoreSetCookiePolicyUrlAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/store/StoreSetCountriesAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreSetCountriesAction.html" title="interface in com.commercetools.api.models.store">StoreSetCountriesAction</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
@@ -16714,6 +17397,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/store/StoreSetFaqUrlAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreSetFaqUrlAction.html" title="interface in com.commercetools.api.models.store">StoreSetFaqUrlAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/store/StoreSetImprintUrlAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreSetImprintUrlAction.html" title="interface in com.commercetools.api.models.store">StoreSetImprintUrlAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/store/StoreSetLanguagesAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreSetLanguagesAction.html" title="interface in com.commercetools.api.models.store">StoreSetLanguagesAction</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
@@ -16722,11 +17413,31 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/store/StoreSetOrderUrlTemplateAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreSetOrderUrlTemplateAction.html" title="interface in com.commercetools.api.models.store">StoreSetOrderUrlTemplateAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/store/StoreSetPrivacyPolicyUrlAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreSetPrivacyPolicyUrlAction.html" title="interface in com.commercetools.api.models.store">StoreSetPrivacyPolicyUrlAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/store/StoreSetProductSelectionsAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreSetProductSelectionsAction.html" title="interface in com.commercetools.api.models.store">StoreSetProductSelectionsAction</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/store/StoreSetRefundPolicyUrlAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreSetRefundPolicyUrlAction.html" title="interface in com.commercetools.api.models.store">StoreSetRefundPolicyUrlAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/store/StoreSetShippingPolicyUrlAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreSetShippingPolicyUrlAction.html" title="interface in com.commercetools.api.models.store">StoreSetShippingPolicyUrlAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/store/StoreSetSupplyChannelsAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreSetSupplyChannelsAction.html" title="interface in com.commercetools.api.models.store">StoreSetSupplyChannelsAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/store/StoreSetTermsOfServiceUrlAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreSetTermsOfServiceUrlAction.html" title="interface in com.commercetools.api.models.store">StoreSetTermsOfServiceUrlAction</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
@@ -17074,7 +17785,15 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/type/TypeRemoveEnumValuesAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.type.<a href="../com/commercetools/api/models/type/TypeRemoveEnumValuesAction.html" title="interface in com.commercetools.api.models.type">TypeRemoveEnumValuesAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/type/TypeRemoveFieldDefinitionAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.type.<a href="../com/commercetools/api/models/type/TypeRemoveFieldDefinitionAction.html" title="interface in com.commercetools.api.models.type">TypeRemoveFieldDefinitionAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/type/TypeRemoveLocalizedEnumValuesAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.type.<a href="../com/commercetools/api/models/type/TypeRemoveLocalizedEnumValuesAction.html" title="interface in com.commercetools.api.models.type">TypeRemoveLocalizedEnumValuesAction</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
@@ -17174,6 +17893,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/variant/VariantMoveImageToPositionAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.variant.<a href="../com/commercetools/api/models/variant/VariantMoveImageToPositionAction.html" title="interface in com.commercetools.api.models.variant">VariantMoveImageToPositionAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/variant/VariantPagedQueryResponse.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.variant.<a href="../com/commercetools/api/models/variant/VariantPagedQueryResponse.html" title="interface in com.commercetools.api.models.variant">VariantPagedQueryResponse</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
@@ -17243,6 +17966,10 @@ loadScripts(document, 'script');</script>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/variant/VariantSetAttributesAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.variant.<a href="../com/commercetools/api/models/variant/VariantSetAttributesAction.html" title="interface in com.commercetools.api.models.variant">VariantSetAttributesAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/variant/VariantSetImageLabelAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.variant.<a href="../com/commercetools/api/models/variant/VariantSetImageLabelAction.html" title="interface in com.commercetools.api.models.variant">VariantSetImageLabelAction</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
@@ -20629,6 +21356,19 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/predicates/expansion/type/TypeReferenceExpansionBuilderDsl.html" class="type-name-link" title="class in com.commercetools.api.predicates.expansion.type">TypeReferenceExpansionBuilderDsl</a> - Class in <a href="../com/commercetools/api/predicates/expansion/type/package-summary.html">com.commercetools.api.predicates.expansion.type</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/type/TypeRemoveEnumValuesAction.html" class="type-name-link" title="interface in com.commercetools.api.models.type">TypeRemoveEnumValuesAction</a> - Interface in <a href="../com/commercetools/api/models/type/package-summary.html">com.commercetools.api.models.type</a></dt>
+<dd>
+<div class="block">Removes EnumValues from an <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldEnumType" rel="nofollow">EnumType</a> FieldDefinition.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/type/TypeRemoveEnumValuesActionBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.type">TypeRemoveEnumValuesActionBuilder</a> - Class in <a href="../com/commercetools/api/models/type/package-summary.html">com.commercetools.api.models.type</a></dt>
+<dd>
+<div class="block">TypeRemoveEnumValuesActionBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</dd>
+<dt><a href="../com/commercetools/api/models/type/TypeRemoveEnumValuesActionBuilder.html#%3Cinit%3E()" class="member-name-link">TypeRemoveEnumValuesActionBuilder()</a> - Constructor for class com.commercetools.api.models.type.<a href="../com/commercetools/api/models/type/TypeRemoveEnumValuesActionBuilder.html" title="class in com.commercetools.api.models.type">TypeRemoveEnumValuesActionBuilder</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/type/TypeRemoveFieldDefinitionAction.html" class="type-name-link" title="interface in com.commercetools.api.models.type">TypeRemoveFieldDefinitionAction</a> - Interface in <a href="../com/commercetools/api/models/type/package-summary.html">com.commercetools.api.models.type</a></dt>
 <dd>
 <div class="block">TypeRemoveFieldDefinitionAction
@@ -20646,6 +21386,19 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/type/TypeRemoveFieldDefinitionActionBuilder.html#%3Cinit%3E()" class="member-name-link">TypeRemoveFieldDefinitionActionBuilder()</a> - Constructor for class com.commercetools.api.models.type.<a href="../com/commercetools/api/models/type/TypeRemoveFieldDefinitionActionBuilder.html" title="class in com.commercetools.api.models.type">TypeRemoveFieldDefinitionActionBuilder</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/type/TypeRemoveLocalizedEnumValuesAction.html" class="type-name-link" title="interface in com.commercetools.api.models.type">TypeRemoveLocalizedEnumValuesAction</a> - Interface in <a href="../com/commercetools/api/models/type/package-summary.html">com.commercetools.api.models.type</a></dt>
+<dd>
+<div class="block">Removes LocalizedEnumValues from a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumType" rel="nofollow">LocalizedEnumType</a> FieldDefinition.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/type/TypeRemoveLocalizedEnumValuesActionBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.type">TypeRemoveLocalizedEnumValuesActionBuilder</a> - Class in <a href="../com/commercetools/api/models/type/package-summary.html">com.commercetools.api.models.type</a></dt>
+<dd>
+<div class="block">TypeRemoveLocalizedEnumValuesActionBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</dd>
+<dt><a href="../com/commercetools/api/models/type/TypeRemoveLocalizedEnumValuesActionBuilder.html#%3Cinit%3E()" class="member-name-link">TypeRemoveLocalizedEnumValuesActionBuilder()</a> - Constructor for class com.commercetools.api.models.type.<a href="../com/commercetools/api/models/type/TypeRemoveLocalizedEnumValuesActionBuilder.html" title="class in com.commercetools.api.models.type">TypeRemoveLocalizedEnumValuesActionBuilder</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/type/TypeResourceIdentifier.html" class="type-name-link" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a> - Interface in <a href="../com/commercetools/api/models/type/package-summary.html">com.commercetools.api.models.type</a></dt>
 <dd>
 <div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:ResourceIdentifier" rel="nofollow">ResourceIdentifier</a> of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Type" rel="nofollow">Type</a>.</div>
@@ -20658,6 +21411,8 @@ loadScripts(document, 'script');</script>
  </div>
 </dd>
 <dt><a href="../com/commercetools/api/models/type/TypeResourceIdentifierBuilder.html#%3Cinit%3E()" class="member-name-link">TypeResourceIdentifierBuilder()</a> - Constructor for class com.commercetools.api.models.type.<a href="../com/commercetools/api/models/type/TypeResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.type">TypeResourceIdentifierBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyMcpServersRequestBuilder.html#types()" class="member-name-link">types()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMcpServersRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMcpServersRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyRequestBuilder.html#types()" class="member-name-link">types()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></dt>
 <dd>&nbsp;</dd>

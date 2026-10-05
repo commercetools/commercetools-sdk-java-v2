@@ -97,6 +97,27 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../io/vrap/rmf/base/client/ApiMethod.ParamEntry.html#%3Cinit%3E(K,V)" class="member-name-link">ParamEntry(K, V)</a> - Constructor for class io.vrap.rmf.base.client.<a href="../io/vrap/rmf/base/client/ApiMethod.ParamEntry.html" title="class in io.vrap.rmf.base.client">ApiMethod.ParamEntry</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/ParameterOverride.html" class="type-name-link" title="interface in com.commercetools.api.models.mcp_server">ParameterOverride</a> - Interface in <a href="../com/commercetools/api/models/mcp_server/package-summary.html">com.commercetools.api.models.mcp_server</a></dt>
+<dd>
+<div class="block">Override applied to a single parameter of a tool's input schema.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/ParameterOverrideBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.mcp_server">ParameterOverrideBuilder</a> - Class in <a href="../com/commercetools/api/models/mcp_server/package-summary.html">com.commercetools.api.models.mcp_server</a></dt>
+<dd>
+<div class="block">ParameterOverrideBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/ParameterOverrideBuilder.html#%3Cinit%3E()" class="member-name-link">ParameterOverrideBuilder()</a> - Constructor for class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/ParameterOverrideBuilder.html" title="class in com.commercetools.api.models.mcp_server">ParameterOverrideBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/ToolCustomizationBuilder.html#parameters(com.commercetools.api.models.mcp_server.ParameterOverride...)" class="member-name-link">parameters(ParameterOverride...)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/ToolCustomizationBuilder.html" title="class in com.commercetools.api.models.mcp_server">ToolCustomizationBuilder</a></dt>
+<dd>
+<div class="block">Overrides applied to individual parameters of the tool's input schema.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/ToolCustomizationBuilder.html#parameters(java.util.List)" class="member-name-link">parameters(List&lt;ParameterOverride&gt;)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/ToolCustomizationBuilder.html" title="class in com.commercetools.api.models.mcp_server">ToolCustomizationBuilder</a></dt>
+<dd>
+<div class="block">Overrides applied to individual parameters of the tool's input schema.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/ParcelAddedToDeliveryMessageBuilder.html#parcel(com.commercetools.api.models.order.Parcel)" class="member-name-link">parcel(Parcel)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ParcelAddedToDeliveryMessageBuilder.html" title="class in com.commercetools.api.models.message">ParcelAddedToDeliveryMessageBuilder</a></dt>
 <dd>
 <div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:Parcel" rel="nofollow">Parcel</a> that was added to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Delivery" rel="nofollow">Delivery</a>.</div>
@@ -934,6 +955,8 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Parses a String containing JSON data and produces a <a href="https://javadoc.io/doc/tools.jackson.core/jackson-databind/3.1.0/tools.jackson.databind/tools/jackson/databind/JsonNode.html" title="class or interface in tools.jackson.databind" class="external-link"><code>JsonNode</code></a>.</div>
 </dd>
+<dt><a href="../io/vrap/rmf/base/client/http/RetryAfterDelay.html#parse(java.lang.String,java.time.Instant)" class="member-name-link">parse(String, Instant)</a> - Static method in class io.vrap.rmf.base.client.http.<a href="../io/vrap/rmf/base/client/http/RetryAfterDelay.html" title="class in io.vrap.rmf.base.client.http">RetryAfterDelay</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/order/ShipmentState.ShipmentStateEnum.html#PARTIAL" class="member-name-link">PARTIAL</a> - Enum constant in enum class com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/ShipmentState.ShipmentStateEnum.html" title="enum class in com.commercetools.api.models.order">ShipmentState.ShipmentStateEnum</a></dt>
 <dd>
 <div class="block">Partial</div>
@@ -967,6 +990,20 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/importapi/models/importsummaries/OperationStatesBuilder.html#partiallyImported(java.lang.Long)" class="member-name-link">partiallyImported(Long)</a> - Method in class com.commercetools.importapi.models.importsummaries.<a href="../com/commercetools/importapi/models/importsummaries/OperationStatesBuilder.html" title="class in com.commercetools.importapi.models.importsummaries">OperationStatesBuilder</a></dt>
 <dd>
 <div class="block">The number of ImportOperations in the <code>partiallyImported</code> state.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/cart/DirectDiscountBuilder.html#participateInBestDealSelection(java.lang.Boolean)" class="member-name-link">participateInBestDealSelection(Boolean)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/DirectDiscountBuilder.html" title="class in com.commercetools.api.models.cart">DirectDiscountBuilder</a></dt>
+<dd>
+<div class="block">
+   If <code>true</code>, Direct Discounts compete against Product Discounts to apply the <span>best deal</span>.
+   If <code>false</code>, Direct Discounts are ignored when calculating the best deal comparison, and are applied on top of the discount type that offers the best deal.
+  </div>
+</dd>
+<dt><a href="../com/commercetools/api/models/cart/DirectDiscountDraftBuilder.html#participateInBestDealSelection(java.lang.Boolean)" class="member-name-link">participateInBestDealSelection(Boolean)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/DirectDiscountDraftBuilder.html" title="class in com.commercetools.api.models.cart">DirectDiscountDraftBuilder</a></dt>
+<dd>
+<div class="block">
+   If set to <code>true</code>, Direct Discounts compete against Product Discounts to apply the <span>best deal</span>.
+   If set to <code>false</code>, Direct Discounts are ignored when calculating the best deal comparison, and are applied on top of the discount type that offers the best deal.
+  </div>
 </dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyCustomersRequestBuilder.html#password()" class="member-name-link">password()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyCustomersRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyCustomersRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
@@ -1153,13 +1190,21 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/recurring_order/RecurringOrderStateDraftBuilder.html#pausedBuilder()" class="member-name-link">pausedBuilder()</a> - Method in class com.commercetools.api.models.recurring_order.<a href="../com/commercetools/api/models/recurring_order/RecurringOrderStateDraftBuilder.html" title="class in com.commercetools.api.models.recurring_order">RecurringOrderStateDraftBuilder</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesMultipartRequestBuilder.html#payload(com.commercetools.api.models.agent.AgentResponsesPayload)" class="member-name-link">payload(AgentResponsesPayload)</a> - Method in class com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesMultipartRequestBuilder.html" title="class in com.commercetools.api.models.agent">AgentResponsesMultipartRequestBuilder</a></dt>
+<dd>
+<div class="block">JSON document matching <a href="https://docs.commercetools.com/apis/ctp:api:type:AgentResponsesPayload" rel="nofollow">AgentResponsesPayload</a>.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesMultipartRequestBuilder.html#payload(java.util.function.Function)" class="member-name-link">payload(Function&lt;AgentResponsesPayloadBuilder, AgentResponsesPayloadBuilder&gt;)</a> - Method in class com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesMultipartRequestBuilder.html" title="class in com.commercetools.api.models.agent">AgentResponsesMultipartRequestBuilder</a></dt>
+<dd>
+<div class="block">JSON document matching <a href="https://docs.commercetools.com/apis/ctp:api:type:AgentResponsesPayload" rel="nofollow">AgentResponsesPayload</a>.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#payloadNotIncluded(com.commercetools.api.models.subscription.PayloadNotIncluded)" class="member-name-link">payloadNotIncluded(PayloadNotIncluded)</a> - Method in class com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></dt>
 <dd>
-<div class="block">If the payload does not fit into the size limit or its format is not accepted by the messaging service, the <code>payloadNotIncluded</code> field is present.</div>
+<div class="block">Present when the payload exceeds the size limit of the message queue (the limit is often 256 KB) or its format is not accepted by the messaging service.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html#payloadNotIncluded(java.util.function.Function)" class="member-name-link">payloadNotIncluded(Function&lt;PayloadNotIncludedBuilder, PayloadNotIncludedBuilder&gt;)</a> - Method in class com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></dt>
 <dd>
-<div class="block">If the payload does not fit into the size limit or its format is not accepted by the messaging service, the <code>payloadNotIncluded</code> field is present.</div>
+<div class="block">Present when the payload exceeds the size limit of the message queue (the limit is often 256 KB) or its format is not accepted by the messaging service.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/subscription/PayloadNotIncluded.html" class="type-name-link" title="interface in com.commercetools.api.models.subscription">PayloadNotIncluded</a> - Interface in <a href="../com/commercetools/api/models/subscription/package-summary.html">com.commercetools.api.models.subscription</a></dt>
 <dd>
@@ -1448,7 +1493,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/extension/ExtensionResourceTypeId.html#PAYMENT_METHOD" class="member-name-link">PAYMENT_METHOD</a> - Static variable in interface com.commercetools.api.models.extension.<a href="../com/commercetools/api/models/extension/ExtensionResourceTypeId.html" title="interface in com.commercetools.api.models.extension">ExtensionResourceTypeId</a></dt>
 <dd>
-<div class="block">Extension triggered for operations on <span>PaymentMethods</span></div>
+<div class="block">Extension triggered for operations on <span>PaymentMethods</span>.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/payment_method/PaymentMethodReference.html#PAYMENT_METHOD" class="member-name-link">PAYMENT_METHOD</a> - Static variable in interface com.commercetools.api.models.payment_method.<a href="../com/commercetools/api/models/payment_method/PaymentMethodReference.html" title="interface in com.commercetools.api.models.payment_method">PaymentMethodReference</a></dt>
 <dd>
@@ -4735,6 +4780,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Update actions to be performed on the InventoryEntry.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerUpdateBuilder.html#plusActions(com.commercetools.api.models.mcp_server.McpServerUpdateAction...)" class="member-name-link">plusActions(McpServerUpdateAction...)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerUpdateBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerUpdateBuilder</a></dt>
+<dd>
+<div class="block">Update actions to be performed on the MCP Server.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/me/MyBusinessUnitUpdateBuilder.html#plusActions(com.commercetools.api.models.me.MyBusinessUnitUpdateAction...)" class="member-name-link">plusActions(MyBusinessUnitUpdateAction...)</a> - Method in class com.commercetools.api.models.me.<a href="../com/commercetools/api/models/me/MyBusinessUnitUpdateBuilder.html" title="class in com.commercetools.api.models.me">MyBusinessUnitUpdateBuilder</a></dt>
 <dd>
 <div class="block">Update actions to be performed on the BusinessUnit.</div>
@@ -4934,6 +4983,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/inventory/InventoryEntryUpdateBuilder.html#plusActions(java.util.function.Function)" class="member-name-link">plusActions(Function&lt;InventoryEntryUpdateActionBuilder, Builder&lt;? extends InventoryEntryUpdateAction&gt;&gt;)</a> - Method in class com.commercetools.api.models.inventory.<a href="../com/commercetools/api/models/inventory/InventoryEntryUpdateBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntryUpdateBuilder</a></dt>
 <dd>
 <div class="block">Update actions to be performed on the InventoryEntry.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerUpdateBuilder.html#plusActions(java.util.function.Function)" class="member-name-link">plusActions(Function&lt;McpServerUpdateActionBuilder, Builder&lt;? extends McpServerUpdateAction&gt;&gt;)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerUpdateBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerUpdateBuilder</a></dt>
+<dd>
+<div class="block">Update actions to be performed on the MCP Server.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/me/MyBusinessUnitUpdateBuilder.html#plusActions(java.util.function.Function)" class="member-name-link">plusActions(Function&lt;MyBusinessUnitUpdateActionBuilder, Builder&lt;? extends MyBusinessUnitUpdateAction&gt;&gt;)</a> - Method in class com.commercetools.api.models.me.<a href="../com/commercetools/api/models/me/MyBusinessUnitUpdateBuilder.html" title="class in com.commercetools.api.models.me">MyBusinessUnitUpdateBuilder</a></dt>
 <dd>
@@ -5434,6 +5487,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/message/CustomerAddressRemovedMessagePayloadBuilder.html#plusAddressRoles(com.commercetools.api.models.common.AddressRole...)" class="member-name-link">plusAddressRoles(AddressRole...)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerAddressRemovedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerAddressRemovedMessagePayloadBuilder</a></dt>
 <dd>
 <div class="block">Indicates if the address was used for shipping or billing purposes.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/ParameterOverrideBuilder.html#plusAllowedTypes(java.lang.Object...)" class="member-name-link">plusAllowedTypes(Object...)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/ParameterOverrideBuilder.html" title="class in com.commercetools.api.models.mcp_server">ParameterOverrideBuilder</a></dt>
+<dd>
+<div class="block">Restricts accepted values to this set.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/error/GraphQLInvalidFieldErrorBuilder.html#plusAllowedValues(java.lang.Object...)" class="member-name-link">plusAllowedValues(Object...)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLInvalidFieldErrorBuilder.html" title="class in com.commercetools.api.models.error">GraphQLInvalidFieldErrorBuilder</a></dt>
 <dd>
@@ -6255,6 +6312,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/variant/VariantProjectionBuilder.html#plusCategories(com.commercetools.api.models.category.CategoryReference...)" class="member-name-link">plusCategories(CategoryReference...)</a> - Method in class com.commercetools.api.models.variant.<a href="../com/commercetools/api/models/variant/VariantProjectionBuilder.html" title="class in com.commercetools.api.models.variant">VariantProjectionBuilder</a></dt>
+<dd>
+<div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the parent <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/product/ProductDraftBuilder.html#plusCategories(com.commercetools.api.models.category.CategoryResourceIdentifier...)" class="member-name-link">plusCategories(CategoryResourceIdentifier...)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/ProductDraftBuilder.html" title="class in com.commercetools.api.models.product">ProductDraftBuilder</a></dt>
 <dd>
 <div class="block">Categories assigned to the Product.</div>
@@ -6274,6 +6335,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/product/ProductProjectionBuilder.html#plusCategories(java.util.function.Function)" class="member-name-link">plusCategories(Function&lt;CategoryReferenceBuilder, CategoryReferenceBuilder&gt;)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></dt>
 <dd>
 <div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/variant/VariantProjectionBuilder.html#plusCategories(java.util.function.Function)" class="member-name-link">plusCategories(Function&lt;CategoryReferenceBuilder, CategoryReferenceBuilder&gt;)</a> - Method in class com.commercetools.api.models.variant.<a href="../com/commercetools/api/models/variant/VariantProjectionBuilder.html" title="class in com.commercetools.api.models.variant">VariantProjectionBuilder</a></dt>
+<dd>
+<div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> assigned to the parent <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/ProductDraftBuilder.html#plusCategories(java.util.function.Function)" class="member-name-link">plusCategories(Function&lt;CategoryResourceIdentifierBuilder, CategoryResourceIdentifierBuilder&gt;)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/ProductDraftBuilder.html" title="class in com.commercetools.api.models.product">ProductDraftBuilder</a></dt>
 <dd>
@@ -6867,6 +6932,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Associate Roles that can approve according to the approver hierarchy tiers defined in <code>rules</code>.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesAuthErrorBuilder.html#plusErrors(com.commercetools.api.models.error.ErrorObject...)" class="member-name-link">plusErrors(ErrorObject...)</a> - Method in class com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesAuthErrorBuilder.html" title="class in com.commercetools.api.models.agent">AgentResponsesAuthErrorBuilder</a></dt>
+<dd>
+<div class="block">Authentication and authorization-related errors returned for a request.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesErrorResponseBuilder.html#plusErrors(com.commercetools.api.models.error.ErrorObject...)" class="member-name-link">plusErrors(ErrorObject...)</a> - Method in class com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesErrorResponseBuilder.html" title="class in com.commercetools.api.models.agent">AgentResponsesErrorResponseBuilder</a></dt>
+<dd>
+<div class="block">Errors returned for a request.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/error/AuthErrorResponseBuilder.html#plusErrors(com.commercetools.api.models.error.ErrorObject...)" class="member-name-link">plusErrors(ErrorObject...)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/AuthErrorResponseBuilder.html" title="class in com.commercetools.api.models.error">AuthErrorResponseBuilder</a></dt>
 <dd>
 <div class="block">Authentication and authorization-related errors returned for a request.</div>
@@ -6926,6 +6999,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/importapi/models/importoperations/ImportOperationStatusBuilder.html#plusErrors(com.commercetools.importapi.models.errors.ErrorObject...)" class="member-name-link">plusErrors(ErrorObject...)</a> - Method in class com.commercetools.importapi.models.importoperations.<a href="../com/commercetools/importapi/models/importoperations/ImportOperationStatusBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationStatusBuilder</a></dt>
 <dd>
 <div class="block"><span>Errors</span> for the <span>ImportOperation</span>.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesAuthErrorBuilder.html#plusErrors(java.util.function.Function)" class="member-name-link">plusErrors(Function&lt;ErrorObjectBuilder, Builder&lt;? extends ErrorObject&gt;&gt;)</a> - Method in class com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesAuthErrorBuilder.html" title="class in com.commercetools.api.models.agent">AgentResponsesAuthErrorBuilder</a></dt>
+<dd>
+<div class="block">Authentication and authorization-related errors returned for a request.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesErrorResponseBuilder.html#plusErrors(java.util.function.Function)" class="member-name-link">plusErrors(Function&lt;ErrorObjectBuilder, Builder&lt;? extends ErrorObject&gt;&gt;)</a> - Method in class com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesErrorResponseBuilder.html" title="class in com.commercetools.api.models.agent">AgentResponsesErrorResponseBuilder</a></dt>
+<dd>
+<div class="block">Errors returned for a request.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/error/AuthErrorResponseBuilder.html#plusErrors(java.util.function.Function)" class="member-name-link">plusErrors(Function&lt;ErrorObjectBuilder, Builder&lt;? extends ErrorObject&gt;&gt;)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/AuthErrorResponseBuilder.html" title="class in com.commercetools.api.models.error">AuthErrorResponseBuilder</a></dt>
 <dd>
@@ -7116,13 +7197,33 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Maps to <code>Type.fieldDefinitions</code>.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerJsonOutputFilteringMatcherBuilder.html#plusFieldNameContains(java.lang.String...)" class="member-name-link">plusFieldNameContains(String...)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerJsonOutputFilteringMatcherBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerJsonOutputFilteringMatcherBuilder</a></dt>
+<dd>
+<div class="block">Substrings to match against field names at any depth, for example <code>secret</code>.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerJsonOutputFilteringMatcherBuilder.html#plusFieldNames(java.lang.String...)" class="member-name-link">plusFieldNames(String...)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerJsonOutputFilteringMatcherBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerJsonOutputFilteringMatcherBuilder</a></dt>
+<dd>
+<div class="block">Exact field names to match at any depth, for example <code>password</code>.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/type/TypeChangeFieldDefinitionOrderActionBuilder.html#plusFieldNames(java.lang.String...)" class="member-name-link">plusFieldNames(String...)</a> - Method in class com.commercetools.api.models.type.<a href="../com/commercetools/api/models/type/TypeChangeFieldDefinitionOrderActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeFieldDefinitionOrderActionBuilder</a></dt>
 <dd>
 <div class="block">Must match the set of <code>name</code>s of FieldDefinitions (up to order).</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerJsonOutputFilteringMatcherBuilder.html#plusFieldPaths(java.lang.String...)" class="member-name-link">plusFieldPaths(String...)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerJsonOutputFilteringMatcherBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerJsonOutputFilteringMatcherBuilder</a></dt>
+<dd>
+<div class="block">Exact dotted paths to match, for example <code>customer.password</code>.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerJsonOutputFilteringBuilder.html#plusFieldPathsToKeep(java.lang.String...)" class="member-name-link">plusFieldPathsToKeep(String...)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerJsonOutputFilteringBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerJsonOutputFilteringBuilder</a></dt>
+<dd>
+<div class="block">Exact dotted paths kept even when they would otherwise match <code>redact</code> or <code>drop</code>.</div>
+</dd>
 <dt><a href="../com/commercetools/importapi/models/errors/InvalidFieldsUpdateErrorBuilder.html#plusFields(java.lang.String...)" class="member-name-link">plusFields(String...)</a> - Method in class com.commercetools.importapi.models.errors.<a href="../com/commercetools/importapi/models/errors/InvalidFieldsUpdateErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidFieldsUpdateErrorBuilder</a></dt>
 <dd>
 <div class="block">Fields that cannot be updated.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesMultipartRequestBuilder.html#plusFiles(java.io.File...)" class="member-name-link">plusFiles(File...)</a> - Method in class com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesMultipartRequestBuilder.html" title="class in com.commercetools.api.models.agent">AgentResponsesMultipartRequestBuilder</a></dt>
+<dd>
+<div class="block">Supporting files.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/order/OrderSearchFilterExpressionBuilder.html#plusFilter(com.commercetools.api.models.order.OrderSearchQueryExpression...)" class="member-name-link">plusFilter(OrderSearchQueryExpression...)</a> - Method in class com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/OrderSearchFilterExpressionBuilder.html" title="class in com.commercetools.api.models.order">OrderSearchFilterExpressionBuilder</a></dt>
 <dd>
@@ -7151,6 +7252,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/discount_code/DiscountCodeDraftBuilder.html#plusGroups(java.lang.String...)" class="member-name-link">plusGroups(String...)</a> - Method in class com.commercetools.api.models.discount_code.<a href="../com/commercetools/api/models/discount_code/DiscountCodeDraftBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeDraftBuilder</a></dt>
 <dd>
 <div class="block">Groups to which the DiscountCode will belong to.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerTypeToolBuilder.html#plusGroups(java.lang.String...)" class="member-name-link">plusGroups(String...)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerTypeToolBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerTypeToolBuilder</a></dt>
+<dd>
+<div class="block">Group identifiers the tool belongs to, such as <code>all</code> or <code>read_all</code>.</div>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/discount_codes/DiscountCodeImportBuilder.html#plusGroups(java.lang.String...)" class="member-name-link">plusGroups(String...)</a> - Method in class com.commercetools.importapi.models.discount_codes.<a href="../com/commercetools/importapi/models/discount_codes/DiscountCodeImportBuilder.html" title="class in com.commercetools.importapi.models.discount_codes">DiscountCodeImportBuilder</a></dt>
 <dd>
@@ -7198,7 +7303,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringSetExternalImagesActionBuilder.html#plusImages(com.commercetools.api.models.common.Image...)" class="member-name-link">plusImages(Image...)</a> - Method in class com.commercetools.api.models.product_tailoring.<a href="../com/commercetools/api/models/product_tailoring/ProductTailoringSetExternalImagesActionBuilder.html" title="class in com.commercetools.api.models.product_tailoring">ProductTailoringSetExternalImagesActionBuilder</a></dt>
 <dd>
-<div class="block">Images of the tailored ProductVariant.</div>
+<div class="block">Images of the tailored ProductVariant or Variant.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductVariantTailoringBuilder.html#plusImages(com.commercetools.api.models.common.Image...)" class="member-name-link">plusImages(Image...)</a> - Method in class com.commercetools.api.models.product_tailoring.<a href="../com/commercetools/api/models/product_tailoring/ProductVariantTailoringBuilder.html" title="class in com.commercetools.api.models.product_tailoring">ProductVariantTailoringBuilder</a></dt>
 <dd>
@@ -7294,7 +7399,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringSetExternalImagesActionBuilder.html#plusImages(java.util.function.Function)" class="member-name-link">plusImages(Function&lt;ImageBuilder, ImageBuilder&gt;)</a> - Method in class com.commercetools.api.models.product_tailoring.<a href="../com/commercetools/api/models/product_tailoring/ProductTailoringSetExternalImagesActionBuilder.html" title="class in com.commercetools.api.models.product_tailoring">ProductTailoringSetExternalImagesActionBuilder</a></dt>
 <dd>
-<div class="block">Images of the tailored ProductVariant.</div>
+<div class="block">Images of the tailored ProductVariant or Variant.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductVariantTailoringBuilder.html#plusImages(java.util.function.Function)" class="member-name-link">plusImages(Function&lt;ImageBuilder, ImageBuilder&gt;)</a> - Method in class com.commercetools.api.models.product_tailoring.<a href="../com/commercetools/api/models/product_tailoring/ProductVariantTailoringBuilder.html" title="class in com.commercetools.api.models.product_tailoring">ProductVariantTailoringBuilder</a></dt>
 <dd>
@@ -7827,6 +7932,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/type/TypeChangeLocalizedEnumValueOrderActionBuilder.html#plusKeys(java.lang.String...)" class="member-name-link">plusKeys(String...)</a> - Method in class com.commercetools.api.models.type.<a href="../com/commercetools/api/models/type/TypeChangeLocalizedEnumValueOrderActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeLocalizedEnumValueOrderActionBuilder</a></dt>
 <dd>
 <div class="block">Must match the set of <code>key</code>s of the LocalizedEnumValues in the FieldDefinition (up to order).</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/type/TypeRemoveEnumValuesActionBuilder.html#plusKeys(java.lang.String...)" class="member-name-link">plusKeys(String...)</a> - Method in class com.commercetools.api.models.type.<a href="../com/commercetools/api/models/type/TypeRemoveEnumValuesActionBuilder.html" title="class in com.commercetools.api.models.type">TypeRemoveEnumValuesActionBuilder</a></dt>
+<dd>
+<div class="block">Keys of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldEnumValue" rel="nofollow">EnumValues</a> to remove.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/type/TypeRemoveLocalizedEnumValuesActionBuilder.html#plusKeys(java.lang.String...)" class="member-name-link">plusKeys(String...)</a> - Method in class com.commercetools.api.models.type.<a href="../com/commercetools/api/models/type/TypeRemoveLocalizedEnumValuesActionBuilder.html" title="class in com.commercetools.api.models.type">TypeRemoveLocalizedEnumValuesActionBuilder</a></dt>
+<dd>
+<div class="block">Keys of the <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomFieldLocalizedEnumValue" rel="nofollow">LocalizedEnumValues</a> to remove.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/error/GraphQLProjectNotConfiguredForLanguagesErrorBuilder.html#plusLanguages(java.lang.String...)" class="member-name-link">plusLanguages(String...)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLProjectNotConfiguredForLanguagesErrorBuilder.html" title="class in com.commercetools.api.models.error">GraphQLProjectNotConfiguredForLanguagesErrorBuilder</a></dt>
 <dd>
@@ -8691,6 +8804,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">add the value to the or using the builder function</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/ToolCustomizationBuilder.html#plusParameters(com.commercetools.api.models.mcp_server.ParameterOverride...)" class="member-name-link">plusParameters(ParameterOverride...)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/ToolCustomizationBuilder.html" title="class in com.commercetools.api.models.mcp_server">ToolCustomizationBuilder</a></dt>
+<dd>
+<div class="block">Overrides applied to individual parameters of the tool's input schema.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/ToolCustomizationBuilder.html#plusParameters(java.util.function.Function)" class="member-name-link">plusParameters(Function&lt;ParameterOverrideBuilder, ParameterOverrideBuilder&gt;)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/ToolCustomizationBuilder.html" title="class in com.commercetools.api.models.mcp_server">ToolCustomizationBuilder</a></dt>
+<dd>
+<div class="block">Overrides applied to individual parameters of the tool's input schema.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/order/DeliveryBuilder.html#plusParcels(com.commercetools.api.models.order.Parcel...)" class="member-name-link">plusParcels(Parcel...)</a> - Method in class com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/DeliveryBuilder.html" title="class in com.commercetools.api.models.order">DeliveryBuilder</a></dt>
 <dd>
 <div class="block">Information regarding the appearance, content, and shipment of a Parcel.</div>
@@ -9342,6 +9463,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">The Embedded Prices for the Product Variant.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentProductsNotFoundWarningBuilder.html#plusProducts(java.lang.String...)" class="member-name-link">plusProducts(String...)</a> - Method in class com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentProductsNotFoundWarningBuilder.html" title="class in com.commercetools.api.models.agent">AgentProductsNotFoundWarningBuilder</a></dt>
+<dd>
+<div class="block">Identifiers of the Products that could not be matched to the catalog, as they appeared in the input.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/StoreCreatedMessageBuilder.html#plusProductSelections(com.commercetools.api.models.store.ProductSelectionSetting...)" class="member-name-link">plusProductSelections(ProductSelectionSetting...)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreCreatedMessageBuilder.html" title="class in com.commercetools.api.models.message">StoreCreatedMessageBuilder</a></dt>
 <dd>
 <div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionSetting" rel="nofollow">ProductSelectionSettings</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> that was created.</div>
@@ -9388,6 +9513,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/RangeFacetResultBuilder.html#plusRanges(com.commercetools.api.models.product.FacetRange...)" class="member-name-link">plusRanges(FacetRange...)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/RangeFacetResultBuilder.html" title="class in com.commercetools.api.models.product">RangeFacetResultBuilder</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">Statistical data over values for <code>date</code>, <code>time</code>, <code>datetime</code>, <code>number</code>, and <code>money</code> type fields.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_search/ProductSearchFacetRangesValueBuilder.html#plusRanges(java.util.function.Function)" class="member-name-link">plusRanges(Function&lt;ProductSearchFacetRangesFacetRangeBuilder, ProductSearchFacetRangesFacetRangeBuilder&gt;)</a> - Method in class com.commercetools.api.models.product_search.<a href="../com/commercetools/api/models/product_search/ProductSearchFacetRangesValueBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchFacetRangesValueBuilder</a></dt>
@@ -9396,6 +9522,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/RangeFacetResultBuilder.html#plusRanges(java.util.function.Function)" class="member-name-link">plusRanges(Function&lt;FacetRangeBuilder, FacetRangeBuilder&gt;)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/RangeFacetResultBuilder.html" title="class in com.commercetools.api.models.product">RangeFacetResultBuilder</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">Statistical data over values for <code>date</code>, <code>time</code>, <code>datetime</code>, <code>number</code>, and <code>money</code> type fields.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#plusRates(com.commercetools.api.models.tax_category.TaxRate...)" class="member-name-link">plusRates(TaxRate...)</a> - Method in class com.commercetools.api.models.tax_category.<a href="../com/commercetools/api/models/tax_category/TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></dt>
@@ -10014,6 +10141,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">Inventory entries</a> matching the query.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerPagedQueryResponseBuilder.html#plusResults(com.commercetools.api.models.mcp_server.McpServer...)" class="member-name-link">plusResults(McpServer...)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerPagedQueryResponseBuilder</a></dt>
+<dd>
+<div class="block">MCP Servers matching the query.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/me/MyPaymentPagedQueryResponseBuilder.html#plusResults(com.commercetools.api.models.me.MyPayment...)" class="member-name-link">plusResults(MyPayment...)</a> - Method in class com.commercetools.api.models.me.<a href="../com/commercetools/api/models/me/MyPaymentPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.me">MyPaymentPagedQueryResponseBuilder</a></dt>
 <dd>
 <div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:MyPayment" rel="nofollow">MyPayments</a> matching the query.</div>
@@ -10080,6 +10211,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#plusResults(com.commercetools.api.models.product.ProductProjection...)" class="member-name-link">plusResults(ProductProjection...)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjections</a> where at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/quote_request/QuoteRequestPagedQueryResponseBuilder.html#plusResults(com.commercetools.api.models.quote_request.QuoteRequest...)" class="member-name-link">plusResults(QuoteRequest...)</a> - Method in class com.commercetools.api.models.quote_request.<a href="../com/commercetools/api/models/quote_request/QuoteRequestPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.quote_request">QuoteRequestPagedQueryResponseBuilder</a></dt>
@@ -10242,6 +10374,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">Inventory entries</a> matching the query.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerPagedQueryResponseBuilder.html#plusResults(java.util.function.Function)" class="member-name-link">plusResults(Function&lt;McpServerBuilder, McpServerBuilder&gt;)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerPagedQueryResponseBuilder</a></dt>
+<dd>
+<div class="block">MCP Servers matching the query.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/me/MyPaymentPagedQueryResponseBuilder.html#plusResults(java.util.function.Function)" class="member-name-link">plusResults(Function&lt;MyPaymentBuilder, MyPaymentBuilder&gt;)</a> - Method in class com.commercetools.api.models.me.<a href="../com/commercetools/api/models/me/MyPaymentPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.me">MyPaymentPagedQueryResponseBuilder</a></dt>
 <dd>
 <div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:MyPayment" rel="nofollow">MyPayments</a> matching the query.</div>
@@ -10308,6 +10444,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#plusResults(java.util.function.Function)" class="member-name-link">plusResults(Function&lt;ProductProjectionBuilder, ProductProjectionBuilder&gt;)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:ProductProjection" rel="nofollow">ProductProjections</a> where at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/quote_request/QuoteRequestPagedQueryResponseBuilder.html#plusResults(java.util.function.Function)" class="member-name-link">plusResults(Function&lt;QuoteRequestBuilder, QuoteRequestBuilder&gt;)</a> - Method in class com.commercetools.api.models.quote_request.<a href="../com/commercetools/api/models/quote_request/QuoteRequestPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.quote_request">QuoteRequestPagedQueryResponseBuilder</a></dt>
@@ -10588,7 +10725,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_selection/ProductVariantExclusionBuilder.html#plusSkus(java.lang.String...)" class="member-name-link">plusSkus(String...)</a> - Method in class com.commercetools.api.models.product_selection.<a href="../com/commercetools/api/models/product_selection/ProductVariantExclusionBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductVariantExclusionBuilder</a></dt>
 <dd>
-<div class="block">Non-empty array of SKUs representing Product Variants to be included in the Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</div>
+<div class="block">Non-empty array of SKUs representing Product Variants to be excluded from the Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_selection/ProductVariantSelectionIncludeAllExceptBuilder.html#plusSkus(java.lang.String...)" class="member-name-link">plusSkus(String...)</a> - Method in class com.commercetools.api.models.product_selection.<a href="../com/commercetools/api/models/product_selection/ProductVariantSelectionIncludeAllExceptBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductVariantSelectionIncludeAllExceptBuilder</a></dt>
 <dd>
@@ -10853,6 +10990,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Customer is assigned to.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#plusStores(com.commercetools.api.models.store.StoreKeyReference...)" class="member-name-link">plusStores(StoreKeyReference...)</a> - Method in class com.commercetools.api.models.discount_code.<a href="../com/commercetools/api/models/discount_code/DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Stores the DiscountCode is associated with, derived from the <code>stores</code> field of each referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a>.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/error/GraphQLStoreCartDiscountsLimitReachedErrorBuilder.html#plusStores(com.commercetools.api.models.store.StoreKeyReference...)" class="member-name-link">plusStores(StoreKeyReference...)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLStoreCartDiscountsLimitReachedErrorBuilder.html" title="class in com.commercetools.api.models.error">GraphQLStoreCartDiscountsLimitReachedErrorBuilder</a></dt>
 <dd>
 <div class="block">Stores for which the limit for active Cart Discounts that can exist has been reached.</div>
@@ -10985,6 +11126,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Customer is assigned to.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/discount_code/DiscountCodeBuilder.html#plusStores(java.util.function.Function)" class="member-name-link">plusStores(Function&lt;StoreKeyReferenceBuilder, StoreKeyReferenceBuilder&gt;)</a> - Method in class com.commercetools.api.models.discount_code.<a href="../com/commercetools/api/models/discount_code/DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Stores the DiscountCode is associated with, derived from the <code>stores</code> field of each referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a>.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/error/GraphQLStoreCartDiscountsLimitReachedErrorBuilder.html#plusStores(java.util.function.Function)" class="member-name-link">plusStores(Function&lt;StoreKeyReferenceBuilder, StoreKeyReferenceBuilder&gt;)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLStoreCartDiscountsLimitReachedErrorBuilder.html" title="class in com.commercetools.api.models.error">GraphQLStoreCartDiscountsLimitReachedErrorBuilder</a></dt>
 <dd>
 <div class="block">Stores for which the limit for active Cart Discounts that can exist has been reached.</div>
@@ -11097,6 +11242,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/importapi/models/customers/CustomerImportBuilder.html#plusStores(java.util.function.Function)" class="member-name-link">plusStores(Function&lt;StoreKeyReferenceBuilder, StoreKeyReferenceBuilder&gt;)</a> - Method in class com.commercetools.importapi.models.customers.<a href="../com/commercetools/importapi/models/customers/CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></dt>
 <dd>
 <div class="block">Maps to <code>Customer.stores</code>.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/error/GraphQLUnauthorizedErrorBuilder.html#plusStoresWithoutPermission(java.lang.String...)" class="member-name-link">plusStoresWithoutPermission(String...)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLUnauthorizedErrorBuilder.html" title="class in com.commercetools.api.models.error">GraphQLUnauthorizedErrorBuilder</a></dt>
+<dd>
+<div class="block">Keys of <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> for which the required permission to modify is missing.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/error/UnauthorizedErrorBuilder.html#plusStoresWithoutPermission(java.lang.String...)" class="member-name-link">plusStoresWithoutPermission(String...)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/UnauthorizedErrorBuilder.html" title="class in com.commercetools.api.models.error">UnauthorizedErrorBuilder</a></dt>
+<dd>
+<div class="block">Keys of <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> for which the required permission to modify is missing.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/cart/ExternalTaxRateDraftBuilder.html#plusSubRates(com.commercetools.api.models.tax_category.SubRate...)" class="member-name-link">plusSubRates(SubRate...)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/ExternalTaxRateDraftBuilder.html" title="class in com.commercetools.api.models.cart">ExternalTaxRateDraftBuilder</a></dt>
 <dd>
@@ -11404,10 +11557,12 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/TermFacetResultBuilder.html#plusTerms(com.commercetools.api.models.product.FacetTerm...)" class="member-name-link">plusTerms(FacetTerm...)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">Values for the field specified in <span>term facet expression</span> for which at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> could be found.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/TermFacetResultBuilder.html#plusTerms(java.util.function.Function)" class="member-name-link">plusTerms(Function&lt;FacetTermBuilder, FacetTermBuilder&gt;)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">Values for the field specified in <span>term facet expression</span> for which at least one <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> could be found.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/me/MyShoppingListChangeTextLineItemsOrderActionBuilder.html#plusTextLineItemOrder(java.lang.String...)" class="member-name-link">plusTextLineItemOrder(String...)</a> - Method in class com.commercetools.api.models.me.<a href="../com/commercetools/api/models/me/MyShoppingListChangeTextLineItemsOrderActionBuilder.html" title="class in com.commercetools.api.models.me">MyShoppingListChangeTextLineItemsOrderActionBuilder</a></dt>
@@ -11601,6 +11756,50 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/importapi/models/orders/ShippingRateDraftBuilder.html#plusTiers(java.util.function.Function)" class="member-name-link">plusTiers(Function&lt;ShippingRatePriceTierBuilder, Builder&lt;? extends ShippingRatePriceTier&gt;&gt;)</a> - Method in class com.commercetools.importapi.models.orders.<a href="../com/commercetools/importapi/models/orders/ShippingRateDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ShippingRateDraftBuilder</a></dt>
 <dd>
 <div class="block">Price tiers for the ShippingRate.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigBuilder.html#plusToolCustomizations(com.commercetools.api.models.mcp_server.ToolCustomization...)" class="member-name-link">plusToolCustomizations(ToolCustomization...)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigBuilder.html" title="class in com.commercetools.api.models.mcp_server">CommerceMcpServerConfigBuilder</a></dt>
+<dd>
+<div class="block">Per-tool customizations applied at <code>tools/list</code> and <code>tools/call</code> time, such as overriding a tool's description or constraining its parameters.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigDraftBuilder.html#plusToolCustomizations(com.commercetools.api.models.mcp_server.ToolCustomization...)" class="member-name-link">plusToolCustomizations(ToolCustomization...)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigDraftBuilder.html" title="class in com.commercetools.api.models.mcp_server">CommerceMcpServerConfigDraftBuilder</a></dt>
+<dd>
+<div class="block">Per-tool customizations applied at <code>tools/list</code> and <code>tools/call</code> time, such as overriding a tool's description or constraining its parameters.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerSetToolCustomizationsActionBuilder.html#plusToolCustomizations(com.commercetools.api.models.mcp_server.ToolCustomization...)" class="member-name-link">plusToolCustomizations(ToolCustomization...)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerSetToolCustomizationsActionBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerSetToolCustomizationsActionBuilder</a></dt>
+<dd>
+<div class="block">New list of tool customizations.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigBuilder.html#plusToolCustomizations(java.util.function.Function)" class="member-name-link">plusToolCustomizations(Function&lt;ToolCustomizationBuilder, ToolCustomizationBuilder&gt;)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigBuilder.html" title="class in com.commercetools.api.models.mcp_server">CommerceMcpServerConfigBuilder</a></dt>
+<dd>
+<div class="block">Per-tool customizations applied at <code>tools/list</code> and <code>tools/call</code> time, such as overriding a tool's description or constraining its parameters.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigDraftBuilder.html#plusToolCustomizations(java.util.function.Function)" class="member-name-link">plusToolCustomizations(Function&lt;ToolCustomizationBuilder, ToolCustomizationBuilder&gt;)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigDraftBuilder.html" title="class in com.commercetools.api.models.mcp_server">CommerceMcpServerConfigDraftBuilder</a></dt>
+<dd>
+<div class="block">Per-tool customizations applied at <code>tools/list</code> and <code>tools/call</code> time, such as overriding a tool's description or constraining its parameters.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerSetToolCustomizationsActionBuilder.html#plusToolCustomizations(java.util.function.Function)" class="member-name-link">plusToolCustomizations(Function&lt;ToolCustomizationBuilder, ToolCustomizationBuilder&gt;)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerSetToolCustomizationsActionBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerSetToolCustomizationsActionBuilder</a></dt>
+<dd>
+<div class="block">New list of tool customizations.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigBuilder.html#plusTools(com.commercetools.api.models.mcp_server.McpServerTool...)" class="member-name-link">plusTools(McpServerTool...)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigBuilder.html" title="class in com.commercetools.api.models.mcp_server">CommerceMcpServerConfigBuilder</a></dt>
+<dd>
+<div class="block">List of tools enabled for this MCP Server.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigDraftBuilder.html#plusTools(com.commercetools.api.models.mcp_server.McpServerTool...)" class="member-name-link">plusTools(McpServerTool...)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigDraftBuilder.html" title="class in com.commercetools.api.models.mcp_server">CommerceMcpServerConfigDraftBuilder</a></dt>
+<dd>
+<div class="block">List of tools to enable for this MCP Server.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerSetToolsActionBuilder.html#plusTools(com.commercetools.api.models.mcp_server.McpServerTool...)" class="member-name-link">plusTools(McpServerTool...)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerSetToolsActionBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerSetToolsActionBuilder</a></dt>
+<dd>
+<div class="block">New list of tools to set.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerTypeBuilder.html#plusTools(com.commercetools.api.models.mcp_server.McpServerTypeTool...)" class="member-name-link">plusTools(McpServerTypeTool...)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerTypeBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerTypeBuilder</a></dt>
+<dd>
+<div class="block">Tools available for this MCP Server type and major version.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerTypeBuilder.html#plusTools(java.util.function.Function)" class="member-name-link">plusTools(Function&lt;McpServerTypeToolBuilder, McpServerTypeToolBuilder&gt;)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerTypeBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerTypeBuilder</a></dt>
+<dd>
+<div class="block">Tools available for this MCP Server type and major version.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/me/MyPaymentBuilder.html#plusTransactions(com.commercetools.api.models.payment.Transaction...)" class="member-name-link">plusTransactions(Transaction...)</a> - Method in class com.commercetools.api.models.me.<a href="../com/commercetools/api/models/me/MyPaymentBuilder.html" title="class in com.commercetools.api.models.me">MyPaymentBuilder</a></dt>
 <dd>
@@ -12032,6 +12231,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">An array of related ProductVariants.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesCartSuccessBuilder.html#plusWarnings(com.commercetools.api.models.warning.WarningObject...)" class="member-name-link">plusWarnings(WarningObject...)</a> - Method in class com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesCartSuccessBuilder.html" title="class in com.commercetools.api.models.agent">AgentResponsesCartSuccessBuilder</a></dt>
+<dd>
+<div class="block">Non-fatal issues encountered while processing the request.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesQuoteRequestSuccessBuilder.html#plusWarnings(com.commercetools.api.models.warning.WarningObject...)" class="member-name-link">plusWarnings(WarningObject...)</a> - Method in class com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesQuoteRequestSuccessBuilder.html" title="class in com.commercetools.api.models.agent">AgentResponsesQuoteRequestSuccessBuilder</a></dt>
+<dd>
+<div class="block">Non-fatal issues encountered while processing the request.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/cart/CartBuilder.html#plusWarnings(com.commercetools.api.models.warning.WarningObject...)" class="member-name-link">plusWarnings(WarningObject...)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/CartBuilder.html" title="class in com.commercetools.api.models.cart">CartBuilder</a></dt>
 <dd>
 <div class="block">Warnings about the processing of a request.</div>
@@ -12044,6 +12251,18 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Warnings about processing of a request.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/variant/VariantBuilder.html#plusWarnings(com.commercetools.api.models.warning.WarningObject...)" class="member-name-link">plusWarnings(WarningObject...)</a> - Method in class com.commercetools.api.models.variant.<a href="../com/commercetools/api/models/variant/VariantBuilder.html" title="class in com.commercetools.api.models.variant">VariantBuilder</a></dt>
+<dd>
+<div class="block">Warnings about processing of a request.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesCartSuccessBuilder.html#plusWarnings(java.util.function.Function)" class="member-name-link">plusWarnings(Function&lt;WarningObjectBuilder, Builder&lt;? extends WarningObject&gt;&gt;)</a> - Method in class com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesCartSuccessBuilder.html" title="class in com.commercetools.api.models.agent">AgentResponsesCartSuccessBuilder</a></dt>
+<dd>
+<div class="block">Non-fatal issues encountered while processing the request.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesQuoteRequestSuccessBuilder.html#plusWarnings(java.util.function.Function)" class="member-name-link">plusWarnings(Function&lt;WarningObjectBuilder, Builder&lt;? extends WarningObject&gt;&gt;)</a> - Method in class com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesQuoteRequestSuccessBuilder.html" title="class in com.commercetools.api.models.agent">AgentResponsesQuoteRequestSuccessBuilder</a></dt>
+<dd>
+<div class="block">Non-fatal issues encountered while processing the request.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/cart/CartBuilder.html#plusWarnings(java.util.function.Function)" class="member-name-link">plusWarnings(Function&lt;WarningObjectBuilder, Builder&lt;? extends WarningObject&gt;&gt;)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/CartBuilder.html" title="class in com.commercetools.api.models.cart">CartBuilder</a></dt>
 <dd>
 <div class="block">Warnings about the processing of a request.</div>
@@ -12053,6 +12272,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Warnings about processing of a request.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/ProductBuilder.html#plusWarnings(java.util.function.Function)" class="member-name-link">plusWarnings(Function&lt;WarningObjectBuilder, Builder&lt;? extends WarningObject&gt;&gt;)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/ProductBuilder.html" title="class in com.commercetools.api.models.product">ProductBuilder</a></dt>
+<dd>
+<div class="block">Warnings about processing of a request.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/variant/VariantBuilder.html#plusWarnings(java.util.function.Function)" class="member-name-link">plusWarnings(Function&lt;WarningObjectBuilder, Builder&lt;? extends WarningObject&gt;&gt;)</a> - Method in class com.commercetools.api.models.variant.<a href="../com/commercetools/api/models/variant/VariantBuilder.html" title="class in com.commercetools.api.models.variant">VariantBuilder</a></dt>
 <dd>
 <div class="block">Warnings about processing of a request.</div>
 </dd>
@@ -12160,7 +12383,13 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Position in <code>images</code> where the image should be moved.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/variant/VariantMoveImageToPositionActionBuilder.html#position(java.lang.Long)" class="member-name-link">position(Long)</a> - Method in class com.commercetools.api.models.variant.<a href="../com/commercetools/api/models/variant/VariantMoveImageToPositionActionBuilder.html" title="class in com.commercetools.api.models.variant">VariantMoveImageToPositionActionBuilder</a></dt>
+<dd>
+<div class="block">Position in <code>images</code> where the image should be moved.</div>
+</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyProductProjectionsSearchRequestBuilder.html#post()" class="member-name-link">post()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyProductProjectionsSearchRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsSearchRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyAgentsIntakeV1ResponsesRequestBuilder.html#post(com.commercetools.api.models.agent.AgentResponsesRequest)" class="member-name-link">post(AgentResponsesRequest)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAgentsIntakeV1ResponsesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAgentsIntakeV1ResponsesRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyApiClientsRequestBuilder.html#post(com.commercetools.api.models.api_client.ApiClientDraft)" class="member-name-link">post(ApiClientDraft)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyApiClientsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyApiClientsRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
@@ -12377,6 +12606,12 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyInventoryByIDRequestBuilder.html#post(com.commercetools.api.models.inventory.InventoryEntryUpdate)" class="member-name-link">post(InventoryEntryUpdate)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyInventoryByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInventoryByIDRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyInventoryKeyByKeyRequestBuilder.html#post(com.commercetools.api.models.inventory.InventoryEntryUpdate)" class="member-name-link">post(InventoryEntryUpdate)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyInventoryKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInventoryKeyByKeyRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyMcpServersRequestBuilder.html#post(com.commercetools.api.models.mcp_server.McpServerDraft)" class="member-name-link">post(McpServerDraft)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMcpServersRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMcpServersRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyMcpServersByIDRequestBuilder.html#post(com.commercetools.api.models.mcp_server.McpServerUpdate)" class="member-name-link">post(McpServerUpdate)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMcpServersByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMcpServersByIDRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyMcpServersKeyByKeyRequestBuilder.html#post(com.commercetools.api.models.mcp_server.McpServerUpdate)" class="member-name-link">post(McpServerUpdate)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMcpServersKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMcpServersKeyByKeyRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersRequestBuilder.html#post(com.commercetools.api.models.me.MyBusinessUnitAssociateDraft)" class="member-name-link">post(MyBusinessUnitAssociateDraft)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
@@ -12748,6 +12983,10 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyProductsByIDImagesRequestBuilder.html#post(java.io.File)" class="member-name-link">post(File)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyProductsByIDImagesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyProductsByIDImagesRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyVariantsByIDImagesRequestBuilder.html#post(java.io.File)" class="member-name-link">post(File)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyVariantsByIDImagesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyVariantsByIDImagesRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyAgentsIntakeV1ResponsesRequestBuilder.html#post(java.lang.String)" class="member-name-link">post(String)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAgentsIntakeV1ResponsesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAgentsIntakeV1ResponsesRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyApiClientsRequestBuilder.html#post(java.lang.String)" class="member-name-link">post(String)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyApiClientsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyApiClientsRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdBusinessUnitsByIDRequestBuilder.html#post(java.lang.String)" class="member-name-link">post(String)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdBusinessUnitsByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAsAssociateByAssociateIdBusinessUnitsByIDRequestBuilder</a></dt>
@@ -13001,6 +13240,12 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyInventoryRequestBuilder.html#post(java.lang.String)" class="member-name-link">post(String)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyInventoryRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInventoryRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyLoginRequestBuilder.html#post(java.lang.String)" class="member-name-link">post(String)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyLoginRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyLoginRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyMcpServersByIDRequestBuilder.html#post(java.lang.String)" class="member-name-link">post(String)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMcpServersByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMcpServersByIDRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyMcpServersKeyByKeyRequestBuilder.html#post(java.lang.String)" class="member-name-link">post(String)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMcpServersKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMcpServersKeyByKeyRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyMcpServersRequestBuilder.html#post(java.lang.String)" class="member-name-link">post(String)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMcpServersRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMcpServersRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyMeBusinessUnitsByIDRequestBuilder.html#post(java.lang.String)" class="member-name-link">post(String)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMeBusinessUnitsByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMeBusinessUnitsByIDRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
@@ -13264,6 +13509,8 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyMeBusinessUnitsRequestBuilder.html#post(java.util.function.Function)" class="member-name-link">post(Function&lt;MyBusinessUnitDraftBuilder, Builder&lt;? extends MyBusinessUnitDraft&gt;&gt;)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMeBusinessUnitsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMeBusinessUnitsRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyAgentsIntakeV1ResponsesRequestBuilder.html#post(java.util.function.UnaryOperator)" class="member-name-link">post(UnaryOperator&lt;AgentResponsesRequestBuilder&gt;)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAgentsIntakeV1ResponsesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAgentsIntakeV1ResponsesRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyApiClientsRequestBuilder.html#post(java.util.function.UnaryOperator)" class="member-name-link">post(UnaryOperator&lt;ApiClientDraftBuilder&gt;)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyApiClientsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyApiClientsRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsByIDRequestBuilder.html#post(java.util.function.UnaryOperator)" class="member-name-link">post(UnaryOperator&lt;ApprovalFlowUpdateBuilder&gt;)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsByIDRequestBuilder</a></dt>
@@ -13447,6 +13694,12 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyInventoryByIDRequestBuilder.html#post(java.util.function.UnaryOperator)" class="member-name-link">post(UnaryOperator&lt;InventoryEntryUpdateBuilder&gt;)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyInventoryByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInventoryByIDRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyInventoryKeyByKeyRequestBuilder.html#post(java.util.function.UnaryOperator)" class="member-name-link">post(UnaryOperator&lt;InventoryEntryUpdateBuilder&gt;)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyInventoryKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInventoryKeyByKeyRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyMcpServersRequestBuilder.html#post(java.util.function.UnaryOperator)" class="member-name-link">post(UnaryOperator&lt;McpServerDraftBuilder&gt;)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMcpServersRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMcpServersRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyMcpServersByIDRequestBuilder.html#post(java.util.function.UnaryOperator)" class="member-name-link">post(UnaryOperator&lt;McpServerUpdateBuilder&gt;)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMcpServersByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMcpServersByIDRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyMcpServersKeyByKeyRequestBuilder.html#post(java.util.function.UnaryOperator)" class="member-name-link">post(UnaryOperator&lt;McpServerUpdateBuilder&gt;)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMcpServersKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMcpServersKeyByKeyRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersRequestBuilder.html#post(java.util.function.UnaryOperator)" class="member-name-link">post(UnaryOperator&lt;MyBusinessUnitAssociateDraftBuilder&gt;)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
@@ -13818,9 +14071,9 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/predicates/query/CollectionPredicateBuilder.html#predicate()" class="member-name-link">predicate()</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/CollectionPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">CollectionPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="../com/commercetools/api/predicates/query/StringComparisonPredicateBuilder.html#predicate()" class="member-name-link">predicate()</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/StringComparisonPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">StringComparisonPredicateBuilder</a></dt>
+<dt><a href="../com/commercetools/api/predicates/query/ContainsPredicateBuilder.html#predicate()" class="member-name-link">predicate()</a> - Method in interface com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/ContainsPredicateBuilder.html" title="interface in com.commercetools.api.predicates.query">ContainsPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="../com/commercetools/api/predicates/query/StringComparisonPredicateBuilder.html#predicate()" class="member-name-link">predicate()</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/StringComparisonPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">StringComparisonPredicateBuilder</a></dt>
+<dt><a href="../com/commercetools/api/predicates/query/TimeComparisonPredicateBuilder.html#predicate()" class="member-name-link">predicate()</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/TimeComparisonPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">TimeComparisonPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/predicates/query/EmptyPredicateBuilder.html#predicate()" class="member-name-link">predicate()</a> - Method in interface com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/EmptyPredicateBuilder.html" title="interface in com.commercetools.api.predicates.query">EmptyPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
@@ -17329,6 +17582,22 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/history/models/common/ChannelRoleEnum.html#PRIMARY" class="member-name-link">PRIMARY</a> - Static variable in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ChannelRoleEnum.html" title="interface in com.commercetools.history.models.common">ChannelRoleEnum</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/message/StorePrivacyPolicyUrlSetMessageBuilder.html#privacyPolicyUrl(java.lang.String)" class="member-name-link">privacyPolicyUrl(String)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StorePrivacyPolicyUrlSetMessageBuilder.html" title="class in com.commercetools.api.models.message">StorePrivacyPolicyUrlSetMessageBuilder</a></dt>
+<dd>
+<div class="block">The <code>privacyPolicyUrl</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetPrivacyPolicyUrlAction" rel="nofollow">Set Privacy Policy Url</a> update action.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StorePrivacyPolicyUrlSetMessagePayloadBuilder.html#privacyPolicyUrl(java.lang.String)" class="member-name-link">privacyPolicyUrl(String)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StorePrivacyPolicyUrlSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StorePrivacyPolicyUrlSetMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">The <code>privacyPolicyUrl</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSetPrivacyPolicyUrlAction" rel="nofollow">Set Privacy Policy Url</a> update action.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/store/StorefrontBuilder.html#privacyPolicyUrl(java.lang.String)" class="member-name-link">privacyPolicyUrl(String)</a> - Method in class com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StorefrontBuilder.html" title="class in com.commercetools.api.models.store">StorefrontBuilder</a></dt>
+<dd>
+<div class="block">Absolute <code>https</code> URL of the storefront's privacy policy page.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/store/StoreSetPrivacyPolicyUrlActionBuilder.html#privacyPolicyUrl(java.lang.String)" class="member-name-link">privacyPolicyUrl(String)</a> - Method in class com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreSetPrivacyPolicyUrlActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetPrivacyPolicyUrlActionBuilder</a></dt>
+<dd>
+<div class="block">Value to set.</div>
+</dd>
 <dt><a href="../com/commercetools/importapi/models/importsummaries/OperationStatesBuilder.html#processing(java.lang.Long)" class="member-name-link">processing(Long)</a> - Method in class com.commercetools.importapi.models.importsummaries.<a href="../com/commercetools/importapi/models/importsummaries/OperationStatesBuilder.html" title="class in com.commercetools.importapi.models.importsummaries">OperationStatesBuilder</a></dt>
 <dd>
 <div class="block">The number of ImportOperations in the <code>processing</code> state.</div>
@@ -17379,6 +17648,8 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/predicates/expansion/message/ProductTailoringImagesSetMessageExpansionBuilderDsl.html#product()" class="member-name-link">product()</a> - Method in class com.commercetools.api.predicates.expansion.message.<a href="../com/commercetools/api/predicates/expansion/message/ProductTailoringImagesSetMessageExpansionBuilderDsl.html" title="class in com.commercetools.api.predicates.expansion.message">ProductTailoringImagesSetMessageExpansionBuilderDsl</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/predicates/expansion/message/ProductTailoringKeySetMessageExpansionBuilderDsl.html#product()" class="member-name-link">product()</a> - Method in class com.commercetools.api.predicates.expansion.message.<a href="../com/commercetools/api/predicates/expansion/message/ProductTailoringKeySetMessageExpansionBuilderDsl.html" title="class in com.commercetools.api.predicates.expansion.message">ProductTailoringKeySetMessageExpansionBuilderDsl</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/predicates/expansion/message/ProductTailoringNameSetMessageExpansionBuilderDsl.html#product()" class="member-name-link">product()</a> - Method in class com.commercetools.api.predicates.expansion.message.<a href="../com/commercetools/api/predicates/expansion/message/ProductTailoringNameSetMessageExpansionBuilderDsl.html" title="class in com.commercetools.api.predicates.expansion.message">ProductTailoringNameSetMessageExpansionBuilderDsl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/predicates/expansion/message/ProductTailoringPublishedMessageExpansionBuilderDsl.html#product()" class="member-name-link">product()</a> - Method in class com.commercetools.api.predicates.expansion.message.<a href="../com/commercetools/api/predicates/expansion/message/ProductTailoringPublishedMessageExpansionBuilderDsl.html" title="class in com.commercetools.api.predicates.expansion.message">ProductTailoringPublishedMessageExpansionBuilderDsl</a></dt>
@@ -17390,6 +17661,22 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/predicates/expansion/message/ProductVariantTailoringAddedMessageExpansionBuilderDsl.html#product()" class="member-name-link">product()</a> - Method in class com.commercetools.api.predicates.expansion.message.<a href="../com/commercetools/api/predicates/expansion/message/ProductVariantTailoringAddedMessageExpansionBuilderDsl.html" title="class in com.commercetools.api.predicates.expansion.message">ProductVariantTailoringAddedMessageExpansionBuilderDsl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/predicates/expansion/message/ProductVariantTailoringRemovedMessageExpansionBuilderDsl.html#product()" class="member-name-link">product()</a> - Method in class com.commercetools.api.predicates.expansion.message.<a href="../com/commercetools/api/predicates/expansion/message/ProductVariantTailoringRemovedMessageExpansionBuilderDsl.html" title="class in com.commercetools.api.predicates.expansion.message">ProductVariantTailoringRemovedMessageExpansionBuilderDsl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/predicates/expansion/message/VariantCreatedMessageExpansionBuilderDsl.html#product()" class="member-name-link">product()</a> - Method in class com.commercetools.api.predicates.expansion.message.<a href="../com/commercetools/api/predicates/expansion/message/VariantCreatedMessageExpansionBuilderDsl.html" title="class in com.commercetools.api.predicates.expansion.message">VariantCreatedMessageExpansionBuilderDsl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/predicates/expansion/message/VariantDeletedMessageExpansionBuilderDsl.html#product()" class="member-name-link">product()</a> - Method in class com.commercetools.api.predicates.expansion.message.<a href="../com/commercetools/api/predicates/expansion/message/VariantDeletedMessageExpansionBuilderDsl.html" title="class in com.commercetools.api.predicates.expansion.message">VariantDeletedMessageExpansionBuilderDsl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/predicates/expansion/message/VariantImageAddedMessageExpansionBuilderDsl.html#product()" class="member-name-link">product()</a> - Method in class com.commercetools.api.predicates.expansion.message.<a href="../com/commercetools/api/predicates/expansion/message/VariantImageAddedMessageExpansionBuilderDsl.html" title="class in com.commercetools.api.predicates.expansion.message">VariantImageAddedMessageExpansionBuilderDsl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/predicates/expansion/message/VariantImagesSetMessageExpansionBuilderDsl.html#product()" class="member-name-link">product()</a> - Method in class com.commercetools.api.predicates.expansion.message.<a href="../com/commercetools/api/predicates/expansion/message/VariantImagesSetMessageExpansionBuilderDsl.html" title="class in com.commercetools.api.predicates.expansion.message">VariantImagesSetMessageExpansionBuilderDsl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/predicates/expansion/message/VariantKeySetMessageExpansionBuilderDsl.html#product()" class="member-name-link">product()</a> - Method in class com.commercetools.api.predicates.expansion.message.<a href="../com/commercetools/api/predicates/expansion/message/VariantKeySetMessageExpansionBuilderDsl.html" title="class in com.commercetools.api.predicates.expansion.message">VariantKeySetMessageExpansionBuilderDsl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/predicates/expansion/message/VariantPublishedMessageExpansionBuilderDsl.html#product()" class="member-name-link">product()</a> - Method in class com.commercetools.api.predicates.expansion.message.<a href="../com/commercetools/api/predicates/expansion/message/VariantPublishedMessageExpansionBuilderDsl.html" title="class in com.commercetools.api.predicates.expansion.message">VariantPublishedMessageExpansionBuilderDsl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/predicates/expansion/message/VariantSkuSetMessageExpansionBuilderDsl.html#product()" class="member-name-link">product()</a> - Method in class com.commercetools.api.predicates.expansion.message.<a href="../com/commercetools/api/predicates/expansion/message/VariantSkuSetMessageExpansionBuilderDsl.html" title="class in com.commercetools.api.predicates.expansion.message">VariantSkuSetMessageExpansionBuilderDsl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/predicates/expansion/message/VariantStagedChangesRemovedMessageExpansionBuilderDsl.html#product()" class="member-name-link">product()</a> - Method in class com.commercetools.api.predicates.expansion.message.<a href="../com/commercetools/api/predicates/expansion/message/VariantStagedChangesRemovedMessageExpansionBuilderDsl.html" title="class in com.commercetools.api.predicates.expansion.message">VariantStagedChangesRemovedMessageExpansionBuilderDsl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/predicates/expansion/message/VariantUnpublishedMessageExpansionBuilderDsl.html#product()" class="member-name-link">product()</a> - Method in class com.commercetools.api.predicates.expansion.message.<a href="../com/commercetools/api/predicates/expansion/message/VariantUnpublishedMessageExpansionBuilderDsl.html" title="class in com.commercetools.api.predicates.expansion.message">VariantUnpublishedMessageExpansionBuilderDsl</a></dt>
 <dd>&nbsp;</dd>
@@ -17501,6 +17788,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Reference to the Product the Product Tailoring belongs to.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessageBuilder.html#product(com.commercetools.api.models.product.ProductReference)" class="member-name-link">product(ProductReference)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductTailoringKeySetMessageBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product the Product Tailoring belongs to.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessagePayloadBuilder.html#product(com.commercetools.api.models.product.ProductReference)" class="member-name-link">product(ProductReference)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductTailoringKeySetMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product the Product Tailoring belongs to.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/ProductTailoringNameSetMessageBuilder.html#product(com.commercetools.api.models.product.ProductReference)" class="member-name-link">product(ProductReference)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ProductTailoringNameSetMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductTailoringNameSetMessageBuilder</a></dt>
 <dd>
 <div class="block">Reference to the Product the Product Tailoring belongs to.</div>
@@ -17549,13 +17844,77 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Reference to the Product the Product Tailoring belongs to.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/VariantCreatedMessageBuilder.html#product(com.commercetools.api.models.product.ProductReference)" class="member-name-link">product(ProductReference)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantCreatedMessageBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessageBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/VariantCreatedMessagePayloadBuilder.html#product(com.commercetools.api.models.product.ProductReference)" class="member-name-link">product(ProductReference)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/VariantDeletedMessageBuilder.html#product(com.commercetools.api.models.product.ProductReference)" class="member-name-link">product(ProductReference)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantDeletedMessageBuilder.html" title="class in com.commercetools.api.models.message">VariantDeletedMessageBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/VariantDeletedMessagePayloadBuilder.html#product(com.commercetools.api.models.product.ProductReference)" class="member-name-link">product(ProductReference)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantDeletedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantDeletedMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/VariantImageAddedMessageBuilder.html#product(com.commercetools.api.models.product.ProductReference)" class="member-name-link">product(ProductReference)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantImageAddedMessageBuilder.html" title="class in com.commercetools.api.models.message">VariantImageAddedMessageBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/VariantImageAddedMessagePayloadBuilder.html#product(com.commercetools.api.models.product.ProductReference)" class="member-name-link">product(ProductReference)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantImageAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantImageAddedMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/VariantImagesSetMessageBuilder.html#product(com.commercetools.api.models.product.ProductReference)" class="member-name-link">product(ProductReference)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantImagesSetMessageBuilder.html" title="class in com.commercetools.api.models.message">VariantImagesSetMessageBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/VariantImagesSetMessagePayloadBuilder.html#product(com.commercetools.api.models.product.ProductReference)" class="member-name-link">product(ProductReference)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantImagesSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantImagesSetMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/VariantKeySetMessageBuilder.html#product(com.commercetools.api.models.product.ProductReference)" class="member-name-link">product(ProductReference)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantKeySetMessageBuilder.html" title="class in com.commercetools.api.models.message">VariantKeySetMessageBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/VariantKeySetMessagePayloadBuilder.html#product(com.commercetools.api.models.product.ProductReference)" class="member-name-link">product(ProductReference)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantKeySetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantKeySetMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/VariantPublishedMessageBuilder.html#product(com.commercetools.api.models.product.ProductReference)" class="member-name-link">product(ProductReference)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantPublishedMessageBuilder.html" title="class in com.commercetools.api.models.message">VariantPublishedMessageBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/VariantPublishedMessagePayloadBuilder.html#product(com.commercetools.api.models.product.ProductReference)" class="member-name-link">product(ProductReference)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantPublishedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantPublishedMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/VariantSkuSetMessageBuilder.html#product(com.commercetools.api.models.product.ProductReference)" class="member-name-link">product(ProductReference)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantSkuSetMessageBuilder.html" title="class in com.commercetools.api.models.message">VariantSkuSetMessageBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/VariantSkuSetMessagePayloadBuilder.html#product(com.commercetools.api.models.product.ProductReference)" class="member-name-link">product(ProductReference)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantSkuSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantSkuSetMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/VariantStagedChangesRemovedMessageBuilder.html#product(com.commercetools.api.models.product.ProductReference)" class="member-name-link">product(ProductReference)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantStagedChangesRemovedMessageBuilder.html" title="class in com.commercetools.api.models.message">VariantStagedChangesRemovedMessageBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/VariantStagedChangesRemovedMessagePayloadBuilder.html#product(com.commercetools.api.models.product.ProductReference)" class="member-name-link">product(ProductReference)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantStagedChangesRemovedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantStagedChangesRemovedMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/VariantUnpublishedMessageBuilder.html#product(com.commercetools.api.models.product.ProductReference)" class="member-name-link">product(ProductReference)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantUnpublishedMessageBuilder.html" title="class in com.commercetools.api.models.message">VariantUnpublishedMessageBuilder</a></dt>
 <dd>
-<div class="block">Reference to the Product containing the Variant that was unpublished.</div>
+<div class="block">Reference to the Product containing the Variant.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/VariantUnpublishedMessagePayloadBuilder.html#product(com.commercetools.api.models.product.ProductReference)" class="member-name-link">product(ProductReference)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantUnpublishedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantUnpublishedMessagePayloadBuilder</a></dt>
 <dd>
-<div class="block">Reference to the Product containing the Variant that was unpublished.</div>
+<div class="block">Reference to the Product containing the Variant.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_selection/AssignedProductReferenceBuilder.html#product(com.commercetools.api.models.product.ProductReference)" class="member-name-link">product(ProductReference)</a> - Method in class com.commercetools.api.models.product_selection.<a href="../com/commercetools/api/models/product_selection/AssignedProductReferenceBuilder.html" title="class in com.commercetools.api.models.product_selection">AssignedProductReferenceBuilder</a></dt>
 <dd>
@@ -17753,6 +18112,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Reference to the Product the Product Tailoring belongs to.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessageBuilder.html#product(java.util.function.Function)" class="member-name-link">product(Function&lt;ProductReferenceBuilder, ProductReferenceBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductTailoringKeySetMessageBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product the Product Tailoring belongs to.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessagePayloadBuilder.html#product(java.util.function.Function)" class="member-name-link">product(Function&lt;ProductReferenceBuilder, ProductReferenceBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductTailoringKeySetMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product the Product Tailoring belongs to.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/ProductTailoringNameSetMessageBuilder.html#product(java.util.function.Function)" class="member-name-link">product(Function&lt;ProductReferenceBuilder, ProductReferenceBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ProductTailoringNameSetMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductTailoringNameSetMessageBuilder</a></dt>
 <dd>
 <div class="block">Reference to the Product the Product Tailoring belongs to.</div>
@@ -17801,13 +18168,77 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Reference to the Product the Product Tailoring belongs to.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/VariantCreatedMessageBuilder.html#product(java.util.function.Function)" class="member-name-link">product(Function&lt;ProductReferenceBuilder, ProductReferenceBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantCreatedMessageBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessageBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/VariantCreatedMessagePayloadBuilder.html#product(java.util.function.Function)" class="member-name-link">product(Function&lt;ProductReferenceBuilder, ProductReferenceBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/VariantDeletedMessageBuilder.html#product(java.util.function.Function)" class="member-name-link">product(Function&lt;ProductReferenceBuilder, ProductReferenceBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantDeletedMessageBuilder.html" title="class in com.commercetools.api.models.message">VariantDeletedMessageBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/VariantDeletedMessagePayloadBuilder.html#product(java.util.function.Function)" class="member-name-link">product(Function&lt;ProductReferenceBuilder, ProductReferenceBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantDeletedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantDeletedMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/VariantImageAddedMessageBuilder.html#product(java.util.function.Function)" class="member-name-link">product(Function&lt;ProductReferenceBuilder, ProductReferenceBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantImageAddedMessageBuilder.html" title="class in com.commercetools.api.models.message">VariantImageAddedMessageBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/VariantImageAddedMessagePayloadBuilder.html#product(java.util.function.Function)" class="member-name-link">product(Function&lt;ProductReferenceBuilder, ProductReferenceBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantImageAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantImageAddedMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/VariantImagesSetMessageBuilder.html#product(java.util.function.Function)" class="member-name-link">product(Function&lt;ProductReferenceBuilder, ProductReferenceBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantImagesSetMessageBuilder.html" title="class in com.commercetools.api.models.message">VariantImagesSetMessageBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/VariantImagesSetMessagePayloadBuilder.html#product(java.util.function.Function)" class="member-name-link">product(Function&lt;ProductReferenceBuilder, ProductReferenceBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantImagesSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantImagesSetMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/VariantKeySetMessageBuilder.html#product(java.util.function.Function)" class="member-name-link">product(Function&lt;ProductReferenceBuilder, ProductReferenceBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantKeySetMessageBuilder.html" title="class in com.commercetools.api.models.message">VariantKeySetMessageBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/VariantKeySetMessagePayloadBuilder.html#product(java.util.function.Function)" class="member-name-link">product(Function&lt;ProductReferenceBuilder, ProductReferenceBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantKeySetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantKeySetMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/VariantPublishedMessageBuilder.html#product(java.util.function.Function)" class="member-name-link">product(Function&lt;ProductReferenceBuilder, ProductReferenceBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantPublishedMessageBuilder.html" title="class in com.commercetools.api.models.message">VariantPublishedMessageBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/VariantPublishedMessagePayloadBuilder.html#product(java.util.function.Function)" class="member-name-link">product(Function&lt;ProductReferenceBuilder, ProductReferenceBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantPublishedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantPublishedMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/VariantSkuSetMessageBuilder.html#product(java.util.function.Function)" class="member-name-link">product(Function&lt;ProductReferenceBuilder, ProductReferenceBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantSkuSetMessageBuilder.html" title="class in com.commercetools.api.models.message">VariantSkuSetMessageBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/VariantSkuSetMessagePayloadBuilder.html#product(java.util.function.Function)" class="member-name-link">product(Function&lt;ProductReferenceBuilder, ProductReferenceBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantSkuSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantSkuSetMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/VariantStagedChangesRemovedMessageBuilder.html#product(java.util.function.Function)" class="member-name-link">product(Function&lt;ProductReferenceBuilder, ProductReferenceBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantStagedChangesRemovedMessageBuilder.html" title="class in com.commercetools.api.models.message">VariantStagedChangesRemovedMessageBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/VariantStagedChangesRemovedMessagePayloadBuilder.html#product(java.util.function.Function)" class="member-name-link">product(Function&lt;ProductReferenceBuilder, ProductReferenceBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantStagedChangesRemovedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantStagedChangesRemovedMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">Reference to the Product containing the Variant.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/VariantUnpublishedMessageBuilder.html#product(java.util.function.Function)" class="member-name-link">product(Function&lt;ProductReferenceBuilder, ProductReferenceBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantUnpublishedMessageBuilder.html" title="class in com.commercetools.api.models.message">VariantUnpublishedMessageBuilder</a></dt>
 <dd>
-<div class="block">Reference to the Product containing the Variant that was unpublished.</div>
+<div class="block">Reference to the Product containing the Variant.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/VariantUnpublishedMessagePayloadBuilder.html#product(java.util.function.Function)" class="member-name-link">product(Function&lt;ProductReferenceBuilder, ProductReferenceBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantUnpublishedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantUnpublishedMessagePayloadBuilder</a></dt>
 <dd>
-<div class="block">Reference to the Product containing the Variant that was unpublished.</div>
+<div class="block">Reference to the Product containing the Variant.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_selection/AssignedProductReferenceBuilder.html#product(java.util.function.Function)" class="member-name-link">product(Function&lt;ProductReferenceBuilder, ProductReferenceBuilder&gt;)</a> - Method in class com.commercetools.api.models.product_selection.<a href="../com/commercetools/api/models/product_selection/AssignedProductReferenceBuilder.html" title="class in com.commercetools.api.models.product_selection">AssignedProductReferenceBuilder</a></dt>
 <dd>
@@ -17919,6 +18350,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">product</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/extension/ExtensionResourceTypeId.ExtensionResourceTypeIdEnum.html#PRODUCT" class="member-name-link">PRODUCT</a> - Enum constant in enum class com.commercetools.api.models.extension.<a href="../com/commercetools/api/models/extension/ExtensionResourceTypeId.ExtensionResourceTypeIdEnum.html" title="enum class in com.commercetools.api.models.extension">ExtensionResourceTypeId.ExtensionResourceTypeIdEnum</a></dt>
+<dd>
+<div class="block">product</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/product_type/AttributeLevelEnum.AttributeLevelEnumEnum.html#PRODUCT" class="member-name-link">PRODUCT</a> - Enum constant in enum class com.commercetools.api.models.product_type.<a href="../com/commercetools/api/models/product_type/AttributeLevelEnum.AttributeLevelEnumEnum.html" title="enum class in com.commercetools.api.models.product_type">AttributeLevelEnum.AttributeLevelEnumEnum</a></dt>
 <dd>
 <div class="block">Product</div>
@@ -17970,6 +18405,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/common/ReferenceTypeId.html#PRODUCT" class="member-name-link">PRODUCT</a> - Static variable in interface com.commercetools.api.models.common.<a href="../com/commercetools/api/models/common/ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a></dt>
 <dd>
 <div class="block">References a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/extension/ExtensionResourceTypeId.html#PRODUCT" class="member-name-link">PRODUCT</a> - Static variable in interface com.commercetools.api.models.extension.<a href="../com/commercetools/api/models/extension/ExtensionResourceTypeId.html" title="interface in com.commercetools.api.models.extension">ExtensionResourceTypeId</a></dt>
+<dd>
+<div class="block">Extension triggered for operations on <span>Products</span>.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_type/AttributeLevelEnum.html#PRODUCT" class="member-name-link">PRODUCT</a> - Static variable in interface com.commercetools.api.models.product_type.<a href="../com/commercetools/api/models/product_type/AttributeLevelEnum.html" title="interface in com.commercetools.api.models.product_type">AttributeLevelEnum</a></dt>
 <dd>
@@ -18337,6 +18776,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">discriminator value for ProductRevertedStagedChangesMessagePayload</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentProductSearchNotEnabledError.html#PRODUCT_SEARCH_NOT_ENABLED" class="member-name-link">PRODUCT_SEARCH_NOT_ENABLED</a> - Static variable in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentProductSearchNotEnabledError.html" title="interface in com.commercetools.api.models.agent">AgentProductSearchNotEnabledError</a></dt>
+<dd>
+<div class="block">discriminator value for AgentProductSearchNotEnabledError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentProductSearchNotEnabledError.html#PRODUCT_SEARCH_NOT_ENABLED" class="member-name-link">PRODUCT_SEARCH_NOT_ENABLED</a> - Static variable in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentProductSearchNotEnabledError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentProductSearchNotEnabledError</a></dt>
+<dd>
+<div class="block">discriminator value for GraphQLAgentProductSearchNotEnabledError</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/common/ReferenceTypeId.ReferenceTypeIdEnum.html#PRODUCT_SELECTION" class="member-name-link">PRODUCT_SELECTION</a> - Enum constant in enum class com.commercetools.api.models.common.<a href="../com/commercetools/api/models/common/ReferenceTypeId.ReferenceTypeIdEnum.html" title="enum class in com.commercetools.api.models.common">ReferenceTypeId.ReferenceTypeIdEnum</a></dt>
 <dd>
 <div class="block">product-selection</div>
@@ -18610,6 +19057,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/message/ProductTailoringImagesSetMessagePayload.html#PRODUCT_TAILORING_IMAGES_SET" class="member-name-link">PRODUCT_TAILORING_IMAGES_SET</a> - Static variable in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ProductTailoringImagesSetMessagePayload.html" title="interface in com.commercetools.api.models.message">ProductTailoringImagesSetMessagePayload</a></dt>
 <dd>
 <div class="block">discriminator value for ProductTailoringImagesSetMessagePayload</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessage.html#PRODUCT_TAILORING_KEY_SET" class="member-name-link">PRODUCT_TAILORING_KEY_SET</a> - Static variable in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessage.html" title="interface in com.commercetools.api.models.message">ProductTailoringKeySetMessage</a></dt>
+<dd>
+<div class="block">discriminator value for ProductTailoringKeySetMessage</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessagePayload.html#PRODUCT_TAILORING_KEY_SET" class="member-name-link">PRODUCT_TAILORING_KEY_SET</a> - Static variable in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessagePayload.html" title="interface in com.commercetools.api.models.message">ProductTailoringKeySetMessagePayload</a></dt>
+<dd>
+<div class="block">discriminator value for ProductTailoringKeySetMessagePayload</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/ProductTailoringNameSetMessage.html#PRODUCT_TAILORING_NAME_SET" class="member-name-link">PRODUCT_TAILORING_NAME_SET</a> - Static variable in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ProductTailoringNameSetMessage.html" title="interface in com.commercetools.api.models.message">ProductTailoringNameSetMessage</a></dt>
 <dd>
@@ -19109,14 +19564,17 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/FacetRangeBuilder.html#productCount(java.lang.Long)" class="member-name-link">productCount(Long)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/FacetRangeBuilder.html" title="class in com.commercetools.api.models.product">FacetRangeBuilder</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Products</a> for which the values in a field fall into the specified range.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/FacetTermBuilder.html#productCount(java.lang.Long)" class="member-name-link">productCount(Long)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/FacetTermBuilder.html" title="class in com.commercetools.api.models.product">FacetTermBuilder</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Products</a> for which the <code>term</code> applies.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/FilteredFacetResultBuilder.html#productCount(java.lang.Long)" class="member-name-link">productCount(Long)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/FilteredFacetResultBuilder.html" title="class in com.commercetools.api.models.product">FilteredFacetResultBuilder</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">Number of <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Products</a> matching the value specified in <span>filtered facet expression</span>.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/Message.html#productCreatedBuilder()" class="member-name-link">productCreatedBuilder()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/Message.html" title="interface in com.commercetools.api.models.message">Message</a></dt>
@@ -19849,14 +20307,6 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Unique identifier of a <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</div>
 </dd>
-<dt><a href="../com/commercetools/api/models/message/VariantCreatedMessageBuilder.html#productId(java.lang.String)" class="member-name-link">productId(String)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantCreatedMessageBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessageBuilder</a></dt>
-<dd>
-<div class="block">Unique identifier of the Product to which the Variant belongs.</div>
-</dd>
-<dt><a href="../com/commercetools/api/models/message/VariantCreatedMessagePayloadBuilder.html#productId(java.lang.String)" class="member-name-link">productId(String)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/VariantCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessagePayloadBuilder</a></dt>
-<dd>
-<div class="block">Unique identifier of the Product to which the Variant belongs.</div>
-</dd>
 <dt><a href="../com/commercetools/api/models/order_edit/StagedOrderAddLineItemActionBuilder.html#productId(java.lang.String)" class="member-name-link">productId(String)</a> - Method in class com.commercetools.api.models.order_edit.<a href="../com/commercetools/api/models/order_edit/StagedOrderAddLineItemActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderAddLineItemActionBuilder</a></dt>
 <dd>
 <div class="block"><code>id</code> of the published <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a>.</div>
@@ -19915,7 +20365,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/message/ProductImageAddedMessage.html" class="type-name-link" title="interface in com.commercetools.api.models.message">ProductImageAddedMessage</a> - Interface in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
-<div class="block">Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductAddExternalImageAction" rel="nofollow">Add External Image</a> update action or after the successful <span>upload of an image</span>.</div>
+<div class="block">Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductAddExternalImageAction" rel="nofollow">Add External Image</a> update action or after the successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/products/{id}/images:POST" rel="nofollow">upload of an image</a>.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/ProductImageAddedMessageBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.message">ProductImageAddedMessageBuilder</a> - Class in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
@@ -19930,7 +20380,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/message/ProductImageAddedMessagePayload.html" class="type-name-link" title="interface in com.commercetools.api.models.message">ProductImageAddedMessagePayload</a> - Interface in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
-<div class="block">Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductAddExternalImageAction" rel="nofollow">Add External Image</a> update action or after the successful <span>upload of an image</span>.</div>
+<div class="block">Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductAddExternalImageAction" rel="nofollow">Add External Image</a> update action or after the successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/products/{id}/images:POST" rel="nofollow">upload of an image</a>.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/ProductImageAddedMessagePayloadBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.message">ProductImageAddedMessagePayloadBuilder</a> - Class in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
@@ -20010,6 +20460,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/message/ProductTailoringImagesSetMessagePayloadBuilder.html#productKey(java.lang.String)" class="member-name-link">productKey(String)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ProductTailoringImagesSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductTailoringImagesSetMessagePayloadBuilder</a></dt>
 <dd>
 <div class="block"><code>key</code> of the tailored Product.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessageBuilder.html#productKey(java.lang.String)" class="member-name-link">productKey(String)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductTailoringKeySetMessageBuilder</a></dt>
+<dd>
+<div class="block">User-defined unique identifier of the Product this Product Tailoring belongs to.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessagePayloadBuilder.html#productKey(java.lang.String)" class="member-name-link">productKey(String)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductTailoringKeySetMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">User-defined unique identifier of the Product this Product Tailoring belongs to.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/ProductTailoringNameSetMessageBuilder.html#productKey(java.lang.String)" class="member-name-link">productKey(String)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ProductTailoringNameSetMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductTailoringNameSetMessageBuilder</a></dt>
 <dd>
@@ -20822,17 +21280,16 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/product/ProductProjectionPagedSearchResponse.html" class="type-name-link" title="interface in com.commercetools.api.models.product">ProductProjectionPagedSearchResponse</a> - Interface in <a href="../com/commercetools/api/models/product/package-summary.html">com.commercetools.api.models.product</a></dt>
 <dd>
-<div class="block">The response returned to a <span>Product Projection Search</span> request.</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a> - Class in <a href="../com/commercetools/api/models/product/package-summary.html">com.commercetools.api.models.product</a></dt>
 <dd>
-<div class="block">ProductProjectionPagedSearchResponseBuilder
- 
- Example to create an instance using the builder pattern
- </div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#%3Cinit%3E()" class="member-name-link">ProductProjectionPagedSearchResponseBuilder()</a> - Constructor for class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/product_search/ProductSearchRequestBuilder.html#productProjectionParameters(com.commercetools.api.models.product_search.ProductSearchProjectionParams)" class="member-name-link">productProjectionParameters(ProductSearchProjectionParams)</a> - Method in class com.commercetools.api.models.product_search.<a href="../com/commercetools/api/models/product_search/ProductSearchRequestBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchRequestBuilder</a></dt>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
@@ -21158,12 +21615,20 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Configuration for the <span>Product Projection Search</span> and <span>Search Term Suggestions</span> APIs.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentProductsNotFoundWarningBuilder.html#products(java.lang.String...)" class="member-name-link">products(String...)</a> - Method in class com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentProductsNotFoundWarningBuilder.html" title="class in com.commercetools.api.models.agent">AgentProductsNotFoundWarningBuilder</a></dt>
+<dd>
+<div class="block">Identifiers of the Products that could not be matched to the catalog, as they appeared in the input.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/project/SearchIndexingConfigurationBuilder.html#products(java.util.function.Function)" class="member-name-link">products(Function&lt;SearchIndexingConfigurationValuesBuilder, SearchIndexingConfigurationValuesBuilder&gt;)</a> - Method in class com.commercetools.api.models.project.<a href="../com/commercetools/api/models/project/SearchIndexingConfigurationBuilder.html" title="class in com.commercetools.api.models.project">SearchIndexingConfigurationBuilder</a></dt>
 <dd>
 <div class="block">Configuration for the <span>Product Projection Search</span> and <span>Search Term Suggestions</span> APIs.</div>
 </dd>
 <dt><a href="../com/commercetools/graphql/api/GraphQL.html#products(java.util.function.UnaryOperator)" class="member-name-link">products(UnaryOperator&lt;ProductsGraphQLQuery.Builder&gt;)</a> - Static method in class com.commercetools.graphql.api.<a href="../com/commercetools/graphql/api/GraphQL.html" title="class in com.commercetools.graphql.api">GraphQL</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentProductsNotFoundWarningBuilder.html#products(java.util.List)" class="member-name-link">products(List&lt;String&gt;)</a> - Method in class com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentProductsNotFoundWarningBuilder.html" title="class in com.commercetools.api.models.agent">AgentProductsNotFoundWarningBuilder</a></dt>
+<dd>
+<div class="block">Identifiers of the Products that could not be matched to the catalog, as they appeared in the input.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/product_search/ProductSearchFacetCountLevelEnum.ProductSearchFacetCountLevelEnumEnum.html#PRODUCTS" class="member-name-link">PRODUCTS</a> - Enum constant in enum class com.commercetools.api.models.product_search.<a href="../com/commercetools/api/models/product_search/ProductSearchFacetCountLevelEnum.ProductSearchFacetCountLevelEnumEnum.html" title="enum class in com.commercetools.api.models.product_search">ProductSearchFacetCountLevelEnum.ProductSearchFacetCountLevelEnumEnum</a></dt>
 <dd>
 <div class="block">products</div>
@@ -21171,6 +21636,18 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/product_search/ProductSearchFacetCountLevelEnum.html#PRODUCTS" class="member-name-link">PRODUCTS</a> - Static variable in interface com.commercetools.api.models.product_search.<a href="../com/commercetools/api/models/product_search/ProductSearchFacetCountLevelEnum.html" title="interface in com.commercetools.api.models.product_search">ProductSearchFacetCountLevelEnum</a></dt>
 <dd>
 <div class="block">The query should count Products.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentProductsNotFoundError.html#PRODUCTS_NOT_FOUND" class="member-name-link">PRODUCTS_NOT_FOUND</a> - Static variable in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentProductsNotFoundError.html" title="interface in com.commercetools.api.models.agent">AgentProductsNotFoundError</a></dt>
+<dd>
+<div class="block">discriminator value for AgentProductsNotFoundError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentProductsNotFoundWarning.html#PRODUCTS_NOT_FOUND" class="member-name-link">PRODUCTS_NOT_FOUND</a> - Static variable in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentProductsNotFoundWarning.html" title="interface in com.commercetools.api.models.agent">AgentProductsNotFoundWarning</a></dt>
+<dd>
+<div class="block">discriminator value for AgentProductsNotFoundWarning</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentProductsNotFoundError.html#PRODUCTS_NOT_FOUND" class="member-name-link">PRODUCTS_NOT_FOUND</a> - Static variable in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentProductsNotFoundError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentProductsNotFoundError</a></dt>
+<dd>
+<div class="block">discriminator value for GraphQLAgentProductsNotFoundError</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/project/ProductSearchIndexingMode.ProductSearchIndexingModeEnum.html#PRODUCTS_SEARCH" class="member-name-link">PRODUCTS_SEARCH</a> - Enum constant in enum class com.commercetools.api.models.project.<a href="../com/commercetools/api/models/project/ProductSearchIndexingMode.ProductSearchIndexingModeEnum.html" title="enum class in com.commercetools.api.models.project">ProductSearchIndexingMode.ProductSearchIndexingModeEnum</a></dt>
 <dd>
@@ -21528,6 +22005,18 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/product_search/ProductSearchModuleMixin.html" class="type-name-link" title="class in com.commercetools.api.models.product_search">ProductSearchModuleMixin</a> - Class in <a href="../com/commercetools/api/models/product_search/package-summary.html">com.commercetools.api.models.product_search</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/product_search/ProductSearchModuleMixin.html#%3Cinit%3E()" class="member-name-link">ProductSearchModuleMixin()</a> - Constructor for class com.commercetools.api.models.product_search.<a href="../com/commercetools/api/models/product_search/ProductSearchModuleMixin.html" title="class in com.commercetools.api.models.product_search">ProductSearchModuleMixin</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/error/ErrorObject.html#productSearchNotEnabledBuilder()" class="member-name-link">productSearchNotEnabledBuilder()</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/ErrorObject.html" title="interface in com.commercetools.api.models.error">ErrorObject</a></dt>
+<dd>
+<div class="block">builder for productSearchNotEnabled subtype</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/error/ErrorObjectBuilder.html#productSearchNotEnabledBuilder()" class="member-name-link">productSearchNotEnabledBuilder()</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/ErrorObjectBuilder.html" title="class in com.commercetools.api.models.error">ErrorObjectBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/error/GraphQLErrorObject.html#productSearchNotEnabledBuilder()" class="member-name-link">productSearchNotEnabledBuilder()</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLErrorObject.html" title="interface in com.commercetools.api.models.error">GraphQLErrorObject</a></dt>
+<dd>
+<div class="block">builder for productSearchNotEnabled subtype</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/error/GraphQLErrorObjectBuilder.html#productSearchNotEnabledBuilder()" class="member-name-link">productSearchNotEnabledBuilder()</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLErrorObjectBuilder.html" title="class in com.commercetools.api.models.error">GraphQLErrorObjectBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/product_search/ProductSearchProjectionParams.html" class="type-name-link" title="interface in com.commercetools.api.models.product_search">ProductSearchProjectionParams</a> - Interface in <a href="../com/commercetools/api/models/product_search/package-summary.html">com.commercetools.api.models.product_search</a></dt>
 <dd>
@@ -22925,6 +23414,24 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/ProductSlugChangedMessagePayloadBuilder.html#%3Cinit%3E()" class="member-name-link">ProductSlugChangedMessagePayloadBuilder()</a> - Constructor for class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ProductSlugChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductSlugChangedMessagePayloadBuilder</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/error/ErrorObject.html#productsNotFoundBuilder()" class="member-name-link">productsNotFoundBuilder()</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/ErrorObject.html" title="interface in com.commercetools.api.models.error">ErrorObject</a></dt>
+<dd>
+<div class="block">builder for productsNotFound subtype</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/error/ErrorObjectBuilder.html#productsNotFoundBuilder()" class="member-name-link">productsNotFoundBuilder()</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/ErrorObjectBuilder.html" title="class in com.commercetools.api.models.error">ErrorObjectBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/error/GraphQLErrorObject.html#productsNotFoundBuilder()" class="member-name-link">productsNotFoundBuilder()</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLErrorObject.html" title="interface in com.commercetools.api.models.error">GraphQLErrorObject</a></dt>
+<dd>
+<div class="block">builder for productsNotFound subtype</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/error/GraphQLErrorObjectBuilder.html#productsNotFoundBuilder()" class="member-name-link">productsNotFoundBuilder()</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLErrorObjectBuilder.html" title="class in com.commercetools.api.models.error">GraphQLErrorObjectBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/warning/WarningObject.html#productsNotFoundBuilder()" class="member-name-link">productsNotFoundBuilder()</a> - Static method in interface com.commercetools.api.models.warning.<a href="../com/commercetools/api/models/warning/WarningObject.html" title="interface in com.commercetools.api.models.warning">WarningObject</a></dt>
+<dd>
+<div class="block">builder for productsNotFound subtype</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/warning/WarningObjectBuilder.html#productsNotFoundBuilder()" class="member-name-link">productsNotFoundBuilder()</a> - Method in class com.commercetools.api.models.warning.<a href="../com/commercetools/api/models/warning/WarningObjectBuilder.html" title="class in com.commercetools.api.models.warning">WarningObjectBuilder</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/project/SearchIndexingConfigurationBuilder.html#productsSearch(com.commercetools.api.models.project.SearchIndexingConfigurationValues)" class="member-name-link">productsSearch(SearchIndexingConfigurationValues)</a> - Method in class com.commercetools.api.models.project.<a href="../com/commercetools/api/models/project/SearchIndexingConfigurationBuilder.html" title="class in com.commercetools.api.models.project">SearchIndexingConfigurationBuilder</a></dt>
 <dd>
 <div class="block">Configuration for the <span>Product Search</span> feature.</div>
@@ -22995,7 +23502,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringAddAssetAction.html" class="type-name-link" title="interface in com.commercetools.api.models.product_tailoring">ProductTailoringAddAssetAction</a> - Interface in <a href="../com/commercetools/api/models/product_tailoring/package-summary.html">com.commercetools.api.models.product_tailoring</a></dt>
 <dd>
-<div class="block">Either <code>variantId</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> that exists.</div>
+<div class="block">Either <code>variantId</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> that exists.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringAddAssetActionBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.product_tailoring">ProductTailoringAddAssetActionBuilder</a> - Class in <a href="../com/commercetools/api/models/product_tailoring/package-summary.html">com.commercetools.api.models.product_tailoring</a></dt>
 <dd>
@@ -23008,7 +23515,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringAddExternalImageAction.html" class="type-name-link" title="interface in com.commercetools.api.models.product_tailoring">ProductTailoringAddExternalImageAction</a> - Interface in <a href="../com/commercetools/api/models/product_tailoring/package-summary.html">com.commercetools.api.models.product_tailoring</a></dt>
 <dd>
-<div class="block">Either <code>variantId</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> that exists.</div>
+<div class="block">Either <code>variantId</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> that exists.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringAddExternalImageActionBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.product_tailoring">ProductTailoringAddExternalImageActionBuilder</a> - Class in <a href="../com/commercetools/api/models/product_tailoring/package-summary.html">com.commercetools.api.models.product_tailoring</a></dt>
 <dd>
@@ -23021,7 +23528,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringAddVariantAction.html" class="type-name-link" title="interface in com.commercetools.api.models.product_tailoring">ProductTailoringAddVariantAction</a> - Interface in <a href="../com/commercetools/api/models/product_tailoring/package-summary.html">com.commercetools.api.models.product_tailoring</a></dt>
 <dd>
-<div class="block">Either <code>id</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> that exists.</div>
+<div class="block">Either <code>id</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> that exists.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringAddVariantActionBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.product_tailoring">ProductTailoringAddVariantActionBuilder</a> - Class in <a href="../com/commercetools/api/models/product_tailoring/package-summary.html">com.commercetools.api.models.product_tailoring</a></dt>
 <dd>
@@ -23112,7 +23619,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/message/ProductTailoringCreatedMessage.html" class="type-name-link" title="interface in com.commercetools.api.models.message">ProductTailoringCreatedMessage</a> - Interface in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
-<div class="block">Generated after a successful <span>Create Product Tailoring</span> or <span>Create Product Tailoring in Store</span> request.</div>
+<div class="block">Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/product-tailoring:POST" rel="nofollow">Create Product Tailoring</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/product-tailoring:POST" rel="nofollow">Create Product Tailoring in Store</a> request.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/ProductTailoringCreatedMessageBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.message">ProductTailoringCreatedMessageBuilder</a> - Class in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
@@ -23127,7 +23634,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/message/ProductTailoringCreatedMessagePayload.html" class="type-name-link" title="interface in com.commercetools.api.models.message">ProductTailoringCreatedMessagePayload</a> - Interface in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
-<div class="block">Generated after a successful <span>Create Product Tailoring</span> or <span>Create Product Tailoring in Store</span> request.</div>
+<div class="block">Generated after a successful <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/product-tailoring:POST" rel="nofollow">Create Product Tailoring</a> or <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/product-tailoring:POST" rel="nofollow">Create Product Tailoring in Store</a> request.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/ProductTailoringCreatedMessagePayloadBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.message">ProductTailoringCreatedMessagePayloadBuilder</a> - Class in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
@@ -23365,11 +23872,51 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringInStoreDraftBuilder.html#%3Cinit%3E()" class="member-name-link">ProductTailoringInStoreDraftBuilder()</a> - Constructor for class com.commercetools.api.models.product_tailoring.<a href="../com/commercetools/api/models/product_tailoring/ProductTailoringInStoreDraftBuilder.html" title="class in com.commercetools.api.models.product_tailoring">ProductTailoringInStoreDraftBuilder</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/message/Message.html#productTailoringKeySetBuilder()" class="member-name-link">productTailoringKeySetBuilder()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/Message.html" title="interface in com.commercetools.api.models.message">Message</a></dt>
+<dd>
+<div class="block">builder for productTailoringKeySet subtype</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/MessageBuilder.html#productTailoringKeySetBuilder()" class="member-name-link">productTailoringKeySetBuilder()</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/MessageBuilder.html" title="class in com.commercetools.api.models.message">MessageBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/message/MessagePayload.html#productTailoringKeySetBuilder()" class="member-name-link">productTailoringKeySetBuilder()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/MessagePayload.html" title="interface in com.commercetools.api.models.message">MessagePayload</a></dt>
+<dd>
+<div class="block">builder for productTailoringKeySet subtype</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/MessagePayloadBuilder.html#productTailoringKeySetBuilder()" class="member-name-link">productTailoringKeySetBuilder()</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/MessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">MessagePayloadBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessage.html" class="type-name-link" title="interface in com.commercetools.api.models.message">ProductTailoringKeySetMessage</a> - Interface in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
+<dd>
+<div class="block">Generated after a successful Product Tailoring <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetKeyAction" rel="nofollow">Set Key</a> update action.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessageBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.message">ProductTailoringKeySetMessageBuilder</a> - Class in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
+<dd>
+<div class="block">ProductTailoringKeySetMessageBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessageBuilder.html#%3Cinit%3E()" class="member-name-link">ProductTailoringKeySetMessageBuilder()</a> - Constructor for class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductTailoringKeySetMessageBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/predicates/expansion/message/ProductTailoringKeySetMessageExpansionBuilderDsl.html" class="type-name-link" title="class in com.commercetools.api.predicates.expansion.message">ProductTailoringKeySetMessageExpansionBuilderDsl</a> - Class in <a href="../com/commercetools/api/predicates/expansion/message/package-summary.html">com.commercetools.api.predicates.expansion.message</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessagePayload.html" class="type-name-link" title="interface in com.commercetools.api.models.message">ProductTailoringKeySetMessagePayload</a> - Interface in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
+<dd>
+<div class="block">Generated after a successful Product Tailoring <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringSetKeyAction" rel="nofollow">Set Key</a> update action.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessagePayloadBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.message">ProductTailoringKeySetMessagePayloadBuilder</a> - Class in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
+<dd>
+<div class="block">ProductTailoringKeySetMessagePayloadBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessagePayloadBuilder.html#%3Cinit%3E()" class="member-name-link">ProductTailoringKeySetMessagePayloadBuilder()</a> - Constructor for class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductTailoringKeySetMessagePayloadBuilder</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/graphql/api/GraphQL.html#productTailoringList(java.util.function.UnaryOperator)" class="member-name-link">productTailoringList(UnaryOperator&lt;ProductTailoringListGraphQLQuery.Builder&gt;)</a> - Static method in class com.commercetools.graphql.api.<a href="../com/commercetools/graphql/api/GraphQL.html" title="class in com.commercetools.graphql.api">GraphQL</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringMoveImageToPositionAction.html" class="type-name-link" title="interface in com.commercetools.api.models.product_tailoring">ProductTailoringMoveImageToPositionAction</a> - Interface in <a href="../com/commercetools/api/models/product_tailoring/package-summary.html">com.commercetools.api.models.product_tailoring</a></dt>
 <dd>
-<div class="block">Either <code>variantId</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> that exists.</div>
+<div class="block">Either <code>variantId</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> that exists.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringMoveImageToPositionActionBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.product_tailoring">ProductTailoringMoveImageToPositionActionBuilder</a> - Class in <a href="../com/commercetools/api/models/product_tailoring/package-summary.html">com.commercetools.api.models.product_tailoring</a></dt>
 <dd>
@@ -23503,7 +24050,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringRemoveAssetAction.html" class="type-name-link" title="interface in com.commercetools.api.models.product_tailoring">ProductTailoringRemoveAssetAction</a> - Interface in <a href="../com/commercetools/api/models/product_tailoring/package-summary.html">com.commercetools.api.models.product_tailoring</a></dt>
 <dd>
-<div class="block">Either <code>variantId</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> that exists.</div>
+<div class="block">Either <code>variantId</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> that exists.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringRemoveAssetActionBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.product_tailoring">ProductTailoringRemoveAssetActionBuilder</a> - Class in <a href="../com/commercetools/api/models/product_tailoring/package-summary.html">com.commercetools.api.models.product_tailoring</a></dt>
 <dd>
@@ -23516,7 +24063,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringRemoveImageAction.html" class="type-name-link" title="interface in com.commercetools.api.models.product_tailoring">ProductTailoringRemoveImageAction</a> - Interface in <a href="../com/commercetools/api/models/product_tailoring/package-summary.html">com.commercetools.api.models.product_tailoring</a></dt>
 <dd>
-<div class="block">Either <code>variantId</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> that exists.</div>
+<div class="block">Either <code>variantId</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> that exists.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringRemoveImageActionBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.product_tailoring">ProductTailoringRemoveImageActionBuilder</a> - Class in <a href="../com/commercetools/api/models/product_tailoring/package-summary.html">com.commercetools.api.models.product_tailoring</a></dt>
 <dd>
@@ -23678,7 +24225,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringSetExternalImagesAction.html" class="type-name-link" title="interface in com.commercetools.api.models.product_tailoring">ProductTailoringSetExternalImagesAction</a> - Interface in <a href="../com/commercetools/api/models/product_tailoring/package-summary.html">com.commercetools.api.models.product_tailoring</a></dt>
 <dd>
-<div class="block">Either <code>variantId</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> that exists.</div>
+<div class="block">Either <code>variantId</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> that exists.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringSetExternalImagesActionBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.product_tailoring">ProductTailoringSetExternalImagesActionBuilder</a> - Class in <a href="../com/commercetools/api/models/product_tailoring/package-summary.html">com.commercetools.api.models.product_tailoring</a></dt>
 <dd>
@@ -23691,7 +24238,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringSetImageLabelAction.html" class="type-name-link" title="interface in com.commercetools.api.models.product_tailoring">ProductTailoringSetImageLabelAction</a> - Interface in <a href="../com/commercetools/api/models/product_tailoring/package-summary.html">com.commercetools.api.models.product_tailoring</a></dt>
 <dd>
-<div class="block">Either <code>variantId</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> that exists.</div>
+<div class="block">Either <code>variantId</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> that exists.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringSetImageLabelActionBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.product_tailoring">ProductTailoringSetImageLabelActionBuilder</a> - Class in <a href="../com/commercetools/api/models/product_tailoring/package-summary.html">com.commercetools.api.models.product_tailoring</a></dt>
 <dd>
@@ -23701,6 +24248,19 @@ loadScripts(document, 'script');</script>
  </div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringSetImageLabelActionBuilder.html#%3Cinit%3E()" class="member-name-link">ProductTailoringSetImageLabelActionBuilder()</a> - Constructor for class com.commercetools.api.models.product_tailoring.<a href="../com/commercetools/api/models/product_tailoring/ProductTailoringSetImageLabelActionBuilder.html" title="class in com.commercetools.api.models.product_tailoring">ProductTailoringSetImageLabelActionBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringSetKeyAction.html" class="type-name-link" title="interface in com.commercetools.api.models.product_tailoring">ProductTailoringSetKeyAction</a> - Interface in <a href="../com/commercetools/api/models/product_tailoring/package-summary.html">com.commercetools.api.models.product_tailoring</a></dt>
+<dd>
+<div class="block">Generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringKeySetMessage" rel="nofollow">ProductTailoringKeySet</a> Message.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringSetKeyActionBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.product_tailoring">ProductTailoringSetKeyActionBuilder</a> - Class in <a href="../com/commercetools/api/models/product_tailoring/package-summary.html">com.commercetools.api.models.product_tailoring</a></dt>
+<dd>
+<div class="block">ProductTailoringSetKeyActionBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</dd>
+<dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringSetKeyActionBuilder.html#%3Cinit%3E()" class="member-name-link">ProductTailoringSetKeyActionBuilder()</a> - Constructor for class com.commercetools.api.models.product_tailoring.<a href="../com/commercetools/api/models/product_tailoring/ProductTailoringSetKeyActionBuilder.html" title="class in com.commercetools.api.models.product_tailoring">ProductTailoringSetKeyActionBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringSetMetaAttributesAction.html" class="type-name-link" title="interface in com.commercetools.api.models.product_tailoring">ProductTailoringSetMetaAttributesAction</a> - Interface in <a href="../com/commercetools/api/models/product_tailoring/package-summary.html">com.commercetools.api.models.product_tailoring</a></dt>
 <dd>
@@ -24872,7 +25432,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/product_selection/ProductVariantExclusion.html" class="type-name-link" title="interface in com.commercetools.api.models.product_selection">ProductVariantExclusion</a> - Interface in <a href="../com/commercetools/api/models/product_selection/package-summary.html">com.commercetools.api.models.product_selection</a></dt>
 <dd>
-<div class="block">Only Product Variants with the explicitly listed SKUs are part of a Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</div>
+<div class="block">Defines the Product Variants that are excluded from a Product Selection with <code>IndividualExclusion</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductSelectionMode" rel="nofollow">ProductSelectionMode</a>.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/common/ProductVariantExclusion.html" class="type-name-link" title="interface in com.commercetools.history.models.common">ProductVariantExclusion</a> - Interface in <a href="../com/commercetools/history/models/common/package-summary.html">com.commercetools.history.models.common</a></dt>
 <dd>
@@ -25061,7 +25621,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductVariantTailoring.html" class="type-name-link" title="interface in com.commercetools.api.models.product_tailoring">ProductVariantTailoring</a> - Interface in <a href="../com/commercetools/api/models/product_tailoring/package-summary.html">com.commercetools.api.models.product_tailoring</a></dt>
 <dd>
-<div class="block">The tailoring of a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a>.</div>
+<div class="block">The tailoring of a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a>.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/Message.html#productVariantTailoringAddedBuilder()" class="member-name-link">productVariantTailoringAddedBuilder()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/Message.html" title="interface in com.commercetools.api.models.message">Message</a></dt>
 <dd>
@@ -25114,7 +25674,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductVariantTailoringDraft.html" class="type-name-link" title="interface in com.commercetools.api.models.product_tailoring">ProductVariantTailoringDraft</a> - Interface in <a href="../com/commercetools/api/models/product_tailoring/package-summary.html">com.commercetools.api.models.product_tailoring</a></dt>
 <dd>
-<div class="block">Either <code>id</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> that exists.</div>
+<div class="block">Either <code>id</code> or <code>sku</code> is required to reference a <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductVariant" rel="nofollow">ProductVariant</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:Variant" rel="nofollow">Variant</a> that exists.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductVariantTailoringDraftBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.product_tailoring">ProductVariantTailoringDraftBuilder</a> - Class in <a href="../com/commercetools/api/models/product_tailoring/package-summary.html">com.commercetools.api.models.product_tailoring</a></dt>
 <dd>
@@ -25338,7 +25898,11 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/project/ProjectChangeLanguagesAction.html" class="type-name-link" title="interface in com.commercetools.api.models.project">ProjectChangeLanguagesAction</a> - Interface in <a href="../com/commercetools/api/models/project/package-summary.html">com.commercetools.api.models.project</a></dt>
 <dd>
-<div class="block">Removing a language used by a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> returns a <a href="https://docs.commercetools.com/apis/ctp:api:type:LanguageUsedInStoresError" rel="nofollow">LanguageUsedInStores</a> error.</div>
+<div class="block">ProjectChangeLanguagesAction
+
+ 
+ Example to create an instance using the builder pattern
+ </div>
 </dd>
 <dt><a href="../com/commercetools/api/models/project/ProjectChangeLanguagesActionBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.project">ProjectChangeLanguagesActionBuilder</a> - Class in <a href="../com/commercetools/api/models/project/package-summary.html">com.commercetools.api.models.project</a></dt>
 <dd>
@@ -25419,11 +25983,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/project/ProjectChangeProductSearchIndexingEnabledAction.html" class="type-name-link" title="interface in com.commercetools.api.models.project">ProjectChangeProductSearchIndexingEnabledAction</a> - Interface in <a href="../com/commercetools/api/models/project/package-summary.html">com.commercetools.api.models.project</a></dt>
 <dd>
-<div class="block">ProjectChangeProductSearchIndexingEnabledAction
-
- 
- Example to create an instance using the builder pattern
- </div>
+<div class="block"><span>Product Projection Search</span> is <strong>deprecated</strong>.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/project/ProjectChangeProductSearchIndexingEnabledActionBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.project">ProjectChangeProductSearchIndexingEnabledActionBuilder</a> - Class in <a href="../com/commercetools/api/models/project/package-summary.html">com.commercetools.api.models.project</a></dt>
 <dd>
@@ -25689,6 +26249,22 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/project/ProjectUpdateBuilder.html#%3Cinit%3E()" class="member-name-link">ProjectUpdateBuilder()</a> - Constructor for class com.commercetools.api.models.project.<a href="../com/commercetools/api/models/project/ProjectUpdateBuilder.html" title="class in com.commercetools.api.models.project">ProjectUpdateBuilder</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/common/AttributionSource.AttributionSourceEnum.html#PROMOTIONS_AGENT" class="member-name-link">PROMOTIONS_AGENT</a> - Enum constant in enum class com.commercetools.api.models.common.<a href="../com/commercetools/api/models/common/AttributionSource.AttributionSourceEnum.html" title="enum class in com.commercetools.api.models.common">AttributionSource.AttributionSourceEnum</a></dt>
+<dd>
+<div class="block">PromotionsAgent</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/common/AttributionSource.html#PROMOTIONS_AGENT" class="member-name-link">PROMOTIONS_AGENT</a> - Static variable in interface com.commercetools.api.models.common.<a href="../com/commercetools/api/models/common/AttributionSource.html" title="interface in com.commercetools.api.models.common">AttributionSource</a></dt>
+<dd>
+<div class="block">Resource was created or updated by Promotions Agent.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesPayloadBuilder.html#prompt(java.lang.String)" class="member-name-link">prompt(String)</a> - Method in class com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesPayloadBuilder.html" title="class in com.commercetools.api.models.agent">AgentResponsesPayloadBuilder</a></dt>
+<dd>
+<div class="block">Natural-language description of the desired Cart or Quote Request, such as the body of an email or a note.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesRequestBuilder.html#prompt(java.lang.String)" class="member-name-link">prompt(String)</a> - Method in class com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesRequestBuilder.html" title="class in com.commercetools.api.models.agent">AgentResponsesRequestBuilder</a></dt>
+<dd>
+<div class="block">Natural-language description of the desired Cart or Quote Request, such as the body of an email or a note.</div>
+</dd>
 <dt><a href="../com/commercetools/api/defaultconfig/ApiRootBuilderUtil.html#PROPERTIES_KEY_API_URL_SUFFIX" class="member-name-link">PROPERTIES_KEY_API_URL_SUFFIX</a> - Static variable in class com.commercetools.api.defaultconfig.<a href="../com/commercetools/api/defaultconfig/ApiRootBuilderUtil.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilderUtil</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/defaultconfig/ApiRootBuilderUtil.html#PROPERTIES_KEY_AUTH_URL_SUFFIX" class="member-name-link">PROPERTIES_KEY_AUTH_URL_SUFFIX</a> - Static variable in class com.commercetools.api.defaultconfig.<a href="../com/commercetools/api/defaultconfig/ApiRootBuilderUtil.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilderUtil</a></dt>
@@ -25753,15 +26329,15 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringDraftBuilder.html#publish(java.lang.Boolean)" class="member-name-link">publish(Boolean)</a> - Method in class com.commercetools.api.models.product_tailoring.<a href="../com/commercetools/api/models/product_tailoring/ProductTailoringDraftBuilder.html" title="class in com.commercetools.api.models.product_tailoring">ProductTailoringDraftBuilder</a></dt>
 <dd>
-<div class="block">Set to <code>true</code> to <span>publish</span> the ProductTailoring immediately.</div>
+<div class="block">Whether to <span>publish</span> the ProductTailoring immediately.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringInStoreDraftBuilder.html#publish(java.lang.Boolean)" class="member-name-link">publish(Boolean)</a> - Method in class com.commercetools.api.models.product_tailoring.<a href="../com/commercetools/api/models/product_tailoring/ProductTailoringInStoreDraftBuilder.html" title="class in com.commercetools.api.models.product_tailoring">ProductTailoringInStoreDraftBuilder</a></dt>
 <dd>
-<div class="block">If <code>true</code>, the ProductTailoring is published immediately.</div>
+<div class="block">Whether the ProductTailoring is published immediately.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/ProductDraftBuilder.html#publish(java.lang.Boolean)" class="member-name-link">publish(Boolean)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/ProductDraftBuilder.html" title="class in com.commercetools.api.models.product">ProductDraftBuilder</a></dt>
 <dd>
-<div class="block">If <code>true</code>, the platform sets the <code>published</code> flag on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> to <code>true</code>.</div>
+<div class="block">Whether the platform sets the <code>published</code> flag on the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductCatalogData" rel="nofollow">ProductCatalogData</a> to <code>true</code>.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/variant/VariantDraftBuilder.html#publish(java.lang.Boolean)" class="member-name-link">publish(Boolean)</a> - Method in class com.commercetools.api.models.variant.<a href="../com/commercetools/api/models/variant/VariantDraftBuilder.html" title="class in com.commercetools.api.models.variant">VariantDraftBuilder</a></dt>
 <dd>
@@ -25769,7 +26345,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/product_tailoring/ProductTailoringImportBuilder.html#publish(java.lang.Boolean)" class="member-name-link">publish(Boolean)</a> - Method in class com.commercetools.importapi.models.product_tailoring.<a href="../com/commercetools/importapi/models/product_tailoring/ProductTailoringImportBuilder.html" title="class in com.commercetools.importapi.models.product_tailoring">ProductTailoringImportBuilder</a></dt>
 <dd>
-<div class="block">Set to <code>true</code> to publish the ProductTailoring immediately.</div>
+<div class="block">Whether to publish the ProductTailoring immediately.</div>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/productdrafts/ProductDraftImportBuilder.html#publish(java.lang.Boolean)" class="member-name-link">publish(Boolean)</a> - Method in class com.commercetools.importapi.models.productdrafts.<a href="../com/commercetools/importapi/models/productdrafts/ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></dt>
 <dd>
@@ -25844,23 +26420,23 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/message/ProductTailoringCreatedMessageBuilder.html#published(java.lang.Boolean)" class="member-name-link">published(Boolean)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ProductTailoringCreatedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductTailoringCreatedMessageBuilder</a></dt>
 <dd>
-<div class="block"><code>true</code> if the ProductTailoring is published.</div>
+<div class="block">Whether the ProductTailoring is published.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/ProductTailoringCreatedMessagePayloadBuilder.html#published(java.lang.Boolean)" class="member-name-link">published(Boolean)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ProductTailoringCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductTailoringCreatedMessagePayloadBuilder</a></dt>
 <dd>
-<div class="block"><code>true</code> if the ProductTailoring is published.</div>
+<div class="block">Whether the ProductTailoring is published.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringBuilder.html#published(java.lang.Boolean)" class="member-name-link">published(Boolean)</a> - Method in class com.commercetools.api.models.product_tailoring.<a href="../com/commercetools/api/models/product_tailoring/ProductTailoringBuilder.html" title="class in com.commercetools.api.models.product_tailoring">ProductTailoringBuilder</a></dt>
 <dd>
-<div class="block">If <code>true</code>, the tailored information contained in the <code>current</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringData" rel="nofollow">ProductTailoringData</a> is provided when <span>retrieving the ProductProjection in Store</span>.</div>
+<div class="block">Whether the tailored information contained in the <code>current</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductTailoringData" rel="nofollow">ProductTailoringData</a> is provided when <span>retrieving the ProductProjection in Store</span>.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/ProductCatalogDataBuilder.html#published(java.lang.Boolean)" class="member-name-link">published(Boolean)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/ProductCatalogDataBuilder.html" title="class in com.commercetools.api.models.product">ProductCatalogDataBuilder</a></dt>
 <dd>
-<div class="block">If <code>true</code>, the <code>current</code> representation of the Product is retrievable in the <span>Product Projection</span> endpoints and indexed for <span>Product Search</span>.</div>
+<div class="block">Whether the <code>current</code> representation of the Product is retrievable in the <span>Product Projection</span> endpoints and indexed for <span>Product Search</span>.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/ProductProjectionBuilder.html#published(java.lang.Boolean)" class="member-name-link">published(Boolean)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></dt>
 <dd>
-<div class="block"><code>true</code> if the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:CurrentStaged" rel="nofollow">published</a>.</div>
+<div class="block">Whether the <a href="https://docs.commercetools.com/apis/ctp:api:type:Product" rel="nofollow">Product</a> is <a href="https://docs.commercetools.com/apis/ctp:api:type:CurrentStaged" rel="nofollow">published</a>.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/shopping_list/ShoppingListLineItemBuilder.html#published(java.lang.Boolean)" class="member-name-link">published(Boolean)</a> - Method in class com.commercetools.api.models.shopping_list.<a href="../com/commercetools/api/models/shopping_list/ShoppingListLineItemBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListLineItemBuilder</a></dt>
 <dd>
@@ -25868,7 +26444,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/variant/VariantBuilder.html#published(java.lang.Boolean)" class="member-name-link">published(Boolean)</a> - Method in class com.commercetools.api.models.variant.<a href="../com/commercetools/api/models/variant/VariantBuilder.html" title="class in com.commercetools.api.models.variant">VariantBuilder</a></dt>
 <dd>
-<div class="block"><code>true</code> if the Variant is published, <code>false</code> if it is unpublished.</div>
+<div class="block">Whether the Variant is published, <code>false</code> if it is unpublished.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/common/ShoppingListLineItemBuilder.html#published(java.lang.Boolean)" class="member-name-link">published(Boolean)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ShoppingListLineItemBuilder.html" title="class in com.commercetools.history.models.common">ShoppingListLineItemBuilder</a></dt>
 <dd>

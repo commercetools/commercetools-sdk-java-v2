@@ -80,7 +80,8 @@ loadScripts(document, 'script');</script>
 extends <a href="StandalonePriceUpdateAction.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceUpdateAction</a></span></div>
 <div class="block"><p>Updating the <code>validUntil</code> value generates the <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePriceValidUntilSetMessage" rel="nofollow">StandalonePriceValidUntilSet</a> Message.</p>
   <p>As the validity dates are part of the price scope and are not allowed to overlap, this update might return the <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateStandalonePriceScopeError" rel="nofollow">DuplicateStandalonePriceScope</a> and <a href="https://docs.commercetools.com/apis/ctp:api:type:OverlappingStandalonePriceValidityError" rel="nofollow">OverlappingStandalonePriceValidity</a> errors, respectively. A Price without validity period does not conflict with a Price defined for a time period.</p>
-  <p>If a modification is already in progress for the exact combination of SKU and price scope fields, an <a href="https://docs.commercetools.com/apis/ctp:api:type:ExactLockConflictError" rel="nofollow">ExactLockConflict</a> or a <a href="https://docs.commercetools.com/apis/ctp:api:type:ValidityLockConflictError" rel="nofollow">ValidityLockConflict</a> error is returned.</p>
+  <p>If a modification is already in progress for the exact combination of SKU and price scope fields, an <a href="https://docs.commercetools.com/apis/ctp:api:type:ExactLockConflictError" rel="nofollow">ExactLockConflict</a> error is returned.</p>
+  <p>If a modification is already in progress for the combination of SKU and price scope fields (but potentially different validity period), a <a href="https://docs.commercetools.com/apis/ctp:api:type:ValidityLockConflictError" rel="nofollow">ValidityLockConflict</a> error is returned.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -216,7 +217,7 @@ extends <a href="StandalonePriceUpdateAction.html" title="interface in com.comme
 <section class="detail" id="getValidUntil()">
 <h3>getValidUntil</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getValidUntil</span>()</div>
-<div class="block"><p>Value to set. If empty, any existing value is removed.</p></div>
+<div class="block"><p>Value to set. If omitted, any existing value is removed.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>validUntil</dd>
@@ -227,7 +228,7 @@ extends <a href="StandalonePriceUpdateAction.html" title="interface in com.comme
 <section class="detail" id="setValidUntil(java.time.ZonedDateTime)">
 <h3>setValidUntil</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setValidUntil</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validUntil)</span></div>
-<div class="block"><p>Value to set. If empty, any existing value is removed.</p></div>
+<div class="block"><p>Value to set. If omitted, any existing value is removed.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>validUntil</code> - value to be set</dd>

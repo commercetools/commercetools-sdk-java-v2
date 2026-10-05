@@ -88,8 +88,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
  <div class=code-example>
  <pre><code class='java'>
      VariantCreatedMessagePayload variantCreatedMessagePayload = VariantCreatedMessagePayload.builder()
+             .product(productBuilder -> productBuilder)
              .id("{id}")
-             .productId("{productId}")
              .variantId(1)
              .publish(true)
              .build()
@@ -192,10 +192,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">User-defined unique identifier of the Variant.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getProductId()" class="member-name-link">getProductId</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../product/ProductReference.html" title="interface in com.commercetools.api.models.product">ProductReference</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getProduct()" class="member-name-link">getProduct</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Unique identifier of the Product to which the Variant belongs.</div>
+<div class="block">Reference to the Product containing the Variant.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPublish()" class="member-name-link">getPublish</a>()</code></div>
@@ -273,54 +273,64 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">Images of the Variant.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VariantCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessagePayloadBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#productId(java.lang.String)" class="member-name-link">productId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;productId)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#product(com.commercetools.api.models.product.ProductReference)" class="member-name-link">product</a><wbr>(<a href="../product/ProductReference.html" title="interface in com.commercetools.api.models.product">ProductReference</a>&nbsp;product)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Unique identifier of the Product to which the Variant belongs.</div>
+<div class="block">Reference to the Product containing the Variant.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VariantCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessagePayloadBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#publish(java.lang.Boolean)" class="member-name-link">publish</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;publish)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#product(java.util.function.Function)" class="member-name-link">product</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../product/ProductReferenceBuilder.html" title="class in com.commercetools.api.models.product">ProductReferenceBuilder</a>,<wbr><a href="../product/ProductReferenceBuilder.html" title="class in com.commercetools.api.models.product">ProductReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Reference to the Product containing the Variant.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VariantCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#publish(java.lang.Boolean)" class="member-name-link">publish</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;publish)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Whether the Variant was published.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VariantCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessagePayloadBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAssets(java.util.function.Function)" class="member-name-link">setAssets</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/AssetBuilder.html" title="class in com.commercetools.api.models.common">AssetBuilder</a>,<wbr><a href="../common/Asset.html" title="interface in com.commercetools.api.models.common">Asset</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VariantCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAssets(java.util.function.Function)" class="member-name-link">setAssets</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/AssetBuilder.html" title="class in com.commercetools.api.models.common">AssetBuilder</a>,<wbr><a href="../common/Asset.html" title="interface in com.commercetools.api.models.common">Asset</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Assets of the Variant.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VariantCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessagePayloadBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAttributes(java.util.function.Function)" class="member-name-link">setAttributes</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../product/AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>,<wbr><a href="../product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VariantCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAttributes(java.util.function.Function)" class="member-name-link">setAttributes</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../product/AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>,<wbr><a href="../product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Attributes of the Variant.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VariantCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessagePayloadBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setImages(java.util.function.Function)" class="member-name-link">setImages</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ImageBuilder.html" title="class in com.commercetools.api.models.common">ImageBuilder</a>,<wbr><a href="../common/Image.html" title="interface in com.commercetools.api.models.common">Image</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VariantCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setImages(java.util.function.Function)" class="member-name-link">setImages</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ImageBuilder.html" title="class in com.commercetools.api.models.common">ImageBuilder</a>,<wbr><a href="../common/Image.html" title="interface in com.commercetools.api.models.common">Image</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Images of the Variant.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VariantCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessagePayloadBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sku(java.lang.String)" class="member-name-link">sku</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sku)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VariantCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sku(java.lang.String)" class="member-name-link">sku</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sku)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">SKU of the Variant.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VariantCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessagePayloadBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#variantId(java.lang.Integer)" class="member-name-link">variantId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;variantId)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VariantCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#variantId(java.lang.Integer)" class="member-name-link">variantId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;variantId)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Unique identifier of the Variant within its parent Product.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VariantCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessagePayloadBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withAssets(java.util.function.Function)" class="member-name-link">withAssets</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/AssetBuilder.html" title="class in com.commercetools.api.models.common">AssetBuilder</a>,<wbr><a href="../common/AssetBuilder.html" title="class in com.commercetools.api.models.common">AssetBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VariantCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withAssets(java.util.function.Function)" class="member-name-link">withAssets</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/AssetBuilder.html" title="class in com.commercetools.api.models.common">AssetBuilder</a>,<wbr><a href="../common/AssetBuilder.html" title="class in com.commercetools.api.models.common">AssetBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Assets of the Variant.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VariantCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessagePayloadBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withAttributes(java.util.function.Function)" class="member-name-link">withAttributes</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../product/AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>,<wbr><a href="../product/AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VariantCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withAttributes(java.util.function.Function)" class="member-name-link">withAttributes</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../product/AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>,<wbr><a href="../product/AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Attributes of the Variant.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VariantCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessagePayloadBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withImages(java.util.function.Function)" class="member-name-link">withImages</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ImageBuilder.html" title="class in com.commercetools.api.models.common">ImageBuilder</a>,<wbr><a href="../common/ImageBuilder.html" title="class in com.commercetools.api.models.common">ImageBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VariantCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withImages(java.util.function.Function)" class="member-name-link">withImages</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ImageBuilder.html" title="class in com.commercetools.api.models.common">ImageBuilder</a>,<wbr><a href="../common/ImageBuilder.html" title="class in com.commercetools.api.models.common">ImageBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Images of the Variant.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="VariantCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withProduct(java.util.function.Function)" class="member-name-link">withProduct</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../product/ProductReferenceBuilder.html" title="class in com.commercetools.api.models.product">ProductReferenceBuilder</a>,<wbr><a href="../product/ProductReference.html" title="interface in com.commercetools.api.models.product">ProductReference</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Reference to the Product containing the Variant.</div>
 </div>
 </div>
 </div>
@@ -354,6 +364,45 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="product(java.util.function.Function)">
+<h3>product</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name">product</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../product/ProductReferenceBuilder.html" title="class in com.commercetools.api.models.product">ProductReferenceBuilder</a>,<wbr><a href="../product/ProductReferenceBuilder.html" title="class in com.commercetools.api.models.product">ProductReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Reference to the Product containing the Variant.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the product value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="withProduct(java.util.function.Function)">
+<h3>withProduct</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name">withProduct</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../product/ProductReferenceBuilder.html" title="class in com.commercetools.api.models.product">ProductReferenceBuilder</a>,<wbr><a href="../product/ProductReference.html" title="interface in com.commercetools.api.models.product">ProductReference</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Reference to the Product containing the Variant.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the product value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="product(com.commercetools.api.models.product.ProductReference)">
+<h3>product</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name">product</span><wbr><span class="parameters">(<a href="../product/ProductReference.html" title="interface in com.commercetools.api.models.product">ProductReference</a>&nbsp;product)</span></div>
+<div class="block"><p>Reference to the Product containing the Variant.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>product</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="id(java.lang.String)">
 <h3>id</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name">id</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
@@ -361,19 +410,6 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>id</code> - value to be set</dd>
-<dt>Returns:</dt>
-<dd>Builder</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="productId(java.lang.String)">
-<h3>productId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="VariantCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">VariantCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name">productId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;productId)</span></div>
-<div class="block"><p>Unique identifier of the Product to which the Variant belongs.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>productId</code> - value to be set</dd>
 <dt>Returns:</dt>
 <dd>Builder</dd>
 </dl>
@@ -716,6 +752,17 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="getProduct()">
+<h3>getProduct</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../product/ProductReference.html" title="interface in com.commercetools.api.models.product">ProductReference</a></span>&nbsp;<span class="element-name">getProduct</span>()</div>
+<div class="block"><p>Reference to the Product containing the Variant.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>product</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getId()">
 <h3>getId</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getId</span>()</div>
@@ -723,17 +770,6 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>id</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getProductId()">
-<h3>getProductId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getProductId</span>()</div>
-<div class="block"><p>Unique identifier of the Product to which the Variant belongs.</p></div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>productId</dd>
 </dl>
 </section>
 </li>

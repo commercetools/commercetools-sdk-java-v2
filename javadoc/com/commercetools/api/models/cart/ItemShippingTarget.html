@@ -212,7 +212,8 @@ loadScripts(document, 'script');</script>
 <h3>getShippingMethodKey</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getShippingMethodKey</span>()</div>
 <div class="block"><p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
-  <p>It connects Line Item or Custom Line Item quantities with individual Shipping Methods.</p></div>
+  <p>It connects Line Item or Custom Line Item quantities with individual Shipping Methods.</p>
+  <p>Required when the Cart has <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Omitting this field in that case returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>shippingMethodKey</dd>
@@ -247,7 +248,8 @@ loadScripts(document, 'script');</script>
 <h3>setShippingMethodKey</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setShippingMethodKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;shippingMethodKey)</span></div>
 <div class="block"><p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
-  <p>It connects Line Item or Custom Line Item quantities with individual Shipping Methods.</p></div>
+  <p>It connects Line Item or Custom Line Item quantities with individual Shipping Methods.</p>
+  <p>Required when the Cart has <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>. Omitting this field in that case returns an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>shippingMethodKey</code> - value to be set</dd>

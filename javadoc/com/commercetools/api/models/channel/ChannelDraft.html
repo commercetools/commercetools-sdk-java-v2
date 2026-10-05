@@ -238,7 +238,9 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <h3>getKey</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
-<div class="block"><p>User-defined unique identifier for the Channel.</p></div>
+<div class="block"><p>User-defined unique identifier for the Channel.</p>
+  <p>If set to an empty value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+  <p>If the value is used by another Channel in the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../WithKey.html#getKey()">getKey</a></code>&nbsp;in interface&nbsp;<code><a href="../WithKey.html" title="interface in com.commercetools.api.models">WithKey</a></code></dd>
@@ -251,7 +253,8 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <section class="detail" id="getRoles()">
 <h3>getRoles</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChannelRoleEnum.html" title="interface in com.commercetools.api.models.channel">ChannelRoleEnum</a>&gt;</span>&nbsp;<span class="element-name">getRoles</span>()</div>
-<div class="block"><p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p></div>
+<div class="block"><p>Roles of the Channel.</p>
+  <p>The Channel must have at least one role. If set to an empty array, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>roles</dd>
@@ -324,7 +327,9 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
-<div class="block"><p>User-defined unique identifier for the Channel.</p></div>
+<div class="block"><p>User-defined unique identifier for the Channel.</p>
+  <p>If set to an empty value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+  <p>If the value is used by another Channel in the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>key</code> - value to be set</dd>
@@ -335,7 +340,8 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <section class="detail" id="setRoles(com.commercetools.api.models.channel.ChannelRoleEnum...)">
 <h3>setRoles</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setRoles</span><wbr><span class="parameters">(<a href="ChannelRoleEnum.html" title="interface in com.commercetools.api.models.channel">ChannelRoleEnum</a>...&nbsp;roles)</span></div>
-<div class="block"><p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p></div>
+<div class="block"><p>Roles of the Channel.</p>
+  <p>The Channel must have at least one role. If set to an empty array, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>roles</code> - values to be set</dd>
@@ -346,7 +352,8 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <section class="detail" id="setRoles(java.util.List)">
 <h3>setRoles</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setRoles</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChannelRoleEnum.html" title="interface in com.commercetools.api.models.channel">ChannelRoleEnum</a>&gt;&nbsp;roles)</span></div>
-<div class="block"><p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p></div>
+<div class="block"><p>Roles of the Channel.</p>
+  <p>The Channel must have at least one role. If set to an empty array, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>roles</code> - values to be set</dd>

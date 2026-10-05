@@ -231,7 +231,12 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="discountedAmount(com.commercetools.api.models.common.TypedMoney)">
 <h3>discountedAmount</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPortionBuilder.html" title="class in com.commercetools.api.models.cart">DiscountedLineItemPortionBuilder</a></span>&nbsp;<span class="element-name">discountedAmount</span><wbr><span class="parameters">(<a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&nbsp;discountedAmount)</span></div>
-<div class="block"><p>Money value of the applicable discount.</p></div>
+<div class="block"><p>Money value of the applicable discount.</p>
+  <p>When a Cart Discount with <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> is used:</p>
+  <ul>
+   <li>The value is zero for a (Custom) Line Item matching the <code>triggerPattern</code>, indicating it participated in the discount as a trigger.</li>
+   <li>The value is the actual discount amount for a (Custom) Line Item matching the <code>targetPattern</code>.</li>
+  </ul></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>discountedAmount</code> - value to be set</dd>
@@ -244,7 +249,12 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="discountedAmount(java.util.function.Function)">
 <h3>discountedAmount</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPortionBuilder.html" title="class in com.commercetools.api.models.cart">DiscountedLineItemPortionBuilder</a></span>&nbsp;<span class="element-name">discountedAmount</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/TypedMoneyBuilder.html" title="class in com.commercetools.api.models.common">TypedMoneyBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&gt;&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Money value of the applicable discount.</p></div>
+<div class="block"><p>Money value of the applicable discount.</p>
+  <p>When a Cart Discount with <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> is used:</p>
+  <ul>
+   <li>The value is zero for a (Custom) Line Item matching the <code>triggerPattern</code>, indicating it participated in the discount as a trigger.</li>
+   <li>The value is the actual discount amount for a (Custom) Line Item matching the <code>targetPattern</code>.</li>
+  </ul></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the discountedAmount value</dd>
@@ -268,7 +278,12 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getDiscountedAmount()">
 <h3>getDiscountedAmount</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></span>&nbsp;<span class="element-name">getDiscountedAmount</span>()</div>
-<div class="block"><p>Money value of the applicable discount.</p></div>
+<div class="block"><p>Money value of the applicable discount.</p>
+  <p>When a Cart Discount with <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> is used:</p>
+  <ul>
+   <li>The value is zero for a (Custom) Line Item matching the <code>triggerPattern</code>, indicating it participated in the discount as a trigger.</li>
+   <li>The value is the actual discount amount for a (Custom) Line Item matching the <code>targetPattern</code>.</li>
+  </ul></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>discountedAmount</dd>

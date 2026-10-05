@@ -143,11 +143,20 @@ loadScripts(document, 'script');</script>
 <div class="block">The HandlerStack is used to execute the middlewares in order and transfer the request using the specified <a href="../io/vrap/rmf/base/client/http/HttpHandler.html" title="class in io.vrap.rmf.base.client.http"><code>HttpHandler</code></a></div>
 </dd>
 <dt><a href="../io/vrap/rmf/base/client/http/RetryPolicyBuilder.html#handleStatusCodes(java.util.List)" class="member-name-link">handleStatusCodes(List&lt;Integer&gt;)</a> - Static method in class io.vrap.rmf.base.client.http.<a href="../io/vrap/rmf/base/client/http/RetryPolicyBuilder.html" title="class in io.vrap.rmf.base.client.http">RetryPolicyBuilder</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">retained for source compatibility.
+ Without a maximum delay a <code>429</code> is retried whenever it carries any timing header,
+ even when it asks for longer than maximum.
+ Prefer<a href="../io/vrap/rmf/base/client/http/RetryPolicyBuilder.html#handleStatusCodes(java.util.List,long)"><code>RetryPolicyBuilder.handleStatusCodes(List, long)</code></a>.</div>
+</div>
+</dd>
 <dt><a href="../io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#handleStatusCodes(java.util.List)" class="member-name-link">handleStatusCodes(List&lt;Integer&gt;)</a> - Static method in interface io.vrap.rmf.base.client.http.<a href="../io/vrap/rmf/base/client/http/RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></dt>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 &nbsp;</dd>
+<dt><a href="../io/vrap/rmf/base/client/http/RetryPolicyBuilder.html#handleStatusCodes(java.util.List,long)" class="member-name-link">handleStatusCodes(List&lt;Integer&gt;, long)</a> - Static method in class io.vrap.rmf.base.client.http.<a href="../io/vrap/rmf/base/client/http/RetryPolicyBuilder.html" title="class in io.vrap.rmf.base.client.http">RetryPolicyBuilder</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/cart/FreezeStrategy.FreezeStrategyEnum.html#HARD_FREEZE" class="member-name-link">HARD_FREEZE</a> - Enum constant in enum class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/FreezeStrategy.FreezeStrategyEnum.html" title="enum class in com.commercetools.api.models.cart">FreezeStrategy.FreezeStrategyEnum</a></dt>
 <dd>
 <div class="block">HardFreeze</div>
@@ -163,6 +172,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Returns true if this payload contains a complete message.</div>
 </dd>
 <dt><a href="../com/commercetools/api/client/error/ErrorResponseException.html#hasErrorCode(java.lang.String)" class="member-name-link">hasErrorCode(String)</a> - Method in interface com.commercetools.api.client.error.<a href="../com/commercetools/api/client/error/ErrorResponseException.html" title="interface in com.commercetools.api.client.error">ErrorResponseException</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyAgentsIntakeV1ResponsesPost.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAgentsIntakeV1ResponsesPost.html" title="class in com.commercetools.api.client">ByProjectKeyAgentsIntakeV1ResponsesPost</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyAgentsIntakeV1ResponsesPostString.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAgentsIntakeV1ResponsesPostString.html" title="class in com.commercetools.api.client">ByProjectKeyAgentsIntakeV1ResponsesPostString</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyApiClientsByIDDelete.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyApiClientsByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyApiClientsByIDDelete</a></dt>
 <dd>&nbsp;</dd>
@@ -932,6 +945,18 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyCustomersPostString.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyCustomersPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCustomersPostString</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyDiscountCodesByIDGet.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyDiscountCodesByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyDiscountCodesByIDGet</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyDiscountCodesByIDHead.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyDiscountCodesByIDHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyDiscountCodesByIDHead</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyDiscountCodesGet.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyDiscountCodesGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyDiscountCodesGet</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyDiscountCodesHead.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyDiscountCodesHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyDiscountCodesHead</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyDiscountCodesKeyByKeyGet.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyDiscountCodesKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyDiscountCodesKeyByKeyGet</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyDiscountCodesKeyByKeyHead.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyDiscountCodesKeyByKeyHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyDiscountCodesKeyByKeyHead</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyLoginPost.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyLoginPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyLoginPost</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyLoginPostString.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyLoginPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyLoginPostString</a></dt>
@@ -1261,6 +1286,32 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyLoginPost.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyLoginPost.html" title="class in com.commercetools.api.client">ByProjectKeyLoginPost</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyLoginPostString.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyLoginPostString.html" title="class in com.commercetools.api.client">ByProjectKeyLoginPostString</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyMcpServersByIDDelete.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMcpServersByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyMcpServersByIDDelete</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyMcpServersByIDGet.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMcpServersByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyMcpServersByIDGet</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyMcpServersByIDPost.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMcpServersByIDPost.html" title="class in com.commercetools.api.client">ByProjectKeyMcpServersByIDPost</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyMcpServersByIDPostString.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMcpServersByIDPostString.html" title="class in com.commercetools.api.client">ByProjectKeyMcpServersByIDPostString</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyMcpServersGet.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMcpServersGet.html" title="class in com.commercetools.api.client">ByProjectKeyMcpServersGet</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyMcpServersKeyByKeyDelete.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMcpServersKeyByKeyDelete.html" title="class in com.commercetools.api.client">ByProjectKeyMcpServersKeyByKeyDelete</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyMcpServersKeyByKeyGet.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMcpServersKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyMcpServersKeyByKeyGet</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyMcpServersKeyByKeyPost.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMcpServersKeyByKeyPost.html" title="class in com.commercetools.api.client">ByProjectKeyMcpServersKeyByKeyPost</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyMcpServersKeyByKeyPostString.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMcpServersKeyByKeyPostString.html" title="class in com.commercetools.api.client">ByProjectKeyMcpServersKeyByKeyPostString</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyMcpServersPost.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMcpServersPost.html" title="class in com.commercetools.api.client">ByProjectKeyMcpServersPost</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyMcpServersPostString.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMcpServersPostString.html" title="class in com.commercetools.api.client">ByProjectKeyMcpServersPostString</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyMcpServersTypesByMcpServerTypeGet.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMcpServersTypesByMcpServerTypeGet.html" title="class in com.commercetools.api.client">ByProjectKeyMcpServersTypesByMcpServerTypeGet</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyMcpServersTypesGet.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMcpServersTypesGet.html" title="class in com.commercetools.api.client">ByProjectKeyMcpServersTypesGet</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyMeActiveCartGet.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMeActiveCartGet.html" title="class in com.commercetools.api.client">ByProjectKeyMeActiveCartGet</a></dt>
 <dd>&nbsp;</dd>
@@ -1637,11 +1688,17 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyProductProjectionsKeyByKeyVariantAttributesGet.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyProductProjectionsKeyByKeyVariantAttributesGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsKeyByKeyVariantAttributesGet</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyProductProjectionsSearchGet.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyProductProjectionsSearchGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsSearchGet</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsSearchPost</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyProductProjectionsSuggestGet.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyProductProjectionsSuggestGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsSuggestGet</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyProductsByIDDelete.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyProductsByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyProductsByIDDelete</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyProductsByIDGet.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyProductsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsByIDGet</a></dt>
@@ -2198,6 +2255,10 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyVariantsByIDHead.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyVariantsByIDHead.html" title="class in com.commercetools.api.client">ByProjectKeyVariantsByIDHead</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyVariantsByIDImagesPost.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyVariantsByIDImagesPost.html" title="class in com.commercetools.api.client">ByProjectKeyVariantsByIDImagesPost</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyVariantsByIDImagesPostString.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyVariantsByIDImagesPostString.html" title="class in com.commercetools.api.client">ByProjectKeyVariantsByIDImagesPostString</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyVariantsByIDPost.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyVariantsByIDPost.html" title="class in com.commercetools.api.client">ByProjectKeyVariantsByIDPost</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyVariantsByIDPostString.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyVariantsByIDPostString.html" title="class in com.commercetools.api.client">ByProjectKeyVariantsByIDPostString</a></dt>
@@ -2368,20 +2429,24 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../io/vrap/rmf/base/client/AutoCloseableService.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class io.vrap.rmf.base.client.<a href="../io/vrap/rmf/base/client/AutoCloseableService.html" title="class in io.vrap.rmf.base.client">AutoCloseableService</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="../io/vrap/rmf/base/client/BodyApiMethod.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class io.vrap.rmf.base.client.<a href="../io/vrap/rmf/base/client/BodyApiMethod.html" title="class in io.vrap.rmf.base.client">BodyApiMethod</a></dt>
+<dt><a href="../io/vrap/rmf/base/client/StringBodyApiMethod.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class io.vrap.rmf.base.client.<a href="../io/vrap/rmf/base/client/StringBodyApiMethod.html" title="class in io.vrap.rmf.base.client">StringBodyApiMethod</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringBuilder.html#hasStagedChanges(java.lang.Boolean)" class="member-name-link">hasStagedChanges(Boolean)</a> - Method in class com.commercetools.api.models.product_tailoring.<a href="../com/commercetools/api/models/product_tailoring/ProductTailoringBuilder.html" title="class in com.commercetools.api.models.product_tailoring">ProductTailoringBuilder</a></dt>
 <dd>
-<div class="block"><code>true</code> if the <code>staged</code> data is different from the <code>current</code> data.</div>
+<div class="block">Whether the <code>staged</code> data is different from the <code>current</code> data.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/ProductCatalogDataBuilder.html#hasStagedChanges(java.lang.Boolean)" class="member-name-link">hasStagedChanges(Boolean)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/ProductCatalogDataBuilder.html" title="class in com.commercetools.api.models.product">ProductCatalogDataBuilder</a></dt>
 <dd>
-<div class="block"><code>true</code> if the <code>staged</code> data is different from the <code>current</code> data.</div>
+<div class="block">Whether the <code>staged</code> data is different from the <code>current</code> data.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/ProductProjectionBuilder.html#hasStagedChanges(java.lang.Boolean)" class="member-name-link">hasStagedChanges(Boolean)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></dt>
 <dd>
-<div class="block"><code>true</code> if the staged data is different from the current data.</div>
+<div class="block">Whether the staged data is different from the current data.</div>
 </dd>
+<dt><a href="../io/vrap/rmf/base/client/http/RetryAfterDelay.html#hasTiming(io.vrap.rmf.base.client.ApiHttpException)" class="member-name-link">hasTiming(ApiHttpException)</a> - Static method in class io.vrap.rmf.base.client.http.<a href="../io/vrap/rmf/base/client/http/RetryAfterDelay.html" title="class in io.vrap.rmf.base.client.http">RetryAfterDelay</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../io/vrap/rmf/base/client/http/RetryAfterDelay.html#hasTiming(io.vrap.rmf.base.client.ApiHttpHeaders,int)" class="member-name-link">hasTiming(ApiHttpHeaders, int)</a> - Static method in class io.vrap.rmf.base.client.http.<a href="../io/vrap/rmf/base/client/http/RetryAfterDelay.html" title="class in io.vrap.rmf.base.client.http">RetryAfterDelay</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyApiClientsByIDRequestBuilder.html#head()" class="member-name-link">head()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyApiClientsByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyApiClientsByIDRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyApiClientsRequestBuilder.html#head()" class="member-name-link">head()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyApiClientsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyApiClientsRequestBuilder</a></dt>
@@ -2527,6 +2592,12 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyRequestBuilder.html#head()" class="member-name-link">head()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyCustomersRequestBuilder.html#head()" class="member-name-link">head()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyCustomersRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCustomersRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyDiscountCodesByIDRequestBuilder.html#head()" class="member-name-link">head()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyDiscountCodesByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyDiscountCodesByIDRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyDiscountCodesKeyByKeyRequestBuilder.html#head()" class="member-name-link">head()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyDiscountCodesKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyDiscountCodesKeyByKeyRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyDiscountCodesRequestBuilder.html#head()" class="member-name-link">head()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyDiscountCodesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyDiscountCodesRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyMeActiveCartRequestBuilder.html#head()" class="member-name-link">head()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyMeActiveCartRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeActiveCartRequestBuilder</a></dt>
 <dd>&nbsp;</dd>

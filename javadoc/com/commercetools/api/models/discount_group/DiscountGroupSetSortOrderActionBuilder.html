@@ -185,7 +185,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>sortOrder</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountGroupSetSortOrderActionBuilder.html" title="class in com.commercetools.api.models.discount_group">DiscountGroupSetSortOrderActionBuilder</a></span>&nbsp;<span class="element-name">sortOrder</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sortOrder)</span></div>
 <div class="block"><p>New value to set (between <code>0</code> and <code>1</code>). A CartDiscount with a higher value will be prioritized.</p>
-  <p>The sort order must be unique among all DiscountGroups and CartDiscounts.</p></div>
+  <p>If the value is used by another Cart Discount or Discount Group, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>sortOrder</code> - value to be set</dd>
@@ -199,7 +199,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getSortOrder</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getSortOrder</span>()</div>
 <div class="block"><p>New value to set (between <code>0</code> and <code>1</code>). A CartDiscount with a higher value will be prioritized.</p>
-  <p>The sort order must be unique among all DiscountGroups and CartDiscounts.</p></div>
+  <p>If the value is used by another Cart Discount or Discount Group, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicateFieldError" rel="nofollow">DuplicateField</a> error is returned.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>sortOrder</dd>

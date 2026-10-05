@@ -90,7 +90,6 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
      RecordPagedQueryResponse recordPagedQueryResponse = RecordPagedQueryResponse.builder()
              .limit(1)
              .count(1)
-             .total(1)
              .offset(1)
              .plusResults(resultsBuilder -> resultsBuilder)
              .build()
@@ -283,8 +282,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="total(java.lang.Integer)">
 <h3>total</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RecordPagedQueryResponseBuilder.html" title="class in com.commercetools.history.models.change_history">RecordPagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name">total</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;total)</span></div>
-<div class="block"><p>Total number of results matching the query. This number is an estimation and not <span>strongly consistent</span>.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RecordPagedQueryResponseBuilder.html" title="class in com.commercetools.history.models.change_history">RecordPagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name">total</span><wbr><span class="parameters">(@Nullable
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;total)</span></div>
+<div class="block"><p>Total number of results matching the query. This number is an estimation and not <span>strongly consistent</span>. Returned only when <code>withTotal</code> is set to <code>true</code> on the query.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>total</code> - value to be set</dd>
@@ -422,8 +422,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getTotal()">
 <h3>getTotal</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getTotal</span>()</div>
-<div class="block"><p>Total number of results matching the query. This number is an estimation and not <span>strongly consistent</span>.</p></div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getTotal</span>()</div>
+<div class="block"><p>Total number of results matching the query. This number is an estimation and not <span>strongly consistent</span>. Returned only when <code>withTotal</code> is set to <code>true</code> on the query.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>total</dd>

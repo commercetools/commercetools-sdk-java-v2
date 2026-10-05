@@ -85,7 +85,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="BestDeal.html" title="interface in com.commercetools.api.models.cart">BestDeal</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
-<div class="block">Indicates if a Product Discount or Cart Discount offers the best deal for a Cart or Order.</div>
+<div class="block">Indicates if a Product Discount, Cart Discount, or Direct Discount offers the best deal for a Cart or Order.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="BestDealBuilder.html" title="class in com.commercetools.api.models.cart">BestDealBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
@@ -787,11 +787,33 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="CartSetDirectDiscountsAction.html" title="interface in com.commercetools.api.models.cart">CartSetDirectDiscountsAction</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">
-<div class="block">Adds a <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">DirectDiscount</a>, but only if no <a href="https://docs.commercetools.com/apis/ctp:api:type:DiscountCode" rel="nofollow">DiscountCode</a> has been added to the Cart.</div>
+<div class="block">Adds a <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">DirectDiscount</a> to the Cart.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="CartSetDirectDiscountsActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetDirectDiscountsActionBuilder</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
 <div class="block">CartSetDirectDiscountsActionBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="CartSetDirectDiscountsIgnoreCartDiscountsAction.html" title="interface in com.commercetools.api.models.cart">CartSetDirectDiscountsIgnoreCartDiscountsAction</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="block">Determines whether the <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> on the Cart replace the <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Project" rel="nofollow">Project</a>, or apply alongside them.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="CartSetDirectDiscountsIgnoreCartDiscountsActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetDirectDiscountsIgnoreCartDiscountsActionBuilder</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">CartSetDirectDiscountsIgnoreCartDiscountsActionBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="CartSetEstimatedDeliveryAction.html" title="interface in com.commercetools.api.models.cart">CartSetEstimatedDeliveryAction</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="block">Sets the estimated delivery window on the Cart's <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingInfo" rel="nofollow">ShippingInfo</a>.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="CartSetEstimatedDeliveryActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetEstimatedDeliveryActionBuilder</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">CartSetEstimatedDeliveryActionBuilder
  
  Example to create an instance using the builder pattern
  </div>
@@ -1426,6 +1448,17 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="DiscountTypeCombinationBuilder.html" title="class in com.commercetools.api.models.cart">DiscountTypeCombinationBuilder</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
 <div class="block">DiscountTypeCombinationBuilder</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="EstimatedDelivery.html" title="interface in com.commercetools.api.models.cart">EstimatedDelivery</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="block">Estimated time window during which a shipment is expected to be delivered.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="EstimatedDeliveryBuilder.html" title="class in com.commercetools.api.models.cart">EstimatedDeliveryBuilder</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">EstimatedDeliveryBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="ExternalLineItemTotalPrice.html" title="interface in com.commercetools.api.models.cart">ExternalLineItemTotalPrice</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">

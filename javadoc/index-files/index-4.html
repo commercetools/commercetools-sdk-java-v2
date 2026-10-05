@@ -250,7 +250,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/subscription/ResourceDeletedDeliveryPayloadBuilder.html#dataErasure(java.lang.Boolean)" class="member-name-link">dataErasure(Boolean)</a> - Method in class com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/ResourceDeletedDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">ResourceDeletedDeliveryPayloadBuilder</a></dt>
 <dd>
-<div class="block"><code>true</code> if the <code>dataErasure</code> <span>parameter</span> on the <code>DELETE</code> request was set to <code>true</code>.</div>
+<div class="block">Whether the <code>dataErasure</code> <span>parameter</span> on the <code>DELETE</code> request was set to <code>true</code>.</div>
 </dd>
 <dt><a href="../com/commercetools/api/client/DataerasureTrait.html" class="type-name-link" title="interface in com.commercetools.api.client">DataerasureTrait</a>&lt;<a href="../com/commercetools/api/client/DataerasureTrait.html" title="type parameter in DataerasureTrait">T</a> extends <a href="../com/commercetools/api/client/DataerasureTrait.html" title="interface in com.commercetools.api.client">DataerasureTrait</a>&lt;<a href="../com/commercetools/api/client/DataerasureTrait.html" title="type parameter in DataerasureTrait">T</a>&gt;&gt; - Interface in <a href="../com/commercetools/api/client/package-summary.html">com.commercetools.api.client</a></dt>
 <dd>
@@ -270,7 +270,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/product/TermFacetResultBuilder.html#dataType(com.commercetools.api.models.product.TermFacetResultType)" class="member-name-link">dataType(TermFacetResultType)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></dt>
 <dd>
-<div class="block">Data type to which the facet is applied.</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/TermFacetResultType.TermFacetResultTypeEnum.html#DATE" class="member-name-link">DATE</a> - Enum constant in enum class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/TermFacetResultType.TermFacetResultTypeEnum.html" title="enum class in com.commercetools.api.models.product">TermFacetResultType.TermFacetResultTypeEnum</a></dt>
 <dd>
@@ -740,7 +740,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/shopping_list/ShoppingListLineItemBuilder.html#deactivatedAt(java.time.ZonedDateTime)" class="member-name-link">deactivatedAt(ZonedDateTime)</a> - Method in class com.commercetools.api.models.shopping_list.<a href="../com/commercetools/api/models/shopping_list/ShoppingListLineItemBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListLineItemBuilder</a></dt>
 <dd>
-<div class="block">If the Product or Product Variant is deleted, <code>deactivatedAt</code> is the date and time (UTC) of deletion.</div>
+<div class="block">If the Product or Product Variant is deleted or unpublished, <code>deactivatedAt</code> is the date and time (UTC) this occurred.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/common/ShoppingListLineItemBuilder.html#deactivatedAt(java.time.ZonedDateTime)" class="member-name-link">deactivatedAt(ZonedDateTime)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ShoppingListLineItemBuilder.html" title="class in com.commercetools.history.models.common">ShoppingListLineItemBuilder</a></dt>
 <dd>
@@ -814,6 +814,174 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/history/models/common/QuoteState.html#DECLINED_FOR_RENEGOTIATION" class="member-name-link">DECLINED_FOR_RENEGOTIATION</a> - Static variable in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/QuoteState.html" title="interface in com.commercetools.history.models.common">QuoteState</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentBusinessUnitAmbiguousError.html#deepCopy(com.commercetools.api.models.agent.AgentBusinessUnitAmbiguousError)" class="member-name-link">deepCopy(AgentBusinessUnitAmbiguousError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentBusinessUnitAmbiguousError.html" title="interface in com.commercetools.api.models.agent">AgentBusinessUnitAmbiguousError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of AgentBusinessUnitAmbiguousError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentBusinessUnitLimitExceededError.html#deepCopy(com.commercetools.api.models.agent.AgentBusinessUnitLimitExceededError)" class="member-name-link">deepCopy(AgentBusinessUnitLimitExceededError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentBusinessUnitLimitExceededError.html" title="interface in com.commercetools.api.models.agent">AgentBusinessUnitLimitExceededError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of AgentBusinessUnitLimitExceededError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentBusinessUnitUnresolvedError.html#deepCopy(com.commercetools.api.models.agent.AgentBusinessUnitUnresolvedError)" class="member-name-link">deepCopy(AgentBusinessUnitUnresolvedError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentBusinessUnitUnresolvedError.html" title="interface in com.commercetools.api.models.agent">AgentBusinessUnitUnresolvedError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of AgentBusinessUnitUnresolvedError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentExtractionFailedError.html#deepCopy(com.commercetools.api.models.agent.AgentExtractionFailedError)" class="member-name-link">deepCopy(AgentExtractionFailedError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentExtractionFailedError.html" title="interface in com.commercetools.api.models.agent">AgentExtractionFailedError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of AgentExtractionFailedError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentFeatureDisabledError.html#deepCopy(com.commercetools.api.models.agent.AgentFeatureDisabledError)" class="member-name-link">deepCopy(AgentFeatureDisabledError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentFeatureDisabledError.html" title="interface in com.commercetools.api.models.agent">AgentFeatureDisabledError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of AgentFeatureDisabledError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentFileNotProcessedWarning.html#deepCopy(com.commercetools.api.models.agent.AgentFileNotProcessedWarning)" class="member-name-link">deepCopy(AgentFileNotProcessedWarning)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentFileNotProcessedWarning.html" title="interface in com.commercetools.api.models.agent">AgentFileNotProcessedWarning</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of AgentFileNotProcessedWarning</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentMissingCountryError.html#deepCopy(com.commercetools.api.models.agent.AgentMissingCountryError)" class="member-name-link">deepCopy(AgentMissingCountryError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentMissingCountryError.html" title="interface in com.commercetools.api.models.agent">AgentMissingCountryError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of AgentMissingCountryError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentMissingCustomerEmailError.html#deepCopy(com.commercetools.api.models.agent.AgentMissingCustomerEmailError)" class="member-name-link">deepCopy(AgentMissingCustomerEmailError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentMissingCustomerEmailError.html" title="interface in com.commercetools.api.models.agent">AgentMissingCustomerEmailError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of AgentMissingCustomerEmailError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentMissingEntityTypeError.html#deepCopy(com.commercetools.api.models.agent.AgentMissingEntityTypeError)" class="member-name-link">deepCopy(AgentMissingEntityTypeError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentMissingEntityTypeError.html" title="interface in com.commercetools.api.models.agent">AgentMissingEntityTypeError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of AgentMissingEntityTypeError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentNoLineItemsExtractedError.html#deepCopy(com.commercetools.api.models.agent.AgentNoLineItemsExtractedError)" class="member-name-link">deepCopy(AgentNoLineItemsExtractedError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentNoLineItemsExtractedError.html" title="interface in com.commercetools.api.models.agent">AgentNoLineItemsExtractedError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of AgentNoLineItemsExtractedError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentOutOfScopeError.html#deepCopy(com.commercetools.api.models.agent.AgentOutOfScopeError)" class="member-name-link">deepCopy(AgentOutOfScopeError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentOutOfScopeError.html" title="interface in com.commercetools.api.models.agent">AgentOutOfScopeError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of AgentOutOfScopeError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentProductSearchNotEnabledError.html#deepCopy(com.commercetools.api.models.agent.AgentProductSearchNotEnabledError)" class="member-name-link">deepCopy(AgentProductSearchNotEnabledError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentProductSearchNotEnabledError.html" title="interface in com.commercetools.api.models.agent">AgentProductSearchNotEnabledError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of AgentProductSearchNotEnabledError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentProductsNotFoundError.html#deepCopy(com.commercetools.api.models.agent.AgentProductsNotFoundError)" class="member-name-link">deepCopy(AgentProductsNotFoundError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentProductsNotFoundError.html" title="interface in com.commercetools.api.models.agent">AgentProductsNotFoundError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of AgentProductsNotFoundError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentProductsNotFoundWarning.html#deepCopy(com.commercetools.api.models.agent.AgentProductsNotFoundWarning)" class="member-name-link">deepCopy(AgentProductsNotFoundWarning)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentProductsNotFoundWarning.html" title="interface in com.commercetools.api.models.agent">AgentProductsNotFoundWarning</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of AgentProductsNotFoundWarning</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentQuoteRequestCreationFailedError.html#deepCopy(com.commercetools.api.models.agent.AgentQuoteRequestCreationFailedError)" class="member-name-link">deepCopy(AgentQuoteRequestCreationFailedError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentQuoteRequestCreationFailedError.html" title="interface in com.commercetools.api.models.agent">AgentQuoteRequestCreationFailedError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of AgentQuoteRequestCreationFailedError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesAuthError.html#deepCopy(com.commercetools.api.models.agent.AgentResponsesAuthError)" class="member-name-link">deepCopy(AgentResponsesAuthError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesAuthError.html" title="interface in com.commercetools.api.models.agent">AgentResponsesAuthError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of AgentResponsesAuthError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesCartSuccess.html#deepCopy(com.commercetools.api.models.agent.AgentResponsesCartSuccess)" class="member-name-link">deepCopy(AgentResponsesCartSuccess)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesCartSuccess.html" title="interface in com.commercetools.api.models.agent">AgentResponsesCartSuccess</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of AgentResponsesCartSuccess</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesErrorResponse.html#deepCopy(com.commercetools.api.models.agent.AgentResponsesErrorResponse)" class="member-name-link">deepCopy(AgentResponsesErrorResponse)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesErrorResponse.html" title="interface in com.commercetools.api.models.agent">AgentResponsesErrorResponse</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of AgentResponsesErrorResponse</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesMultipartRequest.html#deepCopy(com.commercetools.api.models.agent.AgentResponsesMultipartRequest)" class="member-name-link">deepCopy(AgentResponsesMultipartRequest)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesMultipartRequest.html" title="interface in com.commercetools.api.models.agent">AgentResponsesMultipartRequest</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of AgentResponsesMultipartRequest</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesPayload.html#deepCopy(com.commercetools.api.models.agent.AgentResponsesPayload)" class="member-name-link">deepCopy(AgentResponsesPayload)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesPayload.html" title="interface in com.commercetools.api.models.agent">AgentResponsesPayload</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of AgentResponsesPayload</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesQuoteRequestSuccess.html#deepCopy(com.commercetools.api.models.agent.AgentResponsesQuoteRequestSuccess)" class="member-name-link">deepCopy(AgentResponsesQuoteRequestSuccess)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesQuoteRequestSuccess.html" title="interface in com.commercetools.api.models.agent">AgentResponsesQuoteRequestSuccess</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of AgentResponsesQuoteRequestSuccess</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesRequest.html#deepCopy(com.commercetools.api.models.agent.AgentResponsesRequest)" class="member-name-link">deepCopy(AgentResponsesRequest)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesRequest.html" title="interface in com.commercetools.api.models.agent">AgentResponsesRequest</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of AgentResponsesRequest</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentResponsesSuccess.html#deepCopy(com.commercetools.api.models.agent.AgentResponsesSuccess)" class="member-name-link">deepCopy(AgentResponsesSuccess)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentResponsesSuccess.html" title="interface in com.commercetools.api.models.agent">AgentResponsesSuccess</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of AgentResponsesSuccess</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentStoreAmbiguousError.html#deepCopy(com.commercetools.api.models.agent.AgentStoreAmbiguousError)" class="member-name-link">deepCopy(AgentStoreAmbiguousError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentStoreAmbiguousError.html" title="interface in com.commercetools.api.models.agent">AgentStoreAmbiguousError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of AgentStoreAmbiguousError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentStoreDistributionChannelsUnsupportedError.html#deepCopy(com.commercetools.api.models.agent.AgentStoreDistributionChannelsUnsupportedError)" class="member-name-link">deepCopy(AgentStoreDistributionChannelsUnsupportedError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentStoreDistributionChannelsUnsupportedError.html" title="interface in com.commercetools.api.models.agent">AgentStoreDistributionChannelsUnsupportedError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of AgentStoreDistributionChannelsUnsupportedError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/AgentStoreUnresolvedError.html#deepCopy(com.commercetools.api.models.agent.AgentStoreUnresolvedError)" class="member-name-link">deepCopy(AgentStoreUnresolvedError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/AgentStoreUnresolvedError.html" title="interface in com.commercetools.api.models.agent">AgentStoreUnresolvedError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of AgentStoreUnresolvedError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentBusinessUnitAmbiguousError.html#deepCopy(com.commercetools.api.models.agent.GraphQLAgentBusinessUnitAmbiguousError)" class="member-name-link">deepCopy(GraphQLAgentBusinessUnitAmbiguousError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentBusinessUnitAmbiguousError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentBusinessUnitAmbiguousError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of GraphQLAgentBusinessUnitAmbiguousError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentBusinessUnitLimitExceededError.html#deepCopy(com.commercetools.api.models.agent.GraphQLAgentBusinessUnitLimitExceededError)" class="member-name-link">deepCopy(GraphQLAgentBusinessUnitLimitExceededError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentBusinessUnitLimitExceededError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentBusinessUnitLimitExceededError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of GraphQLAgentBusinessUnitLimitExceededError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentBusinessUnitUnresolvedError.html#deepCopy(com.commercetools.api.models.agent.GraphQLAgentBusinessUnitUnresolvedError)" class="member-name-link">deepCopy(GraphQLAgentBusinessUnitUnresolvedError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentBusinessUnitUnresolvedError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentBusinessUnitUnresolvedError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of GraphQLAgentBusinessUnitUnresolvedError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentExtractionFailedError.html#deepCopy(com.commercetools.api.models.agent.GraphQLAgentExtractionFailedError)" class="member-name-link">deepCopy(GraphQLAgentExtractionFailedError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentExtractionFailedError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentExtractionFailedError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of GraphQLAgentExtractionFailedError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentFeatureDisabledError.html#deepCopy(com.commercetools.api.models.agent.GraphQLAgentFeatureDisabledError)" class="member-name-link">deepCopy(GraphQLAgentFeatureDisabledError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentFeatureDisabledError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentFeatureDisabledError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of GraphQLAgentFeatureDisabledError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentMissingCountryError.html#deepCopy(com.commercetools.api.models.agent.GraphQLAgentMissingCountryError)" class="member-name-link">deepCopy(GraphQLAgentMissingCountryError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentMissingCountryError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentMissingCountryError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of GraphQLAgentMissingCountryError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentMissingCustomerEmailError.html#deepCopy(com.commercetools.api.models.agent.GraphQLAgentMissingCustomerEmailError)" class="member-name-link">deepCopy(GraphQLAgentMissingCustomerEmailError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentMissingCustomerEmailError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentMissingCustomerEmailError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of GraphQLAgentMissingCustomerEmailError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentMissingEntityTypeError.html#deepCopy(com.commercetools.api.models.agent.GraphQLAgentMissingEntityTypeError)" class="member-name-link">deepCopy(GraphQLAgentMissingEntityTypeError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentMissingEntityTypeError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentMissingEntityTypeError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of GraphQLAgentMissingEntityTypeError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentNoLineItemsExtractedError.html#deepCopy(com.commercetools.api.models.agent.GraphQLAgentNoLineItemsExtractedError)" class="member-name-link">deepCopy(GraphQLAgentNoLineItemsExtractedError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentNoLineItemsExtractedError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentNoLineItemsExtractedError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of GraphQLAgentNoLineItemsExtractedError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentOutOfScopeError.html#deepCopy(com.commercetools.api.models.agent.GraphQLAgentOutOfScopeError)" class="member-name-link">deepCopy(GraphQLAgentOutOfScopeError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentOutOfScopeError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentOutOfScopeError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of GraphQLAgentOutOfScopeError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentProductSearchNotEnabledError.html#deepCopy(com.commercetools.api.models.agent.GraphQLAgentProductSearchNotEnabledError)" class="member-name-link">deepCopy(GraphQLAgentProductSearchNotEnabledError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentProductSearchNotEnabledError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentProductSearchNotEnabledError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of GraphQLAgentProductSearchNotEnabledError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentProductsNotFoundError.html#deepCopy(com.commercetools.api.models.agent.GraphQLAgentProductsNotFoundError)" class="member-name-link">deepCopy(GraphQLAgentProductsNotFoundError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentProductsNotFoundError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentProductsNotFoundError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of GraphQLAgentProductsNotFoundError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentQuoteRequestCreationFailedError.html#deepCopy(com.commercetools.api.models.agent.GraphQLAgentQuoteRequestCreationFailedError)" class="member-name-link">deepCopy(GraphQLAgentQuoteRequestCreationFailedError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentQuoteRequestCreationFailedError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentQuoteRequestCreationFailedError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of GraphQLAgentQuoteRequestCreationFailedError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentStoreAmbiguousError.html#deepCopy(com.commercetools.api.models.agent.GraphQLAgentStoreAmbiguousError)" class="member-name-link">deepCopy(GraphQLAgentStoreAmbiguousError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentStoreAmbiguousError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentStoreAmbiguousError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of GraphQLAgentStoreAmbiguousError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentStoreDistributionChannelsUnsupportedError.html#deepCopy(com.commercetools.api.models.agent.GraphQLAgentStoreDistributionChannelsUnsupportedError)" class="member-name-link">deepCopy(GraphQLAgentStoreDistributionChannelsUnsupportedError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentStoreDistributionChannelsUnsupportedError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentStoreDistributionChannelsUnsupportedError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of GraphQLAgentStoreDistributionChannelsUnsupportedError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/agent/GraphQLAgentStoreUnresolvedError.html#deepCopy(com.commercetools.api.models.agent.GraphQLAgentStoreUnresolvedError)" class="member-name-link">deepCopy(GraphQLAgentStoreUnresolvedError)</a> - Static method in interface com.commercetools.api.models.agent.<a href="../com/commercetools/api/models/agent/GraphQLAgentStoreUnresolvedError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentStoreUnresolvedError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of GraphQLAgentStoreUnresolvedError</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/api_client/ApiClient.html#deepCopy(com.commercetools.api.models.api_client.ApiClient)" class="member-name-link">deepCopy(ApiClient)</a> - Static method in interface com.commercetools.api.models.api_client.<a href="../com/commercetools/api/models/api_client/ApiClient.html" title="interface in com.commercetools.api.models.api_client">ApiClient</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of ApiClient</div>
@@ -1714,6 +1882,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">factory method to create a deep copy of CartSetDirectDiscountsAction</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/cart/CartSetDirectDiscountsIgnoreCartDiscountsAction.html#deepCopy(com.commercetools.api.models.cart.CartSetDirectDiscountsIgnoreCartDiscountsAction)" class="member-name-link">deepCopy(CartSetDirectDiscountsIgnoreCartDiscountsAction)</a> - Static method in interface com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/CartSetDirectDiscountsIgnoreCartDiscountsAction.html" title="interface in com.commercetools.api.models.cart">CartSetDirectDiscountsIgnoreCartDiscountsAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of CartSetDirectDiscountsIgnoreCartDiscountsAction</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/cart/CartSetEstimatedDeliveryAction.html#deepCopy(com.commercetools.api.models.cart.CartSetEstimatedDeliveryAction)" class="member-name-link">deepCopy(CartSetEstimatedDeliveryAction)</a> - Static method in interface com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/CartSetEstimatedDeliveryAction.html" title="interface in com.commercetools.api.models.cart">CartSetEstimatedDeliveryAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of CartSetEstimatedDeliveryAction</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/cart/CartSetItemShippingAddressCustomFieldAction.html#deepCopy(com.commercetools.api.models.cart.CartSetItemShippingAddressCustomFieldAction)" class="member-name-link">deepCopy(CartSetItemShippingAddressCustomFieldAction)</a> - Static method in interface com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/CartSetItemShippingAddressCustomFieldAction.html" title="interface in com.commercetools.api.models.cart">CartSetItemShippingAddressCustomFieldAction</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of CartSetItemShippingAddressCustomFieldAction</div>
@@ -1901,6 +2077,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/cart/DiscountTypeCombination.html#deepCopy(com.commercetools.api.models.cart.DiscountTypeCombination)" class="member-name-link">deepCopy(DiscountTypeCombination)</a> - Static method in interface com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/DiscountTypeCombination.html" title="interface in com.commercetools.api.models.cart">DiscountTypeCombination</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of DiscountTypeCombination</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/cart/EstimatedDelivery.html#deepCopy(com.commercetools.api.models.cart.EstimatedDelivery)" class="member-name-link">deepCopy(EstimatedDelivery)</a> - Static method in interface com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/EstimatedDelivery.html" title="interface in com.commercetools.api.models.cart">EstimatedDelivery</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of EstimatedDelivery</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/cart/ExternalLineItemTotalPrice.html#deepCopy(com.commercetools.api.models.cart.ExternalLineItemTotalPrice)" class="member-name-link">deepCopy(ExternalLineItemTotalPrice)</a> - Static method in interface com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/ExternalLineItemTotalPrice.html" title="interface in com.commercetools.api.models.cart">ExternalLineItemTotalPrice</a></dt>
 <dd>
@@ -2830,10 +3010,6 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">factory method to create a deep copy of BulkOperationMaxItemsExceededError</div>
 </dd>
-<dt><a href="../com/commercetools/api/models/error/CircularDependencyError.html#deepCopy(com.commercetools.api.models.error.CircularDependencyError)" class="member-name-link">deepCopy(CircularDependencyError)</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/CircularDependencyError.html" title="interface in com.commercetools.api.models.error">CircularDependencyError</a></dt>
-<dd>
-<div class="block">factory method to create a deep copy of CircularDependencyError</div>
-</dd>
 <dt><a href="../com/commercetools/api/models/error/ConcurrentModificationError.html#deepCopy(com.commercetools.api.models.error.ConcurrentModificationError)" class="member-name-link">deepCopy(ConcurrentModificationError)</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/ConcurrentModificationError.html" title="interface in com.commercetools.api.models.error">ConcurrentModificationError</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of ConcurrentModificationError</div>
@@ -2942,6 +3118,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">factory method to create a deep copy of ExtensionChainTooWideError</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/error/ExtensionCircularDependencyError.html#deepCopy(com.commercetools.api.models.error.ExtensionCircularDependencyError)" class="member-name-link">deepCopy(ExtensionCircularDependencyError)</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/ExtensionCircularDependencyError.html" title="interface in com.commercetools.api.models.error">ExtensionCircularDependencyError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of ExtensionCircularDependencyError</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/error/ExtensionDependencyExistsError.html#deepCopy(com.commercetools.api.models.error.ExtensionDependencyExistsError)" class="member-name-link">deepCopy(ExtensionDependencyExistsError)</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/ExtensionDependencyExistsError.html" title="interface in com.commercetools.api.models.error">ExtensionDependencyExistsError</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of ExtensionDependencyExistsError</div>
@@ -3001,10 +3181,6 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/error/GraphQLBulkOperationMaxItemsExceededError.html#deepCopy(com.commercetools.api.models.error.GraphQLBulkOperationMaxItemsExceededError)" class="member-name-link">deepCopy(GraphQLBulkOperationMaxItemsExceededError)</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLBulkOperationMaxItemsExceededError.html" title="interface in com.commercetools.api.models.error">GraphQLBulkOperationMaxItemsExceededError</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of GraphQLBulkOperationMaxItemsExceededError</div>
-</dd>
-<dt><a href="../com/commercetools/api/models/error/GraphQLCircularDependencyError.html#deepCopy(com.commercetools.api.models.error.GraphQLCircularDependencyError)" class="member-name-link">deepCopy(GraphQLCircularDependencyError)</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLCircularDependencyError.html" title="interface in com.commercetools.api.models.error">GraphQLCircularDependencyError</a></dt>
-<dd>
-<div class="block">factory method to create a deep copy of GraphQLCircularDependencyError</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/error/GraphQLConcurrentModificationError.html#deepCopy(com.commercetools.api.models.error.GraphQLConcurrentModificationError)" class="member-name-link">deepCopy(GraphQLConcurrentModificationError)</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLConcurrentModificationError.html" title="interface in com.commercetools.api.models.error">GraphQLConcurrentModificationError</a></dt>
 <dd>
@@ -3105,6 +3281,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/error/GraphQLExtensionChainTooWideError.html#deepCopy(com.commercetools.api.models.error.GraphQLExtensionChainTooWideError)" class="member-name-link">deepCopy(GraphQLExtensionChainTooWideError)</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLExtensionChainTooWideError.html" title="interface in com.commercetools.api.models.error">GraphQLExtensionChainTooWideError</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of GraphQLExtensionChainTooWideError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/error/GraphQLExtensionCircularDependencyError.html#deepCopy(com.commercetools.api.models.error.GraphQLExtensionCircularDependencyError)" class="member-name-link">deepCopy(GraphQLExtensionCircularDependencyError)</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLExtensionCircularDependencyError.html" title="interface in com.commercetools.api.models.error">GraphQLExtensionCircularDependencyError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of GraphQLExtensionCircularDependencyError</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/error/GraphQLExtensionDependencyExistsError.html#deepCopy(com.commercetools.api.models.error.GraphQLExtensionDependencyExistsError)" class="member-name-link">deepCopy(GraphQLExtensionDependencyExistsError)</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLExtensionDependencyExistsError.html" title="interface in com.commercetools.api.models.error">GraphQLExtensionDependencyExistsError</a></dt>
 <dd>
@@ -3213,10 +3393,6 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/error/GraphQLMaxStoreReferencesReachedError.html#deepCopy(com.commercetools.api.models.error.GraphQLMaxStoreReferencesReachedError)" class="member-name-link">deepCopy(GraphQLMaxStoreReferencesReachedError)</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLMaxStoreReferencesReachedError.html" title="interface in com.commercetools.api.models.error">GraphQLMaxStoreReferencesReachedError</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of GraphQLMaxStoreReferencesReachedError</div>
-</dd>
-<dt><a href="../com/commercetools/api/models/error/GraphQLMissingDependencyError.html#deepCopy(com.commercetools.api.models.error.GraphQLMissingDependencyError)" class="member-name-link">deepCopy(GraphQLMissingDependencyError)</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLMissingDependencyError.html" title="interface in com.commercetools.api.models.error">GraphQLMissingDependencyError</a></dt>
-<dd>
-<div class="block">factory method to create a deep copy of GraphQLMissingDependencyError</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/error/GraphQLMissingRoleOnChannelError.html#deepCopy(com.commercetools.api.models.error.GraphQLMissingRoleOnChannelError)" class="member-name-link">deepCopy(GraphQLMissingRoleOnChannelError)</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLMissingRoleOnChannelError.html" title="interface in com.commercetools.api.models.error">GraphQLMissingRoleOnChannelError</a></dt>
 <dd>
@@ -3342,6 +3518,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">factory method to create a deep copy of GraphQLSyntaxErrorError</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/error/GraphQLUnauthorizedError.html#deepCopy(com.commercetools.api.models.error.GraphQLUnauthorizedError)" class="member-name-link">deepCopy(GraphQLUnauthorizedError)</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLUnauthorizedError.html" title="interface in com.commercetools.api.models.error">GraphQLUnauthorizedError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of GraphQLUnauthorizedError</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/error/GraphQLValidityLockConflictError.html#deepCopy(com.commercetools.api.models.error.GraphQLValidityLockConflictError)" class="member-name-link">deepCopy(GraphQLValidityLockConflictError)</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLValidityLockConflictError.html" title="interface in com.commercetools.api.models.error">GraphQLValidityLockConflictError</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of GraphQLValidityLockConflictError</div>
@@ -3425,10 +3605,6 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/error/MaxStoreReferencesReachedError.html#deepCopy(com.commercetools.api.models.error.MaxStoreReferencesReachedError)" class="member-name-link">deepCopy(MaxStoreReferencesReachedError)</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/MaxStoreReferencesReachedError.html" title="interface in com.commercetools.api.models.error">MaxStoreReferencesReachedError</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of MaxStoreReferencesReachedError</div>
-</dd>
-<dt><a href="../com/commercetools/api/models/error/MissingDependencyError.html#deepCopy(com.commercetools.api.models.error.MissingDependencyError)" class="member-name-link">deepCopy(MissingDependencyError)</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/MissingDependencyError.html" title="interface in com.commercetools.api.models.error">MissingDependencyError</a></dt>
-<dd>
-<div class="block">factory method to create a deep copy of MissingDependencyError</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/error/MissingRoleOnChannelError.html#deepCopy(com.commercetools.api.models.error.MissingRoleOnChannelError)" class="member-name-link">deepCopy(MissingRoleOnChannelError)</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/MissingRoleOnChannelError.html" title="interface in com.commercetools.api.models.error">MissingRoleOnChannelError</a></dt>
 <dd>
@@ -3553,6 +3729,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/error/SyntaxErrorError.html#deepCopy(com.commercetools.api.models.error.SyntaxErrorError)" class="member-name-link">deepCopy(SyntaxErrorError)</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/SyntaxErrorError.html" title="interface in com.commercetools.api.models.error">SyntaxErrorError</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of SyntaxErrorError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/error/UnauthorizedError.html#deepCopy(com.commercetools.api.models.error.UnauthorizedError)" class="member-name-link">deepCopy(UnauthorizedError)</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/UnauthorizedError.html" title="interface in com.commercetools.api.models.error">UnauthorizedError</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of UnauthorizedError</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/error/ValidityLockConflictError.html#deepCopy(com.commercetools.api.models.error.ValidityLockConflictError)" class="member-name-link">deepCopy(ValidityLockConflictError)</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/ValidityLockConflictError.html" title="interface in com.commercetools.api.models.error">ValidityLockConflictError</a></dt>
 <dd>
@@ -3865,6 +4045,118 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/inventory/InventoryPagedQueryResponse.html#deepCopy(com.commercetools.api.models.inventory.InventoryPagedQueryResponse)" class="member-name-link">deepCopy(InventoryPagedQueryResponse)</a> - Static method in interface com.commercetools.api.models.inventory.<a href="../com/commercetools/api/models/inventory/InventoryPagedQueryResponse.html" title="interface in com.commercetools.api.models.inventory">InventoryPagedQueryResponse</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of InventoryPagedQueryResponse</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfig.html#deepCopy(com.commercetools.api.models.mcp_server.CommerceMcpServerConfig)" class="member-name-link">deepCopy(CommerceMcpServerConfig)</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfig.html" title="interface in com.commercetools.api.models.mcp_server">CommerceMcpServerConfig</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of CommerceMcpServerConfig</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigDraft.html#deepCopy(com.commercetools.api.models.mcp_server.CommerceMcpServerConfigDraft)" class="member-name-link">deepCopy(CommerceMcpServerConfigDraft)</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/CommerceMcpServerConfigDraft.html" title="interface in com.commercetools.api.models.mcp_server">CommerceMcpServerConfigDraft</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of CommerceMcpServerConfigDraft</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServer.html#deepCopy(com.commercetools.api.models.mcp_server.McpServer)" class="member-name-link">deepCopy(McpServer)</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServer.html" title="interface in com.commercetools.api.models.mcp_server">McpServer</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of McpServer</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerAddToolAction.html#deepCopy(com.commercetools.api.models.mcp_server.McpServerAddToolAction)" class="member-name-link">deepCopy(McpServerAddToolAction)</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerAddToolAction.html" title="interface in com.commercetools.api.models.mcp_server">McpServerAddToolAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of McpServerAddToolAction</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerAddToolCustomizationAction.html#deepCopy(com.commercetools.api.models.mcp_server.McpServerAddToolCustomizationAction)" class="member-name-link">deepCopy(McpServerAddToolCustomizationAction)</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerAddToolCustomizationAction.html" title="interface in com.commercetools.api.models.mcp_server">McpServerAddToolCustomizationAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of McpServerAddToolCustomizationAction</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerConfig.html#deepCopy(com.commercetools.api.models.mcp_server.McpServerConfig)" class="member-name-link">deepCopy(McpServerConfig)</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerConfig.html" title="interface in com.commercetools.api.models.mcp_server">McpServerConfig</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of McpServerConfig</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerConfigDraft.html#deepCopy(com.commercetools.api.models.mcp_server.McpServerConfigDraft)" class="member-name-link">deepCopy(McpServerConfigDraft)</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerConfigDraft.html" title="interface in com.commercetools.api.models.mcp_server">McpServerConfigDraft</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of McpServerConfigDraft</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerDraft.html#deepCopy(com.commercetools.api.models.mcp_server.McpServerDraft)" class="member-name-link">deepCopy(McpServerDraft)</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerDraft.html" title="interface in com.commercetools.api.models.mcp_server">McpServerDraft</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of McpServerDraft</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerJsonOutputFiltering.html#deepCopy(com.commercetools.api.models.mcp_server.McpServerJsonOutputFiltering)" class="member-name-link">deepCopy(McpServerJsonOutputFiltering)</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerJsonOutputFiltering.html" title="interface in com.commercetools.api.models.mcp_server">McpServerJsonOutputFiltering</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of McpServerJsonOutputFiltering</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerJsonOutputFilteringMatcher.html#deepCopy(com.commercetools.api.models.mcp_server.McpServerJsonOutputFilteringMatcher)" class="member-name-link">deepCopy(McpServerJsonOutputFilteringMatcher)</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerJsonOutputFilteringMatcher.html" title="interface in com.commercetools.api.models.mcp_server">McpServerJsonOutputFilteringMatcher</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of McpServerJsonOutputFilteringMatcher</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerPagedQueryResponse.html#deepCopy(com.commercetools.api.models.mcp_server.McpServerPagedQueryResponse)" class="member-name-link">deepCopy(McpServerPagedQueryResponse)</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerPagedQueryResponse.html" title="interface in com.commercetools.api.models.mcp_server">McpServerPagedQueryResponse</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of McpServerPagedQueryResponse</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerRemoveToolAction.html#deepCopy(com.commercetools.api.models.mcp_server.McpServerRemoveToolAction)" class="member-name-link">deepCopy(McpServerRemoveToolAction)</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerRemoveToolAction.html" title="interface in com.commercetools.api.models.mcp_server">McpServerRemoveToolAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of McpServerRemoveToolAction</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerRemoveToolCustomizationAction.html#deepCopy(com.commercetools.api.models.mcp_server.McpServerRemoveToolCustomizationAction)" class="member-name-link">deepCopy(McpServerRemoveToolCustomizationAction)</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerRemoveToolCustomizationAction.html" title="interface in com.commercetools.api.models.mcp_server">McpServerRemoveToolCustomizationAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of McpServerRemoveToolCustomizationAction</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerSetAuthenticationModeAction.html#deepCopy(com.commercetools.api.models.mcp_server.McpServerSetAuthenticationModeAction)" class="member-name-link">deepCopy(McpServerSetAuthenticationModeAction)</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerSetAuthenticationModeAction.html" title="interface in com.commercetools.api.models.mcp_server">McpServerSetAuthenticationModeAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of McpServerSetAuthenticationModeAction</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerSetDescriptionAction.html#deepCopy(com.commercetools.api.models.mcp_server.McpServerSetDescriptionAction)" class="member-name-link">deepCopy(McpServerSetDescriptionAction)</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerSetDescriptionAction.html" title="interface in com.commercetools.api.models.mcp_server">McpServerSetDescriptionAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of McpServerSetDescriptionAction</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerSetJsonOutputFilteringAction.html#deepCopy(com.commercetools.api.models.mcp_server.McpServerSetJsonOutputFilteringAction)" class="member-name-link">deepCopy(McpServerSetJsonOutputFilteringAction)</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerSetJsonOutputFilteringAction.html" title="interface in com.commercetools.api.models.mcp_server">McpServerSetJsonOutputFilteringAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of McpServerSetJsonOutputFilteringAction</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerSetNameAction.html#deepCopy(com.commercetools.api.models.mcp_server.McpServerSetNameAction)" class="member-name-link">deepCopy(McpServerSetNameAction)</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerSetNameAction.html" title="interface in com.commercetools.api.models.mcp_server">McpServerSetNameAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of McpServerSetNameAction</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerSetStateAction.html#deepCopy(com.commercetools.api.models.mcp_server.McpServerSetStateAction)" class="member-name-link">deepCopy(McpServerSetStateAction)</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerSetStateAction.html" title="interface in com.commercetools.api.models.mcp_server">McpServerSetStateAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of McpServerSetStateAction</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerSetToolCustomizationsAction.html#deepCopy(com.commercetools.api.models.mcp_server.McpServerSetToolCustomizationsAction)" class="member-name-link">deepCopy(McpServerSetToolCustomizationsAction)</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerSetToolCustomizationsAction.html" title="interface in com.commercetools.api.models.mcp_server">McpServerSetToolCustomizationsAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of McpServerSetToolCustomizationsAction</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerSetToolOutputFormattingAction.html#deepCopy(com.commercetools.api.models.mcp_server.McpServerSetToolOutputFormattingAction)" class="member-name-link">deepCopy(McpServerSetToolOutputFormattingAction)</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerSetToolOutputFormattingAction.html" title="interface in com.commercetools.api.models.mcp_server">McpServerSetToolOutputFormattingAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of McpServerSetToolOutputFormattingAction</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerSetToolsAction.html#deepCopy(com.commercetools.api.models.mcp_server.McpServerSetToolsAction)" class="member-name-link">deepCopy(McpServerSetToolsAction)</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerSetToolsAction.html" title="interface in com.commercetools.api.models.mcp_server">McpServerSetToolsAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of McpServerSetToolsAction</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerType.html#deepCopy(com.commercetools.api.models.mcp_server.McpServerType)" class="member-name-link">deepCopy(McpServerType)</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerType.html" title="interface in com.commercetools.api.models.mcp_server">McpServerType</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of McpServerType</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerTypeTool.html#deepCopy(com.commercetools.api.models.mcp_server.McpServerTypeTool)" class="member-name-link">deepCopy(McpServerTypeTool)</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerTypeTool.html" title="interface in com.commercetools.api.models.mcp_server">McpServerTypeTool</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of McpServerTypeTool</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerUpdate.html#deepCopy(com.commercetools.api.models.mcp_server.McpServerUpdate)" class="member-name-link">deepCopy(McpServerUpdate)</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerUpdate.html" title="interface in com.commercetools.api.models.mcp_server">McpServerUpdate</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of McpServerUpdate</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerUpdateAction.html#deepCopy(com.commercetools.api.models.mcp_server.McpServerUpdateAction)" class="member-name-link">deepCopy(McpServerUpdateAction)</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerUpdateAction.html" title="interface in com.commercetools.api.models.mcp_server">McpServerUpdateAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of McpServerUpdateAction</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/ParameterOverride.html#deepCopy(com.commercetools.api.models.mcp_server.ParameterOverride)" class="member-name-link">deepCopy(ParameterOverride)</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/ParameterOverride.html" title="interface in com.commercetools.api.models.mcp_server">ParameterOverride</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of ParameterOverride</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/RemoveToolCustomizationTarget.html#deepCopy(com.commercetools.api.models.mcp_server.RemoveToolCustomizationTarget)" class="member-name-link">deepCopy(RemoveToolCustomizationTarget)</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/RemoveToolCustomizationTarget.html" title="interface in com.commercetools.api.models.mcp_server">RemoveToolCustomizationTarget</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of RemoveToolCustomizationTarget</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/ToolCustomization.html#deepCopy(com.commercetools.api.models.mcp_server.ToolCustomization)" class="member-name-link">deepCopy(ToolCustomization)</a> - Static method in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/ToolCustomization.html" title="interface in com.commercetools.api.models.mcp_server">ToolCustomization</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of ToolCustomization</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/me/MyBusinessUnitAddAddressAction.html#deepCopy(com.commercetools.api.models.me.MyBusinessUnitAddAddressAction)" class="member-name-link">deepCopy(MyBusinessUnitAddAddressAction)</a> - Static method in interface com.commercetools.api.models.me.<a href="../com/commercetools/api/models/me/MyBusinessUnitAddAddressAction.html" title="interface in com.commercetools.api.models.me">MyBusinessUnitAddAddressAction</a></dt>
 <dd>
@@ -4894,6 +5186,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">factory method to create a deep copy of CartDiscountStoresSetMessagePayload</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/CartEstimatedDeliverySetMessage.html#deepCopy(com.commercetools.api.models.message.CartEstimatedDeliverySetMessage)" class="member-name-link">deepCopy(CartEstimatedDeliverySetMessage)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CartEstimatedDeliverySetMessage.html" title="interface in com.commercetools.api.models.message">CartEstimatedDeliverySetMessage</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of CartEstimatedDeliverySetMessage</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/CartEstimatedDeliverySetMessagePayload.html#deepCopy(com.commercetools.api.models.message.CartEstimatedDeliverySetMessagePayload)" class="member-name-link">deepCopy(CartEstimatedDeliverySetMessagePayload)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CartEstimatedDeliverySetMessagePayload.html" title="interface in com.commercetools.api.models.message">CartEstimatedDeliverySetMessagePayload</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of CartEstimatedDeliverySetMessagePayload</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/CartFrozenMessage.html#deepCopy(com.commercetools.api.models.message.CartFrozenMessage)" class="member-name-link">deepCopy(CartFrozenMessage)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CartFrozenMessage.html" title="interface in com.commercetools.api.models.message">CartFrozenMessage</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of CartFrozenMessage</div>
@@ -5686,6 +5986,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">factory method to create a deep copy of OrderEditAppliedMessagePayload</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/OrderEstimatedDeliverySetMessage.html#deepCopy(com.commercetools.api.models.message.OrderEstimatedDeliverySetMessage)" class="member-name-link">deepCopy(OrderEstimatedDeliverySetMessage)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/OrderEstimatedDeliverySetMessage.html" title="interface in com.commercetools.api.models.message">OrderEstimatedDeliverySetMessage</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of OrderEstimatedDeliverySetMessage</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/OrderEstimatedDeliverySetMessagePayload.html#deepCopy(com.commercetools.api.models.message.OrderEstimatedDeliverySetMessagePayload)" class="member-name-link">deepCopy(OrderEstimatedDeliverySetMessagePayload)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/OrderEstimatedDeliverySetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderEstimatedDeliverySetMessagePayload</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of OrderEstimatedDeliverySetMessagePayload</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/OrderImportedMessage.html#deepCopy(com.commercetools.api.models.message.OrderImportedMessage)" class="member-name-link">deepCopy(OrderImportedMessage)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/OrderImportedMessage.html" title="interface in com.commercetools.api.models.message">OrderImportedMessage</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of OrderImportedMessage</div>
@@ -6402,6 +6710,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">factory method to create a deep copy of ProductTailoringImagesSetMessagePayload</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessage.html#deepCopy(com.commercetools.api.models.message.ProductTailoringKeySetMessage)" class="member-name-link">deepCopy(ProductTailoringKeySetMessage)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessage.html" title="interface in com.commercetools.api.models.message">ProductTailoringKeySetMessage</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of ProductTailoringKeySetMessage</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessagePayload.html#deepCopy(com.commercetools.api.models.message.ProductTailoringKeySetMessagePayload)" class="member-name-link">deepCopy(ProductTailoringKeySetMessagePayload)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ProductTailoringKeySetMessagePayload.html" title="interface in com.commercetools.api.models.message">ProductTailoringKeySetMessagePayload</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of ProductTailoringKeySetMessagePayload</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/ProductTailoringNameSetMessage.html#deepCopy(com.commercetools.api.models.message.ProductTailoringNameSetMessage)" class="member-name-link">deepCopy(ProductTailoringNameSetMessage)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ProductTailoringNameSetMessage.html" title="interface in com.commercetools.api.models.message">ProductTailoringNameSetMessage</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of ProductTailoringNameSetMessage</div>
@@ -6910,6 +7226,30 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">factory method to create a deep copy of StandalonePriceValueChangedMessagePayload</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/StoreCheckoutUrlTemplateSetMessage.html#deepCopy(com.commercetools.api.models.message.StoreCheckoutUrlTemplateSetMessage)" class="member-name-link">deepCopy(StoreCheckoutUrlTemplateSetMessage)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreCheckoutUrlTemplateSetMessage.html" title="interface in com.commercetools.api.models.message">StoreCheckoutUrlTemplateSetMessage</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of StoreCheckoutUrlTemplateSetMessage</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StoreCheckoutUrlTemplateSetMessagePayload.html#deepCopy(com.commercetools.api.models.message.StoreCheckoutUrlTemplateSetMessagePayload)" class="member-name-link">deepCopy(StoreCheckoutUrlTemplateSetMessagePayload)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreCheckoutUrlTemplateSetMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreCheckoutUrlTemplateSetMessagePayload</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of StoreCheckoutUrlTemplateSetMessagePayload</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StoreContactUrlSetMessage.html#deepCopy(com.commercetools.api.models.message.StoreContactUrlSetMessage)" class="member-name-link">deepCopy(StoreContactUrlSetMessage)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreContactUrlSetMessage.html" title="interface in com.commercetools.api.models.message">StoreContactUrlSetMessage</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of StoreContactUrlSetMessage</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StoreContactUrlSetMessagePayload.html#deepCopy(com.commercetools.api.models.message.StoreContactUrlSetMessagePayload)" class="member-name-link">deepCopy(StoreContactUrlSetMessagePayload)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreContactUrlSetMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreContactUrlSetMessagePayload</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of StoreContactUrlSetMessagePayload</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StoreCookiePolicyUrlSetMessage.html#deepCopy(com.commercetools.api.models.message.StoreCookiePolicyUrlSetMessage)" class="member-name-link">deepCopy(StoreCookiePolicyUrlSetMessage)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreCookiePolicyUrlSetMessage.html" title="interface in com.commercetools.api.models.message">StoreCookiePolicyUrlSetMessage</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of StoreCookiePolicyUrlSetMessage</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StoreCookiePolicyUrlSetMessagePayload.html#deepCopy(com.commercetools.api.models.message.StoreCookiePolicyUrlSetMessagePayload)" class="member-name-link">deepCopy(StoreCookiePolicyUrlSetMessagePayload)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreCookiePolicyUrlSetMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreCookiePolicyUrlSetMessagePayload</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of StoreCookiePolicyUrlSetMessagePayload</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/StoreCountriesChangedMessage.html#deepCopy(com.commercetools.api.models.message.StoreCountriesChangedMessage)" class="member-name-link">deepCopy(StoreCountriesChangedMessage)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreCountriesChangedMessage.html" title="interface in com.commercetools.api.models.message">StoreCountriesChangedMessage</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of StoreCountriesChangedMessage</div>
@@ -6942,6 +7282,22 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">factory method to create a deep copy of StoreDistributionChannelsChangedMessagePayload</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/StoreFaqUrlSetMessage.html#deepCopy(com.commercetools.api.models.message.StoreFaqUrlSetMessage)" class="member-name-link">deepCopy(StoreFaqUrlSetMessage)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreFaqUrlSetMessage.html" title="interface in com.commercetools.api.models.message">StoreFaqUrlSetMessage</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of StoreFaqUrlSetMessage</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StoreFaqUrlSetMessagePayload.html#deepCopy(com.commercetools.api.models.message.StoreFaqUrlSetMessagePayload)" class="member-name-link">deepCopy(StoreFaqUrlSetMessagePayload)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreFaqUrlSetMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreFaqUrlSetMessagePayload</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of StoreFaqUrlSetMessagePayload</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StoreImprintUrlSetMessage.html#deepCopy(com.commercetools.api.models.message.StoreImprintUrlSetMessage)" class="member-name-link">deepCopy(StoreImprintUrlSetMessage)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreImprintUrlSetMessage.html" title="interface in com.commercetools.api.models.message">StoreImprintUrlSetMessage</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of StoreImprintUrlSetMessage</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StoreImprintUrlSetMessagePayload.html#deepCopy(com.commercetools.api.models.message.StoreImprintUrlSetMessagePayload)" class="member-name-link">deepCopy(StoreImprintUrlSetMessagePayload)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreImprintUrlSetMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreImprintUrlSetMessagePayload</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of StoreImprintUrlSetMessagePayload</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/StoreLanguagesChangedMessage.html#deepCopy(com.commercetools.api.models.message.StoreLanguagesChangedMessage)" class="member-name-link">deepCopy(StoreLanguagesChangedMessage)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreLanguagesChangedMessage.html" title="interface in com.commercetools.api.models.message">StoreLanguagesChangedMessage</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of StoreLanguagesChangedMessage</div>
@@ -6958,6 +7314,22 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">factory method to create a deep copy of StoreNameSetMessagePayload</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/StoreOrderUrlTemplateSetMessage.html#deepCopy(com.commercetools.api.models.message.StoreOrderUrlTemplateSetMessage)" class="member-name-link">deepCopy(StoreOrderUrlTemplateSetMessage)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreOrderUrlTemplateSetMessage.html" title="interface in com.commercetools.api.models.message">StoreOrderUrlTemplateSetMessage</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of StoreOrderUrlTemplateSetMessage</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StoreOrderUrlTemplateSetMessagePayload.html#deepCopy(com.commercetools.api.models.message.StoreOrderUrlTemplateSetMessagePayload)" class="member-name-link">deepCopy(StoreOrderUrlTemplateSetMessagePayload)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreOrderUrlTemplateSetMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreOrderUrlTemplateSetMessagePayload</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of StoreOrderUrlTemplateSetMessagePayload</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StorePrivacyPolicyUrlSetMessage.html#deepCopy(com.commercetools.api.models.message.StorePrivacyPolicyUrlSetMessage)" class="member-name-link">deepCopy(StorePrivacyPolicyUrlSetMessage)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StorePrivacyPolicyUrlSetMessage.html" title="interface in com.commercetools.api.models.message">StorePrivacyPolicyUrlSetMessage</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of StorePrivacyPolicyUrlSetMessage</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StorePrivacyPolicyUrlSetMessagePayload.html#deepCopy(com.commercetools.api.models.message.StorePrivacyPolicyUrlSetMessagePayload)" class="member-name-link">deepCopy(StorePrivacyPolicyUrlSetMessagePayload)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StorePrivacyPolicyUrlSetMessagePayload.html" title="interface in com.commercetools.api.models.message">StorePrivacyPolicyUrlSetMessagePayload</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of StorePrivacyPolicyUrlSetMessagePayload</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/StoreProductSelectionsChangedMessage.html#deepCopy(com.commercetools.api.models.message.StoreProductSelectionsChangedMessage)" class="member-name-link">deepCopy(StoreProductSelectionsChangedMessage)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreProductSelectionsChangedMessage.html" title="interface in com.commercetools.api.models.message">StoreProductSelectionsChangedMessage</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of StoreProductSelectionsChangedMessage</div>
@@ -6966,6 +7338,22 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">factory method to create a deep copy of StoreProductSelectionsChangedMessagePayload</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/StoreRefundPolicyUrlSetMessage.html#deepCopy(com.commercetools.api.models.message.StoreRefundPolicyUrlSetMessage)" class="member-name-link">deepCopy(StoreRefundPolicyUrlSetMessage)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreRefundPolicyUrlSetMessage.html" title="interface in com.commercetools.api.models.message">StoreRefundPolicyUrlSetMessage</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of StoreRefundPolicyUrlSetMessage</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StoreRefundPolicyUrlSetMessagePayload.html#deepCopy(com.commercetools.api.models.message.StoreRefundPolicyUrlSetMessagePayload)" class="member-name-link">deepCopy(StoreRefundPolicyUrlSetMessagePayload)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreRefundPolicyUrlSetMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreRefundPolicyUrlSetMessagePayload</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of StoreRefundPolicyUrlSetMessagePayload</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StoreShippingPolicyUrlSetMessage.html#deepCopy(com.commercetools.api.models.message.StoreShippingPolicyUrlSetMessage)" class="member-name-link">deepCopy(StoreShippingPolicyUrlSetMessage)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreShippingPolicyUrlSetMessage.html" title="interface in com.commercetools.api.models.message">StoreShippingPolicyUrlSetMessage</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of StoreShippingPolicyUrlSetMessage</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StoreShippingPolicyUrlSetMessagePayload.html#deepCopy(com.commercetools.api.models.message.StoreShippingPolicyUrlSetMessagePayload)" class="member-name-link">deepCopy(StoreShippingPolicyUrlSetMessagePayload)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreShippingPolicyUrlSetMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreShippingPolicyUrlSetMessagePayload</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of StoreShippingPolicyUrlSetMessagePayload</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/StoreSupplyChannelsChangedMessage.html#deepCopy(com.commercetools.api.models.message.StoreSupplyChannelsChangedMessage)" class="member-name-link">deepCopy(StoreSupplyChannelsChangedMessage)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreSupplyChannelsChangedMessage.html" title="interface in com.commercetools.api.models.message">StoreSupplyChannelsChangedMessage</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of StoreSupplyChannelsChangedMessage</div>
@@ -6973,6 +7361,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/message/StoreSupplyChannelsChangedMessagePayload.html#deepCopy(com.commercetools.api.models.message.StoreSupplyChannelsChangedMessagePayload)" class="member-name-link">deepCopy(StoreSupplyChannelsChangedMessagePayload)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreSupplyChannelsChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreSupplyChannelsChangedMessagePayload</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of StoreSupplyChannelsChangedMessagePayload</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StoreTermsOfServiceUrlSetMessage.html#deepCopy(com.commercetools.api.models.message.StoreTermsOfServiceUrlSetMessage)" class="member-name-link">deepCopy(StoreTermsOfServiceUrlSetMessage)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreTermsOfServiceUrlSetMessage.html" title="interface in com.commercetools.api.models.message">StoreTermsOfServiceUrlSetMessage</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of StoreTermsOfServiceUrlSetMessage</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/StoreTermsOfServiceUrlSetMessagePayload.html#deepCopy(com.commercetools.api.models.message.StoreTermsOfServiceUrlSetMessagePayload)" class="member-name-link">deepCopy(StoreTermsOfServiceUrlSetMessagePayload)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/StoreTermsOfServiceUrlSetMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreTermsOfServiceUrlSetMessagePayload</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of StoreTermsOfServiceUrlSetMessagePayload</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/UserProvidedIdentifiers.html#deepCopy(com.commercetools.api.models.message.UserProvidedIdentifiers)" class="member-name-link">deepCopy(UserProvidedIdentifiers)</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/UserProvidedIdentifiers.html" title="interface in com.commercetools.api.models.message">UserProvidedIdentifiers</a></dt>
 <dd>
@@ -7337,6 +7733,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/order_edit/StagedOrderSetDirectDiscountsAction.html#deepCopy(com.commercetools.api.models.order_edit.StagedOrderSetDirectDiscountsAction)" class="member-name-link">deepCopy(StagedOrderSetDirectDiscountsAction)</a> - Static method in interface com.commercetools.api.models.order_edit.<a href="../com/commercetools/api/models/order_edit/StagedOrderSetDirectDiscountsAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetDirectDiscountsAction</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of StagedOrderSetDirectDiscountsAction</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/order_edit/StagedOrderSetDirectDiscountsIgnoreCartDiscountsAction.html#deepCopy(com.commercetools.api.models.order_edit.StagedOrderSetDirectDiscountsIgnoreCartDiscountsAction)" class="member-name-link">deepCopy(StagedOrderSetDirectDiscountsIgnoreCartDiscountsAction)</a> - Static method in interface com.commercetools.api.models.order_edit.<a href="../com/commercetools/api/models/order_edit/StagedOrderSetDirectDiscountsIgnoreCartDiscountsAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetDirectDiscountsIgnoreCartDiscountsAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of StagedOrderSetDirectDiscountsIgnoreCartDiscountsAction</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/order_edit/StagedOrderSetItemShippingAddressCustomFieldAction.html#deepCopy(com.commercetools.api.models.order_edit.StagedOrderSetItemShippingAddressCustomFieldAction)" class="member-name-link">deepCopy(StagedOrderSetItemShippingAddressCustomFieldAction)</a> - Static method in interface com.commercetools.api.models.order_edit.<a href="../com/commercetools/api/models/order_edit/StagedOrderSetItemShippingAddressCustomFieldAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetItemShippingAddressCustomFieldAction</a></dt>
 <dd>
@@ -7794,6 +8194,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/order/OrderSetDeliveryItemsAction.html#deepCopy(com.commercetools.api.models.order.OrderSetDeliveryItemsAction)" class="member-name-link">deepCopy(OrderSetDeliveryItemsAction)</a> - Static method in interface com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/OrderSetDeliveryItemsAction.html" title="interface in com.commercetools.api.models.order">OrderSetDeliveryItemsAction</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of OrderSetDeliveryItemsAction</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/order/OrderSetEstimatedDeliveryAction.html#deepCopy(com.commercetools.api.models.order.OrderSetEstimatedDeliveryAction)" class="member-name-link">deepCopy(OrderSetEstimatedDeliveryAction)</a> - Static method in interface com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/OrderSetEstimatedDeliveryAction.html" title="interface in com.commercetools.api.models.order">OrderSetEstimatedDeliveryAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of OrderSetEstimatedDeliveryAction</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/order/OrderSetItemShippingAddressCustomFieldAction.html#deepCopy(com.commercetools.api.models.order.OrderSetItemShippingAddressCustomFieldAction)" class="member-name-link">deepCopy(OrderSetItemShippingAddressCustomFieldAction)</a> - Static method in interface com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/OrderSetItemShippingAddressCustomFieldAction.html" title="interface in com.commercetools.api.models.order">OrderSetItemShippingAddressCustomFieldAction</a></dt>
 <dd>
@@ -8612,6 +9016,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">factory method to create a deep copy of ProductTailoringSetImageLabelAction</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringSetKeyAction.html#deepCopy(com.commercetools.api.models.product_tailoring.ProductTailoringSetKeyAction)" class="member-name-link">deepCopy(ProductTailoringSetKeyAction)</a> - Static method in interface com.commercetools.api.models.product_tailoring.<a href="../com/commercetools/api/models/product_tailoring/ProductTailoringSetKeyAction.html" title="interface in com.commercetools.api.models.product_tailoring">ProductTailoringSetKeyAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of ProductTailoringSetKeyAction</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringSetMetaAttributesAction.html#deepCopy(com.commercetools.api.models.product_tailoring.ProductTailoringSetMetaAttributesAction)" class="member-name-link">deepCopy(ProductTailoringSetMetaAttributesAction)</a> - Static method in interface com.commercetools.api.models.product_tailoring.<a href="../com/commercetools/api/models/product_tailoring/ProductTailoringSetMetaAttributesAction.html" title="interface in com.commercetools.api.models.product_tailoring">ProductTailoringSetMetaAttributesAction</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of ProductTailoringSetMetaAttributesAction</div>
@@ -8850,22 +9258,27 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/FacetRange.html#deepCopy(com.commercetools.api.models.product.FacetRange)" class="member-name-link">deepCopy(FacetRange)</a> - Static method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/FacetRange.html" title="interface in com.commercetools.api.models.product">FacetRange</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">factory method to create a deep copy of FacetRange</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/FacetResult.html#deepCopy(com.commercetools.api.models.product.FacetResult)" class="member-name-link">deepCopy(FacetResult)</a> - Static method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/FacetResult.html" title="interface in com.commercetools.api.models.product">FacetResult</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">factory method to create a deep copy of FacetResult</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/FacetResults.html#deepCopy(com.commercetools.api.models.product.FacetResults)" class="member-name-link">deepCopy(FacetResults)</a> - Static method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/FacetResults.html" title="interface in com.commercetools.api.models.product">FacetResults</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">factory method to create a deep copy of FacetResults</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/FacetTerm.html#deepCopy(com.commercetools.api.models.product.FacetTerm)" class="member-name-link">deepCopy(FacetTerm)</a> - Static method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/FacetTerm.html" title="interface in com.commercetools.api.models.product">FacetTerm</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">factory method to create a deep copy of FacetTerm</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/FilteredFacetResult.html#deepCopy(com.commercetools.api.models.product.FilteredFacetResult)" class="member-name-link">deepCopy(FilteredFacetResult)</a> - Static method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/FilteredFacetResult.html" title="interface in com.commercetools.api.models.product">FilteredFacetResult</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">factory method to create a deep copy of FilteredFacetResult</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/Product.html#deepCopy(com.commercetools.api.models.product.Product)" class="member-name-link">deepCopy(Product)</a> - Static method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/Product.html" title="interface in com.commercetools.api.models.product">Product</a></dt>
@@ -8946,6 +9359,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/ProductProjectionPagedSearchResponse.html#deepCopy(com.commercetools.api.models.product.ProductProjectionPagedSearchResponse)" class="member-name-link">deepCopy(ProductProjectionPagedSearchResponse)</a> - Static method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/ProductProjectionPagedSearchResponse.html" title="interface in com.commercetools.api.models.product">ProductProjectionPagedSearchResponse</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">factory method to create a deep copy of ProductProjectionPagedSearchResponse</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/ProductPublishAction.html#deepCopy(com.commercetools.api.models.product.ProductPublishAction)" class="member-name-link">deepCopy(ProductPublishAction)</a> - Static method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/ProductPublishAction.html" title="interface in com.commercetools.api.models.product">ProductPublishAction</a></dt>
@@ -9134,6 +9548,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/RangeFacetResult.html#deepCopy(com.commercetools.api.models.product.RangeFacetResult)" class="member-name-link">deepCopy(RangeFacetResult)</a> - Static method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/RangeFacetResult.html" title="interface in com.commercetools.api.models.product">RangeFacetResult</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">factory method to create a deep copy of RangeFacetResult</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/SearchKeyword.html#deepCopy(com.commercetools.api.models.product.SearchKeyword)" class="member-name-link">deepCopy(SearchKeyword)</a> - Static method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/SearchKeyword.html" title="interface in com.commercetools.api.models.product">SearchKeyword</a></dt>
@@ -9146,10 +9561,12 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/Suggestion.html#deepCopy(com.commercetools.api.models.product.Suggestion)" class="member-name-link">deepCopy(Suggestion)</a> - Static method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/Suggestion.html" title="interface in com.commercetools.api.models.product">Suggestion</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">factory method to create a deep copy of Suggestion</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/SuggestionResult.html#deepCopy(com.commercetools.api.models.product.SuggestionResult)" class="member-name-link">deepCopy(SuggestionResult)</a> - Static method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/SuggestionResult.html" title="interface in com.commercetools.api.models.product">SuggestionResult</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">factory method to create a deep copy of SuggestionResult</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/SuggestTokenizer.html#deepCopy(com.commercetools.api.models.product.SuggestTokenizer)" class="member-name-link">deepCopy(SuggestTokenizer)</a> - Static method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/SuggestTokenizer.html" title="interface in com.commercetools.api.models.product">SuggestTokenizer</a></dt>
@@ -9158,6 +9575,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/TermFacetResult.html#deepCopy(com.commercetools.api.models.product.TermFacetResult)" class="member-name-link">deepCopy(TermFacetResult)</a> - Static method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/TermFacetResult.html" title="interface in com.commercetools.api.models.product">TermFacetResult</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">factory method to create a deep copy of TermFacetResult</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/WhitespaceTokenizer.html#deepCopy(com.commercetools.api.models.product.WhitespaceTokenizer)" class="member-name-link">deepCopy(WhitespaceTokenizer)</a> - Static method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/WhitespaceTokenizer.html" title="interface in com.commercetools.api.models.product">WhitespaceTokenizer</a></dt>
@@ -9928,6 +10346,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">factory method to create a deep copy of ShippingMethodResourceIdentifier</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/shipping_method/ShippingMethodSetCarrierAction.html#deepCopy(com.commercetools.api.models.shipping_method.ShippingMethodSetCarrierAction)" class="member-name-link">deepCopy(ShippingMethodSetCarrierAction)</a> - Static method in interface com.commercetools.api.models.shipping_method.<a href="../com/commercetools/api/models/shipping_method/ShippingMethodSetCarrierAction.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodSetCarrierAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of ShippingMethodSetCarrierAction</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/shipping_method/ShippingMethodSetCustomFieldAction.html#deepCopy(com.commercetools.api.models.shipping_method.ShippingMethodSetCustomFieldAction)" class="member-name-link">deepCopy(ShippingMethodSetCustomFieldAction)</a> - Static method in interface com.commercetools.api.models.shipping_method.<a href="../com/commercetools/api/models/shipping_method/ShippingMethodSetCustomFieldAction.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodSetCustomFieldAction</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of ShippingMethodSetCustomFieldAction</div>
@@ -10381,6 +10803,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">factory method to create a deep copy of StoreDraft</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/store/Storefront.html#deepCopy(com.commercetools.api.models.store.Storefront)" class="member-name-link">deepCopy(Storefront)</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/Storefront.html" title="interface in com.commercetools.api.models.store">Storefront</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of Storefront</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/store/StoreKeyReference.html#deepCopy(com.commercetools.api.models.store.StoreKeyReference)" class="member-name-link">deepCopy(StoreKeyReference)</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of StoreKeyReference</div>
@@ -10413,6 +10839,18 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">factory method to create a deep copy of StoreResourceIdentifier</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/store/StoreSetCheckoutUrlTemplateAction.html#deepCopy(com.commercetools.api.models.store.StoreSetCheckoutUrlTemplateAction)" class="member-name-link">deepCopy(StoreSetCheckoutUrlTemplateAction)</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreSetCheckoutUrlTemplateAction.html" title="interface in com.commercetools.api.models.store">StoreSetCheckoutUrlTemplateAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of StoreSetCheckoutUrlTemplateAction</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/store/StoreSetContactUrlAction.html#deepCopy(com.commercetools.api.models.store.StoreSetContactUrlAction)" class="member-name-link">deepCopy(StoreSetContactUrlAction)</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreSetContactUrlAction.html" title="interface in com.commercetools.api.models.store">StoreSetContactUrlAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of StoreSetContactUrlAction</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/store/StoreSetCookiePolicyUrlAction.html#deepCopy(com.commercetools.api.models.store.StoreSetCookiePolicyUrlAction)" class="member-name-link">deepCopy(StoreSetCookiePolicyUrlAction)</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreSetCookiePolicyUrlAction.html" title="interface in com.commercetools.api.models.store">StoreSetCookiePolicyUrlAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of StoreSetCookiePolicyUrlAction</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/store/StoreSetCountriesAction.html#deepCopy(com.commercetools.api.models.store.StoreSetCountriesAction)" class="member-name-link">deepCopy(StoreSetCountriesAction)</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreSetCountriesAction.html" title="interface in com.commercetools.api.models.store">StoreSetCountriesAction</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of StoreSetCountriesAction</div>
@@ -10429,6 +10867,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">factory method to create a deep copy of StoreSetDistributionChannelsAction</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/store/StoreSetFaqUrlAction.html#deepCopy(com.commercetools.api.models.store.StoreSetFaqUrlAction)" class="member-name-link">deepCopy(StoreSetFaqUrlAction)</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreSetFaqUrlAction.html" title="interface in com.commercetools.api.models.store">StoreSetFaqUrlAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of StoreSetFaqUrlAction</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/store/StoreSetImprintUrlAction.html#deepCopy(com.commercetools.api.models.store.StoreSetImprintUrlAction)" class="member-name-link">deepCopy(StoreSetImprintUrlAction)</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreSetImprintUrlAction.html" title="interface in com.commercetools.api.models.store">StoreSetImprintUrlAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of StoreSetImprintUrlAction</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/store/StoreSetLanguagesAction.html#deepCopy(com.commercetools.api.models.store.StoreSetLanguagesAction)" class="member-name-link">deepCopy(StoreSetLanguagesAction)</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreSetLanguagesAction.html" title="interface in com.commercetools.api.models.store">StoreSetLanguagesAction</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of StoreSetLanguagesAction</div>
@@ -10437,13 +10883,33 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">factory method to create a deep copy of StoreSetNameAction</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/store/StoreSetOrderUrlTemplateAction.html#deepCopy(com.commercetools.api.models.store.StoreSetOrderUrlTemplateAction)" class="member-name-link">deepCopy(StoreSetOrderUrlTemplateAction)</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreSetOrderUrlTemplateAction.html" title="interface in com.commercetools.api.models.store">StoreSetOrderUrlTemplateAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of StoreSetOrderUrlTemplateAction</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/store/StoreSetPrivacyPolicyUrlAction.html#deepCopy(com.commercetools.api.models.store.StoreSetPrivacyPolicyUrlAction)" class="member-name-link">deepCopy(StoreSetPrivacyPolicyUrlAction)</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreSetPrivacyPolicyUrlAction.html" title="interface in com.commercetools.api.models.store">StoreSetPrivacyPolicyUrlAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of StoreSetPrivacyPolicyUrlAction</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/store/StoreSetProductSelectionsAction.html#deepCopy(com.commercetools.api.models.store.StoreSetProductSelectionsAction)" class="member-name-link">deepCopy(StoreSetProductSelectionsAction)</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreSetProductSelectionsAction.html" title="interface in com.commercetools.api.models.store">StoreSetProductSelectionsAction</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of StoreSetProductSelectionsAction</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/store/StoreSetRefundPolicyUrlAction.html#deepCopy(com.commercetools.api.models.store.StoreSetRefundPolicyUrlAction)" class="member-name-link">deepCopy(StoreSetRefundPolicyUrlAction)</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreSetRefundPolicyUrlAction.html" title="interface in com.commercetools.api.models.store">StoreSetRefundPolicyUrlAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of StoreSetRefundPolicyUrlAction</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/store/StoreSetShippingPolicyUrlAction.html#deepCopy(com.commercetools.api.models.store.StoreSetShippingPolicyUrlAction)" class="member-name-link">deepCopy(StoreSetShippingPolicyUrlAction)</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreSetShippingPolicyUrlAction.html" title="interface in com.commercetools.api.models.store">StoreSetShippingPolicyUrlAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of StoreSetShippingPolicyUrlAction</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/store/StoreSetSupplyChannelsAction.html#deepCopy(com.commercetools.api.models.store.StoreSetSupplyChannelsAction)" class="member-name-link">deepCopy(StoreSetSupplyChannelsAction)</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreSetSupplyChannelsAction.html" title="interface in com.commercetools.api.models.store">StoreSetSupplyChannelsAction</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of StoreSetSupplyChannelsAction</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/store/StoreSetTermsOfServiceUrlAction.html#deepCopy(com.commercetools.api.models.store.StoreSetTermsOfServiceUrlAction)" class="member-name-link">deepCopy(StoreSetTermsOfServiceUrlAction)</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreSetTermsOfServiceUrlAction.html" title="interface in com.commercetools.api.models.store">StoreSetTermsOfServiceUrlAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of StoreSetTermsOfServiceUrlAction</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/store/StoreUpdate.html#deepCopy(com.commercetools.api.models.store.StoreUpdate)" class="member-name-link">deepCopy(StoreUpdate)</a> - Static method in interface com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreUpdate.html" title="interface in com.commercetools.api.models.store">StoreUpdate</a></dt>
 <dd>
@@ -10789,9 +11255,17 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">factory method to create a deep copy of TypeReference</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/type/TypeRemoveEnumValuesAction.html#deepCopy(com.commercetools.api.models.type.TypeRemoveEnumValuesAction)" class="member-name-link">deepCopy(TypeRemoveEnumValuesAction)</a> - Static method in interface com.commercetools.api.models.type.<a href="../com/commercetools/api/models/type/TypeRemoveEnumValuesAction.html" title="interface in com.commercetools.api.models.type">TypeRemoveEnumValuesAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of TypeRemoveEnumValuesAction</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/type/TypeRemoveFieldDefinitionAction.html#deepCopy(com.commercetools.api.models.type.TypeRemoveFieldDefinitionAction)" class="member-name-link">deepCopy(TypeRemoveFieldDefinitionAction)</a> - Static method in interface com.commercetools.api.models.type.<a href="../com/commercetools/api/models/type/TypeRemoveFieldDefinitionAction.html" title="interface in com.commercetools.api.models.type">TypeRemoveFieldDefinitionAction</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of TypeRemoveFieldDefinitionAction</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/type/TypeRemoveLocalizedEnumValuesAction.html#deepCopy(com.commercetools.api.models.type.TypeRemoveLocalizedEnumValuesAction)" class="member-name-link">deepCopy(TypeRemoveLocalizedEnumValuesAction)</a> - Static method in interface com.commercetools.api.models.type.<a href="../com/commercetools/api/models/type/TypeRemoveLocalizedEnumValuesAction.html" title="interface in com.commercetools.api.models.type">TypeRemoveLocalizedEnumValuesAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of TypeRemoveLocalizedEnumValuesAction</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/type/TypeResourceIdentifier.html#deepCopy(com.commercetools.api.models.type.TypeResourceIdentifier)" class="member-name-link">deepCopy(TypeResourceIdentifier)</a> - Static method in interface com.commercetools.api.models.type.<a href="../com/commercetools/api/models/type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a></dt>
 <dd>
@@ -10889,6 +11363,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">factory method to create a deep copy of VariantDraft</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/variant/VariantMoveImageToPositionAction.html#deepCopy(com.commercetools.api.models.variant.VariantMoveImageToPositionAction)" class="member-name-link">deepCopy(VariantMoveImageToPositionAction)</a> - Static method in interface com.commercetools.api.models.variant.<a href="../com/commercetools/api/models/variant/VariantMoveImageToPositionAction.html" title="interface in com.commercetools.api.models.variant">VariantMoveImageToPositionAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of VariantMoveImageToPositionAction</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/variant/VariantPagedQueryResponse.html#deepCopy(com.commercetools.api.models.variant.VariantPagedQueryResponse)" class="member-name-link">deepCopy(VariantPagedQueryResponse)</a> - Static method in interface com.commercetools.api.models.variant.<a href="../com/commercetools/api/models/variant/VariantPagedQueryResponse.html" title="interface in com.commercetools.api.models.variant">VariantPagedQueryResponse</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of VariantPagedQueryResponse</div>
@@ -10960,6 +11438,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/variant/VariantSetAttributesAction.html#deepCopy(com.commercetools.api.models.variant.VariantSetAttributesAction)" class="member-name-link">deepCopy(VariantSetAttributesAction)</a> - Static method in interface com.commercetools.api.models.variant.<a href="../com/commercetools/api/models/variant/VariantSetAttributesAction.html" title="interface in com.commercetools.api.models.variant">VariantSetAttributesAction</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of VariantSetAttributesAction</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/variant/VariantSetImageLabelAction.html#deepCopy(com.commercetools.api.models.variant.VariantSetImageLabelAction)" class="member-name-link">deepCopy(VariantSetImageLabelAction)</a> - Static method in interface com.commercetools.api.models.variant.<a href="../com/commercetools/api/models/variant/VariantSetImageLabelAction.html" title="interface in com.commercetools.api.models.variant">VariantSetImageLabelAction</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of VariantSetImageLabelAction</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/variant/VariantSetImagesAction.html#deepCopy(com.commercetools.api.models.variant.VariantSetImagesAction)" class="member-name-link">deepCopy(VariantSetImagesAction)</a> - Static method in interface com.commercetools.api.models.variant.<a href="../com/commercetools/api/models/variant/VariantSetImagesAction.html" title="interface in com.commercetools.api.models.variant">VariantSetImagesAction</a></dt>
 <dd>
@@ -14616,6 +15098,10 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyInventoryKeyByKeyRequestBuilder.html#delete()" class="member-name-link">delete()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyInventoryKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInventoryKeyByKeyRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyMcpServersByIDRequestBuilder.html#delete()" class="member-name-link">delete()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMcpServersByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMcpServersByIDRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyMcpServersKeyByKeyRequestBuilder.html#delete()" class="member-name-link">delete()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMcpServersKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMcpServersKeyByKeyRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyMeCartsByIDRequestBuilder.html#delete()" class="member-name-link">delete()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMeCartsByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMeCartsByIDRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyMePaymentsByIDRequestBuilder.html#delete()" class="member-name-link">delete()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMePaymentsByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMePaymentsByIDRequestBuilder</a></dt>
@@ -14895,6 +15381,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyInventoryByIDRequestBuilder.html#delete(TValue)" class="member-name-link">delete(TValue)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyInventoryByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInventoryByIDRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyInventoryKeyByKeyRequestBuilder.html#delete(TValue)" class="member-name-link">delete(TValue)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyInventoryKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInventoryKeyByKeyRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyMcpServersByIDRequestBuilder.html#delete(TValue)" class="member-name-link">delete(TValue)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMcpServersByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMcpServersByIDRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyMcpServersKeyByKeyRequestBuilder.html#delete(TValue)" class="member-name-link">delete(TValue)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMcpServersKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMcpServersKeyByKeyRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyMeCartsByIDRequestBuilder.html#delete(TValue)" class="member-name-link">delete(TValue)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMeCartsByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMeCartsByIDRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
@@ -16456,6 +16946,18 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Value to set.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerBuilder.html#description(com.commercetools.api.models.common.LocalizedString)" class="member-name-link">description(LocalizedString)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerBuilder</a></dt>
+<dd>
+<div class="block">Description of the MCP Server.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerDraftBuilder.html#description(com.commercetools.api.models.common.LocalizedString)" class="member-name-link">description(LocalizedString)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerDraftBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerDraftBuilder</a></dt>
+<dd>
+<div class="block">Description of the MCP Server.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerSetDescriptionActionBuilder.html#description(com.commercetools.api.models.common.LocalizedString)" class="member-name-link">description(LocalizedString)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerSetDescriptionActionBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerSetDescriptionActionBuilder</a></dt>
+<dd>
+<div class="block">Value to set.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/me/MyShoppingListAddTextLineItemActionBuilder.html#description(com.commercetools.api.models.common.LocalizedString)" class="member-name-link">description(LocalizedString)</a> - Method in class com.commercetools.api.models.me.<a href="../com/commercetools/api/models/me/MyShoppingListAddTextLineItemActionBuilder.html" title="class in com.commercetools.api.models.me">MyShoppingListAddTextLineItemActionBuilder</a></dt>
 <dd>
 <div class="block">Description of the TextLineItem.</div>
@@ -16660,6 +17162,18 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">New description to set for the Approval Rule.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerTypeToolBuilder.html#description(java.lang.String)" class="member-name-link">description(String)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerTypeToolBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerTypeToolBuilder</a></dt>
+<dd>
+<div class="block">Human-readable description of what the tool does.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/ParameterOverrideBuilder.html#description(java.lang.String)" class="member-name-link">description(String)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/ParameterOverrideBuilder.html" title="class in com.commercetools.api.models.mcp_server">ParameterOverrideBuilder</a></dt>
+<dd>
+<div class="block">Replacement description for the parameter, shown to the AI agent.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/ToolCustomizationBuilder.html#description(java.lang.String)" class="member-name-link">description(String)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/ToolCustomizationBuilder.html" title="class in com.commercetools.api.models.mcp_server">ToolCustomizationBuilder</a></dt>
+<dd>
+<div class="block">Replacement description for the tool, shown to the AI agent.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/ApprovalRuleDescriptionSetMessageBuilder.html#description(java.lang.String)" class="member-name-link">description(String)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ApprovalRuleDescriptionSetMessageBuilder.html" title="class in com.commercetools.api.models.message">ApprovalRuleDescriptionSetMessageBuilder</a></dt>
 <dd>
 <div class="block">Description of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRule" rel="nofollow">ApprovalRule</a> after the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApprovalRuleSetDescriptionAction" rel="nofollow">Set Description</a> update action.</div>
@@ -16802,6 +17316,18 @@ loadScripts(document, 'script');</script>
 <div class="block">Description for the DiscountGroup.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/discount_group/DiscountGroupSetDescriptionActionBuilder.html#description(java.util.function.Function)" class="member-name-link">description(Function&lt;LocalizedStringBuilder, LocalizedStringBuilder&gt;)</a> - Method in class com.commercetools.api.models.discount_group.<a href="../com/commercetools/api/models/discount_group/DiscountGroupSetDescriptionActionBuilder.html" title="class in com.commercetools.api.models.discount_group">DiscountGroupSetDescriptionActionBuilder</a></dt>
+<dd>
+<div class="block">Value to set.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerBuilder.html#description(java.util.function.Function)" class="member-name-link">description(Function&lt;LocalizedStringBuilder, LocalizedStringBuilder&gt;)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerBuilder</a></dt>
+<dd>
+<div class="block">Description of the MCP Server.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerDraftBuilder.html#description(java.util.function.Function)" class="member-name-link">description(Function&lt;LocalizedStringBuilder, LocalizedStringBuilder&gt;)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerDraftBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerDraftBuilder</a></dt>
+<dd>
+<div class="block">Description of the MCP Server.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerSetDescriptionActionBuilder.html#description(java.util.function.Function)" class="member-name-link">description(Function&lt;LocalizedStringBuilder, LocalizedStringBuilder&gt;)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerSetDescriptionActionBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerSetDescriptionActionBuilder</a></dt>
 <dd>
 <div class="block">Value to set.</div>
 </dd>
@@ -17271,11 +17797,55 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/cart/CartBuilder.html#directDiscountsIgnoreCartDiscounts(java.lang.Boolean)" class="member-name-link">directDiscountsIgnoreCartDiscounts(Boolean)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/CartBuilder.html" title="class in com.commercetools.api.models.cart">CartBuilder</a></dt>
+<dd>
+<div class="block">
+   If <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Cart.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/cart/CartDraftBuilder.html#directDiscountsIgnoreCartDiscounts(java.lang.Boolean)" class="member-name-link">directDiscountsIgnoreCartDiscounts(Boolean)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/CartDraftBuilder.html" title="class in com.commercetools.api.models.cart">CartDraftBuilder</a></dt>
+<dd>
+<div class="block">
+   If set to <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Cart.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/cart/CartSetDirectDiscountsIgnoreCartDiscountsActionBuilder.html#directDiscountsIgnoreCartDiscounts(java.lang.Boolean)" class="member-name-link">directDiscountsIgnoreCartDiscounts(Boolean)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/CartSetDirectDiscountsIgnoreCartDiscountsActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetDirectDiscountsIgnoreCartDiscountsActionBuilder</a></dt>
+<dd>
+<div class="block">
+   If <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Cart.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/order_edit/StagedOrderBuilder.html#directDiscountsIgnoreCartDiscounts(java.lang.Boolean)" class="member-name-link">directDiscountsIgnoreCartDiscounts(Boolean)</a> - Method in class com.commercetools.api.models.order_edit.<a href="../com/commercetools/api/models/order_edit/StagedOrderBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderBuilder</a></dt>
+<dd>
+<div class="block">
+   If <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Order.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/order_edit/StagedOrderSetDirectDiscountsIgnoreCartDiscountsActionBuilder.html#directDiscountsIgnoreCartDiscounts(java.lang.Boolean)" class="member-name-link">directDiscountsIgnoreCartDiscounts(Boolean)</a> - Method in class com.commercetools.api.models.order_edit.<a href="../com/commercetools/api/models/order_edit/StagedOrderSetDirectDiscountsIgnoreCartDiscountsActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderSetDirectDiscountsIgnoreCartDiscountsActionBuilder</a></dt>
+<dd>
+<div class="block">
+   If <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Order.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/order/OrderBuilder.html#directDiscountsIgnoreCartDiscounts(java.lang.Boolean)" class="member-name-link">directDiscountsIgnoreCartDiscounts(Boolean)</a> - Method in class com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></dt>
+<dd>
+<div class="block">
+   If <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Order.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/quote_request/QuoteRequestBuilder.html#directDiscountsIgnoreCartDiscounts(java.lang.Boolean)" class="member-name-link">directDiscountsIgnoreCartDiscounts(Boolean)</a> - Method in class com.commercetools.api.models.quote_request.<a href="../com/commercetools/api/models/quote_request/QuoteRequestBuilder.html" title="class in com.commercetools.api.models.quote_request">QuoteRequestBuilder</a></dt>
+<dd>
+<div class="block">
+   If <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Quote Request.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/quote/QuoteBuilder.html#directDiscountsIgnoreCartDiscounts(java.lang.Boolean)" class="member-name-link">directDiscountsIgnoreCartDiscounts(Boolean)</a> - Method in class com.commercetools.api.models.quote.<a href="../com/commercetools/api/models/quote/QuoteBuilder.html" title="class in com.commercetools.api.models.quote">QuoteBuilder</a></dt>
+<dd>
+<div class="block">
+   If <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Quote.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/business_unit/AssociateRoleInheritanceMode.AssociateRoleInheritanceModeEnum.html#DISABLED" class="member-name-link">DISABLED</a> - Enum constant in enum class com.commercetools.api.models.business_unit.<a href="../com/commercetools/api/models/business_unit/AssociateRoleInheritanceMode.AssociateRoleInheritanceModeEnum.html" title="enum class in com.commercetools.api.models.business_unit">AssociateRoleInheritanceMode.AssociateRoleInheritanceModeEnum</a></dt>
 <dd>
 <div class="block">Disabled</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/cart/TaxMode.TaxModeEnum.html#DISABLED" class="member-name-link">DISABLED</a> - Enum constant in enum class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/TaxMode.TaxModeEnum.html" title="enum class in com.commercetools.api.models.cart">TaxMode.TaxModeEnum</a></dt>
+<dd>
+<div class="block">Disabled</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerState.McpServerStateEnum.html#DISABLED" class="member-name-link">DISABLED</a> - Enum constant in enum class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerState.McpServerStateEnum.html" title="enum class in com.commercetools.api.models.mcp_server">McpServerState.McpServerStateEnum</a></dt>
 <dd>
 <div class="block">Disabled</div>
 </dd>
@@ -17305,6 +17875,10 @@ loadScripts(document, 'script');</script>
      No taxes are added to the Cart.
      This tax mode cannot be set on the <span>My Carts</span> API.
     </div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerState.html#DISABLED" class="member-name-link">DISABLED</a> - Static variable in interface com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerState.html" title="interface in com.commercetools.api.models.mcp_server">McpServerState</a></dt>
+<dd>
+<div class="block">The MCP Server rejects all AI agent tool requests while keeping its configuration editable.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/common/AssociateRoleInheritanceMode.html#DISABLED" class="member-name-link">DISABLED</a> - Static variable in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/AssociateRoleInheritanceMode.html" title="interface in com.commercetools.history.models.common">AssociateRoleInheritanceMode</a></dt>
 <dd>&nbsp;</dd>
@@ -18149,6 +18723,8 @@ loadScripts(document, 'script');</script>
  </div>
 </dd>
 <dt><a href="../com/commercetools/api/models/discount_code/DiscountCodeResourceIdentifierBuilder.html#%3Cinit%3E()" class="member-name-link">DiscountCodeResourceIdentifierBuilder()</a> - Constructor for class com.commercetools.api.models.discount_code.<a href="../com/commercetools/api/models/discount_code/DiscountCodeResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeResourceIdentifierBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyRequestBuilder.html#discountCodes()" class="member-name-link">discountCodes()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyRequestBuilder.html#discountCodes()" class="member-name-link">discountCodes()</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
@@ -20205,13 +20781,21 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/common/MoneyUtil.html#draftOf(javax.money.MonetaryAmount,int)" class="member-name-link">draftOf(MonetaryAmount, int)</a> - Static method in class com.commercetools.api.models.common.<a href="../com/commercetools/api/models/common/MoneyUtil.html" title="class in com.commercetools.api.models.common">MoneyUtil</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerJsonOutputFilteringBuilder.html#drop(com.commercetools.api.models.mcp_server.McpServerJsonOutputFilteringMatcher)" class="member-name-link">drop(McpServerJsonOutputFilteringMatcher)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerJsonOutputFilteringBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerJsonOutputFilteringBuilder</a></dt>
+<dd>
+<div class="block">Fields that are removed entirely from the response.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/mcp_server/McpServerJsonOutputFilteringBuilder.html#drop(java.util.function.Function)" class="member-name-link">drop(Function&lt;McpServerJsonOutputFilteringMatcherBuilder, McpServerJsonOutputFilteringMatcherBuilder&gt;)</a> - Method in class com.commercetools.api.models.mcp_server.<a href="../com/commercetools/api/models/mcp_server/McpServerJsonOutputFilteringBuilder.html" title="class in com.commercetools.api.models.mcp_server">McpServerJsonOutputFilteringBuilder</a></dt>
+<dd>
+<div class="block">Fields that are removed entirely from the response.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/order_edit/OrderEditDraftBuilder.html#dryRun(java.lang.Boolean)" class="member-name-link">dryRun(Boolean)</a> - Method in class com.commercetools.api.models.order_edit.<a href="../com/commercetools/api/models/order_edit/OrderEditDraftBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditDraftBuilder</a></dt>
 <dd>
-<div class="block">Set to <code>true</code> if you want to <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEditPreviewSuccess" rel="nofollow">preview</a> the edited Order first without persisting it (dry run).</div>
+<div class="block">Whether to <a href="https://docs.commercetools.com/apis/ctp:api:type:OrderEditPreviewSuccess" rel="nofollow">preview</a> the edited Order first without persisting it (dry run).</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/order_edit/OrderEditUpdateBuilder.html#dryRun(java.lang.Boolean)" class="member-name-link">dryRun(Boolean)</a> - Method in class com.commercetools.api.models.order_edit.<a href="../com/commercetools/api/models/order_edit/OrderEditUpdateBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditUpdateBuilder</a></dt>
 <dd>
-<div class="block">If set to <code>true</code>, the Order Edit is applied on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> without persisting it.</div>
+<div class="block">Whether the Order Edit is applied on the <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a> without persisting it.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/error/DuplicateAttributeValueError.html#DUPLICATE_ATTRIBUTE_VALUE" class="member-name-link">DUPLICATE_ATTRIBUTE_VALUE</a> - Static variable in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/DuplicateAttributeValueError.html" title="interface in com.commercetools.api.models.error">DuplicateAttributeValueError</a></dt>
 <dd>

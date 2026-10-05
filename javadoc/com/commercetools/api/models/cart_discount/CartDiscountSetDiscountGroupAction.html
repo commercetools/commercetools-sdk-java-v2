@@ -225,7 +225,7 @@ extends <a href="CartDiscountUpdateAction.html" title="interface in com.commerce
 <h3>getDiscountGroup</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../discount_group/DiscountGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.discount_group">DiscountGroupResourceIdentifier</a></span>&nbsp;<span class="element-name">getDiscountGroup</span>()</div>
-<div class="block"><p>Reference to a DiscountGroup that the CartDiscount must belong to. If empty, any existing value will be removed.</p>
+<div class="block"><p>Reference to a DiscountGroup that the CartDiscount must belong to. If omitted, any existing value is removed.</p>
   <p>A CartDiscount can only be added to a DiscountGroup if its <code>target.type</code> is <code>lineItems</code>, <code>customLineItems</code>, <code>multiBuyLineItems</code>, <code>multiBuyCustomLineItems</code>, or <code>pattern</code>; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -249,7 +249,7 @@ extends <a href="CartDiscountUpdateAction.html" title="interface in com.commerce
 <section class="detail" id="setDiscountGroup(com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifier)">
 <h3>setDiscountGroup</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setDiscountGroup</span><wbr><span class="parameters">(<a href="../discount_group/DiscountGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.discount_group">DiscountGroupResourceIdentifier</a>&nbsp;discountGroup)</span></div>
-<div class="block"><p>Reference to a DiscountGroup that the CartDiscount must belong to. If empty, any existing value will be removed.</p>
+<div class="block"><p>Reference to a DiscountGroup that the CartDiscount must belong to. If omitted, any existing value is removed.</p>
   <p>A CartDiscount can only be added to a DiscountGroup if its <code>target.type</code> is <code>lineItems</code>, <code>customLineItems</code>, <code>multiBuyLineItems</code>, <code>multiBuyCustomLineItems</code>, or <code>pattern</code>; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>

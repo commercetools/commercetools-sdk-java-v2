@@ -190,7 +190,12 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></span>&nbsp;<span class="element-name">getDiscountedAmount</span>()</div>
-<div class="block"><p>Money value of the applicable discount.</p></div>
+<div class="block"><p>Money value of the applicable discount.</p>
+  <p>When a Cart Discount with <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> is used:</p>
+  <ul>
+   <li>The value is zero for a (Custom) Line Item matching the <code>triggerPattern</code>, indicating it participated in the discount as a trigger.</li>
+   <li>The value is the actual discount amount for a (Custom) Line Item matching the <code>targetPattern</code>.</li>
+  </ul></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>discountedAmount</dd>
@@ -212,7 +217,12 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setDiscountedAmount(com.commercetools.api.models.common.TypedMoney)">
 <h3>setDiscountedAmount</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setDiscountedAmount</span><wbr><span class="parameters">(<a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&nbsp;discountedAmount)</span></div>
-<div class="block"><p>Money value of the applicable discount.</p></div>
+<div class="block"><p>Money value of the applicable discount.</p>
+  <p>When a Cart Discount with <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscountPatternTarget" rel="nofollow">CartDiscountPatternTarget</a> is used:</p>
+  <ul>
+   <li>The value is zero for a (Custom) Line Item matching the <code>triggerPattern</code>, indicating it participated in the discount as a trigger.</li>
+   <li>The value is the actual discount amount for a (Custom) Line Item matching the <code>targetPattern</code>.</li>
+  </ul></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>discountedAmount</code> - value to be set</dd>

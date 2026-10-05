@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">ProjectChangeLanguagesAction</span><span class="extends-implements">
 extends <a href="ProjectUpdateAction.html" title="interface in com.commercetools.api.models.project">ProjectUpdateAction</a></span></div>
-<div class="block"><p>Removing a language used by a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> returns a <a href="https://docs.commercetools.com/apis/ctp:api:type:LanguageUsedInStoresError" rel="nofollow">LanguageUsedInStores</a> error.</p>
+<div class="block">ProjectChangeLanguagesAction
 
  <hr>
  Example to create an instance using the builder pattern
@@ -221,7 +221,9 @@ extends <a href="ProjectUpdateAction.html" title="interface in com.commercetools
 <h3>getLanguages</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getLanguages</span>()</div>
-<div class="block"><p>New value to set. Must not be empty.</p></div>
+<div class="block"><p>New value to set.</p>
+  <p>If set to an empty value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+  <p>If a language in use by a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> is removed, a <a href="https://docs.commercetools.com/apis/ctp:api:type:LanguageUsedInStoresError" rel="nofollow">LanguageUsedInStores</a> error is returned.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>languages</dd>
@@ -232,7 +234,9 @@ extends <a href="ProjectUpdateAction.html" title="interface in com.commercetools
 <section class="detail" id="setLanguages(java.lang.String...)">
 <h3>setLanguages</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setLanguages</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;languages)</span></div>
-<div class="block"><p>New value to set. Must not be empty.</p></div>
+<div class="block"><p>New value to set.</p>
+  <p>If set to an empty value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+  <p>If a language in use by a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> is removed, a <a href="https://docs.commercetools.com/apis/ctp:api:type:LanguageUsedInStoresError" rel="nofollow">LanguageUsedInStores</a> error is returned.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>languages</code> - values to be set</dd>
@@ -243,7 +247,9 @@ extends <a href="ProjectUpdateAction.html" title="interface in com.commercetools
 <section class="detail" id="setLanguages(java.util.List)">
 <h3>setLanguages</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setLanguages</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;languages)</span></div>
-<div class="block"><p>New value to set. Must not be empty.</p></div>
+<div class="block"><p>New value to set.</p>
+  <p>If set to an empty value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p>
+  <p>If a language in use by a <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> is removed, a <a href="https://docs.commercetools.com/apis/ctp:api:type:LanguageUsedInStoresError" rel="nofollow">LanguageUsedInStores</a> error is returned.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>languages</code> - values to be set</dd>

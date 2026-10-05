@@ -82,7 +82,6 @@ loadScripts(document, 'script');</script>
      RecordPagedQueryResponse recordPagedQueryResponse = RecordPagedQueryResponse.builder()
              .limit(1)
              .count(1)
-             .total(1)
              .offset(1)
              .plusResults(resultsBuilder -> resultsBuilder)
              .build()
@@ -140,7 +139,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Records matching the query.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTotal()" class="member-name-link">getTotal</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Total number of results matching the query.</div>
@@ -236,9 +235,8 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getTotal()">
 <h3>getTotal</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getTotal</span>()</div>
-<div class="block"><p>Total number of results matching the query. This number is an estimation and not <span>strongly consistent</span>.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getTotal</span>()</div>
+<div class="block"><p>Total number of results matching the query. This number is an estimation and not <span>strongly consistent</span>. Returned only when <code>withTotal</code> is set to <code>true</code> on the query.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>total</dd>
@@ -296,7 +294,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setTotal(java.lang.Integer)">
 <h3>setTotal</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTotal</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;total)</span></div>
-<div class="block"><p>Total number of results matching the query. This number is an estimation and not <span>strongly consistent</span>.</p></div>
+<div class="block"><p>Total number of results matching the query. This number is an estimation and not <span>strongly consistent</span>. Returned only when <code>withTotal</code> is set to <code>true</code> on the query.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>total</code> - value to be set</dd>

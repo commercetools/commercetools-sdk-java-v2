@@ -118,8 +118,13 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <div class="block">Product Variants are embedded in the Product.</div>
 </div>
 <div class="col-first odd-row-color"><code>static final <a href="ProductCatalogModel.html" title="interface in com.commercetools.api.models.project">ProductCatalogModel</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#MODULAR" class="member-name-link">MODULAR</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#IN_MIGRATION" class="member-name-link">IN_MIGRATION</a></code></div>
 <div class="col-last odd-row-color">
+<div class="block">Product Variants remain embedded in the Product and Variant update actions on the Product API are still accepted, but resources that reference a Variant, such as <span>Carts</span> and Order line items, discount matching, and Product Selections, resolve from modular Variants by default.</div>
+</div>
+<div class="col-first even-row-color"><code>static final <a href="ProductCatalogModel.html" title="interface in com.commercetools.api.models.project">ProductCatalogModel</a></code></div>
+<div class="col-second even-row-color"><code><a href="#MODULAR" class="member-name-link">MODULAR</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Product Variants are managed as standalone entities through the Variants endpoint.</div>
 </div>
 </div>
@@ -186,6 +191,13 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <h3>CLASSIC</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ProductCatalogModel.html" title="interface in com.commercetools.api.models.project">ProductCatalogModel</a></span>&nbsp;<span class="element-name">CLASSIC</span></div>
 <div class="block"><p>Product Variants are embedded in the Product. This is the default behavior.</p></div>
+</section>
+</li>
+<li>
+<section class="detail" id="IN_MIGRATION">
+<h3>IN_MIGRATION</h3>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ProductCatalogModel.html" title="interface in com.commercetools.api.models.project">ProductCatalogModel</a></span>&nbsp;<span class="element-name">IN_MIGRATION</span></div>
+<div class="block"><p>Product Variants remain embedded in the Product and Variant update actions on the Product API are still accepted, but resources that reference a Variant, such as <span>Carts</span> and Order line items, discount matching, and Product Selections, resolve from modular Variants by default. Use this transitional state to migrate your reads to the Modular Catalog model while embedded Variant writes continue.</p></div>
 </section>
 </li>
 <li>

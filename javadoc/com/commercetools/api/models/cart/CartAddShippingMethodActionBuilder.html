@@ -157,6 +157,16 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">Deliveries to be shipped with the referenced Shipping Method.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartAddShippingMethodActionBuilder.html" title="class in com.commercetools.api.models.cart">CartAddShippingMethodActionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#estimatedDelivery(com.commercetools.api.models.cart.EstimatedDelivery)" class="member-name-link">estimatedDelivery</a><wbr>(<a href="EstimatedDelivery.html" title="interface in com.commercetools.api.models.cart">EstimatedDelivery</a>&nbsp;estimatedDelivery)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Estimated time window during which this shipment is expected to be delivered.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartAddShippingMethodActionBuilder.html" title="class in com.commercetools.api.models.cart">CartAddShippingMethodActionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#estimatedDelivery(java.util.function.Function)" class="member-name-link">estimatedDelivery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="EstimatedDeliveryBuilder.html" title="class in com.commercetools.api.models.cart">EstimatedDeliveryBuilder</a>,<wbr><a href="EstimatedDeliveryBuilder.html" title="class in com.commercetools.api.models.cart">EstimatedDeliveryBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Estimated time window during which this shipment is expected to be delivered.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartAddShippingMethodActionBuilder.html" title="class in com.commercetools.api.models.cart">CartAddShippingMethodActionBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#externalTaxRate(com.commercetools.api.models.cart.ExternalTaxRateDraft)" class="member-name-link">externalTaxRate</a><wbr>(<a href="ExternalTaxRateDraft.html" title="interface in com.commercetools.api.models.cart">ExternalTaxRateDraft</a>&nbsp;externalTaxRate)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Tax Rate used to tax a shipping expense if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</div>
@@ -176,100 +186,110 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Deliveries to be shipped with the referenced Shipping Method.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExternalTaxRateDraft.html" title="interface in com.commercetools.api.models.cart">ExternalTaxRateDraft</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getExternalTaxRate()" class="member-name-link">getExternalTaxRate</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="EstimatedDelivery.html" title="interface in com.commercetools.api.models.cart">EstimatedDelivery</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEstimatedDelivery()" class="member-name-link">getEstimatedDelivery</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Estimated time window during which this shipment is expected to be delivered.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ExternalTaxRateDraft.html" title="interface in com.commercetools.api.models.cart">ExternalTaxRateDraft</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getExternalTaxRate()" class="member-name-link">getExternalTaxRate</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Tax Rate used to tax a shipping expense if the Cart has the <code>External</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxMode" rel="nofollow">TaxMode</a>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getShippingAddress()" class="member-name-link">getShippingAddress</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getShippingAddress()" class="member-name-link">getShippingAddress</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Determines the shipping rate and Tax Rate of the Line Items.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getShippingKey()" class="member-name-link">getShippingKey</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getShippingKey()" class="member-name-link">getShippingKey</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">User-defined identifier for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Shipping" rel="nofollow">Shipping</a> that must be unique across the Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../shipping_method/ShippingMethodResourceIdentifier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifier</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getShippingMethod()" class="member-name-link">getShippingMethod</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../shipping_method/ShippingMethodResourceIdentifier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifier</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getShippingMethod()" class="member-name-link">getShippingMethod</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">ResourceIdentifier to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> to add to the Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ShippingRateInputDraft.html" title="interface in com.commercetools.api.models.cart">ShippingRateInputDraft</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getShippingRateInput()" class="member-name-link">getShippingRateInput</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ShippingRateInputDraft.html" title="interface in com.commercetools.api.models.cart">ShippingRateInputDraft</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getShippingRateInput()" class="member-name-link">getShippingRateInput</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Input used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CartAddShippingMethodActionBuilder.html" title="class in com.commercetools.api.models.cart">CartAddShippingMethodActionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">factory method for an instance of CartAddShippingMethodActionBuilder</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CartAddShippingMethodActionBuilder.html" title="class in com.commercetools.api.models.cart">CartAddShippingMethodActionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(com.commercetools.api.models.cart.CartAddShippingMethodAction)" class="member-name-link">of</a><wbr>(<a href="CartAddShippingMethodAction.html" title="interface in com.commercetools.api.models.cart">CartAddShippingMethodAction</a>&nbsp;template)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">factory method for an instance of CartAddShippingMethodActionBuilder</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CartAddShippingMethodActionBuilder.html" title="class in com.commercetools.api.models.cart">CartAddShippingMethodActionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(com.commercetools.api.models.cart.CartAddShippingMethodAction)" class="member-name-link">of</a><wbr>(<a href="CartAddShippingMethodAction.html" title="interface in com.commercetools.api.models.cart">CartAddShippingMethodAction</a>&nbsp;template)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">create builder for CartAddShippingMethodAction instance</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartAddShippingMethodActionBuilder.html" title="class in com.commercetools.api.models.cart">CartAddShippingMethodActionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusDeliveries(com.commercetools.api.models.order.DeliveryDraft...)" class="member-name-link">plusDeliveries</a><wbr>(<a href="../order/DeliveryDraft.html" title="interface in com.commercetools.api.models.order">DeliveryDraft</a>...&nbsp;deliveries)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Deliveries to be shipped with the referenced Shipping Method.</div>
-</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartAddShippingMethodActionBuilder.html" title="class in com.commercetools.api.models.cart">CartAddShippingMethodActionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusDeliveries(java.util.function.Function)" class="member-name-link">plusDeliveries</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/DeliveryDraftBuilder.html" title="class in com.commercetools.api.models.order">DeliveryDraftBuilder</a>,<wbr><a href="../order/DeliveryDraftBuilder.html" title="class in com.commercetools.api.models.order">DeliveryDraftBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusDeliveries(com.commercetools.api.models.order.DeliveryDraft...)" class="member-name-link">plusDeliveries</a><wbr>(<a href="../order/DeliveryDraft.html" title="interface in com.commercetools.api.models.order">DeliveryDraft</a>...&nbsp;deliveries)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Deliveries to be shipped with the referenced Shipping Method.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartAddShippingMethodActionBuilder.html" title="class in com.commercetools.api.models.cart">CartAddShippingMethodActionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDeliveries(java.util.function.Function)" class="member-name-link">setDeliveries</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/DeliveryDraftBuilder.html" title="class in com.commercetools.api.models.order">DeliveryDraftBuilder</a>,<wbr><a href="../order/DeliveryDraft.html" title="interface in com.commercetools.api.models.order">DeliveryDraft</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusDeliveries(java.util.function.Function)" class="member-name-link">plusDeliveries</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/DeliveryDraftBuilder.html" title="class in com.commercetools.api.models.order">DeliveryDraftBuilder</a>,<wbr><a href="../order/DeliveryDraftBuilder.html" title="class in com.commercetools.api.models.order">DeliveryDraftBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Deliveries to be shipped with the referenced Shipping Method.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartAddShippingMethodActionBuilder.html" title="class in com.commercetools.api.models.cart">CartAddShippingMethodActionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingAddress(com.commercetools.api.models.common.BaseAddress)" class="member-name-link">shippingAddress</a><wbr>(<a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&nbsp;shippingAddress)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDeliveries(java.util.function.Function)" class="member-name-link">setDeliveries</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/DeliveryDraftBuilder.html" title="class in com.commercetools.api.models.order">DeliveryDraftBuilder</a>,<wbr><a href="../order/DeliveryDraft.html" title="interface in com.commercetools.api.models.order">DeliveryDraft</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Determines the shipping rate and Tax Rate of the Line Items.</div>
+<div class="block">Deliveries to be shipped with the referenced Shipping Method.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartAddShippingMethodActionBuilder.html" title="class in com.commercetools.api.models.cart">CartAddShippingMethodActionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingAddress(java.util.function.Function)" class="member-name-link">shippingAddress</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/BaseAddressBuilder.html" title="class in com.commercetools.api.models.common">BaseAddressBuilder</a>,<wbr><a href="../common/BaseAddressBuilder.html" title="class in com.commercetools.api.models.common">BaseAddressBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingAddress(com.commercetools.api.models.common.BaseAddress)" class="member-name-link">shippingAddress</a><wbr>(<a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&nbsp;shippingAddress)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Determines the shipping rate and Tax Rate of the Line Items.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartAddShippingMethodActionBuilder.html" title="class in com.commercetools.api.models.cart">CartAddShippingMethodActionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingKey(java.lang.String)" class="member-name-link">shippingKey</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;shippingKey)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingAddress(java.util.function.Function)" class="member-name-link">shippingAddress</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/BaseAddressBuilder.html" title="class in com.commercetools.api.models.common">BaseAddressBuilder</a>,<wbr><a href="../common/BaseAddressBuilder.html" title="class in com.commercetools.api.models.common">BaseAddressBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Determines the shipping rate and Tax Rate of the Line Items.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartAddShippingMethodActionBuilder.html" title="class in com.commercetools.api.models.cart">CartAddShippingMethodActionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingKey(java.lang.String)" class="member-name-link">shippingKey</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;shippingKey)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">User-defined identifier for the <a href="https://docs.commercetools.com/apis/ctp:api:type:Shipping" rel="nofollow">Shipping</a> that must be unique across the Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartAddShippingMethodActionBuilder.html" title="class in com.commercetools.api.models.cart">CartAddShippingMethodActionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingMethod(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier)" class="member-name-link">shippingMethod</a><wbr>(<a href="../shipping_method/ShippingMethodResourceIdentifier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifier</a>&nbsp;shippingMethod)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">ResourceIdentifier to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> to add to the Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</div>
-</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartAddShippingMethodActionBuilder.html" title="class in com.commercetools.api.models.cart">CartAddShippingMethodActionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingMethod(java.util.function.Function)" class="member-name-link">shippingMethod</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../shipping_method/ShippingMethodResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifierBuilder</a>,<wbr><a href="../shipping_method/ShippingMethodResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifierBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingMethod(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier)" class="member-name-link">shippingMethod</a><wbr>(<a href="../shipping_method/ShippingMethodResourceIdentifier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifier</a>&nbsp;shippingMethod)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">ResourceIdentifier to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> to add to the Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartAddShippingMethodActionBuilder.html" title="class in com.commercetools.api.models.cart">CartAddShippingMethodActionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingRateInput(com.commercetools.api.models.cart.ShippingRateInputDraft)" class="member-name-link">shippingRateInput</a><wbr>(<a href="ShippingRateInputDraft.html" title="interface in com.commercetools.api.models.cart">ShippingRateInputDraft</a>&nbsp;shippingRateInput)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingMethod(java.util.function.Function)" class="member-name-link">shippingMethod</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../shipping_method/ShippingMethodResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifierBuilder</a>,<wbr><a href="../shipping_method/ShippingMethodResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifierBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Input used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>.</div>
+<div class="block">ResourceIdentifier to a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> to add to the Cart with <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartAddShippingMethodActionBuilder.html" title="class in com.commercetools.api.models.cart">CartAddShippingMethodActionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingRateInput(java.util.function.Function)" class="member-name-link">shippingRateInput</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ShippingRateInputDraftBuilder.html" title="class in com.commercetools.api.models.cart">ShippingRateInputDraftBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="ShippingRateInputDraft.html" title="interface in com.commercetools.api.models.cart">ShippingRateInputDraft</a>&gt;&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingRateInput(com.commercetools.api.models.cart.ShippingRateInputDraft)" class="member-name-link">shippingRateInput</a><wbr>(<a href="ShippingRateInputDraft.html" title="interface in com.commercetools.api.models.cart">ShippingRateInputDraft</a>&nbsp;shippingRateInput)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Input used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartAddShippingMethodActionBuilder.html" title="class in com.commercetools.api.models.cart">CartAddShippingMethodActionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCustom(java.util.function.Function)" class="member-name-link">withCustom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/CustomFieldsDraftBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsDraftBuilder</a>,<wbr><a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingRateInput(java.util.function.Function)" class="member-name-link">shippingRateInput</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ShippingRateInputDraftBuilder.html" title="class in com.commercetools.api.models.cart">ShippingRateInputDraftBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="ShippingRateInputDraft.html" title="interface in com.commercetools.api.models.cart">ShippingRateInputDraft</a>&gt;&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Input used to select a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingRatePriceTier" rel="nofollow">ShippingRatePriceTier</a>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartAddShippingMethodActionBuilder.html" title="class in com.commercetools.api.models.cart">CartAddShippingMethodActionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCustom(java.util.function.Function)" class="member-name-link">withCustom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/CustomFieldsDraftBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsDraftBuilder</a>,<wbr><a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Custom Fields for the Shipping Method.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartAddShippingMethodActionBuilder.html" title="class in com.commercetools.api.models.cart">CartAddShippingMethodActionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withDeliveries(java.util.function.Function)" class="member-name-link">withDeliveries</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/DeliveryDraftBuilder.html" title="class in com.commercetools.api.models.order">DeliveryDraftBuilder</a>,<wbr><a href="../order/DeliveryDraftBuilder.html" title="class in com.commercetools.api.models.order">DeliveryDraftBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartAddShippingMethodActionBuilder.html" title="class in com.commercetools.api.models.cart">CartAddShippingMethodActionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withDeliveries(java.util.function.Function)" class="member-name-link">withDeliveries</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/DeliveryDraftBuilder.html" title="class in com.commercetools.api.models.order">DeliveryDraftBuilder</a>,<wbr><a href="../order/DeliveryDraftBuilder.html" title="class in com.commercetools.api.models.order">DeliveryDraftBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Deliveries to be shipped with the referenced Shipping Method.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartAddShippingMethodActionBuilder.html" title="class in com.commercetools.api.models.cart">CartAddShippingMethodActionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withEstimatedDelivery(java.util.function.Function)" class="member-name-link">withEstimatedDelivery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="EstimatedDeliveryBuilder.html" title="class in com.commercetools.api.models.cart">EstimatedDeliveryBuilder</a>,<wbr><a href="EstimatedDelivery.html" title="interface in com.commercetools.api.models.cart">EstimatedDelivery</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Estimated time window during which this shipment is expected to be delivered.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartAddShippingMethodActionBuilder.html" title="class in com.commercetools.api.models.cart">CartAddShippingMethodActionBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withExternalTaxRate(java.util.function.Function)" class="member-name-link">withExternalTaxRate</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExternalTaxRateDraftBuilder.html" title="class in com.commercetools.api.models.cart">ExternalTaxRateDraftBuilder</a>,<wbr><a href="ExternalTaxRateDraft.html" title="interface in com.commercetools.api.models.cart">ExternalTaxRateDraft</a>&gt;&nbsp;builder)</code></div>
@@ -638,6 +658,46 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="estimatedDelivery(java.util.function.Function)">
+<h3>estimatedDelivery</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartAddShippingMethodActionBuilder.html" title="class in com.commercetools.api.models.cart">CartAddShippingMethodActionBuilder</a></span>&nbsp;<span class="element-name">estimatedDelivery</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="EstimatedDeliveryBuilder.html" title="class in com.commercetools.api.models.cart">EstimatedDeliveryBuilder</a>,<wbr><a href="EstimatedDeliveryBuilder.html" title="class in com.commercetools.api.models.cart">EstimatedDeliveryBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Estimated time window during which this shipment is expected to be delivered.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the estimatedDelivery value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="withEstimatedDelivery(java.util.function.Function)">
+<h3>withEstimatedDelivery</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartAddShippingMethodActionBuilder.html" title="class in com.commercetools.api.models.cart">CartAddShippingMethodActionBuilder</a></span>&nbsp;<span class="element-name">withEstimatedDelivery</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="EstimatedDeliveryBuilder.html" title="class in com.commercetools.api.models.cart">EstimatedDeliveryBuilder</a>,<wbr><a href="EstimatedDelivery.html" title="interface in com.commercetools.api.models.cart">EstimatedDelivery</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Estimated time window during which this shipment is expected to be delivered.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the estimatedDelivery value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="estimatedDelivery(com.commercetools.api.models.cart.EstimatedDelivery)">
+<h3>estimatedDelivery</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartAddShippingMethodActionBuilder.html" title="class in com.commercetools.api.models.cart">CartAddShippingMethodActionBuilder</a></span>&nbsp;<span class="element-name">estimatedDelivery</span><wbr><span class="parameters">(@Nullable
+ <a href="EstimatedDelivery.html" title="interface in com.commercetools.api.models.cart">EstimatedDelivery</a>&nbsp;estimatedDelivery)</span></div>
+<div class="block"><p>Estimated time window during which this shipment is expected to be delivered.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>estimatedDelivery</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getShippingKey()">
 <h3>getShippingKey</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getShippingKey</span>()</div>
@@ -726,6 +786,18 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>custom</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getEstimatedDelivery()">
+<h3>getEstimatedDelivery</h3>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="EstimatedDelivery.html" title="interface in com.commercetools.api.models.cart">EstimatedDelivery</a></span>&nbsp;<span class="element-name">getEstimatedDelivery</span>()</div>
+<div class="block"><p>Estimated time window during which this shipment is expected to be delivered.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>estimatedDelivery</dd>
 </dl>
 </section>
 </li>

@@ -167,7 +167,7 @@ extends <a href="DeliveryPayload.html" title="interface in com.commercetools.api
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="PayloadNotIncluded.html" title="interface in com.commercetools.api.models.subscription">PayloadNotIncluded</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPayloadNotIncluded()" class="member-name-link">getPayloadNotIncluded</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">If the payload does not fit into the size limit or its format is not accepted by the messaging service, the <code>payloadNotIncluded</code> field is present.</div>
+<div class="block">Present when the payload exceeds the size limit of the message queue (the limit is often 256 KB) or its format is not accepted by the messaging service.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getResourceVersion()" class="member-name-link">getResourceVersion</a>()</code></div>
@@ -212,7 +212,7 @@ extends <a href="DeliveryPayload.html" title="interface in com.commercetools.api
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setPayloadNotIncluded(com.commercetools.api.models.subscription.PayloadNotIncluded)" class="member-name-link">setPayloadNotIncluded</a><wbr>(<a href="PayloadNotIncluded.html" title="interface in com.commercetools.api.models.subscription">PayloadNotIncluded</a>&nbsp;payloadNotIncluded)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">If the payload does not fit into the size limit or its format is not accepted by the messaging service, the <code>payloadNotIncluded</code> field is present.</div>
+<div class="block">Present when the payload exceeds the size limit of the message queue (the limit is often 256 KB) or its format is not accepted by the messaging service.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setResourceVersion(java.lang.Long)" class="member-name-link">setResourceVersion</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;resourceVersion)</code></div>
@@ -362,7 +362,7 @@ extends <a href="DeliveryPayload.html" title="interface in com.commercetools.api
 <h3>getPayloadNotIncluded</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="PayloadNotIncluded.html" title="interface in com.commercetools.api.models.subscription">PayloadNotIncluded</a></span>&nbsp;<span class="element-name">getPayloadNotIncluded</span>()</div>
-<div class="block"><p>If the payload does not fit into the size limit or its format is not accepted by the messaging service, the <code>payloadNotIncluded</code> field is present.</p></div>
+<div class="block"><p>Present when the payload exceeds the size limit of the message queue (the limit is often 256 KB) or its format is not accepted by the messaging service. If the payload exceeds the size limit, the additional Message fields are replaced with a <a href="https://docs.commercetools.com/apis/ctp:api:type:PayloadNotIncluded" rel="nofollow">PayloadNotIncluded</a> object. You can retrieve the full Message using the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/messages/{id}:GET" rel="nofollow">Messages API</a> if the feature is enabled.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>payloadNotIncluded</dd>
@@ -439,7 +439,7 @@ extends <a href="DeliveryPayload.html" title="interface in com.commercetools.api
 <section class="detail" id="setPayloadNotIncluded(com.commercetools.api.models.subscription.PayloadNotIncluded)">
 <h3>setPayloadNotIncluded</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setPayloadNotIncluded</span><wbr><span class="parameters">(<a href="PayloadNotIncluded.html" title="interface in com.commercetools.api.models.subscription">PayloadNotIncluded</a>&nbsp;payloadNotIncluded)</span></div>
-<div class="block"><p>If the payload does not fit into the size limit or its format is not accepted by the messaging service, the <code>payloadNotIncluded</code> field is present.</p></div>
+<div class="block"><p>Present when the payload exceeds the size limit of the message queue (the limit is often 256 KB) or its format is not accepted by the messaging service. If the payload exceeds the size limit, the additional Message fields are replaced with a <a href="https://docs.commercetools.com/apis/ctp:api:type:PayloadNotIncluded" rel="nofollow">PayloadNotIncluded</a> object. You can retrieve the full Message using the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/messages/{id}:GET" rel="nofollow">Messages API</a> if the feature is enabled.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>payloadNotIncluded</code> - value to be set</dd>

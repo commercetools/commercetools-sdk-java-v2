@@ -4,6 +4,7 @@ com.commercetools.api.client.error
 com.commercetools.api.defaultconfig
 com.commercetools.api.json
 com.commercetools.api.models
+com.commercetools.api.models.agent
 com.commercetools.api.models.api_client
 com.commercetools.api.models.approval_flow
 com.commercetools.api.models.approval_rule
@@ -27,6 +28,7 @@ com.commercetools.api.models.event
 com.commercetools.api.models.extension
 com.commercetools.api.models.graph_ql
 com.commercetools.api.models.inventory
+com.commercetools.api.models.mcp_server
 com.commercetools.api.models.me
 com.commercetools.api.models.message
 com.commercetools.api.models.order
@@ -80,6 +82,7 @@ com.commercetools.api.predicates.expansion.discount_code
 com.commercetools.api.predicates.expansion.discount_group
 com.commercetools.api.predicates.expansion.extension
 com.commercetools.api.predicates.expansion.inventory
+com.commercetools.api.predicates.expansion.mcp_server
 com.commercetools.api.predicates.expansion.me
 com.commercetools.api.predicates.expansion.message
 com.commercetools.api.predicates.expansion.order

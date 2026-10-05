@@ -145,7 +145,7 @@ extends <a href="ProductTailoringUpdateAction.html" title="interface in com.comm
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStaged()" class="member-name-link">getStaged</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">If <code>true</code>, only the staged <code>metaDescription</code> is updated.</div>
+<div class="block">Whether only the staged <code>metaDescription</code> is updated.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProductTailoringSetMetaDescriptionAction.html" title="interface in com.commercetools.api.models.product_tailoring">ProductTailoringSetMetaDescriptionAction</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -165,7 +165,7 @@ extends <a href="ProductTailoringUpdateAction.html" title="interface in com.comm
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setStaged(java.lang.Boolean)" class="member-name-link">setStaged</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;staged)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">If <code>true</code>, only the staged <code>metaDescription</code> is updated.</div>
+<div class="block">Whether only the staged <code>metaDescription</code> is updated.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static tools.jackson.core.type.TypeReference&lt;<a href="ProductTailoringSetMetaDescriptionAction.html" title="interface in com.commercetools.api.models.product_tailoring">ProductTailoringSetMetaDescriptionAction</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -222,7 +222,7 @@ extends <a href="ProductTailoringUpdateAction.html" title="interface in com.comm
 <h3>getMetaDescription</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name">getMetaDescription</span>()</div>
-<div class="block"><p>Value to set. If empty, any existing value will be removed.</p></div>
+<div class="block"><p>Value to set. If omitted, any existing value is removed.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>metaDescription</dd>
@@ -233,7 +233,7 @@ extends <a href="ProductTailoringUpdateAction.html" title="interface in com.comm
 <section class="detail" id="getStaged()">
 <h3>getStaged</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getStaged</span>()</div>
-<div class="block"><p>If <code>true</code>, only the staged <code>metaDescription</code> is updated. If <code>false</code>, both the current and staged <code>metaDescription</code> are updated.</p></div>
+<div class="block"><p>Whether only the staged <code>metaDescription</code> is updated. If <code>false</code>, both the current and staged <code>metaDescription</code> are updated.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>staged</dd>
@@ -244,7 +244,7 @@ extends <a href="ProductTailoringUpdateAction.html" title="interface in com.comm
 <section class="detail" id="setMetaDescription(com.commercetools.api.models.common.LocalizedString)">
 <h3>setMetaDescription</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setMetaDescription</span><wbr><span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;metaDescription)</span></div>
-<div class="block"><p>Value to set. If empty, any existing value will be removed.</p></div>
+<div class="block"><p>Value to set. If omitted, any existing value is removed.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>metaDescription</code> - value to be set</dd>
@@ -255,7 +255,7 @@ extends <a href="ProductTailoringUpdateAction.html" title="interface in com.comm
 <section class="detail" id="setStaged(java.lang.Boolean)">
 <h3>setStaged</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setStaged</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;staged)</span></div>
-<div class="block"><p>If <code>true</code>, only the staged <code>metaDescription</code> is updated. If <code>false</code>, both the current and staged <code>metaDescription</code> are updated.</p></div>
+<div class="block"><p>Whether only the staged <code>metaDescription</code> is updated. If <code>false</code>, both the current and staged <code>metaDescription</code> are updated.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>staged</code> - value to be set</dd>

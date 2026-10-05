@@ -151,7 +151,7 @@ extends <a href="ProductUpdateAction.html" title="interface in com.commercetools
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStaged()" class="member-name-link">getStaged</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">If <code>true</code>, only the staged ProductVariant is updated.</div>
+<div class="block">Whether only the staged ProductVariant is updated.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVariantId()" class="member-name-link">getVariantId</a>()</code></div>
@@ -186,7 +186,7 @@ extends <a href="ProductUpdateAction.html" title="interface in com.commercetools
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setStaged(java.lang.Boolean)" class="member-name-link">setStaged</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;staged)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">If <code>true</code>, only the staged ProductVariant is updated.</div>
+<div class="block">Whether only the staged ProductVariant is updated.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setVariantId(java.lang.Long)" class="member-name-link">setVariantId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;variantId)</code></div>
@@ -274,7 +274,10 @@ extends <a href="ProductUpdateAction.html" title="interface in com.commercetools
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>&gt;</span>&nbsp;<span class="element-name">getPrices</span>()</div>
-<div class="block"><p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p></div>
+<div class="block"><p>The Embedded Prices to set.</p>
+  <p>If any two Embedded Prices in this array have the same key, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
+  <p>If any two Embedded Prices in this array have the same price scope, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceScopeError" rel="nofollow">DuplicatePriceScope</a> error is returned.</p>
+  <p>If any two Embedded Prices in this array have overlapping validity periods within the same price scope, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OverlappingPriceValidityError" rel="nofollow">OverlappingPriceValidity</a> error is returned. An Embedded Price without validity period does not conflict with an Embedded Price defined for a time period.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>prices</dd>
@@ -285,7 +288,7 @@ extends <a href="ProductUpdateAction.html" title="interface in com.commercetools
 <section class="detail" id="getStaged()">
 <h3>getStaged</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getStaged</span>()</div>
-<div class="block"><p>If <code>true</code>, only the staged ProductVariant is updated. If <code>false</code>, both the current and staged ProductVariant are updated.</p></div>
+<div class="block"><p>Whether only the staged ProductVariant is updated. If <code>false</code>, both the current and staged ProductVariant are updated.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>staged</dd>
@@ -318,7 +321,10 @@ extends <a href="ProductUpdateAction.html" title="interface in com.commercetools
 <section class="detail" id="setPrices(com.commercetools.api.models.common.PriceDraft...)">
 <h3>setPrices</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setPrices</span><wbr><span class="parameters">(<a href="../common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>...&nbsp;prices)</span></div>
-<div class="block"><p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p></div>
+<div class="block"><p>The Embedded Prices to set.</p>
+  <p>If any two Embedded Prices in this array have the same key, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
+  <p>If any two Embedded Prices in this array have the same price scope, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceScopeError" rel="nofollow">DuplicatePriceScope</a> error is returned.</p>
+  <p>If any two Embedded Prices in this array have overlapping validity periods within the same price scope, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OverlappingPriceValidityError" rel="nofollow">OverlappingPriceValidity</a> error is returned. An Embedded Price without validity period does not conflict with an Embedded Price defined for a time period.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>prices</code> - values to be set</dd>
@@ -329,7 +335,10 @@ extends <a href="ProductUpdateAction.html" title="interface in com.commercetools
 <section class="detail" id="setPrices(java.util.List)">
 <h3>setPrices</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setPrices</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>&gt;&nbsp;prices)</span></div>
-<div class="block"><p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p></div>
+<div class="block"><p>The Embedded Prices to set.</p>
+  <p>If any two Embedded Prices in this array have the same key, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
+  <p>If any two Embedded Prices in this array have the same price scope, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceScopeError" rel="nofollow">DuplicatePriceScope</a> error is returned.</p>
+  <p>If any two Embedded Prices in this array have overlapping validity periods within the same price scope, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OverlappingPriceValidityError" rel="nofollow">OverlappingPriceValidity</a> error is returned. An Embedded Price without validity period does not conflict with an Embedded Price defined for a time period.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>prices</code> - values to be set</dd>
@@ -340,7 +349,7 @@ extends <a href="ProductUpdateAction.html" title="interface in com.commercetools
 <section class="detail" id="setStaged(java.lang.Boolean)">
 <h3>setStaged</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setStaged</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;staged)</span></div>
-<div class="block"><p>If <code>true</code>, only the staged ProductVariant is updated. If <code>false</code>, both the current and staged ProductVariant are updated.</p></div>
+<div class="block"><p>Whether only the staged ProductVariant is updated. If <code>false</code>, both the current and staged ProductVariant are updated.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>staged</code> - value to be set</dd>

@@ -147,7 +147,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStaged()" class="member-name-link">getStaged</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">If <code>true</code>, only the staged ProductVariant is updated.</div>
+<div class="block">Whether only the staged ProductVariant is updated.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVariantId()" class="member-name-link">getVariantId</a>()</code></div>
@@ -197,7 +197,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductSetPricesActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetPricesActionBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#staged(java.lang.Boolean)" class="member-name-link">staged</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;staged)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">If <code>true</code>, only the staged ProductVariant is updated.</div>
+<div class="block">Whether only the staged ProductVariant is updated.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductSetPricesActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetPricesActionBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#variantId(java.lang.Long)" class="member-name-link">variantId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;variantId)</code></div>
@@ -272,7 +272,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="prices(com.commercetools.api.models.common.PriceDraft...)">
 <h3>prices</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSetPricesActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetPricesActionBuilder</a></span>&nbsp;<span class="element-name">prices</span><wbr><span class="parameters">(<a href="../common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>...&nbsp;prices)</span></div>
-<div class="block"><p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p></div>
+<div class="block"><p>The Embedded Prices to set.</p>
+  <p>If any two Embedded Prices in this array have the same key, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
+  <p>If any two Embedded Prices in this array have the same price scope, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceScopeError" rel="nofollow">DuplicatePriceScope</a> error is returned.</p>
+  <p>If any two Embedded Prices in this array have overlapping validity periods within the same price scope, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OverlappingPriceValidityError" rel="nofollow">OverlappingPriceValidity</a> error is returned. An Embedded Price without validity period does not conflict with an Embedded Price defined for a time period.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>prices</code> - value to be set</dd>
@@ -285,7 +288,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="prices(java.util.List)">
 <h3>prices</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSetPricesActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetPricesActionBuilder</a></span>&nbsp;<span class="element-name">prices</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>&gt;&nbsp;prices)</span></div>
-<div class="block"><p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p></div>
+<div class="block"><p>The Embedded Prices to set.</p>
+  <p>If any two Embedded Prices in this array have the same key, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
+  <p>If any two Embedded Prices in this array have the same price scope, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceScopeError" rel="nofollow">DuplicatePriceScope</a> error is returned.</p>
+  <p>If any two Embedded Prices in this array have overlapping validity periods within the same price scope, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OverlappingPriceValidityError" rel="nofollow">OverlappingPriceValidity</a> error is returned. An Embedded Price without validity period does not conflict with an Embedded Price defined for a time period.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>prices</code> - value to be set</dd>
@@ -298,7 +304,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="plusPrices(com.commercetools.api.models.common.PriceDraft...)">
 <h3>plusPrices</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSetPricesActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetPricesActionBuilder</a></span>&nbsp;<span class="element-name">plusPrices</span><wbr><span class="parameters">(<a href="../common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>...&nbsp;prices)</span></div>
-<div class="block"><p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p></div>
+<div class="block"><p>The Embedded Prices to set.</p>
+  <p>If any two Embedded Prices in this array have the same key, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
+  <p>If any two Embedded Prices in this array have the same price scope, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceScopeError" rel="nofollow">DuplicatePriceScope</a> error is returned.</p>
+  <p>If any two Embedded Prices in this array have overlapping validity periods within the same price scope, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OverlappingPriceValidityError" rel="nofollow">OverlappingPriceValidity</a> error is returned. An Embedded Price without validity period does not conflict with an Embedded Price defined for a time period.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>prices</code> - value to be set</dd>
@@ -311,7 +320,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="plusPrices(java.util.function.Function)">
 <h3>plusPrices</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSetPricesActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetPricesActionBuilder</a></span>&nbsp;<span class="element-name">plusPrices</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>,<wbr><a href="../common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p></div>
+<div class="block"><p>The Embedded Prices to set.</p>
+  <p>If any two Embedded Prices in this array have the same key, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
+  <p>If any two Embedded Prices in this array have the same price scope, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceScopeError" rel="nofollow">DuplicatePriceScope</a> error is returned.</p>
+  <p>If any two Embedded Prices in this array have overlapping validity periods within the same price scope, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OverlappingPriceValidityError" rel="nofollow">OverlappingPriceValidity</a> error is returned. An Embedded Price without validity period does not conflict with an Embedded Price defined for a time period.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the prices value</dd>
@@ -324,7 +336,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withPrices(java.util.function.Function)">
 <h3>withPrices</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSetPricesActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetPricesActionBuilder</a></span>&nbsp;<span class="element-name">withPrices</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>,<wbr><a href="../common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p></div>
+<div class="block"><p>The Embedded Prices to set.</p>
+  <p>If any two Embedded Prices in this array have the same key, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
+  <p>If any two Embedded Prices in this array have the same price scope, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceScopeError" rel="nofollow">DuplicatePriceScope</a> error is returned.</p>
+  <p>If any two Embedded Prices in this array have overlapping validity periods within the same price scope, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OverlappingPriceValidityError" rel="nofollow">OverlappingPriceValidity</a> error is returned. An Embedded Price without validity period does not conflict with an Embedded Price defined for a time period.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the prices value</dd>
@@ -337,7 +352,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="addPrices(java.util.function.Function)">
 <h3>addPrices</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSetPricesActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetPricesActionBuilder</a></span>&nbsp;<span class="element-name">addPrices</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>,<wbr><a href="../common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p></div>
+<div class="block"><p>The Embedded Prices to set.</p>
+  <p>If any two Embedded Prices in this array have the same key, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
+  <p>If any two Embedded Prices in this array have the same price scope, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceScopeError" rel="nofollow">DuplicatePriceScope</a> error is returned.</p>
+  <p>If any two Embedded Prices in this array have overlapping validity periods within the same price scope, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OverlappingPriceValidityError" rel="nofollow">OverlappingPriceValidity</a> error is returned. An Embedded Price without validity period does not conflict with an Embedded Price defined for a time period.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the prices value</dd>
@@ -350,7 +368,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="setPrices(java.util.function.Function)">
 <h3>setPrices</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSetPricesActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetPricesActionBuilder</a></span>&nbsp;<span class="element-name">setPrices</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>,<wbr><a href="../common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p></div>
+<div class="block"><p>The Embedded Prices to set.</p>
+  <p>If any two Embedded Prices in this array have the same key, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
+  <p>If any two Embedded Prices in this array have the same price scope, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceScopeError" rel="nofollow">DuplicatePriceScope</a> error is returned.</p>
+  <p>If any two Embedded Prices in this array have overlapping validity periods within the same price scope, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OverlappingPriceValidityError" rel="nofollow">OverlappingPriceValidity</a> error is returned. An Embedded Price without validity period does not conflict with an Embedded Price defined for a time period.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the prices value</dd>
@@ -364,7 +385,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>staged</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSetPricesActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetPricesActionBuilder</a></span>&nbsp;<span class="element-name">staged</span><wbr><span class="parameters">(@Nullable
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;staged)</span></div>
-<div class="block"><p>If <code>true</code>, only the staged ProductVariant is updated. If <code>false</code>, both the current and staged ProductVariant are updated.</p></div>
+<div class="block"><p>Whether only the staged ProductVariant is updated. If <code>false</code>, both the current and staged ProductVariant are updated.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>staged</code> - value to be set</dd>
@@ -401,7 +422,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getPrices()">
 <h3>getPrices</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>&gt;</span>&nbsp;<span class="element-name">getPrices</span>()</div>
-<div class="block"><p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p></div>
+<div class="block"><p>The Embedded Prices to set.</p>
+  <p>If any two Embedded Prices in this array have the same key, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceKeyError" rel="nofollow">DuplicatePriceKey</a> error is returned.</p>
+  <p>If any two Embedded Prices in this array have the same price scope, a <a href="https://docs.commercetools.com/apis/ctp:api:type:DuplicatePriceScopeError" rel="nofollow">DuplicatePriceScope</a> error is returned.</p>
+  <p>If any two Embedded Prices in this array have overlapping validity periods within the same price scope, an <a href="https://docs.commercetools.com/apis/ctp:api:type:OverlappingPriceValidityError" rel="nofollow">OverlappingPriceValidity</a> error is returned. An Embedded Price without validity period does not conflict with an Embedded Price defined for a time period.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>prices</dd>
@@ -413,7 +437,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getStaged</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getStaged</span>()</div>
-<div class="block"><p>If <code>true</code>, only the staged ProductVariant is updated. If <code>false</code>, both the current and staged ProductVariant are updated.</p></div>
+<div class="block"><p>Whether only the staged ProductVariant is updated. If <code>false</code>, both the current and staged ProductVariant are updated.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>staged</dd>

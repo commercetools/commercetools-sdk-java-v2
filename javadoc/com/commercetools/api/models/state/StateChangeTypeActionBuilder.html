@@ -184,7 +184,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="type(com.commercetools.api.models.state.StateTypeEnum)">
 <h3>type</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StateChangeTypeActionBuilder.html" title="class in com.commercetools.api.models.state">StateChangeTypeActionBuilder</a></span>&nbsp;<span class="element-name">type</span><wbr><span class="parameters">(<a href="StateTypeEnum.html" title="interface in com.commercetools.api.models.state">StateTypeEnum</a>&nbsp;type)</span></div>
-<div class="block"><p>Resource or object types the State shall be assigned to. Must not be empty.</p></div>
+<div class="block"><p>Resource or object types the State shall be assigned to. Must not be empty.</p>
+  <p>If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>type</code> - value to be set</dd>
@@ -197,7 +198,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StateTypeEnum.html" title="interface in com.commercetools.api.models.state">StateTypeEnum</a></span>&nbsp;<span class="element-name">getType</span>()</div>
-<div class="block"><p>Resource or object types the State shall be assigned to. Must not be empty.</p></div>
+<div class="block"><p>Resource or object types the State shall be assigned to. Must not be empty.</p>
+  <p>If the new value is the same as the current value, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidOperationError" rel="nofollow">InvalidOperation</a> error is returned.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>type</dd>

@@ -98,6 +98,9 @@ public class ApiHttpHeaders extends Base {
     public static final String X_CORRELATION_ID = "X-Correlation-ID";
     public static final String X_DEPRECATION_NOTICE = "X-Deprecation-Notice";
     public static final String SERVER_TIMING = "Server-Timing";
+    public static final String RETRY_AFTER = "Retry-After";
+    public static final String X_RATE_LIMIT_RESET = "X-RateLimit-Reset";
+    public static final String RATE_LIMIT_RESET = "RateLimit-Reset";
 
     private final List<StringHeaderEntry> headers;
 

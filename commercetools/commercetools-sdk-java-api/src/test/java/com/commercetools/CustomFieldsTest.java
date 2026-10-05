@@ -29,6 +29,7 @@ import tools.jackson.core.JacksonException;
 import tools.jackson.core.type.TypeReference;
 import tools.jackson.databind.JsonNode;
 import tools.jackson.databind.ObjectMapper;
+import tools.jackson.databind.node.NullNode;
 
 public class CustomFieldsTest {
 
@@ -254,6 +255,18 @@ public class CustomFieldsTest {
         assertThat(fields.asSetReference("set-reference")).asList().first().isInstanceOf(ProductReference.class);
         assertThat(fields.asSetMoney("set-money")).asList().first().isInstanceOf(TypedMoney.class);
         assertThat(fields.asSetLong("set-empty")).asList().isEmpty();
+    }
+
+    @Test
+    public void nullFieldValue() {
+        String json = "{\"type\":{\"typeId\":\"type\",\"id\":\"t1\"},"
+                + "\"fields\":{\"text\":\"foo\",\"nothing\":null,\"set-with-null\":[\"a\",null]}}";
+
+        CustomFields customFields = JsonUtils.fromJsonString(json, CustomFields.class);
+        Map<String, Object> fields = customFields.getFields().values();
+
+        assertThat(fields.get("text")).isEqualTo("foo");
+        assertThat(fields.get("nothing")).isInstanceOf(NullNode.class);
     }
 
     @Test

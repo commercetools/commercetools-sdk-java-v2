@@ -85,6 +85,8 @@ public class CartDraftTest {
                                         .singletonList(new com.commercetools.api.models.common.BaseAddressImpl())) },
                 new Object[] { "discountCodes",
                         CartDraft.builder().discountCodes(Collections.singletonList("discountCodes")) },
+                new Object[] { "directDiscountsIgnoreCartDiscounts",
+                        CartDraft.builder().directDiscountsIgnoreCartDiscounts(true) },
                 new Object[] { "country", CartDraft.builder().country("country") },
                 new Object[] { "locale", CartDraft.builder().locale("locale") },
                 new Object[] { "origin",
@@ -293,6 +295,13 @@ public class CartDraftTest {
         CartDraft value = CartDraft.of();
         value.setDiscountCodes(Collections.singletonList("discountCodes"));
         Assertions.assertThat(value.getDiscountCodes()).isEqualTo(Collections.singletonList("discountCodes"));
+    }
+
+    @Test
+    public void directDiscountsIgnoreCartDiscounts() {
+        CartDraft value = CartDraft.of();
+        value.setDirectDiscountsIgnoreCartDiscounts(true);
+        Assertions.assertThat(value.getDirectDiscountsIgnoreCartDiscounts()).isEqualTo(true);
     }
 
     @Test

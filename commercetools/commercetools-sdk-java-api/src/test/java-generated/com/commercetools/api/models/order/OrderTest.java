@@ -90,6 +90,8 @@ public class OrderTest {
                         Order.builder()
                                 .directDiscounts(Collections
                                         .singletonList(new com.commercetools.api.models.cart.DirectDiscountImpl())) },
+                new Object[] { "directDiscountsIgnoreCartDiscounts",
+                        Order.builder().directDiscountsIgnoreCartDiscounts(true) },
                 new Object[] { "refusedGifts",
                         Order.builder()
                                 .refusedGifts(Collections.singletonList(
@@ -385,6 +387,13 @@ public class OrderTest {
         value.setDirectDiscounts(Collections.singletonList(new com.commercetools.api.models.cart.DirectDiscountImpl()));
         Assertions.assertThat(value.getDirectDiscounts())
                 .isEqualTo(Collections.singletonList(new com.commercetools.api.models.cart.DirectDiscountImpl()));
+    }
+
+    @Test
+    public void directDiscountsIgnoreCartDiscounts() {
+        Order value = Order.of();
+        value.setDirectDiscountsIgnoreCartDiscounts(true);
+        Assertions.assertThat(value.getDirectDiscountsIgnoreCartDiscounts()).isEqualTo(true);
     }
 
     @Test

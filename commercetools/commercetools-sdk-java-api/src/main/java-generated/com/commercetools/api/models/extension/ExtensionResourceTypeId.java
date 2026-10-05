@@ -26,7 +26,7 @@ public interface ExtensionResourceTypeId extends JsonEnum {
     <p>Extension triggered for operations on <span>Payments</span>.</p> */
     ExtensionResourceTypeId PAYMENT = ExtensionResourceTypeIdEnum.PAYMENT;
     /**
-    <p>Extension triggered for operations on <span>PaymentMethods</span></p> */
+    <p>Extension triggered for operations on <span>PaymentMethods</span>.</p> */
     ExtensionResourceTypeId PAYMENT_METHOD = ExtensionResourceTypeIdEnum.PAYMENT_METHOD;
     /**
     <p>Extension triggered for operations on <span>Customers</span>.</p> */
@@ -49,6 +49,9 @@ public interface ExtensionResourceTypeId extends JsonEnum {
     /**
     <p>Extension triggered for operations on <span>ShoppingLists</span>.</p> */
     ExtensionResourceTypeId SHOPPING_LIST = ExtensionResourceTypeIdEnum.SHOPPING_LIST;
+    /**
+    <p>Extension triggered for operations on <span>Products</span>.</p> */
+    ExtensionResourceTypeId PRODUCT = ExtensionResourceTypeIdEnum.PRODUCT;
 
     /**
      * possible values of ExtensionResourceTypeId
@@ -107,7 +110,12 @@ public interface ExtensionResourceTypeId extends JsonEnum {
         /**
          * shopping-list
          */
-        SHOPPING_LIST("shopping-list");
+        SHOPPING_LIST("shopping-list"),
+
+        /**
+         * product
+         */
+        PRODUCT("product");
         private final String jsonName;
 
         private ExtensionResourceTypeIdEnum(final String jsonName) {

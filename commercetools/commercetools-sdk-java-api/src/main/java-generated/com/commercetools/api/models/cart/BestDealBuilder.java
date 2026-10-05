@@ -25,6 +25,7 @@ public class BestDealBuilder implements Builder<BestDeal> {
 
     /**
      *  <p>Discount type that offers the best deal; the value can be <code>ProductDiscount</code> or <code>CartDiscount</code>.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> are indicated as <code>CartDiscount</code> when they offer the best deal.</p>
      * @param chosenDiscountType value to be set
      * @return Builder
      */
@@ -36,6 +37,7 @@ public class BestDealBuilder implements Builder<BestDeal> {
 
     /**
      *  <p>Discount type that offers the best deal; the value can be <code>ProductDiscount</code> or <code>CartDiscount</code>.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> are indicated as <code>CartDiscount</code> when they offer the best deal.</p>
      * @return chosenDiscountType
      */
 

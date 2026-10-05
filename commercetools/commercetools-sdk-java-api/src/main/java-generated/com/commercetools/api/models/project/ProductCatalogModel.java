@@ -20,6 +20,9 @@ public interface ProductCatalogModel extends JsonEnum {
     <p>Product Variants are embedded in the Product. This is the default behavior.</p> */
     ProductCatalogModel CLASSIC = ProductCatalogModelEnum.CLASSIC;
     /**
+    <p>Product Variants remain embedded in the Product and Variant update actions on the Product API are still accepted, but resources that reference a Variant, such as <span>Carts</span> and Order line items, discount matching, and Product Selections, resolve from modular Variants by default. Use this transitional state to migrate your reads to the Modular Catalog model while embedded Variant writes continue.</p> */
+    ProductCatalogModel IN_MIGRATION = ProductCatalogModelEnum.IN_MIGRATION;
+    /**
     <p>Product Variants are managed as standalone entities through the Variants endpoint. Variant-related update actions on Products are not available in this mode. Pricing is exclusively handled through <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrices</a>; <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> are not supported.</p> */
     ProductCatalogModel MODULAR = ProductCatalogModelEnum.MODULAR;
 
@@ -31,6 +34,11 @@ public interface ProductCatalogModel extends JsonEnum {
          * Classic
          */
         CLASSIC("Classic"),
+
+        /**
+         * InMigration
+         */
+        IN_MIGRATION("InMigration"),
 
         /**
          * Modular

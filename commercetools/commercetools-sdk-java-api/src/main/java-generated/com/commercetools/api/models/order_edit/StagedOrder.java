@@ -93,6 +93,7 @@ public interface StagedOrder extends Order {
         instance.setItemShippingAddresses(template.getItemShippingAddresses());
         instance.setDiscountCodes(template.getDiscountCodes());
         instance.setDirectDiscounts(template.getDirectDiscounts());
+        instance.setDirectDiscountsIgnoreCartDiscounts(template.getDirectDiscountsIgnoreCartDiscounts());
         instance.setRefusedGifts(template.getRefusedGifts());
         instance.setPaymentInfo(template.getPaymentInfo());
         instance.setCountry(template.getCountry());
@@ -195,6 +196,7 @@ public interface StagedOrder extends Order {
                         .map(com.commercetools.api.models.cart.DirectDiscount::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setDirectDiscountsIgnoreCartDiscounts(template.getDirectDiscountsIgnoreCartDiscounts());
         instance.setRefusedGifts(Optional.ofNullable(template.getRefusedGifts())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.cart_discount.CartDiscountReference::deepCopy)

@@ -17,6 +17,7 @@ public class VariantAttributesAvailabilityTest {
 
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { "isOnStock", VariantAttributesAvailability.builder().isOnStock(true) },
+                new Object[] { "restockableInDays", VariantAttributesAvailability.builder().restockableInDays(4L) },
                 new Object[] { "availableQuantity", VariantAttributesAvailability.builder().availableQuantity(3L) },
                 new Object[] { "channels", VariantAttributesAvailability.builder()
                         .channels(
@@ -28,6 +29,13 @@ public class VariantAttributesAvailabilityTest {
         VariantAttributesAvailability value = VariantAttributesAvailability.of();
         value.setIsOnStock(true);
         Assertions.assertThat(value.getIsOnStock()).isEqualTo(true);
+    }
+
+    @Test
+    public void restockableInDays() {
+        VariantAttributesAvailability value = VariantAttributesAvailability.of();
+        value.setRestockableInDays(4L);
+        Assertions.assertThat(value.getRestockableInDays()).isEqualTo(4L);
     }
 
     @Test

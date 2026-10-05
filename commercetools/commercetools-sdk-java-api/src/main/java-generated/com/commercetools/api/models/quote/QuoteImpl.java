@@ -87,6 +87,8 @@ public class QuoteImpl implements Quote, ModelBase {
 
     private java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts;
 
+    private Boolean directDiscountsIgnoreCartDiscounts;
+
     private com.commercetools.api.models.type.CustomFields custom;
 
     private com.commercetools.api.models.quote.QuoteState quoteState;
@@ -132,6 +134,7 @@ public class QuoteImpl implements Quote, ModelBase {
             @JsonProperty("shippingRateInput") final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput,
             @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses,
             @JsonProperty("directDiscounts") final java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts,
+            @JsonProperty("directDiscountsIgnoreCartDiscounts") final Boolean directDiscountsIgnoreCartDiscounts,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("quoteState") final com.commercetools.api.models.quote.QuoteState quoteState,
             @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
@@ -169,6 +172,7 @@ public class QuoteImpl implements Quote, ModelBase {
         this.shippingRateInput = shippingRateInput;
         this.itemShippingAddresses = itemShippingAddresses;
         this.directDiscounts = directDiscounts;
+        this.directDiscountsIgnoreCartDiscounts = directDiscountsIgnoreCartDiscounts;
         this.custom = custom;
         this.quoteState = quoteState;
         this.state = state;
@@ -439,6 +443,17 @@ public class QuoteImpl implements Quote, ModelBase {
     }
 
     /**
+     *  <ul>
+     *   <li>If <code>true</code>, only <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">Direct Discounts</a> apply to the Quote. Matching <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">Cart Discounts</a> are ignored, and Discount Codes cannot be added.</li>
+     *   <li>If <code>false</code>, Cart Discounts, Discount Codes, and Direct Discounts apply to the Quote.</li>
+     *  </ul>
+     */
+
+    public Boolean getDirectDiscountsIgnoreCartDiscounts() {
+        return this.directDiscountsIgnoreCartDiscounts;
+    }
+
+    /**
      *  <p>Custom Fields on the Quote.</p>
      */
 
@@ -626,6 +641,10 @@ public class QuoteImpl implements Quote, ModelBase {
         this.directDiscounts = directDiscounts;
     }
 
+    public void setDirectDiscountsIgnoreCartDiscounts(final Boolean directDiscountsIgnoreCartDiscounts) {
+        this.directDiscountsIgnoreCartDiscounts = directDiscountsIgnoreCartDiscounts;
+    }
+
     public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
     }
@@ -689,6 +708,7 @@ public class QuoteImpl implements Quote, ModelBase {
                 .append(shippingRateInput, that.shippingRateInput)
                 .append(itemShippingAddresses, that.itemShippingAddresses)
                 .append(directDiscounts, that.directDiscounts)
+                .append(directDiscountsIgnoreCartDiscounts, that.directDiscountsIgnoreCartDiscounts)
                 .append(custom, that.custom)
                 .append(quoteState, that.quoteState)
                 .append(state, that.state)
@@ -726,6 +746,7 @@ public class QuoteImpl implements Quote, ModelBase {
                 .append(shippingRateInput, that.shippingRateInput)
                 .append(itemShippingAddresses, that.itemShippingAddresses)
                 .append(directDiscounts, that.directDiscounts)
+                .append(directDiscountsIgnoreCartDiscounts, that.directDiscountsIgnoreCartDiscounts)
                 .append(custom, that.custom)
                 .append(quoteState, that.quoteState)
                 .append(state, that.state)
@@ -768,6 +789,7 @@ public class QuoteImpl implements Quote, ModelBase {
                 .append(shippingRateInput)
                 .append(itemShippingAddresses)
                 .append(directDiscounts)
+                .append(directDiscountsIgnoreCartDiscounts)
                 .append(custom)
                 .append(quoteState)
                 .append(state)
@@ -810,6 +832,7 @@ public class QuoteImpl implements Quote, ModelBase {
                 .append("shippingRateInput", shippingRateInput)
                 .append("itemShippingAddresses", itemShippingAddresses)
                 .append("directDiscounts", directDiscounts)
+                .append("directDiscountsIgnoreCartDiscounts", directDiscountsIgnoreCartDiscounts)
                 .append("custom", custom)
                 .append("quoteState", quoteState)
                 .append("state", state)

@@ -131,7 +131,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
     public QuoteRequestReference getQuoteRequest();
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> containing the offered items. May contain either <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">DirectDiscounts</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a>.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> containing the offered items.</p>
      * @return quotationCart
      */
     @NotNull
@@ -266,7 +266,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
     public void setQuoteRequest(final QuoteRequestReference quoteRequest);
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> containing the offered items. May contain either <a href="https://docs.commercetools.com/apis/ctp:api:type:DirectDiscount" rel="nofollow">DirectDiscounts</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscounts</a>.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> containing the offered items.</p>
      * @param quotationCart value to be set
      */
 

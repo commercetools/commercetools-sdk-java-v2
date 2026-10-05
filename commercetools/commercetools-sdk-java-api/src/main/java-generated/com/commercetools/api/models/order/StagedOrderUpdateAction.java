@@ -472,6 +472,15 @@ public interface StagedOrderUpdateAction
     }
 
     /**
+     * builder for setDirectDiscountsIgnoreCartDiscounts subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.order_edit.StagedOrderSetDirectDiscountsIgnoreCartDiscountsActionBuilder setDirectDiscountsIgnoreCartDiscountsBuilder() {
+        return com.commercetools.api.models.order_edit.StagedOrderSetDirectDiscountsIgnoreCartDiscountsActionBuilder
+                .of();
+    }
+
+    /**
      * builder for setItemShippingAddressCustomField subtype
      * @return builder
      */

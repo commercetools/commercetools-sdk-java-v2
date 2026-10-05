@@ -74,6 +74,9 @@ public interface ReferenceTypeId extends JsonEnum {
     <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:CustomObject" rel="nofollow">CustomObject</a>.</p> */
     ReferenceTypeId KEY_VALUE_DOCUMENT = ReferenceTypeIdEnum.KEY_VALUE_DOCUMENT;
     /**
+    <p>References an <a href="https://docs.commercetools.com/apis/ctp:api:type:McpServer" rel="nofollow">McpServer</a>.</p> */
+    ReferenceTypeId MCP_SERVER = ReferenceTypeIdEnum.MCP_SERVER;
+    /**
     <p>References an <a href="https://docs.commercetools.com/apis/ctp:api:type:Order" rel="nofollow">Order</a>.</p> */
     ReferenceTypeId ORDER = ReferenceTypeIdEnum.ORDER;
     /**
@@ -253,6 +256,11 @@ public interface ReferenceTypeId extends JsonEnum {
          * key-value-document
          */
         KEY_VALUE_DOCUMENT("key-value-document"),
+
+        /**
+         * mcp-server
+         */
+        MCP_SERVER("mcp-server"),
 
         /**
          * order

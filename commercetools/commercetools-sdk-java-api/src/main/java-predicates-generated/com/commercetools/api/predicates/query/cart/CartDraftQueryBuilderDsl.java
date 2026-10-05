@@ -231,6 +231,12 @@ public class CartDraftQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CartDraftQueryBuilderDsl::of));
     }
 
+    public BooleanComparisonPredicateBuilder<CartDraftQueryBuilderDsl> directDiscountsIgnoreCartDiscounts() {
+        return new BooleanComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("directDiscountsIgnoreCartDiscounts")),
+            p -> new CombinationQueryPredicate<>(p, CartDraftQueryBuilderDsl::of));
+    }
+
     public StringComparisonPredicateBuilder<CartDraftQueryBuilderDsl> country() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("country")),

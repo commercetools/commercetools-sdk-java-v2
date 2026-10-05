@@ -67,4 +67,10 @@ public class TaxRateQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, TaxRateQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<TaxRateQueryBuilderDsl> taxRoundingTarget() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("taxRoundingTarget")),
+            p -> new CombinationQueryPredicate<>(p, TaxRateQueryBuilderDsl::of));
+    }
+
 }

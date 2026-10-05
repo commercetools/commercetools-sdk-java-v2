@@ -375,6 +375,14 @@ public class CartUpdateActionQueryBuilderDsl {
             CartUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> asSetDirectDiscountsIgnoreCartDiscounts(
+            Function<com.commercetools.api.predicates.query.cart.CartSetDirectDiscountsIgnoreCartDiscountsActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.CartSetDirectDiscountsIgnoreCartDiscountsActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.cart.CartSetDirectDiscountsIgnoreCartDiscountsActionQueryBuilderDsl
+                    .of()),
+            CartUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> asSetEstimatedDelivery(
             Function<com.commercetools.api.predicates.query.cart.CartSetEstimatedDeliveryActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.CartSetEstimatedDeliveryActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

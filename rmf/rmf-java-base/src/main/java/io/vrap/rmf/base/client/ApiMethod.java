@@ -404,8 +404,14 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
     }
 
     protected static <V> String encodePathParam(V pathParameter) {
+        final String value = pathParameter.toString();
+        // "." and ".." are not touched by URLEncoder but are collapsed as dot segments when the URI is resolved
+        if (".".equals(value) || "..".equals(value)) {
+            throw new IllegalArgumentException("Invalid path parameter value: '" + value + "'");
+        }
         try {
-            return URLEncoder.encode(pathParameter.toString(), StandardCharsets.UTF_8.toString());
+            // URLEncoder is a form encoder and encodes a space as '+', which is a literal '+' within a path
+            return URLEncoder.encode(value, StandardCharsets.UTF_8.toString()).replace("+", "%20");
         }
         catch (UnsupportedEncodingException e) {
             throw new EncodingException(e);

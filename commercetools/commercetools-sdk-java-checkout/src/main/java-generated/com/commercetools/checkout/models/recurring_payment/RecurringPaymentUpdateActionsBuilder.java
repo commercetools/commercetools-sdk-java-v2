@@ -1,0 +1,168 @@
+
+package com.commercetools.checkout.models.recurring_payment;
+
+import java.util.*;
+import java.util.function.Function;
+
+import io.vrap.rmf.base.client.Builder;
+import io.vrap.rmf.base.client.utils.Generated;
+
+/**
+ * RecurringPaymentUpdateActionsBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     RecurringPaymentUpdateActions recurringPaymentUpdateActions = RecurringPaymentUpdateActions.builder()
+ *             .version(1)
+ *             .plusActions(actionsBuilder -> actionsBuilder)
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+public class RecurringPaymentUpdateActionsBuilder implements Builder<RecurringPaymentUpdateActions> {
+
+    private Integer version;
+
+    private java.util.List<com.commercetools.checkout.models.recurring_payment.RecurringPaymentUpdateAction> actions;
+
+    /**
+     *  <p>Expected version of the RecurringPayment on which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:checkout:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
+     * @param version value to be set
+     * @return Builder
+     */
+
+    public RecurringPaymentUpdateActionsBuilder version(final Integer version) {
+        this.version = version;
+        return this;
+    }
+
+    /**
+     *  <p>Update actions to be performed on the RecurringPayment.</p>
+     * @param actions value to be set
+     * @return Builder
+     */
+
+    public RecurringPaymentUpdateActionsBuilder actions(
+            final com.commercetools.checkout.models.recurring_payment.RecurringPaymentUpdateAction... actions) {
+        this.actions = new ArrayList<>(Arrays.asList(actions));
+        return this;
+    }
+
+    /**
+     *  <p>Update actions to be performed on the RecurringPayment.</p>
+     * @param actions value to be set
+     * @return Builder
+     */
+
+    public RecurringPaymentUpdateActionsBuilder actions(
+            final java.util.List<com.commercetools.checkout.models.recurring_payment.RecurringPaymentUpdateAction> actions) {
+        this.actions = actions;
+        return this;
+    }
+
+    /**
+     *  <p>Update actions to be performed on the RecurringPayment.</p>
+     * @param actions value to be set
+     * @return Builder
+     */
+
+    public RecurringPaymentUpdateActionsBuilder plusActions(
+            final com.commercetools.checkout.models.recurring_payment.RecurringPaymentUpdateAction... actions) {
+        if (this.actions == null) {
+            this.actions = new ArrayList<>();
+        }
+        this.actions.addAll(Arrays.asList(actions));
+        return this;
+    }
+
+    /**
+     *  <p>Update actions to be performed on the RecurringPayment.</p>
+     * @param builder function to build the actions value
+     * @return Builder
+     */
+
+    public RecurringPaymentUpdateActionsBuilder plusActions(
+            Function<com.commercetools.checkout.models.recurring_payment.RecurringPaymentUpdateActionBuilder, Builder<? extends com.commercetools.checkout.models.recurring_payment.RecurringPaymentUpdateAction>> builder) {
+        if (this.actions == null) {
+            this.actions = new ArrayList<>();
+        }
+        this.actions.add(
+            builder.apply(com.commercetools.checkout.models.recurring_payment.RecurringPaymentUpdateActionBuilder.of())
+                    .build());
+        return this;
+    }
+
+    /**
+     *  <p>Update actions to be performed on the RecurringPayment.</p>
+     * @param builder function to build the actions value
+     * @return Builder
+     */
+
+    public RecurringPaymentUpdateActionsBuilder withActions(
+            Function<com.commercetools.checkout.models.recurring_payment.RecurringPaymentUpdateActionBuilder, Builder<? extends com.commercetools.checkout.models.recurring_payment.RecurringPaymentUpdateAction>> builder) {
+        this.actions = new ArrayList<>();
+        this.actions.add(
+            builder.apply(com.commercetools.checkout.models.recurring_payment.RecurringPaymentUpdateActionBuilder.of())
+                    .build());
+        return this;
+    }
+
+    /**
+     *  <p>Expected version of the RecurringPayment on which the changes should be applied. If the expected version does not match the actual version, a <a href="https://docs.commercetools.com/apis/ctp:checkout:type:ConcurrentModificationError" rel="nofollow">ConcurrentModification</a> error will be returned.</p>
+     * @return version
+     */
+
+    public Integer getVersion() {
+        return this.version;
+    }
+
+    /**
+     *  <p>Update actions to be performed on the RecurringPayment.</p>
+     * @return actions
+     */
+
+    public java.util.List<com.commercetools.checkout.models.recurring_payment.RecurringPaymentUpdateAction> getActions() {
+        return this.actions;
+    }
+
+    /**
+     * builds RecurringPaymentUpdateActions with checking for non-null required values
+     * @return RecurringPaymentUpdateActions
+     */
+    public RecurringPaymentUpdateActions build() {
+        Objects.requireNonNull(version, RecurringPaymentUpdateActions.class + ": version is missing");
+        Objects.requireNonNull(actions, RecurringPaymentUpdateActions.class + ": actions is missing");
+        return new RecurringPaymentUpdateActionsImpl(version, actions);
+    }
+
+    /**
+     * builds RecurringPaymentUpdateActions without checking for non-null required values
+     * @return RecurringPaymentUpdateActions
+     */
+    public RecurringPaymentUpdateActions buildUnchecked() {
+        return new RecurringPaymentUpdateActionsImpl(version, actions);
+    }
+
+    /**
+     * factory method for an instance of RecurringPaymentUpdateActionsBuilder
+     * @return builder
+     */
+    public static RecurringPaymentUpdateActionsBuilder of() {
+        return new RecurringPaymentUpdateActionsBuilder();
+    }
+
+    /**
+     * create builder for RecurringPaymentUpdateActions instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
+    public static RecurringPaymentUpdateActionsBuilder of(final RecurringPaymentUpdateActions template) {
+        RecurringPaymentUpdateActionsBuilder builder = new RecurringPaymentUpdateActionsBuilder();
+        builder.version = template.getVersion();
+        builder.actions = template.getActions();
+        return builder;
+    }
+
+}

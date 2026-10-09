@@ -41,6 +41,8 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
 
     private Boolean isSearchable;
 
+    private Boolean savedToLineItem;
+
     /**
      * create instance with all properties
      */
@@ -54,7 +56,8 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
             @JsonProperty("attributeConstraint") final com.commercetools.api.models.product_type.AttributeConstraintEnum attributeConstraint,
             @JsonProperty("inputTip") final com.commercetools.api.models.common.LocalizedString inputTip,
             @JsonProperty("inputHint") final com.commercetools.api.models.product_type.TextInputHint inputHint,
-            @JsonProperty("isSearchable") final Boolean isSearchable) {
+            @JsonProperty("isSearchable") final Boolean isSearchable,
+            @JsonProperty("savedToLineItem") final Boolean savedToLineItem) {
         this.type = type;
         this.name = name;
         this.label = label;
@@ -64,6 +67,7 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
         this.inputTip = inputTip;
         this.inputHint = inputHint;
         this.isSearchable = isSearchable;
+        this.savedToLineItem = savedToLineItem;
     }
 
     /**
@@ -147,6 +151,15 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
         return this.isSearchable;
     }
 
+    /**
+     *  <p>Whether the Attribute value is copied onto the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> when the Product is added to a Cart. When <code>false</code>, the Attribute value is excluded from the Line Item variant. Line Items already in a Cart are not immediately affected by a change to this value. Existing Line Items are updated the next time their Product data is refreshed, such as when a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRecalculateAction" rel="nofollow">Recalculate</a> update action is performed with <code>updateProductData</code> set to <code>true</code>, or on a Cart update that triggers an API Extension. Replicating a Cart creates a new Cart that contains the current Product data; it does not update the original Cart.</p>
+     *  <p>When <code>savedToLineItem</code> is <code>false</code>, <span>LineItem predicates</span> that reference this Attribute, such as those in Cart Discounts and Shipping Methods, evaluate as if the Attribute is not set.</p>
+     */
+
+    public Boolean getSavedToLineItem() {
+        return this.savedToLineItem;
+    }
+
     public void setType(final com.commercetools.api.models.product_type.AttributeType type) {
         this.type = type;
     }
@@ -184,6 +197,10 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
         this.isSearchable = isSearchable;
     }
 
+    public void setSavedToLineItem(final Boolean savedToLineItem) {
+        this.savedToLineItem = savedToLineItem;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -203,6 +220,7 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
                 .append(inputTip, that.inputTip)
                 .append(inputHint, that.inputHint)
                 .append(isSearchable, that.isSearchable)
+                .append(savedToLineItem, that.savedToLineItem)
                 .append(type, that.type)
                 .append(name, that.name)
                 .append(label, that.label)
@@ -212,6 +230,7 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
                 .append(inputTip, that.inputTip)
                 .append(inputHint, that.inputHint)
                 .append(isSearchable, that.isSearchable)
+                .append(savedToLineItem, that.savedToLineItem)
                 .isEquals();
     }
 
@@ -226,6 +245,7 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
                 .append(inputTip)
                 .append(inputHint)
                 .append(isSearchable)
+                .append(savedToLineItem)
                 .toHashCode();
     }
 
@@ -240,6 +260,7 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
                 .append("inputTip", inputTip)
                 .append("inputHint", inputHint)
                 .append("isSearchable", isSearchable)
+                .append("savedToLineItem", savedToLineItem)
                 .build();
     }
 

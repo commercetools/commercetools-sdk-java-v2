@@ -59,7 +59,7 @@ public class ByProjectKeyGraphqlPostString extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/graphql", this.projectKey);
+        String httpRequestPath = String.format("%s/graphql", encodePathParam(this.projectKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

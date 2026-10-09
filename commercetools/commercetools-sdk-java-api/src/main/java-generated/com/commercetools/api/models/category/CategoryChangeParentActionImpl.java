@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- * CategoryChangeParentAction
+ *  <p>This action locks the entire Category tree in the Project for the duration of the request. For details, see <span>Category tree locking</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryChangeParentActionImpl implements CategoryChangeParentAction, ModelBase {

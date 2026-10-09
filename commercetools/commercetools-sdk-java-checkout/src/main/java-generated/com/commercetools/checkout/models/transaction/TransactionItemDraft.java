@@ -8,43 +8,42 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.checkout.models.common.Amount;
-import com.commercetools.checkout.models.payment_integration.PaymentIntegrationResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
-import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
- * TransactionItemDraft
+ *  <p>Base type for creating a Transaction Item. If <code>type</code> is omitted, a <a href="https://docs.commercetools.com/apis/ctp:checkout:type:TransactionItemPaymentIntegrationDraft" rel="nofollow">TransactionItemPaymentIntegrationDraft</a> is created to process the payment through a Payment Integration. Each supported payment flow has its own corresponding Transaction Item Draft type, like <a href="https://docs.commercetools.com/apis/ctp:checkout:type:TransactionItemRecurringDraft" rel="nofollow">TransactionItemRecurringDraft</a>.</p>
  *
  * <hr>
- * Example to create an instance using the builder pattern
+ * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     TransactionItemDraft transactionItemDraft = TransactionItemDraft.builder()
- *             .paymentIntegration(paymentIntegrationBuilder -> paymentIntegrationBuilder)
+ *     TransactionItemDraft transactionItemDraft = TransactionItemDraft.recurringBuilder()
+ *             paymentMethod(paymentMethodBuilder -> paymentMethodBuilder)
+ *             connectorDeployment(connectorDeploymentBuilder -> connectorDeploymentBuilder)
  *             .build()
  * </code></pre>
  * </div>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = TransactionItemDraftImpl.class, visible = true)
 @JsonDeserialize(as = TransactionItemDraftImpl.class)
-public interface TransactionItemDraft extends io.vrap.rmf.base.client.Draft<TransactionItemDraft> {
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+public interface TransactionItemDraft {
 
     /**
-     *  <p>Resource Identifier of the <span>Payment Integration</span> to use to execute the payment.</p>
-     * @return paymentIntegration
+     *  <p>Type of the Transaction Item to create.</p>
+     * @return type
      */
-    @NotNull
-    @Valid
-    @JsonProperty("paymentIntegration")
-    public PaymentIntegrationResourceIdentifier getPaymentIntegration();
+
+    @JsonProperty("type")
+    public String getType();
 
     /**
-     *  <p>Money value of the Transaction Item.</p>
+     *  <p>Money value of the Transaction Item. If not present, the Connector resolves the amount from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
      * @return amount
      */
     @Valid
@@ -52,38 +51,11 @@ public interface TransactionItemDraft extends io.vrap.rmf.base.client.Draft<Tran
     public Amount getAmount();
 
     /**
-     *  <p>Resource Identifier of the <span>Payment Integration</span> to use to execute the payment.</p>
-     * @param paymentIntegration value to be set
-     */
-
-    public void setPaymentIntegration(final PaymentIntegrationResourceIdentifier paymentIntegration);
-
-    /**
-     *  <p>Money value of the Transaction Item.</p>
+     *  <p>Money value of the Transaction Item. If not present, the Connector resolves the amount from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
      * @param amount value to be set
      */
 
     public void setAmount(final Amount amount);
-
-    /**
-     * factory method
-     * @return instance of TransactionItemDraft
-     */
-    public static TransactionItemDraft of() {
-        return new TransactionItemDraftImpl();
-    }
-
-    /**
-     * factory method to create a shallow copy TransactionItemDraft
-     * @param template instance to be copied
-     * @return copy instance
-     */
-    public static TransactionItemDraft of(final TransactionItemDraft template) {
-        TransactionItemDraftImpl instance = new TransactionItemDraftImpl();
-        instance.setPaymentIntegration(template.getPaymentIntegration());
-        instance.setAmount(template.getAmount());
-        return instance;
-    }
 
     public TransactionItemDraft copyDeep();
 
@@ -97,29 +69,21 @@ public interface TransactionItemDraft extends io.vrap.rmf.base.client.Draft<Tran
         if (template == null) {
             return null;
         }
+
+        if (!(template instanceof TransactionItemDraftImpl)) {
+            return template.copyDeep();
+        }
         TransactionItemDraftImpl instance = new TransactionItemDraftImpl();
-        instance.setPaymentIntegration(
-            com.commercetools.checkout.models.payment_integration.PaymentIntegrationResourceIdentifier
-                    .deepCopy(template.getPaymentIntegration()));
         instance.setAmount(com.commercetools.checkout.models.common.Amount.deepCopy(template.getAmount()));
         return instance;
     }
 
     /**
-     * builder factory method for TransactionItemDraft
+     * builder for recurring subtype
      * @return builder
      */
-    public static TransactionItemDraftBuilder builder() {
-        return TransactionItemDraftBuilder.of();
-    }
-
-    /**
-     * create builder for TransactionItemDraft instance
-     * @param template instance with prefilled values for the builder
-     * @return builder
-     */
-    public static TransactionItemDraftBuilder builder(final TransactionItemDraft template) {
-        return TransactionItemDraftBuilder.of(template);
+    public static com.commercetools.checkout.models.transaction.TransactionItemRecurringDraftBuilder recurringBuilder() {
+        return com.commercetools.checkout.models.transaction.TransactionItemRecurringDraftBuilder.of();
     }
 
     /**

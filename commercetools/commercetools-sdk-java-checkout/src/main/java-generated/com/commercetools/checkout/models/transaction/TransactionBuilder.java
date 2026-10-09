@@ -20,6 +20,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .version(1)
  *             .application(applicationBuilder -> applicationBuilder)
  *             .plusTransactionItems(transactionItemsBuilder -> transactionItemsBuilder)
+ *             .cart(cartBuilder -> cartBuilder)
  *             .transactionStatus(transactionStatusBuilder -> transactionStatusBuilder)
  *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
@@ -41,7 +42,6 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     private java.util.List<com.commercetools.checkout.models.transaction.TransactionItem> transactionItems;
 
-    @Nullable
     private com.commercetools.checkout.models.cart.CartReference cart;
 
     private com.commercetools.checkout.models.transaction.TransactionStatus transactionStatus;
@@ -170,7 +170,7 @@ public class TransactionBuilder implements Builder<Transaction> {
      */
 
     public TransactionBuilder plusTransactionItems(
-            Function<com.commercetools.checkout.models.transaction.TransactionItemBuilder, com.commercetools.checkout.models.transaction.TransactionItemBuilder> builder) {
+            Function<com.commercetools.checkout.models.transaction.TransactionItemBuilder, Builder<? extends com.commercetools.checkout.models.transaction.TransactionItem>> builder) {
         if (this.transactionItems == null) {
             this.transactionItems = new ArrayList<>();
         }
@@ -186,35 +186,11 @@ public class TransactionBuilder implements Builder<Transaction> {
      */
 
     public TransactionBuilder withTransactionItems(
-            Function<com.commercetools.checkout.models.transaction.TransactionItemBuilder, com.commercetools.checkout.models.transaction.TransactionItemBuilder> builder) {
+            Function<com.commercetools.checkout.models.transaction.TransactionItemBuilder, Builder<? extends com.commercetools.checkout.models.transaction.TransactionItem>> builder) {
         this.transactionItems = new ArrayList<>();
         this.transactionItems
                 .add(builder.apply(com.commercetools.checkout.models.transaction.TransactionItemBuilder.of()).build());
         return this;
-    }
-
-    /**
-     *  <p>Transaction Item associated with the Transaction.</p>
-     * @param builder function to build the transactionItems value
-     * @return Builder
-     */
-
-    public TransactionBuilder addTransactionItems(
-            Function<com.commercetools.checkout.models.transaction.TransactionItemBuilder, com.commercetools.checkout.models.transaction.TransactionItem> builder) {
-        return plusTransactionItems(
-            builder.apply(com.commercetools.checkout.models.transaction.TransactionItemBuilder.of()));
-    }
-
-    /**
-     *  <p>Transaction Item associated with the Transaction.</p>
-     * @param builder function to build the transactionItems value
-     * @return Builder
-     */
-
-    public TransactionBuilder setTransactionItems(
-            Function<com.commercetools.checkout.models.transaction.TransactionItemBuilder, com.commercetools.checkout.models.transaction.TransactionItem> builder) {
-        return transactionItems(
-            builder.apply(com.commercetools.checkout.models.transaction.TransactionItemBuilder.of()));
     }
 
     /**
@@ -247,7 +223,7 @@ public class TransactionBuilder implements Builder<Transaction> {
      * @return Builder
      */
 
-    public TransactionBuilder cart(@Nullable final com.commercetools.checkout.models.cart.CartReference cart) {
+    public TransactionBuilder cart(final com.commercetools.checkout.models.cart.CartReference cart) {
         this.cart = cart;
         return this;
     }
@@ -399,7 +375,6 @@ public class TransactionBuilder implements Builder<Transaction> {
      * @return cart
      */
 
-    @Nullable
     public com.commercetools.checkout.models.cart.CartReference getCart() {
         return this.cart;
     }
@@ -450,6 +425,7 @@ public class TransactionBuilder implements Builder<Transaction> {
         Objects.requireNonNull(version, Transaction.class + ": version is missing");
         Objects.requireNonNull(application, Transaction.class + ": application is missing");
         Objects.requireNonNull(transactionItems, Transaction.class + ": transactionItems is missing");
+        Objects.requireNonNull(cart, Transaction.class + ": cart is missing");
         Objects.requireNonNull(transactionStatus, Transaction.class + ": transactionStatus is missing");
         Objects.requireNonNull(createdAt, Transaction.class + ": createdAt is missing");
         Objects.requireNonNull(lastModifiedAt, Transaction.class + ": lastModifiedAt is missing");

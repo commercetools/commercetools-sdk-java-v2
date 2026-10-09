@@ -62,7 +62,7 @@ public class ByProjectKeyCustomersPasswordPostString extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/customers/password", this.projectKey);
+        String httpRequestPath = String.format("%s/customers/password", encodePathParam(this.projectKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

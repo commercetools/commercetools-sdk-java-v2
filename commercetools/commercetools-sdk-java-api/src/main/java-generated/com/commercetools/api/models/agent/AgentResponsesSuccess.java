@@ -23,6 +23,7 @@ import tools.jackson.databind.annotation.*;
  *  <ul>
  *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:AgentResponsesCartSuccess" rel="nofollow">AgentResponsesCartSuccess</a> when a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> was created</li>
  *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:AgentResponsesQuoteRequestSuccess" rel="nofollow">AgentResponsesQuoteRequestSuccess</a> when a <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> was created</li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:AgentResponsesShoppingListSuccess" rel="nofollow">AgentResponsesShoppingListSuccess</a> when a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a> was created</li>
  *  </ul>
  *
  * <hr>
@@ -127,6 +128,14 @@ public interface AgentResponsesSuccess {
      */
     public static com.commercetools.api.models.agent.AgentResponsesQuoteRequestSuccessBuilder quoteRequestBuilder() {
         return com.commercetools.api.models.agent.AgentResponsesQuoteRequestSuccessBuilder.of();
+    }
+
+    /**
+     * builder for shoppingList subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentResponsesShoppingListSuccessBuilder shoppingListBuilder() {
+        return com.commercetools.api.models.agent.AgentResponsesShoppingListSuccessBuilder.of();
     }
 
     /**

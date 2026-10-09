@@ -72,7 +72,8 @@ public class ByProjectKeyChannelsByIDPostString
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/channels/%s", this.projectKey, this.ID);
+        String httpRequestPath = String.format("%s/channels/%s", encodePathParam(this.projectKey),
+            encodePathParam(this.ID));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

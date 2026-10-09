@@ -131,7 +131,7 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
      */
 
     public TransactionDraftBuilder plusTransactionItems(
-            Function<com.commercetools.checkout.models.transaction.TransactionItemDraftBuilder, com.commercetools.checkout.models.transaction.TransactionItemDraftBuilder> builder) {
+            Function<com.commercetools.checkout.models.transaction.TransactionItemDraftBuilder, Builder<? extends com.commercetools.checkout.models.transaction.TransactionItemDraft>> builder) {
         if (this.transactionItems == null) {
             this.transactionItems = new ArrayList<>();
         }
@@ -147,35 +147,11 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
      */
 
     public TransactionDraftBuilder withTransactionItems(
-            Function<com.commercetools.checkout.models.transaction.TransactionItemDraftBuilder, com.commercetools.checkout.models.transaction.TransactionItemDraftBuilder> builder) {
+            Function<com.commercetools.checkout.models.transaction.TransactionItemDraftBuilder, Builder<? extends com.commercetools.checkout.models.transaction.TransactionItemDraft>> builder) {
         this.transactionItems = new ArrayList<>();
         this.transactionItems.add(
             builder.apply(com.commercetools.checkout.models.transaction.TransactionItemDraftBuilder.of()).build());
         return this;
-    }
-
-    /**
-     *  <p>Transaction Item associated with the Transaction.</p>
-     * @param builder function to build the transactionItems value
-     * @return Builder
-     */
-
-    public TransactionDraftBuilder addTransactionItems(
-            Function<com.commercetools.checkout.models.transaction.TransactionItemDraftBuilder, com.commercetools.checkout.models.transaction.TransactionItemDraft> builder) {
-        return plusTransactionItems(
-            builder.apply(com.commercetools.checkout.models.transaction.TransactionItemDraftBuilder.of()));
-    }
-
-    /**
-     *  <p>Transaction Item associated with the Transaction.</p>
-     * @param builder function to build the transactionItems value
-     * @return Builder
-     */
-
-    public TransactionDraftBuilder setTransactionItems(
-            Function<com.commercetools.checkout.models.transaction.TransactionItemDraftBuilder, com.commercetools.checkout.models.transaction.TransactionItemDraft> builder) {
-        return transactionItems(
-            builder.apply(com.commercetools.checkout.models.transaction.TransactionItemDraftBuilder.of()));
     }
 
     /**

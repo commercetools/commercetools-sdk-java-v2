@@ -23,6 +23,14 @@ public class ByProjectKeyRequestBuilder {
         return new ByProjectKeyTransactionsRequestBuilder(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyRecurringPaymentJobsRequestBuilder recurringPaymentJobs() {
+        return new ByProjectKeyRecurringPaymentJobsRequestBuilder(apiHttpClient, projectKey);
+    }
+
+    public ByProjectKeyRecurringPaymentsRequestBuilder recurringPayments() {
+        return new ByProjectKeyRecurringPaymentsRequestBuilder(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyPaymentIntegrationsRequestBuilder paymentIntegrations() {
         return new ByProjectKeyPaymentIntegrationsRequestBuilder(apiHttpClient, projectKey);
     }

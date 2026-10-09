@@ -107,6 +107,10 @@ public class CartTest {
                         Cart.builder().origin(com.commercetools.api.models.cart.CartOrigin.findEnum("Customer")) },
                 new Object[] { "custom",
                         Cart.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
+                new Object[] { "recurringPaymentConfiguration",
+                        Cart.builder()
+                                .recurringPaymentConfiguration(
+                                    new com.commercetools.api.models.cart.RecurringPaymentConfigurationImpl()) },
                 new Object[] { "discountTypeCombination", Cart.builder()
                         .discountTypeCombination(new com.commercetools.api.models.cart.DiscountTypeCombinationImpl()) },
                 new Object[] { "lock", Cart.builder().lock(new com.commercetools.api.models.cart.CartLockImpl()) },
@@ -441,6 +445,15 @@ public class CartTest {
         Cart value = Cart.of();
         value.setCustom(new com.commercetools.api.models.type.CustomFieldsImpl());
         Assertions.assertThat(value.getCustom()).isEqualTo(new com.commercetools.api.models.type.CustomFieldsImpl());
+    }
+
+    @Test
+    public void recurringPaymentConfiguration() {
+        Cart value = Cart.of();
+        value.setRecurringPaymentConfiguration(
+            new com.commercetools.api.models.cart.RecurringPaymentConfigurationImpl());
+        Assertions.assertThat(value.getRecurringPaymentConfiguration())
+                .isEqualTo(new com.commercetools.api.models.cart.RecurringPaymentConfigurationImpl());
     }
 
     @Test

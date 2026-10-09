@@ -173,4 +173,17 @@ public class CategoryQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CategoryQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<CategoryQueryBuilderDsl> stores(
+            Function<com.commercetools.api.predicates.query.store.StoreKeyReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.store.StoreKeyReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("stores"))
+                .inner(fn.apply(com.commercetools.api.predicates.query.store.StoreKeyReferenceQueryBuilderDsl.of())),
+            CategoryQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<CategoryQueryBuilderDsl> stores() {
+        return new CollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("stores")),
+            p -> new CombinationQueryPredicate<>(p, CategoryQueryBuilderDsl::of));
+    }
+
 }

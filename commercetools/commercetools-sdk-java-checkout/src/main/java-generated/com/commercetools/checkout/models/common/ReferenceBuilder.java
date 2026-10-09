@@ -27,8 +27,20 @@ public class ReferenceBuilder {
         return com.commercetools.checkout.models.payment_integration.PaymentIntegrationReferenceBuilder.of();
     }
 
+    public com.commercetools.checkout.models.common.PaymentMethodReferenceBuilder paymentMethodBuilder() {
+        return com.commercetools.checkout.models.common.PaymentMethodReferenceBuilder.of();
+    }
+
     public com.commercetools.checkout.models.payment.PaymentReferenceBuilder paymentBuilder() {
         return com.commercetools.checkout.models.payment.PaymentReferenceBuilder.of();
+    }
+
+    public com.commercetools.checkout.models.recurring_payment.RecurringOrderReferenceBuilder recurringOrderBuilder() {
+        return com.commercetools.checkout.models.recurring_payment.RecurringOrderReferenceBuilder.of();
+    }
+
+    public com.commercetools.checkout.models.recurring_payment.RecurringPaymentReferenceBuilder recurringPaymentBuilder() {
+        return com.commercetools.checkout.models.recurring_payment.RecurringPaymentReferenceBuilder.of();
     }
 
     /**

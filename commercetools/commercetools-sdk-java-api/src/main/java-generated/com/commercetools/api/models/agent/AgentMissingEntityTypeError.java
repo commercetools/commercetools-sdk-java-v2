@@ -16,7 +16,7 @@ import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Returned by a <span>/responses</span> request when the input did not specify whether to create a Cart or a Quote Request. Set <code>outputType</code> explicitly in the request.</p>
+ *  <p>Returned by a <span>/responses</span> request when the input did not specify whether to create a Cart, a Quote Request, or a Shopping List. Set <code>outputType</code> explicitly in the request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

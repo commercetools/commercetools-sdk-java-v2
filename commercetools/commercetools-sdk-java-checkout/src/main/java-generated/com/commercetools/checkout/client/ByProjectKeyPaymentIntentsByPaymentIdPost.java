@@ -16,11 +16,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import tools.jackson.core.type.TypeReference;
 
 /**
+ *  <p>Requests to the payment <span>Connector</span> time out after 30 seconds.</p>
  *  <p>Specific Error Codes:</p>
  *  <ul>
  *   <li><a href="https://docs.commercetools.com/apis/ctp:checkout:type:MultipleActionsNotAllowedError" rel="nofollow">MultipleActionsNotAllowed</a></li>
  *   <li><a href="https://docs.commercetools.com/apis/ctp:checkout:type:RequiredFieldError" rel="nofollow">RequiredField</a></li>
  *   <li><a href="https://docs.commercetools.com/apis/ctp:checkout:type:ResourceNotFoundError" rel="nofollow">ResourceNotFound</a></li>
+ *   <li><a href="https://docs.commercetools.com/apis/ctp:checkout:type:ConnectorTimeoutError" rel="nofollow">ConnectorTimeout</a></li>
  *  </ul>
  *
  * <hr>

@@ -160,6 +160,14 @@ public interface ErrorObject {
     }
 
     /**
+     * builder for missingShoppingListName subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentMissingShoppingListNameErrorBuilder missingShoppingListNameBuilder() {
+        return com.commercetools.api.models.agent.AgentMissingShoppingListNameErrorBuilder.of();
+    }
+
+    /**
      * builder for noLineItemsExtracted subtype
      * @return builder
      */
@@ -197,6 +205,14 @@ public interface ErrorObject {
      */
     public static com.commercetools.api.models.agent.AgentQuoteRequestCreationFailedErrorBuilder quoteRequestCreationFailedBuilder() {
         return com.commercetools.api.models.agent.AgentQuoteRequestCreationFailedErrorBuilder.of();
+    }
+
+    /**
+     * builder for shoppingListCreationFailed subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.AgentShoppingListCreationFailedErrorBuilder shoppingListCreationFailedBuilder() {
+        return com.commercetools.api.models.agent.AgentShoppingListCreationFailedErrorBuilder.of();
     }
 
     /**

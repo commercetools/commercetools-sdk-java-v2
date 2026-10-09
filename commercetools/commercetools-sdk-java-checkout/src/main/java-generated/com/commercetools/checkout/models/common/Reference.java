@@ -109,11 +109,35 @@ public interface Reference {
     }
 
     /**
+     * builder for paymentMethod subtype
+     * @return builder
+     */
+    public static com.commercetools.checkout.models.common.PaymentMethodReferenceBuilder paymentMethodBuilder() {
+        return com.commercetools.checkout.models.common.PaymentMethodReferenceBuilder.of();
+    }
+
+    /**
      * builder for payment subtype
      * @return builder
      */
     public static com.commercetools.checkout.models.payment.PaymentReferenceBuilder paymentBuilder() {
         return com.commercetools.checkout.models.payment.PaymentReferenceBuilder.of();
+    }
+
+    /**
+     * builder for recurringOrder subtype
+     * @return builder
+     */
+    public static com.commercetools.checkout.models.recurring_payment.RecurringOrderReferenceBuilder recurringOrderBuilder() {
+        return com.commercetools.checkout.models.recurring_payment.RecurringOrderReferenceBuilder.of();
+    }
+
+    /**
+     * builder for recurringPayment subtype
+     * @return builder
+     */
+    public static com.commercetools.checkout.models.recurring_payment.RecurringPaymentReferenceBuilder recurringPaymentBuilder() {
+        return com.commercetools.checkout.models.recurring_payment.RecurringPaymentReferenceBuilder.of();
     }
 
     /**

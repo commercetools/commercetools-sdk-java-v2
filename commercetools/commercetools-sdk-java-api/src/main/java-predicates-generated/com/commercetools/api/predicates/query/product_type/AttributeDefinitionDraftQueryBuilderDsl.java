@@ -77,4 +77,10 @@ public class AttributeDefinitionDraftQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, AttributeDefinitionDraftQueryBuilderDsl::of));
     }
 
+    public BooleanComparisonPredicateBuilder<AttributeDefinitionDraftQueryBuilderDsl> savedToLineItem() {
+        return new BooleanComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("savedToLineItem")),
+            p -> new CombinationQueryPredicate<>(p, AttributeDefinitionDraftQueryBuilderDsl::of));
+    }
+
 }

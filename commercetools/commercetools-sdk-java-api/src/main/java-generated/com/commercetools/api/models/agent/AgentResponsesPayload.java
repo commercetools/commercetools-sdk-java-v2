@@ -53,7 +53,7 @@ public interface AgentResponsesPayload {
     public String getLocale();
 
     /**
-     *  <p>Natural-language description of the desired Cart or Quote Request, such as the body of an email or a note. Required if no file is attached.</p>
+     *  <p>Natural-language description of the entity to create, such as the body of an email or a note. Required if no file is attached. For a Shopping List, the name of the list must be stated in either the prompt or an attached file.</p>
      * @return prompt
      */
 
@@ -91,7 +91,7 @@ public interface AgentResponsesPayload {
     public void setLocale(final String locale);
 
     /**
-     *  <p>Natural-language description of the desired Cart or Quote Request, such as the body of an email or a note. Required if no file is attached.</p>
+     *  <p>Natural-language description of the entity to create, such as the body of an email or a note. Required if no file is attached. For a Shopping List, the name of the list must be stated in either the prompt or an attached file.</p>
      * @param prompt value to be set
      */
 

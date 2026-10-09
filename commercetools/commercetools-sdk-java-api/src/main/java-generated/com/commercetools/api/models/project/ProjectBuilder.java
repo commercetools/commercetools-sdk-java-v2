@@ -556,7 +556,8 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Determines how Product Variants are managed in the Project. If not set, defaults to <code>Classic</code> behavior.</p>
+     *  <p>Determines how Product Variants are managed in the Project.</p>
+     *  <p>The <code>x-catalog-model</code> request header can override the effective Catalog model for a single request to resources that resolve Variant data, such as Carts, Orders, and Shopping Lists, independent of the Project's configured Catalog model. Use it during <span>migration</span> to test Modular Catalog behavior on selected requests before changing the Project's configured Catalog model. It is intended as a migration aid, not as a permanent substitute for the Project configuration. It has no effect on Product update actions.</p>
      * @param productCatalogModel value to be set
      * @return Builder
      */
@@ -727,7 +728,8 @@ public class ProjectBuilder implements Builder<Project> {
     }
 
     /**
-     *  <p>Determines how Product Variants are managed in the Project. If not set, defaults to <code>Classic</code> behavior.</p>
+     *  <p>Determines how Product Variants are managed in the Project.</p>
+     *  <p>The <code>x-catalog-model</code> request header can override the effective Catalog model for a single request to resources that resolve Variant data, such as Carts, Orders, and Shopping Lists, independent of the Project's configured Catalog model. Use it during <span>migration</span> to test Modular Catalog behavior on selected requests before changing the Project's configured Catalog model. It is intended as a migration aid, not as a permanent substitute for the Project configuration. It has no effect on Product update actions.</p>
      * @return productCatalogModel
      */
 

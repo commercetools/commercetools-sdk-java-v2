@@ -173,4 +173,12 @@ public class ProductTypeUpdateActionQueryBuilderDsl {
             fn.apply(com.commercetools.api.predicates.query.product_type.ProductTypeSetKeyActionQueryBuilderDsl.of()),
             ProductTypeUpdateActionQueryBuilderDsl::of);
     }
+
+    public CombinationQueryPredicate<ProductTypeUpdateActionQueryBuilderDsl> asSetSavedToLineItem(
+            Function<com.commercetools.api.predicates.query.product_type.ProductTypeSetSavedToLineItemActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_type.ProductTypeSetSavedToLineItemActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.product_type.ProductTypeSetSavedToLineItemActionQueryBuilderDsl
+                    .of()),
+            ProductTypeUpdateActionQueryBuilderDsl::of);
+    }
 }

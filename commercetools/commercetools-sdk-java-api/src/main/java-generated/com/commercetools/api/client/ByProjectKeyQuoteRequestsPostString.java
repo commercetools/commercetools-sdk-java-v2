@@ -67,7 +67,7 @@ public class ByProjectKeyQuoteRequestsPostString extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/quote-requests", this.projectKey);
+        String httpRequestPath = String.format("%s/quote-requests", encodePathParam(this.projectKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

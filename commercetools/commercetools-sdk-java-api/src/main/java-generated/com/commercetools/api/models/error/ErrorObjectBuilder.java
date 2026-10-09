@@ -43,6 +43,10 @@ public class ErrorObjectBuilder {
         return com.commercetools.api.models.agent.AgentMissingEntityTypeErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.agent.AgentMissingShoppingListNameErrorBuilder missingShoppingListNameBuilder() {
+        return com.commercetools.api.models.agent.AgentMissingShoppingListNameErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.agent.AgentNoLineItemsExtractedErrorBuilder noLineItemsExtractedBuilder() {
         return com.commercetools.api.models.agent.AgentNoLineItemsExtractedErrorBuilder.of();
     }
@@ -61,6 +65,10 @@ public class ErrorObjectBuilder {
 
     public com.commercetools.api.models.agent.AgentQuoteRequestCreationFailedErrorBuilder quoteRequestCreationFailedBuilder() {
         return com.commercetools.api.models.agent.AgentQuoteRequestCreationFailedErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.AgentShoppingListCreationFailedErrorBuilder shoppingListCreationFailedBuilder() {
+        return com.commercetools.api.models.agent.AgentShoppingListCreationFailedErrorBuilder.of();
     }
 
     public com.commercetools.api.models.agent.AgentStoreAmbiguousErrorBuilder storeAmbiguousBuilder() {

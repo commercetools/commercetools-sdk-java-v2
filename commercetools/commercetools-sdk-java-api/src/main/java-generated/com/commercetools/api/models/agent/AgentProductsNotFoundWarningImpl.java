@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Returned when one or more Products referenced in an Intake Agent <span>API request</span> could not be matched to the catalog. The unmatched Products are omitted from the created entity.</p>
+ *  <p>Returned when one or more Products referenced in an Intake Agent <span>API request</span> could not be matched to the catalog or are unavailable in the bound Store. The omitted Products are excluded from the created entity.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AgentProductsNotFoundWarningImpl implements AgentProductsNotFoundWarning, ModelBase {
@@ -56,7 +56,7 @@ public class AgentProductsNotFoundWarningImpl implements AgentProductsNotFoundWa
     }
 
     /**
-     *  <p>Plain text description of the unmatched Products.</p>
+     *  <p>Plain text description of the omitted Products.</p>
      */
 
     public String getMessage() {
@@ -64,7 +64,7 @@ public class AgentProductsNotFoundWarningImpl implements AgentProductsNotFoundWa
     }
 
     /**
-     *  <p>Identifiers of the Products that could not be matched to the catalog, as they appeared in the input.</p>
+     *  <p>Identifiers of the Products that could not be matched to the catalog or are unavailable in the bound Store, as they appeared in the input.</p>
      */
 
     public java.util.List<String> getProducts() {

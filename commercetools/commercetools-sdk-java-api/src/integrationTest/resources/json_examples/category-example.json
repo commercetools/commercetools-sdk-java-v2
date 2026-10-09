@@ -79,6 +79,7 @@
     }
   ],
   "key": "test-key",
+  "stores": [],
   "slug": {
     "test-key": "test-value"
   }

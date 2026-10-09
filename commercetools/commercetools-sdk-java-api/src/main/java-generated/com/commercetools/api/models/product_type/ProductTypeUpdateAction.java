@@ -222,6 +222,14 @@ public interface ProductTypeUpdateAction
     }
 
     /**
+     * builder for setSavedToLineItem subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.product_type.ProductTypeSetSavedToLineItemActionBuilder setSavedToLineItemBuilder() {
+        return com.commercetools.api.models.product_type.ProductTypeSetSavedToLineItemActionBuilder.of();
+    }
+
+    /**
      * accessor map function
      * @param <T> mapped type
      * @param helper function to map the object

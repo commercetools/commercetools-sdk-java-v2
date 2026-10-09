@@ -32,6 +32,7 @@ import tools.jackson.databind.annotation.*;
  *             .version(1)
  *             .application(applicationBuilder -> applicationBuilder)
  *             .plusTransactionItems(transactionItemsBuilder -> transactionItemsBuilder)
+ *             .cart(cartBuilder -> cartBuilder)
  *             .transactionStatus(transactionStatusBuilder -> transactionStatusBuilder)
  *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
@@ -89,6 +90,7 @@ public interface Transaction {
      *  <p>Reference to the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> for which the payment must be executed.</p>
      * @return cart
      */
+    @NotNull
     @Valid
     @JsonProperty("cart")
     public CartReference getCart();

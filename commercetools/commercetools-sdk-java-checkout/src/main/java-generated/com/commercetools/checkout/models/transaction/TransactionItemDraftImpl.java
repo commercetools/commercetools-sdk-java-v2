@@ -18,12 +18,12 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- * TransactionItemDraft
+ *  <p>Base type for creating a Transaction Item. If <code>type</code> is omitted, a <a href="https://docs.commercetools.com/apis/ctp:checkout:type:TransactionItemPaymentIntegrationDraft" rel="nofollow">TransactionItemPaymentIntegrationDraft</a> is created to process the payment through a Payment Integration. Each supported payment flow has its own corresponding Transaction Item Draft type, like <a href="https://docs.commercetools.com/apis/ctp:checkout:type:TransactionItemRecurringDraft" rel="nofollow">TransactionItemRecurringDraft</a>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TransactionItemDraftImpl implements TransactionItemDraft, ModelBase {
 
-    private com.commercetools.checkout.models.payment_integration.PaymentIntegrationResourceIdentifier paymentIntegration;
+    private String type;
 
     private com.commercetools.checkout.models.common.Amount amount;
 
@@ -31,10 +31,9 @@ public class TransactionItemDraftImpl implements TransactionItemDraft, ModelBase
      * create instance with all properties
      */
     @JsonCreator
-    TransactionItemDraftImpl(
-            @JsonProperty("paymentIntegration") final com.commercetools.checkout.models.payment_integration.PaymentIntegrationResourceIdentifier paymentIntegration,
+    TransactionItemDraftImpl(@JsonProperty("type") final String type,
             @JsonProperty("amount") final com.commercetools.checkout.models.common.Amount amount) {
-        this.paymentIntegration = paymentIntegration;
+        this.type = type;
         this.amount = amount;
     }
 
@@ -45,24 +44,19 @@ public class TransactionItemDraftImpl implements TransactionItemDraft, ModelBase
     }
 
     /**
-     *  <p>Resource Identifier of the <span>Payment Integration</span> to use to execute the payment.</p>
+     *  <p>Type of the Transaction Item to create.</p>
      */
 
-    public com.commercetools.checkout.models.payment_integration.PaymentIntegrationResourceIdentifier getPaymentIntegration() {
-        return this.paymentIntegration;
+    public String getType() {
+        return this.type;
     }
 
     /**
-     *  <p>Money value of the Transaction Item.</p>
+     *  <p>Money value of the Transaction Item. If not present, the Connector resolves the amount from the <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</p>
      */
 
     public com.commercetools.checkout.models.common.Amount getAmount() {
         return this.amount;
-    }
-
-    public void setPaymentIntegration(
-            final com.commercetools.checkout.models.payment_integration.PaymentIntegrationResourceIdentifier paymentIntegration) {
-        this.paymentIntegration = paymentIntegration;
     }
 
     public void setAmount(final com.commercetools.checkout.models.common.Amount amount) {
@@ -79,22 +73,21 @@ public class TransactionItemDraftImpl implements TransactionItemDraft, ModelBase
 
         TransactionItemDraftImpl that = (TransactionItemDraftImpl) o;
 
-        return new EqualsBuilder().append(paymentIntegration, that.paymentIntegration)
+        return new EqualsBuilder().append(type, that.type)
                 .append(amount, that.amount)
-                .append(paymentIntegration, that.paymentIntegration)
+                .append(type, that.type)
                 .append(amount, that.amount)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(paymentIntegration).append(amount).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(amount).toHashCode();
     }
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE)
-                .append("paymentIntegration", paymentIntegration)
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
                 .append("amount", amount)
                 .build();
     }

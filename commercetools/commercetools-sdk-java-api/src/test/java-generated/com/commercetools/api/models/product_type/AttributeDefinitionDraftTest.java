@@ -36,7 +36,8 @@ public class AttributeDefinitionDraftTest {
                                 .inputTip(new com.commercetools.api.models.common.LocalizedStringImpl()) },
                 new Object[] { "inputHint", AttributeDefinitionDraft.builder()
                         .inputHint(com.commercetools.api.models.product_type.TextInputHint.findEnum("SingleLine")) },
-                new Object[] { "isSearchable", AttributeDefinitionDraft.builder().isSearchable(true) } };
+                new Object[] { "isSearchable", AttributeDefinitionDraft.builder().isSearchable(true) },
+                new Object[] { "savedToLineItem", AttributeDefinitionDraft.builder().savedToLineItem(true) } };
     }
 
     @Test
@@ -107,5 +108,12 @@ public class AttributeDefinitionDraftTest {
         AttributeDefinitionDraft value = AttributeDefinitionDraft.of();
         value.setIsSearchable(true);
         Assertions.assertThat(value.getIsSearchable()).isEqualTo(true);
+    }
+
+    @Test
+    public void savedToLineItem() {
+        AttributeDefinitionDraft value = AttributeDefinitionDraft.of();
+        value.setSavedToLineItem(true);
+        Assertions.assertThat(value.getSavedToLineItem()).isEqualTo(true);
     }
 }

@@ -27,7 +27,7 @@ public class AgentProductsNotFoundWarningBuilder implements Builder<AgentProduct
     private java.util.List<String> products;
 
     /**
-     *  <p>Plain text description of the unmatched Products.</p>
+     *  <p>Plain text description of the omitted Products.</p>
      * @param message value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class AgentProductsNotFoundWarningBuilder implements Builder<AgentProduct
     }
 
     /**
-     *  <p>Identifiers of the Products that could not be matched to the catalog, as they appeared in the input.</p>
+     *  <p>Identifiers of the Products that could not be matched to the catalog or are unavailable in the bound Store, as they appeared in the input.</p>
      * @param products value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class AgentProductsNotFoundWarningBuilder implements Builder<AgentProduct
     }
 
     /**
-     *  <p>Identifiers of the Products that could not be matched to the catalog, as they appeared in the input.</p>
+     *  <p>Identifiers of the Products that could not be matched to the catalog or are unavailable in the bound Store, as they appeared in the input.</p>
      * @param products value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class AgentProductsNotFoundWarningBuilder implements Builder<AgentProduct
     }
 
     /**
-     *  <p>Identifiers of the Products that could not be matched to the catalog, as they appeared in the input.</p>
+     *  <p>Identifiers of the Products that could not be matched to the catalog or are unavailable in the bound Store, as they appeared in the input.</p>
      * @param products value to be set
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class AgentProductsNotFoundWarningBuilder implements Builder<AgentProduct
     }
 
     /**
-     *  <p>Plain text description of the unmatched Products.</p>
+     *  <p>Plain text description of the omitted Products.</p>
      * @return message
      */
 
@@ -83,7 +83,7 @@ public class AgentProductsNotFoundWarningBuilder implements Builder<AgentProduct
     }
 
     /**
-     *  <p>Identifiers of the Products that could not be matched to the catalog, as they appeared in the input.</p>
+     *  <p>Identifiers of the Products that could not be matched to the catalog or are unavailable in the bound Store, as they appeared in the input.</p>
      * @return products
      */
 

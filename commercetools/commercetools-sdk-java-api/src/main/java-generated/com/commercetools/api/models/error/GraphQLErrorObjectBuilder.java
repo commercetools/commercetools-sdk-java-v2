@@ -43,6 +43,10 @@ public class GraphQLErrorObjectBuilder {
         return com.commercetools.api.models.agent.GraphQLAgentMissingEntityTypeErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.agent.GraphQLAgentMissingShoppingListNameErrorBuilder missingShoppingListNameBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentMissingShoppingListNameErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.agent.GraphQLAgentNoLineItemsExtractedErrorBuilder noLineItemsExtractedBuilder() {
         return com.commercetools.api.models.agent.GraphQLAgentNoLineItemsExtractedErrorBuilder.of();
     }
@@ -61,6 +65,10 @@ public class GraphQLErrorObjectBuilder {
 
     public com.commercetools.api.models.agent.GraphQLAgentQuoteRequestCreationFailedErrorBuilder quoteRequestCreationFailedBuilder() {
         return com.commercetools.api.models.agent.GraphQLAgentQuoteRequestCreationFailedErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.GraphQLAgentShoppingListCreationFailedErrorBuilder shoppingListCreationFailedBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentShoppingListCreationFailedErrorBuilder.of();
     }
 
     public com.commercetools.api.models.agent.GraphQLAgentStoreAmbiguousErrorBuilder storeAmbiguousBuilder() {

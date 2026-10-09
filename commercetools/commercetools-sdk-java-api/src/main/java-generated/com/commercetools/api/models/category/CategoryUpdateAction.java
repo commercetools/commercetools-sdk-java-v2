@@ -69,6 +69,14 @@ public interface CategoryUpdateAction extends com.commercetools.api.models.Resou
     }
 
     /**
+     * builder for addStore subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.category.CategoryAddStoreActionBuilder addStoreBuilder() {
+        return com.commercetools.api.models.category.CategoryAddStoreActionBuilder.of();
+    }
+
+    /**
      * builder for changeAssetName subtype
      * @return builder
      */
@@ -122,6 +130,14 @@ public interface CategoryUpdateAction extends com.commercetools.api.models.Resou
      */
     public static com.commercetools.api.models.category.CategoryRemoveAssetActionBuilder removeAssetBuilder() {
         return com.commercetools.api.models.category.CategoryRemoveAssetActionBuilder.of();
+    }
+
+    /**
+     * builder for removeStore subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.category.CategoryRemoveStoreActionBuilder removeStoreBuilder() {
+        return com.commercetools.api.models.category.CategoryRemoveStoreActionBuilder.of();
     }
 
     /**
@@ -234,6 +250,14 @@ public interface CategoryUpdateAction extends com.commercetools.api.models.Resou
      */
     public static com.commercetools.api.models.category.CategorySetMetaTitleActionBuilder setMetaTitleBuilder() {
         return com.commercetools.api.models.category.CategorySetMetaTitleActionBuilder.of();
+    }
+
+    /**
+     * builder for setStores subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.category.CategorySetStoresActionBuilder setStoresBuilder() {
+        return com.commercetools.api.models.category.CategorySetStoresActionBuilder.of();
     }
 
     /**

@@ -16,7 +16,7 @@ import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Returned when one or more Products referenced in an Intake Agent <span>API request</span> could not be matched to the catalog. The unmatched Products are omitted from the created entity.</p>
+ *  <p>Returned when one or more Products referenced in an Intake Agent <span>API request</span> could not be matched to the catalog or are unavailable in the bound Store. The omitted Products are excluded from the created entity.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -48,7 +48,7 @@ public interface AgentProductsNotFoundWarning extends WarningObject {
     public String getCode();
 
     /**
-     *  <p>Plain text description of the unmatched Products.</p>
+     *  <p>Plain text description of the omitted Products.</p>
      * @return message
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface AgentProductsNotFoundWarning extends WarningObject {
     public String getMessage();
 
     /**
-     *  <p>Identifiers of the Products that could not be matched to the catalog, as they appeared in the input.</p>
+     *  <p>Identifiers of the Products that could not be matched to the catalog or are unavailable in the bound Store, as they appeared in the input.</p>
      * @return products
      */
     @NotNull
@@ -64,14 +64,14 @@ public interface AgentProductsNotFoundWarning extends WarningObject {
     public List<String> getProducts();
 
     /**
-     *  <p>Plain text description of the unmatched Products.</p>
+     *  <p>Plain text description of the omitted Products.</p>
      * @param message value to be set
      */
 
     public void setMessage(final String message);
 
     /**
-     *  <p>Identifiers of the Products that could not be matched to the catalog, as they appeared in the input.</p>
+     *  <p>Identifiers of the Products that could not be matched to the catalog or are unavailable in the bound Store, as they appeared in the input.</p>
      * @param products values to be set
      */
 
@@ -79,7 +79,7 @@ public interface AgentProductsNotFoundWarning extends WarningObject {
     public void setProducts(final String... products);
 
     /**
-     *  <p>Identifiers of the Products that could not be matched to the catalog, as they appeared in the input.</p>
+     *  <p>Identifiers of the Products that could not be matched to the catalog or are unavailable in the bound Store, as they appeared in the input.</p>
      * @param products values to be set
      */
 

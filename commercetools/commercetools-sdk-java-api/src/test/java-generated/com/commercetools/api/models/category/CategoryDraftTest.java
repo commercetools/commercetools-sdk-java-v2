@@ -46,7 +46,11 @@ public class CategoryDraftTest {
                         CategoryDraft.builder()
                                 .assets(Collections
                                         .singletonList(new com.commercetools.api.models.common.AssetDraftImpl())) },
-                new Object[] { "key", CategoryDraft.builder().key("key") } };
+                new Object[] { "key", CategoryDraft.builder().key("key") },
+                new Object[] { "stores",
+                        CategoryDraft.builder()
+                                .stores(Collections.singletonList(
+                                    new com.commercetools.api.models.store.StoreResourceIdentifierImpl())) } };
     }
 
     @Test
@@ -138,5 +142,15 @@ public class CategoryDraftTest {
         CategoryDraft value = CategoryDraft.of();
         value.setKey("key");
         Assertions.assertThat(value.getKey()).isEqualTo("key");
+    }
+
+    @Test
+    public void stores() {
+        CategoryDraft value = CategoryDraft.of();
+        value.setStores(
+            Collections.singletonList(new com.commercetools.api.models.store.StoreResourceIdentifierImpl()));
+        Assertions.assertThat(value.getStores())
+                .isEqualTo(
+                    Collections.singletonList(new com.commercetools.api.models.store.StoreResourceIdentifierImpl()));
     }
 }

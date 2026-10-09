@@ -15,7 +15,7 @@ import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Reference to a connector deployment for the payment integration.</p>
+ *  <p>Reference to a ConnectorDeployment for the payment integration.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,7 +33,7 @@ import tools.jackson.databind.annotation.*;
 public interface ConnectorDeploymentReference {
 
     /**
-     *  <p>Unique identifier of the referenced Connect Deployment.</p>
+     *  <p>Unique identifier of the referenced ConnectorDeployment.</p>
      * @return id
      */
     @NotNull
@@ -41,7 +41,7 @@ public interface ConnectorDeploymentReference {
     public String getId();
 
     /**
-     *  <p>Type identifier, always <code>deployment</code> for Connector deployment references.</p>
+     *  <p>Type identifier, always <code>deployment</code> for ConnectorDeployment references.</p>
      * @return typeId
      */
     @NotNull
@@ -49,14 +49,14 @@ public interface ConnectorDeploymentReference {
     public String getTypeId();
 
     /**
-     *  <p>Unique identifier of the referenced Connect Deployment.</p>
+     *  <p>Unique identifier of the referenced ConnectorDeployment.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     *  <p>Type identifier, always <code>deployment</code> for Connector deployment references.</p>
+     *  <p>Type identifier, always <code>deployment</code> for ConnectorDeployment references.</p>
      * @param typeId value to be set
      */
 

@@ -16,7 +16,7 @@ import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
- * CategoryChangeParentAction
+ *  <p>This action locks the entire Category tree in the Project for the duration of the request. For details, see <span>Category tree locking</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -19,6 +19,10 @@ public class AgentResponsesSuccessBuilder {
         return com.commercetools.api.models.agent.AgentResponsesQuoteRequestSuccessBuilder.of();
     }
 
+    public com.commercetools.api.models.agent.AgentResponsesShoppingListSuccessBuilder shoppingListBuilder() {
+        return com.commercetools.api.models.agent.AgentResponsesShoppingListSuccessBuilder.of();
+    }
+
     /**
      * factory method for an instance of AgentResponsesSuccessBuilder
      * @return builder

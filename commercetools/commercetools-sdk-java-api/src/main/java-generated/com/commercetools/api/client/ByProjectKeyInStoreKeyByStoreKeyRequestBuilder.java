@@ -30,6 +30,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyRequestBuilder {
         return new ByProjectKeyInStoreKeyByStoreKeyCartsRequestBuilder(apiHttpClient, projectKey, storeKey);
     }
 
+    public ByProjectKeyInStoreKeyByStoreKeyCategoriesRequestBuilder categories() {
+        return new ByProjectKeyInStoreKeyByStoreKeyCategoriesRequestBuilder(apiHttpClient, projectKey, storeKey);
+    }
+
     public ByProjectKeyInStoreKeyByStoreKeyCustomersRequestBuilder customers() {
         return new ByProjectKeyInStoreKeyByStoreKeyCustomersRequestBuilder(apiHttpClient, projectKey, storeKey);
     }

@@ -5,6 +5,7 @@ import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.models.cart.CartDraft;
 import com.commercetools.checkout.models.transaction.TransactionDraft;
+import com.commercetools.checkout.models.transaction.TransactionItemDraft;
 
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
@@ -49,8 +50,11 @@ public class CheckoutIntegrationTests {
                         .key(transactionKey)
                         .application(a -> a.key("demo-commercetools-checkout"))
                         .cart(c -> c.id(cart.getId()))
-                        .plusTransactionItems(t -> t.amount(a -> a.centAmount(100).currencyCode("EUR"))
-                                .paymentIntegration(p -> p.key("ci-payment-integration")))
+                        .plusTransactionItems(TransactionItemDraft.recurringBuilder()
+                                .amount(a -> a.centAmount(100).currencyCode("EUR"))
+                                .paymentMethod(p -> p.id("ci-payment-method"))
+                                .connectorDeployment(c -> c.id("ci-connector-deployment"))
+                                .build())
                         .build()
 
                 )

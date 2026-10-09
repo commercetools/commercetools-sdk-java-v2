@@ -59,6 +59,7 @@ public class CategoriesTest {
                 .createdAt(ZonedDateTime.now())
                 .lastModifiedAt(ZonedDateTime.now())
                 .ancestors()
+                .stores()
                 .orderHint("c2")
                 .build());
         CategoryTreeFactory factory = CategoryTreeFactory.of();
@@ -78,6 +79,7 @@ public class CategoriesTest {
                     .createdAt(ZonedDateTime.now())
                     .lastModifiedAt(ZonedDateTime.now())
                     .ancestors()
+                    .stores()
                     .orderHint("c2")
                     .build(),
             Category.builder()
@@ -88,6 +90,7 @@ public class CategoriesTest {
                     .createdAt(ZonedDateTime.now())
                     .lastModifiedAt(ZonedDateTime.now())
                     .ancestors()
+                    .stores()
                     .orderHint("c2")
                     .build(),
             Category.builder()
@@ -98,6 +101,7 @@ public class CategoriesTest {
                     .createdAt(ZonedDateTime.now())
                     .lastModifiedAt(ZonedDateTime.now())
                     .ancestors()
+                    .stores()
                     .orderHint("c2")
                     .build());
         CategoryTreeFactory factory = CategoryTreeFactory.of();

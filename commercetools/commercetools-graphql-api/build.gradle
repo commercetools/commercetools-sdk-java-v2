@@ -1,7 +1,7 @@
 import com.commercetools.sdk.plugins.GraphQLPlugin
 
 plugins {
-    id "com.netflix.dgs.codegen" version "8.6.0"
+    id "com.netflix.dgs.codegen" version "8.7.0"
     id 'java'
 }
 
@@ -36,7 +36,7 @@ dependencies {
     api 'tools.jackson.core:jackson-databind:3.2.2'
     api 'tools.jackson.core:jackson-core:3.2.2'
     //api jackson_core.datatype
-    api 'com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core:8.6.0'
+    api 'com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core:8.7.0'
     constraints {
         implementation("com.fasterxml.jackson.core:jackson-core:2.22.2") {
             because("security update")

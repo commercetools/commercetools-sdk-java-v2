@@ -39,6 +39,16 @@ public class ProjectApiRoot implements Closeable, ProjectScopedApiRoot {
     }
 
     @Override
+    public ByProjectKeyRecurringPaymentJobsRequestBuilder recurringPaymentJobs() {
+        return with().recurringPaymentJobs();
+    }
+
+    @Override
+    public ByProjectKeyRecurringPaymentsRequestBuilder recurringPayments() {
+        return with().recurringPayments();
+    }
+
+    @Override
     public ByProjectKeyPaymentIntegrationsRequestBuilder paymentIntegrations() {
         return with().paymentIntegrations();
     }

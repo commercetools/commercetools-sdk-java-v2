@@ -8,6 +8,10 @@ public interface ProjectScopedApiRoot {
 
     ByProjectKeyPaymentIntentsRequestBuilder paymentIntents();
 
+    ByProjectKeyRecurringPaymentJobsRequestBuilder recurringPaymentJobs();
+
+    ByProjectKeyRecurringPaymentsRequestBuilder recurringPayments();
+
     ByProjectKeyPaymentIntegrationsRequestBuilder paymentIntegrations();
 
     public ByProjectKeyApplicationsRequestBuilder applications();

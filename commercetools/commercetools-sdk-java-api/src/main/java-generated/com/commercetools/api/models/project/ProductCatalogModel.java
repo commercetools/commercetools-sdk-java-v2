@@ -17,13 +17,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductCatalogModel extends JsonEnum {
 
     /**
-    <p>Product Variants are embedded in the Product. This is the default behavior.</p> */
+    <p>Product Variants are embedded in the Product. This is the default model.</p> */
     ProductCatalogModel CLASSIC = ProductCatalogModelEnum.CLASSIC;
     /**
-    <p>Product Variants remain embedded in the Product and Variant update actions on the Product API are still accepted, but resources that reference a Variant, such as <span>Carts</span> and Order line items, discount matching, and Product Selections, resolve from modular Variants by default. Use this transitional state to migrate your reads to the Modular Catalog model while embedded Variant writes continue.</p> */
+    <p>This temporary model supports migration from <code>Classic</code> to <code>Modular</code>. Product Variants remain embedded, and Product API Variant update actions remain supported. Other resources that resolve Variants default to standalone Variants, while Product Search defaults to embedded Variants. See the <span>migration guide</span> for details.</p> */
     ProductCatalogModel IN_MIGRATION = ProductCatalogModelEnum.IN_MIGRATION;
     /**
-    <p>Product Variants are managed as standalone entities through the Variants endpoint. Variant-related update actions on Products are not available in this mode. Pricing is exclusively handled through <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrices</a>; <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> are not supported.</p> */
+    <p>Product Variants are standalone resources managed through the <span>Variants API</span>. Pricing uses <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrices</a>. Embedded Prices and Product API Variant update actions are unsupported.</p>
+    <ul>
+     <li>Variant-related update actions on Products return a <code>400</code> error.</li>
+     <li>Products must be created without <code>masterVariant</code> and <code>variants</code>.</li>
+     <li>Products cannot be deleted while Variants reference them.</li>
+     <li>Products cannot be unpublished while they have published Variants.</li>
+     <li><span>Carts</span> read variant data from the Variant API instead of embedded Product Variants.</li>
+     <li><code>priceMode</code> on Products is set to <code>Standalone</code>.</li>
+    </ul> */
     ProductCatalogModel MODULAR = ProductCatalogModelEnum.MODULAR;
 
     /**

@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .attributeConstraint(AttributeConstraintEnum.NONE)
  *             .inputHint(TextInputHint.SINGLE_LINE)
  *             .isSearchable(true)
+ *             .savedToLineItem(true)
  *             .build()
  * </code></pre>
  * </div>
@@ -49,6 +50,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     private com.commercetools.api.models.product_type.TextInputHint inputHint;
 
     private Boolean isSearchable;
+
+    private Boolean savedToLineItem;
 
     /**
      *  <p>Describes the Type of the Attribute.</p>
@@ -214,6 +217,18 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
+     *  <p>Whether the Attribute value is copied onto the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> when the Product is added to a Cart. When <code>false</code>, the Attribute value is excluded from the Line Item variant. Line Items already in a Cart are not immediately affected by a change to this value. Existing Line Items are updated the next time their Product data is refreshed, such as when a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRecalculateAction" rel="nofollow">Recalculate</a> update action is performed with <code>updateProductData</code> set to <code>true</code>, or on a Cart update that triggers an API Extension. Replicating a Cart creates a new Cart that contains the current Product data; it does not update the original Cart.</p>
+     *  <p>When <code>savedToLineItem</code> is <code>false</code>, <span>LineItem predicates</span> that reference this Attribute, such as those in Cart Discounts and Shipping Methods, evaluate as if the Attribute is not set.</p>
+     * @param savedToLineItem value to be set
+     * @return Builder
+     */
+
+    public AttributeDefinitionBuilder savedToLineItem(final Boolean savedToLineItem) {
+        this.savedToLineItem = savedToLineItem;
+        return this;
+    }
+
+    /**
      *  <p>Describes the Type of the Attribute.</p>
      * @return type
      */
@@ -297,6 +312,16 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
+     *  <p>Whether the Attribute value is copied onto the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> when the Product is added to a Cart. When <code>false</code>, the Attribute value is excluded from the Line Item variant. Line Items already in a Cart are not immediately affected by a change to this value. Existing Line Items are updated the next time their Product data is refreshed, such as when a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRecalculateAction" rel="nofollow">Recalculate</a> update action is performed with <code>updateProductData</code> set to <code>true</code>, or on a Cart update that triggers an API Extension. Replicating a Cart creates a new Cart that contains the current Product data; it does not update the original Cart.</p>
+     *  <p>When <code>savedToLineItem</code> is <code>false</code>, <span>LineItem predicates</span> that reference this Attribute, such as those in Cart Discounts and Shipping Methods, evaluate as if the Attribute is not set.</p>
+     * @return savedToLineItem
+     */
+
+    public Boolean getSavedToLineItem() {
+        return this.savedToLineItem;
+    }
+
+    /**
      * builds AttributeDefinition with checking for non-null required values
      * @return AttributeDefinition
      */
@@ -309,8 +334,9 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
         Objects.requireNonNull(attributeConstraint, AttributeDefinition.class + ": attributeConstraint is missing");
         Objects.requireNonNull(inputHint, AttributeDefinition.class + ": inputHint is missing");
         Objects.requireNonNull(isSearchable, AttributeDefinition.class + ": isSearchable is missing");
+        Objects.requireNonNull(savedToLineItem, AttributeDefinition.class + ": savedToLineItem is missing");
         return new AttributeDefinitionImpl(type, name, label, isRequired, level, attributeConstraint, inputTip,
-            inputHint, isSearchable);
+            inputHint, isSearchable, savedToLineItem);
     }
 
     /**
@@ -319,7 +345,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
      */
     public AttributeDefinition buildUnchecked() {
         return new AttributeDefinitionImpl(type, name, label, isRequired, level, attributeConstraint, inputTip,
-            inputHint, isSearchable);
+            inputHint, isSearchable, savedToLineItem);
     }
 
     /**
@@ -346,6 +372,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
         builder.inputTip = template.getInputTip();
         builder.inputHint = template.getInputHint();
         builder.isSearchable = template.getIsSearchable();
+        builder.savedToLineItem = template.getSavedToLineItem();
         return builder;
     }
 

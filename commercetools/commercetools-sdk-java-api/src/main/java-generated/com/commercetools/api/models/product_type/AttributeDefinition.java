@@ -32,6 +32,7 @@ import tools.jackson.databind.annotation.*;
  *             .attributeConstraint(AttributeConstraintEnum.NONE)
  *             .inputHint(TextInputHint.SINGLE_LINE)
  *             .isSearchable(true)
+ *             .savedToLineItem(true)
  *             .build()
  * </code></pre>
  * </div>
@@ -116,6 +117,15 @@ public interface AttributeDefinition {
     public Boolean getIsSearchable();
 
     /**
+     *  <p>Whether the Attribute value is copied onto the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> when the Product is added to a Cart. When <code>false</code>, the Attribute value is excluded from the Line Item variant. Line Items already in a Cart are not immediately affected by a change to this value. Existing Line Items are updated the next time their Product data is refreshed, such as when a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRecalculateAction" rel="nofollow">Recalculate</a> update action is performed with <code>updateProductData</code> set to <code>true</code>, or on a Cart update that triggers an API Extension. Replicating a Cart creates a new Cart that contains the current Product data; it does not update the original Cart.</p>
+     *  <p>When <code>savedToLineItem</code> is <code>false</code>, <span>LineItem predicates</span> that reference this Attribute, such as those in Cart Discounts and Shipping Methods, evaluate as if the Attribute is not set.</p>
+     * @return savedToLineItem
+     */
+    @NotNull
+    @JsonProperty("savedToLineItem")
+    public Boolean getSavedToLineItem();
+
+    /**
      *  <p>Describes the Type of the Attribute.</p>
      * @param type value to be set
      */
@@ -180,6 +190,14 @@ public interface AttributeDefinition {
     public void setIsSearchable(final Boolean isSearchable);
 
     /**
+     *  <p>Whether the Attribute value is copied onto the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> when the Product is added to a Cart. When <code>false</code>, the Attribute value is excluded from the Line Item variant. Line Items already in a Cart are not immediately affected by a change to this value. Existing Line Items are updated the next time their Product data is refreshed, such as when a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRecalculateAction" rel="nofollow">Recalculate</a> update action is performed with <code>updateProductData</code> set to <code>true</code>, or on a Cart update that triggers an API Extension. Replicating a Cart creates a new Cart that contains the current Product data; it does not update the original Cart.</p>
+     *  <p>When <code>savedToLineItem</code> is <code>false</code>, <span>LineItem predicates</span> that reference this Attribute, such as those in Cart Discounts and Shipping Methods, evaluate as if the Attribute is not set.</p>
+     * @param savedToLineItem value to be set
+     */
+
+    public void setSavedToLineItem(final Boolean savedToLineItem);
+
+    /**
      * factory method
      * @return instance of AttributeDefinition
      */
@@ -203,6 +221,7 @@ public interface AttributeDefinition {
         instance.setInputTip(template.getInputTip());
         instance.setInputHint(template.getInputHint());
         instance.setIsSearchable(template.getIsSearchable());
+        instance.setSavedToLineItem(template.getSavedToLineItem());
         return instance;
     }
 
@@ -228,6 +247,7 @@ public interface AttributeDefinition {
         instance.setInputTip(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getInputTip()));
         instance.setInputHint(template.getInputHint());
         instance.setIsSearchable(template.getIsSearchable());
+        instance.setSavedToLineItem(template.getSavedToLineItem());
         return instance;
     }
 

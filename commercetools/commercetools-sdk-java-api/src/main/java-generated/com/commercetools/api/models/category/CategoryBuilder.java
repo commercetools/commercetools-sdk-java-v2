@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .slug(slugBuilder -> slugBuilder)
  *             .plusAncestors(ancestorsBuilder -> ancestorsBuilder)
  *             .orderHint("{orderHint}")
+ *             .plusStores(storesBuilder -> storesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -79,6 +80,8 @@ public class CategoryBuilder implements Builder<Category> {
 
     @Nullable
     private String key;
+
+    private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
 
     /**
      *  <p>Unique identifier of the Category.</p>
@@ -424,7 +427,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Decimal value between 0 and 1. Frontend applications can use this value for ordering Categories within the same level in the category tree.</p>
+     *  <p>A decimal value between 0 and 1 used to order Categories within the same level of the category tree. When sorted in ascending order, Categories with a lower <code>orderHint</code> appear before those with a higher value (for example, <code>0.05</code> before <code>0.07</code>).</p>
      * @param orderHint value to be set
      * @return Builder
      */
@@ -685,6 +688,106 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Category is assigned and that you have permission to access.</p>
+     *  <p>If <code>stores</code> is empty, the Category is global and available in every <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
+     *  <p>If the Category is created via the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/categories" rel="nofollow">Store-specific endpoint</a>, the Store specified in the request path is automatically added to the field value.</p>
+     * @param stores value to be set
+     * @return Builder
+     */
+
+    public CategoryBuilder stores(final com.commercetools.api.models.store.StoreKeyReference... stores) {
+        this.stores = new ArrayList<>(Arrays.asList(stores));
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Category is assigned and that you have permission to access.</p>
+     *  <p>If <code>stores</code> is empty, the Category is global and available in every <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
+     *  <p>If the Category is created via the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/categories" rel="nofollow">Store-specific endpoint</a>, the Store specified in the request path is automatically added to the field value.</p>
+     * @param stores value to be set
+     * @return Builder
+     */
+
+    public CategoryBuilder stores(final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores) {
+        this.stores = stores;
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Category is assigned and that you have permission to access.</p>
+     *  <p>If <code>stores</code> is empty, the Category is global and available in every <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
+     *  <p>If the Category is created via the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/categories" rel="nofollow">Store-specific endpoint</a>, the Store specified in the request path is automatically added to the field value.</p>
+     * @param stores value to be set
+     * @return Builder
+     */
+
+    public CategoryBuilder plusStores(final com.commercetools.api.models.store.StoreKeyReference... stores) {
+        if (this.stores == null) {
+            this.stores = new ArrayList<>();
+        }
+        this.stores.addAll(Arrays.asList(stores));
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Category is assigned and that you have permission to access.</p>
+     *  <p>If <code>stores</code> is empty, the Category is global and available in every <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
+     *  <p>If the Category is created via the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/categories" rel="nofollow">Store-specific endpoint</a>, the Store specified in the request path is automatically added to the field value.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public CategoryBuilder plusStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+        if (this.stores == null) {
+            this.stores = new ArrayList<>();
+        }
+        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Category is assigned and that you have permission to access.</p>
+     *  <p>If <code>stores</code> is empty, the Category is global and available in every <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
+     *  <p>If the Category is created via the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/categories" rel="nofollow">Store-specific endpoint</a>, the Store specified in the request path is automatically added to the field value.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public CategoryBuilder withStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+        this.stores = new ArrayList<>();
+        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Category is assigned and that you have permission to access.</p>
+     *  <p>If <code>stores</code> is empty, the Category is global and available in every <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
+     *  <p>If the Category is created via the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/categories" rel="nofollow">Store-specific endpoint</a>, the Store specified in the request path is automatically added to the field value.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public CategoryBuilder addStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return plusStores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Category is assigned and that you have permission to access.</p>
+     *  <p>If <code>stores</code> is empty, the Category is global and available in every <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
+     *  <p>If the Category is created via the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/categories" rel="nofollow">Store-specific endpoint</a>, the Store specified in the request path is automatically added to the field value.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public CategoryBuilder setStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return stores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
+    }
+
+    /**
      *  <p>Unique identifier of the Category.</p>
      * @return id
      */
@@ -788,7 +891,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Decimal value between 0 and 1. Frontend applications can use this value for ordering Categories within the same level in the category tree.</p>
+     *  <p>A decimal value between 0 and 1 used to order Categories within the same level of the category tree. When sorted in ascending order, Categories with a lower <code>orderHint</code> appear before those with a higher value (for example, <code>0.05</code> before <code>0.07</code>).</p>
      * @return orderHint
      */
 
@@ -867,6 +970,17 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Category is assigned and that you have permission to access.</p>
+     *  <p>If <code>stores</code> is empty, the Category is global and available in every <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
+     *  <p>If the Category is created via the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/categories" rel="nofollow">Store-specific endpoint</a>, the Store specified in the request path is automatically added to the field value.</p>
+     * @return stores
+     */
+
+    public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {
+        return this.stores;
+    }
+
+    /**
      * builds Category with checking for non-null required values
      * @return Category
      */
@@ -879,9 +993,10 @@ public class CategoryBuilder implements Builder<Category> {
         Objects.requireNonNull(slug, Category.class + ": slug is missing");
         Objects.requireNonNull(ancestors, Category.class + ": ancestors is missing");
         Objects.requireNonNull(orderHint, Category.class + ": orderHint is missing");
+        Objects.requireNonNull(stores, Category.class + ": stores is missing");
         return new CategoryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, slug,
             description, ancestors, parent, orderHint, externalId, metaTitle, metaDescription, metaKeywords, custom,
-            assets, key);
+            assets, key, stores);
     }
 
     /**
@@ -891,7 +1006,7 @@ public class CategoryBuilder implements Builder<Category> {
     public Category buildUnchecked() {
         return new CategoryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, slug,
             description, ancestors, parent, orderHint, externalId, metaTitle, metaDescription, metaKeywords, custom,
-            assets, key);
+            assets, key, stores);
     }
 
     /**
@@ -928,6 +1043,7 @@ public class CategoryBuilder implements Builder<Category> {
         builder.custom = template.getCustom();
         builder.assets = template.getAssets();
         builder.key = template.getKey();
+        builder.stores = template.getStores();
         return builder;
     }
 

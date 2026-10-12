@@ -82,6 +82,14 @@ public class ErrorObjectQueryBuilderDsl {
             ErrorObjectQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asMissingShoppingListName(
+            Function<com.commercetools.api.predicates.query.agent.AgentMissingShoppingListNameErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.AgentMissingShoppingListNameErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.agent.AgentMissingShoppingListNameErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asNoLineItemsExtracted(
             Function<com.commercetools.api.predicates.query.agent.AgentNoLineItemsExtractedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.AgentNoLineItemsExtractedErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -116,6 +124,14 @@ public class ErrorObjectQueryBuilderDsl {
         return new CombinationQueryPredicate<>(
             fn.apply(
                 com.commercetools.api.predicates.query.agent.AgentQuoteRequestCreationFailedErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asShoppingListCreationFailed(
+            Function<com.commercetools.api.predicates.query.agent.AgentShoppingListCreationFailedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.AgentShoppingListCreationFailedErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.agent.AgentShoppingListCreationFailedErrorQueryBuilderDsl.of()),
             ErrorObjectQueryBuilderDsl::of);
     }
 

@@ -19,7 +19,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Returned by a <span>/responses</span> request when a shipping country was not provided and could not be inferred from the input.</p>
+ *  <p>Returned by a <span>/responses</span> request with <code>outputType</code> set to <code>Cart</code> or <code>QuoteRequest</code> when a shipping country was not provided and could not be inferred from the input.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AgentMissingCountryErrorImpl implements AgentMissingCountryError, ModelBase {

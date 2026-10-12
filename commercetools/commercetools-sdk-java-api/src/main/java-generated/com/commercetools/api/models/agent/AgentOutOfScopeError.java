@@ -16,7 +16,7 @@ import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Returned by a <span>/responses</span> request when the input does not contain enough information to create a Cart or a Quote Request: no products, no customer email address, and no shipping country could be determined.</p>
+ *  <p>Returned by a <span>/responses</span> request when the input does not contain enough information to create the requested entity. For a Cart or Quote Request, no products, no customer email address, and no shipping country could be determined. For a Shopping List, no products, no customer email address, and no name could be determined.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

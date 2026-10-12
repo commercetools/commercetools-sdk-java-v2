@@ -34,6 +34,15 @@ public interface ReferenceTypeId extends JsonEnum {
     /**
     <p>References a <a href="https://docs.commercetools.com/apis/ctp:checkout:type:ConnectorDeploymentReference" rel="nofollow">Connector Deployment</a>.</p> */
     ReferenceTypeId DEPLOYMENT = ReferenceTypeIdEnum.DEPLOYMENT;
+    /**
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:PaymentMethod" rel="nofollow">PaymentMethod</a>.</p> */
+    ReferenceTypeId PAYMENT_METHOD = ReferenceTypeIdEnum.PAYMENT_METHOD;
+    /**
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:checkout:type:RecurringPayment" rel="nofollow">RecurringPayment</a>.</p> */
+    ReferenceTypeId RECURRING_PAYMENT = ReferenceTypeIdEnum.RECURRING_PAYMENT;
+    /**
+    <p>References a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">RecurringOrder</a>.</p> */
+    ReferenceTypeId RECURRING_ORDER = ReferenceTypeIdEnum.RECURRING_ORDER;
 
     /**
      * possible values of ReferenceTypeId
@@ -67,7 +76,22 @@ public interface ReferenceTypeId extends JsonEnum {
         /**
          * deployment
          */
-        DEPLOYMENT("deployment");
+        DEPLOYMENT("deployment"),
+
+        /**
+         * payment-method
+         */
+        PAYMENT_METHOD("payment-method"),
+
+        /**
+         * recurring-payment
+         */
+        RECURRING_PAYMENT("recurring-payment"),
+
+        /**
+         * recurring-order
+         */
+        RECURRING_ORDER("recurring-order");
         private final String jsonName;
 
         private ReferenceTypeIdEnum(final String jsonName) {

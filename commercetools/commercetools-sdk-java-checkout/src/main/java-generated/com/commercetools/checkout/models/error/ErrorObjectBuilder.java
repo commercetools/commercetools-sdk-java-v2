@@ -19,12 +19,20 @@ public class ErrorObjectBuilder {
         return com.commercetools.checkout.models.error.ConnectorFailedErrorBuilder.of();
     }
 
+    public com.commercetools.checkout.models.error.ConnectorTimeoutErrorBuilder connectorTimeoutBuilder() {
+        return com.commercetools.checkout.models.error.ConnectorTimeoutErrorBuilder.of();
+    }
+
     public com.commercetools.checkout.models.error.DuplicateFieldWithConflictingResourceErrorBuilder duplicateFieldWithConflictingResourceBuilder() {
         return com.commercetools.checkout.models.error.DuplicateFieldWithConflictingResourceErrorBuilder.of();
     }
 
     public com.commercetools.checkout.models.error.GeneralErrorBuilder generalBuilder() {
         return com.commercetools.checkout.models.error.GeneralErrorBuilder.of();
+    }
+
+    public com.commercetools.checkout.models.error.InternalConstraintViolatedErrorBuilder internalConstraintViolatedBuilder() {
+        return com.commercetools.checkout.models.error.InternalConstraintViolatedErrorBuilder.of();
     }
 
     public com.commercetools.checkout.models.error.InvalidFieldErrorBuilder invalidFieldBuilder() {

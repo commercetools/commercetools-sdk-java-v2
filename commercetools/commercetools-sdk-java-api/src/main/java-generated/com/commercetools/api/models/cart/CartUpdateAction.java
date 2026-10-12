@@ -111,6 +111,14 @@ public interface CartUpdateAction extends com.commercetools.api.models.ResourceU
     }
 
     /**
+     * builder for addRecurringPaymentAllocation subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.cart.CartAddRecurringPaymentAllocationActionBuilder addRecurringPaymentAllocationBuilder() {
+        return com.commercetools.api.models.cart.CartAddRecurringPaymentAllocationActionBuilder.of();
+    }
+
+    /**
      * builder for addShippingMethod subtype
      * @return builder
      */
@@ -276,6 +284,14 @@ public interface CartUpdateAction extends com.commercetools.api.models.ResourceU
      */
     public static com.commercetools.api.models.cart.CartRemovePaymentActionBuilder removePaymentBuilder() {
         return com.commercetools.api.models.cart.CartRemovePaymentActionBuilder.of();
+    }
+
+    /**
+     * builder for removeRecurringPaymentAllocation subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.cart.CartRemoveRecurringPaymentAllocationActionBuilder removeRecurringPaymentAllocationBuilder() {
+        return com.commercetools.api.models.cart.CartRemoveRecurringPaymentAllocationActionBuilder.of();
     }
 
     /**
@@ -596,6 +612,22 @@ public interface CartUpdateAction extends com.commercetools.api.models.ResourceU
      */
     public static com.commercetools.api.models.cart.CartSetPurchaseOrderNumberActionBuilder setPurchaseOrderNumberBuilder() {
         return com.commercetools.api.models.cart.CartSetPurchaseOrderNumberActionBuilder.of();
+    }
+
+    /**
+     * builder for setRecurringPaymentConfiguration subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.cart.CartSetRecurringPaymentConfigurationActionBuilder setRecurringPaymentConfigurationBuilder() {
+        return com.commercetools.api.models.cart.CartSetRecurringPaymentConfigurationActionBuilder.of();
+    }
+
+    /**
+     * builder for setRecurringPaymentStrategy subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.cart.CartSetRecurringPaymentStrategyActionBuilder setRecurringPaymentStrategyBuilder() {
+        return com.commercetools.api.models.cart.CartSetRecurringPaymentStrategyActionBuilder.of();
     }
 
     /**

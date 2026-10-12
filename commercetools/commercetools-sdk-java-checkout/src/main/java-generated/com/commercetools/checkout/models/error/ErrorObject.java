@@ -96,6 +96,14 @@ public interface ErrorObject {
     }
 
     /**
+     * builder for connectorTimeout subtype
+     * @return builder
+     */
+    public static com.commercetools.checkout.models.error.ConnectorTimeoutErrorBuilder connectorTimeoutBuilder() {
+        return com.commercetools.checkout.models.error.ConnectorTimeoutErrorBuilder.of();
+    }
+
+    /**
      * builder for duplicateFieldWithConflictingResource subtype
      * @return builder
      */
@@ -109,6 +117,14 @@ public interface ErrorObject {
      */
     public static com.commercetools.checkout.models.error.GeneralErrorBuilder generalBuilder() {
         return com.commercetools.checkout.models.error.GeneralErrorBuilder.of();
+    }
+
+    /**
+     * builder for internalConstraintViolated subtype
+     * @return builder
+     */
+    public static com.commercetools.checkout.models.error.InternalConstraintViolatedErrorBuilder internalConstraintViolatedBuilder() {
+        return com.commercetools.checkout.models.error.InternalConstraintViolatedErrorBuilder.of();
     }
 
     /**

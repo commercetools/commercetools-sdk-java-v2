@@ -116,4 +116,19 @@ public class CategoryDraftQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CategoryDraftQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<CategoryDraftQueryBuilderDsl> stores(
+            Function<com.commercetools.api.predicates.query.store.StoreResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.store.StoreResourceIdentifierQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("stores"))
+                    .inner(fn.apply(
+                        com.commercetools.api.predicates.query.store.StoreResourceIdentifierQueryBuilderDsl.of())),
+            CategoryDraftQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<CategoryDraftQueryBuilderDsl> stores() {
+        return new CollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("stores")),
+            p -> new CombinationQueryPredicate<>(p, CategoryDraftQueryBuilderDsl::of));
+    }
+
 }

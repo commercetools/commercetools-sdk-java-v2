@@ -27,7 +27,7 @@ public class ConnectorDeploymentReferenceBuilder implements Builder<ConnectorDep
     private String typeId;
 
     /**
-     *  <p>Unique identifier of the referenced Connect Deployment.</p>
+     *  <p>Unique identifier of the referenced ConnectorDeployment.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class ConnectorDeploymentReferenceBuilder implements Builder<ConnectorDep
     }
 
     /**
-     *  <p>Type identifier, always <code>deployment</code> for Connector deployment references.</p>
+     *  <p>Type identifier, always <code>deployment</code> for ConnectorDeployment references.</p>
      * @param typeId value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class ConnectorDeploymentReferenceBuilder implements Builder<ConnectorDep
     }
 
     /**
-     *  <p>Unique identifier of the referenced Connect Deployment.</p>
+     *  <p>Unique identifier of the referenced ConnectorDeployment.</p>
      * @return id
      */
 
@@ -58,7 +58,7 @@ public class ConnectorDeploymentReferenceBuilder implements Builder<ConnectorDep
     }
 
     /**
-     *  <p>Type identifier, always <code>deployment</code> for Connector deployment references.</p>
+     *  <p>Type identifier, always <code>deployment</code> for ConnectorDeployment references.</p>
      * @return typeId
      */
 

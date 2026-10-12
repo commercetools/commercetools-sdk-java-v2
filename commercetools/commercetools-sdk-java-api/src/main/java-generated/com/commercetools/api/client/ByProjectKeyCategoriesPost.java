@@ -21,6 +21,7 @@ import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Either the <span>scope</span> <code>manage_products:{projectKey}</code> or <code>manage_categories:{projectKey}</code> is required.</p>
+ *  <p>Creating a Category with a <code>parent</code> locks that parent Category. For details, see <span>Category tree locking</span>.</p>
  *  <p>Creating a Category produces the <a href="https://docs.commercetools.com/apis/ctp:api:type:CategoryCreatedMessage" rel="nofollow">CategoryCreated</a> Message.</p>
  *
  * <hr>

@@ -16,7 +16,7 @@ import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Returned by a <span>/responses</span> request when a shipping country was not provided and could not be inferred from the input.</p>
+ *  <p>Returned by a <span>/responses</span> request with <code>outputType</code> set to <code>Cart</code> or <code>QuoteRequest</code> when a shipping country was not provided and could not be inferred from the input.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

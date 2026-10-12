@@ -17,10 +17,12 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import tools.jackson.core.type.TypeReference;
 
 /**
- *  <p>Turns a natural-language prompt, optionally with supporting files, into a created <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> or <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a>, returned in commercetools REST representation.</p>
+ *  <p>Turns a natural-language prompt, optionally with supporting files, into a created <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>, returned in commercetools REST representation. The entity to create is set by <code>outputType</code> and is never inferred from the input.</p>
+ *  <p>A <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a> additionally requires a name for the list in the input. The Intake Agent never invents one. Unlike a Cart or Quote Request, a Shopping List does not require a country.</p>
  *  <p>Non-fatal issues, such as requested Products that could not be matched to the catalog or a file that failed to parse, are reported as <code>warnings</code> alongside a successful <code>201</code> response rather than failing the request.</p>
  *  <p>Accepts either an <code>application/json</code> body or a <code>multipart/form-data</code> request. An <code>application/json</code> body requires <code>prompt</code>. A <code>multipart/form-data</code> request requires <code>prompt</code>, an uploaded file, or both. See <span>Multipart form data</span> for the file upload format.</p>
  *  <p>If the Intake Agent is not enabled for the Project, a <a href="https://docs.commercetools.com/apis/ctp:api:type:AgentFeatureDisabledError" rel="nofollow">FeatureDisabled</a> error is returned.</p>
+ *  <p>For a list of possible errors returned by the Intake Agent, see <span>Intake Agent Errors</span> type.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -66,7 +68,7 @@ public class ByProjectKeyAgentsIntakeV1ResponsesPostString extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/agents/intake/v1/responses", this.projectKey);
+        String httpRequestPath = String.format("%s/agents/intake/v1/responses", encodePathParam(this.projectKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

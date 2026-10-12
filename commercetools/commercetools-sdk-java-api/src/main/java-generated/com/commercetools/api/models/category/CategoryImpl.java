@@ -61,6 +61,8 @@ public class CategoryImpl implements Category, ModelBase {
 
     private String key;
 
+    private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
+
     /**
      * create instance with all properties
      */
@@ -81,7 +83,8 @@ public class CategoryImpl implements Category, ModelBase {
             @JsonProperty("metaKeywords") final com.commercetools.api.models.common.LocalizedString metaKeywords,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("assets") final java.util.List<com.commercetools.api.models.common.Asset> assets,
-            @JsonProperty("key") final String key) {
+            @JsonProperty("key") final String key,
+            @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -101,6 +104,7 @@ public class CategoryImpl implements Category, ModelBase {
         this.custom = custom;
         this.assets = assets;
         this.key = key;
+        this.stores = stores;
     }
 
     /**
@@ -198,7 +202,7 @@ public class CategoryImpl implements Category, ModelBase {
     }
 
     /**
-     *  <p>Decimal value between 0 and 1. Frontend applications can use this value for ordering Categories within the same level in the category tree.</p>
+     *  <p>A decimal value between 0 and 1 used to order Categories within the same level of the category tree. When sorted in ascending order, Categories with a lower <code>orderHint</code> appear before those with a higher value (for example, <code>0.05</code> before <code>0.07</code>).</p>
      */
 
     public String getOrderHint() {
@@ -259,6 +263,16 @@ public class CategoryImpl implements Category, ModelBase {
 
     public String getKey() {
         return this.key;
+    }
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Category is assigned and that you have permission to access.</p>
+     *  <p>If <code>stores</code> is empty, the Category is global and available in every <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
+     *  <p>If the Category is created via the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/categories" rel="nofollow">Store-specific endpoint</a>, the Store specified in the request path is automatically added to the field value.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {
+        return this.stores;
     }
 
     public void setId(final String id) {
@@ -345,6 +359,14 @@ public class CategoryImpl implements Category, ModelBase {
         this.key = key;
     }
 
+    public void setStores(final com.commercetools.api.models.store.StoreKeyReference... stores) {
+        this.stores = new ArrayList<>(Arrays.asList(stores));
+    }
+
+    public void setStores(final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores) {
+        this.stores = stores;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -374,6 +396,7 @@ public class CategoryImpl implements Category, ModelBase {
                 .append(custom, that.custom)
                 .append(assets, that.assets)
                 .append(key, that.key)
+                .append(stores, that.stores)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -393,6 +416,7 @@ public class CategoryImpl implements Category, ModelBase {
                 .append(custom, that.custom)
                 .append(assets, that.assets)
                 .append(key, that.key)
+                .append(stores, that.stores)
                 .isEquals();
     }
 
@@ -417,6 +441,7 @@ public class CategoryImpl implements Category, ModelBase {
                 .append(custom)
                 .append(assets)
                 .append(key)
+                .append(stores)
                 .toHashCode();
     }
 
@@ -441,6 +466,7 @@ public class CategoryImpl implements Category, ModelBase {
                 .append("custom", custom)
                 .append("assets", assets)
                 .append("key", key)
+                .append("stores", stores)
                 .build();
     }
 

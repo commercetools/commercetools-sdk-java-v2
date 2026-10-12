@@ -22,6 +22,9 @@ public interface AgentResponsesOutputType extends JsonEnum {
     /**
     <p>Create a <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a>. Requires a verified <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>, identified by email.</p> */
     AgentResponsesOutputType QUOTE_REQUEST = AgentResponsesOutputTypeEnum.QUOTE_REQUEST;
+    /**
+    <p>Create a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a>. Requires a verified <a href="https://docs.commercetools.com/apis/ctp:api:type:Customer" rel="nofollow">Customer</a>, identified by email, and a name for the ShoppingList stated in the input.</p> */
+    AgentResponsesOutputType SHOPPING_LIST = AgentResponsesOutputTypeEnum.SHOPPING_LIST;
 
     /**
      * possible values of AgentResponsesOutputType
@@ -35,7 +38,12 @@ public interface AgentResponsesOutputType extends JsonEnum {
         /**
          * QuoteRequest
          */
-        QUOTE_REQUEST("QuoteRequest");
+        QUOTE_REQUEST("QuoteRequest"),
+
+        /**
+         * ShoppingList
+         */
+        SHOPPING_LIST("ShoppingList");
         private final String jsonName;
 
         private AgentResponsesOutputTypeEnum(final String jsonName) {

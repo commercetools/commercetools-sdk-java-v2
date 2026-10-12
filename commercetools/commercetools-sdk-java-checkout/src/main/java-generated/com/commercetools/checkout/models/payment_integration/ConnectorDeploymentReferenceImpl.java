@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Reference to a connector deployment for the payment integration.</p>
+ *  <p>Reference to a ConnectorDeployment for the payment integration.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ConnectorDeploymentReferenceImpl implements ConnectorDeploymentReference, ModelBase {
@@ -43,7 +43,7 @@ public class ConnectorDeploymentReferenceImpl implements ConnectorDeploymentRefe
     }
 
     /**
-     *  <p>Unique identifier of the referenced Connect Deployment.</p>
+     *  <p>Unique identifier of the referenced ConnectorDeployment.</p>
      */
 
     public String getId() {
@@ -51,7 +51,7 @@ public class ConnectorDeploymentReferenceImpl implements ConnectorDeploymentRefe
     }
 
     /**
-     *  <p>Type identifier, always <code>deployment</code> for Connector deployment references.</p>
+     *  <p>Type identifier, always <code>deployment</code> for ConnectorDeployment references.</p>
      */
 
     public String getTypeId() {

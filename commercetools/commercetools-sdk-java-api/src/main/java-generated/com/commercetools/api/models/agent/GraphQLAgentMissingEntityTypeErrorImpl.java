@@ -19,7 +19,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Returned by a <span>/responses</span> request when the input did not specify whether to create a Cart or a Quote Request. Set <code>outputType</code> explicitly in the request.</p>
+ *  <p>Returned by a <span>/responses</span> request when the input did not specify whether to create a Cart, a Quote Request, or a Shopping List. Set <code>outputType</code> explicitly in the request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLAgentMissingEntityTypeErrorImpl implements GraphQLAgentMissingEntityTypeError, ModelBase {

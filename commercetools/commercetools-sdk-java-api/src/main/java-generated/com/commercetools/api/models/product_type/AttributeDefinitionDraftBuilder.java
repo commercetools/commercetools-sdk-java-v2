@@ -50,6 +50,9 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     @Nullable
     private Boolean isSearchable;
 
+    @Nullable
+    private Boolean savedToLineItem;
+
     /**
      *  <p>Describes the Type of the Attribute.</p>
      *  <p>When the <code>type</code> is different for an AttributeDefinition using the same name in multiple ProductTypes, an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionTypeConflictError" rel="nofollow">AttributeDefinitionTypeConflict</a> error is returned.</p>
@@ -218,6 +221,18 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     }
 
     /**
+     *  <p>Whether the Attribute value is copied onto the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> when the Product is added to a Cart. When <code>false</code>, the Attribute value is excluded from the Line Item variant. Line Items already in a Cart are not immediately affected by a change to this value. Existing Line Items are updated the next time their Product data is refreshed, such as when a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRecalculateAction" rel="nofollow">Recalculate</a> update action is performed with <code>updateProductData</code> set to <code>true</code>, or on a Cart update that triggers an API Extension. Replicating a Cart creates a new Cart that contains the current Product data; it does not update the original Cart.</p>
+     *  <p>When <code>savedToLineItem</code> is <code>false</code>, <span>LineItem predicates</span> that reference this Attribute, such as those in Cart Discounts and Shipping Methods, evaluate as if the Attribute is not set.</p>
+     * @param savedToLineItem value to be set
+     * @return Builder
+     */
+
+    public AttributeDefinitionDraftBuilder savedToLineItem(@Nullable final Boolean savedToLineItem) {
+        this.savedToLineItem = savedToLineItem;
+        return this;
+    }
+
+    /**
      *  <p>Describes the Type of the Attribute.</p>
      *  <p>When the <code>type</code> is different for an AttributeDefinition using the same name in multiple ProductTypes, an <a href="https://docs.commercetools.com/apis/ctp:api:type:AttributeDefinitionTypeConflictError" rel="nofollow">AttributeDefinitionTypeConflict</a> error is returned.</p>
      * @return type
@@ -307,6 +322,17 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     }
 
     /**
+     *  <p>Whether the Attribute value is copied onto the <a href="https://docs.commercetools.com/apis/ctp:api:type:LineItem" rel="nofollow">LineItem</a> when the Product is added to a Cart. When <code>false</code>, the Attribute value is excluded from the Line Item variant. Line Items already in a Cart are not immediately affected by a change to this value. Existing Line Items are updated the next time their Product data is refreshed, such as when a <a href="https://docs.commercetools.com/apis/ctp:api:type:CartRecalculateAction" rel="nofollow">Recalculate</a> update action is performed with <code>updateProductData</code> set to <code>true</code>, or on a Cart update that triggers an API Extension. Replicating a Cart creates a new Cart that contains the current Product data; it does not update the original Cart.</p>
+     *  <p>When <code>savedToLineItem</code> is <code>false</code>, <span>LineItem predicates</span> that reference this Attribute, such as those in Cart Discounts and Shipping Methods, evaluate as if the Attribute is not set.</p>
+     * @return savedToLineItem
+     */
+
+    @Nullable
+    public Boolean getSavedToLineItem() {
+        return this.savedToLineItem;
+    }
+
+    /**
      * builds AttributeDefinitionDraft with checking for non-null required values
      * @return AttributeDefinitionDraft
      */
@@ -316,7 +342,7 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
         Objects.requireNonNull(label, AttributeDefinitionDraft.class + ": label is missing");
         Objects.requireNonNull(isRequired, AttributeDefinitionDraft.class + ": isRequired is missing");
         return new AttributeDefinitionDraftImpl(type, name, label, isRequired, level, attributeConstraint, inputTip,
-            inputHint, isSearchable);
+            inputHint, isSearchable, savedToLineItem);
     }
 
     /**
@@ -325,7 +351,7 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
      */
     public AttributeDefinitionDraft buildUnchecked() {
         return new AttributeDefinitionDraftImpl(type, name, label, isRequired, level, attributeConstraint, inputTip,
-            inputHint, isSearchable);
+            inputHint, isSearchable, savedToLineItem);
     }
 
     /**
@@ -352,6 +378,7 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
         builder.inputTip = template.getInputTip();
         builder.inputHint = template.getInputHint();
         builder.isSearchable = template.getIsSearchable();
+        builder.savedToLineItem = template.getSavedToLineItem();
         return builder;
     }
 

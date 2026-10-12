@@ -62,7 +62,7 @@ public class AgentResponsesRequestBuilder implements Builder<AgentResponsesReque
     }
 
     /**
-     *  <p>Natural-language description of the desired Cart or Quote Request, such as the body of an email or a note.</p>
+     *  <p>Natural-language description of the entity to create, such as the body of an email or a note. For a Shopping List, it must state the name of the list.</p>
      * @param prompt value to be set
      * @return Builder
      */
@@ -166,7 +166,7 @@ public class AgentResponsesRequestBuilder implements Builder<AgentResponsesReque
     }
 
     /**
-     *  <p>Natural-language description of the desired Cart or Quote Request, such as the body of an email or a note.</p>
+     *  <p>Natural-language description of the entity to create, such as the body of an email or a note. For a Shopping List, it must state the name of the list.</p>
      * @return prompt
      */
 

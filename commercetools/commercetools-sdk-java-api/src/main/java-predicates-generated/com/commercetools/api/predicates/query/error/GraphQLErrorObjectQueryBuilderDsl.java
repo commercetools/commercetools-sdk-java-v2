@@ -79,6 +79,13 @@ public class GraphQLErrorObjectQueryBuilderDsl {
             GraphQLErrorObjectQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asMissingShoppingListName(
+            Function<com.commercetools.api.predicates.query.agent.GraphQLAgentMissingShoppingListNameErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.GraphQLAgentMissingShoppingListNameErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.agent.GraphQLAgentMissingShoppingListNameErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asNoLineItemsExtracted(
             Function<com.commercetools.api.predicates.query.agent.GraphQLAgentNoLineItemsExtractedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.GraphQLAgentNoLineItemsExtractedErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -113,6 +120,14 @@ public class GraphQLErrorObjectQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.agent.GraphQLAgentQuoteRequestCreationFailedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.GraphQLAgentQuoteRequestCreationFailedErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(
             com.commercetools.api.predicates.query.agent.GraphQLAgentQuoteRequestCreationFailedErrorQueryBuilderDsl
+                    .of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asShoppingListCreationFailed(
+            Function<com.commercetools.api.predicates.query.agent.GraphQLAgentShoppingListCreationFailedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.GraphQLAgentShoppingListCreationFailedErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.agent.GraphQLAgentShoppingListCreationFailedErrorQueryBuilderDsl
                     .of()),
             GraphQLErrorObjectQueryBuilderDsl::of);
     }

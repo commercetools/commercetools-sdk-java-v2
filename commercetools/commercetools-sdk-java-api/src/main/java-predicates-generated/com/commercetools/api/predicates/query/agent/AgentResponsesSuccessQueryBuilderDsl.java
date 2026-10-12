@@ -53,4 +53,12 @@ public class AgentResponsesSuccessQueryBuilderDsl {
                 com.commercetools.api.predicates.query.agent.AgentResponsesQuoteRequestSuccessQueryBuilderDsl.of()),
             AgentResponsesSuccessQueryBuilderDsl::of);
     }
+
+    public CombinationQueryPredicate<AgentResponsesSuccessQueryBuilderDsl> asShoppingList(
+            Function<com.commercetools.api.predicates.query.agent.AgentResponsesShoppingListSuccessQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.agent.AgentResponsesShoppingListSuccessQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.agent.AgentResponsesShoppingListSuccessQueryBuilderDsl.of()),
+            AgentResponsesSuccessQueryBuilderDsl::of);
+    }
 }

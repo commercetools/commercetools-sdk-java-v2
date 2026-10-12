@@ -67,7 +67,7 @@ public class ByProjectKeyPaymentMethodsPostString extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/payment-methods", this.projectKey);
+        String httpRequestPath = String.format("%s/payment-methods", encodePathParam(this.projectKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

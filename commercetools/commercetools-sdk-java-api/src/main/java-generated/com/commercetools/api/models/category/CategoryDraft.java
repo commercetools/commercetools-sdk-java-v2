@@ -10,6 +10,7 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.AssetDraft;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 
@@ -73,7 +74,7 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
     public CategoryResourceIdentifier getParent();
 
     /**
-     *  <p>Decimal value between 0 and 1. Frontend applications can use this value for ordering Categories within the same level in the category tree. If not set, a random value will be assigned.</p>
+     *  <p>A decimal value between 0 and 1 used to order Categories within the same level of the category tree. When sorted in ascending order, Categories with a lower <code>orderHint</code> appear before those with a higher value (for example, <code>0.05</code> before <code>0.07</code>). If not set, a random value is assigned.</p>
      * @return orderHint
      */
 
@@ -138,6 +139,18 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
     public String getKey();
 
     /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to assign the Category to.</p>
+     *  <ul>
+     *   <li><p>If not defined or set to an empty array, the Category is global.</p></li>
+     *   <li><p>If defined, you must have access to each referenced Store; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p><p>If the Category has a parent category, and the parent is assigned to Stores, this value must be a non-empty subset of the parent's Stores.</p></li>
+     *  </ul>
+     * @return stores
+     */
+    @Valid
+    @JsonProperty("stores")
+    public List<StoreResourceIdentifier> getStores();
+
+    /**
      *  <p>Name of the Category.</p>
      * @param name value to be set
      */
@@ -166,7 +179,7 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
     public void setParent(final CategoryResourceIdentifier parent);
 
     /**
-     *  <p>Decimal value between 0 and 1. Frontend applications can use this value for ordering Categories within the same level in the category tree. If not set, a random value will be assigned.</p>
+     *  <p>A decimal value between 0 and 1 used to order Categories within the same level of the category tree. When sorted in ascending order, Categories with a lower <code>orderHint</code> appear before those with a higher value (for example, <code>0.05</code> before <code>0.07</code>). If not set, a random value is assigned.</p>
      * @param orderHint value to be set
      */
 
@@ -231,6 +244,29 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
     public void setKey(final String key);
 
     /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to assign the Category to.</p>
+     *  <ul>
+     *   <li><p>If not defined or set to an empty array, the Category is global.</p></li>
+     *   <li><p>If defined, you must have access to each referenced Store; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p><p>If the Category has a parent category, and the parent is assigned to Stores, this value must be a non-empty subset of the parent's Stores.</p></li>
+     *  </ul>
+     * @param stores values to be set
+     */
+
+    @JsonIgnore
+    public void setStores(final StoreResourceIdentifier... stores);
+
+    /**
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to assign the Category to.</p>
+     *  <ul>
+     *   <li><p>If not defined or set to an empty array, the Category is global.</p></li>
+     *   <li><p>If defined, you must have access to each referenced Store; otherwise, an <a href="https://docs.commercetools.com/apis/ctp:api:type:InvalidInputError" rel="nofollow">InvalidInput</a> error is returned.</p><p>If the Category has a parent category, and the parent is assigned to Stores, this value must be a non-empty subset of the parent's Stores.</p></li>
+     *  </ul>
+     * @param stores values to be set
+     */
+
+    public void setStores(final List<StoreResourceIdentifier> stores);
+
+    /**
      * factory method
      * @return instance of CategoryDraft
      */
@@ -257,6 +293,7 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
         instance.setCustom(template.getCustom());
         instance.setAssets(template.getAssets());
         instance.setKey(template.getKey());
+        instance.setStores(template.getStores());
         return instance;
     }
 
@@ -293,6 +330,11 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setKey(template.getKey());
+        instance.setStores(Optional.ofNullable(template.getStores())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.store.StoreResourceIdentifier::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

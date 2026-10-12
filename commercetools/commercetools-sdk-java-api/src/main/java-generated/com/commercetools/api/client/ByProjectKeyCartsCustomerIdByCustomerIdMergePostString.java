@@ -74,7 +74,8 @@ public class ByProjectKeyCartsCustomerIdByCustomerIdMergePostString extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/carts/customer-id=%s/merge", this.projectKey, this.customerId);
+        String httpRequestPath = String.format("%s/carts/customer-id=%s/merge", encodePathParam(this.projectKey),
+            encodePathParam(this.customerId));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

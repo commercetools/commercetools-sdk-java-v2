@@ -62,7 +62,7 @@ public class AgentResponsesPayloadBuilder implements Builder<AgentResponsesPaylo
     }
 
     /**
-     *  <p>Natural-language description of the desired Cart or Quote Request, such as the body of an email or a note. Required if no file is attached.</p>
+     *  <p>Natural-language description of the entity to create, such as the body of an email or a note. Required if no file is attached. For a Shopping List, the name of the list must be stated in either the prompt or an attached file.</p>
      * @param prompt value to be set
      * @return Builder
      */
@@ -166,7 +166,7 @@ public class AgentResponsesPayloadBuilder implements Builder<AgentResponsesPaylo
     }
 
     /**
-     *  <p>Natural-language description of the desired Cart or Quote Request, such as the body of an email or a note. Required if no file is attached.</p>
+     *  <p>Natural-language description of the entity to create, such as the body of an email or a note. Required if no file is attached. For a Shopping List, the name of the list must be stated in either the prompt or an attached file.</p>
      * @return prompt
      */
 

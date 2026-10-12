@@ -68,7 +68,7 @@ public class ByProjectKeyCustomObjectsPostString extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/custom-objects", this.projectKey);
+        String httpRequestPath = String.format("%s/custom-objects", encodePathParam(this.projectKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

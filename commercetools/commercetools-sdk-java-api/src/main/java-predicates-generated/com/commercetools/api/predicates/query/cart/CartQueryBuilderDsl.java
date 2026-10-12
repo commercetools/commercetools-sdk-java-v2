@@ -369,6 +369,16 @@ public class CartQueryBuilderDsl {
             CartQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<CartQueryBuilderDsl> recurringPaymentConfiguration(
+            Function<com.commercetools.api.predicates.query.cart.RecurringPaymentConfigurationQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.RecurringPaymentConfigurationQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("recurringPaymentConfiguration"))
+                    .inner(fn.apply(
+                        com.commercetools.api.predicates.query.cart.RecurringPaymentConfigurationQueryBuilderDsl.of())),
+            CartQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<CartQueryBuilderDsl> discountTypeCombination(
             Function<com.commercetools.api.predicates.query.cart.DiscountTypeCombinationQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.DiscountTypeCombinationQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

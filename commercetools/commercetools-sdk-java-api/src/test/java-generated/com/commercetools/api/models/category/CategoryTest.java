@@ -55,7 +55,11 @@ public class CategoryTest {
                         Category.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
                 new Object[] { "assets", Category.builder()
                         .assets(Collections.singletonList(new com.commercetools.api.models.common.AssetImpl())) },
-                new Object[] { "key", Category.builder().key("key") } };
+                new Object[] { "key", Category.builder().key("key") },
+                new Object[] { "stores",
+                        Category.builder()
+                                .stores(Collections.singletonList(
+                                    new com.commercetools.api.models.store.StoreKeyReferenceImpl())) } };
     }
 
     @Test
@@ -199,5 +203,13 @@ public class CategoryTest {
         Category value = Category.of();
         value.setKey("key");
         Assertions.assertThat(value.getKey()).isEqualTo("key");
+    }
+
+    @Test
+    public void stores() {
+        Category value = Category.of();
+        value.setStores(Collections.singletonList(new com.commercetools.api.models.store.StoreKeyReferenceImpl()));
+        Assertions.assertThat(value.getStores())
+                .isEqualTo(Collections.singletonList(new com.commercetools.api.models.store.StoreKeyReferenceImpl()));
     }
 }

@@ -35,6 +35,10 @@ public class CartUpdateActionBuilder {
         return com.commercetools.api.models.cart.CartAddPaymentActionBuilder.of();
     }
 
+    public com.commercetools.api.models.cart.CartAddRecurringPaymentAllocationActionBuilder addRecurringPaymentAllocationBuilder() {
+        return com.commercetools.api.models.cart.CartAddRecurringPaymentAllocationActionBuilder.of();
+    }
+
     public com.commercetools.api.models.cart.CartAddShippingMethodActionBuilder addShippingMethodBuilder() {
         return com.commercetools.api.models.cart.CartAddShippingMethodActionBuilder.of();
     }
@@ -117,6 +121,10 @@ public class CartUpdateActionBuilder {
 
     public com.commercetools.api.models.cart.CartRemovePaymentActionBuilder removePaymentBuilder() {
         return com.commercetools.api.models.cart.CartRemovePaymentActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.cart.CartRemoveRecurringPaymentAllocationActionBuilder removeRecurringPaymentAllocationBuilder() {
+        return com.commercetools.api.models.cart.CartRemoveRecurringPaymentAllocationActionBuilder.of();
     }
 
     public com.commercetools.api.models.cart.CartRemoveShippingMethodActionBuilder removeShippingMethodBuilder() {
@@ -277,6 +285,14 @@ public class CartUpdateActionBuilder {
 
     public com.commercetools.api.models.cart.CartSetPurchaseOrderNumberActionBuilder setPurchaseOrderNumberBuilder() {
         return com.commercetools.api.models.cart.CartSetPurchaseOrderNumberActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.cart.CartSetRecurringPaymentConfigurationActionBuilder setRecurringPaymentConfigurationBuilder() {
+        return com.commercetools.api.models.cart.CartSetRecurringPaymentConfigurationActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.cart.CartSetRecurringPaymentStrategyActionBuilder setRecurringPaymentStrategyBuilder() {
+        return com.commercetools.api.models.cart.CartSetRecurringPaymentStrategyActionBuilder.of();
     }
 
     public com.commercetools.api.models.cart.CartSetReservationExpirationInMinutesActionBuilder setReservationExpirationInMinutesBuilder() {

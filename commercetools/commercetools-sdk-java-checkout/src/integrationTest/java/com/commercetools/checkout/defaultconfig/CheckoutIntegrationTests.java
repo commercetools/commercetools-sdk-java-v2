@@ -53,7 +53,7 @@ public class CheckoutIntegrationTests {
                         .plusTransactionItems(TransactionItemDraft.recurringBuilder()
                                 .amount(a -> a.centAmount(100).currencyCode("EUR"))
                                 .paymentMethod(p -> p.id("ci-payment-method"))
-                                .connectorDeployment(c -> c.id("ci-connector-deployment"))
+                                .connectorDeployment(c -> c.id("ci-connector-deployment").typeId("deployment"))
                                 .build())
                         .build()
 

@@ -151,7 +151,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="AgentMissingCountryError.html" title="interface in com.commercetools.api.models.agent">AgentMissingCountryError</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
-<div class="block">Returned by a <span>/responses</span> request when a shipping country was not provided and could not be inferred from the input.</div>
+<div class="block">Returned by a <span>/responses</span> request with <code>outputType</code> set to <code>Cart</code> or <code>QuoteRequest</code> when a shipping country was not provided and could not be inferred from the input.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="AgentMissingCountryErrorBuilder.html" title="class in com.commercetools.api.models.agent">AgentMissingCountryErrorBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
@@ -173,11 +173,22 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="AgentMissingEntityTypeError.html" title="interface in com.commercetools.api.models.agent">AgentMissingEntityTypeError</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
-<div class="block">Returned by a <span>/responses</span> request when the input did not specify whether to create a Cart or a Quote Request.</div>
+<div class="block">Returned by a <span>/responses</span> request when the input did not specify whether to create a Cart, a Quote Request, or a Shopping List.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="AgentMissingEntityTypeErrorBuilder.html" title="class in com.commercetools.api.models.agent">AgentMissingEntityTypeErrorBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
 <div class="block">AgentMissingEntityTypeErrorBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="AgentMissingShoppingListNameError.html" title="interface in com.commercetools.api.models.agent">AgentMissingShoppingListNameError</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="block">Returned by a <span>/responses</span> request with <code>outputType</code> set to <code>ShoppingList</code> when a name for the Shopping List is not present in the input.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="AgentMissingShoppingListNameErrorBuilder.html" title="class in com.commercetools.api.models.agent">AgentMissingShoppingListNameErrorBuilder</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">AgentMissingShoppingListNameErrorBuilder
  
  Example to create an instance using the builder pattern
  </div>
@@ -195,7 +206,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="AgentOutOfScopeError.html" title="interface in com.commercetools.api.models.agent">AgentOutOfScopeError</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
-<div class="block">Returned by a <span>/responses</span> request when the input does not contain enough information to create a Cart or a Quote Request: no products, no customer email address, and no shipping country could be determined.</div>
+<div class="block">Returned by a <span>/responses</span> request when the input does not contain enough information to create the requested entity.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="AgentOutOfScopeErrorBuilder.html" title="class in com.commercetools.api.models.agent">AgentOutOfScopeErrorBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
@@ -228,7 +239,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="AgentProductsNotFoundWarning.html" title="interface in com.commercetools.api.models.agent">AgentProductsNotFoundWarning</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
-<div class="block">Returned when one or more Products referenced in an Intake Agent <span>API request</span> could not be matched to the catalog.</div>
+<div class="block">Returned when one or more Products referenced in an Intake Agent <span>API request</span> could not be matched to the catalog or are unavailable in the bound Store.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="AgentProductsNotFoundWarningBuilder.html" title="class in com.commercetools.api.models.agent">AgentProductsNotFoundWarningBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
@@ -333,6 +344,17 @@ loadScripts(document, 'script');</script>
  Example to create an instance using the builder pattern
  </div>
 </div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="AgentResponsesShoppingListSuccess.html" title="interface in com.commercetools.api.models.agent">AgentResponsesShoppingListSuccess</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="block">Successful <code>201</code> response from a <span>/responses</span> request when <code>outputType</code> is <code>ShoppingList</code>.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="AgentResponsesShoppingListSuccessBuilder.html" title="class in com.commercetools.api.models.agent">AgentResponsesShoppingListSuccessBuilder</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">AgentResponsesShoppingListSuccessBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="AgentResponsesSuccess.html" title="interface in com.commercetools.api.models.agent">AgentResponsesSuccess</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
 <div class="block">Successful <code>201</code> response from a <span>/responses</span> request.</div>
@@ -340,6 +362,17 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="AgentResponsesSuccessBuilder.html" title="class in com.commercetools.api.models.agent">AgentResponsesSuccessBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
 <div class="block">AgentResponsesSuccessBuilder</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="AgentShoppingListCreationFailedError.html" title="interface in com.commercetools.api.models.agent">AgentShoppingListCreationFailedError</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="block">Returned by a <span>/responses</span> request when the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a> could not be created, for example because the request has no verified Customer or because commercetools rejected the ShoppingList draft.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="AgentShoppingListCreationFailedErrorBuilder.html" title="class in com.commercetools.api.models.agent">AgentShoppingListCreationFailedErrorBuilder</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">AgentShoppingListCreationFailedErrorBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="AgentStoreAmbiguousError.html" title="interface in com.commercetools.api.models.agent">AgentStoreAmbiguousError</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
@@ -431,7 +464,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="GraphQLAgentMissingCountryError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentMissingCountryError</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
-<div class="block">Returned by a <span>/responses</span> request when a shipping country was not provided and could not be inferred from the input.</div>
+<div class="block">Returned by a <span>/responses</span> request with <code>outputType</code> set to <code>Cart</code> or <code>QuoteRequest</code> when a shipping country was not provided and could not be inferred from the input.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="GraphQLAgentMissingCountryErrorBuilder.html" title="class in com.commercetools.api.models.agent">GraphQLAgentMissingCountryErrorBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
@@ -453,11 +486,22 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="GraphQLAgentMissingEntityTypeError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentMissingEntityTypeError</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
-<div class="block">Returned by a <span>/responses</span> request when the input did not specify whether to create a Cart or a Quote Request.</div>
+<div class="block">Returned by a <span>/responses</span> request when the input did not specify whether to create a Cart, a Quote Request, or a Shopping List.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="GraphQLAgentMissingEntityTypeErrorBuilder.html" title="class in com.commercetools.api.models.agent">GraphQLAgentMissingEntityTypeErrorBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
 <div class="block">GraphQLAgentMissingEntityTypeErrorBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="GraphQLAgentMissingShoppingListNameError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentMissingShoppingListNameError</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="block">Returned by a <span>/responses</span> request with <code>outputType</code> set to <code>ShoppingList</code> when a name for the Shopping List is not present in the input.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="GraphQLAgentMissingShoppingListNameErrorBuilder.html" title="class in com.commercetools.api.models.agent">GraphQLAgentMissingShoppingListNameErrorBuilder</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">GraphQLAgentMissingShoppingListNameErrorBuilder
  
  Example to create an instance using the builder pattern
  </div>
@@ -475,7 +519,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="GraphQLAgentOutOfScopeError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentOutOfScopeError</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
-<div class="block">Returned by a <span>/responses</span> request when the input does not contain enough information to create a Cart or a Quote Request: no products, no customer email address, and no shipping country could be determined.</div>
+<div class="block">Returned by a <span>/responses</span> request when the input does not contain enough information to create the requested entity.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="GraphQLAgentOutOfScopeErrorBuilder.html" title="class in com.commercetools.api.models.agent">GraphQLAgentOutOfScopeErrorBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
@@ -513,6 +557,17 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="GraphQLAgentQuoteRequestCreationFailedErrorBuilder.html" title="class in com.commercetools.api.models.agent">GraphQLAgentQuoteRequestCreationFailedErrorBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
 <div class="block">GraphQLAgentQuoteRequestCreationFailedErrorBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="GraphQLAgentShoppingListCreationFailedError.html" title="interface in com.commercetools.api.models.agent">GraphQLAgentShoppingListCreationFailedError</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="block">Returned by a <span>/responses</span> request when the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a> could not be created, for example because the request has no verified Customer or because commercetools rejected the ShoppingList draft.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="GraphQLAgentShoppingListCreationFailedErrorBuilder.html" title="class in com.commercetools.api.models.agent">GraphQLAgentShoppingListCreationFailedErrorBuilder</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">GraphQLAgentShoppingListCreationFailedErrorBuilder
  
  Example to create an instance using the builder pattern
  </div>

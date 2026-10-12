@@ -573,7 +573,8 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="getProductCatalogModel()">
 <h3>getProductCatalogModel</h3>
 <div class="member-signature"><span class="return-type"><a href="ProductCatalogModel.html" title="interface in com.commercetools.api.models.project">ProductCatalogModel</a></span>&nbsp;<span class="element-name">getProductCatalogModel</span>()</div>
-<div class="block"><p>Determines how Product Variants are managed in the Project. If not set, defaults to <code>Classic</code> behavior.</p></div>
+<div class="block"><p>Determines how Product Variants are managed in the Project.</p>
+  <p>The <code>x-catalog-model</code> request header can override the effective Catalog model for a single request to resources that resolve Variant data, such as Carts, Orders, and Shopping Lists, independent of the Project's configured Catalog model. Use it during <span>migration</span> to test Modular Catalog behavior on selected requests before changing the Project's configured Catalog model. It is intended as a migration aid, not as a permanent substitute for the Project configuration. It has no effect on Product update actions.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>productCatalogModel</dd>
@@ -804,7 +805,8 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="setProductCatalogModel(com.commercetools.api.models.project.ProductCatalogModel)">
 <h3>setProductCatalogModel</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setProductCatalogModel</span><wbr><span class="parameters">(<a href="ProductCatalogModel.html" title="interface in com.commercetools.api.models.project">ProductCatalogModel</a>&nbsp;productCatalogModel)</span></div>
-<div class="block"><p>Determines how Product Variants are managed in the Project. If not set, defaults to <code>Classic</code> behavior.</p></div>
+<div class="block"><p>Determines how Product Variants are managed in the Project.</p>
+  <p>The <code>x-catalog-model</code> request header can override the effective Catalog model for a single request to resources that resolve Variant data, such as Carts, Orders, and Shopping Lists, independent of the Project's configured Catalog model. Use it during <span>migration</span> to test Modular Catalog behavior on selected requests before changing the Project's configured Catalog model. It is intended as a migration aid, not as a permanent substitute for the Project configuration. It has no effect on Product update actions.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>productCatalogModel</code> - value to be set</dd>

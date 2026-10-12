@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">GraphQLAgentOutOfScopeError</span><span class="extends-implements">
 extends <a href="../error/GraphQLErrorObject.html" title="interface in com.commercetools.api.models.error">GraphQLErrorObject</a></span></div>
-<div class="block"><p>Returned by a <span>/responses</span> request when the input does not contain enough information to create a Cart or a Quote Request: no products, no customer email address, and no shipping country could be determined.</p>
+<div class="block"><p>Returned by a <span>/responses</span> request when the input does not contain enough information to create the requested entity. For a Cart or Quote Request, no products, no customer email address, and no shipping country could be determined. For a Shopping List, no products, no customer email address, and no name could be determined.</p>
 
  <hr>
  Example to create an instance using the builder pattern

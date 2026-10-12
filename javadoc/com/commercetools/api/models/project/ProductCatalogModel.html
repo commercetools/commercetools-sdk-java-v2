@@ -120,12 +120,12 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <div class="col-first odd-row-color"><code>static final <a href="ProductCatalogModel.html" title="interface in com.commercetools.api.models.project">ProductCatalogModel</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#IN_MIGRATION" class="member-name-link">IN_MIGRATION</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">Product Variants remain embedded in the Product and Variant update actions on the Product API are still accepted, but resources that reference a Variant, such as <span>Carts</span> and Order line items, discount matching, and Product Selections, resolve from modular Variants by default.</div>
+<div class="block">This temporary model supports migration from <code>Classic</code> to <code>Modular</code>.</div>
 </div>
 <div class="col-first even-row-color"><code>static final <a href="ProductCatalogModel.html" title="interface in com.commercetools.api.models.project">ProductCatalogModel</a></code></div>
 <div class="col-second even-row-color"><code><a href="#MODULAR" class="member-name-link">MODULAR</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">Product Variants are managed as standalone entities through the Variants endpoint.</div>
+<div class="block">Product Variants are standalone resources managed through the <span>Variants API</span>.</div>
 </div>
 </div>
 </section>
@@ -190,21 +190,29 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <section class="detail" id="CLASSIC">
 <h3>CLASSIC</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ProductCatalogModel.html" title="interface in com.commercetools.api.models.project">ProductCatalogModel</a></span>&nbsp;<span class="element-name">CLASSIC</span></div>
-<div class="block"><p>Product Variants are embedded in the Product. This is the default behavior.</p></div>
+<div class="block"><p>Product Variants are embedded in the Product. This is the default model.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="IN_MIGRATION">
 <h3>IN_MIGRATION</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ProductCatalogModel.html" title="interface in com.commercetools.api.models.project">ProductCatalogModel</a></span>&nbsp;<span class="element-name">IN_MIGRATION</span></div>
-<div class="block"><p>Product Variants remain embedded in the Product and Variant update actions on the Product API are still accepted, but resources that reference a Variant, such as <span>Carts</span> and Order line items, discount matching, and Product Selections, resolve from modular Variants by default. Use this transitional state to migrate your reads to the Modular Catalog model while embedded Variant writes continue.</p></div>
+<div class="block"><p>This temporary model supports migration from <code>Classic</code> to <code>Modular</code>. Product Variants remain embedded, and Product API Variant update actions remain supported. Other resources that resolve Variants default to standalone Variants, while Product Search defaults to embedded Variants. See the <span>migration guide</span> for details.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="MODULAR">
 <h3>MODULAR</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ProductCatalogModel.html" title="interface in com.commercetools.api.models.project">ProductCatalogModel</a></span>&nbsp;<span class="element-name">MODULAR</span></div>
-<div class="block"><p>Product Variants are managed as standalone entities through the Variants endpoint. Variant-related update actions on Products are not available in this mode. Pricing is exclusively handled through <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrices</a>; <a href="https://docs.commercetools.com/apis/ctp:api:type:Price" rel="nofollow">Embedded Prices</a> are not supported.</p></div>
+<div class="block"><p>Product Variants are standalone resources managed through the <span>Variants API</span>. Pricing uses <a href="https://docs.commercetools.com/apis/ctp:api:type:StandalonePrice" rel="nofollow">StandalonePrices</a>. Embedded Prices and Product API Variant update actions are unsupported.</p>
+    <ul>
+     <li>Variant-related update actions on Products return a <code>400</code> error.</li>
+     <li>Products must be created without <code>masterVariant</code> and <code>variants</code>.</li>
+     <li>Products cannot be deleted while Variants reference them.</li>
+     <li>Products cannot be unpublished while they have published Variants.</li>
+     <li><span>Carts</span> read variant data from the Variant API instead of embedded Product Variants.</li>
+     <li><code>priceMode</code> on Products is set to <code>Standalone</code>.</li>
+    </ul></div>
 </section>
 </li>
 </ul>

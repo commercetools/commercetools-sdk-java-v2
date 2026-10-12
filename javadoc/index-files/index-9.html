@@ -180,6 +180,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:CartDiscount" rel="nofollow">CartDiscount</a>.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/cart/CartAddRecurringPaymentAllocationActionBuilder.html#id(java.lang.String)" class="member-name-link">id(String)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/CartAddRecurringPaymentAllocationActionBuilder.html" title="class in com.commercetools.api.models.cart">CartAddRecurringPaymentAllocationActionBuilder</a></dt>
+<dd>
+<div class="block">Unique identifier of the new <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringPaymentAllocation" rel="nofollow">RecurringPaymentAllocation</a> within the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringPaymentConfiguration" rel="nofollow">RecurringPaymentConfiguration</a>.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/cart/CartBuilder.html#id(java.lang.String)" class="member-name-link">id(String)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/CartBuilder.html" title="class in com.commercetools.api.models.cart">CartBuilder</a></dt>
 <dd>
 <div class="block">Unique identifier of the Cart.</div>
@@ -187,6 +191,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/cart/CartReferenceBuilder.html#id(java.lang.String)" class="member-name-link">id(String)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/CartReferenceBuilder.html" title="class in com.commercetools.api.models.cart">CartReferenceBuilder</a></dt>
 <dd>
 <div class="block">Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a>.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/cart/CartRemoveRecurringPaymentAllocationActionBuilder.html#id(java.lang.String)" class="member-name-link">id(String)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/CartRemoveRecurringPaymentAllocationActionBuilder.html" title="class in com.commercetools.api.models.cart">CartRemoveRecurringPaymentAllocationActionBuilder</a></dt>
+<dd>
+<div class="block"><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringPaymentAllocation" rel="nofollow">RecurringPaymentAllocation</a> to remove.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/cart/CartResourceIdentifierBuilder.html#id(java.lang.String)" class="member-name-link">id(String)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/CartResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.cart">CartResourceIdentifierBuilder</a></dt>
 <dd>
@@ -207,6 +215,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/cart/LineItemBuilder.html#id(java.lang.String)" class="member-name-link">id(String)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/LineItemBuilder.html" title="class in com.commercetools.api.models.cart">LineItemBuilder</a></dt>
 <dd>
 <div class="block">Unique identifier of the LineItem.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/cart/PaymentAllocationDraftBuilder.html#id(java.lang.String)" class="member-name-link">id(String)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/PaymentAllocationDraftBuilder.html" title="class in com.commercetools.api.models.cart">PaymentAllocationDraftBuilder</a></dt>
+<dd>
+<div class="block">Unique identifier of the resulting <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringPaymentAllocation" rel="nofollow">RecurringPaymentAllocation</a> within the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringPaymentConfiguration" rel="nofollow">RecurringPaymentConfiguration</a>.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/cart/RecurringPaymentAllocationBuilder.html#id(java.lang.String)" class="member-name-link">id(String)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/RecurringPaymentAllocationBuilder.html" title="class in com.commercetools.api.models.cart">RecurringPaymentAllocationBuilder</a></dt>
+<dd>
+<div class="block">Unique identifier of the RecurringPaymentAllocation within the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringPaymentConfiguration" rel="nofollow">RecurringPaymentConfiguration</a>.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/category/CategoryBuilder.html#id(java.lang.String)" class="member-name-link">id(String)</a> - Method in class com.commercetools.api.models.category.<a href="../com/commercetools/api/models/category/CategoryBuilder.html" title="class in com.commercetools.api.models.category">CategoryBuilder</a></dt>
 <dd>
@@ -3477,7 +3493,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/project/ProductCatalogModel.html#IN_MIGRATION" class="member-name-link">IN_MIGRATION</a> - Static variable in interface com.commercetools.api.models.project.<a href="../com/commercetools/api/models/project/ProductCatalogModel.html" title="interface in com.commercetools.api.models.project">ProductCatalogModel</a></dt>
 <dd>
-<div class="block">Product Variants remain embedded in the Product and Variant update actions on the Product API are still accepted, but resources that reference a Variant, such as <span>Carts</span> and Order line items, discount matching, and Product Selections, resolve from modular Variants by default.</div>
+<div class="block">This temporary model supports migration from <code>Classic</code> to <code>Modular</code>.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/staged_quote/StagedQuoteState.StagedQuoteStateEnum.html#IN_PROGRESS" class="member-name-link">IN_PROGRESS</a> - Enum constant in enum class com.commercetools.api.models.staged_quote.<a href="../com/commercetools/api/models/staged_quote/StagedQuoteState.StagedQuoteStateEnum.html" title="enum class in com.commercetools.api.models.staged_quote">StagedQuoteState.StagedQuoteStateEnum</a></dt>
 <dd>

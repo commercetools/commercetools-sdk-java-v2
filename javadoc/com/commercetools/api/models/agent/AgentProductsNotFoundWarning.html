@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">AgentProductsNotFoundWarning</span><span class="extends-implements">
 extends <a href="../warning/WarningObject.html" title="interface in com.commercetools.api.models.warning">WarningObject</a></span></div>
-<div class="block"><p>Returned when one or more Products referenced in an Intake Agent <span>API request</span> could not be matched to the catalog. The unmatched Products are omitted from the created entity.</p>
+<div class="block"><p>Returned when one or more Products referenced in an Intake Agent <span>API request</span> could not be matched to the catalog or are unavailable in the bound Store. The omitted Products are excluded from the created entity.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -147,12 +147,12 @@ extends <a href="../warning/WarningObject.html" title="interface in com.commerce
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMessage()" class="member-name-link">getMessage</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Plain text description of the unmatched Products.</div>
+<div class="block">Plain text description of the omitted Products.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getProducts()" class="member-name-link">getProducts</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Identifiers of the Products that could not be matched to the catalog, as they appeared in the input.</div>
+<div class="block">Identifiers of the Products that could not be matched to the catalog or are unavailable in the bound Store, as they appeared in the input.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="AgentProductsNotFoundWarning.html" title="interface in com.commercetools.api.models.agent">AgentProductsNotFoundWarning</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -167,17 +167,17 @@ extends <a href="../warning/WarningObject.html" title="interface in com.commerce
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setMessage(java.lang.String)" class="member-name-link">setMessage</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Plain text description of the unmatched Products.</div>
+<div class="block">Plain text description of the omitted Products.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setProducts(java.lang.String...)" class="member-name-link">setProducts</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;products)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Identifiers of the Products that could not be matched to the catalog, as they appeared in the input.</div>
+<div class="block">Identifiers of the Products that could not be matched to the catalog or are unavailable in the bound Store, as they appeared in the input.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setProducts(java.util.List)" class="member-name-link">setProducts</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;products)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Identifiers of the Products that could not be matched to the catalog, as they appeared in the input.</div>
+<div class="block">Identifiers of the Products that could not be matched to the catalog or are unavailable in the bound Store, as they appeared in the input.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static tools.jackson.core.type.TypeReference&lt;<a href="AgentProductsNotFoundWarning.html" title="interface in com.commercetools.api.models.agent">AgentProductsNotFoundWarning</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -249,7 +249,7 @@ extends <a href="../warning/WarningObject.html" title="interface in com.commerce
 <h3>getMessage</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getMessage</span>()</div>
-<div class="block"><p>Plain text description of the unmatched Products.</p></div>
+<div class="block"><p>Plain text description of the omitted Products.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../warning/WarningObject.html#getMessage()">getMessage</a></code>&nbsp;in interface&nbsp;<code><a href="../warning/WarningObject.html" title="interface in com.commercetools.api.models.warning">WarningObject</a></code></dd>
@@ -263,7 +263,7 @@ extends <a href="../warning/WarningObject.html" title="interface in com.commerce
 <h3>getProducts</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getProducts</span>()</div>
-<div class="block"><p>Identifiers of the Products that could not be matched to the catalog, as they appeared in the input.</p></div>
+<div class="block"><p>Identifiers of the Products that could not be matched to the catalog or are unavailable in the bound Store, as they appeared in the input.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>products</dd>
@@ -274,7 +274,7 @@ extends <a href="../warning/WarningObject.html" title="interface in com.commerce
 <section class="detail" id="setMessage(java.lang.String)">
 <h3>setMessage</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setMessage</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</span></div>
-<div class="block"><p>Plain text description of the unmatched Products.</p></div>
+<div class="block"><p>Plain text description of the omitted Products.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../warning/WarningObject.html#setMessage(java.lang.String)">setMessage</a></code>&nbsp;in interface&nbsp;<code><a href="../warning/WarningObject.html" title="interface in com.commercetools.api.models.warning">WarningObject</a></code></dd>
@@ -287,7 +287,7 @@ extends <a href="../warning/WarningObject.html" title="interface in com.commerce
 <section class="detail" id="setProducts(java.lang.String...)">
 <h3>setProducts</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setProducts</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;products)</span></div>
-<div class="block"><p>Identifiers of the Products that could not be matched to the catalog, as they appeared in the input.</p></div>
+<div class="block"><p>Identifiers of the Products that could not be matched to the catalog or are unavailable in the bound Store, as they appeared in the input.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>products</code> - values to be set</dd>
@@ -298,7 +298,7 @@ extends <a href="../warning/WarningObject.html" title="interface in com.commerce
 <section class="detail" id="setProducts(java.util.List)">
 <h3>setProducts</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setProducts</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;products)</span></div>
-<div class="block"><p>Identifiers of the Products that could not be matched to the catalog, as they appeared in the input.</p></div>
+<div class="block"><p>Identifiers of the Products that could not be matched to the catalog or are unavailable in the bound Store, as they appeared in the input.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>products</code> - values to be set</dd>

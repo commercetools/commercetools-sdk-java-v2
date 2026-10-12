@@ -93,6 +93,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
              .slug(slugBuilder -> slugBuilder)
              .plusAncestors(ancestorsBuilder -> ancestorsBuilder)
              .orderHint("{orderHint}")
+             .plusStores(storesBuilder -> storesBuilder)
              .build()
  </code></pre>
  </div></div>
@@ -206,7 +207,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOrderHint()" class="member-name-link">getOrderHint</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Decimal value between 0 and 1.</div>
+<div class="block">A decimal value between 0 and 1 used to order Categories within the same level of the category tree.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getParent()" class="member-name-link">getParent</a>()</code></div>
@@ -218,137 +219,152 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">User-defined identifier used as a deep-link URL to the related Category per <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVersion()" class="member-name-link">getVersion</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStores()" class="member-name-link">getStores</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Current version of the Category.</div>
+<div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Category is assigned and that you have permission to access.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="Category.html" title="interface in com.commercetools.api.models.category">Category</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
-<div class="block">factory method</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVersion()" class="member-name-link">getVersion</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Current version of the Category.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="Category.html" title="interface in com.commercetools.api.models.category">Category</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.api.models.category.Category)" class="member-name-link">of</a><wbr>(<a href="Category.html" title="interface in com.commercetools.api.models.category">Category</a>&nbsp;template)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">factory method</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="Category.html" title="interface in com.commercetools.api.models.category">Category</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.api.models.category.Category)" class="member-name-link">of</a><wbr>(<a href="Category.html" title="interface in com.commercetools.api.models.category">Category</a>&nbsp;template)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a shallow copy Category</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="../common/ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#referenceTypeId()" class="member-name-link">referenceTypeId</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAncestors(com.commercetools.api.models.category.CategoryReference...)" class="member-name-link">setAncestors</a><wbr>(<a href="CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>...&nbsp;ancestors)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Contains the parent path towards the root Category.</div>
-</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="../common/ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#referenceTypeId()" class="member-name-link">referenceTypeId</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAncestors(java.util.List)" class="member-name-link">setAncestors</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>&gt;&nbsp;ancestors)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAncestors(com.commercetools.api.models.category.CategoryReference...)" class="member-name-link">setAncestors</a><wbr>(<a href="CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>...&nbsp;ancestors)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Contains the parent path towards the root Category.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAssets(com.commercetools.api.models.common.Asset...)" class="member-name-link">setAssets</a><wbr>(<a href="../common/Asset.html" title="interface in com.commercetools.api.models.common">Asset</a>...&nbsp;assets)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAncestors(java.util.List)" class="member-name-link">setAncestors</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>&gt;&nbsp;ancestors)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Media related to the Category.</div>
+<div class="block">Contains the parent path towards the root Category.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAssets(java.util.List)" class="member-name-link">setAssets</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Asset.html" title="interface in com.commercetools.api.models.common">Asset</a>&gt;&nbsp;assets)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAssets(com.commercetools.api.models.common.Asset...)" class="member-name-link">setAssets</a><wbr>(<a href="../common/Asset.html" title="interface in com.commercetools.api.models.common">Asset</a>...&nbsp;assets)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Media related to the Category.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCreatedAt(java.time.ZonedDateTime)" class="member-name-link">setCreatedAt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAssets(java.util.List)" class="member-name-link">setAssets</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Asset.html" title="interface in com.commercetools.api.models.common">Asset</a>&gt;&nbsp;assets)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Media related to the Category.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCreatedAt(java.time.ZonedDateTime)" class="member-name-link">setCreatedAt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Date and time (UTC) the Category was initially created.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCreatedBy(com.commercetools.api.models.common.CreatedBy)" class="member-name-link">setCreatedBy</a><wbr>(<a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&nbsp;createdBy)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCreatedBy(com.commercetools.api.models.common.CreatedBy)" class="member-name-link">setCreatedBy</a><wbr>(<a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&nbsp;createdBy)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">IDs and references that created the Category.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCustom(com.commercetools.api.models.type.CustomFields)" class="member-name-link">setCustom</a><wbr>(<a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;custom)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCustom(com.commercetools.api.models.type.CustomFields)" class="member-name-link">setCustom</a><wbr>(<a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;custom)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Custom Fields of the Category.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setDescription(com.commercetools.api.models.common.LocalizedString)" class="member-name-link">setDescription</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;description)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setDescription(com.commercetools.api.models.common.LocalizedString)" class="member-name-link">setDescription</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;description)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Description of the Category.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setExternalId(java.lang.String)" class="member-name-link">setExternalId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;externalId)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setExternalId(java.lang.String)" class="member-name-link">setExternalId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;externalId)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Additional identifier for external systems like customer relationship management (CRM) or enterprise resource planning (ERP).</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setId(java.lang.String)" class="member-name-link">setId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setId(java.lang.String)" class="member-name-link">setId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Unique identifier of the Category.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setKey(java.lang.String)" class="member-name-link">setKey</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setKey(java.lang.String)" class="member-name-link">setKey</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">User-defined unique identifier of the Category.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setLastModifiedAt(java.time.ZonedDateTime)" class="member-name-link">setLastModifiedAt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setLastModifiedAt(java.time.ZonedDateTime)" class="member-name-link">setLastModifiedAt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Date and time (UTC) the Category was last updated.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy)" class="member-name-link">setLastModifiedBy</a><wbr>(<a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;lastModifiedBy)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy)" class="member-name-link">setLastModifiedBy</a><wbr>(<a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;lastModifiedBy)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">IDs and references that last modified the Category.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setMetaDescription(com.commercetools.api.models.common.LocalizedString)" class="member-name-link">setMetaDescription</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;metaDescription)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setMetaDescription(com.commercetools.api.models.common.LocalizedString)" class="member-name-link">setMetaDescription</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;metaDescription)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Description of the Category used by external search engines for improved search engine performance.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setMetaKeywords(com.commercetools.api.models.common.LocalizedString)" class="member-name-link">setMetaKeywords</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;metaKeywords)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setMetaKeywords(com.commercetools.api.models.common.LocalizedString)" class="member-name-link">setMetaKeywords</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;metaKeywords)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Keywords related to the Category for improved search engine performance.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setMetaTitle(com.commercetools.api.models.common.LocalizedString)" class="member-name-link">setMetaTitle</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;metaTitle)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setMetaTitle(com.commercetools.api.models.common.LocalizedString)" class="member-name-link">setMetaTitle</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;metaTitle)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Name of the Category used by external search engines for improved search engine performance.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setName(com.commercetools.api.models.common.LocalizedString)" class="member-name-link">setName</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setName(com.commercetools.api.models.common.LocalizedString)" class="member-name-link">setName</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Name of the Category.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setOrderHint(java.lang.String)" class="member-name-link">setOrderHint</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;orderHint)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Decimal value between 0 and 1.</div>
-</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setParent(com.commercetools.api.models.category.CategoryReference)" class="member-name-link">setParent</a><wbr>(<a href="CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>&nbsp;parent)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setOrderHint(java.lang.String)" class="member-name-link">setOrderHint</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;orderHint)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">A decimal value between 0 and 1 used to order Categories within the same level of the category tree.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setParent(com.commercetools.api.models.category.CategoryReference)" class="member-name-link">setParent</a><wbr>(<a href="CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>&nbsp;parent)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Parent Category of this Category.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setSlug(com.commercetools.api.models.common.LocalizedString)" class="member-name-link">setSlug</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;slug)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setSlug(com.commercetools.api.models.common.LocalizedString)" class="member-name-link">setSlug</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;slug)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">User-defined identifier used as a deep-link URL to the related Category per <a href="https://docs.commercetools.com/apis/ctp:api:type:Locale" rel="nofollow">Locale</a>.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setStores(com.commercetools.api.models.store.StoreKeyReference...)" class="member-name-link">setStores</a><wbr>(<a href="../store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a>...&nbsp;stores)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Category is assigned and that you have permission to access.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setVersion(java.lang.Long)" class="member-name-link">setVersion</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setStores(java.util.List)" class="member-name-link">setStores</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a>&gt;&nbsp;stores)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Category is assigned and that you have permission to access.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setVersion(java.lang.Long)" class="member-name-link">setVersion</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Current version of the Category.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static tools.jackson.core.type.TypeReference&lt;<a href="Category.html" title="interface in com.commercetools.api.models.category">Category</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static tools.jackson.core.type.TypeReference&lt;<a href="Category.html" title="interface in com.commercetools.api.models.category">Category</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withCategory(java.util.function.Function)" class="member-name-link">withCategory</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="Category.html" title="interface in com.commercetools.api.models.category">Category</a>,<wbr>T&gt;&nbsp;helper)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withCategory(java.util.function.Function)" class="member-name-link">withCategory</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="Category.html" title="interface in com.commercetools.api.models.category">Category</a>,<wbr>T&gt;&nbsp;helper)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">accessor map function</div>
 </div>
 </div>
@@ -535,7 +551,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <h3>getOrderHint</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getOrderHint</span>()</div>
-<div class="block"><p>Decimal value between 0 and 1. Frontend applications can use this value for ordering Categories within the same level in the category tree.</p></div>
+<div class="block"><p>A decimal value between 0 and 1 used to order Categories within the same level of the category tree. When sorted in ascending order, Categories with a lower <code>orderHint</code> appear before those with a higher value (for example, <code>0.05</code> before <code>0.07</code>).</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>orderHint</dd>
@@ -625,6 +641,21 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <dd><code><a href="../WithKey.html#getKey()">getKey</a></code>&nbsp;in interface&nbsp;<code><a href="../WithKey.html" title="interface in com.commercetools.api.models">WithKey</a></code></dd>
 <dt>Returns:</dt>
 <dd>key</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getStores()">
+<h3>getStores</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+@Valid
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a>&gt;</span>&nbsp;<span class="element-name">getStores</span>()</div>
+<div class="block"><p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Category is assigned and that you have permission to access.</p>
+  <p>If <code>stores</code> is empty, the Category is global and available in every <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
+  <p>If the Category is created via the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/categories" rel="nofollow">Store-specific endpoint</a>, the Store specified in the request path is automatically added to the field value.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>stores</dd>
 </dl>
 </section>
 </li>
@@ -772,7 +803,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <section class="detail" id="setOrderHint(java.lang.String)">
 <h3>setOrderHint</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setOrderHint</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;orderHint)</span></div>
-<div class="block"><p>Decimal value between 0 and 1. Frontend applications can use this value for ordering Categories within the same level in the category tree.</p></div>
+<div class="block"><p>A decimal value between 0 and 1 used to order Categories within the same level of the category tree. When sorted in ascending order, Categories with a lower <code>orderHint</code> appear before those with a higher value (for example, <code>0.05</code> before <code>0.07</code>).</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>orderHint</code> - value to be set</dd>
@@ -866,6 +897,32 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>key</code> - value to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setStores(com.commercetools.api.models.store.StoreKeyReference...)">
+<h3>setStores</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setStores</span><wbr><span class="parameters">(<a href="../store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a>...&nbsp;stores)</span></div>
+<div class="block"><p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Category is assigned and that you have permission to access.</p>
+  <p>If <code>stores</code> is empty, the Category is global and available in every <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
+  <p>If the Category is created via the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/categories" rel="nofollow">Store-specific endpoint</a>, the Store specified in the request path is automatically added to the field value.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>stores</code> - values to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setStores(java.util.List)">
+<h3>setStores</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setStores</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a>&gt;&nbsp;stores)</span></div>
+<div class="block"><p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Category is assigned and that you have permission to access.</p>
+  <p>If <code>stores</code> is empty, the Category is global and available in every <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
+  <p>If the Category is created via the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/categories" rel="nofollow">Store-specific endpoint</a>, the Store specified in the request path is automatically added to the field value.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>stores</code> - values to be set</dd>
 </dl>
 </section>
 </li>

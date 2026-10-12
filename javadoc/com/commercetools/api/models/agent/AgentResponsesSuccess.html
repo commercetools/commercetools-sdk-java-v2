@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Known Subinterfaces:</dt>
-<dd><code><a href="AgentResponsesCartSuccess.html" title="interface in com.commercetools.api.models.agent">AgentResponsesCartSuccess</a></code>, <code><a href="AgentResponsesQuoteRequestSuccess.html" title="interface in com.commercetools.api.models.agent">AgentResponsesQuoteRequestSuccess</a></code></dd>
+<dd><code><a href="AgentResponsesCartSuccess.html" title="interface in com.commercetools.api.models.agent">AgentResponsesCartSuccess</a></code>, <code><a href="AgentResponsesQuoteRequestSuccess.html" title="interface in com.commercetools.api.models.agent">AgentResponsesQuoteRequestSuccess</a></code>, <code><a href="AgentResponsesShoppingListSuccess.html" title="interface in com.commercetools.api.models.agent">AgentResponsesShoppingListSuccess</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">AgentResponsesSuccess</span></div>
@@ -82,6 +82,7 @@ loadScripts(document, 'script');</script>
   <ul>
    <li><a href="https://docs.commercetools.com/apis/ctp:api:type:AgentResponsesCartSuccess" rel="nofollow">AgentResponsesCartSuccess</a> when a <a href="https://docs.commercetools.com/apis/ctp:api:type:Cart" rel="nofollow">Cart</a> was created</li>
    <li><a href="https://docs.commercetools.com/apis/ctp:api:type:AgentResponsesQuoteRequestSuccess" rel="nofollow">AgentResponsesQuoteRequestSuccess</a> when a <a href="https://docs.commercetools.com/apis/ctp:api:type:QuoteRequest" rel="nofollow">QuoteRequest</a> was created</li>
+   <li><a href="https://docs.commercetools.com/apis/ctp:api:type:AgentResponsesShoppingListSuccess" rel="nofollow">AgentResponsesShoppingListSuccess</a> when a <a href="https://docs.commercetools.com/apis/ctp:api:type:ShoppingList" rel="nofollow">ShoppingList</a> was created</li>
   </ul>
 
  <hr>
@@ -156,14 +157,19 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Non-fatal issues encountered while processing the request.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static tools.jackson.core.type.TypeReference&lt;<a href="AgentResponsesSuccess.html" title="interface in com.commercetools.api.models.agent">AgentResponsesSuccess</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="AgentResponsesShoppingListSuccessBuilder.html" title="class in com.commercetools.api.models.agent">AgentResponsesShoppingListSuccessBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#shoppingListBuilder()" class="member-name-link">shoppingListBuilder</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for shoppingList subtype</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static tools.jackson.core.type.TypeReference&lt;<a href="AgentResponsesSuccess.html" title="interface in com.commercetools.api.models.agent">AgentResponsesSuccess</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withAgentResponsesSuccess(java.util.function.Function)" class="member-name-link">withAgentResponsesSuccess</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AgentResponsesSuccess.html" title="interface in com.commercetools.api.models.agent">AgentResponsesSuccess</a>,<wbr>T&gt;&nbsp;helper)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withAgentResponsesSuccess(java.util.function.Function)" class="member-name-link">withAgentResponsesSuccess</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AgentResponsesSuccess.html" title="interface in com.commercetools.api.models.agent">AgentResponsesSuccess</a>,<wbr>T&gt;&nbsp;helper)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">accessor map function</div>
 </div>
 </div>
@@ -286,6 +292,17 @@ loadScripts(document, 'script');</script>
 <h3>quoteRequestBuilder</h3>
 <div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AgentResponsesQuoteRequestSuccessBuilder.html" title="class in com.commercetools.api.models.agent">AgentResponsesQuoteRequestSuccessBuilder</a></span>&nbsp;<span class="element-name">quoteRequestBuilder</span>()</div>
 <div class="block">builder for quoteRequest subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="shoppingListBuilder()">
+<h3>shoppingListBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AgentResponsesShoppingListSuccessBuilder.html" title="class in com.commercetools.api.models.agent">AgentResponsesShoppingListSuccessBuilder</a></span>&nbsp;<span class="element-name">shoppingListBuilder</span>()</div>
+<div class="block">builder for shoppingList subtype</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>builder</dd>

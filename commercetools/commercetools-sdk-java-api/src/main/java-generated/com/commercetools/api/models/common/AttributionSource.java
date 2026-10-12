@@ -23,7 +23,7 @@ public interface AttributionSource extends JsonEnum {
     <p>Resource was created or updated during export.</p> */
     AttributionSource EXPORT = AttributionSourceEnum.EXPORT;
     /**
-    <p>Resource was created or updated by Intake Agent.</p> */
+    <p>Resource was created or updated by Intake.</p> */
     AttributionSource INTAKE_AGENT = AttributionSourceEnum.INTAKE_AGENT;
     /**
     <p>Resource was created or updated by Promotions Agent.</p> */

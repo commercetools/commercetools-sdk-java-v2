@@ -16,7 +16,7 @@ import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Returned by a <span>/responses</span> request when the Intake Agent is not enabled for the Project.</p>
+ *  <p>Returned by a <span>/responses</span> request when Intake is not enabled for the Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

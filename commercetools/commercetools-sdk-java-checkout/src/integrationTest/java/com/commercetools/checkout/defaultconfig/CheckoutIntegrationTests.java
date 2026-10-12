@@ -10,6 +10,7 @@ import com.commercetools.checkout.models.transaction.TransactionItemDraft;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Assumptions;
 import org.junit.jupiter.api.Test;
 
 public class CheckoutIntegrationTests {
@@ -38,6 +39,12 @@ public class CheckoutIntegrationTests {
     // create client, then cart, then transaction
     @Test
     public void createAndGetTransactionTest() {
+        // the Checkout API validates that these resources exist in the test project
+        var paymentMethodId = System.getenv("CTP_CHECKOUT_PAYMENT_METHOD_ID");
+        var connectorDeploymentId = System.getenv("CTP_CHECKOUT_CONNECTOR_DEPLOYMENT_ID");
+        Assumptions.assumeTrue(paymentMethodId != null && connectorDeploymentId != null,
+            "CTP_CHECKOUT_PAYMENT_METHOD_ID and CTP_CHECKOUT_CONNECTOR_DEPLOYMENT_ID must be set");
+
         var newCart = CartDraft.builder().currency("EUR").build();
 
         var cart = projectApiRoot.carts().post(newCart).executeBlocking().getBody();
@@ -52,8 +59,8 @@ public class CheckoutIntegrationTests {
                         .cart(c -> c.id(cart.getId()))
                         .plusTransactionItems(TransactionItemDraft.recurringBuilder()
                                 .amount(a -> a.centAmount(100).currencyCode("EUR"))
-                                .paymentMethod(p -> p.id("ci-payment-method"))
-                                .connectorDeployment(c -> c.id("ci-connector-deployment").typeId("deployment"))
+                                .paymentMethod(p -> p.id(paymentMethodId))
+                                .connectorDeployment(c -> c.id(connectorDeploymentId).typeId("deployment"))
                                 .build())
                         .build()
 

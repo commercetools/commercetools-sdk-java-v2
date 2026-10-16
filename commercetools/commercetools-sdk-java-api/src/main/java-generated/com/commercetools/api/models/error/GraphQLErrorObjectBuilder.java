@@ -443,6 +443,10 @@ public class GraphQLErrorObjectBuilder {
         return com.commercetools.api.models.error.GraphQLSyntaxErrorErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.GraphQLTooManyRequestsErrorBuilder tooManyRequestsBuilder() {
+        return com.commercetools.api.models.error.GraphQLTooManyRequestsErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.GraphQLUnauthorizedErrorBuilder unauthorizedBuilder() {
         return com.commercetools.api.models.error.GraphQLUnauthorizedErrorBuilder.of();
     }

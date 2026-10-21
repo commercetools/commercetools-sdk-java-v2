@@ -2312,6 +2312,14 @@ public interface MessagePayload extends MessagePayloadMixin {
     }
 
     /**
+     * builder for recurringOrderNowRequested subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderNowRequestedMessagePayloadBuilder recurringOrderNowRequestedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderNowRequestedMessagePayloadBuilder.of();
+    }
+
+    /**
      * builder for recurringOrderScheduleSet subtype
      * @return builder
      */

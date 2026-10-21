@@ -21,8 +21,7 @@ import tools.jackson.databind.annotation.*;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     RecurringOrderUpdateAction recurringOrderUpdateAction = RecurringOrderUpdateAction.setCustomFieldBuilder()
- *             name("{name}")
+ *     RecurringOrderUpdateAction recurringOrderUpdateAction = RecurringOrderUpdateAction.requestOrderNowBuilder()
  *             .build()
  * </code></pre>
  * </div>
@@ -58,6 +57,14 @@ public interface RecurringOrderUpdateAction {
         }
         RecurringOrderUpdateActionImpl instance = new RecurringOrderUpdateActionImpl();
         return instance;
+    }
+
+    /**
+     * builder for requestOrderNow subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.recurring_order.RecurringOrderRequestOrderNowActionBuilder requestOrderNowBuilder() {
+        return com.commercetools.api.models.recurring_order.RecurringOrderRequestOrderNowActionBuilder.of();
     }
 
     /**

@@ -19,6 +19,10 @@ public class RecurrencePolicyUpdateActionBuilder {
         return com.commercetools.api.models.recurrence_policy.RecurrencePolicySetKeyActionBuilder.of();
     }
 
+    public com.commercetools.api.models.recurrence_policy.RecurrencePolicySetMinDaysBetweenOrdersActionBuilder setMinDaysBetweenOrdersBuilder() {
+        return com.commercetools.api.models.recurrence_policy.RecurrencePolicySetMinDaysBetweenOrdersActionBuilder.of();
+    }
+
     public com.commercetools.api.models.recurrence_policy.RecurrencePolicySetNameActionBuilder setNameBuilder() {
         return com.commercetools.api.models.recurrence_policy.RecurrencePolicySetNameActionBuilder.of();
     }

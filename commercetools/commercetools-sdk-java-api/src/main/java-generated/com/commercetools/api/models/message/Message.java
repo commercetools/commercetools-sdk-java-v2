@@ -2486,6 +2486,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for recurringOrderNowRequested subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderNowRequestedMessageBuilder recurringOrderNowRequestedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderNowRequestedMessageBuilder.of();
+    }
+
+    /**
      * builder for recurringOrderScheduleSet subtype
      * @return builder
      */

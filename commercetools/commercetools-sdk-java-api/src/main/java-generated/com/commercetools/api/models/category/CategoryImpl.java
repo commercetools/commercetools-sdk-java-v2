@@ -63,6 +63,8 @@ public class CategoryImpl implements Category, ModelBase {
 
     private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
 
+    private java.util.List<com.commercetools.api.models.warning.WarningObject> warnings;
+
     /**
      * create instance with all properties
      */
@@ -84,7 +86,8 @@ public class CategoryImpl implements Category, ModelBase {
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("assets") final java.util.List<com.commercetools.api.models.common.Asset> assets,
             @JsonProperty("key") final String key,
-            @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores) {
+            @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores,
+            @JsonProperty("warnings") final java.util.List<com.commercetools.api.models.warning.WarningObject> warnings) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -105,6 +108,7 @@ public class CategoryImpl implements Category, ModelBase {
         this.assets = assets;
         this.key = key;
         this.stores = stores;
+        this.warnings = warnings;
     }
 
     /**
@@ -268,11 +272,19 @@ public class CategoryImpl implements Category, ModelBase {
     /**
      *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Stores</a> to which the Category is assigned and that you have permission to access.</p>
      *  <p>If <code>stores</code> is empty, the Category is global and available in every <a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a>.</p>
-     *  <p>If the Category is created via the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/categories" rel="nofollow">Store-specific endpoint</a>, the Store specified in the request path is automatically added to the field value.</p>
+     *  <p>If the Category is created via the <a href="https://docs.commercetools.com/apis/ctp:api:endpoint:/{projectKey}/in-store/key={storeKey}/categories:POST" rel="nofollow">Store-specific endpoint</a>, the Store specified in the request path is automatically added to the field value.</p>
      */
 
     public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {
         return this.stores;
+    }
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.warning.WarningObject> getWarnings() {
+        return this.warnings;
     }
 
     public void setId(final String id) {
@@ -367,6 +379,14 @@ public class CategoryImpl implements Category, ModelBase {
         this.stores = stores;
     }
 
+    public void setWarnings(final com.commercetools.api.models.warning.WarningObject... warnings) {
+        this.warnings = new ArrayList<>(Arrays.asList(warnings));
+    }
+
+    public void setWarnings(final java.util.List<com.commercetools.api.models.warning.WarningObject> warnings) {
+        this.warnings = warnings;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -397,6 +417,7 @@ public class CategoryImpl implements Category, ModelBase {
                 .append(assets, that.assets)
                 .append(key, that.key)
                 .append(stores, that.stores)
+                .append(warnings, that.warnings)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -417,6 +438,7 @@ public class CategoryImpl implements Category, ModelBase {
                 .append(assets, that.assets)
                 .append(key, that.key)
                 .append(stores, that.stores)
+                .append(warnings, that.warnings)
                 .isEquals();
     }
 
@@ -442,6 +464,7 @@ public class CategoryImpl implements Category, ModelBase {
                 .append(assets)
                 .append(key)
                 .append(stores)
+                .append(warnings)
                 .toHashCode();
     }
 
@@ -467,6 +490,7 @@ public class CategoryImpl implements Category, ModelBase {
                 .append("assets", assets)
                 .append("key", key)
                 .append("stores", stores)
+                .append("warnings", warnings)
                 .build();
     }
 

@@ -29,6 +29,7 @@ public class RecurrencePolicyTest {
                                 .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
                 new Object[] { "schedule", RecurrencePolicy.builder()
                         .schedule(new com.commercetools.api.models.recurrence_policy.RecurrencePolicyScheduleImpl()) },
+                new Object[] { "minDaysBetweenOrders", RecurrencePolicy.builder().minDaysBetweenOrders(6) },
                 new Object[] { "createdAt",
                         RecurrencePolicy.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
                 new Object[] { "createdBy",
@@ -81,6 +82,13 @@ public class RecurrencePolicyTest {
         value.setSchedule(new com.commercetools.api.models.recurrence_policy.RecurrencePolicyScheduleImpl());
         Assertions.assertThat(value.getSchedule())
                 .isEqualTo(new com.commercetools.api.models.recurrence_policy.RecurrencePolicyScheduleImpl());
+    }
+
+    @Test
+    public void minDaysBetweenOrders() {
+        RecurrencePolicy value = RecurrencePolicy.of();
+        value.setMinDaysBetweenOrders(6);
+        Assertions.assertThat(value.getMinDaysBetweenOrders()).isEqualTo(6);
     }
 
     @Test

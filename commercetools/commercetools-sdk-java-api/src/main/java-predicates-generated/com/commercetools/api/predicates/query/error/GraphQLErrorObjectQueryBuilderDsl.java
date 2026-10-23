@@ -819,6 +819,13 @@ public class GraphQLErrorObjectQueryBuilderDsl {
             GraphQLErrorObjectQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asTooManyRequests(
+            Function<com.commercetools.api.predicates.query.error.GraphQLTooManyRequestsErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLTooManyRequestsErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.error.GraphQLTooManyRequestsErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asUnauthorized(
             Function<com.commercetools.api.predicates.query.error.GraphQLUnauthorizedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLUnauthorizedErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

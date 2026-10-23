@@ -11,7 +11,7 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Entity that the Intake Agent creates from a <span>/responses</span> request. Never inferred from the input.</p>
+ *  <p>Entity that Intake creates from a <span>/responses</span> request. Never inferred from the input.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface AgentResponsesOutputType extends JsonEnum {

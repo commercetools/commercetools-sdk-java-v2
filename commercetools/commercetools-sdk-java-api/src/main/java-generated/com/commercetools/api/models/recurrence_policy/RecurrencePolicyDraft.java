@@ -68,6 +68,16 @@ public interface RecurrencePolicyDraft extends io.vrap.rmf.base.client.Draft<Rec
     public RecurrencePolicyScheduleDraft getSchedule();
 
     /**
+     *  <p>Minimum number of days that must pass since the last Order of a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderRequestOrderNowAction" rel="nofollow">Request Order Now</a> update action is allowed. If not set, there is no limit.</p>
+     *  <p>This value does not affect the recurrence schedule. For example, a weekly RecurrencePolicy with a value of <code>30</code> still creates Orders weekly. The time is measured in multiples of 24 hours from <code>lastOrderAt</code> of the Recurring Order, regardless of whether the last Order was created on schedule or early.</p>
+     *  <p>The limit applies to all Recurring Orders that use this RecurrencePolicy, and changes take effect immediately. It is ignored when the RecurrencePolicy is attached to a Price.</p>
+     * @return minDaysBetweenOrders
+     */
+
+    @JsonProperty("minDaysBetweenOrders")
+    public Integer getMinDaysBetweenOrders();
+
+    /**
      *  <p>User-defined unique identifier for the RecurrencePolicy.</p>
      * @param key value to be set
      */
@@ -96,6 +106,15 @@ public interface RecurrencePolicyDraft extends io.vrap.rmf.base.client.Draft<Rec
     public void setSchedule(final RecurrencePolicyScheduleDraft schedule);
 
     /**
+     *  <p>Minimum number of days that must pass since the last Order of a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderRequestOrderNowAction" rel="nofollow">Request Order Now</a> update action is allowed. If not set, there is no limit.</p>
+     *  <p>This value does not affect the recurrence schedule. For example, a weekly RecurrencePolicy with a value of <code>30</code> still creates Orders weekly. The time is measured in multiples of 24 hours from <code>lastOrderAt</code> of the Recurring Order, regardless of whether the last Order was created on schedule or early.</p>
+     *  <p>The limit applies to all Recurring Orders that use this RecurrencePolicy, and changes take effect immediately. It is ignored when the RecurrencePolicy is attached to a Price.</p>
+     * @param minDaysBetweenOrders value to be set
+     */
+
+    public void setMinDaysBetweenOrders(final Integer minDaysBetweenOrders);
+
+    /**
      * factory method
      * @return instance of RecurrencePolicyDraft
      */
@@ -114,6 +133,7 @@ public interface RecurrencePolicyDraft extends io.vrap.rmf.base.client.Draft<Rec
         instance.setName(template.getName());
         instance.setDescription(template.getDescription());
         instance.setSchedule(template.getSchedule());
+        instance.setMinDaysBetweenOrders(template.getMinDaysBetweenOrders());
         return instance;
     }
 
@@ -136,6 +156,7 @@ public interface RecurrencePolicyDraft extends io.vrap.rmf.base.client.Draft<Rec
             com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         instance.setSchedule(com.commercetools.api.models.recurrence_policy.RecurrencePolicyScheduleDraft
                 .deepCopy(template.getSchedule()));
+        instance.setMinDaysBetweenOrders(template.getMinDaysBetweenOrders());
         return instance;
     }
 

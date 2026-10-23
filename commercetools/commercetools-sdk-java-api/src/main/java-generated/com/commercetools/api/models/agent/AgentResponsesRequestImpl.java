@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>JSON body for an <code>application/json</code> <span>/responses</span> request to the Intake Agent. <code>prompt</code> is required.</p>
+ *  <p>JSON body for an <code>application/json</code> <span>/responses</span> request to Intake. <code>prompt</code> is required.</p>
  *  <p>To attach files, send a <code>multipart/form-data</code> request with an <a href="https://docs.commercetools.com/apis/ctp:api:type:AgentResponsesPayload" rel="nofollow">AgentResponsesPayload</a> as the <code>payload</code> part.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -81,7 +81,7 @@ public class AgentResponsesRequestImpl implements AgentResponsesRequest, ModelBa
     }
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> to use for the request. If omitted, the Intake Agent resolves it from <code>prompt</code>.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> to use for the request. If omitted, Intake resolves it from <code>prompt</code>.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getBusinessUnit() {
@@ -89,7 +89,7 @@ public class AgentResponsesRequestImpl implements AgentResponsesRequest, ModelBa
     }
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to use for the request. If omitted, the Intake Agent resolves it from <code>prompt</code>.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to use for the request. If omitted, Intake resolves it from <code>prompt</code>.</p>
      */
 
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {

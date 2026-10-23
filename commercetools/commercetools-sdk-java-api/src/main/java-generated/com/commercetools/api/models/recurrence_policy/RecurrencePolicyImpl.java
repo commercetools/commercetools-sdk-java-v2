@@ -39,6 +39,8 @@ public class RecurrencePolicyImpl implements RecurrencePolicy, ModelBase {
 
     private com.commercetools.api.models.recurrence_policy.RecurrencePolicySchedule schedule;
 
+    private Integer minDaysBetweenOrders;
+
     private com.commercetools.api.models.common.CreatedBy createdBy;
 
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
@@ -54,6 +56,7 @@ public class RecurrencePolicyImpl implements RecurrencePolicy, ModelBase {
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,
             @JsonProperty("schedule") final com.commercetools.api.models.recurrence_policy.RecurrencePolicySchedule schedule,
+            @JsonProperty("minDaysBetweenOrders") final Integer minDaysBetweenOrders,
             @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy,
             @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.id = id;
@@ -64,6 +67,7 @@ public class RecurrencePolicyImpl implements RecurrencePolicy, ModelBase {
         this.name = name;
         this.description = description;
         this.schedule = schedule;
+        this.minDaysBetweenOrders = minDaysBetweenOrders;
         this.createdBy = createdBy;
         this.lastModifiedBy = lastModifiedBy;
     }
@@ -139,6 +143,16 @@ public class RecurrencePolicyImpl implements RecurrencePolicy, ModelBase {
     }
 
     /**
+     *  <p>Minimum number of days that must pass since the last Order of a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderRequestOrderNowAction" rel="nofollow">Request Order Now</a> update action is allowed. If not set, there is no limit.</p>
+     *  <p>This value does not affect the recurrence schedule. For example, a weekly RecurrencePolicy with a value of <code>30</code> still creates Orders weekly. The time is measured in multiples of 24 hours from <code>lastOrderAt</code> of the Recurring Order, regardless of whether the last Order was created on schedule or early.</p>
+     *  <p>The limit applies to all Recurring Orders that use this RecurrencePolicy, and changes take effect immediately. It is ignored when the RecurrencePolicy is attached to a Price.</p>
+     */
+
+    public Integer getMinDaysBetweenOrders() {
+        return this.minDaysBetweenOrders;
+    }
+
+    /**
      *  <p>IDs and references that created the RecurrencePolicy.</p>
      */
 
@@ -186,6 +200,10 @@ public class RecurrencePolicyImpl implements RecurrencePolicy, ModelBase {
         this.schedule = schedule;
     }
 
+    public void setMinDaysBetweenOrders(final Integer minDaysBetweenOrders) {
+        this.minDaysBetweenOrders = minDaysBetweenOrders;
+    }
+
     public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
     }
@@ -212,6 +230,7 @@ public class RecurrencePolicyImpl implements RecurrencePolicy, ModelBase {
                 .append(name, that.name)
                 .append(description, that.description)
                 .append(schedule, that.schedule)
+                .append(minDaysBetweenOrders, that.minDaysBetweenOrders)
                 .append(createdBy, that.createdBy)
                 .append(lastModifiedBy, that.lastModifiedBy)
                 .append(id, that.id)
@@ -222,6 +241,7 @@ public class RecurrencePolicyImpl implements RecurrencePolicy, ModelBase {
                 .append(name, that.name)
                 .append(description, that.description)
                 .append(schedule, that.schedule)
+                .append(minDaysBetweenOrders, that.minDaysBetweenOrders)
                 .append(createdBy, that.createdBy)
                 .append(lastModifiedBy, that.lastModifiedBy)
                 .isEquals();
@@ -237,6 +257,7 @@ public class RecurrencePolicyImpl implements RecurrencePolicy, ModelBase {
                 .append(name)
                 .append(description)
                 .append(schedule)
+                .append(minDaysBetweenOrders)
                 .append(createdBy)
                 .append(lastModifiedBy)
                 .toHashCode();
@@ -252,6 +273,7 @@ public class RecurrencePolicyImpl implements RecurrencePolicy, ModelBase {
                 .append("name", name)
                 .append("description", description)
                 .append("schedule", schedule)
+                .append("minDaysBetweenOrders", minDaysBetweenOrders)
                 .append("createdBy", createdBy)
                 .append("lastModifiedBy", lastModifiedBy)
                 .build();

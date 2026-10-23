@@ -37,6 +37,8 @@ public class SetDeliveryAddressChangeImpl implements SetDeliveryAddressChange, M
 
     private String deliveryId;
 
+    private String shippingKey;
+
     /**
      * create instance with all properties
      */
@@ -44,11 +46,13 @@ public class SetDeliveryAddressChangeImpl implements SetDeliveryAddressChange, M
     SetDeliveryAddressChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.Address previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.Address nextValue,
-            @JsonProperty("deliveryId") final String deliveryId) {
+            @JsonProperty("deliveryId") final String deliveryId,
+            @JsonProperty("shippingKey") final String shippingKey) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.deliveryId = deliveryId;
+        this.shippingKey = shippingKey;
         this.type = SET_DELIVERY_ADDRESS_CHANGE;
     }
 
@@ -99,6 +103,14 @@ public class SetDeliveryAddressChangeImpl implements SetDeliveryAddressChange, M
         return this.deliveryId;
     }
 
+    /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
@@ -113,6 +125,10 @@ public class SetDeliveryAddressChangeImpl implements SetDeliveryAddressChange, M
 
     public void setDeliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
+    }
+
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
     }
 
     @Override
@@ -130,11 +146,13 @@ public class SetDeliveryAddressChangeImpl implements SetDeliveryAddressChange, M
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(deliveryId, that.deliveryId)
+                .append(shippingKey, that.shippingKey)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(deliveryId, that.deliveryId)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
@@ -145,6 +163,7 @@ public class SetDeliveryAddressChangeImpl implements SetDeliveryAddressChange, M
                 .append(previousValue)
                 .append(nextValue)
                 .append(deliveryId)
+                .append(shippingKey)
                 .toHashCode();
     }
 
@@ -155,6 +174,7 @@ public class SetDeliveryAddressChangeImpl implements SetDeliveryAddressChange, M
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
                 .append("deliveryId", deliveryId)
+                .append("shippingKey", shippingKey)
                 .build();
     }
 

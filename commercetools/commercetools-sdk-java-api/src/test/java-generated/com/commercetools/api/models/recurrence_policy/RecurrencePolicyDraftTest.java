@@ -25,7 +25,8 @@ public class RecurrencePolicyDraftTest {
                                 .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
                 new Object[] { "schedule", RecurrencePolicyDraft.builder()
                         .schedule(
-                            new com.commercetools.api.models.recurrence_policy.RecurrencePolicyScheduleDraftImpl()) } };
+                            new com.commercetools.api.models.recurrence_policy.RecurrencePolicyScheduleDraftImpl()) },
+                new Object[] { "minDaysBetweenOrders", RecurrencePolicyDraft.builder().minDaysBetweenOrders(6) } };
     }
 
     @Test
@@ -56,5 +57,12 @@ public class RecurrencePolicyDraftTest {
         value.setSchedule(new com.commercetools.api.models.recurrence_policy.RecurrencePolicyScheduleDraftImpl());
         Assertions.assertThat(value.getSchedule())
                 .isEqualTo(new com.commercetools.api.models.recurrence_policy.RecurrencePolicyScheduleDraftImpl());
+    }
+
+    @Test
+    public void minDaysBetweenOrders() {
+        RecurrencePolicyDraft value = RecurrencePolicyDraft.of();
+        value.setMinDaysBetweenOrders(6);
+        Assertions.assertThat(value.getMinDaysBetweenOrders()).isEqualTo(6);
     }
 }

@@ -59,7 +59,11 @@ public class CategoryTest {
                 new Object[] { "stores",
                         Category.builder()
                                 .stores(Collections.singletonList(
-                                    new com.commercetools.api.models.store.StoreKeyReferenceImpl())) } };
+                                    new com.commercetools.api.models.store.StoreKeyReferenceImpl())) },
+                new Object[] { "warnings",
+                        Category.builder()
+                                .warnings(Collections.singletonList(
+                                    new com.commercetools.api.models.warning.WarningObjectImpl())) } };
     }
 
     @Test
@@ -211,5 +215,13 @@ public class CategoryTest {
         value.setStores(Collections.singletonList(new com.commercetools.api.models.store.StoreKeyReferenceImpl()));
         Assertions.assertThat(value.getStores())
                 .isEqualTo(Collections.singletonList(new com.commercetools.api.models.store.StoreKeyReferenceImpl()));
+    }
+
+    @Test
+    public void warnings() {
+        Category value = Category.of();
+        value.setWarnings(Collections.singletonList(new com.commercetools.api.models.warning.WarningObjectImpl()));
+        Assertions.assertThat(value.getWarnings())
+                .isEqualTo(Collections.singletonList(new com.commercetools.api.models.warning.WarningObjectImpl()));
     }
 }

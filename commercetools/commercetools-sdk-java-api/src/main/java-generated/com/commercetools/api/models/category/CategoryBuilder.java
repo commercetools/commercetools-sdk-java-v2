@@ -83,6 +83,9 @@ public class CategoryBuilder implements Builder<Category> {
 
     private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
 
+    @Nullable
+    private java.util.List<com.commercetools.api.models.warning.WarningObject> warnings;
+
     /**
      *  <p>Unique identifier of the Category.</p>
      * @param id value to be set
@@ -788,6 +791,72 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param warnings value to be set
+     * @return Builder
+     */
+
+    public CategoryBuilder warnings(@Nullable final com.commercetools.api.models.warning.WarningObject... warnings) {
+        this.warnings = new ArrayList<>(Arrays.asList(warnings));
+        return this;
+    }
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param warnings value to be set
+     * @return Builder
+     */
+
+    public CategoryBuilder warnings(
+            @Nullable final java.util.List<com.commercetools.api.models.warning.WarningObject> warnings) {
+        this.warnings = warnings;
+        return this;
+    }
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param warnings value to be set
+     * @return Builder
+     */
+
+    public CategoryBuilder plusWarnings(
+            @Nullable final com.commercetools.api.models.warning.WarningObject... warnings) {
+        if (this.warnings == null) {
+            this.warnings = new ArrayList<>();
+        }
+        this.warnings.addAll(Arrays.asList(warnings));
+        return this;
+    }
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param builder function to build the warnings value
+     * @return Builder
+     */
+
+    public CategoryBuilder plusWarnings(
+            Function<com.commercetools.api.models.warning.WarningObjectBuilder, Builder<? extends com.commercetools.api.models.warning.WarningObject>> builder) {
+        if (this.warnings == null) {
+            this.warnings = new ArrayList<>();
+        }
+        this.warnings.add(builder.apply(com.commercetools.api.models.warning.WarningObjectBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param builder function to build the warnings value
+     * @return Builder
+     */
+
+    public CategoryBuilder withWarnings(
+            Function<com.commercetools.api.models.warning.WarningObjectBuilder, Builder<? extends com.commercetools.api.models.warning.WarningObject>> builder) {
+        this.warnings = new ArrayList<>();
+        this.warnings.add(builder.apply(com.commercetools.api.models.warning.WarningObjectBuilder.of()).build());
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the Category.</p>
      * @return id
      */
@@ -981,6 +1050,16 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @return warnings
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.warning.WarningObject> getWarnings() {
+        return this.warnings;
+    }
+
+    /**
      * builds Category with checking for non-null required values
      * @return Category
      */
@@ -996,7 +1075,7 @@ public class CategoryBuilder implements Builder<Category> {
         Objects.requireNonNull(stores, Category.class + ": stores is missing");
         return new CategoryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, slug,
             description, ancestors, parent, orderHint, externalId, metaTitle, metaDescription, metaKeywords, custom,
-            assets, key, stores);
+            assets, key, stores, warnings);
     }
 
     /**
@@ -1006,7 +1085,7 @@ public class CategoryBuilder implements Builder<Category> {
     public Category buildUnchecked() {
         return new CategoryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, slug,
             description, ancestors, parent, orderHint, externalId, metaTitle, metaDescription, metaKeywords, custom,
-            assets, key, stores);
+            assets, key, stores, warnings);
     }
 
     /**
@@ -1044,6 +1123,7 @@ public class CategoryBuilder implements Builder<Category> {
         builder.assets = template.getAssets();
         builder.key = template.getKey();
         builder.stores = template.getStores();
+        builder.warnings = template.getWarnings();
         return builder;
     }
 

@@ -16,6 +16,7 @@ import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.type.CustomFields;
+import com.commercetools.api.models.warning.WarningObject;
 import com.fasterxml.jackson.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
@@ -219,6 +220,14 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     public List<StoreKeyReference> getStores();
 
     /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @return warnings
+     */
+    @Valid
+    @JsonProperty("warnings")
+    public List<WarningObject> getWarnings();
+
+    /**
      *  <p>Unique identifier of the Category.</p>
      * @param id value to be set
      */
@@ -387,6 +396,21 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     public void setStores(final List<StoreKeyReference> stores);
 
     /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param warnings values to be set
+     */
+
+    @JsonIgnore
+    public void setWarnings(final WarningObject... warnings);
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param warnings values to be set
+     */
+
+    public void setWarnings(final List<WarningObject> warnings);
+
+    /**
      * factory method
      * @return instance of Category
      */
@@ -421,6 +445,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
         instance.setAssets(template.getAssets());
         instance.setKey(template.getKey());
         instance.setStores(template.getStores());
+        instance.setWarnings(template.getWarnings());
         return instance;
     }
 
@@ -471,6 +496,11 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
         instance.setStores(Optional.ofNullable(template.getStores())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.store.StoreKeyReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setWarnings(Optional.ofNullable(template.getWarnings())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.warning.WarningObject::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         return instance;

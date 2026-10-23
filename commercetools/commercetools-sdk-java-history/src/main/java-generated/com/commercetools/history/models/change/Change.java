@@ -825,6 +825,14 @@ public interface Change {
     }
 
     /**
+     * builder for changeSavedToLineItemChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ChangeSavedToLineItemChangeBuilder changeSavedToLineItemChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeSavedToLineItemChangeBuilder.of();
+    }
+
+    /**
      * builder for changeShipmentStateChange subtype
      * @return builder
      */
@@ -2081,6 +2089,30 @@ public interface Change {
     }
 
     /**
+     * builder for setMethodInfoCustomFieldChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetMethodInfoCustomFieldChangeBuilder setMethodInfoCustomFieldChangeBuilder() {
+        return com.commercetools.history.models.change.SetMethodInfoCustomFieldChangeBuilder.of();
+    }
+
+    /**
+     * builder for setMethodInfoCustomTypeChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetMethodInfoCustomTypeChangeBuilder setMethodInfoCustomTypeChangeBuilder() {
+        return com.commercetools.history.models.change.SetMethodInfoCustomTypeChangeBuilder.of();
+    }
+
+    /**
+     * builder for setMethodInfoInterfaceAccountChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetMethodInfoInterfaceAccountChangeBuilder setMethodInfoInterfaceAccountChangeBuilder() {
+        return com.commercetools.history.models.change.SetMethodInfoInterfaceAccountChangeBuilder.of();
+    }
+
+    /**
      * builder for setMethodInfoInterfaceChange subtype
      * @return builder
      */
@@ -2102,6 +2134,14 @@ public interface Change {
      */
     public static com.commercetools.history.models.change.SetMethodInfoNameChangeBuilder setMethodInfoNameChangeBuilder() {
         return com.commercetools.history.models.change.SetMethodInfoNameChangeBuilder.of();
+    }
+
+    /**
+     * builder for setMethodInfoTokenChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetMethodInfoTokenChangeBuilder setMethodInfoTokenChangeBuilder() {
+        return com.commercetools.history.models.change.SetMethodInfoTokenChangeBuilder.of();
     }
 
     /**

@@ -21,8 +21,10 @@ public class SetDeliveryCustomTypeChangeTest {
                 new Object[] { "previousValue",
                         SetDeliveryCustomTypeChange.builder()
                                 .previousValue(new com.commercetools.history.models.common.CustomFieldsImpl()) },
-                new Object[] { "nextValue", SetDeliveryCustomTypeChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.CustomFieldsImpl()) } };
+                new Object[] { "nextValue",
+                        SetDeliveryCustomTypeChange.builder()
+                                .nextValue(new com.commercetools.history.models.common.CustomFieldsImpl()) },
+                new Object[] { "shippingKey", SetDeliveryCustomTypeChange.builder().shippingKey("shippingKey") } };
     }
 
     @Test
@@ -53,5 +55,12 @@ public class SetDeliveryCustomTypeChangeTest {
         value.setNextValue(new com.commercetools.history.models.common.CustomFieldsImpl());
         Assertions.assertThat(value.getNextValue())
                 .isEqualTo(new com.commercetools.history.models.common.CustomFieldsImpl());
+    }
+
+    @Test
+    public void shippingKey() {
+        SetDeliveryCustomTypeChange value = SetDeliveryCustomTypeChange.of();
+        value.setShippingKey("shippingKey");
+        Assertions.assertThat(value.getShippingKey()).isEqualTo("shippingKey");
     }
 }

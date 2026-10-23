@@ -383,6 +383,10 @@ public class ChangeBuilder {
         return com.commercetools.history.models.change.ChangeReviewRatingStatisticsChangeBuilder.of();
     }
 
+    public com.commercetools.history.models.change.ChangeSavedToLineItemChangeBuilder changeSavedToLineItemChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeSavedToLineItemChangeBuilder.of();
+    }
+
     public com.commercetools.history.models.change.ChangeShipmentStateChangeBuilder changeShipmentStateChangeBuilder() {
         return com.commercetools.history.models.change.ChangeShipmentStateChangeBuilder.of();
     }
@@ -1011,6 +1015,18 @@ public class ChangeBuilder {
         return com.commercetools.history.models.change.SetMetaTitleChangeBuilder.of();
     }
 
+    public com.commercetools.history.models.change.SetMethodInfoCustomFieldChangeBuilder setMethodInfoCustomFieldChangeBuilder() {
+        return com.commercetools.history.models.change.SetMethodInfoCustomFieldChangeBuilder.of();
+    }
+
+    public com.commercetools.history.models.change.SetMethodInfoCustomTypeChangeBuilder setMethodInfoCustomTypeChangeBuilder() {
+        return com.commercetools.history.models.change.SetMethodInfoCustomTypeChangeBuilder.of();
+    }
+
+    public com.commercetools.history.models.change.SetMethodInfoInterfaceAccountChangeBuilder setMethodInfoInterfaceAccountChangeBuilder() {
+        return com.commercetools.history.models.change.SetMethodInfoInterfaceAccountChangeBuilder.of();
+    }
+
     public com.commercetools.history.models.change.SetMethodInfoInterfaceChangeBuilder setMethodInfoInterfaceChangeBuilder() {
         return com.commercetools.history.models.change.SetMethodInfoInterfaceChangeBuilder.of();
     }
@@ -1021,6 +1037,10 @@ public class ChangeBuilder {
 
     public com.commercetools.history.models.change.SetMethodInfoNameChangeBuilder setMethodInfoNameChangeBuilder() {
         return com.commercetools.history.models.change.SetMethodInfoNameChangeBuilder.of();
+    }
+
+    public com.commercetools.history.models.change.SetMethodInfoTokenChangeBuilder setMethodInfoTokenChangeBuilder() {
+        return com.commercetools.history.models.change.SetMethodInfoTokenChangeBuilder.of();
     }
 
     public com.commercetools.history.models.change.SetMiddleNameChangeBuilder setMiddleNameChangeBuilder() {

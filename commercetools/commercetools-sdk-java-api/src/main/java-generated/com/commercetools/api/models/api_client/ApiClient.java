@@ -92,7 +92,11 @@ public interface ApiClient extends com.commercetools.api.models.Identifiable<Api
     public ZonedDateTime getCreatedAt();
 
     /**
-     *  <p>Expiration time in seconds for each access token obtained by the APIClient. Only present when set with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClientDraft" rel="nofollow">APIClientDraft</a>. If not present the default value applies.</p>
+     *  <p>Expiration time in seconds for each access token obtained by the APIClient. Only present when set with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClientDraft" rel="nofollow">APIClientDraft</a>. If not present, the default depends on the flow used to obtain the access token.</p>
+     *  <ul>
+     *   <li><code>10 800</code> seconds (3 hours) for <span>anonymous sessions</span>.</li>
+     *   <li><code>172 800</code> seconds (48 hours) for other flows.</li>
+     *  </ul>
      * @return accessTokenValiditySeconds
      */
 
@@ -157,7 +161,11 @@ public interface ApiClient extends com.commercetools.api.models.Identifiable<Api
     public void setCreatedAt(final ZonedDateTime createdAt);
 
     /**
-     *  <p>Expiration time in seconds for each access token obtained by the APIClient. Only present when set with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClientDraft" rel="nofollow">APIClientDraft</a>. If not present the default value applies.</p>
+     *  <p>Expiration time in seconds for each access token obtained by the APIClient. Only present when set with the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClientDraft" rel="nofollow">APIClientDraft</a>. If not present, the default depends on the flow used to obtain the access token.</p>
+     *  <ul>
+     *   <li><code>10 800</code> seconds (3 hours) for <span>anonymous sessions</span>.</li>
+     *   <li><code>172 800</code> seconds (48 hours) for other flows.</li>
+     *  </ul>
      * @param accessTokenValiditySeconds value to be set
      */
 

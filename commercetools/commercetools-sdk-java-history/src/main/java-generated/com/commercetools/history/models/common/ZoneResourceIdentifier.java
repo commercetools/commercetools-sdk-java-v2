@@ -26,15 +26,9 @@ import tools.jackson.databind.annotation.*;
  * </code></pre>
  * </div>
  */
-@io.vrap.rmf.base.client.utils.json.SubType("zone")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ZoneResourceIdentifierImpl.class)
 public interface ZoneResourceIdentifier extends ResourceIdentifier {
-
-    /**
-     * discriminator value for ZoneResourceIdentifier
-     */
-    String ZONE = "zone";
 
     /**
      *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Zone" rel="nofollow">Zone</a>. Required if <code>key</code> is absent.</p>

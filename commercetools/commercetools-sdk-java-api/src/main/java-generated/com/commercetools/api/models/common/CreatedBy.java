@@ -136,6 +136,7 @@ public interface CreatedBy extends ClientLogging {
      */
     public static CreatedBy of(final CreatedBy template) {
         CreatedByImpl instance = new CreatedByImpl();
+        instance.setIsPlatformClient(template.getIsPlatformClient());
         instance.setClientId(template.getClientId());
         instance.setExternalUserId(template.getExternalUserId());
         instance.setCustomer(template.getCustomer());
@@ -158,6 +159,7 @@ public interface CreatedBy extends ClientLogging {
             return null;
         }
         CreatedByImpl instance = new CreatedByImpl();
+        instance.setIsPlatformClient(template.getIsPlatformClient());
         instance.setClientId(template.getClientId());
         instance.setExternalUserId(template.getExternalUserId());
         instance.setCustomer(com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getCustomer()));

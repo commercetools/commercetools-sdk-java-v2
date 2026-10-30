@@ -90,6 +90,14 @@ public interface SetDeliveryItemsChange extends Change {
     public String getDeliveryId();
 
     /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @return shippingKey
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
+
+    /**
      * set change
      * @param change value to be set
      */
@@ -134,6 +142,13 @@ public interface SetDeliveryItemsChange extends Change {
     public void setDeliveryId(final String deliveryId);
 
     /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @param shippingKey value to be set
+     */
+
+    public void setShippingKey(final String shippingKey);
+
+    /**
      * factory method
      * @return instance of SetDeliveryItemsChange
      */
@@ -152,6 +167,7 @@ public interface SetDeliveryItemsChange extends Change {
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
         instance.setDeliveryId(template.getDeliveryId());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 
@@ -180,6 +196,7 @@ public interface SetDeliveryItemsChange extends Change {
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setDeliveryId(template.getDeliveryId());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 

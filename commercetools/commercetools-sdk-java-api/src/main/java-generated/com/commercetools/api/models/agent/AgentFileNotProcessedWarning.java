@@ -16,7 +16,7 @@ import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Returned when an uploaded file in an Intake Agent <span>API request</span> could not be parsed.</p>
+ *  <p>Returned when an uploaded file in an Intake <span>API request</span> could not be parsed.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

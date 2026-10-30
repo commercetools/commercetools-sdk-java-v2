@@ -19,6 +19,14 @@ public class RecurringOrderUpdateActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, RecurringOrderUpdateActionQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<RecurringOrderUpdateActionQueryBuilderDsl> asRequestOrderNow(
+            Function<com.commercetools.api.predicates.query.recurring_order.RecurringOrderRequestOrderNowActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.recurring_order.RecurringOrderRequestOrderNowActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.recurring_order.RecurringOrderRequestOrderNowActionQueryBuilderDsl
+                    .of()),
+            RecurringOrderUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<RecurringOrderUpdateActionQueryBuilderDsl> asSetCustomField(
             Function<com.commercetools.api.predicates.query.recurring_order.RecurringOrderSetCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.recurring_order.RecurringOrderSetCustomFieldActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(

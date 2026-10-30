@@ -35,6 +35,9 @@ public class RecurrencePolicyDraftBuilder implements Builder<RecurrencePolicyDra
 
     private com.commercetools.api.models.recurrence_policy.RecurrencePolicyScheduleDraft schedule;
 
+    @Nullable
+    private Integer minDaysBetweenOrders;
+
     /**
      *  <p>User-defined unique identifier for the RecurrencePolicy.</p>
      * @param key value to be set
@@ -144,6 +147,19 @@ public class RecurrencePolicyDraftBuilder implements Builder<RecurrencePolicyDra
     }
 
     /**
+     *  <p>Minimum number of days that must pass since the last Order of a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderRequestOrderNowAction" rel="nofollow">Request Order Now</a> update action is allowed. If not set, there is no limit.</p>
+     *  <p>This value does not affect the recurrence schedule. For example, a weekly RecurrencePolicy with a value of <code>30</code> still creates Orders weekly. The time is measured in multiples of 24 hours from <code>lastOrderAt</code> of the Recurring Order, regardless of whether the last Order was created on schedule or early.</p>
+     *  <p>The limit applies to all Recurring Orders that use this RecurrencePolicy, and changes take effect immediately. It is ignored when the RecurrencePolicy is attached to a Price.</p>
+     * @param minDaysBetweenOrders value to be set
+     * @return Builder
+     */
+
+    public RecurrencePolicyDraftBuilder minDaysBetweenOrders(@Nullable final Integer minDaysBetweenOrders) {
+        this.minDaysBetweenOrders = minDaysBetweenOrders;
+        return this;
+    }
+
+    /**
      *  <p>User-defined unique identifier for the RecurrencePolicy.</p>
      * @return key
      */
@@ -182,13 +198,25 @@ public class RecurrencePolicyDraftBuilder implements Builder<RecurrencePolicyDra
     }
 
     /**
+     *  <p>Minimum number of days that must pass since the last Order of a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderRequestOrderNowAction" rel="nofollow">Request Order Now</a> update action is allowed. If not set, there is no limit.</p>
+     *  <p>This value does not affect the recurrence schedule. For example, a weekly RecurrencePolicy with a value of <code>30</code> still creates Orders weekly. The time is measured in multiples of 24 hours from <code>lastOrderAt</code> of the Recurring Order, regardless of whether the last Order was created on schedule or early.</p>
+     *  <p>The limit applies to all Recurring Orders that use this RecurrencePolicy, and changes take effect immediately. It is ignored when the RecurrencePolicy is attached to a Price.</p>
+     * @return minDaysBetweenOrders
+     */
+
+    @Nullable
+    public Integer getMinDaysBetweenOrders() {
+        return this.minDaysBetweenOrders;
+    }
+
+    /**
      * builds RecurrencePolicyDraft with checking for non-null required values
      * @return RecurrencePolicyDraft
      */
     public RecurrencePolicyDraft build() {
         Objects.requireNonNull(key, RecurrencePolicyDraft.class + ": key is missing");
         Objects.requireNonNull(schedule, RecurrencePolicyDraft.class + ": schedule is missing");
-        return new RecurrencePolicyDraftImpl(key, name, description, schedule);
+        return new RecurrencePolicyDraftImpl(key, name, description, schedule, minDaysBetweenOrders);
     }
 
     /**
@@ -196,7 +224,7 @@ public class RecurrencePolicyDraftBuilder implements Builder<RecurrencePolicyDra
      * @return RecurrencePolicyDraft
      */
     public RecurrencePolicyDraft buildUnchecked() {
-        return new RecurrencePolicyDraftImpl(key, name, description, schedule);
+        return new RecurrencePolicyDraftImpl(key, name, description, schedule, minDaysBetweenOrders);
     }
 
     /**
@@ -218,6 +246,7 @@ public class RecurrencePolicyDraftBuilder implements Builder<RecurrencePolicyDra
         builder.name = template.getName();
         builder.description = template.getDescription();
         builder.schedule = template.getSchedule();
+        builder.minDaysBetweenOrders = template.getMinDaysBetweenOrders();
         return builder;
     }
 

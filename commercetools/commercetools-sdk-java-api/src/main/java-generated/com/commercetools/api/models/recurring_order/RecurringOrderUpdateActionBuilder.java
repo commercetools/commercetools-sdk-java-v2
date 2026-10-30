@@ -11,6 +11,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RecurringOrderUpdateActionBuilder {
 
+    public com.commercetools.api.models.recurring_order.RecurringOrderRequestOrderNowActionBuilder requestOrderNowBuilder() {
+        return com.commercetools.api.models.recurring_order.RecurringOrderRequestOrderNowActionBuilder.of();
+    }
+
     public com.commercetools.api.models.recurring_order.RecurringOrderSetCustomFieldActionBuilder setCustomFieldBuilder() {
         return com.commercetools.api.models.recurring_order.RecurringOrderSetCustomFieldActionBuilder.of();
     }

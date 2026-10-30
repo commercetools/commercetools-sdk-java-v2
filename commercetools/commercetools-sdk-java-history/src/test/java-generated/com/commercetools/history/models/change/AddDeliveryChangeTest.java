@@ -20,7 +20,8 @@ public class AddDeliveryChangeTest {
                 new Object[] { "previousValue", AddDeliveryChange.builder()
                         .previousValue(new com.commercetools.history.models.change_value.DeliveryChangeValueImpl()) },
                 new Object[] { "nextValue", AddDeliveryChange.builder()
-                        .nextValue(new com.commercetools.history.models.change_value.DeliveryChangeValueImpl()) } };
+                        .nextValue(new com.commercetools.history.models.change_value.DeliveryChangeValueImpl()) },
+                new Object[] { "shippingKey", AddDeliveryChange.builder().shippingKey("shippingKey") } };
     }
 
     @Test
@@ -44,5 +45,12 @@ public class AddDeliveryChangeTest {
         value.setNextValue(new com.commercetools.history.models.change_value.DeliveryChangeValueImpl());
         Assertions.assertThat(value.getNextValue())
                 .isEqualTo(new com.commercetools.history.models.change_value.DeliveryChangeValueImpl());
+    }
+
+    @Test
+    public void shippingKey() {
+        AddDeliveryChange value = AddDeliveryChange.of();
+        value.setShippingKey("shippingKey");
+        Assertions.assertThat(value.getShippingKey()).isEqualTo("shippingKey");
     }
 }

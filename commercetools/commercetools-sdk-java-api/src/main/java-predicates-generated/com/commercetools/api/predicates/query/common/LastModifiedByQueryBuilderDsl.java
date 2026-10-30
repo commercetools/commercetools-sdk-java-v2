@@ -13,6 +13,12 @@ public class LastModifiedByQueryBuilderDsl {
         return new LastModifiedByQueryBuilderDsl();
     }
 
+    public BooleanComparisonPredicateBuilder<LastModifiedByQueryBuilderDsl> isPlatformClient() {
+        return new BooleanComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("isPlatformClient")),
+            p -> new CombinationQueryPredicate<>(p, LastModifiedByQueryBuilderDsl::of));
+    }
+
     public StringComparisonPredicateBuilder<LastModifiedByQueryBuilderDsl> clientId() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("clientId")),

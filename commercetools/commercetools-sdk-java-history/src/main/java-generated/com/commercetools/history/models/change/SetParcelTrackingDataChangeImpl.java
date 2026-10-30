@@ -37,6 +37,8 @@ public class SetParcelTrackingDataChangeImpl implements SetParcelTrackingDataCha
 
     private com.commercetools.history.models.change_value.ParcelChangeValue parcel;
 
+    private String shippingKey;
+
     /**
      * create instance with all properties
      */
@@ -44,11 +46,13 @@ public class SetParcelTrackingDataChangeImpl implements SetParcelTrackingDataCha
     SetParcelTrackingDataChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.TrackingData previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.TrackingData nextValue,
-            @JsonProperty("parcel") final com.commercetools.history.models.change_value.ParcelChangeValue parcel) {
+            @JsonProperty("parcel") final com.commercetools.history.models.change_value.ParcelChangeValue parcel,
+            @JsonProperty("shippingKey") final String shippingKey) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.parcel = parcel;
+        this.shippingKey = shippingKey;
         this.type = SET_PARCEL_TRACKING_DATA_CHANGE;
     }
 
@@ -99,6 +103,14 @@ public class SetParcelTrackingDataChangeImpl implements SetParcelTrackingDataCha
         return this.parcel;
     }
 
+    /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
@@ -113,6 +125,10 @@ public class SetParcelTrackingDataChangeImpl implements SetParcelTrackingDataCha
 
     public void setParcel(final com.commercetools.history.models.change_value.ParcelChangeValue parcel) {
         this.parcel = parcel;
+    }
+
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
     }
 
     @Override
@@ -130,11 +146,13 @@ public class SetParcelTrackingDataChangeImpl implements SetParcelTrackingDataCha
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(parcel, that.parcel)
+                .append(shippingKey, that.shippingKey)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(parcel, that.parcel)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
@@ -145,6 +163,7 @@ public class SetParcelTrackingDataChangeImpl implements SetParcelTrackingDataCha
                 .append(previousValue)
                 .append(nextValue)
                 .append(parcel)
+                .append(shippingKey)
                 .toHashCode();
     }
 
@@ -155,6 +174,7 @@ public class SetParcelTrackingDataChangeImpl implements SetParcelTrackingDataCha
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
                 .append("parcel", parcel)
+                .append("shippingKey", shippingKey)
                 .build();
     }
 

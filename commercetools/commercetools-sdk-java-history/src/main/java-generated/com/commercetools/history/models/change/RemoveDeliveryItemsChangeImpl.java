@@ -29,14 +29,18 @@ public class RemoveDeliveryItemsChangeImpl implements RemoveDeliveryItemsChange,
 
     private com.commercetools.history.models.change_value.DeliveryChangeValue previousValue;
 
+    private String shippingKey;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     RemoveDeliveryItemsChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("previousValue") final com.commercetools.history.models.change_value.DeliveryChangeValue previousValue) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.change_value.DeliveryChangeValue previousValue,
+            @JsonProperty("shippingKey") final String shippingKey) {
         this.change = change;
         this.previousValue = previousValue;
+        this.shippingKey = shippingKey;
         this.type = REMOVE_DELIVERY_ITEMS_CHANGE;
     }
 
@@ -71,6 +75,14 @@ public class RemoveDeliveryItemsChangeImpl implements RemoveDeliveryItemsChange,
         return this.previousValue;
     }
 
+    /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
@@ -78,6 +90,10 @@ public class RemoveDeliveryItemsChangeImpl implements RemoveDeliveryItemsChange,
     public void setPreviousValue(
             final com.commercetools.history.models.change_value.DeliveryChangeValue previousValue) {
         this.previousValue = previousValue;
+    }
+
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
     }
 
     @Override
@@ -93,15 +109,21 @@ public class RemoveDeliveryItemsChangeImpl implements RemoveDeliveryItemsChange,
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
+                .append(shippingKey, that.shippingKey)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(change).append(previousValue).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(change)
+                .append(previousValue)
+                .append(shippingKey)
+                .toHashCode();
     }
 
     @Override
@@ -109,6 +131,7 @@ public class RemoveDeliveryItemsChangeImpl implements RemoveDeliveryItemsChange,
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
                 .append("change", change)
                 .append("previousValue", previousValue)
+                .append("shippingKey", shippingKey)
                 .build();
     }
 

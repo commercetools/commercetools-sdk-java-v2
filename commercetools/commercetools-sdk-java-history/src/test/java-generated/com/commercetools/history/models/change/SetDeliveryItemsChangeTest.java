@@ -27,7 +27,8 @@ public class SetDeliveryItemsChangeTest {
                         SetDeliveryItemsChange.builder()
                                 .nextValue(Collections.singletonList(
                                     new com.commercetools.history.models.common.DeliveryItemImpl())) },
-                new Object[] { "deliveryId", SetDeliveryItemsChange.builder().deliveryId("deliveryId") } };
+                new Object[] { "deliveryId", SetDeliveryItemsChange.builder().deliveryId("deliveryId") },
+                new Object[] { "shippingKey", SetDeliveryItemsChange.builder().shippingKey("shippingKey") } };
     }
 
     @Test
@@ -59,5 +60,12 @@ public class SetDeliveryItemsChangeTest {
         SetDeliveryItemsChange value = SetDeliveryItemsChange.of();
         value.setDeliveryId("deliveryId");
         Assertions.assertThat(value.getDeliveryId()).isEqualTo("deliveryId");
+    }
+
+    @Test
+    public void shippingKey() {
+        SetDeliveryItemsChange value = SetDeliveryItemsChange.of();
+        value.setShippingKey("shippingKey");
+        Assertions.assertThat(value.getShippingKey()).isEqualTo("shippingKey");
     }
 }

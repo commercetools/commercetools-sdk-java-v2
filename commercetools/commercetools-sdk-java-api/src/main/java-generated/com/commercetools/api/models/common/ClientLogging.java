@@ -32,6 +32,14 @@ import tools.jackson.databind.annotation.*;
 public interface ClientLogging {
 
     /**
+     *  <p>If <code>true</code>, the resource was created or modified by an internal process or the <span>Merchant Center</span>. Otherwise, it was created or modified by an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> of your Project.</p>
+     * @return isPlatformClient
+     */
+
+    @JsonProperty("isPlatformClient")
+    public Boolean getIsPlatformClient();
+
+    /**
      *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> which created the resource.</p>
      * @return clientId
      */
@@ -70,6 +78,13 @@ public interface ClientLogging {
     @Valid
     @JsonProperty("associate")
     public CustomerReference getAssociate();
+
+    /**
+     *  <p>If <code>true</code>, the resource was created or modified by an internal process or the <span>Merchant Center</span>. Otherwise, it was created or modified by an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> of your Project.</p>
+     * @param isPlatformClient value to be set
+     */
+
+    public void setIsPlatformClient(final Boolean isPlatformClient);
 
     /**
      *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> which created the resource.</p>
@@ -121,6 +136,7 @@ public interface ClientLogging {
      */
     public static ClientLogging of(final ClientLogging template) {
         ClientLoggingImpl instance = new ClientLoggingImpl();
+        instance.setIsPlatformClient(template.getIsPlatformClient());
         instance.setClientId(template.getClientId());
         instance.setExternalUserId(template.getExternalUserId());
         instance.setCustomer(template.getCustomer());
@@ -146,6 +162,7 @@ public interface ClientLogging {
             return template.copyDeep();
         }
         ClientLoggingImpl instance = new ClientLoggingImpl();
+        instance.setIsPlatformClient(template.getIsPlatformClient());
         instance.setClientId(template.getClientId());
         instance.setExternalUserId(template.getExternalUserId());
         instance.setCustomer(com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getCustomer()));

@@ -16,7 +16,7 @@ import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Returned when one or more Products referenced in an Intake Agent <span>API request</span> could not be matched to the catalog or are unavailable in the bound Store. The omitted Products are excluded from the created entity.</p>
+ *  <p>Returned when one or more Products referenced in an Intake <span>API request</span> could not be matched to the catalog or are unavailable in the bound Store. The omitted Products are excluded from the created entity.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

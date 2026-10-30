@@ -1135,6 +1135,10 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.RecurringOrderKeySetMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.RecurringOrderNowRequestedMessageBuilder recurringOrderNowRequestedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderNowRequestedMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.RecurringOrderScheduleSetMessageBuilder recurringOrderScheduleSetBuilder() {
         return com.commercetools.api.models.message.RecurringOrderScheduleSetMessageBuilder.of();
     }

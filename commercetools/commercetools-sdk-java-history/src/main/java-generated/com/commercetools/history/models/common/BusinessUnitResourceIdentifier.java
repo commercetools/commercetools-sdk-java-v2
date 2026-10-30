@@ -26,15 +26,9 @@ import tools.jackson.databind.annotation.*;
  * </code></pre>
  * </div>
  */
-@io.vrap.rmf.base.client.utils.json.SubType("business-unit")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BusinessUnitResourceIdentifierImpl.class)
 public interface BusinessUnitResourceIdentifier extends ResourceIdentifier {
-
-    /**
-     * discriminator value for BusinessUnitResourceIdentifier
-     */
-    String BUSINESS_UNIT = "business-unit";
 
     /**
      *  <p>Unique identifier of the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a>. Required if <code>key</code> is absent.</p>

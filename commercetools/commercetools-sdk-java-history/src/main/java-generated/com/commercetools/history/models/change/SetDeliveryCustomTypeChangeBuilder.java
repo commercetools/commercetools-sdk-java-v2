@@ -4,6 +4,8 @@ package com.commercetools.history.models.change;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -32,6 +34,9 @@ public class SetDeliveryCustomTypeChangeBuilder implements Builder<SetDeliveryCu
     private com.commercetools.history.models.common.CustomFields previousValue;
 
     private com.commercetools.history.models.common.CustomFields nextValue;
+
+    @Nullable
+    private String shippingKey;
 
     /**
      * set the value to the change
@@ -128,6 +133,17 @@ public class SetDeliveryCustomTypeChangeBuilder implements Builder<SetDeliveryCu
     }
 
     /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @param shippingKey value to be set
+     * @return Builder
+     */
+
+    public SetDeliveryCustomTypeChangeBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
+        return this;
+    }
+
+    /**
      * value of change}
      * @return change
      */
@@ -164,6 +180,16 @@ public class SetDeliveryCustomTypeChangeBuilder implements Builder<SetDeliveryCu
     }
 
     /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @return shippingKey
+     */
+
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
+    /**
      * builds SetDeliveryCustomTypeChange with checking for non-null required values
      * @return SetDeliveryCustomTypeChange
      */
@@ -172,7 +198,7 @@ public class SetDeliveryCustomTypeChangeBuilder implements Builder<SetDeliveryCu
         Objects.requireNonNull(deliveryId, SetDeliveryCustomTypeChange.class + ": deliveryId is missing");
         Objects.requireNonNull(previousValue, SetDeliveryCustomTypeChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetDeliveryCustomTypeChange.class + ": nextValue is missing");
-        return new SetDeliveryCustomTypeChangeImpl(change, deliveryId, previousValue, nextValue);
+        return new SetDeliveryCustomTypeChangeImpl(change, deliveryId, previousValue, nextValue, shippingKey);
     }
 
     /**
@@ -180,7 +206,7 @@ public class SetDeliveryCustomTypeChangeBuilder implements Builder<SetDeliveryCu
      * @return SetDeliveryCustomTypeChange
      */
     public SetDeliveryCustomTypeChange buildUnchecked() {
-        return new SetDeliveryCustomTypeChangeImpl(change, deliveryId, previousValue, nextValue);
+        return new SetDeliveryCustomTypeChangeImpl(change, deliveryId, previousValue, nextValue, shippingKey);
     }
 
     /**
@@ -202,6 +228,7 @@ public class SetDeliveryCustomTypeChangeBuilder implements Builder<SetDeliveryCu
         builder.deliveryId = template.getDeliveryId();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.shippingKey = template.getShippingKey();
         return builder;
     }
 

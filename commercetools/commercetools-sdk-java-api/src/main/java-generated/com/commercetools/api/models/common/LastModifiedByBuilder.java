@@ -24,6 +24,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
 
     @Nullable
+    private Boolean isPlatformClient;
+
+    @Nullable
     private String clientId;
 
     @Nullable
@@ -40,6 +43,17 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
 
     @Nullable
     private com.commercetools.api.models.common.Attribution attributedTo;
+
+    /**
+     *  <p>If <code>true</code>, the resource was created or modified by an internal process or the <span>Merchant Center</span>. Otherwise, it was created or modified by an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> of your Project.</p>
+     * @param isPlatformClient value to be set
+     * @return Builder
+     */
+
+    public LastModifiedByBuilder isPlatformClient(@Nullable final Boolean isPlatformClient) {
+        this.isPlatformClient = isPlatformClient;
+        return this;
+    }
 
     /**
      *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> which modified the resource.</p>
@@ -183,6 +197,16 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
     }
 
     /**
+     *  <p>If <code>true</code>, the resource was created or modified by an internal process or the <span>Merchant Center</span>. Otherwise, it was created or modified by an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> of your Project.</p>
+     * @return isPlatformClient
+     */
+
+    @Nullable
+    public Boolean getIsPlatformClient() {
+        return this.isPlatformClient;
+    }
+
+    /**
      *  <p><code>id</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> which modified the resource.</p>
      * @return clientId
      */
@@ -247,7 +271,8 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
      * @return LastModifiedBy
      */
     public LastModifiedBy build() {
-        return new LastModifiedByImpl(clientId, externalUserId, customer, anonymousId, associate, attributedTo);
+        return new LastModifiedByImpl(isPlatformClient, clientId, externalUserId, customer, anonymousId, associate,
+            attributedTo);
     }
 
     /**
@@ -255,7 +280,8 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
      * @return LastModifiedBy
      */
     public LastModifiedBy buildUnchecked() {
-        return new LastModifiedByImpl(clientId, externalUserId, customer, anonymousId, associate, attributedTo);
+        return new LastModifiedByImpl(isPlatformClient, clientId, externalUserId, customer, anonymousId, associate,
+            attributedTo);
     }
 
     /**
@@ -273,6 +299,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
      */
     public static LastModifiedByBuilder of(final LastModifiedBy template) {
         LastModifiedByBuilder builder = new LastModifiedByBuilder();
+        builder.isPlatformClient = template.getIsPlatformClient();
         builder.clientId = template.getClientId();
         builder.externalUserId = template.getExternalUserId();
         builder.customer = template.getCustomer();

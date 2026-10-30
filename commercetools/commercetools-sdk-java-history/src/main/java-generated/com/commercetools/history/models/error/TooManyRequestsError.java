@@ -30,15 +30,9 @@ import tools.jackson.databind.annotation.*;
  * </code></pre>
  * </div>
  */
-@io.vrap.rmf.base.client.utils.json.SubType("TooManyRequests")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TooManyRequestsErrorImpl.class)
 public interface TooManyRequestsError extends ErrorObject {
-
-    /**
-     * discriminator value for TooManyRequestsError
-     */
-    String TOO_MANY_REQUESTS = "TooManyRequests";
 
     /**
      *  <p><code>"TooManyRequests"</code></p>

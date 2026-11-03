@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Structured fields for the <code>payload</code> part of a <code>multipart/form-data</code> <span>/responses</span> request to the Intake Agent. <code>prompt</code> is optional when files are attached.</p>
+ *  <p>Structured fields for the <code>payload</code> part of a <code>multipart/form-data</code> <span>/responses</span> request to Intake. <code>prompt</code> is optional when files are attached.</p>
  *  <p>For an <code>application/json</code> request, use <a href="https://docs.commercetools.com/apis/ctp:api:type:AgentResponsesRequest" rel="nofollow">AgentResponsesRequest</a> instead.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -81,7 +81,7 @@ public class AgentResponsesPayloadImpl implements AgentResponsesPayload, ModelBa
     }
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> to use for the request. If omitted, the Intake Agent resolves it from the input.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> to use for the request. If omitted, Intake resolves it from the input.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getBusinessUnit() {
@@ -89,7 +89,7 @@ public class AgentResponsesPayloadImpl implements AgentResponsesPayload, ModelBa
     }
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to use for the request. If omitted, the Intake Agent resolves it from the input.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to use for the request. If omitted, Intake resolves it from the input.</p>
      */
 
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {

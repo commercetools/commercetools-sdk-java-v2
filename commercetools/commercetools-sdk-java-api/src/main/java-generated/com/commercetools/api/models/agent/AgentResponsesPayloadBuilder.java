@@ -73,7 +73,7 @@ public class AgentResponsesPayloadBuilder implements Builder<AgentResponsesPaylo
     }
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> to use for the request. If omitted, the Intake Agent resolves it from the input.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> to use for the request. If omitted, Intake resolves it from the input.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -87,7 +87,7 @@ public class AgentResponsesPayloadBuilder implements Builder<AgentResponsesPaylo
     }
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> to use for the request. If omitted, the Intake Agent resolves it from the input.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> to use for the request. If omitted, Intake resolves it from the input.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -100,7 +100,7 @@ public class AgentResponsesPayloadBuilder implements Builder<AgentResponsesPaylo
     }
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> to use for the request. If omitted, the Intake Agent resolves it from the input.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> to use for the request. If omitted, Intake resolves it from the input.</p>
      * @param businessUnit value to be set
      * @return Builder
      */
@@ -112,7 +112,7 @@ public class AgentResponsesPayloadBuilder implements Builder<AgentResponsesPaylo
     }
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to use for the request. If omitted, the Intake Agent resolves it from the input.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to use for the request. If omitted, Intake resolves it from the input.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -124,7 +124,7 @@ public class AgentResponsesPayloadBuilder implements Builder<AgentResponsesPaylo
     }
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to use for the request. If omitted, the Intake Agent resolves it from the input.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to use for the request. If omitted, Intake resolves it from the input.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -136,7 +136,7 @@ public class AgentResponsesPayloadBuilder implements Builder<AgentResponsesPaylo
     }
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to use for the request. If omitted, the Intake Agent resolves it from the input.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to use for the request. If omitted, Intake resolves it from the input.</p>
      * @param store value to be set
      * @return Builder
      */
@@ -176,7 +176,7 @@ public class AgentResponsesPayloadBuilder implements Builder<AgentResponsesPaylo
     }
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> to use for the request. If omitted, the Intake Agent resolves it from the input.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> to use for the request. If omitted, Intake resolves it from the input.</p>
      * @return businessUnit
      */
 
@@ -186,7 +186,7 @@ public class AgentResponsesPayloadBuilder implements Builder<AgentResponsesPaylo
     }
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to use for the request. If omitted, the Intake Agent resolves it from the input.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to use for the request. If omitted, Intake resolves it from the input.</p>
      * @return store
      */
 

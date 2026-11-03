@@ -79,6 +79,14 @@ public interface RemoveParcelFromDeliveryChange extends Change {
     public String getDeliveryId();
 
     /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @return shippingKey
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
+
+    /**
      * set change
      * @param change value to be set
      */
@@ -100,6 +108,13 @@ public interface RemoveParcelFromDeliveryChange extends Change {
     public void setDeliveryId(final String deliveryId);
 
     /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @param shippingKey value to be set
+     */
+
+    public void setShippingKey(final String shippingKey);
+
+    /**
      * factory method
      * @return instance of RemoveParcelFromDeliveryChange
      */
@@ -117,6 +132,7 @@ public interface RemoveParcelFromDeliveryChange extends Change {
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setDeliveryId(template.getDeliveryId());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 
@@ -136,6 +152,7 @@ public interface RemoveParcelFromDeliveryChange extends Change {
         instance.setChange(template.getChange());
         instance.setPreviousValue(com.commercetools.history.models.common.Parcel.deepCopy(template.getPreviousValue()));
         instance.setDeliveryId(template.getDeliveryId());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 

@@ -79,7 +79,11 @@ public class ApiClientDraftImpl implements ApiClientDraft, ModelBase {
     }
 
     /**
-     *  <p>Expiration time in seconds for each access token obtained by the APIClient. If not set the default value applies.</p>
+     *  <p>Expiration time in seconds for each access token obtained by the APIClient. If not set, the default depends on the flow used to obtain the access token.</p>
+     *  <ul>
+     *   <li><code>10 800</code> seconds (3 hours) for <span>anonymous sessions</span>.</li>
+     *   <li><code>172 800</code> seconds (48 hours) for other flows.</li>
+     *  </ul>
      */
 
     public Integer getAccessTokenValiditySeconds() {

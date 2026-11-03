@@ -23,7 +23,8 @@ public class SetDeliveryAddressChangeTest {
                 new Object[] { "nextValue",
                         SetDeliveryAddressChange.builder()
                                 .nextValue(new com.commercetools.history.models.common.AddressImpl()) },
-                new Object[] { "deliveryId", SetDeliveryAddressChange.builder().deliveryId("deliveryId") } };
+                new Object[] { "deliveryId", SetDeliveryAddressChange.builder().deliveryId("deliveryId") },
+                new Object[] { "shippingKey", SetDeliveryAddressChange.builder().shippingKey("shippingKey") } };
     }
 
     @Test
@@ -54,5 +55,12 @@ public class SetDeliveryAddressChangeTest {
         SetDeliveryAddressChange value = SetDeliveryAddressChange.of();
         value.setDeliveryId("deliveryId");
         Assertions.assertThat(value.getDeliveryId()).isEqualTo("deliveryId");
+    }
+
+    @Test
+    public void shippingKey() {
+        SetDeliveryAddressChange value = SetDeliveryAddressChange.of();
+        value.setShippingKey("shippingKey");
+        Assertions.assertThat(value.getShippingKey()).isEqualTo("shippingKey");
     }
 }

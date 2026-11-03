@@ -16,7 +16,8 @@ public class ClientLoggingTest {
     }
 
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { "clientId", ClientLogging.builder().clientId("clientId") },
+        return new Object[][] { new Object[] { "isPlatformClient", ClientLogging.builder().isPlatformClient(true) },
+                new Object[] { "clientId", ClientLogging.builder().clientId("clientId") },
                 new Object[] { "externalUserId", ClientLogging.builder().externalUserId("externalUserId") },
                 new Object[] { "customer",
                         ClientLogging.builder()
@@ -24,6 +25,13 @@ public class ClientLoggingTest {
                 new Object[] { "anonymousId", ClientLogging.builder().anonymousId("anonymousId") },
                 new Object[] { "associate", ClientLogging.builder()
                         .associate(new com.commercetools.api.models.customer.CustomerReferenceImpl()) } };
+    }
+
+    @Test
+    public void isPlatformClient() {
+        ClientLogging value = ClientLogging.of();
+        value.setIsPlatformClient(true);
+        Assertions.assertThat(value.getIsPlatformClient()).isEqualTo(true);
     }
 
     @Test

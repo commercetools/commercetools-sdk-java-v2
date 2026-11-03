@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Returned when one or more Products referenced in an Intake Agent <span>API request</span> could not be matched to the catalog or are unavailable in the bound Store. The omitted Products are excluded from the created entity.</p>
+ *  <p>Returned when one or more Products referenced in an Intake <span>API request</span> could not be matched to the catalog or are unavailable in the bound Store. The omitted Products are excluded from the created entity.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AgentProductsNotFoundWarningImpl implements AgentProductsNotFoundWarning, ModelBase {

@@ -48,6 +48,9 @@ public class RecurrencePolicyBuilder implements Builder<RecurrencePolicy> {
     private com.commercetools.api.models.recurrence_policy.RecurrencePolicySchedule schedule;
 
     @Nullable
+    private Integer minDaysBetweenOrders;
+
+    @Nullable
     private com.commercetools.api.models.common.CreatedBy createdBy;
 
     @Nullable
@@ -206,6 +209,19 @@ public class RecurrencePolicyBuilder implements Builder<RecurrencePolicy> {
     }
 
     /**
+     *  <p>Minimum number of days that must pass since the last Order of a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderRequestOrderNowAction" rel="nofollow">Request Order Now</a> update action is allowed. If not set, there is no limit.</p>
+     *  <p>This value does not affect the recurrence schedule. For example, a weekly RecurrencePolicy with a value of <code>30</code> still creates Orders weekly. The time is measured in multiples of 24 hours from <code>lastOrderAt</code> of the Recurring Order, regardless of whether the last Order was created on schedule or early.</p>
+     *  <p>The limit applies to all Recurring Orders that use this RecurrencePolicy, and changes take effect immediately. It is ignored when the RecurrencePolicy is attached to a Price.</p>
+     * @param minDaysBetweenOrders value to be set
+     * @return Builder
+     */
+
+    public RecurrencePolicyBuilder minDaysBetweenOrders(@Nullable final Integer minDaysBetweenOrders) {
+        this.minDaysBetweenOrders = minDaysBetweenOrders;
+        return this;
+    }
+
+    /**
      *  <p>IDs and references that created the RecurrencePolicy.</p>
      * @param builder function to build the createdBy value
      * @return Builder
@@ -351,6 +367,18 @@ public class RecurrencePolicyBuilder implements Builder<RecurrencePolicy> {
     }
 
     /**
+     *  <p>Minimum number of days that must pass since the last Order of a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderRequestOrderNowAction" rel="nofollow">Request Order Now</a> update action is allowed. If not set, there is no limit.</p>
+     *  <p>This value does not affect the recurrence schedule. For example, a weekly RecurrencePolicy with a value of <code>30</code> still creates Orders weekly. The time is measured in multiples of 24 hours from <code>lastOrderAt</code> of the Recurring Order, regardless of whether the last Order was created on schedule or early.</p>
+     *  <p>The limit applies to all Recurring Orders that use this RecurrencePolicy, and changes take effect immediately. It is ignored when the RecurrencePolicy is attached to a Price.</p>
+     * @return minDaysBetweenOrders
+     */
+
+    @Nullable
+    public Integer getMinDaysBetweenOrders() {
+        return this.minDaysBetweenOrders;
+    }
+
+    /**
      *  <p>IDs and references that created the RecurrencePolicy.</p>
      * @return createdBy
      */
@@ -382,7 +410,7 @@ public class RecurrencePolicyBuilder implements Builder<RecurrencePolicy> {
         Objects.requireNonNull(key, RecurrencePolicy.class + ": key is missing");
         Objects.requireNonNull(schedule, RecurrencePolicy.class + ": schedule is missing");
         return new RecurrencePolicyImpl(id, version, createdAt, lastModifiedAt, key, name, description, schedule,
-            createdBy, lastModifiedBy);
+            minDaysBetweenOrders, createdBy, lastModifiedBy);
     }
 
     /**
@@ -391,7 +419,7 @@ public class RecurrencePolicyBuilder implements Builder<RecurrencePolicy> {
      */
     public RecurrencePolicy buildUnchecked() {
         return new RecurrencePolicyImpl(id, version, createdAt, lastModifiedAt, key, name, description, schedule,
-            createdBy, lastModifiedBy);
+            minDaysBetweenOrders, createdBy, lastModifiedBy);
     }
 
     /**
@@ -417,6 +445,7 @@ public class RecurrencePolicyBuilder implements Builder<RecurrencePolicy> {
         builder.name = template.getName();
         builder.description = template.getDescription();
         builder.schedule = template.getSchedule();
+        builder.minDaysBetweenOrders = template.getMinDaysBetweenOrders();
         builder.createdBy = template.getCreatedBy();
         builder.lastModifiedBy = template.getLastModifiedBy();
         return builder;

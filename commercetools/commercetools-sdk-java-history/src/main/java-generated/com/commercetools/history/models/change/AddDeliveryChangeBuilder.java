@@ -4,6 +4,8 @@ package com.commercetools.history.models.change;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -29,6 +31,9 @@ public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
     private com.commercetools.history.models.change_value.DeliveryChangeValue previousValue;
 
     private com.commercetools.history.models.change_value.DeliveryChangeValue nextValue;
+
+    @Nullable
+    private String shippingKey;
 
     /**
      * set the value to the change
@@ -118,6 +123,17 @@ public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
     }
 
     /**
+     *  <p><code>shippingKey</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Shipping" rel="nofollow">Shipping</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @param shippingKey value to be set
+     * @return Builder
+     */
+
+    public AddDeliveryChangeBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
+        return this;
+    }
+
+    /**
      * value of change}
      * @return change
      */
@@ -145,6 +161,16 @@ public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
     }
 
     /**
+     *  <p><code>shippingKey</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Shipping" rel="nofollow">Shipping</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @return shippingKey
+     */
+
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
+    /**
      * builds AddDeliveryChange with checking for non-null required values
      * @return AddDeliveryChange
      */
@@ -152,7 +178,7 @@ public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
         Objects.requireNonNull(change, AddDeliveryChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, AddDeliveryChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, AddDeliveryChange.class + ": nextValue is missing");
-        return new AddDeliveryChangeImpl(change, previousValue, nextValue);
+        return new AddDeliveryChangeImpl(change, previousValue, nextValue, shippingKey);
     }
 
     /**
@@ -160,7 +186,7 @@ public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
      * @return AddDeliveryChange
      */
     public AddDeliveryChange buildUnchecked() {
-        return new AddDeliveryChangeImpl(change, previousValue, nextValue);
+        return new AddDeliveryChangeImpl(change, previousValue, nextValue, shippingKey);
     }
 
     /**
@@ -181,6 +207,7 @@ public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
         builder.change = template.getChange();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.shippingKey = template.getShippingKey();
         return builder;
     }
 

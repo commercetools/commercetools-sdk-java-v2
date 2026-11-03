@@ -76,6 +76,14 @@ public interface AddDeliveryChange extends Change {
     public DeliveryChangeValue getNextValue();
 
     /**
+     *  <p><code>shippingKey</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Shipping" rel="nofollow">Shipping</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @return shippingKey
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
+
+    /**
      * set change
      * @param change value to be set
      */
@@ -97,6 +105,13 @@ public interface AddDeliveryChange extends Change {
     public void setNextValue(final DeliveryChangeValue nextValue);
 
     /**
+     *  <p><code>shippingKey</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:Shipping" rel="nofollow">Shipping</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @param shippingKey value to be set
+     */
+
+    public void setShippingKey(final String shippingKey);
+
+    /**
      * factory method
      * @return instance of AddDeliveryChange
      */
@@ -114,6 +129,7 @@ public interface AddDeliveryChange extends Change {
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 
@@ -135,6 +151,7 @@ public interface AddDeliveryChange extends Change {
             com.commercetools.history.models.change_value.DeliveryChangeValue.deepCopy(template.getPreviousValue()));
         instance.setNextValue(
             com.commercetools.history.models.change_value.DeliveryChangeValue.deepCopy(template.getNextValue()));
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 

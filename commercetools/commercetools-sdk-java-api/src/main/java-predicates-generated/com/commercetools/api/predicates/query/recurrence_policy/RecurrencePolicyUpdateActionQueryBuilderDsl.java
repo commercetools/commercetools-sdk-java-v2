@@ -34,6 +34,14 @@ public class RecurrencePolicyUpdateActionQueryBuilderDsl {
             RecurrencePolicyUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<RecurrencePolicyUpdateActionQueryBuilderDsl> asSetMinDaysBetweenOrders(
+            Function<com.commercetools.api.predicates.query.recurrence_policy.RecurrencePolicySetMinDaysBetweenOrdersActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.recurrence_policy.RecurrencePolicySetMinDaysBetweenOrdersActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.recurrence_policy.RecurrencePolicySetMinDaysBetweenOrdersActionQueryBuilderDsl
+                    .of()),
+            RecurrencePolicyUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<RecurrencePolicyUpdateActionQueryBuilderDsl> asSetName(
             Function<com.commercetools.api.predicates.query.recurrence_policy.RecurrencePolicySetNameActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.recurrence_policy.RecurrencePolicySetNameActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(

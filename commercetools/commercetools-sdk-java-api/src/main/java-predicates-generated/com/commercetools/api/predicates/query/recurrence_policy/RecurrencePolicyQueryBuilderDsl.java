@@ -69,6 +69,12 @@ public class RecurrencePolicyQueryBuilderDsl {
             RecurrencePolicyQueryBuilderDsl::of);
     }
 
+    public LongComparisonPredicateBuilder<RecurrencePolicyQueryBuilderDsl> minDaysBetweenOrders() {
+        return new LongComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("minDaysBetweenOrders")),
+            p -> new CombinationQueryPredicate<>(p, RecurrencePolicyQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<RecurrencePolicyQueryBuilderDsl> createdBy(
             Function<com.commercetools.api.predicates.query.common.CreatedByQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.CreatedByQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

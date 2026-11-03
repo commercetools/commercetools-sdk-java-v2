@@ -37,6 +37,8 @@ public class SetDeliveryItemsChangeImpl implements SetDeliveryItemsChange, Model
 
     private String deliveryId;
 
+    private String shippingKey;
+
     /**
      * create instance with all properties
      */
@@ -44,11 +46,13 @@ public class SetDeliveryItemsChangeImpl implements SetDeliveryItemsChange, Model
     SetDeliveryItemsChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.DeliveryItem> previousValue,
             @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.DeliveryItem> nextValue,
-            @JsonProperty("deliveryId") final String deliveryId) {
+            @JsonProperty("deliveryId") final String deliveryId,
+            @JsonProperty("shippingKey") final String shippingKey) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.deliveryId = deliveryId;
+        this.shippingKey = shippingKey;
         this.type = SET_DELIVERY_ITEMS_CHANGE;
     }
 
@@ -99,6 +103,14 @@ public class SetDeliveryItemsChangeImpl implements SetDeliveryItemsChange, Model
         return this.deliveryId;
     }
 
+    /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
@@ -124,6 +136,10 @@ public class SetDeliveryItemsChangeImpl implements SetDeliveryItemsChange, Model
         this.deliveryId = deliveryId;
     }
 
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -139,11 +155,13 @@ public class SetDeliveryItemsChangeImpl implements SetDeliveryItemsChange, Model
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(deliveryId, that.deliveryId)
+                .append(shippingKey, that.shippingKey)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(deliveryId, that.deliveryId)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
@@ -154,6 +172,7 @@ public class SetDeliveryItemsChangeImpl implements SetDeliveryItemsChange, Model
                 .append(previousValue)
                 .append(nextValue)
                 .append(deliveryId)
+                .append(shippingKey)
                 .toHashCode();
     }
 
@@ -164,6 +183,7 @@ public class SetDeliveryItemsChangeImpl implements SetDeliveryItemsChange, Model
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
                 .append("deliveryId", deliveryId)
+                .append("shippingKey", shippingKey)
                 .build();
     }
 

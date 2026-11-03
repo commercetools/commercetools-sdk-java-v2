@@ -22,6 +22,7 @@ import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Either the <span>scope</span> <code>manage_products:{projectKey}</code> or <code>manage_categories:{projectKey}</code> is required.</p>
+ *  <p>The response status code is <code>200 OK</code>, unless the request contains a <a href="https://docs.commercetools.com/apis/ctp:api:type:CategorySetStoresWithDescendantsAction" rel="nofollow">Set Stores with Descendants</a>, <a href="https://docs.commercetools.com/apis/ctp:api:type:CategoryAddStoreWithDescendantsAction" rel="nofollow">Add Store with Descendants</a>, or <a href="https://docs.commercetools.com/apis/ctp:api:type:CategoryRemoveStoreWithDescendantsAction" rel="nofollow">Remove Store with Descendants</a> update action. In that case, the API responds with <code>202 Accepted</code>, and the returned Category contains a <code>warnings</code> field with a <a href="https://docs.commercetools.com/apis/ctp:api:type:StoreSettingOngoingWarning" rel="nofollow">StoreSettingOngoing</a> Warning.</p>
  *
  * <hr>
  * <div class=code-example>

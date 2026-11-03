@@ -35,6 +35,8 @@ public class SetDeliveryAddressCustomTypeChangeImpl implements SetDeliveryAddres
 
     private com.commercetools.history.models.common.CustomFields nextValue;
 
+    private String shippingKey;
+
     /**
      * create instance with all properties
      */
@@ -42,12 +44,14 @@ public class SetDeliveryAddressCustomTypeChangeImpl implements SetDeliveryAddres
     SetDeliveryAddressCustomTypeChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("deliveryId") final String deliveryId, @JsonProperty("addressId") final String addressId,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.CustomFields previousValue,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.CustomFields nextValue) {
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.CustomFields nextValue,
+            @JsonProperty("shippingKey") final String shippingKey) {
         this.change = change;
         this.deliveryId = deliveryId;
         this.addressId = addressId;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
+        this.shippingKey = shippingKey;
         this.type = SET_DELIVERY_ADDRESS_CUSTOM_TYPE_CHANGE;
     }
 
@@ -106,6 +110,14 @@ public class SetDeliveryAddressCustomTypeChangeImpl implements SetDeliveryAddres
         return this.nextValue;
     }
 
+    /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
@@ -126,6 +138,10 @@ public class SetDeliveryAddressCustomTypeChangeImpl implements SetDeliveryAddres
         this.nextValue = nextValue;
     }
 
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -142,12 +158,14 @@ public class SetDeliveryAddressCustomTypeChangeImpl implements SetDeliveryAddres
                 .append(addressId, that.addressId)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(shippingKey, that.shippingKey)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(deliveryId, that.deliveryId)
                 .append(addressId, that.addressId)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
@@ -159,6 +177,7 @@ public class SetDeliveryAddressCustomTypeChangeImpl implements SetDeliveryAddres
                 .append(addressId)
                 .append(previousValue)
                 .append(nextValue)
+                .append(shippingKey)
                 .toHashCode();
     }
 
@@ -170,6 +189,7 @@ public class SetDeliveryAddressCustomTypeChangeImpl implements SetDeliveryAddres
                 .append("addressId", addressId)
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
+                .append("shippingKey", shippingKey)
                 .build();
     }
 

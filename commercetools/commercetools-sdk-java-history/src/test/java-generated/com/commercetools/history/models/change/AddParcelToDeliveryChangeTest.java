@@ -20,7 +20,8 @@ public class AddParcelToDeliveryChangeTest {
                 new Object[] { "nextValue",
                         AddParcelToDeliveryChange.builder()
                                 .nextValue(new com.commercetools.history.models.common.ParcelImpl()) },
-                new Object[] { "deliveryId", AddParcelToDeliveryChange.builder().deliveryId("deliveryId") } };
+                new Object[] { "deliveryId", AddParcelToDeliveryChange.builder().deliveryId("deliveryId") },
+                new Object[] { "shippingKey", AddParcelToDeliveryChange.builder().shippingKey("shippingKey") } };
     }
 
     @Test
@@ -42,5 +43,12 @@ public class AddParcelToDeliveryChangeTest {
         AddParcelToDeliveryChange value = AddParcelToDeliveryChange.of();
         value.setDeliveryId("deliveryId");
         Assertions.assertThat(value.getDeliveryId()).isEqualTo("deliveryId");
+    }
+
+    @Test
+    public void shippingKey() {
+        AddParcelToDeliveryChange value = AddParcelToDeliveryChange.of();
+        value.setShippingKey("shippingKey");
+        Assertions.assertThat(value.getShippingKey()).isEqualTo("shippingKey");
     }
 }

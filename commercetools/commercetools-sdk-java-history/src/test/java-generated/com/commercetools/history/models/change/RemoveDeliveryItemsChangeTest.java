@@ -18,7 +18,8 @@ public class RemoveDeliveryItemsChangeTest {
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { "change", RemoveDeliveryItemsChange.builder().change("change") },
                 new Object[] { "previousValue", RemoveDeliveryItemsChange.builder()
-                        .previousValue(new com.commercetools.history.models.change_value.DeliveryChangeValueImpl()) } };
+                        .previousValue(new com.commercetools.history.models.change_value.DeliveryChangeValueImpl()) },
+                new Object[] { "shippingKey", RemoveDeliveryItemsChange.builder().shippingKey("shippingKey") } };
     }
 
     @Test
@@ -34,5 +35,12 @@ public class RemoveDeliveryItemsChangeTest {
         value.setPreviousValue(new com.commercetools.history.models.change_value.DeliveryChangeValueImpl());
         Assertions.assertThat(value.getPreviousValue())
                 .isEqualTo(new com.commercetools.history.models.change_value.DeliveryChangeValueImpl());
+    }
+
+    @Test
+    public void shippingKey() {
+        RemoveDeliveryItemsChange value = RemoveDeliveryItemsChange.of();
+        value.setShippingKey("shippingKey");
+        Assertions.assertThat(value.getShippingKey()).isEqualTo("shippingKey");
     }
 }

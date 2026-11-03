@@ -20,7 +20,8 @@ public class RemoveParcelFromDeliveryChangeTest {
                 new Object[] { "previousValue",
                         RemoveParcelFromDeliveryChange.builder()
                                 .previousValue(new com.commercetools.history.models.common.ParcelImpl()) },
-                new Object[] { "deliveryId", RemoveParcelFromDeliveryChange.builder().deliveryId("deliveryId") } };
+                new Object[] { "deliveryId", RemoveParcelFromDeliveryChange.builder().deliveryId("deliveryId") },
+                new Object[] { "shippingKey", RemoveParcelFromDeliveryChange.builder().shippingKey("shippingKey") } };
     }
 
     @Test
@@ -43,5 +44,12 @@ public class RemoveParcelFromDeliveryChangeTest {
         RemoveParcelFromDeliveryChange value = RemoveParcelFromDeliveryChange.of();
         value.setDeliveryId("deliveryId");
         Assertions.assertThat(value.getDeliveryId()).isEqualTo("deliveryId");
+    }
+
+    @Test
+    public void shippingKey() {
+        RemoveParcelFromDeliveryChange value = RemoveParcelFromDeliveryChange.of();
+        value.setShippingKey("shippingKey");
+        Assertions.assertThat(value.getShippingKey()).isEqualTo("shippingKey");
     }
 }

@@ -92,6 +92,14 @@ public interface SetParcelItemsChange extends Change {
     public ParcelChangeValue getParcel();
 
     /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @return shippingKey
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
+
+    /**
      * set change
      * @param change value to be set
      */
@@ -136,6 +144,13 @@ public interface SetParcelItemsChange extends Change {
     public void setParcel(final ParcelChangeValue parcel);
 
     /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @param shippingKey value to be set
+     */
+
+    public void setShippingKey(final String shippingKey);
+
+    /**
      * factory method
      * @return instance of SetParcelItemsChange
      */
@@ -154,6 +169,7 @@ public interface SetParcelItemsChange extends Change {
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
         instance.setParcel(template.getParcel());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 
@@ -183,6 +199,7 @@ public interface SetParcelItemsChange extends Change {
                 .orElse(null));
         instance.setParcel(
             com.commercetools.history.models.change_value.ParcelChangeValue.deepCopy(template.getParcel()));
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 

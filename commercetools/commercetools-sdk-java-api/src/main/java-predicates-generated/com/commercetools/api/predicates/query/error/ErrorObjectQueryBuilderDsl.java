@@ -800,6 +800,13 @@ public class ErrorObjectQueryBuilderDsl {
             ErrorObjectQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asTooManyRequests(
+            Function<com.commercetools.api.predicates.query.error.TooManyRequestsErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.TooManyRequestsErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.error.TooManyRequestsErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asUnauthorized(
             Function<com.commercetools.api.predicates.query.error.UnauthorizedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.UnauthorizedErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

@@ -77,6 +77,14 @@ public interface CategoryUpdateAction extends com.commercetools.api.models.Resou
     }
 
     /**
+     * builder for addStoreWithDescendants subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.category.CategoryAddStoreWithDescendantsActionBuilder addStoreWithDescendantsBuilder() {
+        return com.commercetools.api.models.category.CategoryAddStoreWithDescendantsActionBuilder.of();
+    }
+
+    /**
      * builder for changeAssetName subtype
      * @return builder
      */
@@ -138,6 +146,14 @@ public interface CategoryUpdateAction extends com.commercetools.api.models.Resou
      */
     public static com.commercetools.api.models.category.CategoryRemoveStoreActionBuilder removeStoreBuilder() {
         return com.commercetools.api.models.category.CategoryRemoveStoreActionBuilder.of();
+    }
+
+    /**
+     * builder for removeStoreWithDescendants subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.category.CategoryRemoveStoreWithDescendantsActionBuilder removeStoreWithDescendantsBuilder() {
+        return com.commercetools.api.models.category.CategoryRemoveStoreWithDescendantsActionBuilder.of();
     }
 
     /**
@@ -258,6 +274,14 @@ public interface CategoryUpdateAction extends com.commercetools.api.models.Resou
      */
     public static com.commercetools.api.models.category.CategorySetStoresActionBuilder setStoresBuilder() {
         return com.commercetools.api.models.category.CategorySetStoresActionBuilder.of();
+    }
+
+    /**
+     * builder for setStoresWithDescendants subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.category.CategorySetStoresWithDescendantsActionBuilder setStoresWithDescendantsBuilder() {
+        return com.commercetools.api.models.category.CategorySetStoresWithDescendantsActionBuilder.of();
     }
 
     /**

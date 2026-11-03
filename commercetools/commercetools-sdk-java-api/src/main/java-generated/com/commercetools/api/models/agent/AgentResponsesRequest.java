@@ -18,7 +18,7 @@ import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>JSON body for an <code>application/json</code> <span>/responses</span> request to the Intake Agent. <code>prompt</code> is required.</p>
+ *  <p>JSON body for an <code>application/json</code> <span>/responses</span> request to Intake. <code>prompt</code> is required.</p>
  *  <p>To attach files, send a <code>multipart/form-data</code> request with an <a href="https://docs.commercetools.com/apis/ctp:api:type:AgentResponsesPayload" rel="nofollow">AgentResponsesPayload</a> as the <code>payload</code> part.</p>
  *
  * <hr>
@@ -62,7 +62,7 @@ public interface AgentResponsesRequest {
     public String getPrompt();
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> to use for the request. If omitted, the Intake Agent resolves it from <code>prompt</code>.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> to use for the request. If omitted, Intake resolves it from <code>prompt</code>.</p>
      * @return businessUnit
      */
     @Valid
@@ -70,7 +70,7 @@ public interface AgentResponsesRequest {
     public BusinessUnitResourceIdentifier getBusinessUnit();
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to use for the request. If omitted, the Intake Agent resolves it from <code>prompt</code>.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to use for the request. If omitted, Intake resolves it from <code>prompt</code>.</p>
      * @return store
      */
     @Valid
@@ -99,14 +99,14 @@ public interface AgentResponsesRequest {
     public void setPrompt(final String prompt);
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> to use for the request. If omitted, the Intake Agent resolves it from <code>prompt</code>.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:BusinessUnit" rel="nofollow">BusinessUnit</a> to use for the request. If omitted, Intake resolves it from <code>prompt</code>.</p>
      * @param businessUnit value to be set
      */
 
     public void setBusinessUnit(final BusinessUnitResourceIdentifier businessUnit);
 
     /**
-     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to use for the request. If omitted, the Intake Agent resolves it from <code>prompt</code>.</p>
+     *  <p><a href="https://docs.commercetools.com/apis/ctp:api:type:Store" rel="nofollow">Store</a> to use for the request. If omitted, Intake resolves it from <code>prompt</code>.</p>
      * @param store value to be set
      */
 

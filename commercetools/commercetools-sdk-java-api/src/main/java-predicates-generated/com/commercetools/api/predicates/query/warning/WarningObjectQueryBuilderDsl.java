@@ -66,4 +66,11 @@ public class WarningObjectQueryBuilderDsl {
             fn.apply(com.commercetools.api.predicates.query.warning.ImageProcessingOngoingWarningQueryBuilderDsl.of()),
             WarningObjectQueryBuilderDsl::of);
     }
+
+    public CombinationQueryPredicate<WarningObjectQueryBuilderDsl> asStoreSettingOngoing(
+            Function<com.commercetools.api.predicates.query.warning.StoreSettingOngoingWarningQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.warning.StoreSettingOngoingWarningQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.warning.StoreSettingOngoingWarningQueryBuilderDsl.of()),
+            WarningObjectQueryBuilderDsl::of);
+    }
 }

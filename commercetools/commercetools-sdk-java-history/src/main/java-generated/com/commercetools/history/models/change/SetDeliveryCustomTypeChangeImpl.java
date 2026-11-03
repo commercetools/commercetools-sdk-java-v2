@@ -33,6 +33,8 @@ public class SetDeliveryCustomTypeChangeImpl implements SetDeliveryCustomTypeCha
 
     private com.commercetools.history.models.common.CustomFields nextValue;
 
+    private String shippingKey;
+
     /**
      * create instance with all properties
      */
@@ -40,11 +42,13 @@ public class SetDeliveryCustomTypeChangeImpl implements SetDeliveryCustomTypeCha
     SetDeliveryCustomTypeChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("deliveryId") final String deliveryId,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.CustomFields previousValue,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.CustomFields nextValue) {
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.CustomFields nextValue,
+            @JsonProperty("shippingKey") final String shippingKey) {
         this.change = change;
         this.deliveryId = deliveryId;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
+        this.shippingKey = shippingKey;
         this.type = SET_DELIVERY_CUSTOM_TYPE_CHANGE;
     }
 
@@ -95,6 +99,14 @@ public class SetDeliveryCustomTypeChangeImpl implements SetDeliveryCustomTypeCha
         return this.nextValue;
     }
 
+    /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
@@ -109,6 +121,10 @@ public class SetDeliveryCustomTypeChangeImpl implements SetDeliveryCustomTypeCha
 
     public void setNextValue(final com.commercetools.history.models.common.CustomFields nextValue) {
         this.nextValue = nextValue;
+    }
+
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
     }
 
     @Override
@@ -126,11 +142,13 @@ public class SetDeliveryCustomTypeChangeImpl implements SetDeliveryCustomTypeCha
                 .append(deliveryId, that.deliveryId)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(shippingKey, that.shippingKey)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(deliveryId, that.deliveryId)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
@@ -141,6 +159,7 @@ public class SetDeliveryCustomTypeChangeImpl implements SetDeliveryCustomTypeCha
                 .append(deliveryId)
                 .append(previousValue)
                 .append(nextValue)
+                .append(shippingKey)
                 .toHashCode();
     }
 
@@ -151,6 +170,7 @@ public class SetDeliveryCustomTypeChangeImpl implements SetDeliveryCustomTypeCha
                 .append("deliveryId", deliveryId)
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
+                .append("shippingKey", shippingKey)
                 .build();
     }
 

@@ -87,6 +87,14 @@ public interface SetParcelCustomTypeChange extends Change {
     public CustomFields getNextValue();
 
     /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @return shippingKey
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
+
+    /**
      * set change
      * @param change value to be set
      */
@@ -115,6 +123,13 @@ public interface SetParcelCustomTypeChange extends Change {
     public void setNextValue(final CustomFields nextValue);
 
     /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @param shippingKey value to be set
+     */
+
+    public void setShippingKey(final String shippingKey);
+
+    /**
      * factory method
      * @return instance of SetParcelCustomTypeChange
      */
@@ -133,6 +148,7 @@ public interface SetParcelCustomTypeChange extends Change {
         instance.setParcel(template.getParcel());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 
@@ -155,6 +171,7 @@ public interface SetParcelCustomTypeChange extends Change {
         instance.setPreviousValue(
             com.commercetools.history.models.common.CustomFields.deepCopy(template.getPreviousValue()));
         instance.setNextValue(com.commercetools.history.models.common.CustomFields.deepCopy(template.getNextValue()));
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 

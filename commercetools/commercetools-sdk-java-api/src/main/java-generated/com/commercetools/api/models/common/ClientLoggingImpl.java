@@ -23,6 +23,8 @@ import tools.jackson.databind.annotation.*;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ClientLoggingImpl implements ClientLogging, ModelBase {
 
+    private Boolean isPlatformClient;
+
     private String clientId;
 
     private String externalUserId;
@@ -37,11 +39,13 @@ public class ClientLoggingImpl implements ClientLogging, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    ClientLoggingImpl(@JsonProperty("clientId") final String clientId,
+    ClientLoggingImpl(@JsonProperty("isPlatformClient") final Boolean isPlatformClient,
+            @JsonProperty("clientId") final String clientId,
             @JsonProperty("externalUserId") final String externalUserId,
             @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerReference customer,
             @JsonProperty("anonymousId") final String anonymousId,
             @JsonProperty("associate") final com.commercetools.api.models.customer.CustomerReference associate) {
+        this.isPlatformClient = isPlatformClient;
         this.clientId = clientId;
         this.externalUserId = externalUserId;
         this.customer = customer;
@@ -53,6 +57,14 @@ public class ClientLoggingImpl implements ClientLogging, ModelBase {
      * create empty instance
      */
     public ClientLoggingImpl() {
+    }
+
+    /**
+     *  <p>If <code>true</code>, the resource was created or modified by an internal process or the <span>Merchant Center</span>. Otherwise, it was created or modified by an <a href="https://docs.commercetools.com/apis/ctp:api:type:ApiClient" rel="nofollow">API Client</a> of your Project.</p>
+     */
+
+    public Boolean getIsPlatformClient() {
+        return this.isPlatformClient;
     }
 
     /**
@@ -95,6 +107,10 @@ public class ClientLoggingImpl implements ClientLogging, ModelBase {
         return this.associate;
     }
 
+    public void setIsPlatformClient(final Boolean isPlatformClient) {
+        this.isPlatformClient = isPlatformClient;
+    }
+
     public void setClientId(final String clientId) {
         this.clientId = clientId;
     }
@@ -125,11 +141,13 @@ public class ClientLoggingImpl implements ClientLogging, ModelBase {
 
         ClientLoggingImpl that = (ClientLoggingImpl) o;
 
-        return new EqualsBuilder().append(clientId, that.clientId)
+        return new EqualsBuilder().append(isPlatformClient, that.isPlatformClient)
+                .append(clientId, that.clientId)
                 .append(externalUserId, that.externalUserId)
                 .append(customer, that.customer)
                 .append(anonymousId, that.anonymousId)
                 .append(associate, that.associate)
+                .append(isPlatformClient, that.isPlatformClient)
                 .append(clientId, that.clientId)
                 .append(externalUserId, that.externalUserId)
                 .append(customer, that.customer)
@@ -140,7 +158,8 @@ public class ClientLoggingImpl implements ClientLogging, ModelBase {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(clientId)
+        return new HashCodeBuilder(17, 37).append(isPlatformClient)
+                .append(clientId)
                 .append(externalUserId)
                 .append(customer)
                 .append(anonymousId)
@@ -150,7 +169,8 @@ public class ClientLoggingImpl implements ClientLogging, ModelBase {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("clientId", clientId)
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("isPlatformClient", isPlatformClient)
+                .append("clientId", clientId)
                 .append("externalUserId", externalUserId)
                 .append("customer", customer)
                 .append("anonymousId", anonymousId)

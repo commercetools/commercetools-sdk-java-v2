@@ -126,6 +126,14 @@ public interface WarningObject {
     }
 
     /**
+     * builder for storeSettingOngoing subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.warning.StoreSettingOngoingWarningBuilder storeSettingOngoingBuilder() {
+        return com.commercetools.api.models.warning.StoreSettingOngoingWarningBuilder.of();
+    }
+
+    /**
      * accessor map function
      * @param <T> mapped type
      * @param helper function to map the object

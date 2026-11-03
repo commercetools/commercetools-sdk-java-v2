@@ -100,6 +100,14 @@ public interface SetParcelCustomFieldChange extends Change {
     public Object getNextValue();
 
     /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @return shippingKey
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
+
+    /**
      * set change
      * @param change value to be set
      */
@@ -142,6 +150,13 @@ public interface SetParcelCustomFieldChange extends Change {
     public void setNextValue(final Object nextValue);
 
     /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @param shippingKey value to be set
+     */
+
+    public void setShippingKey(final String shippingKey);
+
+    /**
      * factory method
      * @return instance of SetParcelCustomFieldChange
      */
@@ -162,6 +177,7 @@ public interface SetParcelCustomFieldChange extends Change {
         instance.setName(template.getName());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 
@@ -185,6 +201,7 @@ public interface SetParcelCustomFieldChange extends Change {
         instance.setName(template.getName());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 

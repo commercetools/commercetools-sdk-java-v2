@@ -76,6 +76,14 @@ public interface RecurrencePolicyUpdateAction {
     }
 
     /**
+     * builder for setMinDaysBetweenOrders subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.recurrence_policy.RecurrencePolicySetMinDaysBetweenOrdersActionBuilder setMinDaysBetweenOrdersBuilder() {
+        return com.commercetools.api.models.recurrence_policy.RecurrencePolicySetMinDaysBetweenOrdersActionBuilder.of();
+    }
+
+    /**
      * builder for setName subtype
      * @return builder
      */

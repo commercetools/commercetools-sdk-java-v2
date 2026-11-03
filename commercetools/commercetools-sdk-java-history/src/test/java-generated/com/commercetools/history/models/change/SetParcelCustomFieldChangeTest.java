@@ -23,7 +23,8 @@ public class SetParcelCustomFieldChangeTest {
                 new Object[] { "customTypeId", SetParcelCustomFieldChange.builder().customTypeId("customTypeId") },
                 new Object[] { "name", SetParcelCustomFieldChange.builder().name("name") },
                 new Object[] { "previousValue", SetParcelCustomFieldChange.builder().previousValue("previousValue") },
-                new Object[] { "nextValue", SetParcelCustomFieldChange.builder().nextValue("nextValue") } };
+                new Object[] { "nextValue", SetParcelCustomFieldChange.builder().nextValue("nextValue") },
+                new Object[] { "shippingKey", SetParcelCustomFieldChange.builder().shippingKey("shippingKey") } };
     }
 
     @Test
@@ -67,5 +68,12 @@ public class SetParcelCustomFieldChangeTest {
         SetParcelCustomFieldChange value = SetParcelCustomFieldChange.of();
         value.setNextValue("nextValue");
         Assertions.assertThat(value.getNextValue()).isEqualTo("nextValue");
+    }
+
+    @Test
+    public void shippingKey() {
+        SetParcelCustomFieldChange value = SetParcelCustomFieldChange.of();
+        value.setShippingKey("shippingKey");
+        Assertions.assertThat(value.getShippingKey()).isEqualTo("shippingKey");
     }
 }

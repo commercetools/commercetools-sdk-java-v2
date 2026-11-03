@@ -4,6 +4,8 @@ package com.commercetools.history.models.change;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -32,6 +34,9 @@ public class SetDeliveryAddressChangeBuilder implements Builder<SetDeliveryAddre
     private com.commercetools.history.models.common.Address nextValue;
 
     private String deliveryId;
+
+    @Nullable
+    private String shippingKey;
 
     /**
      * set the value to the change
@@ -127,6 +132,17 @@ public class SetDeliveryAddressChangeBuilder implements Builder<SetDeliveryAddre
     }
 
     /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @param shippingKey value to be set
+     * @return Builder
+     */
+
+    public SetDeliveryAddressChangeBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
+        return this;
+    }
+
+    /**
      * value of change}
      * @return change
      */
@@ -163,6 +179,16 @@ public class SetDeliveryAddressChangeBuilder implements Builder<SetDeliveryAddre
     }
 
     /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @return shippingKey
+     */
+
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
+    /**
      * builds SetDeliveryAddressChange with checking for non-null required values
      * @return SetDeliveryAddressChange
      */
@@ -171,7 +197,7 @@ public class SetDeliveryAddressChangeBuilder implements Builder<SetDeliveryAddre
         Objects.requireNonNull(previousValue, SetDeliveryAddressChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetDeliveryAddressChange.class + ": nextValue is missing");
         Objects.requireNonNull(deliveryId, SetDeliveryAddressChange.class + ": deliveryId is missing");
-        return new SetDeliveryAddressChangeImpl(change, previousValue, nextValue, deliveryId);
+        return new SetDeliveryAddressChangeImpl(change, previousValue, nextValue, deliveryId, shippingKey);
     }
 
     /**
@@ -179,7 +205,7 @@ public class SetDeliveryAddressChangeBuilder implements Builder<SetDeliveryAddre
      * @return SetDeliveryAddressChange
      */
     public SetDeliveryAddressChange buildUnchecked() {
-        return new SetDeliveryAddressChangeImpl(change, previousValue, nextValue, deliveryId);
+        return new SetDeliveryAddressChangeImpl(change, previousValue, nextValue, deliveryId, shippingKey);
     }
 
     /**
@@ -201,6 +227,7 @@ public class SetDeliveryAddressChangeBuilder implements Builder<SetDeliveryAddre
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
         builder.deliveryId = template.getDeliveryId();
+        builder.shippingKey = template.getShippingKey();
         return builder;
     }
 

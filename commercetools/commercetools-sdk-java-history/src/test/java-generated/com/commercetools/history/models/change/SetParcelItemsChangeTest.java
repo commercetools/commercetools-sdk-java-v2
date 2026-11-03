@@ -27,8 +27,10 @@ public class SetParcelItemsChangeTest {
                         SetParcelItemsChange.builder()
                                 .nextValue(Collections.singletonList(
                                     new com.commercetools.history.models.common.DeliveryItemImpl())) },
-                new Object[] { "parcel", SetParcelItemsChange.builder()
-                        .parcel(new com.commercetools.history.models.change_value.ParcelChangeValueImpl()) } };
+                new Object[] { "parcel",
+                        SetParcelItemsChange.builder()
+                                .parcel(new com.commercetools.history.models.change_value.ParcelChangeValueImpl()) },
+                new Object[] { "shippingKey", SetParcelItemsChange.builder().shippingKey("shippingKey") } };
     }
 
     @Test
@@ -61,5 +63,12 @@ public class SetParcelItemsChangeTest {
         value.setParcel(new com.commercetools.history.models.change_value.ParcelChangeValueImpl());
         Assertions.assertThat(value.getParcel())
                 .isEqualTo(new com.commercetools.history.models.change_value.ParcelChangeValueImpl());
+    }
+
+    @Test
+    public void shippingKey() {
+        SetParcelItemsChange value = SetParcelItemsChange.of();
+        value.setShippingKey("shippingKey");
+        Assertions.assertThat(value.getShippingKey()).isEqualTo("shippingKey");
     }
 }

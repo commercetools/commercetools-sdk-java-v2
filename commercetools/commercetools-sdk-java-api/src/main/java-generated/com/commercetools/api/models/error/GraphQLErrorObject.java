@@ -942,6 +942,14 @@ public interface GraphQLErrorObject {
     }
 
     /**
+     * builder for tooManyRequests subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLTooManyRequestsErrorBuilder tooManyRequestsBuilder() {
+        return com.commercetools.api.models.error.GraphQLTooManyRequestsErrorBuilder.of();
+    }
+
+    /**
      * builder for unauthorized subtype
      * @return builder
      */

@@ -4,6 +4,8 @@ package com.commercetools.history.models.change;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -32,6 +34,9 @@ public class SetParcelCustomTypeChangeBuilder implements Builder<SetParcelCustom
     private com.commercetools.history.models.common.CustomFields previousValue;
 
     private com.commercetools.history.models.common.CustomFields nextValue;
+
+    @Nullable
+    private String shippingKey;
 
     /**
      * set the value to the change
@@ -154,6 +159,17 @@ public class SetParcelCustomTypeChangeBuilder implements Builder<SetParcelCustom
     }
 
     /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @param shippingKey value to be set
+     * @return Builder
+     */
+
+    public SetParcelCustomTypeChangeBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
+        return this;
+    }
+
+    /**
      * value of change}
      * @return change
      */
@@ -190,6 +206,16 @@ public class SetParcelCustomTypeChangeBuilder implements Builder<SetParcelCustom
     }
 
     /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     * @return shippingKey
+     */
+
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
+    /**
      * builds SetParcelCustomTypeChange with checking for non-null required values
      * @return SetParcelCustomTypeChange
      */
@@ -198,7 +224,7 @@ public class SetParcelCustomTypeChangeBuilder implements Builder<SetParcelCustom
         Objects.requireNonNull(parcel, SetParcelCustomTypeChange.class + ": parcel is missing");
         Objects.requireNonNull(previousValue, SetParcelCustomTypeChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetParcelCustomTypeChange.class + ": nextValue is missing");
-        return new SetParcelCustomTypeChangeImpl(change, parcel, previousValue, nextValue);
+        return new SetParcelCustomTypeChangeImpl(change, parcel, previousValue, nextValue, shippingKey);
     }
 
     /**
@@ -206,7 +232,7 @@ public class SetParcelCustomTypeChangeBuilder implements Builder<SetParcelCustom
      * @return SetParcelCustomTypeChange
      */
     public SetParcelCustomTypeChange buildUnchecked() {
-        return new SetParcelCustomTypeChangeImpl(change, parcel, previousValue, nextValue);
+        return new SetParcelCustomTypeChangeImpl(change, parcel, previousValue, nextValue, shippingKey);
     }
 
     /**
@@ -228,6 +254,7 @@ public class SetParcelCustomTypeChangeBuilder implements Builder<SetParcelCustom
         builder.parcel = template.getParcel();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.shippingKey = template.getShippingKey();
         return builder;
     }
 

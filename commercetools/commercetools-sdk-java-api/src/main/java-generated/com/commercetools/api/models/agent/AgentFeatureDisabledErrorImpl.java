@@ -19,7 +19,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Returned by a <span>/responses</span> request when the Intake Agent is not enabled for the Project.</p>
+ *  <p>Returned by a <span>/responses</span> request when Intake is not enabled for the Project.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AgentFeatureDisabledErrorImpl implements AgentFeatureDisabledError, ModelBase {

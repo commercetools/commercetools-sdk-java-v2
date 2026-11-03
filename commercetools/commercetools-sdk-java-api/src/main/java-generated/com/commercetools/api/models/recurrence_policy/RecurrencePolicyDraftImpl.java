@@ -31,6 +31,8 @@ public class RecurrencePolicyDraftImpl implements RecurrencePolicyDraft, ModelBa
 
     private com.commercetools.api.models.recurrence_policy.RecurrencePolicyScheduleDraft schedule;
 
+    private Integer minDaysBetweenOrders;
+
     /**
      * create instance with all properties
      */
@@ -38,11 +40,13 @@ public class RecurrencePolicyDraftImpl implements RecurrencePolicyDraft, ModelBa
     RecurrencePolicyDraftImpl(@JsonProperty("key") final String key,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,
-            @JsonProperty("schedule") final com.commercetools.api.models.recurrence_policy.RecurrencePolicyScheduleDraft schedule) {
+            @JsonProperty("schedule") final com.commercetools.api.models.recurrence_policy.RecurrencePolicyScheduleDraft schedule,
+            @JsonProperty("minDaysBetweenOrders") final Integer minDaysBetweenOrders) {
         this.key = key;
         this.name = name;
         this.description = description;
         this.schedule = schedule;
+        this.minDaysBetweenOrders = minDaysBetweenOrders;
     }
 
     /**
@@ -83,6 +87,16 @@ public class RecurrencePolicyDraftImpl implements RecurrencePolicyDraft, ModelBa
         return this.schedule;
     }
 
+    /**
+     *  <p>Minimum number of days that must pass since the last Order of a <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrder" rel="nofollow">Recurring Order</a> before the <a href="https://docs.commercetools.com/apis/ctp:api:type:RecurringOrderRequestOrderNowAction" rel="nofollow">Request Order Now</a> update action is allowed. If not set, there is no limit.</p>
+     *  <p>This value does not affect the recurrence schedule. For example, a weekly RecurrencePolicy with a value of <code>30</code> still creates Orders weekly. The time is measured in multiples of 24 hours from <code>lastOrderAt</code> of the Recurring Order, regardless of whether the last Order was created on schedule or early.</p>
+     *  <p>The limit applies to all Recurring Orders that use this RecurrencePolicy, and changes take effect immediately. It is ignored when the RecurrencePolicy is attached to a Price.</p>
+     */
+
+    public Integer getMinDaysBetweenOrders() {
+        return this.minDaysBetweenOrders;
+    }
+
     public void setKey(final String key) {
         this.key = key;
     }
@@ -100,6 +114,10 @@ public class RecurrencePolicyDraftImpl implements RecurrencePolicyDraft, ModelBa
         this.schedule = schedule;
     }
 
+    public void setMinDaysBetweenOrders(final Integer minDaysBetweenOrders) {
+        this.minDaysBetweenOrders = minDaysBetweenOrders;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -114,16 +132,23 @@ public class RecurrencePolicyDraftImpl implements RecurrencePolicyDraft, ModelBa
                 .append(name, that.name)
                 .append(description, that.description)
                 .append(schedule, that.schedule)
+                .append(minDaysBetweenOrders, that.minDaysBetweenOrders)
                 .append(key, that.key)
                 .append(name, that.name)
                 .append(description, that.description)
                 .append(schedule, that.schedule)
+                .append(minDaysBetweenOrders, that.minDaysBetweenOrders)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key).append(name).append(description).append(schedule).toHashCode();
+        return new HashCodeBuilder(17, 37).append(key)
+                .append(name)
+                .append(description)
+                .append(schedule)
+                .append(minDaysBetweenOrders)
+                .toHashCode();
     }
 
     @Override
@@ -132,6 +157,7 @@ public class RecurrencePolicyDraftImpl implements RecurrencePolicyDraft, ModelBa
                 .append("name", name)
                 .append("description", description)
                 .append("schedule", schedule)
+                .append("minDaysBetweenOrders", minDaysBetweenOrders)
                 .build();
     }
 

@@ -23,8 +23,10 @@ public class SetParcelCustomTypeChangeTest {
                 new Object[] { "previousValue",
                         SetParcelCustomTypeChange.builder()
                                 .previousValue(new com.commercetools.history.models.common.CustomFieldsImpl()) },
-                new Object[] { "nextValue", SetParcelCustomTypeChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.CustomFieldsImpl()) } };
+                new Object[] { "nextValue",
+                        SetParcelCustomTypeChange.builder()
+                                .nextValue(new com.commercetools.history.models.common.CustomFieldsImpl()) },
+                new Object[] { "shippingKey", SetParcelCustomTypeChange.builder().shippingKey("shippingKey") } };
     }
 
     @Test
@@ -56,5 +58,12 @@ public class SetParcelCustomTypeChangeTest {
         value.setNextValue(new com.commercetools.history.models.common.CustomFieldsImpl());
         Assertions.assertThat(value.getNextValue())
                 .isEqualTo(new com.commercetools.history.models.common.CustomFieldsImpl());
+    }
+
+    @Test
+    public void shippingKey() {
+        SetParcelCustomTypeChange value = SetParcelCustomTypeChange.of();
+        value.setShippingKey("shippingKey");
+        Assertions.assertThat(value.getShippingKey()).isEqualTo("shippingKey");
     }
 }

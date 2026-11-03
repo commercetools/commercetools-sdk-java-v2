@@ -136,6 +136,7 @@ public interface LastModifiedBy extends ClientLogging {
      */
     public static LastModifiedBy of(final LastModifiedBy template) {
         LastModifiedByImpl instance = new LastModifiedByImpl();
+        instance.setIsPlatformClient(template.getIsPlatformClient());
         instance.setClientId(template.getClientId());
         instance.setExternalUserId(template.getExternalUserId());
         instance.setCustomer(template.getCustomer());
@@ -158,6 +159,7 @@ public interface LastModifiedBy extends ClientLogging {
             return null;
         }
         LastModifiedByImpl instance = new LastModifiedByImpl();
+        instance.setIsPlatformClient(template.getIsPlatformClient());
         instance.setClientId(template.getClientId());
         instance.setExternalUserId(template.getExternalUserId());
         instance.setCustomer(com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getCustomer()));

@@ -37,6 +37,8 @@ public class SetParcelCustomFieldChangeImpl implements SetParcelCustomFieldChang
 
     private java.lang.Object nextValue;
 
+    private String shippingKey;
+
     /**
      * create instance with all properties
      */
@@ -45,13 +47,15 @@ public class SetParcelCustomFieldChangeImpl implements SetParcelCustomFieldChang
             @JsonProperty("parcel") final com.commercetools.history.models.change_value.ParcelChangeValue parcel,
             @JsonProperty("customTypeId") final String customTypeId, @JsonProperty("name") final String name,
             @JsonProperty("previousValue") final java.lang.Object previousValue,
-            @JsonProperty("nextValue") final java.lang.Object nextValue) {
+            @JsonProperty("nextValue") final java.lang.Object nextValue,
+            @JsonProperty("shippingKey") final String shippingKey) {
         this.change = change;
         this.parcel = parcel;
         this.customTypeId = customTypeId;
         this.name = name;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
+        this.shippingKey = shippingKey;
         this.type = SET_PARCEL_CUSTOM_FIELD_CHANGE;
     }
 
@@ -118,6 +122,14 @@ public class SetParcelCustomFieldChangeImpl implements SetParcelCustomFieldChang
         return this.nextValue;
     }
 
+    /**
+     *  <p><code>key</code> of the <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMethod" rel="nofollow">ShippingMethod</a> associated with the Delivery. Only present when the Order uses the <code>Multiple</code> <a href="https://docs.commercetools.com/apis/ctp:api:type:ShippingMode" rel="nofollow">ShippingMode</a>.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
@@ -142,6 +154,10 @@ public class SetParcelCustomFieldChangeImpl implements SetParcelCustomFieldChang
         this.nextValue = nextValue;
     }
 
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -159,6 +175,7 @@ public class SetParcelCustomFieldChangeImpl implements SetParcelCustomFieldChang
                 .append(name, that.name)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(shippingKey, that.shippingKey)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(parcel, that.parcel)
@@ -166,6 +183,7 @@ public class SetParcelCustomFieldChangeImpl implements SetParcelCustomFieldChang
                 .append(name, that.name)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
@@ -178,6 +196,7 @@ public class SetParcelCustomFieldChangeImpl implements SetParcelCustomFieldChang
                 .append(name)
                 .append(previousValue)
                 .append(nextValue)
+                .append(shippingKey)
                 .toHashCode();
     }
 
@@ -190,6 +209,7 @@ public class SetParcelCustomFieldChangeImpl implements SetParcelCustomFieldChang
                 .append("name", name)
                 .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
+                .append("shippingKey", shippingKey)
                 .build();
     }
 

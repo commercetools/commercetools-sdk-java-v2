@@ -960,6 +960,14 @@ public interface ErrorObject {
     }
 
     /**
+     * builder for tooManyRequests subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.TooManyRequestsErrorBuilder tooManyRequestsBuilder() {
+        return com.commercetools.api.models.error.TooManyRequestsErrorBuilder.of();
+    }
+
+    /**
      * builder for unauthorized subtype
      * @return builder
      */

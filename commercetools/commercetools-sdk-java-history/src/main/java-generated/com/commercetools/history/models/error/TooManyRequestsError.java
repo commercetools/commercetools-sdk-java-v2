@@ -16,7 +16,7 @@ import jakarta.validation.constraints.NotNull;
 import tools.jackson.databind.annotation.*;
 
 /**
- *  <p>Returned when the <span>Query Records</span> request exceeds the rate limit.</p>
+ *  <p>Returned when the <span>Query Records</span> request exceeds the rate limit. The response includes a <code>Retry-After</code> header.</p>
  *  <p>Reduce the date range and resource types in your query to minimize the token usage, or retry the request after some time (indicated in the <code>Retry-After</code> header).</p>
  *
  * <hr>
@@ -30,15 +30,9 @@ import tools.jackson.databind.annotation.*;
  * </code></pre>
  * </div>
  */
-@io.vrap.rmf.base.client.utils.json.SubType("TooManyRequests")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TooManyRequestsErrorImpl.class)
 public interface TooManyRequestsError extends ErrorObject {
-
-    /**
-     * discriminator value for TooManyRequestsError
-     */
-    String TOO_MANY_REQUESTS = "TooManyRequests";
 
     /**
      *  <p><code>"TooManyRequests"</code></p>

@@ -26,7 +26,9 @@ public class SetDeliveryAddressCustomFieldChangeTest {
                         SetDeliveryAddressCustomFieldChange.builder().customTypeId("customTypeId") },
                 new Object[] { "previousValue",
                         SetDeliveryAddressCustomFieldChange.builder().previousValue("previousValue") },
-                new Object[] { "nextValue", SetDeliveryAddressCustomFieldChange.builder().nextValue("nextValue") } };
+                new Object[] { "nextValue", SetDeliveryAddressCustomFieldChange.builder().nextValue("nextValue") },
+                new Object[] { "shippingKey",
+                        SetDeliveryAddressCustomFieldChange.builder().shippingKey("shippingKey") } };
     }
 
     @Test
@@ -76,5 +78,12 @@ public class SetDeliveryAddressCustomFieldChangeTest {
         SetDeliveryAddressCustomFieldChange value = SetDeliveryAddressCustomFieldChange.of();
         value.setNextValue("nextValue");
         Assertions.assertThat(value.getNextValue()).isEqualTo("nextValue");
+    }
+
+    @Test
+    public void shippingKey() {
+        SetDeliveryAddressCustomFieldChange value = SetDeliveryAddressCustomFieldChange.of();
+        value.setShippingKey("shippingKey");
+        Assertions.assertThat(value.getShippingKey()).isEqualTo("shippingKey");
     }
 }

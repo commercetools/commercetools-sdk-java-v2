@@ -35,6 +35,10 @@ public class WarningObjectBuilder {
         return com.commercetools.api.models.warning.ImageProcessingOngoingWarningBuilder.of();
     }
 
+    public com.commercetools.api.models.warning.StoreSettingOngoingWarningBuilder storeSettingOngoingBuilder() {
+        return com.commercetools.api.models.warning.StoreSettingOngoingWarningBuilder.of();
+    }
+
     /**
      * factory method for an instance of WarningObjectBuilder
      * @return builder

@@ -46,4 +46,10 @@ public class RecurrencePolicyDraftQueryBuilderDsl {
             RecurrencePolicyDraftQueryBuilderDsl::of);
     }
 
+    public LongComparisonPredicateBuilder<RecurrencePolicyDraftQueryBuilderDsl> minDaysBetweenOrders() {
+        return new LongComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("minDaysBetweenOrders")),
+            p -> new CombinationQueryPredicate<>(p, RecurrencePolicyDraftQueryBuilderDsl::of));
+    }
+
 }

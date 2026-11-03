@@ -1,7 +1,7 @@
 
 dependencies {
     api project(":rmf:rmf-java-base")
-    api "org.asynchttpclient:async-http-client:2.16.1"
+    api "org.asynchttpclient:async-http-client:3.0.14"
     api 'commons-io:commons-io:2.22.0' version {
         strictly '[2.8.0,)'
         prefer '2.22.0'

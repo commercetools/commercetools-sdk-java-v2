@@ -35,6 +35,10 @@ public class GraphQLErrorObjectBuilder {
         return com.commercetools.api.models.agent.GraphQLAgentMissingCountryErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.agent.GraphQLAgentMissingCurrencyErrorBuilder missingCurrencyBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentMissingCurrencyErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.agent.GraphQLAgentMissingCustomerEmailErrorBuilder missingCustomerEmailBuilder() {
         return com.commercetools.api.models.agent.GraphQLAgentMissingCustomerEmailErrorBuilder.of();
     }
@@ -69,6 +73,10 @@ public class GraphQLErrorObjectBuilder {
 
     public com.commercetools.api.models.agent.GraphQLAgentShoppingListCreationFailedErrorBuilder shoppingListCreationFailedBuilder() {
         return com.commercetools.api.models.agent.GraphQLAgentShoppingListCreationFailedErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.agent.GraphQLAgentShoppingListUnresolvedErrorBuilder shoppingListUnresolvedBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentShoppingListUnresolvedErrorBuilder.of();
     }
 
     public com.commercetools.api.models.agent.GraphQLAgentStoreAmbiguousErrorBuilder storeAmbiguousBuilder() {

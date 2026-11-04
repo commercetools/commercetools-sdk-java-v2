@@ -126,6 +126,14 @@ public interface GraphQLErrorObject {
     }
 
     /**
+     * builder for missingCurrency subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.GraphQLAgentMissingCurrencyErrorBuilder missingCurrencyBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentMissingCurrencyErrorBuilder.of();
+    }
+
+    /**
      * builder for missingCustomerEmail subtype
      * @return builder
      */
@@ -195,6 +203,14 @@ public interface GraphQLErrorObject {
      */
     public static com.commercetools.api.models.agent.GraphQLAgentShoppingListCreationFailedErrorBuilder shoppingListCreationFailedBuilder() {
         return com.commercetools.api.models.agent.GraphQLAgentShoppingListCreationFailedErrorBuilder.of();
+    }
+
+    /**
+     * builder for shoppingListUnresolved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.agent.GraphQLAgentShoppingListUnresolvedErrorBuilder shoppingListUnresolvedBuilder() {
+        return com.commercetools.api.models.agent.GraphQLAgentShoppingListUnresolvedErrorBuilder.of();
     }
 
     /**

@@ -17,7 +17,7 @@ plugins {
     id 'io.github.gradle-nexus.publish-plugin' version '2.0.0'
     id 'com.github.jk1.dependency-license-report' version '3.1.4'
 
-    id "me.champeau.jmh" version "0.7.3"
+    id "me.champeau.jmh" version "0.7.4"
     id "jacoco"
 
     id "versioning"
@@ -72,7 +72,7 @@ allprojects {
 
     configurations {
         taglet {
-            resolutionStrategy.force("net.sourceforge.plantuml:plantuml:1.2026.6")
+            resolutionStrategy.force("net.sourceforge.plantuml:plantuml:1.2026.9")
         }
     }
 

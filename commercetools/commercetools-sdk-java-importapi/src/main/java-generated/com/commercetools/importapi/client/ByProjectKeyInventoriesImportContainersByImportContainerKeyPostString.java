@@ -18,6 +18,7 @@ import tools.jackson.core.type.TypeReference;
 
 /**
  *  <p>Creates an Import Request for InventoryEntries.</p>
+ *  <p>When updating existing InventoryEntries, <code>supplyChannel</code> and <code>custom</code> omitted from an <a href="https://docs.commercetools.com/apis/ctp:import:type:InventoryImport" rel="nofollow">InventoryImport</a> are removed. Include all existing values you want to keep.</p>
  *
  * <hr>
  * <div class=code-example>

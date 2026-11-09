@@ -70,6 +70,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
 
     /**
      *  <p>The <code>attributes</code> of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>.</p>
+     *  <p>When updating an existing ProductType, AttributeDefinitions omitted from this array are removed, and all corresponding Attribute values are deleted from Products with this ProductType. If this field is omitted, all AttributeDefinitions are removed.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -82,6 +83,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
 
     /**
      *  <p>The <code>attributes</code> of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>.</p>
+     *  <p>When updating an existing ProductType, AttributeDefinitions omitted from this array are removed, and all corresponding Attribute values are deleted from Products with this ProductType. If this field is omitted, all AttributeDefinitions are removed.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -94,6 +96,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
 
     /**
      *  <p>The <code>attributes</code> of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>.</p>
+     *  <p>When updating an existing ProductType, AttributeDefinitions omitted from this array are removed, and all corresponding Attribute values are deleted from Products with this ProductType. If this field is omitted, all AttributeDefinitions are removed.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -109,6 +112,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
 
     /**
      *  <p>The <code>attributes</code> of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>.</p>
+     *  <p>When updating an existing ProductType, AttributeDefinitions omitted from this array are removed, and all corresponding Attribute values are deleted from Products with this ProductType. If this field is omitted, all AttributeDefinitions are removed.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -125,6 +129,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
 
     /**
      *  <p>The <code>attributes</code> of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>.</p>
+     *  <p>When updating an existing ProductType, AttributeDefinitions omitted from this array are removed, and all corresponding Attribute values are deleted from Products with this ProductType. If this field is omitted, all AttributeDefinitions are removed.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -139,6 +144,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
 
     /**
      *  <p>The <code>attributes</code> of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>.</p>
+     *  <p>When updating an existing ProductType, AttributeDefinitions omitted from this array are removed, and all corresponding Attribute values are deleted from Products with this ProductType. If this field is omitted, all AttributeDefinitions are removed.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -151,6 +157,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
 
     /**
      *  <p>The <code>attributes</code> of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>.</p>
+     *  <p>When updating an existing ProductType, AttributeDefinitions omitted from this array are removed, and all corresponding Attribute values are deleted from Products with this ProductType. If this field is omitted, all AttributeDefinitions are removed.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -190,6 +197,7 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
 
     /**
      *  <p>The <code>attributes</code> of <a href="https://docs.commercetools.com/apis/ctp:api:type:ProductType" rel="nofollow">ProductType</a>.</p>
+     *  <p>When updating an existing ProductType, AttributeDefinitions omitted from this array are removed, and all corresponding Attribute values are deleted from Products with this ProductType. If this field is omitted, all AttributeDefinitions are removed.</p>
      * @return attributes
      */
 

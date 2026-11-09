@@ -134,6 +134,7 @@ public class ProductSelectionImportBuilder implements Builder<ProductSelectionIm
 
     /**
      *  <p>List of product assignments.</p>
+     *  <p>When updating an existing ProductSelection, the imported list becomes the complete set of assignments, and Products omitted from the list are removed from the ProductSelection. If this field is omitted, the existing assignments are not changed.</p>
      * @param assignments value to be set
      * @return Builder
      */
@@ -146,6 +147,7 @@ public class ProductSelectionImportBuilder implements Builder<ProductSelectionIm
 
     /**
      *  <p>List of product assignments.</p>
+     *  <p>When updating an existing ProductSelection, the imported list becomes the complete set of assignments, and Products omitted from the list are removed from the ProductSelection. If this field is omitted, the existing assignments are not changed.</p>
      * @param assignments value to be set
      * @return Builder
      */
@@ -158,6 +160,7 @@ public class ProductSelectionImportBuilder implements Builder<ProductSelectionIm
 
     /**
      *  <p>List of product assignments.</p>
+     *  <p>When updating an existing ProductSelection, the imported list becomes the complete set of assignments, and Products omitted from the list are removed from the ProductSelection. If this field is omitted, the existing assignments are not changed.</p>
      * @param assignments value to be set
      * @return Builder
      */
@@ -173,6 +176,7 @@ public class ProductSelectionImportBuilder implements Builder<ProductSelectionIm
 
     /**
      *  <p>List of product assignments.</p>
+     *  <p>When updating an existing ProductSelection, the imported list becomes the complete set of assignments, and Products omitted from the list are removed from the ProductSelection. If this field is omitted, the existing assignments are not changed.</p>
      * @param builder function to build the assignments value
      * @return Builder
      */
@@ -190,6 +194,7 @@ public class ProductSelectionImportBuilder implements Builder<ProductSelectionIm
 
     /**
      *  <p>List of product assignments.</p>
+     *  <p>When updating an existing ProductSelection, the imported list becomes the complete set of assignments, and Products omitted from the list are removed from the ProductSelection. If this field is omitted, the existing assignments are not changed.</p>
      * @param builder function to build the assignments value
      * @return Builder
      */
@@ -205,6 +210,7 @@ public class ProductSelectionImportBuilder implements Builder<ProductSelectionIm
 
     /**
      *  <p>List of product assignments.</p>
+     *  <p>When updating an existing ProductSelection, the imported list becomes the complete set of assignments, and Products omitted from the list are removed from the ProductSelection. If this field is omitted, the existing assignments are not changed.</p>
      * @param builder function to build the assignments value
      * @return Builder
      */
@@ -217,6 +223,7 @@ public class ProductSelectionImportBuilder implements Builder<ProductSelectionIm
 
     /**
      *  <p>List of product assignments.</p>
+     *  <p>When updating an existing ProductSelection, the imported list becomes the complete set of assignments, and Products omitted from the list are removed from the ProductSelection. If this field is omitted, the existing assignments are not changed.</p>
      * @param builder function to build the assignments value
      * @return Builder
      */
@@ -267,6 +274,7 @@ public class ProductSelectionImportBuilder implements Builder<ProductSelectionIm
 
     /**
      *  <p>List of product assignments.</p>
+     *  <p>When updating an existing ProductSelection, the imported list becomes the complete set of assignments, and Products omitted from the list are removed from the ProductSelection. If this field is omitted, the existing assignments are not changed.</p>
      * @return assignments
      */
 

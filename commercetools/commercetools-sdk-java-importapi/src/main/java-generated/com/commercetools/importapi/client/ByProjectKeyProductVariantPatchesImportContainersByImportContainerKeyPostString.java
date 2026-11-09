@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import tools.jackson.core.type.TypeReference;
 
 /**
- *  <p>Creates an Import Request for updating Product Variants. Returns an <a href="https://docs.commercetools.com/apis/ctp:import:type:InvalidFieldError" rel="nofollow">InvalidField</a> error if the <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantPatchRequest" rel="nofollow">ProductVariantPatchRequest</a> contains patches with and without the <code>product</code> field set.</p>
+ *  <p>Creates an Import Request for updating Product Variants. Only the Attributes included in the patch are changed. All other Attributes, images, Assets, and Prices of the Product Variant remain unchanged. Returns an <a href="https://docs.commercetools.com/apis/ctp:import:type:InvalidFieldError" rel="nofollow">InvalidField</a> error if the <a href="https://docs.commercetools.com/apis/ctp:import:type:ProductVariantPatchRequest" rel="nofollow">ProductVariantPatchRequest</a> contains patches with and without the <code>product</code> field set.</p>
  *
  * <hr>
  * <div class=code-example>

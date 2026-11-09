@@ -19,6 +19,7 @@ import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Represents the data used to import an InventoryEntry. Once imported, this data is persisted as a <a href="https://docs.commercetools.com/apis/ctp:api:type:InventoryEntry" rel="nofollow">InventoryEntry</a> in the Project.</p>
+ *  <p>When updating an existing InventoryEntry, <code>supplyChannel</code> and <code>custom</code> omitted from the import are removed from the InventoryEntry. To clear other optional values, such as <code>restockableInDays</code>, set them to <code>null</code>. For more information, see <span>Omitted values are removed on update</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryImportImpl implements InventoryImport, ModelBase {

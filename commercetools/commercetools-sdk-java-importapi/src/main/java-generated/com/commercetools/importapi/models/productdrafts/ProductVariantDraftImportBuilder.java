@@ -65,6 +65,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>When updating an existing ProductVariant, Embedded Prices omitted from this array are removed.</p>
      * @param prices value to be set
      * @return Builder
      */
@@ -77,6 +78,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>When updating an existing ProductVariant, Embedded Prices omitted from this array are removed.</p>
      * @param prices value to be set
      * @return Builder
      */
@@ -89,6 +91,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>When updating an existing ProductVariant, Embedded Prices omitted from this array are removed.</p>
      * @param prices value to be set
      * @return Builder
      */
@@ -104,6 +107,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>When updating an existing ProductVariant, Embedded Prices omitted from this array are removed.</p>
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -120,6 +124,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>When updating an existing ProductVariant, Embedded Prices omitted from this array are removed.</p>
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -134,6 +139,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>When updating an existing ProductVariant, Embedded Prices omitted from this array are removed.</p>
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -145,6 +151,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>When updating an existing ProductVariant, Embedded Prices omitted from this array are removed.</p>
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -156,6 +163,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>When updating an existing ProductVariant, Attributes omitted from this array are removed.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -168,6 +176,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>When updating an existing ProductVariant, Attributes omitted from this array are removed.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -180,6 +189,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>When updating an existing ProductVariant, Attributes omitted from this array are removed.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -195,6 +205,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>When updating an existing ProductVariant, Attributes omitted from this array are removed.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -211,6 +222,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>When updating an existing ProductVariant, Attributes omitted from this array are removed.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -225,6 +237,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *  <p>Images for the Product Variant.</p>
+     *  <p>When updating an existing ProductVariant, images omitted from this array are removed.</p>
      * @param images value to be set
      * @return Builder
      */
@@ -237,6 +250,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *  <p>Images for the Product Variant.</p>
+     *  <p>When updating an existing ProductVariant, images omitted from this array are removed.</p>
      * @param images value to be set
      * @return Builder
      */
@@ -249,6 +263,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *  <p>Images for the Product Variant.</p>
+     *  <p>When updating an existing ProductVariant, images omitted from this array are removed.</p>
      * @param images value to be set
      * @return Builder
      */
@@ -264,6 +279,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *  <p>Images for the Product Variant.</p>
+     *  <p>When updating an existing ProductVariant, images omitted from this array are removed.</p>
      * @param builder function to build the images value
      * @return Builder
      */
@@ -279,6 +295,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *  <p>Images for the Product Variant.</p>
+     *  <p>When updating an existing ProductVariant, images omitted from this array are removed.</p>
      * @param builder function to build the images value
      * @return Builder
      */
@@ -292,6 +309,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *  <p>Images for the Product Variant.</p>
+     *  <p>When updating an existing ProductVariant, images omitted from this array are removed.</p>
      * @param builder function to build the images value
      * @return Builder
      */
@@ -303,6 +321,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *  <p>Images for the Product Variant.</p>
+     *  <p>When updating an existing ProductVariant, images omitted from this array are removed.</p>
      * @param builder function to build the images value
      * @return Builder
      */
@@ -314,6 +333,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *  <p>Media assets for the Product Variant.</p>
+     *  <p>When updating an existing ProductVariant, Assets omitted from this array are removed.</p>
      * @param assets value to be set
      * @return Builder
      */
@@ -326,6 +346,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *  <p>Media assets for the Product Variant.</p>
+     *  <p>When updating an existing ProductVariant, Assets omitted from this array are removed.</p>
      * @param assets value to be set
      * @return Builder
      */
@@ -338,6 +359,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *  <p>Media assets for the Product Variant.</p>
+     *  <p>When updating an existing ProductVariant, Assets omitted from this array are removed.</p>
      * @param assets value to be set
      * @return Builder
      */
@@ -353,6 +375,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *  <p>Media assets for the Product Variant.</p>
+     *  <p>When updating an existing ProductVariant, Assets omitted from this array are removed.</p>
      * @param builder function to build the assets value
      * @return Builder
      */
@@ -368,6 +391,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *  <p>Media assets for the Product Variant.</p>
+     *  <p>When updating an existing ProductVariant, Assets omitted from this array are removed.</p>
      * @param builder function to build the assets value
      * @return Builder
      */
@@ -381,6 +405,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *  <p>Media assets for the Product Variant.</p>
+     *  <p>When updating an existing ProductVariant, Assets omitted from this array are removed.</p>
      * @param builder function to build the assets value
      * @return Builder
      */
@@ -392,6 +417,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *  <p>Media assets for the Product Variant.</p>
+     *  <p>When updating an existing ProductVariant, Assets omitted from this array are removed.</p>
      * @param builder function to build the assets value
      * @return Builder
      */
@@ -422,6 +448,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     *  <p>When updating an existing ProductVariant, Embedded Prices omitted from this array are removed.</p>
      * @return prices
      */
 
@@ -432,6 +459,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>When updating an existing ProductVariant, Attributes omitted from this array are removed.</p>
      * @return attributes
      */
 
@@ -442,6 +470,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *  <p>Images for the Product Variant.</p>
+     *  <p>When updating an existing ProductVariant, images omitted from this array are removed.</p>
      * @return images
      */
 
@@ -452,6 +481,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
 
     /**
      *  <p>Media assets for the Product Variant.</p>
+     *  <p>When updating an existing ProductVariant, Assets omitted from this array are removed.</p>
      * @return assets
      */
 

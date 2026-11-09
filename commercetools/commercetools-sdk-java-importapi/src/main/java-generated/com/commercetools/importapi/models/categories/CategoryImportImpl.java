@@ -19,6 +19,7 @@ import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>Represents the data used to import a Category. Once imported, this data is persisted as a <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Category</a> in the Project.</p>
+ *  <p>When updating an existing Category, <code>assets</code> and <code>custom</code> omitted from the import are removed from the Category. Include all existing values you want to keep. For more information, see <span>Omitted values are removed on update</span>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryImportImpl implements CategoryImport, ModelBase {
@@ -164,6 +165,7 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
 
     /**
      *  <p>Maps to <code>Category.assets</code>.</p>
+     *  <p>When updating an existing Category, Assets omitted from this array are removed.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.common.Asset> getAssets() {
@@ -172,6 +174,7 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
 
     /**
      *  <p>Maps to <code>Category.custom</code>.</p>
+     *  <p>When updating an existing Category, omitting this field removes the Custom Fields.</p>
      */
 
     public com.commercetools.importapi.models.customfields.Custom getCustom() {

@@ -27,6 +27,7 @@ import tools.jackson.databind.annotation.*;
 
 /**
  *  <p>The representation of a Product Draft for the import purpose.</p>
+ *  <p>When updating an existing Product, <code>variants</code>, Embedded Prices, images, Assets, Attributes, <code>categories</code>, and <code>taxCategory</code> that are omitted from the import are removed from the Product. This includes the product-level <code>attributes</code>: omitting this field removes all product-level Attributes, and a partial list removes every Attribute that is not in the list. Include all existing values you want to keep. For more information, see <span>Omitted values are removed on update</span>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -90,6 +91,7 @@ public interface ProductDraftImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>ProductData.categories</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Categories are created.</p>
+     *  <p>When updating an existing Product, Categories omitted from this array are removed from the Product.</p>
      * @return categories
      */
     @Valid
@@ -97,7 +99,8 @@ public interface ProductDraftImport extends ImportResource {
     public List<CategoryKeyReference> getCategories();
 
     /**
-     *
+     *  <p>Maps to <code>ProductData.attributes</code>, the product-level Attributes.</p>
+     *  <p>When updating an existing Product, product-level Attributes omitted from this array are removed from the Product. If this field is omitted, all product-level Attributes are removed.</p>
      * @return attributes
      */
     @Valid
@@ -138,6 +141,7 @@ public interface ProductDraftImport extends ImportResource {
 
     /**
      *  <p>An array of related ProductVariants.</p>
+     *  <p>When updating an existing Product, ProductVariants that are omitted from this array are removed from the Product, including their Attributes, Prices, images, and Assets. An empty array removes all non-master ProductVariants.</p>
      * @return variants
      */
     @Valid
@@ -146,6 +150,7 @@ public interface ProductDraftImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Product.taxCategory</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
+     *  <p>When updating an existing Product, omitting this field removes the TaxCategory from the Product.</p>
      * @return taxCategory
      */
     @Valid
@@ -221,6 +226,7 @@ public interface ProductDraftImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>ProductData.categories</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Categories are created.</p>
+     *  <p>When updating an existing Product, Categories omitted from this array are removed from the Product.</p>
      * @param categories values to be set
      */
 
@@ -229,13 +235,15 @@ public interface ProductDraftImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>ProductData.categories</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:Category" rel="nofollow">Categories</a> do not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced Categories are created.</p>
+     *  <p>When updating an existing Product, Categories omitted from this array are removed from the Product.</p>
      * @param categories values to be set
      */
 
     public void setCategories(final List<CategoryKeyReference> categories);
 
     /**
-     * set attributes
+     *  <p>Maps to <code>ProductData.attributes</code>, the product-level Attributes.</p>
+     *  <p>When updating an existing Product, product-level Attributes omitted from this array are removed from the Product. If this field is omitted, all product-level Attributes are removed.</p>
      * @param attributes values to be set
      */
 
@@ -243,7 +251,8 @@ public interface ProductDraftImport extends ImportResource {
     public void setAttributes(final Attribute... attributes);
 
     /**
-     * set attributes
+     *  <p>Maps to <code>ProductData.attributes</code>, the product-level Attributes.</p>
+     *  <p>When updating an existing Product, product-level Attributes omitted from this array are removed from the Product. If this field is omitted, all product-level Attributes are removed.</p>
      * @param attributes values to be set
      */
 
@@ -279,6 +288,7 @@ public interface ProductDraftImport extends ImportResource {
 
     /**
      *  <p>An array of related ProductVariants.</p>
+     *  <p>When updating an existing Product, ProductVariants that are omitted from this array are removed from the Product, including their Attributes, Prices, images, and Assets. An empty array removes all non-master ProductVariants.</p>
      * @param variants values to be set
      */
 
@@ -287,6 +297,7 @@ public interface ProductDraftImport extends ImportResource {
 
     /**
      *  <p>An array of related ProductVariants.</p>
+     *  <p>When updating an existing Product, ProductVariants that are omitted from this array are removed from the Product, including their Attributes, Prices, images, and Assets. An empty array removes all non-master ProductVariants.</p>
      * @param variants values to be set
      */
 
@@ -294,6 +305,7 @@ public interface ProductDraftImport extends ImportResource {
 
     /**
      *  <p>Maps to <code>Product.taxCategory</code>. If the referenced <a href="https://docs.commercetools.com/apis/ctp:api:type:TaxCategory" rel="nofollow">TaxCategory</a> does not exist, the <code>state</code> of the <a href="https://docs.commercetools.com/apis/ctp:import:type:ImportOperation" rel="nofollow">ImportOperation</a> will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
+     *  <p>When updating an existing Product, omitting this field removes the TaxCategory from the Product.</p>
      * @param taxCategory value to be set
      */
 

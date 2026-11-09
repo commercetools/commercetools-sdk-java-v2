@@ -72,6 +72,7 @@ public interface ProductSelectionImport extends ImportResource {
 
     /**
      *  <p>List of product assignments.</p>
+     *  <p>When updating an existing ProductSelection, the imported list becomes the complete set of assignments, and Products omitted from the list are removed from the ProductSelection. If this field is omitted, the existing assignments are not changed.</p>
      * @return assignments
      */
     @Valid
@@ -108,6 +109,7 @@ public interface ProductSelectionImport extends ImportResource {
 
     /**
      *  <p>List of product assignments.</p>
+     *  <p>When updating an existing ProductSelection, the imported list becomes the complete set of assignments, and Products omitted from the list are removed from the ProductSelection. If this field is omitted, the existing assignments are not changed.</p>
      * @param assignments values to be set
      */
 
@@ -116,6 +118,7 @@ public interface ProductSelectionImport extends ImportResource {
 
     /**
      *  <p>List of product assignments.</p>
+     *  <p>When updating an existing ProductSelection, the imported list becomes the complete set of assignments, and Products omitted from the list are removed from the ProductSelection. If this field is omitted, the existing assignments are not changed.</p>
      * @param assignments values to be set
      */
 
